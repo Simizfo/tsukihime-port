@@ -1,0 +1,224 @@
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+play "track03.ogg"
+
+bg "image\bg\bg_11a.jpg",%type_lcartain_mid
+
+` The hall during lunchtime is packed.@
+` Students head to the cafeteria or to their favorite places, lunches in hand.@
+` Caught in the flow of people, I contemplate whether I should go to the cafeteria or the store.@
+`"……"@
+` I'm taken aback by my own leisure.@
+` If I have time to waste here, it'd be better if I go to the cafeteria where Arihiko is.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_50.jpg",%type_lcartain_mid
+
+` Almost all the seats in the cafeteria are taken.@
+` Because I spaced out in the hallway, empty seats are pretty much non-existent at this point.@
+br
+`"---Aren't there any empty seats?"@
+` I cast my gaze over the crowded cafeteria.@
+` There shouldn't be any spare seats this late, but I decide to check the tables out anyway.\
+
+`"…… Ah."@
+` I'm surprised…… no, I'm astounded.@
+` There, plain as day, is a table with not two, not even three, but four unoccupied seats.@
+` There are two students sitting at the table, and it seems like one of them noticed me during my efforts to locate a seat.@
+ld c,":a;image\tachi\ari_t05.jpg",%type_lshutter_fst
+`"Yo, Tohno!"@
+` The student vigorously waving his hand is my dear classmate with the dyed orange hair.@
+cl c,%type_crossfade_fst
+`"……"@
+` My head hurts.@
+` But there isn't anywhere else to sit, so I have no choice but to return the wave and walk towards the table where my friend is sitting.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_50.jpg",%type_lshutter_fst
+
+` An unexpected person is sitting at the table with him.@
+`"Huh, Ciel-senpai?"@
+ld l,":a;image\tachi\cel_t01a.jpg",%type_lshutter_fst
+`"Ah, if it isn't Tohno-kun."@
+` We point at each other simultaneously.\
+
+ld r,":a;image\tachi\ari_t01.jpg",%type_lshutter_fst
+`"Yo, Tohno---hey wait…… Senpai, do you know Tohno?"@
+ld l,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+`"Yes, I've met him once today already.@ We bumped into each other with a bang today, didn't we, Tohno-kun?"@
+`"Ah…… yes, sorry about that."@
+` I lower my head in apology.@
+ld l,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"Not at all.@ I'm also sorry for spacing out like that.@ You're a serious person, aren't you, Tohno-kun?"@
+`"Serious……?@ No, not really."@
+` Smiling, Senpai gives a satisfied nod.@
+` How should I say this…… Senpai has a unique atmosphere around her.\
+
+ld l,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+`"But it's sure surprising that Tohno-kun and Inui-kun know each other.@ Could it be that you two are in the same class?"@
+`"That's right!@ Me and Tohno are more than casual acquaintances!@ We've been in the same class since our first year, and we've been inseparable best friends since middle school!"@
+` My best friend strikes the table with a bang for emphasis.@
+` …… Is it just me, or is he more hyper than usual?\
+
+ld r,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
+`"Come on, best friend, sit down!@ If you just keep standing there vacantly, your chikara udon is going to go stale.@ Hurry up and sit down, and let me hear all about how you got to know Senpai."@
+` Arihiko slaps my back cheerfully.@
+`"……"@
+` While I really have no story like Arihiko might be hoping for, there are no other seats available.@
+` Reluctantly, I take a seat next to him.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_50.jpg",%type_lshutter_fst
+
+` It seems Arihiko is close with Senpai.@
+` In contrast with me, who's only met her a few times, he's able to talk to her quite casually.@
+
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+`"By the way, Senpai, you said you ran into Tohno, what happened?"@
+ld l,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+`"Yes, I bumped into Tohno-kun between classes.@ I wasn't hurt, but Tohno-kun bumped his head."@
+`"Hmm…… I wouldn't have thought Tohno would do something as clumsy as that.@ This guy may look spaced out, but he's actually an unbelievably sharp guy.@ He doesn't like to depend on others, and he hates causing trouble for others……"\
+ld l,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"Ah, I also got that impression.@ He was only concerned about me when we ran into each other, and he apologized to me just now, too."@
+
+ld r,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
+
+`"See?@ That's the kind of guy he is, so he doesn't make those kind of mistakes.@ …… Ah, could it be that your anemia was acting up again?"@
+` Arihiko's voice shows his serious concern for my physical health.@
+
+`"…… No, it's not that.@ I was running to the office to deal with some details for me moving.@ That's when I ran into Senpai."@
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+`"Really?@ Well, I thought you became careless because you're depressed over the move."@
+` Arihiko folds his arms and nods to himself in agreement.\
+
+
+` ----And then,
+br
+ld l,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
+`"Tohno-kun, are you changing schools!?"@
+` Senpai exclaims almost hysterically.\
+
+`"I'm not changing schools, Senpai.@ I'm just changing my place of residence, so I filed the paperwork for a change-of-address."@
+ld l,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+`"Eh…… So that means you're going to be living alone?"\
+`"No, I'm just going back to my real home.@
+` It's that fancy place on top of the hill.@ I still can't quite believe it yet."@
+`"Oh…… Could that possibly be the Tohno-san mansion?"\
+
+` Senpai asks with some hesitation.@
+` The western-style house on top of the hill is probably seen as something special to the residents of this town.@
+` I haven't been there for eight years, but even in my memories, the Tohno mansion was ridiculously large.\
+
+`"Yeah, that's right.@ I don't think it's the right place for me either, but it's too late now that I'm done moving."@
+ld r,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
+`"Hmm…… You don't seem too happy about it."@
+`"It's not a particularly good or bad thing.@ I don't really understand it myself."@
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+`"Well, even if it is your house, it's been eight years, right?@ I can understand if you're feeling restless.@ It'll probably feel like someone else's house for a while."@
+`"I wonder if that's so…… I haven't gone back yet, so I don't know.@ Well, I'm a bit relaxed, since I've always got a refuge at your place."\
+ld r,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+`"Hmph.@ Listen, you, I'm not impressed with how you come to stay at my house every time something bad happens.@ I like your personality trait of not standing out, but I've hated how you're always too reserved for a long time now!"@
+` Arihiko strikes the table with a bang again.@
+`"……"@
+` Well, everything Arihiko said is true, so there's no way to fight back.@
+
+
+ld l,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+`"Inui-kun, does Tohno-kun really stay at your house that often?"\
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+`"Yeah, he does.@ That damn Tohno is too reserved toward his parents and he would come to my place every long vacation.@ He's reserved towards them cause they're taking care of him.@
+` That's why he comes over to my place, where we conveniently have an empty room.@ Since he looks pretty decent, my sister took a liking to him, and he shamelessly comes to stay with us without paying a cent!"@
+` Arihiko's fist trembles, as if to say 'unforgivable!'@
+
+ld l,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+
+`"…… Taking care of Tohno-kun?"@
+`"Ah----"@
+` Arihiko clamps a hand over his mouth.@
+ld r,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+`"…… Sorry.@ I should've thought before I spoke."@
+`"It's okay.@ You didn't say anything bad."@
+` I continue to eat my chikara udon without looking at Arihiko.\
+
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+`"Really?@ Yeah, you're right.@ If you complain about that, you'll be in for some punishment."@
+` Arihiko nods to himself in agreement.@
+` His overwhelming optimism is something I am truly envious of.\
+
+ld l,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+
+`"Tohno-kun, um…… did you not get along with your previous family?"@
+
+ld r,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
+`"No, that's not it.@ This guy had no problem with the Arimas.@ Oh, the Arimas were the family who took care of him.@ They're really nice people, and from what I could see, they're a happy family.@
+` Even so, he refused to be their adopted child, and he escaped to my place every vacation.@ Sheesh…… just what were you not satisfied with, anyway?"@
+`"There's nothing I wasn't satisfied about.@ It's just that I've received so much from them already, I didn't want to be a further burden on them."\
+
+cl a,%type_crossfade_fst
+
+` …… Senpai drops her shoulders and falls silent.@
+` It looks like she's sorry for asking about my family situation.@
+`"It's okay, Senpai.@ Sorry for making you listen to something so boring."@
+
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+`"Eh, not at all.@ I'm sorry for asking you something so strange, too."@
+` Senpai forces herself to look cheerful.@
+` The topic might be fine for a long-time friend like Arihiko, but a complex matter like this would only have been troublesome for Senpai.@
+` And to prove my point, Senpai sits there uneasily.\
+
+`"Listen, Senpai---"@
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+`"Um, I've finished eating, so I'll be leaving now.@ I'm really sorry."@
+cl c,%type_lshutter_mid
+` Senpai lowers her head in a quick bow and leaves her seat.@
+br
+` Only me and Arihiko remain at the table.\
+
+`"…… Sorry.@ You were finally able to eat with just the two of you, but I got in the way."@
+ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+`"Don't worry about it.@ That was my fault for not paying attention.@ I thought it was bad for Senpai, actually." …… *slurp* *slurp* *slurp*@
+` Arihiko slurps away at his udon.@
+` It looks like it's gotten cold while we were talking.@
+`"Well, that was convenient for us, anyway.@ I've got something to talk to you about in private, so it was lucky that Senpai left first."\
+
+`"What's wrong?@ Getting all serious all of a sudden.@ I'll tell you now, I don't have any money.@ From today onwards, I'm going to be living life as a penniless youth."@
+`"It's not that, damn it.@ What I want to know is this; what's really going on with you, Tohno?"@
+`"What do you mean?"@
+ld c,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
+`"You've been at the Arimas' since primary school, right?@ I don't know why, but it's been eight years already.@ Your dad has basically disinherited you.@ Why is he calling you back all of a sudden?"@
+` …… I see.@
+` In his own way, he is worried about me.\
+
+`"He didn't 'disinherit' me.@ He just kicked me out of the house for some reason."@
+`"Tohno-kun, if there ever is a house that kicks their child out of their house 'for some reason', that's not a tragedy, it's a comedy. 'Oh, it's a party joke!' But it's so boring, it's not funny."@
+` Arihiko spreads his arms and shrugs.@
+`"…… Yeah, I guess you're right.@ If you get kicked out of the house, all you can really do is laugh."\
+
+`"And then he said some cliche line like, 'Never step foot in this house again!' or something, right?@ That's what people would call 'disinheritance.'
+` Come to think of it, I've never heard why you were disinherited."@
+`"……"@
+` …………… Who knows?@
+` That's something I'd like to know, too.@
+`"Well, if you don't want to talk about it, you don't have to."@
+cl c,%type_crossfade_fst
+
+` Grabbing his bowl with both hands, Arihiko drains his cold udon soup.@
+` Lunchtime is short.@
+` Following Arihiko, I decide to quickly eat my own chikara udon.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+playstop
+
+
+
+
+
+
+return

@@ -1,0 +1,15 @@
+
+bg "image\bg\bg_08b.jpg",%type_nowaitdisp
+
+` --I'll go back to the mansion.@
+br
+` It's not like I've given up on Arcueid, but without any leads, I don't think I could find her.@ Then instead of running around blindly, I should go back to the mansion and think calmly about what I can do.\
+
+`"…… Is that all I can do?"@
+` I am pained by my lack of ability to do anything.@
+` But right now, it is all I can think of.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+return

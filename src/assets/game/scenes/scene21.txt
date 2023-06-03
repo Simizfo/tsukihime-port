@@ -1,0 +1,573 @@
+
+mov $phasebg,"image\bg\ima_10.jpg"
+mov $phasetitle_a,":a;image\bg\ima_10.jpg"
+mov $phasetitle_b,":a;image\word\pro.jpg"
+gosub *right_phase
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+
+bg "image\bg\bg_51.jpg",%type_crossfade_mid
+
+resettimer
+waittimer 1000
+
+bg "image\bg\bg_51b.jpg",%type_crossfade_mid
+
+waveloop se10
+
+` When I came to, I was lying on a hospital bed.@
+` The curtain on the nearby window sways gently.@
+` It is a beautiful day outside,
+` and the dry wind signals the end of summer.\
+
+`"Hello, Tohno Shiki-kun.@ Congratulations on your recovery."@
+br
+` The unfamiliar old man extends his hand for a handshake.@
+` His square-rimmed glasses and warm smile are very befitting.@
+` His tidy-looking white clothes suit him perfectly, too.\
+
+`"Can you understand what I am saying, Shiki-kun?"@
+`"…… No.@ Why am I in a hospital?"@
+`"You don't remember, do you?@ You were involved in a car accident while you were walking.@
+` Your chest was stabbed by a shard of glass, and it was unlikely that you would survive."@
+` Very unbefitting of what a doctor would say, yet he says it while still smiling cheerfully.\
+br
+br
+br
+br
+br
+br
+` ------Terrible.@
+`     I feel terrible.\
+
+`"…… I'm tired.@ Can I go to sleep?"@
+`"Yes, you should rest.@ You must focus on recuperating, and not push yourself."@
+` The doctor is still smiling.@
+` To be honest, I can't stand that smile anymore…
+`"Can I ask you something, doctor?"@
+`"What is it, Shiki-kun?"@
+`"Why are there scribbles all over your body?@ And there are cracks, all over the walls… Why are there cracks in the walls?"@
+br
+` The smile vanishes for just a brief moment, then returns to his face immediately.@ He turns and walks away.\
+
+`"---It seems there was some brain damage after all.@ Get a hold of Dr. Ashiya in neurology.@ I also suspect he may have suffered some damage to his eyes.@ Spend the afternoon examining his eyes."@
+br
+` The doctor whispers to the nurse so that I won't hear him.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_slw
+
+bg "image\bg\bg_51b.jpg",%type_lshutter_mid
+
+
+`"……… Weird.@ There are scribbles all over everyone's bodies."@
+` The sloppy, zigzagging black lines, running all over the floors, walls, the ceiling…
+` I don't understand what they mean, but looking at them makes me feel sick.@
+`"…… I wonder what it is."@
+` The bed too, is covered in these scribbly lines.@
+` When I touch the line with my finger, my fingertip sinks down into the crack.@
+`"---Oh!"@
+` It seems as if I could reach farther down with something narrower, so I trace the line with a fruit knife that was lying on the bedside table.\
+
+` I didn't use any strength at all, yet the knife sinks into the bed, all the way up to the hilt.@
+` It was fun, so I drag the knife along the scribbly line.@
+br
+` THUD!@
+br
+` With a heavy sound, the bed snaps cleanly in two.@
+`"Kyaaaah!"@
+br
+` The girl in the bed next to mine screams.@
+` The nurses run over and take the knife away from me.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_55b.jpg",%type_crossfade_slw
+
+`"How did you break the bed, Shiki-kun?"@
+br
+` The doctors don't ask why, but curiously persist on HOW I did it.\
+
+`"I traced along that line and it broke.@ Hey, just why is this hospital full of cracks?"@
+`"You'd better stop with that, Shiki-kun.@ There are no such cracks like that anywhere.@
+` Now tell me, just how did you break the bed?@ You can tell me, I promise I won't get mad."@
+`"---I'm telling you, all I did was just trace the line with the knife…"@
+`"…… I see.@ Okay, we'll continue this conversation tomorrow."@
+br
+` The doctor leaves.@
+` In the end, not a single person believed my story.\
+
+wavestop
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\ima_06.jpg",%type_lcartain_mid
+
+` As long as I run the knife along the scribbles, I can cleanly cut anything.@
+` I don't have to put any force into it.@
+` It is as easy as cutting paper with scissors.@
+` The bed, the chair, the desk, the walls, the floor.@
+br
+` ……I've never tried, but probably… no, definitely, even people.\
+
+` But it seems that no one else can see these lines.@
+` The black lines only I can see.@
+` Despite being a kid, I gradually began to understand what the lines were.@
+` They are probably like stitches.@
+` Just like stitches that hold an open wound together after surgery, I think they are weak spots.@
+` After all, there's no way I could cut such a thing with a child's strength alone.@
+br
+` ----Yeah, I didn't know until now.@
+br
+` That the world is covered in these lines, these "breaking lines" that bind everything together.\
+
+` No one else can see them.@
+` That's why they are just fine.@
+` But I can see them.@
+` I'm scared… so scared, I can't even talk…@
+` It's as if I am the only one who went crazy.\
+
+` Maybe… that's why?@
+` Why even after two weeks, no one believes my story.@
+` Even after two weeks, no one has come to see me.@
+br
+` Even after two weeks,
+` I continue to live alone in a world surrounded by black stitches…\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+` I need to get out… I don't want to be in this room anymore.@
+` I don't want to stay in a place covered in stitches.@
+` That's why I decided to escape, and run away, to somewhere where no one else would be.@
+br
+` But the wound on my chest still hurts, and I didn't get very far.@
+` That was when I noticed.@
+` I'm standing in the grassy field just outside of town... I really didn't get far at all.\
+
+
+`"…… *cough*"@
+br
+` My chest hurts… and I feel so sad… I collapse to my knees and cough.@
+br
+` *cough* *cough*@
+br
+` There's nobody here.@
+` Drowning in this ocean of green at the end of summer,
+` I feel like I'm about to disappear.@
+br
+` But before that.@
+br
+
+`"Hey you.@ It's dangerous to sit down in a place like that."\
+bg "image\bg\cmo_01.jpg",%type_lshutter_fst
+
+play "track07.ogg"
+
+br
+` I hear a woman's voice from behind me.\
+
+
+`"Eh………?"@
+`"What do you mean, 'eh'?@ You're already a runt so I can't see you if you're sitting in the grass.@ I was this close to kicking you, so watch out."@
+` She points at me rather grumpily.@
+` …… I get a little angry.@
+` After all, I sit in the fourth row from the front so I don't think I'm that short.@
+`"Kicked?@ By who?"@
+`"Isn't it obvious, stupid?@ You and I are the only ones here, so who else could it be but me?"@
+` She declares this confidently as she folds her arms.\
+
+`"Well, I suppose it must be fate that we met here, so you want to talk for a little while?@ My name is Aozaki Aoko.@ What's yours?"@
+` She extends her hand to me with the kind of cheerfulness one would show an old friend.@
+` I see no reason to refuse, so I tell her my name is Tohno Shiki and grasp her cool hand in return.\
+
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\cmo_02.jpg",%type_lshutter_mid
+
+` Talking to her was a lot of fun.@
+` She didn't ignore what I said just 'cause I was a kid.@
+` Instead, she listened… she listened to what I had to say, like a friend.\
+
+` We talked about many, many things.@
+br
+` About my family.@ About how it was an old and respected family with very strict, traditional rules, and my equally strict father.@
+` About my little sister Akiha… quiet Akiha who always followed me around.@
+` About our big mansion and the vast gardens, and how Akiha and I would play together with our friends.@
+br
+` ---I told her about many things almost feverishly.\
+
+`"Oh, it's this time already.@
+` Sorry, Shiki.@ I've got some business to take care of, so let's stop here."@
+` She gets up to leave.@
+` …… My chest tightens, and I feel sad, thinking that I would be alone again.@
+bg "image\bg\ima_05.jpg",%type_crossfade_mid
+br
+`"See you tomorrow.@ I'll be waiting for you here, okay?@ You should go back to your room and listen to your doctor."@
+`"Oh…"@
+` She speaks with such ease, in such a natural way as she makes her way off.\
+
+`"…… See you tomorrow."@
+` Tomorrow, we would be able to talk like we did today.@
+` I'm happy.@
+` It was the first time I truly felt something since I awoke from the accident.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+` Since that day, going to that grassy field in the afternoons became part of my daily routine.@
+` She would get angry when I called her "Aoko".@
+` For some reason, it seemed she hated her own name.@
+` After some thought, I decided that she seemed like a very distinguished person, so I came to call her "Sensei".\
+
+` Sensei would seriously listen to anything I had to say, and would always dispel my anxieties with but a single word, without fail.@
+` …… I was depressed from the accident, but slowly, thanks to Sensei, I began to return to my former self.@
+` Even those scary black scribbles didn't seem quite so scary anymore when talking to Sensei.@
+` I didn't know who she was or where she was from... perhaps she really was a teacher.@
+br
+` But I don't care, it doesn't matter at all.@
+` Because, it's fun being with Sensei.@
+` That alone, is all that matters… and that alone is more than enough.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\cmo_02.jpg",%type_crossfade_fst
+
+
+`"Hey, Sensei.@ Look what I can do!"@
+br
+` I wanted to surprise her one day, so using the fruit knife I brought from the hospital, I cut down a tree growing in the field.@
+` Like before, I run the knife along the scribble-like line, and cut it cleanly across the base.@
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+
+
+`"Amazing, isn't it?@ I can cut anything easily, as long as it's somewhere where I can see the scribbles.@ No one else can do this right?"@
+`"Shiki…!"@
+br
+` She slaps me across the face.\
+
+bg "image\bg\cmo_03.jpg",%type_lshutter_fst
+
+`"Sen… sei?"@
+`"…… What you just did was extremely thoughtless."@
+` Sensei gives me a hard, piercing glare.@
+br
+` …… I don't know why,
+` but I realized I just did something I definitely shouldn't have done.@
+br
+` With Sensei's severe expression and the pain from my cheek where she slapped me,
+` I felt very, very sad.\
+
+`"…… I'm… sorry."@
+` Before I knew it, I was crying.@
+`"-----Shiki."@
+br
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+` Then, a gentle, warm feeling envelops me.@
+br
+
+`"…… There's no need to apologize.@
+` It's true that you did something I should be angry at you for, but it's definitely not your fault."@
+` Sensei squats down and hugs me.\
+
+`"But you know, if someone doesn't tell you otherwise now, one day you're going to make a mistake you can never take back.@
+` That's why I won't apologize… you can hate me all you want, if you feel that way."@
+`"…… No, I don't hate you, Sensei."@
+`"…… Really?@ I'm glad you feel that way… I guess it was fate that the two of us met here like this."@
+` Sensei began to ask about the scribbles I could see.@
+` As I told her about the lines, the black jagged lines that somehow only I could see, Sensei's embrace tightened.\
+
+`"…… Shiki, what you are seeing is something that should never be seen, by anyone, or anything.@
+` Everything in existence has points where they are most easily broken.@ We, who will break down one day, are imperfect for this reason.@
+` Your eyes have the ability to see the fate of all things… to put it another way, you can see the future."@
+`"…… See…… the future?"@
+`"That's right.@ You can see death.@
+` …… You don't need to know any more than that.@
+` If someday, you happen to go down that path, the principles will become clear to you as something that is needed."\
+
+`"…… Sensei.@ I really don't understand…"@
+`"That's good, it's important that you don't understand now.@
+` All I want you to know is that you must never cut these lines on a whim or as a joke, understand?@
+` ---If you do so, your eyes will begin to take the lives of others too lightly, and that is the worst thing that can possibly happen."@
+`"…… Okay.@ I won't do it if you say so, Sensei.@ Besides, it kind of hurts my chest.@ …… I'm sorry, Sensei.@ I'll never do it again."@
+`"…… Good for you, Shiki.@ Never forget the feelings that you have experienced here today.@ If you stay that way, I'm sure you'll find happiness."@
+br
+` Sensei finally lets go of me.\
+
+
+bg "image\bg\ima_05.jpg",%type_crossfade_fst
+
+`"But Sensei, I see those lines and get worried.@
+` They'll be cut as soon as I trace them, right?@ Then it wouldn't be weird for my surroundings to come apart at any time."@
+`"You're right.@ I'll be able to help you with that at least… It seems as if that's the reason why I'm here."@
+` Sensei sighs, then favors me with a warm smile.@
+`"Shiki, I'll give you a very special present tomorrow.@ I'll give you your old life back, the one you were living before your accident."\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+!w2000
+
+bg "image\bg\cmo_01.jpg",%type_lshutter_mid
+
+` The next day.@
+` Exactly the seventh day after I met Sensei, she arrives in the grassy field carrying a large trunk in one hand.\
+
+`"Here.@ If you put these on, those strange scribbles won't be visible anymore."@
+` What she gave me was a pair of glasses.@
+`"But my eyes are fine."@
+`"Just put them on.@ The lenses don't have any magnification or anything."@
+` Sensei forces them on me.@
+` Suddenly---\
+
+`"Whoa!@ Incredible!@ This is amazing, Sensei!@ I can't see the scribbles anymore, not at all!"@
+`"Of course.@ I had quite a time stealing Mystic Eye Killer from my older sister to make this Aozaki Aoko masterpiece!@ So treat them well or there'll be hell to pay, got it?"@
+`"Yup!@ I'll take good care of them!@ You're incredible, Sensei!@ You made all those horrible lines disappear just like that!@ It's like magic!"@
+br
+`"Of course, I am a sorceress, after all."@
+br
+` Giving me a proud smile, Sensei puts her trunk down on the ground.\
+
+`"But know this, Shiki.@ Those lines haven't disappeared.@ It's just that you can't see them.@ Once you take the glasses off, you'll be able to see them again."@
+`"---R-really?"@
+`"Yes.@ That's the one thing that cannot be fixed.@ Your only choice is to keep living your life and do your best with the eyes you have now."@
+`"……… No.@ I don't want these scary eyes.@ If I cut those lines again, I'll end up breaking my promise to you."@
+`"Oh, you mean never cutting the lines again?@ Silly, you can break that promise whenever you like."@
+`"…… Really?@ But you said it was something I shouldn't do."\
+
+`"Yes, it is.@
+` But that is your gift, Shiki.@ It's yours to use as you see fit.@ No one else but you has the right to judge you.@
+` But out of all the abilities one can have, yours is terribly unique.@
+` If you have such a power, that means there is a meaning behind you having it.@
+` God doesn't give us powers for no reason.@
+` You might say that you were given the 'Mystic Eyes of Death Perception' because one day, a time will come when you will need them.@
+` That's why you must not live in denial of their existence."@
+` Sensei squats down so our eyes would be level.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_slw
+
+bg "image\bg\cmo_04a.jpg",%type_lshutter_slw
+
+`"But you know, that's why you must never forget.@
+` You are a very kind and honest person, Shiki.@
+` As long as you remain the way you are now, your eyes will never bring forth any wrong."\
+
+`"However, I'm not telling you to become a saint.@
+` All I'm saying is live true to yourself, and become a man in the manner that you think is right.@
+` Since you can accept your mistakes and are able to apologize, I know that in ten years, you will become a great man."@
+br
+` That being said,
+` Sensei stands, and reaches for her trunk.\
+
+`"Oh, but I must say, unless in exceptional circumstances, you shouldn't take the glasses off.@
+` Special powers attract other special powers.@
+` Only when you decide there is no other way should you take off those glasses, and even then, be mindful of how you use your power.@
+` Power in itself is not evil.@ What is evil rests solely in the hearts of the ones wielding such power.@ Be it for good or evil, it will be up to you and the choices you make."@
+br
+` She picks up her trunk.@
+br
+` ---Sensei doesn't say anything more after that,
+` but deep down, I knew we would have to part.\
+
+`"---It's impossible, Sensei.@ I can't do it… I won't understand just by myself.@
+` The truth is, I was so afraid before I met you.@ I was only able to return to being me, because you were with me…
+` …… I can't do it.@
+` Not even with these glasses, if you're gone, I can't do it…!"@
+`"Don't say such things, Shiki.@ If you tell lies that even you yourself can't believe, you'll only make whoever hears you sad."@
+` Sensei raises her eyebrows in displeasure and pokes my forehead.\
+
+`"---You know it yourself, don't you?@
+` You're alright now.@ So don't say stupid things and give up on the self that you finally found.@ Only you can choose to be you, no one else can do it for you."@
+br
+` Sensei turns around.\
+
+`"Well, this is goodbye.@
+` Listen, Shiki.@ Life is not easy; everyone's life is a hard, long, rocky road, filled with many pitfalls.@
+` You have more power than anyone else to do something about that, so pull yourself together."@
+` Sensei is leaving.@
+` I was sad, but I'm Sensei's friend, so I have to see her off properly.\
+
+`"Yes.@ Goodbye, Sensei."@
+`"Well done… That's right, Shiki.@ Hold onto that confidence, and always live true to yourself.@
+` When you find yourself in trouble, calm down and think things through carefully.@ Okay?@ A solution will always present itself if you do.@
+` It'll be alright.@ You'll manage, even on your own."@
+` Sensei laughs happily.\
+
+bg "image\bg\cmo_04b.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 2000
+
+bg "image\bg\ima_03.jpg",%type_lshutter_mid
+
+` The wind blows.@
+` The field of grass sways in unison.@
+` Sensei was already gone.@
+br
+`"…… Good-bye, Sensei."@
+br
+` After saying that, I really felt that I would not see her again.@
+` All that remained were her many words and these mysterious glasses.@
+` It was only seven days, but she taught me things more valuable than anything else.\
+
+` As I stand there by myself, I feel tears well up in my eyes.@
+br
+` ---Man, I was such a fool.@
+br
+` I could only say goodbye.@
+` I couldn't even say a single word of thanks to her.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+` I left the hospital soon after that.@
+` Afterwards, I didn't return to the Tohno household, but was taken to live with my relatives instead.@
+` But it's alright.@
+` Tohno Shiki will be just fine, even by himself.@
+` I'll spend a new life with my new family.@
+br
+` And like that, Tohno Shiki's ninth summer ended.@
+` The new autumn arrived, and I think I became more of an adult……\
+playstop
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+!w2000
+
+
+mov $phasebg,"image\bg\bg_06a.jpg"
+mov $phasetitle_a,":a;image\word\PARK_01A.PNG"
+mov $phasetitle_b,":a;image\word\day_01.png"
+gosub *right_phase
+
+br
+br
+br
+` -----Autumn.@
+br
+` The last traces of summer are disappearing today, a Thursday halfway through October.@
+` This is the day when I, Tohno Shiki, return home.@ It's been eight years since I left.\
+
+!w1000
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+bg "image\bg\ima_03.jpg",%type_crossfade_mid
+play "track02.ogg"
+
+`"Shiki, hurry up.@ You're going to be late for school."@
+` I hear Keiko-san's voice floating in from the kitchen.@
+br
+`"Okay, I'm leaving~!" I call back.@
+br
+` I place my hands together in the room that was mine at the Arimas' up until now.@
+br
+`"I'm going.@ Thanks for letting me live with you these last eight years."@
+` Clap Clap.@ I fold my hands together in prayer.@
+` Then, grabbing my only bag, I leave the room that had become so familiar.\
+
+bg "image\bg\bg_57.jpg",%type_lshutter_mid
+
+` I walk through the entrance to the Arimas' house, then turn to face it.@
+`"Shiki."@
+` Keiko-san, who had come to the door to see me off, calls my name somberly.@
+`"See you later.@ Take care, Mom."@
+` What a strange thing to say.@ I won't be coming back.@
+` Never again will I pass through this door as a member of the Arima family.\
+
+`"Thanks for looking after me.@ Please give my regards to Father, too."@
+` Keiko-san simply nods.@
+` Eight years---the eyes of the person who had been my mother look so sad.@
+` I don't think I've ever seen her like that before.@
+`"I'm sure it'll be hard for you at the Tohnos' house.@ Please watch yourself.@ Your body is weak; you mustn't overdo it."@
+`"I'll be okay.@ After eight years, I'm just as healthy as anyone else.@ I'm a lot tougher than I look."@
+`"I suppose you're right.@ But… the Tohnos are different from everyone else.@ I'm worried they'll be too much for you."\
+
+` I know what Keiko-san means.@
+` My home from today forth will be a mansion, an uncommon sight in this day and age.@
+` Not only is the house amazing, but the family itself is highly respected.@ It's said they hold significant investments in many corporations.@
+` To top things off, it's my true home.@ The Arimas have only been looking after me.@
+`"But, it's already decided."@
+` Yeah, it's something that's decided already.@
+`"Alright, I'll be heading off then.@ Thanks for taking care of me."@
+` I repeat those words one last time, and turn my back on the household I had grown so accustomed to over these past eight years.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+bg "image\bg\ima_05.jpg",%type_crossfade_mid
+
+` …… *sigh*@
+` I leave the Arimas' and start walking to school with a heavy heart.\
+br
+` ---Eight years ago.@
+` I recovered from a serious injury that normally would have meant death.@ Then I was entrusted to the Arimas, a family branching off from the Tohno family.@
+` I had lived with my real parents at the Tohno mansion up until I was nine, then I lived with the Arimas for eight years until now, my second year of high school.\
+
+` I lived a normal life as an adopted son.@
+` From the time I met Sensei---those special circumstances Sensei told me about as she parted never happened, and the glasses hid the "lines" from me as long as I wore them.@
+` The life of Tohno Shiki was a peaceful one.@
+` It meandered along gently…
+` …… until a few days ago.@
+` The day when the head of the Tohno family sent word to me.@
+` "Return to the Tohno Mansion."@
+` The very family that, until now, had shunned me.\
+
+
+bg "image\bg\bg_23a.jpg",%type_lshutter_mid
+
+` *sigh*@
+` I sigh again.@
+` To be perfectly honest, even before the accident, I had never gotten along with the Tohno household.@
+` Maybe as a kid I never liked the formality demanded by the family.@
+` Perhaps that's why I said nothing when the old man told me I was going to live with the Arimas.\
+
+` I think it turned out well.@
+` I got along well with my adopted parents, Keiko-san and Fumio-san.@ It was as if they were my real parents.@
+br
+` I lived a normal life in the loving family of the Arimas like a real son, just like I had always wished.@ I don't regret living there.\
+` …… Except for one thing.@
+` My little sister, one year younger than me, remained behind with the Tohnos.\
+
+`"Akiha… I bet she hates me now."@
+` It would only be natural.@
+` She had to live in that mansion all by herself, under the constant supervision of that hard-headed old man.@
+` I could easily imagine what Akiha thought of me, the one who escaped.@
+` I let out another sigh.@
+` I can't help it.@
+` What's going to happen will happen.@
+` Today, after school, I'll return to my true home.@ Lord knows what'll occur.\
+
+`"But for now, I've got more pressing problems."@
+` My watch shows 7:45.@
+` Homeroom starts at eight o'clock sharp and anyone who isn't in class by eight is marked as late.@
+` Clutching my bag, I start sprinting towards school.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_05a.jpg",%type_lcartain_mid
+
+` *huff*… *huff*… *huff*…@
+` I manage to make it to school in less than ten minutes.@
+` I enter from the back gate, accomplishing a feat that would bring the track scouts running if they knew.@
+`"…… Come to think of it, today's also the last day I'll come in through the back gate."@
+` The Arima and Tohno houses are on opposite sides of the school with the Arimas' being behind while the Tohnos' is in front.@
+` Obviously, I'll be coming through the front gate in the future.\
+
+`"And I quite liked the lonely atmosphere back here, too."@
+` For some reason, the back gate at our school isn't really popular.@
+` Only ten people or so, myself included, actually use it.@ It's quiet and pretty devoid of people day or night.@
+br
+` Clang!@ Clink, Clink, Clang!@
+br
+` …… Like I said, pretty quiet.@
+` The sound of a hammer mixed with distant birds singing reaches my ears.@
+`"Hammering… Huh?"\
+
+` Clang!@ Clink!@ Clong!@
+br
+` A half-rhythmical ringing comes from one corner of the courtyard.@
+` "…………"@
+` What is that?@
+` Homeroom begins in less than ten minutes.@
+` I don't have time to stop and find out, but I am pretty curious.@
+` Right now---
+br
+
+
+playstop
+
+return

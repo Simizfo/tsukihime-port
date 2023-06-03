@@ -1,0 +1,1578 @@
+
+
+monocro off
+
+bg "image\bg\ima_13.jpg",%type_crossfade_fst
+
+`"Tsss, ah…………!"@
+` My body falls with a crash.@
+`"Ah, ah, ah…………!"@
+` My entire body is convulsing.@
+` It, hurts.@
+` My chest, my chest is, burning,,,,,,!\
+
+`"----,aaaah………!"@
+` My mind is drifting away.@
+` My fingers claw at the tatami mats in pain.@
+` I pull and rip at the mats.@
+` But, it doesn't stop the pain.\
+
+`"Hagh, ghah, ghaaaaa……!"@
+` Pain.@
+` Pain.@
+` Pain.@
+br
+` Such pain, is frightening.\
+
+`"U, ugah, kuaaaa………!"@
+` I can't bear it.@
+` If it lasts another second,
+` then, it would be better, just to die----!\
+
+br
+br
+br
+br
+br
+br
+br
+` "Fine.@ I'll grant your wish Shiki."\
+
+`"----Eh?"@
+` I lift my head off the floor.@
+` Before that.\
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+playstop
+
+!w3000
+
+
+
+bg "image\bg\bg_09c.jpg",%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+bg "image\bg\bg_09c.jpg",%type_crossfade_mid
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+
+bg "image\bg\bg_09c.jpg",%type_crossfade_slw
+
+waveloop se1
+
+` Before that,
+` my pain disappears.@
+` I don't feel pain anywhere.\
+` I don't even feel heavy.@
+br
+` I don't even feel… alive.\
+
+`"----"@
+` I try to say something, but my throat doesn't move.@
+` There's nothing.@
+` No pain,
+` no sensation,
+` not even, freedom.\
+
+`"-----!"@
+` I don't know what's going on, so I try to get up.@
+` My body doesn't even twitch.@
+` It's not that I'm tied down, nor is it that my entire body is numb.@
+br
+` If I have to give a metaphor,
+` it's like my body is already dead, but my mind is mistakenly still lingering in my body.\
+
+`"------"@
+` Of my five senses, only my sight is still alive.@
+` …… the room is dark.@
+` It is already night outside.@
+`"---"@
+` I can't move my face, so I move my eyes.\
+
+br
+` ----, -----, ------,
+br
+` Something.@
+` I hear something nearby.@
+` But I can't really hear anything.@
+` It seems something is wrong with my ears since I can't even hear my own breathing.@
+br
+` Just,
+` I feel like I can dimly hear a pained voice calling my name.\
+
+
+`"---Oh?@ I thought you had completely disappeared, but you're awfully persistent, Shiki."\
+` I can hear a voice I shouldn't be able to hear.@
+`"----!"@
+` I glance around the dark as best as I can.@
+` There,
+` I see something I don't know about.\
+
+wavestop
+
+ld c,":a;image\tachi\roa_t01a.jpg",%type_crossfade_fst
+`"----"@
+` Who is that?@
+` I've never seen him.@ I've never seen him---but I feel like, I've known him from a long, long time ago.\
+
+`"What's this?@ How mean of you, Shiki.@
+` You've been looking for me for so long and when I come out, you don't remember me?"@
+` With an amused laugh, he stares at me with blood-shot eyes.\
+
+`"-----"@
+` My mind, the only thing still working, freezes.@
+br
+` He didn't say it yet,
+` But---I know he is a vampire.@
+` That he is the "Serpent" Senpai and Arcueid are looking for.\
+
+ld c,":a;image\tachi\roa_t05a.jpg",%type_crossfade_fst
+` "…… No, that's wrong.@ Certainly I am the vampire known as the Serpent of Akasha.@
+` But to you, I'm not the Serpent, but rather, SHIKI, right?@
+ld c,":a;image\tachi\roa_t04a.jpg",%type_crossfade_fst
+` ---Man, how cold of you.@ You make me look stupid for thinking about you all these eight years.@
+` Hey, don't you feel the same way Ciel?"@
+` He says that while looking at me.\
+
+`"----!"@
+` Senpai.@ Is Senpai here?@
+` But where?@ I can't see her, nor do I sense her presence.@
+` If she is here, then why isn't she doing anything about him?@
+` In front of me.@ Right now, our enemy is in front of me………!\
+
+ld c,":a;image\tachi\roa_t01a.jpg",%type_crossfade_fst
+`"You shouldn't ask Ciel something she can't do that much about.@ Right now, she isn't in a condition to really show herself in front of others.@
+` Well, in the first place---I don't think you can really see anything right now."@
+br
+` Another sound.@
+` Something.@
+` I can hear the sound of something tenaciously, almost madly clawing the tatami mats.\
+
+ld c,":a;image\tachi\roa_t04a.jpg",%type_crossfade_fst
+`"…… Hey, didn't I tell you not to pay attention to that……!?@
+` Look Shiki, the only thing you should see is me.@
+` The only thing you should hear is my voice.@
+` The only existence you should acknowledge is mine.@
+` The only one that lets you live is me………!@
+` Finally, at last, I've met you here, so don't think of anything other than me---!"\
+
+` ----A sharp sound.@
+` From the hand of the man before me---this vampire called the Serpent, I hear a sickening sound.@
+` And then, I hear a faint, pained gasp.@
+br
+` ----no, ku--n
+` I can't quite make it out.\
+
+`"---Did you really forget Shiki?@
+` …… Was the old man's hypnosis that good or---did you lose your memory after dying once?@
+` Shit, either way, what a waste!\
+
+` Do you understand!?@ These eight years, I've waited these eight years!@ I've waited for this instance where I could steal everything from you, the one who killed me!@ But what use is it now if you don't remember!?"\
+`"-----"@
+` What is, he saying?@
+` I---killed him?\
+
+`"That's right!@ If you've forgotten, then remember.@ The three of us were always together, right?@
+` In the Tohno mansion.@ Akiha and you, and I would play in the garden together.@ Before I became like this eight years ago that day!"\
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\cmo_06.jpg",%type_nowaitdisp
+
+br
+` ---I, can't remember.@
+` Certainly---it seems like there was another kid with us back then.\
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+
+bg "image\bg\bg_09c.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\roa_t04a.jpg",%type_crossfade_fst
+`"…… You can't remember?@ And we were such good friends too."@
+` He grits his teeth.@
+` His whole body quivers with emotion as if he was brimming with vexation.\
+
+`"---Geez.@ Was I the only one in pain?@
+` That's terrible, Shiki.@ I was always locked away by my old man, but I could always sense you.@
+` Haha.@ Because I was using your 'life'.@ Even though we're not connected by blood, we're connected by our souls."\
+`"That's why you---I wanted you to have a terribly gruesome end."@
+` How unfortunate, he says.\
+
+br
+br
+br
+br
+br
+br
+` That sound again.@
+` The sound of someone clawing at the tatami mats.\
+
+ld c,":a;image\tachi\roa_t03a.jpg",%type_crossfade_fst
+`"…… What an annoying woman.@ I stole this life.@ This was mine since eight years ago!@ You think I can just give it back to Shiki?@
+` In the first place, I would die without it.@ Ciel, are you telling me to die?@ How cruel.@ Just be quiet and stay dead right there."@
+br
+` Another piercing sound.@
+` The clawing noise stops.\
+
+ld c,":a;image\tachi\roa_t01a.jpg",%type_crossfade_fst
+`"----Hmm, where were we?@
+` Ah, that's right.@ We were talking about how deep our bonds were.@
+` What I wanted to say is this, Shiki.@ I'm your brother.@ But you and Akiha seem to have heartlessly forgotten that."@
+` "-----"@
+` My…… Tohno Shiki's, brother………?@
+
+ld c,":a;image\tachi\roa_t05a.jpg",%type_crossfade_fst
+`"…… Well, I'll keep it at that.@
+` Shiki, you've heard from Ciel about me, right?@ A reincarnating soul.@ A vampire that returns to life after it dies."\
+` His eyes narrow.@
+` His mood turns different from before.@
+` His soft, almost human personality starts to disappear.\
+
+`"This is my eighteenth reincarnation.@ You know about my requirements for the new reincarnating body, right?@
+` A family that carries power within its blood and has influence in society.@
+` There's no need to say what fits those requirements.@
+` During the seventeenth time---my previous self chose the Tohno bloodline.@
+` Choosing the Far East was just a whim.@ Maybe I just wanted a change of scenery from my previous incarnations."\
+
+`"I was killed by the princess and my eighteenth self was reborn as Tohno SHIKI.@
+` I had no complaints about his body.@ His intelligence and development advanced rapidly and the weather in this country was comfortable."\
+
+ld c,":a;image\tachi\roa_t01a.jpg",%type_crossfade_fst
+`"---But, that was as far as it went.@
+` 'The Serpent'---Well, Roa made a mistake in that the power of the Tohno bloodline was too great.@
+` Akiha and I, we're only half human after all.@ The other half is as much a monster as Roa, which those of the Tohno line must resist throughout their lives.@
+` But, some people are weak, which stops them from resisting.@
+` It is the duty of the head of the Tohno household to kill those who succumb to this inversion and are no longer human but---"\
+
+ld c,":a;image\tachi\roa_t02a.jpg",%type_crossfade_fst
+`"To sum it up, I lost.@
+` Normally, Roa wouldn't awaken until I become an adult.@
+` But---since you and I are connected, you can understand, right Shiki?"\
+
+`"Two wills cannot exist in one body.@
+` It's possible if the other personality stems from a person's will, but a completely different will cannot enter.@ What happens when it can't?@
+` Simple.@ The vessel, the brain, cries out.@
+` Headaches occur.@ Suddenly, without reason, without meaning."@
+`"-----"@
+` Head…… aches……, don't tell me---\
+
+ld c,":a;image\tachi\roa_t01a.jpg",%type_crossfade_fst
+`"That's right.@ Your headaches have flowed from me to you.@
+` Didn't I say so earlier?@ I am using your life.@ We are two people using the same life.@
+` So---if I can move like this, then you end up as immobile as a corpse.@
+` What kills a will is another will.@ My will to live is stronger than yours."@
+
+ld c,":a;image\tachi\roa_t04a.jpg",%type_crossfade_fst
+`"…… Well, but you are still amazing.@ I'm using your strength trying to kill you…… But that's strange, why are you still alive?"@
+` As he tilts his head, he really does look perplexed.\
+
+` …… I'm the one who wants to tilt my head questioningly.@
+` Why is he using my life, and what in the world is he?@ My mind is brimming with questions.\
+
+`"…… It seems you still don't understand, Shiki.@
+` I told you, the only thing that can kill a will is another will.@ In other words, killing the will does not kill the body.@
+` The Roa inside of me was another will besides my own.@
+` Eight years ago that summer day.@ Roa killed the will of Tohno SHIKI."@
+br
+`"----"@
+` Like I said, I'm Tohno Shiki, right?\
+
+ld c,":a;image\tachi\roa_t04c.jpg",%type_crossfade_fst
+
+`"Yeah, you are Tohno Shiki.@ A true impostor who became the eldest son of the Tohno household in place of me, who succumbed to inversion."@
+`"-----"\
+
+ld c,":a;image\tachi\roa_t01a.jpg",%type_crossfade_fst
+
+`"Listen up.@
+` …… I even liked you Shiki.@
+` Me and my old man didn't get along either, and you were a good guy.@ We really were good friends.@
+` Of course I loved Akiha too.@ But I couldn't allow her to grow more attached to you."@
+br
+` …… w, wait.@
+` What, what is he saying----\
+
+`"…… Yeah, I remember that feeling from that time.@
+` Everything turned crimson and I started to hate everything.@ The voices of the birds, the leaves on the trees, everything became bothersome to me, and I destroyed whatever I came across.\
+
+`"Eight years ago, Shiki.@
+` In that courtyard, Roa killed my will.@
+` Normally, it would have been all over when Roa awoke.@ But the Tohno family is special.@
+` As soon as my reason was lost, my body succumbed to inversion.@
+` I guess it's what you call an inversion impulse, but you do what you always thought was taboo.@
+` I guess deep in my heart, I was jealous of you.@ In the end, I killed you because you were there."\
+
+ld c,":a;image\tachi\roa_t02a.jpg",%type_crossfade_fst
+`"Man, there never was a pleasure greater than that time!@
+` Piercing your chest with this hand and feeling your heart as you coughed up blood.@ I thought I was born again!@
+` It felt so wonderful, I stood there wanting to play with your dying body even longer, but I was pushing my luck.@
+` While I was eagerly trying to rip out your heart, someone informed the old man.@
+` That bastard, he rushed over and killed me!@ Me, his real son!@ Shit.@ I guess cruel fathers do exist.@ A father like that can't complain when he's killed by his own son, right, Shiki!?@
+` Well in the end--I felt pretty good."\
+
+br
+br
+br
+br
+br
+` ------Blood.@
+` In that courtyard.@
+` The bloody corpse of a child.\
+
+ld c,":a;image\tachi\roa_t03a.jpg",%type_crossfade_fst
+
+`"--Yes, you finally remember Shiki……!@
+` That's right, I'm the one who killed you!@ But you lived through it and took over my place as Tohno Shiki……!@
+` My old man, that bastard---he locked me away like trash in an underground cell after killing me.@
+` Because he couldn't have it known that his eldest son was dead, he took you, his adopted son, and replaced me!"\
+
+br
+` I---------was adopted?@
+br
+\
+
+ld c,":a;image\tachi\roa_t01a.jpg",%type_crossfade_mid
+`"Yeah.@ The old man used you after your miraculous recovery.@ Fortunately for him, we were kids.@
+` We didn't doubt the fact that we were actual brothers---and you were pretty screwed up from that incident.@
+` My old man deceived you and Akiha with a simple lie and made you forget about me, the true Tohno SHIKI!"\
+
+br
+br
+br
+br
+br
+` ------No one, was there.@
+br
+` After that accident.@
+` Why was I all alone like that?@
+` In other words, that means---\
+
+`"Yes, it's because no one needed you.@
+` Well, in order to protect the image of this family, you were treated as Tohno Shiki.@
+` ---Yeah, but I did need you.@
+` Because thanks to stealing your life, I was able to survive when my old man killed me.@
+` For that, and only that, I thank you, Shiki."\
+
+br
+` …… I don't understand.@
+` So why?@
+` Why am I still alive then?\
+
+
+`"Who knows.@ I'd like to know that myself---but, it really doesn't matter.@ Because you're going to die here anyway."@
+` Saying that,
+` He---Roa stands up slowly.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+
+`"---Your painful death was the goal of this body…… of Tohno SHIKI.@ I've gone along with that this long, but it's time to lower the curtain.@
+` Even for me---to have two bodies with one life is not very efficient."\
+
+` The voice nears.@
+` I'll be killed like this.@
+` …… No, I say I'll die, but maybe I'm already dead.@
+` My arms and legs can't move.@
+` My eyes, my ears, my nose don't work.@
+br
+` ---There is nothing left.\
+
+` I don't want to just accept what he says.@
+br
+` …… But I don't care about anything anymore.@
+br
+` My eyes that can see "death", because my body is already like a dead body.@
+` In the end, I was just an impostor.@
+` And on that summer day eight years ago, I was already dead----\
+
+br
+`"----Tohno-kun----!"@
+br
+` …… But, I can hear a voice.\
+` A sobbing voice.@
+` An incredibly sad, almost shouting voice.\
+
+bg "image\event\cel_e09.jpg",%type_crossfade_slw
+
+play "track07.ogg"
+
+
+br
+` ---Did my eyes get used to the darkness?@
+` Or, did my will force my eyes to open?\
+
+` I finally grasp what it was this bastard was sitting on while he gave his long speech.\
+
+`"---Damn, you regenerated again?"@
+` Roa's legs stop.@
+` He turns around toward Senpai.@
+`"Didn't I tell you to stay dead?@ You really are an eyesore."@
+` With a piercing sound,
+` Roa takes one of Senpai's swords and thrusts it into her body.@
+br
+`"Aug…………!"@
+` Her pained voice.@
+` Her nails dig into the tatami mat.\
+
+br
+` Clawing, and clawing.@
+` Her nails are almost peeled off, and her breathing is like a combusting engine.@
+br
+` But still.@
+`"…… Tohno, kun………!"@
+br
+` Clawing and writhing.@
+` She frantically continues to call out my name as I lie there collapsed like a cut puppet.\
+
+`"…… Annoying woman.@ Didn't I tell you no matter how many times you call out his name, Shiki won't hear you?@
+` Right now, he's just a living corpse.@ He can only hear my voice.@
+` …… No, not even my voice.@ He only knows my will because of the connection of life between us.@ How can you not understand that fact?"\
+br
+br
+br
+br
+br
+br
+` More piercing sounds.@
+` The swords pierce Senpai's body.\
+
+`"Ts----!"@
+` Her body twitches in response.@
+` Even still---Senpai continues to call out my name, as if she was a broken record.\
+
+br
+` Tohno-kun.@
+` Tohno-kun.@
+` Tohno-kun.@
+` With her pain-filled, sobbing voice.\
+
+br
+`"--------"@
+br
+` I could hear it.@
+` …… I definitely heard it from before.@
+` But I probably didn't listen to half of what she said.\
+
+` Even as she spat out blood.@
+` She kept calling out to me who was just lying there like a thrown-away, broken doll.\
+
+`"---An immortal body?@
+` How foolish.@ If you had this much power you could have defeated me."@
+br
+` The sound of stabbing again.@
+br
+`"But for such a guy you laid down your swords.@ I'm disappointed, Elesia.@ Thinking a piece of trash like you is actually my daughter makes me sick……!"@
+br
+` Thrust.@ Thrust.@ Thrust.\
+
+` As if he's lost his mind, he keeps stabbing Senpai over and over again.@
+` Her defenseless back.@ Her shoulders.@ Her legs.@ Her throat.@
+` Her bloody arms outstretched towards me.@
+br
+` Mercilessly stabbing.@
+br
+` Despite this.@
+` Her lips keep on calling my name.\
+
+` …… I can't hear it.@
+` I can't hear it anymore.@
+` It's not that my ears are no longer working, but her throat is already dead.\
+
+` But she still keeps calling out to me.@
+` As if she is wishing I'll be able to move if she continues on like that.\
+
+`"-----"@
+br
+` To be honest,
+` I don't understand why she would go that far.\
+
+`"-----St--"@
+br
+` I'm almost going insane.@
+` Watching her be stabbed for my sake makes me almost insane.\
+
+`"------op."@
+br
+` But, I don't move.@
+` No matter how frustrated I am, I can't move.@
+` No matter what I do---no matter what I do, this body doesn't move……!\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+playstop
+
+bg "image\bg\bg_09c.jpg",%type_crossfade_fst
+
+
+ld c,":a;image\tachi\roa_t01a.jpg",%type_crossfade_fst
+
+`"--Wonderful.@ A simple hatred that is almost lethal.@ It was just an instant, but I felt your will directed against me.@
+` You may want to kill me---but this isn't something to be mad about."@
+br
+` He pulls out a sword.@
+` Senpai's body sinks toward the floor.@
+` Before that can happen, he pulls her up by the hair.\
+
+ld c,":a;image\tachi\roa_t05a.jpg",%type_crossfade_fst
+
+`"Look boy, let me teach you something.@
+` No matter how limitless the regenerative ability of a vampire is, it lasts only when they are alive.@
+` Their immortality is only as long as they are alive.@ Once they die, their powers of recovery cease immediately.@
+` Vampires are only difficult to kill, not immortal, but---"\
+
+` Splat.@
+` A black sword springs forth from Senpai's chest.@
+` Her chest breaks apart.@
+` Roa impales her heart from behind.\
+
+`"Tsaaah………!"@
+` The throat that died moves.@
+` Spewing forth with blood, her body writhes in agony.\
+
+`"But---the amazing thing about this woman is.@
+` Even if she dies completely, it isn't her but time itself that restores her body.@
+` Do you understand?@
+` After she dies, without anyone's help, even her own, this world itself returns it back to normal in order to rectify a contradiction.@
+` For example---just like this!"\
+
+` Roa's amused voice lifts in delight, and at the same time.@
+` With a sickening sound,
+` a black sword springs out from Senpai's forehead-------\
+
+bg "image\bg\ima_13b.jpg",%type_crossfade_mid
+
+
+
+br
+` Her head.@
+` From behind.@
+` With that thin, sharp sword.@
+` While she was living, her brain was pierced----\
+
+`"Hyahahaha, isn't it natural for a pierced brain to bring death!?@ Look Shiki, she's flailing about like a fish on a hook!"@
+br
+` Full of amusement,
+` Roa loses himself in amusement.\
+
+`"But look.@ Even though the light in her eyes faded, her heart is starting to beat again.@ …… Shit, what a fucked up life.@
+` It makes us, the ones living with only one life, look foolish."@
+br
+` He swings his arm.@
+` As if she really was a piece of trash, Senpai's body slams into the wall.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+` That was it.\
+
+wave se0
+
+` That's enough.@
+` I don't care what happens.@
+` I don't care if I go crazy.@
+wave se0
+
+` I don't care if people call me a murderer.@
+` I'll\
+
+
+wave se0
+
+`"See, I'm cute compared to her.@ This is a monster that comes back from nothing even if you kill every last bit of her, every last cell of her.@ Is killing something that doesn't really die really a sin……!?"@
+wave se0
+
+` Heeheeehee!@ A high, ill-sounding laugh.@
+` Roa throws the sword in his hand towards Senpai as if he was playing darts.\
+
+br
+wave se0
+
+` Splud!@
+` That is the signal.@
+` With that, all rational thought splinters away.\
+
+bg "image\bg\bg_09c.jpg",%type_crossfade_fst
+
+wave se0
+
+`"---------"@
+` I stand up.\
+
+ld c,":a;image\tachi\roa_t05a.jpg",%type_crossfade_fst
+`"Bastard, how can you move---!?"@
+`"-----"\
+
+wave se0
+
+` There's no need to say it.@
+` The one with the stronger will uses the life, right?@
+` Then---up until now,
+` I never thought this strongly about anything before.\
+
+ld c,":a;image\tachi\roa_t04a.jpg",%type_crossfade_fst
+wave se0
+
+`"This can't be!@ Am---am I weaker than you……!?"\
+
+br
+br
+br
+br
+br
+br
+br
+wave se0
+
+`     Roa.@ I'm going to kill you.@
+!w1000
+
+\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+
+waveloop se1
+
+bg "image\bg\bg_11d.jpg",%type_lcartain_fst
+
+wave se11
+
+
+
+
+` In the darkness,
+` My knife crosses against his claws.@
+` His movement is almost blindingly fast.@
+` But, my body follows him.\
+
+waveloop se1
+
+` My arms move as if they belonged to someone else.@
+` My eyes persistently, accurately look at just his "lines".@
+` My entire body burns.@
+` My brain feels like it is on fire.@
+` Just like---when I first saw that golden-haired princess of the vampires, my body is like something else.\
+
+`"Keh----!"@
+br
+` Roa springs away.@
+` One of his legs.@ His upper right arm.@ His left collarbone area.@
+` I have already cut through the "lines" there.@
+` The price is my right arm.@
+` Roa first took my arm holding the knife.@
+` So, if he destroys my remaining left arm, it would mean my loss.@
+br
+` In this situation, losing means certain death.\
+
+ld c,":a;image\tachi\roa_t04a.jpg",%type_lshutter_fst
+
+
+`"---I don't believe it.@ A match for me, a vampire.@
+` …… your eyes, they are perhaps more appropriate for me than this body."@
+`"----"@
+`"If you don't realize it, then that's fine.@ This story is a boring one not even worth talking about."@
+` With a shuffle,
+` Roa increases the distance between us.\
+
+`"…… It's a very old story.@ The last of a fool who obsessed over living forever.@ Just wondering who it was that actually won that."\
+
+ld c,":a;image\tachi\roa_t05a.jpg",%type_crossfade_fst
+
+`"---To live forever.@
+` That was the miracle that Roa dreamed about.@
+` I decided that an everlasting cycle of rebirth is eternity.@
+` But that is no different than a continuation of a single bloodline.@
+` If there is such a thing as a power that Roa, who accepted death, can earn at the end of his reincarnation---instead of the power that steals the lives of others like vampires.@
+` …… I just thought the power you have, the power to see death, was an appropriate end for me."\
+
+br
+` His body lowers a bit.\
+
+`"I just had that ridiculous idea!"@
+cl c,%type_lshutter_fst
+\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_11d.jpg",%type_crossfade_fst
+
+wave se11
+
+` His arm reaches out.@
+` I slice through it instantaneously.@
+br
+ld c,":a;image\tachi\roa_t03a.jpg",%type_crossfade_fst
+
+waveloop se1
+
+`"Gah---!"@
+` Roa runs away.@
+cl c,%type_lshutter_fst
+` I follow after him.@
+` His movements are many times faster than mine.@
+` But, that doesn't matter.\
+
+` Just killing.@
+` I don't care about anything else.@
+` In reality,
+` I've already killed one of his legs, and his speed is reduced.@
+` As he runs away,
+` He braces his hand against the wall and glares at me.\
+
+ld c,":a;image\tachi\roa_t03a.jpg",%type_crossfade_fst
+
+`"Shit!@---Do you intend to fight yourself, Shiki?"@
+`"------"@
+`"Don't be silent……!@ You're me.@ I am SHIKI, and you are Shiki.@
+` We are the same type of being.@ It doesn't matter if that bastard Roa existed or not.@
+` …… I was originally a creature eating human flesh.@ As a child, I had this urge to eat human flesh.@ Even though that has changed to drinking blood, if Roa hadn't entered my body, I would've certainly become a human eating monster."\
+
+`"---But, that's the same for you.@
+` Like I enjoy eating human flesh, you enjoy killing others!@ Remember the urge you had when you first saw that woman, the ecstasy of killing with that knife!"@
+`"------"\
+
+br
+br
+br
+br
+br
+br
+` The urge I had when I first saw her----
+` That was---when I killed Arcueid.\
+
+ld c,":a;image\tachi\roa_t02a.jpg",%type_crossfade_fst
+
+`"Yeah, that's right.@ No matter how much you pretend to be a good person, that's something you can't excuse.@ You wanted that woman and did the thing that got you the most excited.@
+` What can you call that other than being a killer?@
+` You and I are the same---we are both abnormal people living in the same place."@
+`"------"@
+br
+` …… Shut up.@
+` If I hear his voice any longer, I'll go crazy.\
+
+ld c,":a;image\tachi\roa_t03a.jpg",%type_crossfade_fst
+
+`"Yes, the same.@
+` So why are you trying to kill me?@ It's just that Roa entered me!@
+` If Roa entered you instead, our positions would've been reversed……!@
+` But you're going to kill me!?@ You're just hurting yourself……!"\
+
+` Roa screams.@
+` These past eight years.@
+` The monster who made his lair in this city, feeding off the blood of countless people screams.\
+
+`"---I'm not you.@ You're just a killer."@
+`"Idiot, you don't understand, do you?@ I thought so too, at first.@ That I'm sane.@ That even if Roa's will is here, I thought it would be fine.@
+` But, it wasn't.@ You're the same.@ You, like me, will end up as a killer, Tohno Shiki!"@
+` He laughs.\
+
+`"Isn't that right?@ I know that's inside you too.@
+` You know, that impulse is not something that flows from me to you.@
+` Just admit it, killer.@
+` Your inversion impulse is nothing more than what you wish for……!"\
+
+`"-----"@
+br
+` I ready my knife.@
+` I don't want to hear his voice any longer.@
+` I focus my gaze on him.@
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_11d.jpg",%type_crossfade_fst
+
+ld c,":a;image\tachi\roa_t03c.jpg",%type_crossfade_fst
+br
+` All that's left is to slice them.\
+
+`"…… I see.@ You're trying to kill me, Shiki."@
+br
+` He pulls back.@
+` That's his final move---
+br
+`"But, don't you ever wonder which one of us was really killed?"@
+`"----"@
+` Suddenly,
+` I halt my attack.\
+
+`"Yes, in the end, both of us died in that place.@
+` So---I might be the one killed by Roa, and you might be the Tohno SHIKI taken over by the Serpent, right?"\
+
+`"Hey Shiki.@ Didn't you ever think about it this way?@
+` That you just have not realized it, but you were already insane a long, long time ago!"\
+
+br
+br
+` --------That,
+` That can't be true---can it?\
+
+`"Ha----!"@
+cl c,%type_lshutter_fst
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_11d.jpg",%type_crossfade_fst
+
+wave se5
+
+
+quakey 4,100
+
+br
+` I get kicked into the wall from behind.\
+
+waveloop se1
+
+`"Gah……!"@
+` What is this?@ Being distracted by such stupid words.@
+` My remaining left arm becomes shredded and painted in blood.@
+` I can't move it one bit and my knife clatters to the floor.@
+` And---in front of me, Roa stands with his furious, blood-shot eyes.\
+
+ld c,":a;image\tachi\roa_t03c.jpg",%type_crossfade_fst
+
+`"---Idiot, that's not it at all.@ I'm Roa.@ You had that inverse impulse because you were connected to me subconsciously."@
+br
+` He grins.@
+` Roa takes a step forward.@
+br
+`"Bye Shiki.@ It's been fun!"@
+` With that, he swings his knife-like claws downward.\
+
+wave se5
+
+bg "image\bg\ima_12b.jpg",%type_lshutter_fst
+
+`"------"@
+` There's no pain.@
+` Just the sound of splashing blood.@
+`"You bitch----!"@
+` Roa's voice rings out.@
+br
+` In front of me, Senpai's body takes the full force of Roa's claws.\
+
+wave se0
+
+`"--------"@
+` I can't think of anything.@
+` No, there's no need to think.@
+br
+` I scoop up my fallen knife with my mouth.@
+` My teeth tighten around the hilt.\
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+
+br
+br
+br
+br
+br
+br
+` I dash into Roa, almost like I was collapsing into him.@
+` I slice the "line" running diagonal from his shoulder.\
+wavestop
+
+
+bg "image\bg\bg_11d.jpg",%type_lshutter_fst
+
+monocro #ff00ff
+
+br
+`"Kuaaaaaaaaaaaaaaaaa!"@
+br
+` He screeches like some demonic bird.@
+` Running away from Senpai and me, he jumps directly into the window, and falls out.@
+br
+` The glass shatters and he falls outside.\
+
+`"I won't let you get away---!"@
+` I run to the window.@
+`"Damn………!"@
+` But of course, I can't jump from the third floor.\
+
+` Under the moonlit night.@
+` As if he didn't receive a fatal wound by just having his "lines" of death cut, Roa runs away like a beast.@
+br
+`"---"@
+` …… I can't chase him.@
+` From here, I can't chase him.@
+` But, it seems like there's no need for that.\
+
+
+play "track09.ogg"
+
+bg "image\bg\ima_18.jpg",%type_crossfade_fst
+
+monocro off
+
+` Under the moonlight, Roa's running figure stops.@
+` There isn't one person outside, but two.\
+
+` One, the beast-like figure of Roa.@
+` One, the sublime, white figure of the vampire princess.@
+br
+` ---The fight lasted only an instant.@
+br
+` Roa screams as he dies and fades to ash.\
+
+`"-----Ar…… cueid."@
+` She stands there composed and looks up at me, then disappears before my eyes.\
+
+
+bg "image\bg\bg_11d.jpg",%type_lshutter_mid
+
+monocro #ff00ff
+
+`"Hha----Ahh."@
+` …… I'm exhausted.@
+` My body collapses on the floor.@
+` Leaning against the wall, I sit down.\
+
+`"Ga---"@
+` The knife falls from my mouth.@
+br
+` From my elbow down, my right arm is shattered, twisted and split.@
+br
+` Roa's claw marks remain gouged into my left shoulder and my left arm hangs, unmoving.@
+br
+` I feel like a squid or an octopus with both my arms just hanging there.\
+
+`"…… Sen…… pai."@
+` I look down the hallway.@
+` I look down to where Senpai had collapsed when she protected me earlier.@
+br
+` And there,
+ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
+
+`"Sen---pai, your wounds are okay?"@
+`"Yes.@ A wound like this will heal quickly."@
+` I cannot make out her face since it's dark.@
+` But I thought it looked paler than usual.@
+cl c,%type_crossfade_fst
+\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_11d.jpg",%type_crossfade_fst
+waveloop se1
+
+br
+`"Gah----!"@
+br
+` ----Thump.\
+br
+br
+br
+` Headache.@
+br
+` ----Thump.\
+
+br
+br
+br
+br
+br
+` This headache,
+br
+` ----Thump.\
+
+br
+br
+br
+br
+br
+br
+br
+` because I still see these "lines",
+br
+` ----Thump.\
+
+br
+br
+br
+br
+br
+br
+br
+
+` I have this headache.\
+
+ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
+
+`"…… Tohno-kun?@ What's wrong?"@
+`"Nothing--it's just---my head, hurts."@
+` I manage to reply as I bear the pain.@
+br
+` My hands.@ If I could move them, I could hold my head and maybe calm down.@ But, they don't move an inch.\
+
+`"---Probably because you saw too much death.@
+` …… Tohno-kun, you were pushing yourself too much.@ Trying to defeat Roa by yourself was being reckless."@
+`"…… It's not reckless.@ You were the one being reckless.@ Why---did you let him do that to you?"\
+
+`"He just…… caught me off guard……"@
+`"---Idiot, I, heard all of it."@
+br
+` …… I heard how Senpai threw away her swords to protect me.@
+br
+`"…… Going through that just to protect me, was stupid."@
+` Going through that, and just calling out my name, there's something wrong.\
+
+
+`"…… I suppose.@ No matter what I did, you revived by yourself.@
+` I guess I was… just doing useless things."@
+`"------"@
+` Not---that's not it at all.\
+
+
+`"…… But, I heard you."@
+`"Tohno-kun……?"@
+`"Your voice, I know I heard it.@ You kept calling my name---so it made me realize that I was still alive."@
+br
+` So,
+` what saved me wasn't my desire to kill Roa.@
+` But it was just… Senpai's voice.\
+
+playstop
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_11d.jpg",%type_crossfade_fst
+
+ld c,":a;image\tachi\cel_t06b.jpg",%type_crossfade_fst
+
+`"Ghh----!"@
+`"Tohno-kun---!?@ Your wounds, do they hurt?@ Please wait, I'll heal them……!"@
+`"…… No, it's not, really my arms……"@
+br
+` This headache is terrible.@
+` The pain isn't coming from outside, but feels like it is shooting out from inside me.\
+
+ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
+`"…… It's a reaction from seeing too much 'death'.@ Suddenly overworking your brain like that probably caused too much blood flow."@
+`"…… I, know that, but."\
+
+`"Look, your power is very dangerous to you, Tohno-kun.@ Seeing that which should not be possible to see puts a huge strain on your body, and your blood vessels will not be able to handle the flow of your blood.@
+` Seeing the 'death' of something close to you…… like humans shouldn't be a problem, but seeing the 'death' of things that don't naturally have a 'death' is extremely dangerous."@
+`"…… Yeah, that's okay though Senpai.@
+` Roa…… is now dead.@ I don't have to see any more 'death'----"\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_11d.jpg",%type_crossfade_fst
+
+
+`"So, I don't have to see them.@
+` …… Senpai, do you know where my glasses are?"@
+ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
+`"------Huh?"@
+`"My glasses…… without them, I see these lines all the time.@
+` If I don't have them, I'll go crazy…… they're probably in the tea ceremony room, so could you please get them for me?"@
+`"Tohno-kun, what are you saying?@ Your glasses are definitely----"\
+
+ld c,":a;image\tachi\cel_t06b.jpg",%type_crossfade_mid
+
+`"…… I understand.@ I'll go get it right away, so please close your eyes.@ If you use them much longer, it will be really bad for you."@
+`"---Yeah, I'll do that.@ Thanks."@
+` I close my eyelids.@
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+\
+monocro off
+wavestop
+
+!w3000
+
+` After only a few moments,
+` I can feel Senpai's fingers on my face.@
+`"Here you go, it's all okay now.@ Please open your eyes, Tohno-kun."@
+
+bg "image\bg\bg_11c.jpg",%type_crossfade_mid
+
+`"Ah……"@
+` The lines of death are now gone.@
+` My headache disappeared as I closed my eyes---and I can now see Senpai's face clearly.\
+
+`"Thanks Senpai.@ Now it's back to normal."@
+ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
+`"What are you saying?@ There's still some work before you return to normal, so please keep still."@
+` She says that and sits down beside me.@
+cl c,%type_tcartain_mid
+\
+
+`"---Hmm, these wounds really aren't that bad.@ I'll be able to heal them right away, so please hold on just a little longer."@
+` Senpai carefully reaches out and holds my twisted arm.\
+
+`"Nn----"@
+` There's an almost tickling, warm sensation.@
+` My cold arm begins to warm up again, and the numbed pain returns after that.\
+
+`"Oww."@
+`"If there's pain, it lets you know you are alive.@ Now, let's take care of your left arm."@
+` With a light step, she moves over to my left side and puts her hand on my shoulder.\
+
+`"…… Amazing, my left arm is already healed!"@
+`"It isn't amazing, this is my normal profession, so it is only natural I can do that."@
+` …… Her normal profession?@ Is she a nurse or something?@
+` Well, I don't think a nurse could heal a shattered arm like that in a matter of minutes though.\
+
+`"…… Hey Senpai."@
+`"--Yes?"@
+`"Senpai, just what kind of person are you?@ Come to think of it, I don't really know anything about you, Ciel-senpai."@
+` The fingers over my wounds suddenly stop.@
+` But, it was only a momentary reaction.\
+
+`"I'm the same as you Tohno-kun.@ I also, have not had this body from birth.@
+` I also was close to death…… no, I am someone who died and came back to life.@ And it just became a habit for me to come back to life."@
+` Is she joking?@ She gives a pained smile.\
+
+`"…… What do you mean?@ If you die, you normally can't come back, right?"@
+`"What I am saying, is that I was not normal."@
+`"Not normal…… like, Arcueid?"@
+`"……………………"@
+br
+` She doesn't respond.@
+` Is she done?@ Senpai stands up.\
+
+ld c,":a;image\tachi\cel_t01b.jpg",%type_crossfade_fst
+
+`"There, all finished.@ How is it, can you move?"@
+`"………………"@
+` I lift my hands and move them around.@
+` My fingers can move at will, and there is only a little pain.@
+`"Yeah, no problems.@ …… Thanks, Senpai.@ I'm just always helped by you."@
+` Senpai doesn't answer, she just smiles.\
+
+`"Then, let's go back.@ There's no need to be here any longer."@
+cl c,%type_lshutter_mid
+` Senpai starts to walk away.@
+` …… Picking up my fallen knife, I follow her out of the school.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+play "track08.ogg"
+
+bg "image\bg\bg_01c.jpg",%type_lcartain_mid
+
+` …… The two of us walk to the gate under the moonlight.@
+` Senpai doesn't say anything.@
+` Looking at her back, I think reluctantly about things I don't want to consider.@
+br
+` Roa is gone.@
+` Arcueid is also gone.@
+` Their purpose was to eliminate Roa, so Senpai has no reason to stay here any longer.\
+
+`"………………"@
+` …… This is serious.\
+` I knew it all along---but I never thought this would come so quickly.@
+br
+` I want Senpai to stay here.@
+` I want her to stay---but it isn't just my problem.\
+
+`"…………"@
+` I steal a glance at Senpai's face.@
+` What,
+` What does Senpai plan on doing……?@
+br
+` And then,
+` Senpai suddenly stops walking.\
+
+ld c,":a;image\tachi\cel_t07b.jpg",%type_lshutter_fst
+`"Tohno-kun."@
+` She looks directly at me with eyes devoid of any emotion.\
+
+`"…… What is it, Senpai?"@
+`"About what we were talking about before."@
+`"Before---about how you're like Arcueid?"@
+` She nods.@
+` Still staring me in the eye, she starts to speak.@
+br
+`"Tohno-kun.@ If I was a vampire, what would you do?"\
+
+`"Wha----"@
+` My mind goes blank.@
+` I don't know what she wants to hear.@
+br
+` Still---
+br
+`"…… Senpai is Senpai.@ Even if you are a vampire, that wouldn't change."@
+` Her expression remains the same.@
+` Just for an instant,
+` I think she smiled sadly.\
+
+`"I am the same as her.@ Just like she is a vampire who has had no experience, I just might be a vampire who has no sense of self."@
+` She speaks as if it was a monologue.\
+
+`"………………"@
+` I'm at a loss for words.@
+` …… I don't know what to say to that.@
+` So, just like before, I can only say what I really feel.\
+
+`"…… That's fine."@
+`"Eh?"@
+`"I said, that's fine.@ Even if you are a vampire, I still like you Senpai."@
+`"Wha----"@
+cl c,%type_crossfade_fst
+br
+` Senpai stands there in complete amazement.@
+` Realizing what I just said, I blush furiously and look away.\
+
+`"Anyway!@ That's all I want to say.@ C'mon, let's go back, Senpai!"@
+` Trying to hide my embarrassment, I pull myself to reality.@
+br
+` Go back.@
+` Where is Senpai going to return to?\
+
+`"------"@
+` I suddenly feel terrible.@
+` I'm afraid to look at her face and can't turn around.@
+`"---Tohno-kun."@
+` From behind me, Senpai's voice calls out.@
+` Her quiet, emotionless voice.\
+
+`"…… What is it?"@
+` I answer without turning.@
+`"You know why I came to this city, right?"@
+`"----Yeah.@ Unfortunately, I know.@ You came to kill Roa."\
+
+`"…… Yes.@ But, I haven't told you why yet.@ I really meant to tell you in the tea ceremony room, but things ended quickly."@
+`"…… That's true.@ It was kind of disappointing.@
+` But, wasn't you chasing Roa part of your duty in The Church?"\
+
+`"…… No.@ The place I'm in doesn't really have much work.@ Even when there is, it's only a few times a year I get called there.@
+` So this time is my own judgment.@ Not because of the orders of The Church, but I came here through my own will."@
+`"…… Your, will?"\
+
+`"Yes.@ I came here only because of my own circumstances.@ I want to die as a human, so I've been chasing Roa.@ He is the reason my body has become like this."@
+br
+` …… wants to die.@ Wants to die?---\
+
+`"…… For that sole reason, I have kept on living like this.@
+` But, that is all over now.@
+` …… These past five years.@ Was it a long time?@ Was it a short time?@ I don't know."@
+` Her emotionless voice stops.\
+
+ld c,":a;image\tachi\cel_t01b.jpg",%type_lcartain_fst
+` She jumps directly in front of me.@
+`"So I have to thank you, Tohno-kun.@
+` My work here is done now.@ All that's left is for me to take responsibility for all my actions."@
+`"…… Senpai, you mean---"@
+` She's going to leave?\
+
+`"Thank you so much for everything until now.@ It has been a long time since I've been this happy.@
+` So, let's finish with a handshake."@
+` Senpai puts out her hand.@
+` I wordlessly accept it.@
+br
+` A handshake where we only grip our hands tightly.@
+br
+`"Then this is where we part.@ Um, even though I'm not going to be here, please stay friends with Inui-kun.@
+` I wanted to be a student like you and Inui-kun."\
+
+`"And, and please don't take off your glasses too much.@ Strange power has a tendency to attract strange things.@ You were fine this time, but I do not know what will happen the next time."@
+`"…… Yeah.@ I know, someone taught me that a long time ago.@
+` In the first place, I've only recently began to take them off with everything that has been happening."@
+
+`"I see.@ That is a relief."@
+br
+` Her fingers pull back.@
+` With the handshake over, she pulls back slightly.\
+
+`"Then this is farewell.@ It would be nice to meet again someday."@
+`"----"@
+cl c,%type_lshutter_mid
+br
+` I can't reply.\
+` I couldn't even stop her.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+!w1000
+
+bg "image\bg\bg_33c.jpg",%type_lcartain_mid
+
+
+` I return to the mansion.@
+` It's past nine at night.@ …… An hour past curfew.@
+br
+ld c,":a;image\tachi\koha_t03.jpg",%type_lshutter_mid
+`"Ah, Shiki-san.@ You have come back late today."@
+` She might have been in the sitting room until now, as Kohaku-san comes out to greet me.\
+
+`"I'm back.@ Sorry about that."@
+`"No, as long as you are back safely it is okay.@ I will go make dinner, so please wait in the sitting room."@
+`"Ah---is Akiha there?"@
+br
+` …… Not because I broke curfew---but after hearing what Roa said, I don't think I can talk to her now.\
+
+ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+`"No, she is now in her room, so you can rest assured."@
+`"…… No, that's not it, but…… hey Kohaku-san.@ In this house, did you ever hear of me and Akiha having another brother?"@
+`"I don't think so.@ Why do you ask, Shiki-san?@ Did something happen?"\
+
+`"---No.@ I just heard something about me maybe having a brother, and I wasn't really sure."@
+ld c,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
+
+`"You and Akiha-sama are the only two siblings.@ I have worked in this mansion since I was a child, so it can't be a mistake."@
+` She smiles happily.@
+br
+`"---Eh?@ Kohaku-san, you've been working here since back then……!?"\
+
+ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+`"Yes.@ We were just apprentices, but Hisui-chan and I would help around the mansion.@ It did happen a long time ago, so it is natural that you do not remember."@
+cl c,%type_lshutter_mid
+
+` Is she getting nostalgic?@ She continues to smile as she heads back to the sitting room.\
+
+`"…………"@
+` Just what was he saying?@
+`"---I guess it doesn't matter anymore."@
+` Muttering to myself, I walk towards the sitting room.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_40c.jpg",%type_crossfade_slw
+
+
+` …… I lie down in bed.@
+` Pulling the sheets over me, I stare blankly at the ceiling.@
+br
+` ----It's over.@
+br
+` I still have my wounds and my memories, but it's all over.@
+` Now I can return to my peaceful life as a high school student.@
+` No need to think about killing or being killed anymore.\
+
+` Just forget.@
+` Forget about everything, and from tomorrow----
+br
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\event\cel_e01.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+
+`"------"@
+` …… I can't.\
+` There's no way I can forget.\
+
+`"Damn----it."@
+` But, I can't do anything about it.@
+` From the beginning, Senpai and I have always lived in different worlds.@
+`"………………"@
+` …… Just go to sleep.@
+` I'll be able to take it tomorrow.@
+` I'll sleep now, so I can calm down---\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+playstop
+
+!w1000
+
+bg "image\bg\bg_40d.jpg",%type_crossfade_slw
+
+` …… I can't sleep.@
+` My chest is still bothering me.@
+br
+`"……… Oh well."@
+` I choose a book of English sentences to read so I can drift off to sleep.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+monocro #ffff00
+waveloop se10
+
+bg "image\bg\cmo_11.jpg",%type_crossfade_fst
+
+` 1976.@
+` I was born as a child of a shopkeeper from a remote countryside village in France.\
+
+` I looked like my mother, who was Oriental, so I grew up feeling a little out of place wherever I went.@
+br
+` But all the townspeople were great people and would greet me with bright smiles.\
+
+` To be able to face those smiles, I lived my days honestly and positively.\
+
+
+
+bg "image\bg\cmo_12.jpg",%type_crossfade_mid
+
+` Helping my dad, going to school, falling in love like normal.@
+` That was my life and I never doubted my happiness.@
+br
+` It was truly a very short time until my sixteenth birthday.\
+
+
+
+bg "image\bg\cmo_13.jpg",%type_crossfade_mid
+
+` That came suddenly to my body.@
+br
+` Such as when I would be playing with children.@ For no reason, I wanted to snap their necks.@
+br
+` Such as when I saw a poor beggar by the road.@ It seemed so funny, I wanted to stab him with a knife.\
+
+` …… There was no reason for those feelings.@
+` I could not talk to anyone about it, so I started to lock myself away in my room.\
+
+` My dark passions came forth from within me.@
+` It's not like I had two personalities or someone came inside me.@
+` First of all, I don't believe in such unscientific things.\
+
+` My feelings are the small destructive passions everyone has.@
+br
+` Like yelling at your dad after he comes to wake you up after you stayed up all night.@
+br
+` Like feeling angry when you walk along a rainy street and a car passing by splashes you with water.@
+br
+` Such small feelings I feel for an instant solidify inside of my mind and take over.\
+
+br
+br
+br
+br
+br
+` That's why.@
+` I knew I would do something terrible if I stayed like this.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+
+` I could only lock myself away in my room.@
+` I could only not see anyone and do nothing.@
+` …… That way, I wouldn't hate anyone, and I wouldn't have those feelings.@
+br
+` ---But, that was a mistake.@
+` Imprisoned in my room, my mind was ground away, and I eventually passed my limit.\
+
+` That day.@
+` After I was completely replaced, what I thought about was how thirsty I was.@
+` I took my weakened body out of my room.\
+
+` My parents ran to me, as I came out of my room for the first time in a few months.@
+` Greeting my worried parents with a smile, I killed them.\
+
+` It really was quick.@
+` With my weakened body, I bit into their necks and sucked their blood.@
+` After sucking out their blood and life, I stood back up.@
+br
+`"---Has it been a hundred years?@ This body is very fascinating."@
+br
+` That was my voice that I had never heard before.@
+` My lips shaping a smile, what used to be me hugged itself.\
+
+monocro #ff0000
+
+
+bg "image\bg\cmo_09.jpg",%type_crossfade_mid
+
+
+` ---What kind of coincidence was it?@
+br
+` Originally, the family I was born into was one that I choose beforehand.@
+` But my previous self was destroyed by the "princess" before I could decide that.\
+
+` I could only fill the condition that the one I'm reincarnated into has a physical potential, resulting in an imperfect reincarnation.@
+` As a result, I was born into a body with a high potential, but into a normal family without any high social standing.@
+` It will be difficult to take over this town without having people notice.\
+
+` But, I was not disappointed.@
+` In fact, I was filled with happiness.\
+
+` Certainly it would take a long time for a normal family to gain power.@
+` Seizing power socially would be difficult with this self.@
+br
+` But in exchange for that inconvenience.@ I found a truly excellent body.\
+
+` Until now,
+` I had always tried to balance the body and the family standing.@ Consequently, I was never able to find a truly excellent body.@
+br
+` However----the body this time carries many more Magic Circuits than any of the bodies before----and this body had the same potential as my original.\
+
+` I cursed my calculating self up until now.@
+` Things like social standing, they could always be set up later.@
+` But the quality of the body is something natural that cannot be added later.@
+br
+` After my seventeenth reincarnation, I finally realized that truth.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+bg "image\bg\cmo_13.jpg",%type_crossfade_mid
+
+` My self that finally awoke naturally started to control the people around me like water soaking into the ground.@
+` Not in the wild manner I had done so previously, but rather in a way that didn't spill as much blood.@
+` The reason is horribly cruel.\
+
+` The reincarnated will called myself cannot exist by itself.@
+` All I can do is tell the will "I want to do that."@
+br
+` I am the one moving this body, but the method, the process was determined by my mind which has grown along with this body.\
+
+` In other words---my will is from the body I am reincarnated into, but my consciousness still remains from my original self.@
+` I have my consciousness, and I have my past memories.@
+` As I sleep, I could only dream of nightmares which I would do myself.\
+
+` I still remember.@
+` The sensation of biting into my parents' throats.@
+br
+` I took the townspeople who always greeted me, one by one.@ as if melting them slowly from their feet, I continued to humiliate and mutilate their souls.@
+br
+` Within just a month.@
+` I held their lives in my fist and played with them however I wanted to.\
+
+monocro #00ffff
+
+bg "image\bg\ima_01.jpg",%type_crossfade_fst
+
+` I wanted to go crazy.@
+` I wanted to entrust myself completely to insanity.@
+` But if I did that, I would commit even more sins than before.@
+br
+` That's why I kept on.@
+` Trying to preserve my sanity, I tried to minimize the damage I did.\
+
+br
+br
+br
+br
+br
+br
+br
+` If there was such a thing as a relief…\
+br
+br
+br
+br
+br
+br
+br
+` It was that the end to this nightmare arrived quickly.\
+
+monocro #ff0000
+
+bg "image\bg\ima_01.jpg",%type_crossfade_mid
+
+br
+br
+br
+br
+br
+br
+br
+`   That white woman came on a night with a crimson moon.\
+
+` I didn't know.@
+` But I knew who she was.@
+br
+` After our fight, the white vampire princess killed me.@
+` Since I had already prepared myself for the next reincarnation, I once again reincarnated, leaving my corpse behind.@
+br
+` The white princess left and my body was taken to the Vatican.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+monocro off
+
+wavestop
+
+!w3000
+
+
+
+return

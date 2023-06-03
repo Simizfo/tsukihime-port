@@ -1,0 +1,204 @@
+
+
+
+playstop
+
+bg "image\bg\bg_06b.jpg",%type_crossfade_slw
+
+
+` After class, the room quickly fills with the gloom of dusk.@
+` The sun is sinking below the horizon.@
+` There's no one else in the classroom.@
+` I'm the only one who likes sitting here and doing nothing.@
+br
+`"-----"@
+` The room is painted red.@
+br
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+bg "image\bg\ima_07.jpg",%type_crossfade_mid
+wave se0
+
+
+` ---I don't like watching the sunset.@
+` It makes me think of blood, and reminds me of the events in the past few days.\
+
+`"------"@
+` Still, I don't particularly feel like going back home.@
+` I stare blankly out the window.@
+br
+` Red.@
+` Red, sunset.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\ima_07.jpg",%type_crossfade_fst
+wave se0
+
+br
+`"Ah----ow."@
+br
+` The old wound on my chest hurts.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\ima_07.jpg",%type_crossfade_fst
+
+wave se0
+
+` The color red.@
+` Something… red.@
+` Such as, human blood.@
+` Lots of blood… sticky, with a strong smell.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\ima_07.jpg",%type_crossfade_fst
+wave se0
+
+`"----Gah."@
+br
+` It hurts.@
+` My glasses are on, but, my head hurts.@
+br
+`      Why?\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\ima_07.jpg",%type_crossfade_fst
+
+br
+br
+wave se0
+
+` Throbbing pain.@ My head
+`   Why?@
+`          My head.@
+` Why?@
+`                Thro
+` b  w    why----
+!w750
+
+\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\ima_07.jpg",%type_crossfade_fst
+quakey 3,100
+
+wave se9
+wave se4
+
+quakey 3,100
+
+
+bg "image\bg\bg_06b.jpg",%type_crossfade_slw
+
+
+br
+br
+br
+` I start to pant heavily.@
+br
+br
+` My breathing is ragged.@
+` I'm horribly----getting worked up.@
+` I'm irritated; there's something I can't stand, and I can't calm down unless I take it out on something----.\
+
+`"…… Is it--Tohno-kun?"@
+
+
+ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_slw
+play "track03.ogg"
+
+
+`"Huh----Sen… pai?"@
+` Senpai has a very serious look on her face as she enters the room.@
+`"I just heard a sound like someone knocking over desks…… was that you, Tohno-kun?"@
+`"----Eh?"@
+` I turn around.@
+` Indeed, desks are strewn about and chairs overturned everywhere.\
+
+`"…… Ah…… yeah, it seems so.@ I guess I got a little irritated for no reason, um--"@
+` Did I really do this?@
+
+
+ld c,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
+
+
+`"Geez, you can't do that.@ I don't know what happened, but you shouldn't take it out on things."@
+
+cl c,%type_crossfade_fst
+
+
+br
+` Senpai starts to straighten out the desks and the chairs.@
+` I wordlessly do so too.\
+
+`"…… Sorry.@ I don't… quite know myself."@
+
+
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+
+`"Hmm.@ Tohno-kun, you're acting weird.@ You were spaced out in the rain that time, and today you spaced out in the middle of all these jumbled desks."@
+`"Yeah--yeah, I'm tired and it's making me act weird."@
+` I take a deep breath.@
+` …… Is it because I saw Senpai's face?@
+` That headache and the irritation I had before vanishes like it was never there.\
+
+`"Sorry, I've caused you trouble again.@ I'll head out now, so see you tomorrow."@
+
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+
+`"Oh, Tohno-kun, are you going back now?"@
+` Yeah, I nod.@
+` As if nothing had just happened before, she gives me a hearty smile.\
+
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+
+`"What a coincidence.@ I was just thinking that I should go back too.@ Since it happens to work out, can I go back with you?"@
+`"No, I really appreciate the offer, but…… isn't your house in the opposite direction?@ We can't exactly walk back together."@
+`"I know, so we'll be together until the gate."@
+`"…… Well, in that case, my pleasure."@
+
+
+
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+
+`"Yes.@ I have to get my things, so please wait a minute."@
+
+cl c,%type_lshutter_mid
+
+
+
+` With light footsteps, Senpai runs out of the room.@
+br
+` It really was only a minute till she came back.\
+
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_lshutter_fst
+
+
+`"Thanks for waiting.@ Now then, let's go!"@
+` She really is cheerful.@
+` How should I say this?@ Just seeing her drives away the clouded feelings I had earlier.@
+` Having such a great person ask me to come with her, I ought to be punished if I was still gloomy.\
+
+`"…… Okay, let's go.@ But, it's a pretty short trip to the front gate."@
+
+ld c,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
+
+
+`"Ah, that's right.@ We'll have to go as slow as possible to make it worth it."@
+` Senpai starts to walk.@
+` Following her, I leave the darkening classroom behind me.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+
+
+
+return

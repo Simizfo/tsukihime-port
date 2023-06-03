@@ -1,0 +1,76 @@
+
+monocro #0000ff
+
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
+
+
+br
+` ---I'd die before I'd say it.@
+br
+`"Arcueid, it doesn't concern you, so leave me alone."@
+` I look away from her and refuse.@
+` But Arcueid keeps saying "Come on, come on," over and over.\
+
+`"Come on, tell me.@ You can at least tell me who you dreamed about."@
+` She asks like a curious kid.@
+` Every time I turn away she keeps jumping in front of me, saying "Come on, come on."\
+
+
+cl a,%type_crossfade_fst
+
+
+`"…… Please, just let it go.@ There was something wrong with that dream.@ …… Even now, that---"@
+` I don't know why I saw that dream.@
+` Arcueid says it's my greatest desire, but I don't want to think that's what it was.@
+br
+
+
+ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
+
+
+`"Oh, maybe it turned into a nightmare?@ She does tend to write the story to her liking when fond of her target.@ She's only a novice, so I guess it couldn't be helped."@
+` Arcueid thinks aloud.@
+`"……?@ Writes the story to her liking?@ What do you mean?"@
+`"I'm saying she interprets your desire in her own way.@ That dream familiar I sent you is just a child, so she likes to play pranks."@
+`"----I see."@
+` …… That's a relief.@
+` That's right, that dream---It couldn't have been what I wanted.\
+
+` I let out a sigh of relief.@
+` With this, my innocence has been proved but---
+`"Arcueid.@ Why did you send me such a thing?@ That's too much even for harassment."@
+
+
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+
+
+`"Hmph.@ I wouldn't harass you.@
+` I sent you the dream familiar to thank you for defeating Nrvnqsr.@ I really am grateful to you, so I thought it'll be great if it made you happy."\
+
+`"Thank me?---Well, I'm happy you were grateful, but…"@
+` But no matter what, I'll pass on that sort of thanks.@
+
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+
+
+`"Oh come on.@ Are you saying you can't accept a person's goodwill?"@
+`"…… Hey, you're not a person, you're a vampire, Arcueid."@
+
+
+ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
+
+
+`"…… That's…… true but."@
+` Arcueid slumps her shoulders.@
+` …… How do I say this… Arcueid is very open in expressing her emotions.\
+
+` Being happy, being angry, she changes her expressions so quickly---it's actually kind of charming.@
+br
+` …… I said she was a vampire, but…
+` she really does seem like a human; enough to even make me forget that fact.\
+playstop
+
+
+return

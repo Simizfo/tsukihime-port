@@ -1,0 +1,261 @@
+
+
+
+
+
+
+bg "image\bg\bg_33d.jpg",%type_nowaitdisp
+
+
+
+` ----I should go back to my room.@
+br
+` Hisui's words echo inside my head.@
+` My leaden body weakens more, weighed down by those chains.@
+play "track06.ogg"
+
+wave se0
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_33d.jpg",%type_crossfade_fst
+
+
+`"…………………………"@
+` I try to go up the stairs and my body stops.@
+` …… My legs can't go far up enough.@ It looks like I can only walk.@
+`"…………………… What is this?"@
+` …… Oh well.@ I should go back to the kitchen to ask Hisui to lend me her shoulder----\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_33d.jpg",%type_crossfade_fst
+quakey 2,300
+
+
+`"H------uh?"@
+` I start to go back and collapse on the carpet.@
+`"-----H, hey."@
+` I can't even shout.@
+` I exhaust myself crawling on my arms.\
+
+bg "image\bg\ima_10b.jpg",%type_crossfade_mid
+!w2000
+
+
+` Clomp, clomp.@ I hear footsteps.@
+` Hisui comes from the kitchen.@
+` …… I'm saved.@ Now Hisui can help me out---
+` Clomp-clomp, clomp-clomp, clomp.@
+`"…………………… No way."@
+` Crawling away from the stairs backfired.@
+` I have hidden myself in the shadows and Hisui goes up the stairs without even noticing me.\
+
+`"………………………… That was incredibly stupid of me."@
+wave se0
+
+` As soon as I voice my thoughts, something catches my attention.@
+` The feeling of something close to me.@
+br
+`"-----------!"@
+` I look behind me as I'm lying on the ground.@
+br
+` Over there,
+` a ghost-like figure.\
+
+waveloop se1
+
+
+`"----------"@
+` Then I really realize my situation.@
+` I can't move.@
+` I can't even call out.@
+` The dark mansion.@
+` …… That "someone" looks at me as if staring at its prey.@
+` Under all these conditions, it's no surprise if I die here.@
+` This situation seems like such a bad horror movie that I almost start to laugh instead of being scared.\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\ima_10b.jpg",%type_crossfade_fst
+
+
+`"……………… Ha, haha."@
+` That "someone" takes a step towards me.@
+` Is it fear of being killed?@ My dizziness starts to increase.@
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\ima_10b.jpg",%type_crossfade_fst
+
+
+`"---------"@
+` The presence stops.@
+` It looks down at me and my defenseless back----
+playstop
+br
+`"Shiki-san, if you sleep there, you will catch a cold you know."@
+br
+` ---and throws me those cheerful words.\
+
+wavestop
+bg "image\bg\bg_33d.jpg",%type_tshutter_mid
+
+play "track03.ogg"
+
+`"…………………… Kohaku, san?"@
+`"Yes, it is me.@ What is it?"@
+` ……………… I let my tension go.@
+`"Shiki-san?@ Really, just what exactly are you doing lying down like that?"@
+` …… Her voice is really cheerful.@
+` With that, I relaxed, and I---
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+` completely overwhelmed by dizziness, my consciousness shuts down.\
+playstop
+
+!w5000
+
+
+mov $phasebg,"image\bg\bg_36d.jpg"
+mov $phasetitle_a,":a;image\word\PKOHA_08A.PNG"
+mov $phasetitle_b,":a;image\word\day_08.png"
+gosub *left_phase
+
+
+
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+bg "image\bg\bg_40a.jpg",%type_crossfade_fst
+
+play "track02.ogg"
+
+` Strong rays of sunshine cause me to open my eyes.@ I'm in my room.@
+` I am now wearing my pajamas and lying in bed.\
+`"---------That's right, last night."@
+` I collapsed in the lobby last night.@
+` Hisui did not realize I was there and Kohaku-san heard something and came.@
+`"…… That means that Akiha was the one that left."@
+` …… Probably.@ Akiha always had a strong sense of responsibility, so she must have gone looking for SHIKI on the streets.@
+`" …… Akiha.@ I told her to leave him to me……"\
+
+
+wave se3
+
+`"Excuse me."@
+` With a knock, the door opens.@
+` Kohaku-san enters carrying a towel and a bucket.@
+
+ld c,":a;image\tachi\koha_t02.jpg",%type_lshutter_mid
+
+`"Ah, good morning Shiki-san.@ How are you feeling?"@
+` Kohaku-san draws near with her normal smile.@
+`"-------"@
+` I think back to last night's conversation with Hisui.@
+` Tucking that away into the back of my mind, I try to make my usual smile.\
+
+`"Mornin', Kohaku-san.@ Um---did you carry me up here after last night?"@
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+`"Huh?@ Do you not remember, Shiki-san?@ I found you collapsed in the lobby and you stood up once I called you.@
+` You said you had a nice nap and started to walk.@ I did lend you my shoulder, but you walked here by yourself."@
+`"……… Oh.@ I don't even remember it.@ I must have been so tired that I forgot what I did."@
+`"So you don't remember anything about last night?"@
+`"…… Maybe.@ I remember being in the kitchen-----"@
+` …… And hearing about Hisui and Kohaku-san's connection.\
+
+ld c,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
+
+`"Ahaha.@ That is unfortunate.@ Shiki-san, you kept apologizing to me.@
+` I inquired why you kept apologizing, and you kept saying that you were an idiot and a blockhead.@
+` Shiki-san, are you a blockhead?"@
+`"No, I don't think so."@
+` …… Well, I am really starting to get the idea that they think my brain is made out of wood.\
+cl c,%type_crossfade_fst
+
+
+`"…… Anyway, thanks a lot.@ If I slept on the stairs, I'd have caught a cold, and school---"@
+` Huh?@ Are my eyes playing tricks on me?@ The clock tells me it is already past ten in the morning.\
+
+`"Ah---!@ Ko, Kohaku-san, School!"@
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+
+`"Yes.@ Today is your school's founding holiday, so you don't have school."@
+`"--------"@
+` That's right.@ Come to think of it, it was.@
+` I completely forgot about it since I have been spacing out at school lately.\
+
+`"Well, I should get up anyway.@ If I sleep any longer Akiha will---"@
+` I sit up on my bed.@
+
+quakey 2,300
+
+`"Huh?-----I can't really."@
+` My body won't move.@
+` I try to get up with my arms, but they have no strength.\
+
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+
+`"It seems your condition is still bad.@ You have a slight fever and you look a little pale.@ It may be boring, but please rest in bed today, Shiki-san."@
+
+cl c,%type_lshutter_fst
+
+` Kohaku-san wipes my forehead with the cold, wet towel.@
+` …… It feels good and cold.\
+
+`"Hmm, it seems your fever is down.@ You're not sweating as much and your face looks much better.@ You should be well by the evening."@
+` Kohaku-san crisply brings out a thermometer and an ice pillow.@
+` …… In the end, she makes me open my mouth and checks the condition of my tongue.\
+
+ld c,":a;image\tachi\koha_t03.jpg",%type_lshutter_fst
+
+`"Well, I'll bring you some rice porridge right away.@ Shiki-san, you better behave today."@
+
+cl c,%type_lshutter_fst
+
+`"Ah---Kohaku-san."@
+
+ld c,":a;image\tachi\koha_t03.jpg",%type_lshutter_fst
+
+`"Yes?@ What is it, Shiki-san?"@
+` …… As expected, she is like always.@
+` Her usual cheerful smile doesn't change.@
+` I---I can't bring myself to think that her smile is just an act.\
+
+`"…… Nothing.@ I'm looking forward to the rice porridge."@
+ld c,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
+
+`"Yes, well then, excuse me."@
+
+cl c,%type_lshutter_fst
+
+` Kohaku-san disappears down the hall, her footsteps padding after her.@
+` I just stare at that figure silently.\
+
+bg "image\bg\ima_10.jpg",%type_tshutter_fst
+playstop
+
+!w2500
+
+bg "image\bg\bg_40a.jpg",%type_bshutter_fst
+
+play "track01.ogg"
+
+` Noon arrives.@
+` After bringing the food, Kohaku-san went back to her duties.@
+` …………………… *sigh*@
+` Being alone, I let out a sigh as I think of my strange circumstances.@
+` …… Myself being adopted.@
+` …… Akiha saying that she doesn't care about it.@
+` …… Hisui and Kohaku-san.@
+` …… And the killer that's still on the loose.\
+` I asked Kohaku-san, but it doesn't seem like there was a new victim in the news today.@
+` But as long as SHIKI is still on the loose, there will be more victims.@
+`"…… If only this body did what I told it to, I---"@
+` I could stop SHIKI.@ I lay my head back down on the pillow as I start to say that.@
+` Maybe it's because I've been seeing those dreams, but I'm beginning to have violent thoughts like SHIKI.@
+`"…… Whatever I do, I should heal up first."@
+` I close my eyes.\
+
+
+
+
+
+
+
+return

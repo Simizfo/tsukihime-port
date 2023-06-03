@@ -1,0 +1,245 @@
+
+
+
+
+
+
+bg "image\bg\bg_34a.jpg",%type_nowaitdisp
+
+
+
+
+` ---No, I really shouldn't make Akiha and the others worry about any of this.@
+` This problem---that dream, I should take care of it myself.\
+
+`"---It's just that things at school are keeping me busy.@ In November, there's the school festival, and before that, the athletic festival."@
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"…… Is that so?@ Since it's a school problem, then there isn't really anything I can do to help, I suppose."@
+cl c,%type_crossfade_fst
+
+` Akiha lowers her gaze, a little disappointed.@
+` …… Deceiving Akiha by telling her a lie is very painful.\
+
+ld c,":a;image\tachi\koha_t02.jpg",%type_lshutter_mid
+
+`"Here you go, Shiki-san.@ Thanks for waiting."@
+` Kohaku-san comes carrying a glass on a tray.@
+`"Thanks."@
+` Using a straw, I drink the Lemon Squash that Kohaku-san got for me.@
+` …… With that, the conversation ends.@
+` The only cheerful one in the sitting room is Kohaku-san, and I end up eating breakfast like always.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_48a.jpg",%type_lcartain_fst
+
+
+` Hisui walks with me to the gate to see me off.@
+` Just like before in the sitting room, Hisui continues her silence, which makes me uneasy.@
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
+
+`"Please take care on your way, Shiki-sama."@
+`"Yeah, I'll be on my way…… Hisui?"@
+`"Yes, what is it, Shiki-sama?"@
+` Hisui looks at me directly.@
+br
+` ---Why is it?@
+br
+` Being stared at by those pure eyes, I get this uncomfortable feeling, like I was very dirty.\
+
+`"…… It's nothing.@ Just be careful at home."@
+cl c,%type_crossfade_fst
+
+` With a deep uneasiness in my chest, I leave the mansion.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+playstop
+
+!w2000
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_lcartain_fst
+
+` ---It's lunch time.@
+` As usual, Arihiko is skipping school.@
+br
+`"…… I'll go eat at the cafeteria."@
+` If I eat by myself, I'll just end up being depressed.@
+` If I go eat in the cafeteria full of people, it should help me get my mind off of things.\
+
+bg "image\bg\bg_50.jpg",%type_lcartain_mid
+
+` As expected, the cafeteria is packed.@
+` After waiting in a long line, I buy the tried and true meal set A and walk to a table.@
+` The students' voices are pretty loud, so I am able to concentrate on just eating my meal.@
+` I use my fork and eat in silence.@
+br
+` ----And then.@
+br
+` For a moment, I see a terrible image.\
+waveloop se1
+
+`"…… The television screen……"@
+` I gape at the large television mounted on the wall at the end of the cafeteria.@
+` At my school, they record the morning news and replay it at lunch.@ My eyes fixate on what is playing.@
+
+wave se0
+
+
+`"----No way…"@
+` I watch the news in amazed horror.@
+` Shown on the television is the alley that I saw last night in my dream.@
+` The newscaster is talking.@
+` On the screen, the words "Vampire Serial Killer's Ninth Victim" appear in bloody lettering.\
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_50.jpg",%type_nowaitdisp
+
+
+` After that, the face of the victim appears.@
+` The woman with the long hair, she… definitely was the one I killed in my dream.@
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_50.jpg",%type_crossfade_fst
+
+`"------"@
+` I start to feel faint.@
+`"How…… come?"@
+` That was a dream.@ It had to be a dream.@
+` But in reality, the same person as in my dream, in the same place as my dream, was killed in the same way as my dream.\
+
+`"The vampire should be gone already."@
+` I killed Yumizuka with my own hands.@
+` Those killings, they shouldn't be happening anymore.@
+br
+`"I----killed?"@
+br
+` Yes, I killed.@
+` Just like the time I killed Yumizuka.@
+` While breathing hard, last night, that woman I've never met---\
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+br
+br
+br
+br
+br
+br
+` Didn't I tell you, Shiki-kun?@
+` It's useless to resist it.\
+bg "image\bg\bg_50.jpg",%type_nowaitdisp
+
+
+`"Uu---"@
+` Quashing the urge to throw up my lunch, I stagger out of my seat.@
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+
+br
+` I can't go back to class.@
+` I somehow find myself running into town.\
+wavestop
+
+!w2000
+bg "image\bg\bg_30a.jpg",%type_lcartain_fst
+
+
+` ---I come to the place I saw in my dream.@
+br
+` There are several policemen around the area, and tape reading "Police Line Do Not Cross" is stretched across the alley.@
+`"---Exactly the same."@
+` Without a doubt, this is the place I went to in my dream.@
+` ---No, that's not a dream.@
+` I can't delude myself into thinking it is a dream any longer.@
+`"…………"@
+` Even if I stay here longer, the cops will only stare at me.@
+` …… I can't go back to school now.@ I guess I'll go back to the mansion.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w1000
+bg "image\bg\bg_33a.jpg",%type_lcartain_mid
+waveloop se10
+
+
+` Since it's not even two o'clock yet, Hisui isn't waiting in the lobby.@
+`"……………"@
+` I can say I got lucky.@ I don't feel like seeing anyone right now.@
+br
+bg "image\bg\ima_10.jpg",%type_tshutter_mid
+bg "image\bg\bg_40a.jpg",%type_tshutter_mid
+
+
+` *sigh*@
+` Letting out a deep breath, I collapse onto my bed.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+
+` …… I just don't understand any of this at all.@
+` I have dreams where I kill people.@
+` In reality, the same killing has happened.@
+` I am living today like living a normal life.@
+` I was taking delight in killing people in my dreams.@
+br
+br
+` ------Just which one…
+`      is the real Tohno Shiki?\
+
+
+#ff0000
+br
+br
+` Do you really have to ask?\
+#ffffff
+br
+br
+` …… That voice again.\
+
+#ff0000
+
+br
+br
+br
+br
+` C'mon, let's continue, Shiki.\
+#ffffff
+
+br
+br
+br
+br
+` …… That voice that echoes inside my head.@ My voice.\
+
+
+#ff0000
+
+br
+br
+br
+br
+br
+` Night comes every day.@
+` For sure, we'll find the one we want someday, right……?\
+#ffffff
+
+ld c,":a;image\tachi\aki_t09.jpg",%type_nowaitdisp
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
+wavestop
+
+
+`"Shut up------!"@
+` I leap out of bed.@
+` I start to pant heavily.@
+` My breathing is out of control.@
+` Just now…
+` I wanted Akiha.@
+`"Damn it----what in the world…"@
+` I don't understand what's happening to me.@
+` All I know for sure, is that if I see Akiha or Hisui right now, I don't know what I'll do to them.\
+
+
+
+
+
+return

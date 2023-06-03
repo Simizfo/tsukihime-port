@@ -1,0 +1,237 @@
+
+
+
+
+
+
+bg "image\bg\bg_11d.jpg",%type_nowaitdisp
+
+
+` ---It's too early.@
+br
+` To absolutely ensure my kill, the enemy needs to be defenseless.\
+
+play "track06.ogg"
+
+ld c,":a;image\tachi\aki_t28.jpg",%type_crossfade_fst
+`"You made a mistake, Nii-san.@ That was your last chance to kill me."@
+` The enemy stops.@
+` Her breathing and stare are full of confidence.@
+`"--------"@
+` That means, this distance right now is her maximum range in this dark hallway.\
+
+`"You were so quick earlier.@ I thought I would still lose sight of you even in this narrow hallway with your speed.@
+` But, that won't happen with this distance.@ I am close enough to see the color of your eyes, so I can easily track you."@
+`"---------"@
+` No matter how fast I dash, she is saying she will kill me before I get close.@
+` But---that's only if I dash toward her.\
+
+ld c,":a;image\tachi\aki_t27.jpg",%type_crossfade_fst
+
+`"……………"@
+` She narrows her eyes.@
+` Is she bothered by the fact that she has my life in the palm of her hand, or that I am so calm?@ …… Or, does that cause her to hesitate?@
+` Whichever one it is---just like SHIKI thought, she really doesn't understand what a battle to the death means.\
+
+`"---You look like you're planning something, Nii-san."@
+` She says the obvious.@
+` There's no need to answer.@
+`"--------Is she stupid?"@
+` I mutter and switch my knife to the other hand.@
+` I take it from my dominant hand and place it in my left.@
+` I have figured out her range.@
+` All that's left---\
+
+`"---Ridiculous.@ You're getting scared now."@
+ld c,":a;image\tachi\aki_t29.jpg",%type_crossfade_fst
+
+`"I-----I'm not scared……!@ You're the one being scared and not able to move!"@
+`"…… Okay.@ You can kill me, right?@ Then you should do so.@ If you do nothing, I'll kill you the next time you blink.@
+` ---I'm about sick and tired of seeing your face."@
+`"---------!"\
+
+` The air around her swirls.@
+` Her desire to kill starts to embody itself in her red hair.@
+ld c,":a;image\tachi\aki_t31.jpg",%type_lshutter_fst
+
+
+` Her gaze, and the surrounding air that turns crimson and tries to wrap around my arms at the same time.\
+cl c,%type_lshutter_fst
+
+
+`"------"@
+` I leap back.@
+` More than anything, I slice the red hair coming to wrap my dominant hand.@
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_11d.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\aki_t29.jpg",%type_lshutter_fst
+`"Ah-------!"@
+` Akiha's clipped voice.@
+` I then switch the knife to my freed dominant hand.@
+` I slice the hair around my left arm…… It took a bit to free myself on this hand.\
+cl c,%type_lshutter_fst
+
+`"Feh-----"@
+` I can't feel my left arm.@
+` I can't see any wounds, but there isn't any sense or feeling.@
+`"I see now----that's what it does."\
+
+monocro #ff0000
+bg "image\bg\bg_11d.jpg",%type_lshutter_fst
+
+` I jump back even more.@
+` ---The red hair chases me.@
+` It isn't as quick as before, but still wraps around my limbs.\
+
+` …… No, chasing isn't the right word to use.@
+` There is no way to escape this red hair.@
+` When she sees me, it is already wrapped around me.@ It is wrong to imagine dodging it or avoiding it.@
+` If it's there, it's there.@ If it's not, it's not.@
+` Like the air touching my skin, the red hair is already wrapped around me.\
+
+` Therefore, there was no way to escape from that attack.@
+` If there is anything I can do, it is---before Akiha steals something from me, I have to cut that pipeline…… that red hair of hers.@
+` The interval between her seeing something and stealing from it is only an instant.@
+` But if the target isn't clear in her vision, there is a small time before she actually steals from me.@ Before she can steal too much from me, I cut the hair to avoid a fatal wound.\
+
+` That's all I'm doing.@
+` Even though I can see her image of "red hair", it doesn't make a difference that her ability is overpowering.\
+
+monocro off
+bg "image\bg\bg_11d.jpg",%type_lshutter_fst
+
+
+` ---Maybe she's taking it easy, but she follows me without running.@
+br
+`"--------"@
+` I cut the hair that comes to bind my arms, legs and body continuously.@
+` The left arm that I sacrificed to confirm her power doesn't move at all.@
+` There's no pain.@ There's no blood.@ But despite my clothes, I can tell that a big part of the flesh is taken away by burn wounds.\
+
+`"--------Tch."@
+` What's making me uneasy is that the open flesh sends sickening cold air into me.@
+` Thanks to that, I can't concentrate fully on escaping.@
+` My efforts to escape Akiha's gaze gradually become slower and I soon stop.\
+
+` ---And, it now becomes Akiha's range.@
+br
+ld c,":a;image\tachi\aki_t11c.jpg",%type_lshutter_mid
+`"----Oh, what's this?@ All you can do is run away?@ I told you, my prey will only end up burning."@
+` She must be confident that I've been driven into a corner.@
+` She stops walking and glares at me.\
+
+ld c,":a;image\tachi\aki_t28.jpg",%type_crossfade_fst
+`"It's over, Nii-san.@ Isn't it going to be fun?@ You're going to be killed by me without leaving a trace---!"@
+br
+` ----I told you.@
+` Talking like that is a useless excess, Akiha.\
+
+bg "image\bg\bg_07b.jpg",%type_lshutter_fst
+
+
+` ------Crash.@
+` I jump back to the stairs, and jump down them without using the steps.@
+br
+`"What---!?"@
+br
+` …… I hear her voice coming from above.@
+` I was only jumping straight back this whole time, so she could not react to me moving sideways.@
+` …… Well, I planned to reach the stairs while moving back, so it's no coincidence.\
+
+`"Why you…………!@ Stand still………!"@
+` Akiha looks down the stairs to try to see me.@
+`"-----Now,"@
+` Before she can do that, I jump down one more time.\
+playstop
+
+bg "image\bg\ima_10.jpg",%type_tshutter_fst
+bg "image\bg\bg_07b.jpg",%type_bshutter_fst
+
+
+`"Gg………"@
+` Flying down the stairs a second time causes my knees to protest in agony.@
+` I ignore it and run to the hallway.@
+` I hear the dry sound of Akiha's footsteps rushing down the stairs.@
+`"------Window."@
+` This is the second floor.@ I can jump down outside and still be okay.\
+
+`"------"@
+` But then, I'll end up like SHIKI.@
+` I have repeated what happened in that dream this much, so I shouldn't have to copy what SHIKI did to every detail.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_10f.jpg",%type_lshutter_fst
+
+
+` I enter the hallway.@
+` Even on the second floor the red hair fills the air…… They're like live blood vessels.@
+
+quakey 2,50
+
+
+`"-----!?"@
+` The feeling in my leg disappears and I collapse to the ground.@
+`"Cra-----"@
+` My left leg is wrapped in hair.@
+` ---Did she see my leg as I went down the stairs?@
+` I'm outside her visual range, so this won't be fatal, but----\
+
+`"Shit…… she's more wicked than I thought."@
+` I cut the hair.@
+` My left leg---It's now just like my left arm.@
+`"------"@
+` The sound of footsteps comes closer.@
+` Before she enters the hallway, I dash into a classroom.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_06g.jpg",%type_lshutter_fst
+
+
+`"------,-------,----"@
+` Holding my breath, I lean against the wall between us.@
+` …… I don't believe it.@
+` Half of my body might as well be dead.@
+` I was aware of it, but I didn't think I'd end up copying that dream this much.@
+br
+wave se8
+
+` …… Tap, tap, tap.@
+br
+` The footsteps draw nearer and nearer.\
+
+`"--------"@
+` In my dream, SHIKI was killed right after this.@
+` …… SHIKI's decision wasn't incorrect.@ He just didn't have a full understanding of Akiha's ability.@
+` The burnt smell of the air.@
+` The temperature's scorching resemblance of deep summer.@
+` And the body parts that disintegrate with burning pain.@
+` All of these facts made SHIKI think that Akiha's power was 'burning' the enemy.\
+
+` But the truth is just the opposite.@
+` Akiha entangles her target with her red hair and completely steals their "heat".@ This causes instant freezing followed by vaporization, making it look like it disintegrated.@
+` If it truly was burning, then matters would be hopeless once the flame was lit.@ No matter how many times the red hair is sliced, it's not possible to cut off your own body.\
+
+` But---that is just stealing and taking in.@
+` Therefore, even if I get completely wrapped by the red hair, as long as I can cut off the hair before I am completely drained and kill Akiha herself, then there's no problem.@
+` While she lives, she can turn her target into an inferno.@ But that illusion of fire will die when Akiha dies.\
+
+wave se8
+
+` …… Tap, tap, tap, tap.\
+
+`"------"@
+` I was already prepared to have my left arm burned when I stuck it out.@ I was prepared to cut it off from my shoulder once it lit up, but there was no need for that.@
+` Akiha's ability will not kill me if I can stop Akiha herself.@
+` Since Akiha is not a true flame user, a surprise attack cannot end up in mutual death if she dies before me.\
+
+`"--------"@
+` I hear a sound.@
+` I hear her footstep right behind my back.@
+` Without a doubt---Akiha is about to pass the classroom without even noticing I am here.@
+br
+
+
+
+
+return

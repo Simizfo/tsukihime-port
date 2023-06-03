@@ -1,0 +1,76 @@
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+play "track03.ogg"
+
+bg "image\bg\bg_11b.jpg",%type_lcartain_fst
+
+` As soon as I step out into the hallway, I run into a familiar face.@
+`"Huh?@ What's up, Senpai?@ Do you have some business here at the second year classrooms?"@
+ld c,":a;image\tachi\cel_t01a.jpg",%type_lshutter_fst
+`"Yes.@ Business with a second year student, to be precise."@
+` Ciel-senpai approaches with a smile.@
+`"Listen, I have some nice snacks here, but no one to talk to.@ It would be a waste to eat them all by myself, so I came to catch an idle-looking person to talk to."\
+
+`"Hmm… Someone to talk to?@ But there's no one left in the classroom.@ It's the same with all the other classes, too.@ You don't usually come to the second year classrooms anyway, do you?@ You're on the lower floor, right?"@
+` And if she wanted someone to talk to, aren't there plenty of third year classmates she could talk to?@ She really didn't need to come all the way up here.@
+`"Shouldn't you think about asking your third year classmates?@ Conversation would probably be better."\
+
+ld c,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
+`"Yes, but today, I'm in the mood to talk to younger guys.@ Please don't ask for a reason, it's just on a whim."@
+`"…… Well, I won't ask."@
+` I probably wouldn't be able to understand even if she told me.@
+` Senpai's smile disappears as she stares into my face.\
+
+ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+`"Are you free right now, Tohno-kun?"@
+`"Well---If having nothing to do means I'm free, then I'm definitely free."@
+br
+` Senpai grabs hold of my sleeve.@
+br
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+`"Well then, you are now caught.@ Let's go have some tea."@
+` Senpai invites me with a smile.@
+` There's no reason for me to decline the offer, and besides, it should be fun talking with Senpai.\
+
+`"Sure, I'll come along, if it's okay with you."@
+`"Then it's decided.@ Alright, let's go!"@
+` Still holding my sleeve, she begins walking down the hall with a light gait.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_09b.jpg",%type_lcartain_slw
+
+
+
+
+`"Wow.@ Our school has a room like this?@ Could it be for the Tea Ceremony Club?"@
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+`"Yes, it's the Tea Ceremony Club's room for now.@ It seems like it hasn't been used up until I came though."@
+cl c,%type_lshutter_fst
+` Senpai steps onto the tatami mat and starts preparations with a rattling noise.@
+`"A club room, huh?@ If that's the case, won't the other club members be coming?@ It'd be bad for an outsider like me to be here, right, Senpai?"@
+`"It's okay.@ It may be the Tea Ceremony Club, but there aren't any other members except for me.@ Thanks to that, I can use it freely during break time and after school…… here we go."@
+` Smiling, Senpai begins spreading the cushions.@
+` Tea is tea, but it looks like this is really going to be a serious tea ceremony.@
+` To be honest, I'm a bit overwhelmed.\
+
+`"Uh, Senpai…… I don't have the slightest clue what to do."@
+`"What are you talking about?@ I only know up to the pouring bit myself."@
+` With that blunt reply, Senpai put the teapot, some cups, and some tea cakes onto a plate.@
+ld c,":a;image\tachi\cel_t03.jpg",%type_lshutter_fst
+`"We are just going to have a casual conversation, so there's no need to be so formal.@ It isn't any fun that way, is it?"@
+` Smiling softly, Senpai pours tea into her own cup.\
+cl c,%type_lshutter_fst
+`"…… Hmm.@ I just don't get you, Senpai."@
+` Mumbling, I pour my own tea.@
+` I slurp some.@
+` Picking up the tea cake and putting it in my mouth, I sip again at the tea.@
+` I was never involved with it, but the Arima family is a prominent tea ceremony family.@
+` Being raised in a household like that, I'm used to drinking tea and doing nothing.@
+` Senpai looks at me with a somewhat troubled expression.\
+
+`"What's wrong, Senpai?@ You look a bit unhappy."@
+
+
+
+return

@@ -1,0 +1,36 @@
+
+bg "image\bg\bg_34a.jpg",%type_nowaitdisp
+
+`"Hey.@ Good morning, Akiha."@
+
+ld l,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"---Good morning, Nii-san."@
+
+ld r,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+`"Good morning, Shiki-san.@ Breakfast is ready in the dining hall.@ Please eat up."@
+` In contrast to Akiha, Kohaku-san greets me with a cheerful smile.\
+`"Ah, thank you very much… It looks like you're having your after-meal tea.@ Have you already finished breakfast, Akiha?"@
+
+ld l,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+`"Of course.@ I don't care when you get up, Nii-san, but please at least make some time for breakfast.@ Having breakfast after seven is a sign of sloppiness."@
+`"…… I think having breakfast at seven is pretty normal.@ What time do you get up, Akiha?"@
+
+ld l,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
+
+`"I get up at five in the morning.@ What about it?"@
+`"………"@
+` …… Wow.@ I don't know why she gets up so early, but it was so perfect a time to get up that I have no room to retort.\
+
+ld l,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+`"Besides, your school is thirty minutes from here on foot, isn't it?@ Please don't be late to a school that's so close by.@ It'd be an embarrassment."@
+`"…… Urgh."@
+cl a,%type_crossfade_fst
+` Akiha's words are filled with thorns that stab at me.@
+` But as it's the truth, there's no opening for a counter-argument.\
+
+
+return

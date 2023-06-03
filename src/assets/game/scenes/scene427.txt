@@ -1,0 +1,195 @@
+
+
+
+
+
+bg "image\bg\bg_11d.jpg",%type_nowaitdisp
+
+
+
+` ---Before that footstep even fades, I spring into action.@
+br
+`"Here---------!"@
+br
+` Akiha's voice is a mixture of malice and pleasure.@
+` Enjoying the tension of battle, she smiles as she looks in my direction.@
+`"---------"@
+` That carelessness is my only chance and her only reason for loss.\
+
+`"Not good enough, Nii-san.@ No matter how fast you are, you just get clearer as you get closer to me-----!"@
+` Her voice is full of delight.@
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_11d.jpg",%type_nowaitdisp
+
+` Her eyes catch a hold of me.@
+` Then, the rest is simple.@
+` I won't be able to reach her, as she'll evaporate my arms and legs, and collapse to the floor.@
+br
+` -----Well,
+` that is, only if she can fix her eyes on me until I am completely burned away.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+
+
+` My view reverses.@
+`"----------Eh?"@
+` Her voice is full of surprise.@
+` In that same instant, the red hair that was to burn my arms and legs vanishes.@
+` It's fortunate that the hallway is just a straight line.@
+` Akiha, who thought I would only attack directly, can't see me as I climb up the wall and jump to the ceiling.\
+
+` Proceeding up the wall like a spider, my foot touches the ceiling only once.@
+` It's not like I can actually be a spider.@
+` Turning my body, I'm just using the ceiling for a foothold.@
+br
+` The distance is good enough.@
+` Before my body falls, I use my legs to thrust off the ceiling.\
+
+bg "image\bg\bg_11d.jpg",%type_tshutter_fst
+
+`"Uh, eh------?"@
+` Akiha's gaze shifts upwards and the burning sensation returns to my arms and legs.@
+` The feeling stops in an arm and a leg.@
+` They probably don't exist anymore.@
+` But, I don't need them any longer.@
+` My body has the speed it needs.@
+` Like this----
+
+quakey 3,50
+
+br
+`"Kyaa--------!?"@
+br
+` I collide into Akiha.\
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+
+`"Why, you--------!"@
+` Akiha lifts her head.@
+` Being this close to her, she can easily find me and disintegrate my body.@
+bg "image\bg\ima_14.jpg",%type_lshutter_fst
+
+br
+` So,
+` before that happens, I cut it apart.@
+br
+` That delicate neck.@ I cut it horizontally through her pulsing veins.@
+` Making no differentiation between her skin, her muscles, her arteries, her bones,!w1500 without mercy or compassion,!w1500 like plucking a lily,!w1500 without even any resplendent pain.\
+
+monocro #ff0000
+bg "image\bg\bg_11d.jpg",%type_lshutter_mid
+play "track09.ogg"
+
+br
+br
+br
+br
+br
+br
+br
+` Thud.\
+
+` On the hard floor, something that's shaped like a bowling ball drops.@
+` It's all over.@ Her eyes are cluelessly looking at the wall of the hallway, and probably will continue to do so for all of eternity.\
+br
+`"Is that the last thing you saw?"@
+br
+` Her eyes being lower than that of a dog or a cat's, she fixes her gaze towards the dirty wall.@
+` Everywhere is darkness.@ Dying while watching this scenery, it's like a bad joke.@
+br
+`"…… Didn't the old man teach you that taking pleasure in killing is shallow, Akiha?"@
+br
+` …… Well, that would've been useless.@ Tohno Makihisa was shallow, so her messing up like that was inevitable.\
+
+`"…… What a shame.@ Even though you were this talented, the fire that formed you was too weak."@
+br
+` That's why I could kill her so easily.@
+` Doing useless things like enjoying killing.@
+` You did that, so you died.@
+` In this place, all alone.@
+` Forever alone, staring at that wall that no one ever watches, not even letting out the final agonies of death.@
+br
+`"…………………… Ha."@
+br
+` Hmph.@
+` Even though she is my sister, she looks so pathetic.\
+
+
+`"-----------Ahh."@
+` My stopped breathing resumes.@
+` My burnt body feels power flowing into it once more.@
+` …… Because Kohaku-san died, my body was losing its power.@
+` But since Akiha died, it seems like I am returning to normal.@
+` Well, in the first place,
+` this body, this head, this heart, even if I embrace them and live, there is nothing-------\
+
+` *pant*---*pant*----*pant*----
+` My breathing returns.\
+` My numb arm and leg still seem to be holding their shape.@
+` On the floor, Akiha's blood finally starts to spill outward.@
+`"Aah----------ah."@
+` Crawling to the wall, I manage to stand up on one leg.@
+` I open the window and fresh air streams in.@
+` The cold wind blows through the baking hallway.\
+
+`"-------Aha.@ Hahaha, ha."@
+` This wind feels extremely good.@
+` It cools my burning body and my headache ceases.@
+`"----Haha…… ha…… ah----"@
+`  So why?@
+` Only my thoughts, as if my head is becoming empty.@ Everything feels the same and my vision does not return to normal from the red world I'm in.\
+
+bg "image\bg\ima_01.jpg",%type_crossfade_fst
+
+
+` ------Above my head is the crimson moon.@
+br
+` I remember that one dream.@
+` That moon looking down at that killer.@
+` Even at that time, it was a beautiful moon, so why?@
+` Why can't it evenly illuminate me tonight?@
+br
+` -----Like a snake.@
+br
+` Like an inflamed red eye, it stares at me.@
+` Staring.@ The red eye looks down on me intently.\
+
+` Red.@ Red, red, red eye.@
+`"…… Ha…… haha…… I understand it now----"@
+` That made it all clear.@
+` What Akiha was looking at in her last moments wasn't the wall.@
+` She was looking at Nanaya Shiki as he approached to mechanically slice her neck.@
+`"…… I see.@ Then----it won't go away, will it."@
+` Then, the moon will always be red.@
+` In her eyes, the killer is still burning.@
+` That can't be erased.\
+
+` That's why even though everything is over, I have nowhere to go.@
+` I lost Kohaku-san, I even killed Akiha.@
+` There really is nowhere I can go.@
+` All purpose, even my self, has disappeared.@
+` Despite that, my only leg limps down the hallway.@
+br
+` ----The sky overhead still has that giant eye.@
+br
+` With Akiha still watching him, Nanaya Shiki walks off to somewhere.\
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+monocro off
+
+playstop
+
+!w4000
+
+
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+
+
+
+return

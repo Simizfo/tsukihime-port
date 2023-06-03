@@ -1,0 +1,62 @@
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "track03.ogg"
+
+
+ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld c,":a;image\tachi\his_t16.jpg",%type_tshutter_mid
+`"I am deeply sorry.@ Ciel-sensei is now on her lunch break.@ Please wait until she returns."@
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+br
+`"She's neglecting her duties and snacking on curry bread!"@
+br
+
+ld r,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+
+`"Get over here, stupid Ciel!"@
+br
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"I feel the same way, but if she is not here, it cannot be helped.@
+` You cannot do anything about someone not here, and it is just too miserable to just complain about how much Nee-san cannot clean or tidy things up.@
+` Now then, we shall begin the customary correction corner."\
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"…… Shiki-sama,
+` hiding things does not give good results.@
+` If you learned from this experience, please trust Hisui next time.@
+
+ld c,":a;image\tachi\his_t01b.jpg",%type_crossfade_fst
+
+` …… That is all.@
+` I will now return to the mansion.@
+` Please continue enjoying the main storyline."\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+ld c,":a;image\tachi\ark_t30.jpg",%type_lscroll_mid
+
+`"Nyaaa…… That woman, I smell another cat-like character……"@
+
+cl c,%type_lscroll_mid
+
+
+
+
+playstop
+
+
+
+return

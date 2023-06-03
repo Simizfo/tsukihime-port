@@ -1,0 +1,19 @@
+
+
+` I decide to go buy some bread and eat it slowly in my classroom.@
+br
+` …… There are still a few guys and that close group of girls in here as well.\
+
+`"…… Huh?"@
+` I just noticed.@
+` Yumizuka Satsuki, usually the most eye-catching of all the girls, is nowhere to be seen.@
+`"…… She must be absent."@
+` I must be pretty absent-minded to take until lunchtime to realize one of my own classmates isn't even here.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+!w1000
+
+
+
+return

@@ -1,0 +1,121 @@
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+bg "image\bg\bg_32c.jpg",%type_lcartain_slw
+
+` It's quiet at the mansion gate.@
+` The time is seven o'clock at night.@
+` Akiha should be back, probably having tea in the sitting room.\
+
+` ……………… *sigh*@
+` I don't really feel like leisurely eating dinner at all, but if I don't go back, Akiha and the others will probably worry about me again.@
+` Looking for Arcueid will have to wait until after dinner.@ I'll leave when Akiha and everyone else go to sleep.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w1000
+
+bg "image\bg\bg_40c.jpg",%type_lcartain_slw
+
+` ----Dinner with Akiha is over and I head back to my room.@
+` I had some tea after dinner with Kohaku-san and the others, but I don't even remember what went on.@
+br
+`"----Where the heck is she?"@
+` My head is only filled with thoughts of that golden-haired vampire.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_32c.jpg",%type_lcartain_slw
+
+` At ten o'clock, the lights in the mansion are turned off.@
+` At bedtime, everyone goes back to their rooms, so I slip out of the mansion undetected.\
+
+`"…… She's, probably in the city?"@
+` …… I don't want to think about it, but most of the victims are usually found in alleys.@
+` If I want to find Arcueid----if I want to find the vampire killer who's continuing to murder, then I have to search the streets.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w1000
+
+bg "image\bg\bg_26a.jpg",%type_lcartain_mid
+
+` ------*sigh*@
+` I sit down on the guard rail.@
+` It's been several hours already.@
+` I looked around aimlessly, and I didn't even catch a single glimpse of Arcueid.\
+
+`"………… Damn it."@
+` It's so, frustrating.@
+` Of course, I knew it isn't easy to just randomly find someone in town, but I still felt optimistic I would find her.@
+br
+`"Where did she go……?"@
+` …… Why?@
+` I just wanted to ask her about the serial killings, but once I find out I can't see her, I----\
+
+`"Ah, stop.@ Stop.@ I should just stop."@
+` I stand up from the guardrail and start walking.@
+` It'll be midnight soon.@ Searching for Arcueid any longer really is just useless.@
+`"…………"@
+` But, if I've gone this far, I can do just a little more.@
+` There's one last place I need to check.@ If she's not there, then I'll go back to the mansion.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_27b.jpg",%type_lcartain_mid
+
+` …… The deserted park.@
+` I arrive at the place where I cooperated with Arcueid and defeated Nrvnqsr.@
+` Having only looked in town, I've yet to search here.@
+`"…… Well, not that I'll find anything……"@
+` Grumbling to myself, I enter the park.\
+
+bg "image\bg\bg_28b.jpg",%type_lcartain_mid
+
+` Midnight.@
+` As expected, there's no one here this late at night.@ With this much silence, it rather feels refreshing.\
+
+`"…… That's right.@ It's not like I can conveniently find her."@
+` I let out a sigh and slump my shoulders.@
+`"…… How stupid.@ Why am I so disappointed?"@
+` I don't understand it myself.@
+` Just, once more----I think maybe I wanted to see her smile.\
+
+ld c,":a;image\tachi\ark_t08.jpg",%type_lshutter_fst
+`"Ah, there you are.@ Good evening, Shiki."@
+br
+` …… Yeah, just like this.@ Her face that's so cheerful and carefree you can't believe it belongs to a vampire----
+br
+`"A,      Arcueid----!?"@
+` Without even thinking, I grab both of her shoulders.@
+ld c,":a;image\tachi\ark_t12.jpg",%type_crossfade_fst
+`"Eh----?"@
+` Arcueid flinches in surprise.\
+` Her shoulders are indeed real, and I quickly pull my arms back.@
+cl c,%type_crossfade_fst
+\
+
+`"Y, you, why----"@
+` Even though the one I've been searching for so long is right before me, I can't do anything but stumble over my words.@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"Why?@ That's odd.@ I was looking for you, so I don't think it's coincidence we met here."@
+`"Eh----You, were looking for me?@ Why?"@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+`"Why?----Oh, no reason."@
+` She says straight out that she has no reason to be looking for.\
+
+`"………………"@
+` …… I forgot.@ She really is kind of like a cat this way.@
+`"…… Well, I guess it works out.@ To be honest, I wanted to see you too.@ So meeting here, um----"@
+` I was about to say it makes me really happy, but I frantically choke those words off.\
+
+`"----Anyway, I want to have a serious talk.@ I want to talk about it somewhere else since I feel uneasy here, so is that okay?"@
+`"Sure----but talk about what?"@
+`"You'll see.@ …… Let's go more to the back of the park."@
+` Telling her to come on, I start walking.@
+cl c,%type_lshutter_mid
+` Tilting her head in curiosity, she follows me obediently.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+
+return

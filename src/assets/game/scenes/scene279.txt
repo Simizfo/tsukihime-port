@@ -1,0 +1,104 @@
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+
+` ---I'll just stay in the classroom.@
+br
+` Senpai isn't there no matter where I go.@ No matter what I do, she won't come back---\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_slw
+bg "image\bg\bg_06b.jpg",%type_lshutter_slw
+
+` The end of the day homeroom session is over.@
+` My chatting classmates get out of their seats.@
+` After staring at them blankly, I get out of my seat to go back to the mansion.\
+
+` ---Back to the mansion.@
+` But it's not like there's anything if I go back.@
+br
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+monocro #ffff00
+
+bg "image\event\cel_e05a.jpg",%type_crossfade_fst
+
+monocro off
+
+bg "image\bg\bg_06b.jpg",%type_crossfade_fst
+
+`"…………"@
+` I know I can never reach her, but I can't give up.@
+`"Damn it---what the hell should I do……!"@
+br
+` Voicing my thoughts angrily, I leave the classroom.\
+
+
+bg "image\bg\bg_11b.jpg",%type_lcartain_mid
+
+` …… I look up and find myself in front of the tea ceremony room.@
+` Even though she won't be here, my legs walk in on their own.\
+
+bg "image\bg\bg_09b.jpg",%type_lcartain_mid
+
+`"-------Ha."@
+` Of course, no one is here.@
+` I wasn't expecting anything, but when I'm hit hard like this, my vision seems to waver.@
+br
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\bg_09b.jpg",%type_crossfade_fst
+
+
+` The world starts to spin around me.\
+play "track04.ogg"
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+
+br
+br
+br
+br
+br
+br
+br
+`     Instantly, it happens.\
+
+bg "image\bg\bg_09b.jpg",%type_nowaitdisp
+
+quakey 1,100
+
+
+` The ground shakes.@
+` I think to myself it's a large earthquake---but I realize it's not the ground shaking, but the impact of my body hitting the floor that I felt.\
+
+`"Ah----eh?"@
+` I can't speak well.@
+br
+` Panting.@
+
+` The gasping breaths can be no one else's but mine.@
+` But I don't feel bad.@
+` It's more like I don't feel anything, like I have no sense of feeling at all.\
+
+` The sound of frantic breathing.@
+br
+` Even though I'm not exhausted, my throat painfully gasps for air.@
+` I don't feel anything.@
+` I feel like the collapsed body here isn't mine.\
+
+` The sound of gasping.@
+br
+` Something's---weird.@
+` As I lie breathing wildly on the floor, blood spreads out on the tatami mats----\
+
+monocro #ff0000
+
+quakey 1,100
+
+`"----Gah."@
+br
+` Suddenly,
+` a stabbing pain fills my chest.\
+
+monocro off
+
+
+return

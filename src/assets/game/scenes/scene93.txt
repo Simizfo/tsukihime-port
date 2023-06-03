@@ -1,0 +1,24 @@
+
+br
+` ----swallowed.@
+br
+` With a splashing sound, I am engulfed in the surging, heaving wave.\
+
+` An oppressive invasion.@
+` It violates, assaults, and dissolves.\
+
+`"--------"@
+` Flesh, spirit, soul… all disappearing.@
+` I am not killed.@
+` It's more accurate to say I've been melted and absorbed as a part of this black wave.\
+
+` I observe the me that is me disappear in the black wave----\
+
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+return

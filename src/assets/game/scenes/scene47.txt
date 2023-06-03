@@ -1,0 +1,65 @@
+
+
+
+bg "image\bg\bg_40c.jpg",%type_crossfade_mid
+waveloop se10
+
+` Left by myself, I lie on my bed.@
+` This house from eight years ago…
+` My blood relative from eight years ago…
+` It feels a little like they belong to someone else.@
+` *sigh*@
+`"…… I wonder what's going to happen to me now?"@
+` Grumbling to no one in particular, I fall asleep.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+!w3000
+
+
+br
+` Awooooo.@
+br
+` ---I hear the wave-like sound of something's voice.\
+br
+` Awooooo.@
+br
+` ---Something is howling.@ It's too sharp and high-pitched to be a stray dog.\
+
+br
+` Awooooo.@
+br
+` ---It echoes in my eardrums.@ Is it howling at the moon?\
+
+br
+` Awooooo.@
+br
+` ---This doesn't feel right.@ The beastly howling is beginning to give me a headache.\
+
+br
+` Awooooo.@
+br
+` ---It doesn't stop.\
+
+br
+` Awooooo.@
+br
+` Awooooo.@
+br
+` Awooooooooooooooo---\
+
+bg "image\bg\bg_40d.jpg",%type_crossfade_fst
+
+`"…… Argh, just shut up already!"@
+br
+` I wake up.@
+` I can hear the sound of a dog barking outside the window.@
+` The clock indicates it is just past eleven.@
+` This is more than just a neighborhood nuisance.\
+
+`"Damn, I can't sleep like this!"@
+` The dog's howling comes from somewhere near the mansion's fence.@
+br
+` …… It doesn't seem like I can go back to sleep at this rate.\
+
+
+return

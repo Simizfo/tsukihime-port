@@ -1,0 +1,76 @@
+
+
+bg "image\bg\bg_33a.jpg",%type_nowaitdisp
+
+` ---Certainly, if I went to see Ciel-senpai with this headache, I'd just be a bother.@
+br
+`"…… That's, right…… I haven't even had a chance to rest from last night.@ I guess I pushed myself a little."@
+ld l,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+`"Then please rest.@ Shiki-san, can you walk by yourself?"@
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_33a.jpg",%type_crossfade_fst
+
+
+`"Ah---no."@
+` It seems impossible right now.\
+
+ld l,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+`"That's right, oh, Hisui-chan!@ Carry Shiki-san to his room."@
+ld r,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
+`"Eh---Nee-san, but---"@
+ld l,":a;image\tachi\koha_t04.jpg",%type_crossfade_fst
+`"Hisui-chan!@ Shiki-san is sick, are you just going to abandon him like that?"@
+`"Ah----"@
+`"I will allow it for today, so take him to his room."\
+
+ld r,":a;image\tachi\his_t21.jpg",%type_crossfade_fst
+`"…… Yes.@ Sorry for saying such selfish words."@
+ld l,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+`"As long as you understand, it's fine.@ Did you find the medicine?"@
+
+ld r,":a;image\tachi\his_t23.jpg",%type_crossfade_fst
+`"…… Um, you had too many medicines, is this the fever medicine?"\
+
+ld l,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
+
+`"Ahaha, that's used for something else.@ Shiki-san is still conscious, so we don't need to use medicine that would stabilize him."@
+ld l,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+`"It seems his fever is from being too tired, so I'll make some medicine.@ Hisui-chan, please take care of the rest."@
+cl l,%type_lshutter_mid
+` Kohaku-san swiftly disappears towards the west hall---where her room is.\
+
+ld r,":a;image\tachi\his_t20.jpg",%type_crossfade_fst
+
+`"Shiki-sama, I will take you to your room."@
+` With an "excuse me", she lends me her shoulder.@
+cl r,%type_crossfade_fst
+
+br
+` Thanks to Hisui's help, I manage to get up the stairs.@
+` On the way, even more than my terribly throbbing headache, Hisui's incredibly embarrassed face burns into my memory.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w2000
+play "track01.ogg"
+
+bg "image\bg\bg_40c.jpg",%type_crossfade_mid
+
+
+
+br
+` ---In the end,
+` I lie down in bed, drink the medicine Kohaku-san made, and entrust her to pass on my message to Ciel-senpai who is waiting at the movie theater.@
+br
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+
+`"………… Gah."@
+` My headache doesn't stop.@
+` As if in exchange, my body did seem to cool down.\
+
+
+return

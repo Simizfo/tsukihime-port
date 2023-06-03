@@ -1,0 +1,102 @@
+
+
+bg "image\event\ark_h03.jpg",%type_nowaitdisp
+
+` ----I can't do it.@
+` I can't do anything she doesn't want again.@
+` Once, I gave in to this headache and I killed her.@
+br
+` That's why, never again.@
+` I can't lose to myself and make Arcueid cry.@ Even if this headache tears me apart, I won't do it----\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+
+wavestop
+
+bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+
+play "track09.ogg"
+
+`"Ha----ah!"@
+` I pull back from her body.@
+` The headache disappears and my heart returns to normal.@
+` The urges rampaging inside me have also disappeared and I finally start to comprehend what I just did.\
+
+`"----What----have I…"@
+` I can't believe it.@
+` But the memory is all too clear.@
+` How I pushed her down.@
+` How I choked her and held my knife over her.@
+` …… and the disgraceful things I did afterwards.\
+
+`"------"@
+` I don't know what to say.@
+` Arcueid adjusts her clothes and stands up.@
+` I----don't know how to apologize.@
+` Just saying sorry… how can that make it up?@
+`"----Arcueid, I----"@
+ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
+
+`"Don't worry about it…… I'm the one who should apologize."@
+` She looks away uncomfortably.\
+
+`"Wha--what are you saying?@ I was the one who did something wrong.@ If only----I had been stronger, that never would have happened."@
+ld c,":a;image\tachi\ark_t17.jpg",%type_crossfade_fst
+
+`"No.@ I don't think it was something you could have resisted because you saw my 'Mystic Eyes'."@
+`"Eh----?@ Mystic Eyes?@ Like, Nrvnqsr's eyes……?"\
+
+ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
+
+`"…… Exactly.@ I wasn't sane earlier.@ I was so thirsty, I couldn't control myself.@
+` That's why----I found some of The Dead, and tried to replace that urge with the urge to destroy to stave it off.@
+` Back then, I was unable to hold myself back----so that's why you saw my Mystic Eyes when you came."@
+`"…… Certainly I felt odd from the time I saw your golden eyes----but that's just that.@ I, with my own will--"\
+
+`"No, that's wrong.@
+` Shiki, my Mystic Eyes of Enchantment completely captivate whoever looks upon them.@ …… I think that's why you started to feel all those sexual desires."@
+`"--That----can't be right."@
+` Because even if she wasn't controlling me.@
+` I, I might, still like her.\
+
+`"Anyway, this was all because of my carelessness.@ …… I'm sorry, Shiki.@ I manipulated your body without any regards to your feelings."@
+cl c,%type_crossfade_fst
+` Her gaze shifts away as she says this.@
+` …… Being apologized to like this hurts my heart.@
+` Because I didn't feel like I was manipulated at all.@
+` Rather----it seems like I used it to obey my own lust.\
+
+`"Arcueid, I----"@
+ld c,":a;image\tachi\ark_t17.jpg",%type_crossfade_fst
+`"Don't apologize.@ …… Shiki, this was all an accident.@ I'll forget about it, so please forget about it too.@ I think it's better for the both of us that way."@
+cl c,%type_lshutter_mid
+
+` Saying that, she starts to walk quietly.\
+
+`"…… Arcueid……?"@
+ld c,":a;image\tachi\ark_t22.jpg",%type_crossfade_fst
+
+`"----I think this is enough for tonight.@ I killed all these Dead tonight, so it's probably useless to search any further."@
+`"…… That's fine, but what do we do with that mountain of dead bodies?@ If someone finds it, there'll be trouble."@
+`"There's no need to worry.@ Once something becomes a vampire and dies, it won't leave a trace.@ Those who refused to return to the Earth become ash to be scattered in the wind once they die.@ They will return and disperse on their own in a while."\
+cl c,%type_lshutter_mid
+
+
+` Without turning around, she disappears from the alley with weak steps.@
+`"………………"@
+` I can't stop her now.@
+` I still feel the sensation of Arcueid on both my hands.\
+
+`"----Idiot.@ What a stupid idiot I am."@
+` I groan to myself.@
+` In the alley which became a stage of tragedy, I look up at the moon in remorse.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+playstop
+
+!w3000
+
+
+
+return

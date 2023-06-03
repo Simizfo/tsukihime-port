@@ -1,0 +1,44 @@
+
+
+
+
+
+
+
+` ----I should worry about Akiha's safety most of all.@
+br
+` It's too dangerous to fight near Akiha.@ I need to move to somewhere bigger, like the lobby---
+`"Ku……………!"@
+` Still holding my knife, I jump back without looking.\
+
+
+bg "image\bg\ima_14.jpg",%type_lshutter_fst
+wave se11
+
+
+`"………!!"@
+` SHIKI's knife slashes in front of my face.@
+` Fortunately, I did not get cut.@
+` But, he hits my glasses off----
+br
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\ima_14.jpg",%type_nowaitdisp
+
+
+`"Y----ou bastard………!!"@
+` My heart pounds loudly.@
+` "Death" covers my view.@
+` Hatred takes over my mind.\
+
+` I gasp for air.@
+` My breathing goes wild.@
+` SHIKI attacks.@
+` In that case, there's nothing to be afraid of now.@
+br
+` ----Not a problem.@
+` Fortunately, this is my third time fighting in a life-or-death situation.@
+` By now, I know more than enough about how exactly I should be moving---.\
+
+
+
+return

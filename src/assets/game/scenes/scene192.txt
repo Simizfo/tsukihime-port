@@ -1,0 +1,22 @@
+
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+
+` …… I'll stay here.@
+` We promised.@ We promised to meet here.@
+` We still haven't fulfilled our promise for tonight.@
+` To meet here, and to fight together.\
+
+` ----So,
+` If I can't break this promise, and if she thinks it's important too,
+br
+` Arcueid will come back here.@
+` I can only continue to believe in her and wait here.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w3000
+
+
+
+
+return

@@ -1,0 +1,49 @@
+
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+
+br
+` ---I have no idea where she could be.@
+` But let's search around the area where there are lots of houses and apartments.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_24b.jpg",%type_lcartain_mid
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_23b.jpg",%type_lcartain_mid
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w500
+bg "image\bg\bg_22b.jpg",%type_lcartain_slw
+
+
+` The sun sets.@
+` Even after running everywhere in town, there's no sign of Yumizuka Satsuki anywhere.@
+br
+`"………… Gah."@
+` I bite my lip angrily.@
+` …… But it's not anger over not finding her.\
+` Two days ago.@
+` I'm mad at myself for promising such a thing in the first place.\
+
+br
+` ---Help me when I'm in a pinch, okay?@
+br
+` Yumizuka said that, and I answered lightheartedly.@
+` I would help, as much as I could.@
+` …… Such an irresponsible answer.@
+` There's really nothing I can do.@
+br
+` She said it hurt.@
+` I can't even find Yumizuka, painfully suffering in the cold darkness.\
+
+`"---"@
+` The sun is setting.@
+` …… I don't want to admit it, but maybe I can only find Yumizuka after nightfall.@
+
+`"…… I told Hisui I'd be back in the evening."@
+` Perhaps it's too early.@
+` I'll go back to the mansion and calmly think this through.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w1000
+return

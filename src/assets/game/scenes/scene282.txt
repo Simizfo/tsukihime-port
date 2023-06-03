@@ -1,0 +1,212 @@
+
+bg "image\bg\bg_50.jpg",%type_nowaitdisp
+
+`"…… This can't be good as it is.@ Senpai, hey!"@
+` I hurry after her.@
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+bg "image\bg\bg_05a.jpg",%type_lcartain_fst
+play "track02.ogg"
+
+ld c,":a;image\tachi\cel_t12.jpg",%type_lshutter_mid
+`"Oh?@ Tohno-kun, fifth period will start soon you know.@ You should hurry back to class."@
+`"Idiot, the same goes for you.@ Why are you out here in the courtyard---"@
+` …… I see.@
+` She's only pretending to be a student, so she doesn't really need to go to class.\
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+`"Hehe, that's right.@ I will be late to fifth period too.@ I thought I would skip the rest of class, but maybe I should seriously attend class after all."@
+` Senpai smiles happily.@
+`"…… Senpai?@ Don't tell me, you've been taking classes……?"@
+ld c,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
+`"Of course I was!@ I wouldn't be dressed like this if I wasn't!"@
+` …… She seems quite angry.\
+
+`"----Ha, haha."@
+`"Hey, what's so funny, Tohno-kun!?"@
+`"No, it's just---so happy and so angry, I knew that you really were Ciel-senpai after all."@
+` I really am happy.\
+
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+`"…… Huh?@ I am me, but why would that make you laugh, Tohno-kun?"@
+`"Ah, it's nothing.@
+` More importantly, Senpai.@ About, um.@ Arcueid---"@
+ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+\
+
+`"---Ugh."@
+` In a flash, Senpai looks up at me with emotionless eyes.@
+` …… It's hard to speak.@ It's hard to speak, but this is why I came after her.\
+
+`"…… Please listen to me without getting angry.@ You told me to stop, but I just can't leave this vampire thing alone."@
+ld c,":a;image\tachi\cel_t06a.jpg",%type_crossfade_fst
+` …… Uh-oh.@ Her emotionless eyes seem to become tinged with anger.\
+
+`"…… Anyways, I can't just ignore this vampire.@ But I kind of broke up with Arcueid because of yesterday, and I can't do anything without help.@
+` So---if you're looking for this vampire, can I help you?"@
+br
+` …… Senpai is quiet.@
+` She takes a deep breath.@
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_mid
+`"I refuse."@
+` And says so with a smile.\
+
+`"You refuse?@ Why!?"@
+ld c,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
+`"Of course I would!@ Tohno-kun, don't you remember almost being killed by her!?@
+` Hunting vampires means being in continual danger of death.@ I will not let you be involved in such a thing, Tohno-kun!"@
+`"---I know, but I'm saying I'm prepared for that!@ I might not look like it, but I've experienced many near-death situations.@ I can at least protect myself!"\
+
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+`"…… Um, Tohno-kun.@ How can you say that?@
+` I will admit that you have very good athletic abilities.@ Even though you have a weak constitution, your body itself is excellent."@
+` Slumping her shoulders, Senpai says something very surprising.@
+`"…… R, really?"@
+` The tension seems to disappear, and I blurt that out in response.\
+
+`"Yes.@ Tohno-kun, you got naked when you spent the night at my house.@ I saw you then.@ Not flabbiness, but tight muscles.@
+` You were far away, but I thought your body was very well-formed."@
+`"…… Naked-----But I, didn't get naked."@
+`"Did you forget?@ Tohno-kun, did you not change before you entered the bath?"@
+` Ah, that's right.@
+` Certainly I did take off my clothes and had her wash them for me---\
+
+`"Senpai, I didn't know you were someone who likes to peek at people who are changing."@
+ld c,":a;image\tachi\cel_t11.jpg",%type_crossfade_fst
+
+`"---Eh, no, that was, just an accident, I, um, happened to see it, and was a little curious, and thought maybe it would be alright…"@
+` Her face turns a deep red as she stammers her excuses.@
+` …… I guess she's remembering what she saw that time.\
+
+ld c,":a;image\tachi\cel_t08b.jpg",%type_crossfade_fst
+`"Geez, look!@ No matter how good your body is Tohno-kun, ordinary people cannot stand up against a vampire."@
+` Oh, that's why she doesn't want me to fight.@
+cl c,%type_crossfade_fst
+\
+
+`"I see.@ Then, it's no problem."@
+` I take off my glasses.@
+br
+bg "image\bg\bg_05b.jpg",%type_crossfade_mid
+
+br
+` I take out my knife.@
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_05b.jpg",%type_crossfade_fst
+
+br
+` My headache starts to flare up.@
+` Resisting that, I cut an appropriate "line" on a nearby tree.\
+
+bg "image\bg\bg_05a.jpg",%type_crossfade_fst
+
+ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
+
+`"Tohno-kun, that---"@
+`"…… That's how it is.@ Sorry, but my eyes aren't normal.@
+` Arcueid told me I can see the 'death' of things, and they're called something like the Mystic Eyes of Death Perception."@
+` Her eyes widen as she takes it all in.\
+
+ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+
+`"--I, see.@ So it isn't the knife that's special, but it's you, Tohno-kun."@
+`"…… Not special.@ It's just a side effect of an accident I had."@
+`"---That is why she was so interested in you.@ Your eyes have too much power for an individual to have."@
+` She suddenly seems drained of all energy.\
+
+ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
+`"…… Certainly, with that kind of power, it is more dangerous to leave you alone Tohno-kun.@
+` And even if I did refuse, you would probably search for the vampire yourself anyway, and he---couldn't afford to ignore you."@
+`"Senpai……?@ You mean---"\
+
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+`"Yes.@ I do not want you to be involved, but it's too late.@ I cannot deny that you have any connection to this any longer."@
+`"So, it's okay if we go after this vampire together?"@
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+`"Yes.@ I am prepared to do that."@
+` Senpai extends a hand.@
+` But I can feel it's different than when we shook hands in the cafeteria.\
+
+`"-----"@
+` Of course, I take her hand.@
+` Our hands meet briefly, and the handshake is over.@
+br
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+`"This makes us a team now.@ I am counting on you Tohno-kun, so please count on me.@
+` From now on, the two of us will hunt down the vampire in this city."@
+` She speaks with a gentle smile.@
+` As I nod wordlessly, the chime sounds, signaling the end of lunchtime.\
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"After classes, please come to the tea ceremony room.@ We can talk more then."@
+cl c,%type_lshutter_fst
+` Senpai runs towards the school building.@
+` I'm late too, so I run as well.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+playstop
+
+
+!w1000
+
+bg "image\bg\bg_06b.jpg",%type_crossfade_slw
+
+` The end of the day homeroom session is over.@
+` My chattering classmates all get up from their seats.@
+` I usually just linger until the chaos has passed over, but today I stand up with everyone else.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+bg "image\bg\bg_11b.jpg",%type_lcartain_fst
+
+` I quickly walk out of the classroom.@
+` I head for the tea ceremony room.@
+` A lot has happened between Senpai and me, but it really turned out well.@
+` I'm glad to be able to help her, and I can be more assured than I was fighting by myself.@
+br
+` But, more than that---I'm excited just to have the chance to be with Senpai once more.\
+
+br
+` I breathe hard----
+br
+` I dash towards the tea ceremony room.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_09b.jpg",%type_lcartain_mid
+
+` There isn't anyone here.@
+` It seems like she hasn't come here yet.@
+br
+` …… *pant*…… *pant*.@
+br
+` …… I think I got too excited.@
+` Sitting down on the tatami mat, I catch my breath.\
+br
+` …… *pant*…… *pant*…… *pant*.@
+br
+` My heated body doesn't cool off that easily.@
+` I painfully gasp for air.@
+` My body is drenched in sweat, and I feel terrible.\
+
+br
+` My gasping fills the air.@
+br
+` There's---something weird.@
+` I've been resting for a while, but my breathing is getting worse.@
+` In the first place, why is my body tired after only running this little distance……?\
+
+monocro #ff0000
+bg "image\bg\bg_09b.jpg",%type_crossfade_fst
+
+play "track04.ogg"
+
+quakey 2,100
+br
+`"---Gah!?"@
+br
+` Suddenly,
+` pain fills my chest.\
+
+
+return

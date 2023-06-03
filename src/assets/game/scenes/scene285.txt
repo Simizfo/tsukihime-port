@@ -1,0 +1,560 @@
+
+mov $phasebg,"image\bg\ima_08.jpg"
+mov $phasetitle_a,":a;image\word\PCEL_10A.PNG"
+mov $phasetitle_b,":a;image\word\day_10.png"
+gosub *left_phase
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+bg "image\bg\bg_40a.jpg",%type_bcartain_slw
+
+play "track02.ogg"
+
+`"------!"@
+` I wake up with a start and kick off my sheets, sitting up in bed.@
+br
+`"Wha-----"@
+` I wipe the sweat rolling down my face.@
+` Maybe I saw a bad dream.@ I am drenched in sweat.@
+` I don't remember seeing a nightmare.@
+` …… Was it because of that book I read?@
+` I think I saw something a little bad, but I don't remember what it was.\
+
+` …… Well, a famous doctor did say it is the nature of dreams to fade away, so I shouldn't try so hard to try to remember it.@
+br
+` ---Knock-knock.@
+br
+` A polite knock sounds.@
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_mid
+`"--Good morning, Shiki-sama."@
+`"Mm, morning."@
+` I return her greeting and stand up.@
+` Hisui places the uniform in her hand onto the desk and shuffles quietly back towards the door.\
+
+`"Please head to the dining room once you are finished changing."@
+`"Yeah.@ Thanks as always."@
+` After giving an affirmative answer, Hisui exits the room.@
+cl c,%type_lshutter_mid
+`"………… Huh?"@
+` After seeing her face I completely forgot what it was I was thinking about.@
+`"…… Geez.@ Was I always this forgetful?"@
+` Tilting my head in curiosity over myself, I change into the uniform.\
+
+` The knife is on my desk.@
+` The knife from my adopted father that I have always been carrying in my pocket these past few days.@
+br
+` ---I probably won't have to use that anymore.@
+br
+`"…… That's right.@ They're gone."@
+` Arcueid, Ciel-senpai.@
+` The horde of beasts called Nrvnqsr, and the vampire called Roa.@
+` All of them are no longer here.\
+
+`"Maybe what I forgot was something about that."@
+` There isn't anything waiting for me at school.@
+` Senpai is gone---so it probably won't be fun anymore.@
+` But, that was how I lived my days up until now.@
+` I only lost something that I gained recently.@
+` Everything I had before then still remains.\
+
+` -----*sigh*@
+` If I think about it that way, I can manage without Senpai.@
+` I could never forget her, but I could manage.@
+` Fooling myself with that, I open the door.@
+br
+` Then,
+` let's go to school like I've always been doing---\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+
+playstop
+
+bg "image\bg\bg_01a.jpg",%type_lcartain_slw
+
+` It's seven-fifty.@
+` The gate at the front of the school is crowded with students.@
+` Since it's Saturday, there are bright faces everywhere.@
+br
+`"………………"@
+` I wade through the sea of sunny faces as a cloud of gloom.@ No matter what I tell myself, the fact that Senpai is gone weighs heavily on my----\
+
+`"------Eh?"@
+` I can't believe my eyes for a moment, but there's no doubt.@
+` Ciel-senpai is walking towards the school.@
+`"Se, Senpai---!?"@
+` I shout her name without even thinking and she turns towards me.@
+ld c,":a;image\tachi\cel_t01a.jpg",%type_lshutter_fst
+`"Oh, Tohno-kun.@ Good morning."@
+` She gives me a bow.\
+
+`"Good morning?@ Didn't you go back……!?"@
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+`"No.@ I would never go back leaving you here."@
+` She speaks with a brilliant smile.@
+br
+` Never go back leaving me here?@
+br
+` Even though there are students all around me, I feel myself blush furiously.\
+
+`"----Um, that is……"@
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"Yes, what is it?"@
+`"Can I, take those words, for what they sound like?"@
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"Yes, I leave it up to your imagination, Tohno-kun."@
+` She nods and gives a radiant smile.\
+
+`"--------!"@
+` I can't breathe.@
+` Not because of the pained tension I had felt up until now, but because of the burning happiness that now wells up inside of me.@
+` If no one was around, I'd shout out "Alright!" at the top of my lungs.\
+
+`"Senpai!"@
+` I grab her hand.@
+`"So, you mean you won't go anywhere, right!?@ You'll stay here at school forever, right!?"@
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+`"Um, if I stay at school forever, I'll become an old lady.@ I am a third-year student, so I have four months left until graduation."@
+`"But, you'll stay here, right?@ You won't leave like you said yesterday, right?"\
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"Yes.@ I'll stay till the end now."@
+`"Alright--!"@
+` I let go of her and manage to stop myself.@
+` I want to run around the ground for many laps.@
+` As if I won a lottery, I'm feeling really high.\
+
+ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+
+` No, this feels far, far greater than that.@ I feel like laughing out loud.@
+` I can't even bear to just stand here and do nothing.@
+ld c,":a;image\tachi\cel_t05.jpg",%type_crossfade_fst
+
+`"Tohno-kun, you should hurry or you will be late."@
+`"----Oh.@ That's right.@ Later Senpai!@ See you at break!"@
+cl c,%type_lshutter_mid
+` Waving a hand to Senpai, I go towards the school building.@
+` Smiling to myself, I run as fast as I can to class.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w1000
+
+play "track03.ogg"
+
+bg "image\bg\bg_06a.jpg",%type_crossfade_fst
+wave se2
+
+br
+` ----First period is over.@
+!w2000
+
+` I have ten minutes until next class.@
+`"---Alright."@
+` The instant I raise myself to go look for Senpai's classroom,
+ld c,":a;image\tachi\cel_t03.jpg",%type_lshutter_fst
+`"Huh?@ Where are you going, Tohno-kun?"@
+` ---Senpai comes here ahead of me.\
+
+`"Ah, nowhere, I was going to see you.@ I always wait for you, so I thought I'd go see you this time."@
+
+ld c,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
+`"I see.@ That makes me very happy, but you don't know my class, right Tohno-kun?@ It's third year class B, please remember it."@
+`"Oh really---so you really do take classes.@ Well-done, well-done.@ I see you do more than just drink tea in the tea ceremony room."\
+
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"Yes, I do manage to follow classes--"@
+ld c,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
+`"Hey, wait a minute Tohno-kun!@ You think I'm really like that!?"@
+`"--Uh."@
+` I can't really deny that.\
+
+`"Ah, sorry.@ But Senpai, you said there were no members of the tea ceremony club, but I thought that it might have never existed in the first place."@
+ld c,":a;image\tachi\cel_t05.jpg",%type_crossfade_fst
+
+` Senpai stands there and grows quiet.\
+
+`"…… Huh?@ Don't tell me there really wasn't?@ It's just an unused Japanese-style room?"@
+ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+`"---Hmm.@ It seems like I do not understand what you're talking about."@
+` Ciel-senpai turns her gaze out the window and stares blankly.\
+
+`"…… No, that's fine.@ No matter what you've done, you're not a bad person.@ So I don't think you'll cause anyone trouble, but can your power of suggestion do such a thing?"@
+`"I already told you, I don't know what you mean, so I can't answer that."@
+`"-----"@
+` Still in my seat, I stare up at Ciel-senpai.@
+br
+` The silence lasts for about a minute.\
+
+ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
+
+`"…… You're pretty persistent, Tohno-kun."@
+`"Not really, I was just thinking how blue your eyes were."@
+`"…………"@
+` Ciel-senpai gives a sigh as if admitting defeat.\
+
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+`"I said it already, but the power of suggestion isn't that convenient.@
+` Suggestion isn't so much able to change your perceptions of things as it is more like making you look away.@
+` So even if I told you that you really liked curry when you hate it, it would not work."@
+`"…… Really?@ So you can't make someone do what they don't want to?"\
+
+`"Yes.@ Well, there's still many ways to make you eat curry, Tohno-kun.@
+` For example, I wouldn't tell you that you really like curry.@ Instead, I could tell you that you would die if you didn't eat curry--"@
+`"I get it, I would eat it even if I hate it.@ …… I see, then you can do anything with that."\
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+`"No, it is really difficult to set the stage for such a thing as the resistance would be great.@
+` There are many people that are difficult to forcibly use suggestion against, so all I can do is to suggest something like, 'Do not doubt what I say.'"@
+` …… Yeah, Arcueid said something like that too.\
+
+`"---I see.@ By the way, Senpai."@
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"Yes?@ What is it?"@
+`"Yeah.@ Senpai, you really love curry, don't you?"@
+ld c,":a;image\tachi\cel_t05.jpg",%type_crossfade_fst
+
+br
+` Ciel-senpai just smiles and does not answer.@
+` Her slight expression makes it impossible for me to see if she is denying it or affirming it.\
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"Well, it is about time.@ I'll see you again after classes are over, but is your body okay, Tohno-kun?@ Your arms are working fine?"@
+`"Yeah, it doesn't even hurt anymore.@ I can come to school thanks to you."@
+` I bring my hands together and give her a bow of thanks.\
+
+`"I see, then how is your headache?@ It seemed like it really hurt yesterday."@
+`"My head is okay too.@ Besides, if I have my glasses on, there's no problem."@
+`"I see.@ Hearing that makes me feel much better."@
+cl c,%type_lshutter_mid
+` Ciel-senpai heads towards the hallway.\
+
+` She suddenly stops as if she forgot something and turns around.@
+ld c,":a;image\tachi\cel_t07a.jpg",%type_lshutter_fst
+`"I forgot to ask.@ Tohno-kun, are you feeling well?"@
+`"---Yeah, I'm fine.@ Thanks to you, all my troubles have disappeared."@
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"That's good.@ If anything strange happens, then please do not hesitate to tell me.@ Here's my phone number."@
+`"-----Eh?"@
+cl c,%type_lshutter_fst
+\
+
+` She hands me a slip of paper with her phone number on it and quickly leaves the classroom.@
+br
+`"…… Her…… phone number?"@
+` I stare down at the paper in surprise.@
+` I'm sure she told me this because she's really worried about last night, but……\
+
+`"…… This is lucky, but is it good that things are going this smoothly?"@
+` …… It's pitiful if I say so myself.@
+` Maybe it's because I'm a small town person by nature, but I can't honestly be happy about my good fortune like this.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_slw
+!w1000
+
+bg "image\bg\bg_06a.jpg",%type_lshutter_slw
+wave se2
+
+
+` After homeroom is over, the classroom suddenly erupts into its usual chaos.@
+` It's not quite noon yet.@
+` It's always like this after Saturday class.@
+` The students rushing back home or eating in the classroom before they go to their club activities mix together and create chaos.@
+br
+` Standing up from my seat, I prepare my things while waiting for Senpai…… and then,
+` I'm not sure when he even came to school, but Arihiko appears with a suspicious smile on his face.\
+
+ld c,":a;image\tachi\ari_t05.jpg",%type_lshutter_fst
+`"Let's go play, Tohno."@
+` …… Without anything else, he tells me what he wants to do.\
+`"…… You seem pretty direct today.@ Did something bad happen to you?"@
+`"Oh, nothing.@ I just wanted to hang out with my good friend for no reason."@
+br
+` …… It's all too suspicious.@
+
+`"No way.@ I bet you were laid off by someone or something like that.@ I'm going home with Senpai today, so I don't have time to spare for you."\
+
+`"Senpai?@ You mean Ciel-senpai?"@
+` His eyebrows lift in surprise.@
+br
+`"…… Yes, but…… Arihiko, you remember Senpai……!?"@
+`"Whatd'ya mean?@ She's who I'm after, how could I forget her?"@
+` Arihiko makes his proclamation as if it was the most natural thing in the world.@
+cl c,%type_crossfade_fst
+`"………………"@
+` I see.@ Since Ciel-senpai came back to school, everything is back the way it was.\
+
+ld l,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
+`"Oh, it's Senpai!"@
+` Arihiko points happily to the door.@
+cl l,%type_crossfade_fst
+ld r,":a;image\tachi\cel_t01a.jpg",%type_lshutter_fst
+`"Thanks for waiting.@ Good afternoon, Inui-kun."@
+` Ciel gives a succinct bow.@
+`"Shall we go back now?@ Or maybe go to the tea ceremony room?"@
+`"Let's do that.@ If we leave now, we have to part at the gate.@ I want to talk to you some more, so while we have tea, we can---"\
+
+quakex 2,250
+
+`"----!?"@
+` Someone punches me unexpectedly from behind---
+ld l,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
+`"Hey."@
+`"……………… It's you, Arihiko?"@
+ld l,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+
+`"Yeah, it's me.@ I'm not one to open my mouth about these things very often, but since that was too much back then, I'll tell you."@
+` Arihiko looks at me and Senpai with sad eyes.\
+
+ld r,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+`"?"@
+` Ciel-senpai and I look at each other.\
+
+`"Um, you two.@ It is a Saturday, so why do you use it like that?@
+` There are far more fun places to go to than the tea ceremony room!"@
+` With a greatly exaggerated movement, he points out the window.@
+ld r,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"…… Um, where?"@
+`"Outside the window.@ Well, I think he's talking about outside."@
+` I answer Ciel-senpai's question.@
+cl r,%type_crossfade_fst
+
+\
+
+br
+` And then,
+quakex 2,250
+
+` Arihiko whacks me again.\
+
+ld l,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
+
+`"Tohno, are you really trying to make a fool of Senpai!?@
+` Look, it's Saturday.@ It's still before noon.@ And we're students!@ So why can't you come up with an idea such as going into town with all these conditions!?"@
+`"----Mph."@
+br
+` Idiot.@
+` I've thought about that already.@
+` I did, but---\
+
+ld r,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"?"@
+` I steal a glance at Ciel-senpai.@
+` I get the feeling that rather than roaming rowdily around the city, she would feel more at ease just sitting quietly in a park or something, so I can't ask her that.@
+` If I did ask her to go hang out in town, I think she would probably say no---\
+
+ld r,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"I see.@ Then shall the three of us have fun?"@
+`"……… Senpai?"@
+ld r,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+`"Isn't it alright?@ I don't have to worry about anything anymore, and I bet it'll be fun to go with the three of us."@
+`"Ah---yeah, if you want to, then I'd be happy."@
+ld r,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"Yes.@ Inui-kun, you're okay with this too, right?"\
+
+`"-------"@
+` He simply nods up and down.@
+` …… I bet he didn't expect things to turn out this way.@
+cl l,%type_crossfade_fst
+
+\
+
+ld r,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"Then it's decided.@ Um, what shall we do for lunch?@ Shall we eat at our houses or the three of us together?"@
+`"Hm, we always eat at school, so let's put the money for lunch to play.@ Me and Arihiko are pretty poor, right?"@
+ld l,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+
+`"…… Uh…… I, could maybe borrow some money from my sister."@
+br
+` …… It seems Arihiko really wants to go out and eat with Ciel-senpai.\
+
+`"---How about Senpai?@ Is there some place you want to eat?"@
+ld r,":a;image\tachi\cel_t11.jpg",%type_crossfade_fst
+
+`"No, I don't…… usually eat in front of others…"@
+`"I see.@ You eat more than normal, so I bet it'll be expensive."@
+ld r,":a;image\tachi\cel_t10d.jpg",%type_crossfade_fst
+
+`"Th, that's not it!@ What are you saying, Tohno-kun!?"@
+br
+` …… I just recalled the data I collected during our lunches in the tea ceremony room until now, and just gave a personal opinion.\
+
+ld r,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+`"I agree with Inui-kun.@ Let us all go out to eat.@ There is a place by the movie theater called Ahnenerbe that I heard has great strawberry pie."@
+ld l,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
+
+`"Oh, you know your places, Senpai!@ The owner of that cafe is a master of Italian cooking!"@
+br
+` …… Why does Arihiko know so many rumors and useless information?\
+
+ld r,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
+`"Then let's meet in front of the movie theater in half an hour.@ Is that alright, Tohno-kun?"@
+`"---Um.@ You know it takes half an hour to get to my house, Senpai."@
+cl r,%type_lshutter_mid
+` Senpai already starts to disappear down the hallway.\
+
+`"Yeah, be late, Tohno.@ If you want to, I wouldn't care if you didn't come till tomorrow!"@
+cl l,%type_lshutter_fst
+
+` Arihiko stands up and dashes out of the classroom.@
+` …… This all worked out rather strangely.\
+
+`"…… Oh well."@
+` I still get to hang out with Ciel-senpai.@
+` Bag in hand, I also rush back to my place.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+playstop
+
+bg "image\bg\bg_33a.jpg",%type_lcartain_mid
+
+ld c,":a;image\tachi\koha_t02.jpg",%type_lshutter_fst
+`"Oh?@ Shiki-san, you're back early today, aren't you?"@
+`"Yeah, I'm back Kohaku-san.@ I'm in a hurry, so see you later!"\
+
+bg "image\bg\bg_46a.jpg",%type_lcartain_fst
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
+`"Shiki-sama?@ You have returned?"@
+`"I'll be leaving right away, so don't worry about lunch!"\
+
+bg "image\bg\bg_40a.jpg",%type_lcartain_fst
+
+
+`"Alright, fifteen minutes!"@
+` I set a new record from my school to back here.@
+` Throwing my bag on my desk, I change out of my uniform.@ After that, I fly out of my room again.\
+
+bg "image\bg\bg_46a.jpg",%type_lcartain_fst
+
+` From the mansion to the main street is farther than the mansion to the school.@
+` To be honest, it's not a distance I can make in fifteen minutes.@
+` She knew I lived uphill, but she still made that impossible deadline.@
+br
+`"---Damn, maybe she might be a bit mean."@
+` I grumble as I shoot down the stairs.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+br
+br
+br
+br
+br
+br
+br
+wave se0
+
+` -----Throb.\
+
+`"------Eh."\
+
+br
+br
+br
+br
+br
+br
+br
+wave se0
+
+` -----Throb.\
+
+` Suddenly, without warning.\
+
+br
+br
+br
+br
+br
+br
+br
+wave se0
+
+` -----Throb.@
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+\
+
+` Everything turns red.\
+
+quakey 4,375
+
+`"---Shiki-sama!?"@
+` …… I can hear Hisui's voice.@
+` I hear fast footsteps.@ …… Hisui seems to be in a hurry more than usual.@
+`"Shiki-sama, are you hurt!?"@
+` I can hear her voice, but I can't see her.@
+br
+wave se0
+
+` -----Throb.@
+br
+` I just have this headache.\
+
+`"Calm down Hisui-chan.@ Falling down the stairs just means a few bruises here and there, so there is no need to call a doctor.@
+` But his body is very hot.@ He may have fallen down the stairs due to a fever, so please get his bed ready."@
+`"I understand.@ Nee-san, about Akiha-sama……"\
+`"That's true, if it doesn't turn out to be a big deal, we don't have to tell her.@ There is some medicine in my room, if you please."@
+br
+` Hisui disappears with quick footsteps.@
+` I----\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\bg_33a.jpg",%type_crossfade_mid
+
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_mid
+
+waveloop se1
+
+`"Shiki-san, are you conscious?"@
+`"…… Kohaku…… san?"@
+`"Yes.@ Shiki-san, you took quite a tumble down the stairs.@ Fortunately you do not have any serious bruises, but you seem to have a fever.@
+` You seem like you were going somewhere, but please just rest for today."@
+br
+` Kohaku-san puts her hand on my shoulder and manages to make me stand up.\
+
+`"Nah--I'm fine, I don't need to rest.@ I ran all the way here, so I was just out of breath."@
+ld c,":a;image\tachi\koha_t04.jpg",%type_crossfade_fst
+
+`"That won't do!@ How can you say that with such a pale face, looking like you'll throw up?@
+` I was told by your physician to monitor your health closely.@ I can't let you take such risks."@
+`"But, I made a promise---"@
+`"If you want to tell them you can't make it, I can go tell them.@ If you keep pushing yourself, I'll have to take out my syringes and give you shots."@
+br
+` …… As if she wants to keep me here, she stands in front of me.\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_33a.jpg",%type_crossfade_fst
+
+br
+` ---Throb.@
+br
+` I have a headache.@
+` I---
+
+wavestop
+
+br
+
+
+
+
+
+return

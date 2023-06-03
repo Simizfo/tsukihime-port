@@ -1,0 +1,74 @@
+
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "track04.ogg"
+
+
+ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+
+ld r,":a;image\tachi\nero_t02a.jpg",%type_tshutter_mid
+
+`"Young one, do you have a question?"@
+br
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+`"Hey, that's dirty.@ You're trying to stand out by coming out here too, Nrvnqsr."@
+br
+
+ld r,":a;image\tachi\nero_t03.jpg",%type_crossfade_fst
+
+
+`"Don't be ridiculous.@ Ciel-kun went to the curry shop.@ I am the substitute."@
+br
+`"Alright.@ Then give us a hint."@
+br
+cl r,%type_crossfade_fst
+ld r,":a;image\tachi\nero_t04.jpg",%type_crossfade_fst
+
+`"Fighting punishes both parties.@ Do not kill needlessly."\
+
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+
+`"I'm not convinced.@ Even if you don't want to fight Ciel, there's some people who unconditionally took off their glasses.@
+` What is up with that?"@
+
+ld r,":a;image\tachi\nero_t02a.jpg",%type_crossfade_fst
+
+br
+`"Thou shalt not steal, rape, or deceive others.@ It might sound familiar for some of you.@ If so, then go on a journey through time to this morning.@
+` Yes.@ Come to think of it, the princess might have an idea of that, no?"\
+
+
+ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+
+`"Nya, w-what?@ I don't understand what you're talking about."@
+br
+ld r,":a;image\tachi\nero_t02c.jpg",%type_crossfade_fst
+
+`"…… Well, what happens to others is just a trivial matter for me.@
+` Then, I shall watch how the end plays out for all of you from here-----"\
+
+
+
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+
+playstop
+
+
+return

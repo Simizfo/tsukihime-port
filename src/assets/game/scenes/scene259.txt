@@ -1,0 +1,86 @@
+
+
+
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+` I… despite all this----don't even want to think that Senpai is my enemy.@
+br
+`"…… Senpai is my dear friend.@ Enemy or ally, I can't label her like that."@
+
+
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+
+
+`"What is this?@ Then what am I to you?"@
+`"You---you're someone I can't leave alone, and um……"@
+` I scratch my cheek.@
+
+
+cl a,%type_crossfade_fst
+
+
+` Someone I can't leave alone---and I'm concerned about her in a completely different way than Senpai.\
+
+` Even tonight, I was simply looking for her, but I was getting so frustrated when I couldn't find her.@
+` It was, something like feeling worried about a loved one.\
+`"-----Ah."@
+` …… No, there's no way that's true!@
+` Certainly she is beautiful, but I---\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+
+bg "image\event\ark_e06b.jpg",%type_crossfade_fst
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_29b.jpg",%type_crossfade_fst
+
+
+`"Look, just give it a rest!@ Why do you ask me about that anyway!?"@
+
+
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+
+
+`"How can I know!"@
+` Being screamed at irrationally, she screams back at me irrationally.@
+`"Fine!@ Then I don't know you at all, Shiki!"\
+
+
+cl a,%type_crossfade_fst
+
+
+`"Hey, hold on.@ Where are you going?"@
+`"It has nothing to do with you.@ Don't follow me!"@
+` Is she really that angry?@ Arcueid walks away without even turning around.@
+` Her figure quickly fades into the distance.@
+`"…………… Ah."@
+` Just where does she plan on going?@
+`"…… What is this, taking it out on me like that?"@
+` Yeah.@ She's the one who sent me that dream familiar, so I'm the one who should be angry."\
+
+`"…… Did I do something, to make her angry……?"@
+` I don't know.@
+` In the first place, there's no way I can understand how vampires think.@
+`"-----"@
+` …… Arcueid got mad and went somewhere by herself, and I asked her what I wanted, so I know I should go back to the mansion.@
+` …… But, my feet don't even move one step back.\
+` My logic tells me where I should go, but my heart doesn't listen.\
+
+br
+` ---It's been said a million times, but.@
+` The feelings of love and hate, they have nothing to do with logic.@
+br
+`"-----Man, geez!"@
+` Damn it.@ Why is it that I just can't leave Arcueid alone……!?@
+`"Arcueid!@ I said wait!"@
+` Raising my voice, I chase after Arcueid who keeps on walking.\
+
+playstop
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+
+return

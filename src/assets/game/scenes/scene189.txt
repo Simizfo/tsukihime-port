@@ -1,0 +1,57 @@
+
+
+
+
+bg "image\event\ark_e05b.jpg",%type_lshutter_mid
+
+play "track04.ogg"
+
+` ---I hear a creaking noise.\
+br
+` Her cool hand on my shoulder and her low body temperature are so cold that I hear a creaking, freezing noise.\
+
+` The sound didn't come from anywhere around me.@
+` It's just that my body is freezing as the cold penetrates deep inside from where she touches me.@
+` In other words, the sound is coming from inside me.@
+` My heart, my guts, my brain, they are creaking.\
+
+`"--------Ah."@
+` Just like a cancerous cell.@
+` Rapidly, limitlessly, unordered, and lacking intelligence.@
+` Violating me from inside out.\
+
+bg "image\bg\ima_13.jpg",%type_crossfade_fst
+
+`"------Ar,"@
+` …… I can't feel her breath.@
+` Like a ravenous beast, she just bites into my neck.@
+` At the same time----
+monocro #ff0000
+` I descend into a limitless hell of pain, as if my nerves were being torn apart one by one.\
+
+`"----cueid----"@
+` My frying mind manages to utter this last word.\
+
+` It, hurts.@
+` i, t,  h, u, r, t, s,  s, o,  m, u, c, h
+` i, t,  c, a, u, s, e, s
+` m, e,
+` t, o,  f, a, d, e,  a, w, a, y.@
+!w2000
+\
+
+playstop
+
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+monocro off
+
+
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+return

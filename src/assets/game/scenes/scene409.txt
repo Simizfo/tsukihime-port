@@ -1,0 +1,129 @@
+
+
+
+
+
+
+
+mov $phasebg,"image\bg\ima_01.jpg"
+mov $phasetitle_a,":a;image\word\PHIS_13A.PNG"
+mov $phasetitle_b,":a;image\word\day_13.png"
+gosub *left_phase
+
+
+
+
+!w3000
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+waveloop se10
+
+
+` …… Knock, knock knock, knock.\
+` …… Knock, knock knock, knock.@
+` …… Knock, knock knock, knock.@
+` …… Knock, knock knock, knock.@
+` …… Knock, knock knock, knock.@
+` …… Knock, knock knock, knock.@
+` …… Knock, knock knock, knock.@
+` …… Knock, knock knock, knock.@
+` …… Knock, knock knock, knock.\
+
+bg "image\bg\bg_40a.jpg",%type_crossfade_mid
+
+
+` …… Knock, knock knock, knock.@
+br
+` ----The night is over.@
+br
+` A terrible silence.@
+` I can't even hear the wheezing of my breathing.\
+
+` …… Knock, knock knock, knock.@
+br
+`"--------"@
+` My body doesn't even twitch or move at all.@
+` My mind has completely stopped as well.@
+` I bet if I look at myself in the mirror, I would look like a puppet with its strings cut.\
+
+` …… Kn.@ kno kno, ck.@ kno, ck.@
+br
+`"-------Gohu."@
+` I cough.@
+br
+` …… I screw up the rhythm again.@
+br
+`"Go--ha, ah, ah----"@
+br
+` …… Knock.@ Kno, knock.@
+` …… Knock.@ Kno kno, ck knock.@
+` …… Knock.@ Knock knock.@ Knock.\
+
+` …… Knock, knock knock, knock.@
+br
+`", ………, ………"@
+` I get back my rhythm, and I can continue breathing.@
+`"---------"@
+` Being by myself all night caused my body to become really weak.@
+` My vision is really blurry.@
+` The air touching my skin is painful.@
+` My organs are so screwed up now that I can't breathe unless I concentrate.\
+
+` …… Knock,  Knock Knock, Knock.\
+` …… Knock,  Knock Knock, Knock.@
+` …… Knock,  Knock Knock, Knock.@
+` …… Knock,  Knock Knock, Knock.@
+` …… Knock,  Knock Knock, Knock.@
+` …… Knock,  Knock Knock, Knock.@
+` …… Knock,  Knock Knock, Knock.@
+` …… Knock,  Knock Knock, Knock.\
+
+
+wave se3
+
+`"Shiki-sama, are you awake……?"@
+` Hisui's voice.@
+` …… How many times is this?@ Hisui really doesn't grow tired of this at all.@
+`"You are awake, are you not?@ If that is the case, then please at least eat."@
+`"…… No.@ I won't eat what any of you give me."@
+` I won't eat anything.@
+` I can't trust anything that comes from this house.@
+` Food.@ Water.@ Medicine.@
+` It seems like everything is a poison to kill me.\
+
+`"…… Shiki-sama, I will place your food here.@ After I leave, please open the door and eat it."@
+
+wave se7
+
+waveloop se10
+
+` …… Hisui's presence recedes.@
+`"………"@
+` I bang my head against the wall.@
+` …… How many times have I ignored Hisui like this?@
+` …… Hisui.@ Hisui is different from Akiha and Kohaku-san.@
+` Maybe Hisui is not trying to kill me.\
+
+`"………"@
+` But, that is just a fantasy.@
+` Hisui tried to lock me in this room.@
+` Like right now, she came to my room to look after me, keeping me trapped in this room.@
+`"----Ha, ah."@
+` …… This is no good.@
+` I know my thoughts are just paranoia.@
+` But my mind won't return to normal.\
+
+` …… Knock,  Knock Knock, Knock.@
+` …… Knock,  Knock Knock, Knock.@
+` …… Knock,  Knock Knock, Knock.@
+` …… Knock,  Knock Knock, Knock.@
+br
+` My mind is foggy and my body pulses with pain.@
+` My throat is so dry that it feels like I will die if I don't drink water.@
+` …… In spite of all that, I still keep the door locked.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+
+
+return

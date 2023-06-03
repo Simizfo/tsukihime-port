@@ -1,0 +1,548 @@
+
+bg "image\bg\bg_27b.jpg",%type_nowaitdisp
+
+` But, I want to see her.@
+` I want to hear Ciel-senpai's voice.@
+` The only one who I can talk to, the only one who will listen to me.@
+` If she is there, then I can remain as Tohno Shiki.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_27b.jpg",%type_crossfade_fst
+
+`"………………"@
+` I turn the dial.@
+` After three rings, I hear the receiver pick up and Ciel-senpai's voice.@
+br
+`"Hello?@ Who is it?"@
+`"………………"@
+` It's strange.@
+` Her voice seems… so warm.\
+
+`"Hello?@ Hey, can you hear me?"@
+` Her questioning voice.@
+` I've only been there once, but I can imagine her holding the phone in her room.\
+
+`"……………………"@
+` I can't speak.@
+` I don't know what to say.@
+` I knew I shouldn't have called.@ I can't get this person involved.@
+` I should--just hang up without saying anything.\
+
+`"Tohno-kun?@ Is that you, Tohno-kun?"@
+br
+`"Ah----------"@
+` Hearing my name, I suddenly want to cry.@
+br
+`"……… Yes."@
+` I slip out a response.@
+`"Ah, I knew it was you, Tohno-kun.@ Why are you calling this late?"\
+
+`"………………"@
+` I tell myself to stop.@
+` I tell myself to make up some excuse, tell her I'll see her tomorrow and hang up.@
+` But, I can't seem to do that.@
+`"Senpai, I, I think I'm not going to make it."@
+` I speak in a fading voice.@
+`"----Tohno-kun?"@
+` It sounds like her voice froze.\
+
+`"Tohno-kun, what do you mean?@ What's wrong?"@
+`"----I mean, I can't make it.@
+` I tried to resist it.@ But, it was useless.@ Like he said, it seems like, I'm just a killer."@
+br
+` And a really bad one, too.@
+` Even now, if I let my guard down, I want to slice my knife through Akiha's or Hisui's throat.@
+` Not just someone off the street, but people close to me--My sanity is about to crumble away, I'm at the point of thinking such things.\
+
+`"…… What should I do?@ I can't kill myself.@ I've never been taught how to kill myself."@
+`"…… And, where are you right now?"@
+`"In the park.@ I wanted to go where there aren't any people, but there's too many houses nearby.@ I'm, going crazy."@
+`"…… I understand.@ I'll head to the school so let's meet there.@ There's no houses nearby, so won't it be quiet?"@
+`"---That's right---at school, there won't be anyone there."@
+`"Alright?@ Please wait at the school grounds."@
+br
+` The line cuts off.\
+
+`"-----"@
+` I exit the phone booth.@
+` Senpai---I can see Ciel-senpai.@
+` I don't think anything will change when I see her, but I still want to see her.@
+br
+`"----Gha, agh."@
+` My body starts to get hot again.@
+` Hoping I won't meet anyone on the way to school, I leave the park with uncertain steps.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_01c.jpg",%type_lcartain_slw
+
+` The school is dead quiet.@
+` There's no houses nearby, so it's very quiet around here.@
+br
+` *pant*----*pant*, *pant*---
+
+` I take off my glasses and cut the lock on the school gate with my knife.\
+
+`"Ah."@
+` …… I can't believe it.@
+` Even without thinking about it, I seemed to have put my knife in my pocket.@
+br
+` Probably,
+` so that at any time, I can kill someone.\
+
+bg "image\bg\bg_02a.jpg",%type_crossfade_slw
+
+
+`"Ha………… ah."@
+` I fall to my knees as soon as I get to the school grounds.@
+` I brace myself off the ground using both my hands.\
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_02a.jpg",%type_nowaitdisp
+
+
+`"……………………"@
+` My whole body is hot.@
+` But, I don't feel like I am not me anymore.@
+` Probably,
+br
+` by violating Kohaku-san,
+br
+` the impulse momentarily subsided.\
+
+`"----Gg."@
+` Gorge rises in my throat.@
+` My mouth tastes bitter.@
+` I haven't eaten anything today, so all I can vomit is my stomach acid.@
+br
+`"Kohaku---san."@
+` It isn't something forgiven with a mere apology.@
+` So, I can't apologize.@
+` How can I offer my atonement to her from now on?\
+
+` That conversation so many days ago.@
+` When Ciel-senpai helped me while I was in the depths of despair after I killed Arcueid.@
+` That person---she told me that there weren't people who sinned and people who did not sin, but there are only people who can and who cannot atone for their sins.@
+br
+` But, what should I do?@
+` My committed sin, the wounded mind, can it be atoned for----\
+
+monocro #0000ff
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+
+`"---?"@
+` It suddenly gets darker.@
+` The sound of footsteps.@
+` I didn't realize it since I was face down, but someone is coming.@
+` Under the moonlight.@
+` Did that person darken the sky with her shadow?\
+
+`"Are you trying to repent, Tohno-kun?"@
+br
+` Ciel-senpai asks in a cold voice.@
+br
+`"----Senpai."@
+` …… She, really came.@
+` I want to see her face, so I lift my head like I'm looking up at the night sky.@
+
+monocro off
+
+bg "image\event\cel_e06a.jpg",%type_crossfade_slw
+
+br
+`"----Eh?"@
+br
+` ---But this.\
+
+bg "image\event\cel_e06b.jpg",%type_tscroll_slw
+
+
+br
+br
+br
+br
+br
+br
+br
+` ---This isn't,
+`   the Ciel that I know.\
+
+waveloop se1
+
+` Her bare arms have the tattoo of a cross on them.@
+` Her cold eyes, as if watching someone she doesn't even know.@
+` …… Senpai bears an uncouth weapon with an aura of coldness that doesn't suit her.\
+
+`"-------Ah."@
+` …… I know this.@
+` Inside my brain, I know what weapon this is.@ That has to be---what's called the Seventh Holy Scripture, one of the apocrypha that must never be removed from its resting place.@
+br
+`"Sen---pai?"@
+`"As I expected, you were Roa after all, Tohno-kun."@
+` With her frigid eyes,
+` Senpai speaks with a voice that is equally cold.\
+
+`"----"@
+` I start to feel a shiver up my spine.@
+` For no reason.@ No, my instincts and my brain work full force to tell me the danger, and I jump back.@
+br
+`"------"@
+` Still with her mouth shut, she takes a step towards me with that ominous weapon.@
+` …… She has no openings whatsoever.\
+
+` If I run away hastily,
+` if I show my back to her, I know that thing will pierce my heart and I will disappear without the opportunity for reincarnation ever again.@
+br
+` …… Even though I don't even have that knowledge in my memories.\
+
+`"---Why?@ I just---"@
+` I just… wanted to see Senpai again.@
+br
+`"I understand.@ Roa is already surfacing, right?@ Then it is too late already."@
+` Lightly,
+` she takes another effortless step forward.@
+br
+` That figure looks like----\
+
+`"---What are you doing, Senpai?@
+` You look like---you're, going to kill me."@
+`"-----"@
+` She doesn't answer.@
+` She just stares at me like she's trying to find out where she can aim to kill me quickly.\
+
+`"---Sen, pai."@
+` She's serious.@
+` She seriously, plans to kill me.@
+br
+` ---Creak.@
+` My nerves feel the imminent death before me.@
+` My spine is screaming and the back of my neck is numbing.@
+br
+` But---more than this fear of death,
+` I can't believe this person is saying such things.\
+
+`"----Why?"@
+` I don't know.@
+`"Senpai, you said you stayed here for my sake."@
+`"------"@
+` With a start,
+` Ciel-senpai's legs stop.@
+br
+` She looks at me and grins.\
+
+`"Your goodness really is a rare treasure.@ It is a good thing to trust people, but if you were a little more composed and thought about it clearly, you could have maybe got away."@
+`"Eh---"@
+`"First of all, didn't you ever think about why I came to this school in the first place?@
+` I didn't do it just because I wanted to, you know."\
+
+`"------Sen, pai?"@
+`"You knew my goal was to destroy 'The Serpent'---Roa.@
+` Coming here to this school was because I knew Roa's reincarnated host was here.@ But since I didn't know for sure, I needed to check things out for a while."\
+wavestop
+
+`"Wait a minute, what in the world are you---"@
+` What is she babbling about?@
+` I don't know.@
+` I really can't understand what she's talking about.@
+` She ignores my bewilderment and keeps talking.\
+
+play "track09.ogg"
+
+`"…… I told you before, Tohno-kun.@ Roa has requirements for the family he decides to reincarnate into.@
+` If you think the other way around, you just have to look for families with those traits.@ When you know that, finding him is very simple.@
+` It's easy to find families that have special abilities passed down through their blood once you do a bit of research.@ In this city, there is only one family that fits Roa's requirements.@
+` So---I knew from the beginning who Roa was."\
+
+`"-----Wha--"@
+` That's strange.@
+` If she knew from the beginning, she could have killed him or caught him right then……@
+` From the beginning?@
+` She knew, who it was……?\
+
+`"Yes.@ Look, don't you realize it now?@
+` You know, Tohno-kun.@ I came to this school to catch you from the beginning."@
+br
+`"--------------"@
+` Wait.@
+` I just want, her to, wait.\
+
+`"But, a little mistake happened.@
+` …… I was watching you from afar so as not to stimulate Roa inside you, but I concluded that you might not be Roa's new reincarnated host.@
+` But, the eldest son of the Tohno family had to be what Roa reincarnates into.@ There is no mistake in that, so what had to be a mistake was you, Tohno-kun."@
+` Ciel-senpai speaks matter-of-factly.@
+` I---can't say anything.\
+
+`"Looking into it, you were fatally wounded eight years ago and adopted by your relatives.@
+` What happened afterwards was exactly as Tohno SHIKI said two nights ago.@
+` I don't know what happened in the Tohno family eight years ago, but you were killed by that kid called SHIKI.@ No, it's more like your life was stolen.@
+` As a result, you became connected to SHIKI who was Roa's host."\
+
+` A direct voice, without emotion.@
+` I don't know this Ciel-senpai.@
+` Or is this…
+` Is this the true Ciel, and the kind person I knew up until now was all just----\
+
+`"Up until now, there should have been times where Roa's memory would flow into you through SHIKI.@
+` He is a vampire that manipulated the shapeless thing called a soul.@ For Roa, you two who shared one life were a finely crafted double existence.\
+
+`"That's why---when SHIKI's body was destroyed, Roa didn't need to reincarnate.@ He still had a place to run to: you."@
+` Cold.@
+` As if hating her enemy, she detests me.\
+
+`"But, it's all over now.@ I wasn't prepared to finish it so suddenly that one night, but tonight is different.@
+` I really am fortunate in a way.@ If Arcueid had destroyed Roa, he probably would have reincarnated again."@
+` …… I can't.@ Believe this.@
+` That---that…
+`"----That's not, true."\
+
+`"Go ahead, please keep on denying it and play dumb.@ That makes my job easier.@ Still---"@
+br
+` A metallic rattle sounds from the weapon.@
+br
+`"It doesn't change the fact that I can finish you off easily no matter what you do, Roa."\
+
+`"-------"@
+` Her laughing voice causes me to finally understand.@
+` …… She isn't lying.@
+` …… Her eyes aren't looking at "me".\
+` …… Her feelings never did have anything to do with "me" from the beginning.\
+
+`"…… What is this?@
+` Then, then from the very beginning, you always thought of me as Roa?@
+` Senpai.@ Being friends with me was all just……………!"@
+br
+` ---I can't say it.@
+` I can't finish the sentence.@
+` If I do that, I feel like everything will turn into a lie in that instant.\
+
+`"Of course.@ After SHIKI was destroyed, the only reason why I stayed in school was because Roa had not disappeared.@ Since Roa is a student here, it's more convenient for me to stay."\
+br
+` I would never go back while leaving you here.@
+br
+` That's what she told me once with a smile.@
+` That wasn't, for my sake.@
+` She stayed here just to search for the still-living Roa.@ That is the only reason why she gave me her phone number.\
+
+`"----Ha."@
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+monocro #ffffff
+
+bg "image\event\cel_e01.jpg",%type_crossfade_fst
+
+` Then, that too.@
+br
+`"Haha---"@
+br
+bg "image\event\cel_e02a.jpg",%type_crossfade_fst
+
+` And those times, too.@
+br
+`"Haha----ha."@
+br
+bg "image\event\cel_e03a.jpg",%type_crossfade_fst
+
+` And when she saved me that one night, too.@
+br
+`"Ah……… ha, ha."@
+bg "image\event\cel_e05b.jpg",%type_crossfade_fst
+br
+` And, those sad eyes, too.@
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+\
+monocro off
+
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+
+`"Haha---ha."@
+` …… That's right, Shiki, this is nothing at all.@ These memories---they are nothing at all.\
+` I just thought I loved her.@
+` And that she loved me back.@
+` …… What a joke.@
+` They were all just an illusion made from a play.@
+br
+` ----All of it.@
+` All of it was a fairy tale made up of lies---\
+
+`"---I understand.@ But, Senpai.@
+` How did you know Roa was still alive?@ How, how did you know Roa reincarnated into this Tohno Shiki?"@
+ld c,":a;image\tachi\cel_t06c.jpg",%type_crossfade_mid
+
+`"Of course I knew.@ Because it's about myself." Senpai says something I can't understand.\
+
+`"…… About yourself……?"@
+ld c,":a;image\tachi\cel_t15.jpg",%type_crossfade_mid
+`"Yes.@ The one who sought out the Tohno family and chose it for the next host was me.@
+` …… Well, unless Roa's consciousness awakens, I couldn't tell that it "appeared", so it wasn't that useful of a memory, though."@
+`"Senpai, what---are you saying?"\
+
+`"What am I saying?@ It's an old story.@
+` It's a story from eight years ago, but there was a girl like you who didn't know anything.\
+` She was sixteen years old when that impulse began to stain her.@
+` …… But before that, there was nothing.@ She didn't have any special power like you did, Tohno-kun.@ She really did live a normal life without knowing anything.\
+
+`"Helping out her father, going to school.@
+` Terrible at waking up early but always helping with the store in the evening.@ She really did think she would carry on her father's work."@
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\cmo_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_02a.jpg",%type_nowaitdisp
+
+`"Eh---"@
+` Just now.@
+` Scenery I have never seen before flashes in my head… yet I feel like I have in fact seen it somewhere.@
+` Her story---feels like it's very similar to that dream I saw.\
+
+ld c,":a;image\tachi\cel_t15.jpg",%type_crossfade_mid
+`"But, her dream wasn't fulfilled.@ With her own hands, she destroyed the happiness that was there naturally.@
+` Because she was Roa's reincarnated host."\
+
+`"Her body had great ability and Roa was pleased.@
+` She tried so hard to resist it just like you, but it was useless.@ In the end, she drank the blood of her father and mother and slowly killed the townspeople.@
+` That child, maybe she went crazy then."\
+
+`"You understand, right, Tohno-kun?@
+` You can't stop it.@ "Stop" or "You shouldn't" doesn't even enter your thoughts.@
+` Isn't it strange?@ ---Even though you still have your conscious awareness."@
+`"Se---n, pai.@ Don't tell me, that story is,"@
+`"But that nightmare came to an end soon.@ That woman in white came and pierced her heart."\
+
+br
+br
+br
+br
+br
+` ---Yeah, I know.@
+` So the girl died, and Roa reincarnated as Tohno SHIKI.@
+` But, that's.\
+
+`"But, that girl, she couldn't stay dead."@
+` Quietly.@
+` Almost laughingly, she says this.\
+
+`"Her dead body was taken to The Church and preserved as a sample of a vampire returning to human form.@
+` …… But, though I don't know what kind of fate it was, her body was a special body, and had an abnormal reviving ability.@
+` One day three years later, even though she shouldn't have, she came back from the dead.@
+` …… It's strange, isn't it?@ Even though it was just a discarded shell of Roa's soul, it still came back to life.\
+
+`"After that, things were… difficult.@ The Church viewed the child's existence as heresy and killed the child, but no matter how many times they killed her, she wouldn't die.@
+ld c,":a;image\tachi\cel_t07c.jpg",%type_crossfade_mid
+
+` …… I'm sorry, can I complain a bit?@ That girl, she underwent an entire month of life only being killed.@ Every single day, without even a single moment of rest, she came back to life only to be killed once more.@ Every day, all day."@
+
+playstop
+
+cl c,%type_crossfade_fst
+
+\
+
+`"……………… What…"@
+` A body that can't die.@
+` Flesh that will return to its original state no matter what happens.@
+` Roa, the vampire reincarnated as Tohno SHIKI, said that about this person.\
+
+` …… It seemed so painful.@
+` Senpai healed no matter what wound she received, but every wound she got caused her face to contort in pain.@
+` Every day of that?@
+` Every day, all day without a single pause, living to be killed and coming back again……?\
+
+ld c,":a;image\tachi\cel_t15.jpg",%type_crossfade_mid
+
+`"And then, the people of The Church finally realized this was too strange.\
+` All the problems that no one can deal with or solve are handed to the place called the Burial Agency.@
+` There, she was taught what happened to her.\
+
+`"…… In short, she was a contradiction.@
+` She was a human born as Roa.@ Even though the personality of her first fifteen years was hers, the name of her soul was Roa.@
+` While she was herself, she was also Roa.@
+` So, it is a contradiction if the girl called Roa is dead when Roa is alive.@
+` The progeny of the existence Roa…… this daughter of Roa cannot die before him.\
+
+`"Whenever this world has even a slight error, this world corrects it to preserve itself.@
+` So--that child, as long as Roa's soul still exists, will exist for all eternity.@ No one else but the world itself "fixes" the error automatically.\
+
+`"The clergy said the child was 'outside the cycle'.@ As long as Roa lives, it will forever be stopped.@
+` She cannot die of old age since she cannot age, and even if she was burnt to ashes, time would reverse itself to return it to its original state."\
+
+`"Such a monster… it usually would have been sealed away forever, but she happened to inherit the magical knowledge of Roa.@
+` The clergy of the Burial Agency said she would be useful and brought her into The Church.\
+
+`"Five years since then.@ She chose to discard her name and live as one who hunted vampires.@
+` ---More than Roa's master Arcueid, I can tell where Roa's soul exists.@
+` The reason… I don't even have to tell you, right?"\
+
+`"------"@
+` Right, it doesn't need to be said.@
+` But, I don't want to admit such a thing.\
+
+`"I said it before, Tohno-kun.@ Ciel's goal is one thing and one thing only."@
+br
+` --I want to die as a human--
+br
+` I didn't understand what those words meant then.@
+` But now.@
+` Now---can I understand at least a bit of it?\
+
+`"----I can't."@
+` It's almost regretful, but I can't.@
+` I can't understand that feeling of wanting to die.@ As long as I'm alive---I'll think about wanting to die, but I would never truly mean it.@
+br
+` But, that's all Senpai wishes for.@
+` A way of thinking which was transformed into that.@
+` A life that makes you wish only that.\
+
+` I don't know yet.@
+` With my own hands.@
+` I don't know the pain of killing the ones close to me with my own hands even while still conscious.@
+` …… And I don't ever want to know it.@
+` But this person has lived through it.@
+` So---is that why she just wants to die?\
+
+`"That's…… that's wrong."@
+`"It's not.@ I simply want to die as a human."@
+` Her voice sounds cold.\
+
+`"……………… I…"@
+` …… I can only nod.@
+` Both her wish,
+` and her pain, I understand.\
+
+`"………… I don't want it."@
+` I don't like my treatment or Ciel's wish.@ I don't want to think this is reality.@
+br
+` But, time waits for no one.@
+` With a metallic rattle,
+` the agent called Ciel steps forward to kill me.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+
+
+bg "image\bg\bg_02a.jpg",%type_lshutter_fst
+
+
+` As if saying there's no need to talk anymore,
+` Ciel's hands lift up that weapon.\
+
+` The Seventh Holy Scripture.@
+` The weapon that the reincarnation-denying Church created.@ A scriptural canon inscribed with every possible impeachment of reincarnation criticism.@
+` It's an item that is scripture yet an apocrypha.@ A weapon, yet a scripture at the same time.@
+br
+` If I'm hit by that, my soul itself will disperse into nothingness.\
+
+`"------"@
+` The bayonet rises up.@
+` The tip comes towards me.@
+` But slowly.@
+` If it is Ciel---she should be able to pierce me without me even noticing it ever happened.\
+
+`"Ah----"@
+` There's no time to think.@
+` I----
+br
+
+
+
+
+
+return

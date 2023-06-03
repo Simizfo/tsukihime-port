@@ -1,0 +1,509 @@
+
+
+br
+` ---not consumed.@
+br
+` Squeak.@ Squeeeeeee-aaak.@
+br
+` With a cry, the black wave halts before my eyes.@
+`"……?"@
+` I don't get it.@
+` I don't get it, but this probably is my last chance.\
+
+br
+` I run.@ I run towards the stairs.@
+br
+` Instead of running towards me, the beasts beneath the emergency light are heading towards the elevator I was just in--towards the sound of footsteps.@
+br
+` Ahead of the animals, I can hear what sounds like a kitchen knife slicing vegetables.@
+` Something--a human silhouette is slashing the black animals--\
+
+`"-----?"@
+` But I don't have time to discern its identity.@
+` Using my hands and feet, I rush up the fire stairs like a dog.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+
+` …… I climb back up to the eleventh floor.@
+` The surroundings are still pitch black.@
+` But here, there is no trace of that stench.@
+` That raw stench of beasts, blood, and entrails.@
+`"Haa----aah."@
+` I manage to get up, and tracing along the wall, I walk back towards Arcueid's room.\
+
+bg "image\bg\bg_20a.jpg",%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+bg "image\bg\bg_20b.jpg",%type_crossfade_fst
+
+
+`"-----"@
+` The lights come back on.@
+` This floor is still as it was before.@
+` The only thing that's different is me---splattered here and there in human blood.@
+`"Ha------"@
+` My pants are completely red, as if they had been crimson to begin with.@
+` Red flecks are all over me.@ My arm and chest, even my face.\
+
+`"Haha------"@
+` So that's how it was.@
+` I should have realized it when I was in front of the elevator, the moment the noises from downstairs ceased.@
+` At that point,
+` there was no longer anyone else still alive.\
+
+`"Haha-----ha."@
+br
+` What was that?@
+` What was that just now?@
+` A sea of blood.@
+` If the floor below this one was like that, what were the other floors like?@
+` What was that scene of carnage?@
+` What was that scene of hell?@
+` This---and that and this and that… all of it has been the work of the "enemy" Arcueid was talking about-----!?\
+
+`"------"@
+` My teeth grind together.@
+` They clench together so tightly it feels like they're going to shatter.@
+` My body is still trembling.@
+` My consciousness is still numb.@
+` But more than all of that---I can't accept that spectacle.\
+
+` What was that just then?@
+` What, all those incomprehensible animals devoured all the guests staying on the lower floors?@
+` Had they all been killed and eaten?@
+` One-sidedly, pointlessly killed without a chance to argue, escape, or even call for help…!?\
+
+`"You've got to be kiddi--"@
+br
+` You've gotta to be kidding me.@
+br
+` I clench the knife tightly.@
+` And then.@
+` With a cheerful electronic "ding!", the elevator which stopped on the tenth floor reaches this one.\
+
+`"------"@
+` I turn back to face the elevator, now about ten meters down the hall.@
+br
+` The door opens.@
+` Within---are two black dogs.\
+
+play "track04.ogg"
+
+`"------"@
+` …… I see.@ You guys came after me.@
+`"-----Ha."@
+` I grip the knife with both hands.@
+` The black dogs burst out from the elevator.@
+` They break into a run.@
+` Of course, toward me, the last prey.\
+
+
+ld c,":a;image\tachi\kemo_t02.jpg",%type_crossfade_fst
+
+
+`"Ha-----!"@
+br
+` The black dogs are coming for me.@
+` On their bodies, I can see an infinite number of lines, and on their foreheads, the point of death.@
+br
+` ----Without hesitating.@
+br
+` First, I stab the dog that leaps at me in the forehead.@
+` The black dog falls to the floor without even giving a scream.@
+` It melts into a black liquid.\
+
+` After that,
+` the other black dog bounds towards me.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+
+
+` It leaps.@
+` Its speed belies all human comparison.@
+` It don't even take two seconds to cover the ten meters down the hallway.\
+br
+`"Kuh----!"@
+br
+` I line up the knife again, but not quickly enough.@
+` The black dog opens his mouth.@
+` That mouth is filled with fangs so many times sharper than the knife I have, and they are aimed straight at my throat.\
+` Accurate, and fast.@
+` The instant I realize they are drawing upon me,
+` the fangs bite into my throat with a crunch.@
+br
+` I die.\
+
+
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+
+
+` But that's not right.@
+` I can't be killed by something like this and I refuse to die.@
+br
+` This tragedy would not cause me to hesitate.\
+
+br
+` ----A hot summer's day.@
+br
+` It happened long ago, eight years ago.@
+` I've seen something even more terrible----\
+
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+waveloop se1
+
+ld c,":a;image\tachi\kemo_t02.jpg",%type_crossfade_fst
+
+
+br
+` Thrust.@
+br
+` I thrust my knife into the forehead of the black dog biting into my neck.@
+` My arm moved just before the black dog ripped through my throat.\
+
+` It was done rather perfectly, even for myself.@
+` Like a machine whose sole function is to cut, I plunged the knife into the dog's forehead without any useless or wasted movement.@
+` Because that is where the first dog's "point" was.@
+` Normally, even if the brain is destroyed, the muscles try to execute the commands they have received from the brain.@
+` The black dog would have probably ripped through my throat even if I had simply pierced its head.\
+
+br
+br
+br
+br
+br
+br
+br
+` Well--normally, that would happen.\
+
+` But the black dog is "dead".@
+` Death is a complete stoppage.@ At the point when I killed it, it lost every form of validity.\
+cl c,%type_crossfade_fst
+
+` The second black dog also collapses onto the floor.@
+` It becomes a black stain on the hotel's hallway.\
+
+`"Ha--ah."@
+` I'm tired.@
+` With a thump, I lean my back against the wall and look up at the ceiling.@
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+
+
+` ---My head… hurts.@
+` The world becomes a patchwork, and here and there, I can see the black points of Death.@
+` My body is freezing, but my mind is burning feverishly.\
+
+`"--Kuh!"@
+` Right beside me lie the corpses of the two black dogs.@
+` One of my arms is covered in blood, the other clutches a red knife.@
+` …… Also, there are a quite uncountable number of dead bodies downstairs.@
+br
+`"----Ha, haha, hahaha."@
+br
+` All I can do is laugh.@
+` Because this isn't real.@
+` There's no way this can be real.@
+` At what point did I, with my eyes wide open, start seeing a nightmare----?\
+
+` Ding dong.@
+br
+`"Eh--?"@
+br
+` A terribly out-of-place cheerful sound rings out.@
+`"Damn it, what's with this headache--?"@
+` I stand up, enduring the pain in my head and look toward the sound.@
+`"Ele… vator…?"@
+` It seems the sound is the other elevator coming up.\
+br
+` The door opens.@
+` Inside stands a man wearing a black coat.\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\nero_t01a.jpg",%type_crossfade_fst
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_20b.jpg",%type_crossfade_fst
+
+` The headache worsens.@
+br
+`"He's--"@
+` Yes, I've seen him before.@
+` I'm sure I've seen that man before.\
+
+`"------"@
+` Silently, he walks towards me.@
+br
+`"You--!"@
+` I ready my knife as I glare at him.@
+`"-------"@
+` But he doesn't react at all as he walks towards me.@
+` It's as if he doesn't notice me at all.\
+
+` The distance between us shrinks.@
+` Just a little more---when there is barely one meter between us, the man finally seem to notice me.@
+
+
+ld c,":a;image\tachi\nero_t03.jpg",%type_crossfade_fst
+
+
+` Those bloodshot eyes.@
+` The instant I see those eyes which no human should possess, I lose all freedom to move my body.\
+
+`"I thought I killed everyone, but it seems like there's still someone left."@
+` The man turns and looks at the corpses of the two black dogs.@
+`"--You pieces of filth.@ If you can't even take care of a scrap of meat, you're unworthy to be a part of my body."@
+
+
+cl a,%type_crossfade_fst
+
+
+` The man voices his displeasure as he raises his hand.@
+` His coat lifts like a mantle.@
+br
+` ---Something's odd.@
+` With a splash, the black dogs' remains liquify and disappear into the man's coat.\
+
+`"Ah----"@
+` I can't even scream.@
+` Below the man's coat is pure darkness, without even the traces of an outline.@
+` All that exists there is a mud-like darkness.@
+`"Th----"@
+br
+` This is dangerous.@
+` This guy is just too dangerous----
+` My instincts sound the alarm wildly in my head, but I can't even lift a finger.\
+
+` The man in the black coat approaches me.@
+`"------!"@
+` It's not good if I just stay here.@
+` The unstopping headache grows to an unbearable level, telling me this place is dangerous.@
+` Whatever the means, if I don't get out of here soon, I am going to lose my life.@
+br
+` ----But it's too late.@
+br
+` The man is right before me.@
+` Those eyes aren't looking at me at all.\
+
+`"Feed."@
+` He raises one of his arms.@
+` Below it lies a chaotic darkness.@
+` From there, something huge appears.@
+br
+` Whomp.@
+` The sound of wind.@
+` That which has appeared from below the man's coat is a crocodile's mouth, easily large enough to swallow a man whole.\
+
+`"Ah------"@
+br
+` ---My consciousness bursts.@
+` In panic, I slash at the crocodile's mouth.@
+` But it's a futile act.@
+br
+` There is a squishing sound.@
+br
+`"-------!!!!!!!!!!"\
+
+monocro #ff0000
+
+bg "image\bg\bg_20b.jpg",%type_crossfade_fst
+
+quakey 2,100
+wavestop
+playstop
+
+` I fall onto the floor.@
+`"Haa----hahhh-----hhhaaghh."@
+` My throat is broken.@
+` I'm not breathing, I'm throwing up blood.@
+` Blood sprays from my throat in time with the beating of my heart.@
+br
+`"Gah--ah, aaah, aaah."@
+` My consciousness/ is splitting.@
+` The pain is   obliterating    my thou/ghts.@
+br
+` Looking,
+` I see that the right side of my stomach is basically nonexistent.\
+monocro off
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+!w2000
+
+
+`"--Shiki!?"@
+` …… I can hear a voice.@
+` But I can't hear it very well.@
+br
+`"Not very impressive for a guard dog of yours."@
+` …… The man's voice.@
+br
+`"---I can't believe a vampire named Chaos would play such trivial games.@ It's like a poorly-scripted nightmare, Nrvnqsr Chaos."@
+` …… Arcueid's voice.\
+
+`"I feel the same way.@ To catch one of the surviving True Ancestors… I never dreamed I would be a part of such a foolish festival.@ This is a nightmare for me, too."@
+` …… The man's.@ deep.@ voice.\
+
+`"…… But what is the meaning of this?@ I have heard that the previous executor could not even scratch you.@ What kind of a mistake is this?@
+` Right now, your presence is exceedingly weak.@ Even weaker than a mere member of The Dead--were you attacked by The Church before I arrived, Arcueid Brunestud?"@
+` …… I can't hear Arcueid's voice--\
+
+`"…… It is difficult to understand.@ There are only a limited number of conceptual weapons capable of harming you.@ The only people in possession of those are The Church's assassins, and I don't think the Burial Agency would dispatch anyone this far east.@ Either way, this is most fortunate for me.@ I shall not ask why you have been weakened.@ All I am going to do is claim your head while I have a chance of winning."\
+
+` …… The sound of footsteps.@
+` It seems despite having said he was going to claim her head, the man in the black coat is now leaving for the elevator.@
+`"……… ?"@
+` I don't, understand.@
+` It's just--so hot.@
+` My consciousness blurs and fades--\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_slw
+
+bg "image\bg\bg_20b.jpg",%type_nowaitdisp
+
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_slw
+
+play "track09.ogg"
+
+`"Ah, are you awake?"@
+`"…… A…… Arcueid……?"@
+` I open my half-lidded eyes.@
+` Arcueid is there in front of me.@ It appears we're in the hotel hallway.@
+`"How do you feel?@ I think I've managed to close the wound, but I suppose it still hurts."@
+`"………?"@
+` Close the wound--?@ That's not possible.@
+` The injury I had received from that… thing wasn't even what you could call a wound.@
+` It took half my torso away with it.@
+` It's odd enough that I'm still alive, but for the wound to have closed… that would be practically miraculous.\
+
+`"----Huh?@ …… How come I'm still alive?"@
+` I get up and check my body.@
+` …… There isn't any pain.@
+` The right side of my stomach is back to as it was before.@
+` …… Though it does seem rather black and blubbery.\
+
+`"Wh-wh-wha--!?"@
+
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+
+`"What did you say?"@
+`"Wh-what is this…!?"@
+` I point towards the soft blubbery thing on my stomach.@
+` It's true that there's no pain and that I'm feeling a surge of strength there, but I have the feeling that I saw something similar just a moment ago… I hope it's just my imagination…\
+
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+
+`"Yeah, that?@ It's a familiar Nrvnqsr was using to reinforce his body.@ You killed it when it got you, right?@ It was still alive, so I decided to use it to replace your damaged parts."@
+`"----Familiar?@ So, you mean--"@
+` …… The crocodile that came out from that man's coat.\
+
+
+ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
+
+
+`"That's right.@ Isn't that great, Shiki?@ It's just that part, but you've powered up!"@
+` Arcueid gives a genuinely happy laugh.@
+` For me, of course, this is no laughing matter.@
+`"W-what the heck have you done…!?@ What were you thinking, attaching weird stuff to someone's body like that without even asking…!?"@
+
+
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+
+
+`"What do you mean?@ I helped you, didn't I?@ I can't heal others, and you would have died if I left you like that.@
+` Or would you have rather died?"\
+
+`"--Well, I'm thankful you helped me, but--how am I supposed to live with a body like this from now on…!?"@
+
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+
+`"Ah, don't worry about that.@ Once a familiar has been severed from its master, it's just a scrap of flesh.@
+` It's a bit unstable in form at the moment, but in time, it'll begin to imitate the properties of your body, and you'll be back to normal.@
+` Plus, it'll be tougher than your body's ever been up until now, Shiki.@ If you study magic, you might even be able to return it to the original crocodile form."@
+` Arcueid says, sounding more envious than happy.\
+
+
+ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
+
+
+`"Aren't you happy, Shiki?@ Now I wish you'd been wounded all over!"@
+`"You idi----there's no way I can be happy with having something like this put onto me…!"@
+
+
+ld c,":a;image\tachi\ark_t12.jpg",%type_crossfade_fst
+
+
+`"No way!@ You're not happy, Shiki!?"@
+`"Not one bit!@ …… Well, I suppose I can survive thanks to this, but I don't want to survive by this method ever again…!"\
+
+
+ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
+
+
+`"…… Hmmm.@ Okay, I'll make do with a different method next time."@
+` Arcueid mumbles a response.@
+` …… Is she repenting?@ Or did she not learn anything?@ I seriously cannot tell from a line like that.@
+`"…… Well, it's alright.@ I was just shocked at first because it was so sudden, but you did help me, Arcueid.@ That's one thing I'm really thankful for."\
+
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+
+`"Really?@ That's an odd thing to thank me for, Shiki.@ I haven't done much."@
+`"--It's okay.@ I'm thankful, so be thanked.@ You don't have to feel bad about it."@
+`"…… Yeah.@ You're right, I suppose."@
+` Arcueid seems lost in thought for some reason.\
+
+
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+
+`"--Okay.@ Anyhow, let's get out of here right now.@ With all the fuss that's been raised, it's going to get inconvenient if we stay here any longer."@
+`"All the fuss--?"@
+
+
+cl a,%type_crossfade_fst
+
+
+br
+` ---Ah, that's right.@
+` …… None of the people in this hotel are alive anymore.@
+br
+`"………"@
+` I get up.@
+` My stomach doesn't hurt, but--it feels as if my body belongs to someone else--and my mind swims.\
+
+
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+
+`"We'll head to my room for now, but--Shiki?"@
+
+cl a,%type_crossfade_slw
+
+
+br
+` ----My mind… sways.@
+` Arcueid is saying something, but I can't hear a thing.@
+br
+` As if I'm falling into an abyss, I lose consciousness, this time for real----\
+playstop
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+
+!w3000
+
+
+
+return

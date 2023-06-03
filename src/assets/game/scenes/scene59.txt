@@ -1,0 +1,13 @@
+
+
+bg "image\bg\bg_06a.jpg",%type_crossfade_mid
+
+
+` The morning lessons are over.@
+` It's lunch break, and Arihiko has gone on ahead to the cafeteria.@
+` Now, where should I have my lunch?@
+br
+
+
+
+return

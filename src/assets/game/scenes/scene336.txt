@@ -1,0 +1,148 @@
+
+
+
+
+
+bg "image\bg\bg_40b.jpg",%type_nowaitdisp
+
+
+
+
+
+
+` ---If I go to the sitting room, there should be someone there.@
+br
+` Being with company is surely more pleasant than being alone.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+play "track03.ogg"
+
+bg "image\bg\bg_34c.jpg",%type_lcartain_fst
+
+
+` I enter the sitting room and see Kohaku-san.@
+
+ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+`"Ah, Shiki-san.@ What can I do for you?@ Supper isn't for another hour."@
+`"No, I came here to relax, not for a meal.@ I hope I'm not intruding?"@
+`"Oh, no, please come in.@ Let's see…"\
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\his_t23.jpg",%type_tshutter_mid
+
+`"Nee-san, about the detached building…"@
+`"Hi.@ Sorry to intrude, Hisui."@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"…… Welcome home, Shiki-sama.@ I am sorry I was not able to welcome you home."@
+`"It's okay, don't worry about it.@ I'm sorry for not saying hi as soon as I got back."@
+
+ld c,":a;image\tachi\his_t02.jpg",%type_crossfade_fst
+
+`"-------"@
+` Hisui's cheeks become faintly red.@
+` Little by little, I'm coaxing expressions out of her.@ I'm pleased.\
+
+cl a,%type_crossfade_fst
+
+ld l,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+
+`"Excellent timing.@ Hisui-chan, would you prepare a drink for Shiki-san?"@
+
+ld r,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Yes.@ Shiki-sama, what would you like to drink?"@
+`"Hm.@ Since it's before dinner, I guess just tea would be great.@ I only came down to chat, so I don't want to be any trouble."@
+`"Please wait a moment, then."\
+
+cl a,%type_crossfade_fst
+
+bg "image\bg\ima_10.jpg",%type_tshutter_mid
+bg "image\bg\bg_34c.jpg",%type_bshutter_mid
+
+
+` Hisui returns with three teacups, and time passes by slowly and silently.@
+br
+`"Ah, by the way, Hisui, you were talking about the detached house earlier?"@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Yes.@ Did you have a question about it?"@
+`"Mm, not particularly, but Akiha was saying no one can go there anymore.@ Did something happen there while I was gone, by any chance?"\
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\koha_t02b.jpg",%type_crossfade_fst
+
+`"No, nothing like that.@ It merely houses servants' quarters, so there's no reason for you to go there, Shiki-san."@
+`"Servant's quarters……?"@
+
+ld c,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
+
+`"Yes.@ Although it's only me and Hisui-chan now, a little while ago there were more than ten servants working in the mansion.@ Since there isn't room for so many people in the mansion, the detached building was built."\
+
+cl a,%type_crossfade_fst
+
+ld r,":a;image\tachi\his_t09.jpg",%type_crossfade_fst
+
+`"Nee-san---you must not speak about this."@
+
+ld l,":a;image\tachi\koha_t11.jpg",%type_crossfade_fst
+
+`"Ah."@
+
+cl a,%type_crossfade_fst
+
+` Hisui says this, and Kohaku-san looks around guiltily.@
+` …… There is no sign of Akiha.@ Kohaku-san lets out a sigh of relief.\
+
+ld c,":a;image\tachi\koha_t04b.jpg",%type_crossfade_fst
+
+`"Shiki-san!"@
+`"Ah… Yes, what is it…?"@
+`"…… Our talk just now is a secret!"@
+` Kohaku-san grips my hand hard.@
+`"Ah, yeah---I won't tell Akiha about it."@
+
+ld c,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
+
+`"Yes, thank you."@
+` Kohaku-san sighs with relief once more.@
+` It seems like Akiha forbids talking about the detached building.\
+
+cl a,%type_crossfade_fst
+
+` ----But, why?@
+` The detached building that used to be the servants' quarters.@
+` Akiha doesn't want people to go there.\
+
+`"Hey, Kohaku-san.@ How long has the detached building been unused?"@
+
+ld l,":a;image\tachi\koha_t11.jpg",%type_crossfade_fst
+
+`"Uhhh… Hisui-chan?"@
+
+ld r,":a;image\tachi\his_t01b.jpg",%type_crossfade_fst
+
+`"…………"@
+` Hisui silently shakes her head.@
+` It seems that even this cannot be spoken of.@
+`"What?@ Is it a secret?"\
+
+ld r,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"---Yes.@ Talking about the detached building would be bad for your health, Shiki-sama."@
+` And with that final response, talk of the detached building ceases.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+playstop
+
+!w1500
+
+
+
+return

@@ -1,0 +1,308 @@
+
+
+
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+
+`"…… Shall I take a look?"@
+` Getting out of bed, I leave my room silently.\
+playstop
+waveloop se10
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_33d.jpg",%type_lcartain_mid
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_42c.jpg",%type_lcartain_mid
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_54c.jpg",%type_lcartain_mid
+
+
+
+` ----Even the moonlight does not penetrate the woods of the garden.@
+br
+` I walk through the woods which seem more like a forest.@
+` …… I didn't remember quite where it was, but as I enter the forest, my feet automatically head toward the detached building.@
+br
+` Even if I forgot where it was, I guess my body remembers how to get there.@
+` At any rate, I am able to get to the detached building without getting lost.\
+
+bg "image\bg\ima_10.jpg",%type_tcartain_mid
+bg "image\bg\bg_44b.jpg",%type_bcartain_mid
+
+
+`"-------"@
+` It must have been many years since this building was put out of use, as many parts are deteriorated.@
+` As I put my hand on the door, I notice that it is unlocked.@
+br
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+` It is dark inside, as expected.@
+` I smell the tatami mats and the shoji, and somehow feel comfortable even though I can't see anything.\
+
+bg "image\bg\bg_45c.jpg",%type_lshutter_mid
+
+
+`"-----Ah."@
+` As I enter the Japanese-style room, a chill runs through my spine.\
+
+`"----------I know this place."@
+` I guess I came here as a kid since this Japanese-style room was interesting.@
+`"------------"@
+` But it's weird.@
+` I feel the same sense of incompatibility I had when I was first shown my room after I came back to this mansion.\
+
+`"…… Maybe because the Arimas' house was Japanese-style."@
+` I feel like I've lived here all my life.@
+` Or maybe-----\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_45c.jpg",%type_crossfade_fst
+
+
+br
+br
+br
+br
+` If I recall, in the past…\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_45c.jpg",%type_crossfade_fst
+
+
+br
+br
+br
+br
+br
+br
+` When we were playing in the yard,\
+
+bg "image\bg\cmo_05.jpg",%type_nowaitdisp
+bg "image\bg\bg_45c.jpg",%type_nowaitdisp
+
+
+br
+br
+br
+br
+br
+br
+br
+br
+` maybe it wasn't just me and Akiha…\
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_45c.jpg",%type_nowaitdisp
+
+
+`"Ouch------"@
+` I feel a pain in my neck.@
+` It might be my anemia, but my body feels like lead.@
+`"…… This is bad…… I have to go back to my room."@
+` I shake my head lightly, and I decide to go back to my room before I really faint.@
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w1000
+bg "image\bg\bg_40d.jpg",%type_rcartain_mid
+
+
+` I take a deep breath.@
+` Somehow, I made it back to my room.@
+` No matter what, if I collapsed in the off-limits building, Akiha's wrath would pour down on me.@
+`"------Mn."@
+` I feel a little dizzy.@
+` I fall onto my bed without even changing.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+monocro #ff0000
+wavestop
+
+
+
+!w2000
+wave se0
+
+!w600
+` ----Hot.\
+
+wave se0
+!w600
+br
+br
+br
+` ----Hot.\
+
+wave se0
+!w600
+br
+br
+br
+br
+br
+` ----Hot.\
+
+wave se0
+!w600
+br
+br
+br
+br
+br
+br
+br
+` ----My throat, dry with thirst, hot.\
+
+!w600
+br
+br
+br
+br
+br
+br
+br
+br
+` ------I can't sleep like this.@
+`      I'll go and get a drink of water.\
+
+bg "image\bg\bg_47.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_24c.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_25b.jpg",%type_crossfade_mid
+
+play "track04.ogg"
+
+` It seems I went into town at night.@
+` It seems like I'm waiting with bloodshot eyes for someone to pass by.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ------It is hot.\
+
+` Suddenly, I see a face reflected in the window.@
+` The eyes are bloodshot, and the face looks quite insane.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ------It is just so hot.\
+
+` It seems I found my prey.@
+` Strangling her from behind, it's all over.@
+` It seems that the unknown woman has died just from that.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ---I am just, so hot.\
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_30b.jpg",%type_nowaitdisp
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+
+bg "image\bg\ima_13b.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_31b.jpg",%type_nowaitdisp
+
+
+` Taking the dead body, perhaps I bit into its throat.@
+` There's a gurgling sound.@
+` Drinking the blood flowing out of the rended neck, my thirst is quenched.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ---I don't understand.\
+
+` The sound of heavy breathing.@
+` Does this act…
+` Does this act really excite me so much?@
+` I stick my finger in the chest of the dead body.@
+` The sound of crushing meat, the sound of breaking bones.@
+` The sound of a heart being ripped out with my bare hand.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ---As I watch, my head fills with pure white.\
+
+` This, the ultimate pillage.@
+` The height of immorality.@
+` Just gazing at it, I feel hot.@
+` You might say it's negative pleasure, but for making one hot, it's still the same.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ---I don't understand.\
+
+bg "image\bg\ima_18.jpg",%type_crossfade_fst
+
+` Hot blood dripping from my mouth, I gaze up at the night sky entranced.@
+` My long hair waves around.@
+` Above is the spiraling sky.@
+` Such a beautiful, silver moon.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ---And so, I don't understand.@
+`   I am just, only, hot----\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+monocro off
+playstop
+
+!w3000
+
+
+
+
+
+return

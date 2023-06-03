@@ -1,0 +1,80 @@
+
+
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+
+` ---How do I feel?@
+` Certainly Senpai is dear to me.@ No matter who she is, the time we spent at school together is precious to me.@
+br
+` But, even still------to me, Senpai is Senpai.@
+` Friend or foe, man or woman, before all of that, I only feel that she is my dependable Senpai.\
+
+`"………………"@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+`"Come on!@ You can't fool me by being quiet, you know."@
+` Arcueid continues glaring at me.@
+` …… Come to think of it, no matter what kind of person Senpai is, this person is much, much scarier.@
+` I've been forgetting, but she is a vampire, and she seems to lack knowledge of moral concepts.\
+
+
+` ----But, I am still attracted to her.@
+br
+` Even tonight, I was simply looking for her, but I was getting so frustrated when I couldn't find her.@
+` It was, something like feeling worried about a loved one.\
+
+`"Shiki, I'll ask you one more time.@ Whose side are you on, mine or that woman's?"@
+` Arcueid glares at me in irritation.\
+`"…… Hey now, isn't that already decided?@ I'm still here.@ If I was on Senpai's side, I would have gone after her."@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"Um, in other words---what do you mean?"@
+` Arcueid tilts her head to the side questioningly.\
+
+`"What do I mean?"@
+br
+` ---Why doesn't she just understand simple conversations?@
+` If she's like this, unless I don't just say it directly, she'll never understand.\
+
+`"You're pretty dense.@ Saying I'm still here means that----"@
+br
+` Means what?@
+` The fact that I'm attracted to her is an undoubtable truth.@
+` But I know that is something I must not say.@
+` No matter how beautiful she is, it still doesn't change the fact that she's a vampire.\
+
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+
+`"You're going silent again, what are you trying to say?@ If you want to choose Ciel, then just say so!"@
+`"I, I said that's not it!@ I keep saying it, but why don't you understand……!?"@
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+`"How can I know!"@
+` Being screamed at irrationally, she screams back at me irrationally.\
+
+`"Fine!@ Then I don't know you at all, Shiki!"@
+cl c,%type_lshutter_fst
+`"Hey, hold on.@ Where are you going?"@
+`"It has nothing to do with you.@ Don't follow me!"@
+` Is she really that angry?@ Arcueid walks away without even turning around.\
+
+`"Wha-----"@
+` I stand in shock by myself in the park.@
+` …… Arcueid got mad and went somewhere by herself, and I asked her what I wanted, so I know I should go back to the mansion.@
+br
+` …… But, my feet don't even move one step back.\
+` My logic tells me where I should go, but my heart doesn't listen.\
+
+` ---It's been said a million times, but.@
+` The feelings of love and hate, they have nothing to do with logic.\
+
+`"-----Man, geez!"@
+br
+` Damn it.@ Why is it that I just can't leave Arcueid alone……!?@
+br
+`"Arcueid!@ I said wait!"@
+` Raising my voice, I chase after Arcueid who keeps on walking.\
+playstop
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+return

@@ -1,0 +1,32 @@
+
+bg "image\bg\bg_33b.jpg",%type_nowaitdisp
+
+` ---I feel bad doing this to Hisui, but I can't let her know.@
+` I have to keep Arcueid a secret, and it's not like I can let Hisui or Kohaku-san, or Akiha know that I'm looking for the serial killer.\
+
+
+`"No, I don't have any reason to go out.@ Akiha scolded me today, so I'll stay put for a while."@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"I understand.@ Then I will close the gate at the normal time."@
+` She speaks plainly, without any expression.@
+` The conversation ends and I go up to return to my room.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w2000
+
+bg "image\bg\bg_40c.jpg",%type_lcartain_mid
+playstop
+
+` After dinner, I go back to my room.@
+` It's almost ten o'clock.@
+` So as not to be discovered, I should go outside as discreetly as possible.@
+br
+`"Now then---shall I go?"@
+` Placing my knife in my pocket, I leave my room as quietly as I can.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w2000
+
+
+
+return

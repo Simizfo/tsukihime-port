@@ -1,0 +1,106 @@
+
+
+
+bg "image\bg\bg_29b.jpg",%type_lcartain_mid
+
+
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+
+play "track01.ogg"
+
+`"What did you want to talk about, Shiki?"@
+`"About vampires.@ You said it before.@ That the recent serial killings were the work of a vampire."@
+` Arcueid nods.@
+`"Then do you know the morning news said another victim was found?@ She was killed last night and drained of blood."@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+`"-----"@
+` …… Arcueid's eyes narrow.@
+` Something…
+` Something like a freezing tension races down my spine.\
+
+ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
+`"Oh?@ And?"@
+`"And?---you……"@
+` I swallow hard.@
+` She stares right at me.@
+` Almost---a stare which says she will attack me immediately if I move even the slightest bit.\
+
+`"Is---isn't it strange, Arcueid?@
+` Nrvnqsr is dead.@ So why are these incidents still happening?@ Don't tell me, that, you---"\
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"That's not it at all.@ That's not me, but another vampire."@
+` Arcueid responds immediately, loosening the tension.@
+` But I'm not satisfied.\
+
+`"What do you mean?@ The work of another vampire?@ So they just keep coming?"@
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+
+`"Of course not.@ The serial killings were always the work of just one vampire from the very beginning.@ So no new vampires will come, and Nrvnqsr was unrelated to those incidents."@
+br
+` ----Eh?@
+` Nrvnqsr was, unrelated……?@
+br
+`"Wha---what do you mean?"@
+`"It's just like I said.@ …… You're normally pretty sharp, but you're lost at some points.@ Think back, Shiki.@ Nrvnqsr was a vampire, but did he ever suck human blood?"\
+cl c,%type_crossfade_fst
+
+
+`"Suck blood?@ He ate humans and---oh."\
+br
+` I see.@
+` Why didn't I notice such a simple mistake?@
+` The victims of the serial killings are found with their bodies drained of blood.\
+
+` But Nrvnqsr was different.@
+` He didn't leave any dead bodies behind.@ He not only drank the blood, but also ate the meat, leaving no trace.@
+` To prove it, the people eaten by him in the hotel were treated as missing people, not killed people.@
+br
+` So---that means, it is something completely different.\
+
+`"Wait.@ Then what is the serial killing going on right now?@ Just who is doing it?"@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"That's a different vampire than Nrvnqsr.@ To be more specific, that vampire is why I came here, and Nrvnqsr came here following me.@ It's that sort of correlation."@
+`"---Wha… So the one you're after wasn't Nrvnqsr after all……!?"\
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"Yes, I didn't ever say he was my initial target.@
+` I was his target, but he was never my target; my target is the one called the 'serial killer' in this city."@
+ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
+
+`"…… Shiki.@ I don't quite believe it, but don't tell me you made such a simple mistake?"\
+cl c,%type_crossfade_fst
+
+
+`"Wha-----"@
+` I gasp in shock.@
+` But---it really is just as she says.@
+` She said her purpose is to kill vampires, so I just thought it was Nrvnqsr she was after----\
+br
+`"…… So what is it?@ Killing Nrvnqsr that night, was pointless………!?"\
+
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+
+`"It wasn't pointless, you fought in my place.@ Well, if you didn't kill me, you probably wouldn't have had to in the first place."@
+br
+`"------"@
+` I feel a little dizzy.\
+
+`"…… In other words, those vampire killings had nothing at all to do with Nrvnqsr and it was the work of another vampire……?"@
+
+`"Yeah, that's right.@ But, that's my problem so you don't have to worry about it.@ But more than that, hey."\
+playstop
+
+cl c,%type_crossfade_fst
+
+` With an extremely happy smile, Arcueid looks up at me as I still stand there in surprise.@
+br
+`"How was last night?@ Who came?"\
+
+
+
+
+return

@@ -1,0 +1,165 @@
+
+
+
+
+
+bg "image\bg\bg_40b.jpg",%type_nowaitdisp
+
+
+` …… It's bugging me how Akiha said that.@
+` She said not to enter the detached building under any circumstances.@
+` The way she said it gets me more curious.@ Besides-----if a Japanese-style room is only located there, I do feel like I want to take a look at it.@
+br
+`"…… I guess it's alright if I don't get caught."@
+` I silently apologize to Akiha and decide to walk to the exit quietly.\
+
+playstop
+
+waveloop se10
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+bg "image\bg\bg_33b.jpg",%type_lcartain_fst
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_42b.jpg",%type_lcartain_mid
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+` ------The sun has set and it is pitch black outside.@
+` I walk through the woods which seem more like a forest.@
+` …… I didn't remember quite where it was, but as I enter the forest, my feet automatically head toward the detached building.@
+` Even if I forgot where it was, I guess my body remembers how to get there.@
+` At any rate, I am able to get to the detached building without getting lost.\
+
+bg "image\bg\bg_44b.jpg",%type_lcartain_mid
+
+
+`"-------"@
+` It must have been many years since this building was put out of use, as many parts are deteriorated.@
+br
+` As I put my hand on the door, I notice that it is unlocked.@
+br
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+` It is dark inside, as expected.@
+` I smell the tatami mats and the shoji, and somehow feel comfortable even though I can't see anything.\
+
+bg "image\bg\bg_45c.jpg",%type_lcartain_mid
+
+
+`"-----Ah."@
+` As I enter the Japanese-style room, a chill runs through my spine.\
+
+`"----------I know this place."@
+` I guess I came here as a kid since this japanese-style room was interesting.@
+`"------------"@
+` But it's weird.@
+` I feel the same sense of incompatibility I had when I was first shown my room after I came back to this mansion.@
+`"…… Maybe because the Arimas' house was Japanese-style."@
+` I feel like I've lived here all my life.@
+br
+` Or maybe-----\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_45c.jpg",%type_crossfade_fst
+
+
+br
+br
+br
+br
+` If I recall, in the past…\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_45c.jpg",%type_crossfade_fst
+
+
+br
+br
+br
+br
+br
+br
+br
+` When we were playing in the yard…\
+
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\cmo_06.jpg",%type_nowaitdisp
+
+bg "image\bg\bg_45c.jpg",%type_crossfade_fst
+
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+` Maybe it wasn't just me and Akiha.\
+
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_45c.jpg",%type_nowaitdisp
+
+wave se0
+
+`"Ouch------"@
+` I feel a pain in my neck.@
+` It might be my anemia, but my body feels like lead.@
+`"…… This is bad…… I have to go back to my room."@
+` I shake my head lightly, and I decide to go back to my room before I really faint.@
+
+play "track01.ogg"
+
+ld c,":a;image\tachi\koha_t02b.jpg",%type_lshutter_fst
+
+`"Oh hello, Shiki-san.@ What are you doing at a place like this?"@
+` Kohaku-san suddenly enters the room.\
+
+`"----------!!!"@
+` I look around to see what I can do.@
+` …… There's no place to hide.@ Besides, she's already seen me.@
+ld c,":a;image\tachi\koha_t04b.jpg",%type_crossfade_fst
+
+`"Hey now, you can't come in here.@ Akiha-sama told us never to let you in here."@
+`"…… Yeah, she told me today.@ She told me but-----"@
+ld c,":a;image\tachi\koha_t15.jpg",%type_crossfade_fst
+
+`"You got curious?@ I understand.@ I'll let you go this time, but please don't come here again.@ This building is old and a bit dangerous."\
+
+` …… This building is old and a bit dangerous, huh.@
+` It's a weird reason but, it still makes sense.@
+`"…… I'm sorry.@ But what was this building used for?@ You say it's not used now but did someone use it before?"@
+ld c,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
+
+
+`"Yes, this used to be the servants' residence.@ Before you went to the Arimas, this mansion had many servants.@
+` It was impossible to let all the servants live in the mansion, so Makihisa-sama constructed this detached building."@
+`"I see, this place was the servants' residence."\
+
+` It does make sense now that she mentions it.@
+` If you have a mansion this big, such a thing would be certainly needed.@
+` But, why?@
+` Why is Akiha trying to get me away from this place------?\
+
+`"Shiki-san, we should go back to the mansion or Akiha-sama might find out."@
+`"Oh-----I'm sorry."@
+` I shake off the faint doubt remaining and decide to go back to the mansion with Kohaku-san.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+playstop
+
+!w1000
+
+
+
+
+
+
+return

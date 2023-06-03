@@ -1,0 +1,25 @@
+
+
+bg "image\bg\bg_01b.jpg",%type_lcartain_mid
+
+` We walk out the gate.@
+` From here, we have to go our separate ways.@
+br
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_mid
+`"Well then, this is goodbye for now.@ We got here pretty quickly."@
+` …… I feel the same way.@ I was really thinking it would be better if the school were a bit bigger.\
+
+`"Well then, Senpai, see you tomorrow."@
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"Yes, let's meet at school tomorrow."@
+cl c,%type_lshutter_mid
+
+` Smiling as she responds, Senpai disappears in the opposite direction.@
+` After watching her go, I head down the street towards my house.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+
+
+
+return

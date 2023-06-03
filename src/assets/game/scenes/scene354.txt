@@ -1,0 +1,151 @@
+
+
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
+
+play "track01.ogg"
+
+`"---What am I thinking?"@
+` No, I'm just tired.@
+` I still haven't forgotten what happened with Yumizuka.@
+` I'm not a vampire.@ I'm still a normal human being.@
+br
+bg "image\bg\ima_13b.jpg",%type_nowaitdisp
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
+
+` But, there's a part of me that wanders in search of blood every night.@
+br
+` So, maybe…
+` It's that I don't notice, but I'm already at a point where I can't go back----\
+
+wave se3
+
+
+ld c,":a;image\tachi\his_t12.jpg",%type_lshutter_fst
+
+`"Hisui---?"@
+` Hisui enters with an urgent expression.@
+
+ld c,":a;image\tachi\his_t16b.jpg",%type_crossfade_fst
+
+`"…… Excuse me.@ You are awake, are you not, Shiki-sama?"@
+` Hisui bows quietly.@
+
+cl a,%type_crossfade_fst
+
+` …… Her pure figure is so much the opposite of my earlier dream, it makes the uneasiness in my chest go away.\
+
+`"No, don't worry, I was up already.@ …… Morning, Hisui.@ Thanks for coming to wake me up again today."@
+
+ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+
+`"…… Yes.@ Good morning."@
+` Bowing again, Hisui approaches the bed.@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"I have brought you a drink.@ If you are feeling poorly, please take it."@
+` Hisui presents a drink on a silver tray.@ The tray also has some kind of medicine on it.\
+
+`"……?@ What is it, Hisui?@ You've never come with medicine before."@
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"…… Shiki-sama, are you feeling alright?@ As you seemed to be caught up in a terrible nightmare and your face appeared pale, I brought you some medicine."@
+`"----I seemed to be having a nightmare?"@
+
+ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+
+`"Yes.@ It also seemed that your body was very hot, so I had Nee-san prescribe something for a fever.@ Perhaps there was no need?"@
+`"Of course not, thank you for worrying."\
+
+cl a,%type_crossfade_fst
+
+
+` I swallow the medicine and water she offers.@
+` Ignoring the medicine, I'm grateful for the water.@
+` As Hisui says, my body is very hot, and my throat is terribly dry.@
+` Even though it's only pure water, it tastes great.\
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"If you are feeling better, please go to the dining room.@ If you are not, please take today off."@
+`"No, I won't skip school.@ I can't take a day off just because of this."@
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"…… But, your face still appears pale, Shiki-sama."@
+`"I'll be fine.@ Anyway, our school has tomorrow off.@ Since I'll have tomorrow off, I can push it a little today, can't I?"@
+
+ld c,":a;image\tachi\his_t05.jpg",%type_crossfade_fst
+
+`"…………"@
+` Hisui glances down, looking like she wants to say something.@
+` Do I really look that bad today?\
+
+`"Hisui, just one question.@ Was I really having a nightmare?"@
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"---Yes.@ I do not know when you returned, but you were terribly tired and went straight to sleep.@
+` When I came to wake you in the morning and opened the curtains, you seemed to be in pain, and your breathing was rough."@
+` …… I see.@ A dream like that would cause me to be in pain… eh?@ Just hang on a second.\
+
+`"---Hisui.@ What did you just say?"@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"That you were in poor condition since this morning."@
+`"No, before that!@ I came back?@ Where from!?"@
+`"---I do not know.@ Nee-san told me she saw you leave while she was patrolling the mansion."@
+`"…… I, left…?"@
+`"Yes.@ Nee-san and I patrol the mansion every three hours.@ While Nee-san was doing the rounds at midnight last night, she saw you leaving the mansion."\
+
+`"Wha…"@
+`"Since it seems you were able to return before morning, Nee-san has not told Akiha-sama of this.@
+` …… As Nee-san is indulgent of you, Shiki-sama, it will surely remain that way."@
+
+cl a,%type_crossfade_fst
+
+`"-------"@
+` Wha---what is, this?@
+` I went outside?@
+` That can't be.@ I was sound asleep this whole time, having a dream.@
+` Having such a… lively… drea… m.\
+
+`"Ah----"@
+` But, this is weird.@
+` Dreams are forgotten the moment you wake up, so why do I still remember all the details of the dream so perfectly…\
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Shiki-sama…?@ Your face still appears pale.@ How are you feeling?"@
+`"Ah, yeah, I'm fine.@ I'm fine, so go ahead, Hisui… It's okay, I'll go right away."@
+
+ld c,":a;image\tachi\his_t16.jpg",%type_crossfade_fst
+
+`"I understand.@ I shall wait for you in the dining room."@
+
+cl a,%type_crossfade_fst
+
+` Closing the door behind her, Hisui leaves the room.@
+br
+`"…… Yeah, I'm fine.@ No problems at all.@ I'm just, fine…"@
+` I say it over and over again, trying to persuade myself.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w2000
+bg "image\bg\bg_33a.jpg",%type_lcartain_mid
+
+
+playstop
+
+` To get to the dining room, I have to pass through the sitting room.@
+` …… It's depressing.@ To be honest, I don't want to see anyone right now.@
+` Hisui and Kohaku-san, and… and Akiha.@ I'm not sure I can act normally.@
+br
+` I'll----
+br
+
+return

@@ -1,0 +1,13 @@
+
+
+
+bg "image\bg\bg_40b.jpg",%type_tshutter_mid
+
+
+` It's a bit past five in the evening.@
+` There is about an hour of free time before dinner.@
+` Between now and dinner, should I spend time in my room, or---
+br
+
+
+return

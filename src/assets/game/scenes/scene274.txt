@@ -1,0 +1,142 @@
+
+mov $phasebg,"image\bg\bg_11c.jpg"
+mov $phasetitle_a,":a;image\word\PCEL_09A.PNG"
+mov $phasetitle_b,":a;image\word\day_09.png"
+gosub *left_phase
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\cmo_14.jpg",%type_crossfade_fst
+
+` I'm in a dark place.@
+` Eight years since I awoke.@
+` I've been holding my breath in darkness the whole time.\
+
+` I don't even know why.@
+` That has long since been worn away.@
+` Here, there is only darkness.@
+` But, I know there is something I have to do.\
+
+` I don't know why I live.@
+` But I know my purpose.@
+` The chains which held me are all gone.@
+` There is nothing holding me back.@
+!w500
+br
+` All that's left,
+!w500
+br
+` is killing you.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+bg "image\bg\bg_40e.jpg",%type_crossfade_fst
+
+br
+` Tweet.@ Tweet tweet.@ Chirp.@ Chirp.@
+br
+` Is the window open?@
+` I can hear the voices of small birds coming from the garden.@
+br
+` A cool breeze brushes my face.@
+` The brilliant sunlight hits my eyes.@
+` A quiet, delicate tinge.@
+br
+` A gentle, morning visit.\
+
+bg "image\bg\bg_40a.jpg",%type_crossfade_fst
+
+play "track02.ogg"
+
+` Morning?@
+` It seems I slept until now after Akiha treated me.@
+` My body still feels a little heavy.@
+` But still I feel much better than last night.@
+` Opening my eyes, I get up.\
+
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_40a.jpg",%type_crossfade_fst
+
+`"Ugh…………"@
+` I feel like throwing up instantly.@
+` I still have my anemia from yesterday?@
+` My chest hurts and I feel sick.@
+br
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
+`"Please excuse me."@
+` Hisui enters my room.@
+` She must've thought I was still asleep because she seems surprised to see me up.\
+
+`"Good morning.@ It seems you have awakened, Shiki-sama."@
+`"----"@
+` For some reason,
+` Hisui's reaction annoys me.\
+
+`"Morning.@ Breakfast, right?@ I'll be there soon, so just get out.@ I'm going to change."@
+ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+`"…… Yes, please excuse me."@
+cl c,%type_lshutter_mid
+`"……………"@
+` No matter how poor of a mood I'm in, letting it out on Hisui like that… there's something wrong with me.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\bg_40a.jpg",%type_crossfade_fst
+
+`"----"@
+` I feel sick.@
+` Even if I go to school like this, I won't be able to do anything.@
+br
+`"…… Maybe I'll just stay home."@
+` But, I have to go.@
+` If I go to school, I may see Senpai again.\
+
+` …… She may not be the "Senpai" I want---but she may still be there.@
+br
+`"-----Whew."@
+` Taking a deep breath, I settle down.@
+` Managing to resist my dizziness, I leave my room.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_34a.jpg",%type_lcartain_mid
+
+ld c,":a;image\tachi\aki_t16a.jpg",%type_lshutter_mid
+`"Oh, Nii-san.@ …… Good, morning."@
+` …… As soon as I enter the sitting room, Akiha greets me hollowly.\
+
+`"…… Yeah, morning.@ You're up early Akiha."@
+`"I am always up this early but…… Nii, san?"@
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+`"…… Are you alright?@ Your face still looks pale.@ If you do not feel well, you can stay home---"@
+`"No, I'm fine.@ I'm better, so you don't need to worry."@
+` I answer her quickly and pass right by.@
+` I head to the dining room since I'll probably collapse if I don't eat.\
+
+`"See ya.@ Isn't it about time for school?"@
+ld c,":a;image\tachi\aki_t17a.jpg",%type_crossfade_fst
+`"……………… Yes.@ Then, I will be going now."@
+` Speaking hesitantly, she stands up quietly.@
+cl c,%type_lshutter_mid
+` Akiha exits the sitting room.@
+` After watching her go out of the corner of my eye, I enter the dining room.\
+playstop
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_23a.jpg",%type_lcartain_mid
+
+` I leave the mansion and head for school.@
+` My limbs are still heavy, and with a feeling like I'm in someone else's body, I go down the hill.\
+
+bg "image\bg\bg_01a.jpg",%type_lcartain_mid
+
+` It's seven-forty.@
+` The gate becomes congested with students hurrying to class.@
+br
+`"………………"@
+` I don't think Senpai will come, but is waiting here better than waiting in my classroom?@
+br
+
+
+
+
+
+return

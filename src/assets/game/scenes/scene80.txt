@@ -1,0 +1,31 @@
+
+
+
+bg "image\bg\bg_25a.jpg",%type_lcartain_mid
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+
+`"…… Hmmm?"@
+` As we walk out of the back alley, she--Arcueid--knits her eyebrows and gives me a suspicious look.@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+`"Hey, Shiki.@ Are you a Christian, by any chance?"@
+br
+` …… I have no idea what she's talking about.@
+`"Chris-chan…?@ What's with that question, all of a sudden?@ I don't know any girl who's got a name like that."\
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"I see.@ Then I must have misunderstood."@
+` After seeming to have made a decision, she turns towards the office district.@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+`"Okay, let's go.@ We've got to find a safe place for now."@
+` Arcueid begins walking.@
+` "----Okay."@
+br
+` There's no way I can back out now.@
+` Sighing, I follow after her.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+return

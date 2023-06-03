@@ -1,0 +1,102 @@
+
+
+
+
+
+monocro #ff0000
+bg "image\bg\bg_54d.jpg",%type_nowaitdisp
+
+
+
+`"---------"@
+` I let out a deep breath.@
+br
+wavestop
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+monocro off
+bg "image\bg\bg_54d.jpg",%type_crossfade_fst
+
+
+` Calming down,
+` I manage to restore control over my breathing.@
+` My view painted in red now returns to normal.@
+` One more calming breath.@
+` I won't believe what SHIKI says.@
+` I would never kill Akiha, and there's no way I would kill someone simply because they weren't human.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+monocro #ff0000
+bg "image\event\aki_e03.jpg",%type_crossfade_fst
+monocro off
+bg "image\bg\bg_54d.jpg",%type_crossfade_fst
+
+
+`"……………"@
+` It's different.@
+` It's different from back then.@
+` I'm different from SHIKI.@
+` I can control my actions through my own willpower.@
+` It's just, the smell of blood is so strong.@
+` It makes me remember the past, and that scares me.\
+
+`"Shi------t"@
+` My right hand is still holding the knife.@
+` With my bare left hand, I wipe the blood off my chest.@
+br
+` ---With that, the smell of the blood goes away a bit.@
+br
+`"-----SHIKI"@
+` In the darkness, the trail of blood seems to light the way.@
+` I take another deep breath, then go after SHIKI.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_53b.jpg",%type_lshutter_mid
+
+play "track06.ogg"
+
+` This is the last stop.\
+
+`"--------"@
+` …… Is this just a coincidence or is it on purpose?@
+` Eight years ago.@
+` We fight to death once more at the place where SHIKI almost killed me.\
+
+`"…… Hmph, you did come after me."@
+` SHIKI is sitting down at the very edge of the clearing.@
+` Even that is the same as back then.@
+`"……………"@
+` I hold onto my knife and walk towards him.@
+` I feel something slimy under my feet.@
+` SHIKI's blood has not stopped; all the flowing blood is from him.@
+` Splash, splash.@
+` His blood makes noise as I step towards him.@
+` …… It's amazing he's alive after losing this much blood.@
+` It's like a giant puddle on the ground.\
+
+wave se0
+
+
+`"Ku……………"@
+` But, I'm also at my limit.@
+` I'll be at a disadvantage if I wait any longer.@
+` This is the only chance to kill him, with him wounded.@
+`"--------!!"@
+` I step forward.@
+`"-----Wait!@ There's something I haven't told you yet.@ Can you wait there a bit, Shiki?"@
+`"-----------"\
+`"Don't look at me like that.@ This should benefit you too.@ Because it's about Akiha.@ There might be a way to turn her back."@
+`"Wha-------"\
+
+` At that moment,
+` my still functioning reason stops my feet.@
+` But, my body is telling me to go on and kill him right now.@
+` I------
+br
+
+
+
+
+
+
+return

@@ -1,0 +1,109 @@
+
+
+
+monocro #ff0000
+bg "image\bg\bg_54d.jpg",%type_nowaitdisp
+
+
+
+` ----No time to waste.@
+` I have to kill him before his wounds heal, or he will kill me.@
+br
+` I take a forced breath,
+` and spur my tired body after SHIKI.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+monocro off
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_54d.jpg",%type_crossfade_fst
+
+` Panting-----
+br
+` My breath echoes through the dark forest.@
+` In this darkness, the trail of blood seems to light the way.@
+` There's no way I'll let SHIKI go now.@
+` The question is, can my body survive long enough?\
+
+` Breathing heavily,
+` I run while wobbling side to side.@
+` I feel my knife in my left hand.@
+` The sensation of the knife firmly gripped by my hand is the only thing keeping me from passing out.@
+br
+`"Is he…… going to the courtyard?"@
+br
+` It looks like the trail of blood leads to the courtyard.@
+` Eight years ago.@
+` The place where Nanaya Shiki was killed by Tohno SHIKI.@
+` …… Come to think of it, there's no better place to finish our match.\
+
+`"-----Alright SHIKI, I'll…"@
+` Kill you.@
+
+wave se6
+quakex 2,200
+bg "image\bg\ima_13b.jpg",%type_lshutter_fst
+
+br
+br
+br
+br
+br
+` Everything turns red.\
+
+`"Gu-------ugh."@
+` Blood accompanies my breath out of my body.@
+` Blood spews out of my heart.@
+` I start to pass out and----fall to the ground.@
+`"What----?"@
+` I don't understand.@
+` I just feel pain and burning everywhere.\
+
+`"-----What the…"@
+` I look at my back.@
+` There I see numerous swords stuck like wings.@
+` They stick through me and up towards the sky.@
+` That means…
+` This wound is fatal.@
+`"Why-----?"@
+` I don't understand.@
+` It's not that these swords came flying at me.@
+` They just suddenly seemed to sprout from inside me.\
+
+` The sound of dripping blood.@
+` It drips down the swords on my body.@
+` The blood is not mine---
+br
+`"----Oh, that blood back then."@
+br
+` …… The blood that spilled on me when I cut SHIKI.@
+` That was still on my chest.@
+` …… What a stupid mistake.@
+` I knew that red swords were made from his blood---so having his blood on me is like asking him to stab me to death any time he pleases.\
+
+bg "image\bg\ima_01.jpg",%type_crossfade_slw
+
+`"------Ah."@
+` I start to fade.@
+` I look up at the sky in my own sea of blood.@
+br
+` The far away moon.@
+` Dark night, tall trees.@
+` I am facing the same meaningless death as once before.\
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+!w2000
+
+
+
+
+
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+
+
+return

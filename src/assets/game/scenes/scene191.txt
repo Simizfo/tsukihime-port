@@ -1,0 +1,68 @@
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+` ----I'll check in the alley she was in last night.@
+` If she's running away from people, that's the only place I can think of.\
+
+bg "image\bg\bg_30b.jpg",%type_lcartain_mid
+
+
+` I still have no control over my breathing.@
+` I run with all my strength from the park.@
+` My heart screams from overexertion.@
+` Ignoring it, I continue to run to find her as soon as possible.\
+
+bg "image\bg\bg_31b.jpg",%type_lcartain_mid
+
+`"----Arcueid!"@
+` As soon as I get to the alley, I call out her name.@
+`"You're here, aren't you?@ Come out, Arcueid……!"@
+` Under the moonlight, my solitary voice echoes in the alley.@
+`"…… Arcueid……!@ Please, come out……!"\
+
+br
+br
+br
+br
+br
+` …… There's no response.@
+` There's only an empty loneliness here.\
+
+`"Damn…………!"@
+` Arcueid isn't here.@
+` Then where else is there?@
+br
+` I can't find her running around aimlessly.@
+` At this rate I'll never----never see her again.\
+
+`"------"@
+` No, I'm not done yet.@
+` I still haven't fulfilled my promise with Arcueid.@
+br
+` The promise to help her defeat the vampire, and the promise to meet tonight so we can fight together.\
+
+
+`"…… Pro…… mise……"@
+` …… That's right.@ There's still our promise.@
+` Even if it's just one-sided, I----even if it's just me, I'll fulfill our promise.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_29b.jpg",%type_lcartain_slw
+
+
+` I return to the park.@
+` Our promise still remains here.@
+` Our unfulfilled promise for tonight remains here.@
+br
+` ----So,
+` If I can't break this promise, and if she thinks it's important too,
+br
+` Arcueid will come back here.@
+` I can only continue to believe in her and wait here.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+
+
+return

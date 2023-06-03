@@ -1,0 +1,35 @@
+
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+
+` Well, if she's walking around my classroom like that, maybe she does want to see me for something.@
+br
+`"…… I wonder.@ She normally just walks in without hesitating."@
+` Or did she finally realize it's strange for a third-year to come to a second-year's classroom?@
+br
+`"--No.@ That definitely can't be it."@
+` Nodding to myself, I go to the hallway.\
+
+bg "image\bg\bg_11a.jpg",%type_lcartain_mid
+
+`"Senpai."@
+ld c,":a;image\tachi\cel_t08.jpg",%type_lshutter_fst
+`"Huh--Tohno-kun?"@
+` Senpai seems rather surprised I called her and stands there with her mouth open.@
+`"What are you doing?@ Class is about to start, so why are you still hanging around here?"@
+`"-----"@
+` Senpai looks at me in amazement, then looks away.\
+
+ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+`"What am I doing?@ That is not any of your business, Tohno-kun."@
+`"No--Well… maybe it isn't."@
+`"--No, I was lying.@ It is, a little."@
+cl c,%type_lshutter_mid
+
+
+` I thought she was looking away, but she starts sniffing me.@
+`"…… Um--Senpai……?"@
+
+
+
+return

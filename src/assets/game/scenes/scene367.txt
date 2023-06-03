@@ -1,0 +1,36 @@
+
+
+monocro #0000ff
+bg "image\bg\bg_33d.jpg",%type_nowaitdisp
+
+
+
+
+` ----The east wing of the first floor, I think.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+bg "image\bg\bg_34b.jpg",%type_tcartain_fst
+
+
+`"……………… Huh?"@
+` ----What am I thinking?@
+` All that's in the east wing of the first floor is the sitting room and the kitchen, not anyone's room.@
+`"----East is east, but her room is on the second floor……!"@
+` Cursing at myself, I dash upstairs.\
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+
+` …… I run up the stairs.\
+` The heated air and sense of foreboding seem to stretch over the dark of night like glass.@
+br
+` ----*pant*, *pant*, *pant*.@
+br
+` Breathing heavily, I reach the top of the stairs and walk down the hallway.@
+` …… My back hurts.@
+` This terrible feeling in the air gets heavier as I draw near Akiha's room.\
+
+
+
+
+
+
+return

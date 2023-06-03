@@ -1,0 +1,811 @@
+
+
+monocro #ff0000
+
+bg "image\bg\bg_14d.jpg",%type_crossfade_fst
+
+
+` But just what is wrong about it?@
+br
+` Wrong wrong wrong wrong.@
+` Wrong wrong wrong wrong.@
+` I killed her.@ Is that fact wrong?@
+` I didn't kill her.@ Is that fact wrong?@
+br
+` No, all that's totally wrong---!\
+
+` That's wrong, wrong, wrong, wrong,
+` wrong, wrong, wrong, wrongwrong,
+` wrong, wrong, wrong, wrongwrongwrong,
+` wrong, wrong, wrong, wrongwrongwrongwrong,
+` wrongwrongwrong, wrongwrongwrongwrong, wrongwrongwrongwrongwrong, wrongwrongwrongwrongwrongwrong, wrongwrongwrongwrongwrongwrongwrong, wrongwrongwrongwrongwrongwrongwrongwrong, wrongwrongwrongwrongwrongwrongwrongwrongwrongwrongwrongwrongwrongwrongwrongwrongwrongwrongwrongwrongwrongwrongwrongwrong-----\
+
+`"…… Wr… ong."@
+br
+` No, no, that is wrong.@
+br
+`"I'm saying---it's wrong."@
+br
+` It can't be.@ It just can't be.@
+br
+`"Wrong!@ ---Wrong, wrong, wrong, wrongwrongwrong…!@ I don't know her!@ She's just some stranger I saw walking down the street……!@ See!@ Isn't that strange to you, Shiki…!?@ She's a complete stranger!@ Why would I have to kill her…!?"\
+` There is no answer to my screams.@
+` Besides, the reason is clear.@
+br
+` From the moment I saw her, I could only think of one thing.@
+`"I------"@
+br
+`        Yes, I----\
+br
+br
+br
+br
+br
+br
+br
+br
+`             Tohno Shiki     wanted to  kill that girl.\
+
+` That's what I wanted to do back then.@
+` Just that, it was all so muddy inside my head, I didn't put it in words.\
+`"Wro-----ng!"@
+br
+` I feel like throwing up.@
+br
+`"Uh, uggg, uh."@
+br
+` The contents of my stomach rise.@
+br
+`"Ah, aaah, ah!"@
+br
+` The crimson is soaking into my eyeballs.@
+br
+`"Aaaaaaaaah----!"@
+` I dash out.@
+br
+` I don't think for even a moment about how I might be seen, or to hide the body.@
+br
+` I just want to escape from here.@
+` Half-crazed, I flee from the unfamiliar apartment--\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+monocro off
+playstop
+
+bg "image\bg\bg_28a.jpg",%type_crossfade_slw
+
+
+`"Guuh---burgh!"@
+` My stomach acid rises in my throat.@
+` I throw everything back up.@
+` My food, my gastric juices, everything, while I cry.\
+` *pant*, *pant*, *pant*, *pant*…!@
+br
+` There is nothing left in my stomach.@
+` But my body continues to force me to throw up, as if trying to undo what had occurred and return me to my ordinary life.@
+br
+` …… *pant*… *pant*… *pant*… *pant*…@
+br
+` Pain.@
+` It hurts, like my insides are burning.@
+` The tears won't stop, and my body collapses to the floor like a pile of garbage.\
+
+`"Ah, guh----gu, guguh, guh!"@
+br
+` I keep crying.@
+br
+` …… I killed someone.@
+` I killed her without reason, without mercy.@ Like breaking apart a doll.\
+br
+` ---What was it all about?@
+br
+` Why I felt like that,
+` Why I killed her,
+` Even now, I can't find a reason.@
+br
+`"----It's a lie."@
+br
+` No---it's too odd to be true.@
+` That thing that just happened might not be real.@ So this is just one of those dreams I have when I faint---\
+`"----It's a lie."@
+br
+` Besides, how can someone cut apart someone else like that with just a knife?@
+` I read it in a book once.@
+` It takes a whole day of strenuous labor to cut someone up, even when using a saw.@
+` That's why there's no way I could have possibly done such a thing with just a knife.@
+` These "lines" never existed in the first place.@ Everything was just a delusion I had fallen for----
+`"----It's a lie."\
+br
+
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_28a.jpg",%type_crossfade_fst
+
+
+br
+`"Guh---ffpt."@
+br
+` Gastric juice drips over my lips.@
+` Passing out of my mouth, dripping down my jaw.@
+` Mixed with the juices is something red.@
+` My throat is probably bleeding because my stomach keeps trying to throw up even when there's nothing left in there.@
+br
+`"O…… u----"@
+br
+` It hurts.@
+` That's why this…
+` This isn't a dream, and I'm just lying to myself.\
+
+br
+` Yes, actually, I understand everything.@
+br
+` I lusted after her.@ Just looking at her aroused me.@
+` When I cut her apart, it was so thrilling I almost ejaculated.@
+` These eyes, too.@
+` If I knew these "lines" could cut things apart like paper being shredded…
+` I should have understood that even a person could easily be cut apart like I just did to her.@
+` I had lived a normal life without even thinking about something like that.@
+` ---If I really am the sort of dangerous person who could easily kill just about anything…
+br
+` Then I should have put out these eyes or lived a life without seeing anyone.@
+`"…… I'm sorry, Sensei."@
+` ---I'm so sorry.@
+br
+` Not even such a simple promise,
+br
+` was I able to keep----\
+
+`"------"@
+` But I don't care about myself.@
+` I killed that person.@
+` That person's life up until now.@
+` The people around that person,
+` the future that person dreamed of,
+` everything---destroyed by a stranger.@
+br
+` Even if I regret it, I cannot be forgiven.@
+` Even if I apologize, I cannot be forgiven.@
+br
+`"Have I----gone insane?"\
+` I don't know.@
+` There isn't even a trace of that impulse left.@
+` But if---that impulse came again, what will happen to me?@
+` The thought of holding back never crossed my mind.@
+` I did not even consider trying to stop myself.@
+`"Kill this girl."@
+` If it had seemed like the obvious thing to do, and I went through with it, then there's nothing I can do.\
+` Then the answer is simple.@
+` I must be insane.@
+br
+` ----I've probably been mad since eight years ago, when I miraculously came back to life from a fatal accident.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+!w2000
+
+
+
+bg "image\bg\bg_28b.jpg",%type_crossfade_mid
+
+
+br
+br
+br
+br
+br
+br
+` -------I'm… cold.@
+` The sun has gone down without me noticing.@
+br
+` -------What time is it now?@
+` I can't tell.@
+` My eardrums are filled with noise, like a static TV.\
+
+br
+br
+br
+br
+` Static.@  Static.@  Static.\
+` The sound doesn't stop.@ It's terribly cold.@
+br
+` If I stay----sitting down on this bench like this, I think I'm going to die.\
+
+br
+br
+br
+br
+br
+br
+br
+br
+` Static, static, static\
+` I don't feel anything.@
+` I don't care about that repeating noise or the freezing cold.\
+` My body is shivering.@
+` It may be due to the cold, or the uneasiness, or the fear, or regret.@
+` I can't tell which.@
+` I've killed someone, and I can't explain why I did it without any reason.@
+br
+` ---What a joke.@
+` There's no reason, so there's no way I can explain it.\
+` I killed her just because I felt like killing her.@
+` Such a reason is insanity.\
+` …… Yeah, it would be so easy if I was just insane.@
+` But my heart still remains sane.@
+` It's only because I'm still sane that I can feel this numbness.\
+
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+` Staticstaticstatic.\
+` The knife is still in my hand.@
+` Resolving this by killing myself, that's pretty easy.@
+` But I can't do it.@
+` I'm still sane, so I can't do it.@
+` My heart fears death,
+` And somewhere in my heart, I know that doing so will not settle this---or atone for it.@
+br
+` The noise continues.@
+` My body temperature continues to plummet.\
+
+br
+br
+br
+br
+br
+` ---I can't kill myself.@
+` But if I leave things as they are, I'll disappear.@
+br
+` …… Maybe that's for the best.@
+` Even if a killer like me survives…\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+
+!w1000
+
+br
+br
+br
+` If I\
+!w2000
+
+br
+br
+br
+br
+br
+` just quickly\
+!w2000
+
+br
+br
+br
+br
+br
+br
+br
+` die\
+!w2000
+
+br
+br
+br
+br
+br
+br
+br
+br
+` like this…\
+!w2000
+`"Tohno… kun?"@
+` Suddenly, my name is called.\
+`"---------"@
+` I raise my head.@
+` There's Senpai----it feels like decades since I last saw her.\
+
+
+bg "image\bg\bg_28b.jpg",%type_crossfade_slw
+
+play "track01.ogg"
+
+ld c,":a;image\tachi\cel_t13.jpg",%type_crossfade_mid
+
+
+`"What are you doing sitting out here in the rain?"@
+`"…… R… ain."@
+` …… Ah, I see.@
+` That static noise up until now was the sound of rain.@
+br
+` No wonder it's cold.@
+` I can see now that I'm completely soaked and freezing.@
+br
+`"Oh, you don't even have an umbrella.@ You're going to catch a cold like that, Tohno-kun."\
+` …… Senpai's voice is so painful.@
+` It was only a few hours ago that I had last heard it, but now---it sounds so distant.@
+`"Tohno-kun?@ Can you hear me…?"@
+`"Nn---ah, yeah.@ It wouldn't be so bad to catch a cold."@
+` I just reply without thinking.@
+`"That won't do!@ You'll catch more than a cold with rain like this, even if it is October---"@
+` Her sentence cuts off as she touches me.\
+`"How long have you been like this, Tohno-kun…!?@ You're so cold!"@
+
+
+cl a,%type_crossfade_fst
+
+
+` Senpai pulls my arm and forces me up from the bench.\
+`"I'll lend you my umbrella, so please hurry and go home, and do something about your body.@ It'll really be a matter of life and death if you don't warm up quickly."@
+`"…… Ah, yeah.@ But I can't go home.@ I can't go anywhere ever again."@
+br
+` …… I can't go home after doing something like that.@
+br
+` I don't think there's anywhere left where I can rest anymore.\
+
+
+ld c,":a;image\tachi\cel_t13.jpg",%type_crossfade_fst
+
+`"-------"@
+` Senpai stares at me.@
+`"---I see.@ Then let's go back to my room.@ It's closer than your house, so it's perfect."@
+` Senpai pulls me by my arm.@
+
+
+cl a,%type_crossfade_mid
+
+
+`"…………"@
+` I can't shake her off.@
+` I can't think about anything at the moment, and---Senpai's warmth is the only certain thing in this world where everything feels numb.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+
+bg "image\bg\bg_16a.jpg",%type_crossfade_slw
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+
+bg "image\bg\bg_18c.jpg",%type_crossfade_slw
+
+
+` …… Senpai's room is a common one-room apartment in a two-story building.@
+` Just one really small, cramped room the size of six tatami mats and one kitchen.@
+` As one might expect from Senpai, the room is a neat one.@ That trivial fact relaxes my numbed nerves just a little.\
+
+
+ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+
+
+`"Here, please wipe yourself with this."@
+` She hands me a bath towel.@
+`"Sorry, I don't have any clothes that fit you.@ Please just bear with this for a while.@ I'll go prepare something warm for you to drink right away."@
+
+
+cl a,%type_crossfade_fst
+
+
+br
+` …… Senpai retreats to the kitchen.@
+` I'm left by myself in the neat room.\
+`"-------"@
+` I've never imagined coming into a girl's room like this.@
+` A girl's room.@
+` …… The room of a girl.@
+` A girl's room which I forced myself into and killed a girl in.@
+`"-------!"@
+` I feel like throwing up.@
+` What---am I doing here?@
+` In such a place.@
+` I have absolutely no right to receive Senpai's hospitality here.\
+
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+
+`"Thanks for waiting.@ Here you g---, Tohno-kun!"@
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+`"You've got to wipe yourself down, quickly!"@
+` Senpai scolds me as she begins to rub my head with the bath towel.@
+ld c,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
+`"See, your shirt is all soaked too.@ You've got to take it off.@ You might catch pneumonia like this!"@
+` A very fierce-looking Senpai undoes the buttons on my shirt.\
+` Suddenly, her fingers stop.@
+
+
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+
+`"…… Um… er."@
+` Senpai takes a long hard look at my chest.@
+`"…… This is a healed wound, isn't it?"@
+` …… Ah, she must be surprised to see the old wound on my chest.@
+` The burn-like marks are right in the middle of my chest.@ She might be surprised at seeing them because she didn't know.@
+`"…… Yeah.@ They're fine.@ It's already been eight years."@
+
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+
+`"I see.@ …… Thank goodness.@ If this wound was the reason you're acting funny, I'd have to take you to the hospital right away."@
+` Senpai gives a faint, soft smile.@
+` …… A twinge.@
+` When I see her smiling face, my chest hurts.\
+`"…… It's alright.@ I can do it by myself, so leave me alone."@
+`"Okay.@ I'll bring you some tea then.@ Oh, if you take your shirt off, please use that sheet there and warm yourself."@
+
+
+cl a,%type_crossfade_fst
+
+
+`"…………"@
+` I wipe my trousers with the bath towel.@
+` But even so, my trousers are still wet.@ The sheet is going to get soaked if I cover myself with it.@
+` I take off my shirt, and wrap the top half of my body with the towel.\
+
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+
+`"Ah, are you finished wiping yourself?@ Then let's have some tea."@
+` Senpai sits down, holding a tea set.@
+
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+
+`"Please sit down too, Tohno-kun.@ I can't calm down with you standing up."@
+`"…………"@
+` I do as I'm told and sit down.@
+` Senpai pours some English tea and hands it to me.@
+
+cl a,%type_crossfade_fst
+
+
+`"--------"@
+`"…………"@
+` Neither of us say anything.@
+` Senpai drinks her English tea as if she doesn't notice my presence.@
+` Following Senpai's example, I drink some as well.\
+br
+` ----It's hot.@
+br
+` So hot that it hurts my tongue.@ The warmth puts a pulse into me.@
+` It feels like my heart, brain, and all my other organs that stopped begin to move a little again.\
+` Senpai says nothing.@
+` It's not long before the teacup is empty.@
+` Senpai naturally refills the cup again with more.\
+`"……… Ah."@
+` I get the feeling that I have to say something.@
+
+
+ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+
+`"Tohno-kun."@
+`"------!"@
+` I recoil in shock.@
+`"I'm going out for a bit.@ Can I count on you to look after the house?"@
+`"Ah… y-yeah.@ That's fine."@
+
+
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+
+`"Alright, then I'll leave it up to you.@ I'll be right back, so don't do anything funny."@
+
+cl a,%type_lshutter_fst
+
+
+` I wonder how serious she is.@ Smiling as she speaks, Senpai leaves.\
+` -----.@
+` I'm alone again.@
+` The warm something I'd felt up to a moment ago is quickly cooling down.\
+` …… Senpai didn't ask me anything.@
+` She takes a person like me into her room and looks after me like it's the natural thing to do.@
+` …… Though I didn't notice.@
+` The warmth of the tea, the neatness of the room.@
+` What is many, many times more comforting than those things,
+` is having someone beside me.\
+`"Kuh……!"@
+` My chest hurts.@
+` A little while ago, I preferred to be alone, feeling nothing.@
+` But now, I become uneasy just by her absence.@
+` I want to scream like I've gone crazy.@
+br
+` …… What arrogance.@
+` I'm a murderer, after all.@
+` I don't have any right to Senpai's kindness.@
+` But I'm selfishly wanting Senpai to quickly, quickly come home-----
+
+!w5000
+
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_lshutter_fst
+
+
+`"I'm home, Tohno-kun.@ Thanks for looking after the place."@
+`"---Sen… pai."@
+` It seems Senpai has bought all sorts of things.@
+` There are several plastic bags hanging from her hands.\
+`"Let's see… please wear this for now.@ It's cheap, but it's better than wet clothing.@ By the way, the bath should be about ready now.@ You should feel a bit better after relaxing in there for a while."@
+
+
+cl a,%type_crossfade_fst
+
+
+`"……… Eh?"@
+` Senpai neatly prepares everything.@
+` My change of clothes, a bath…
+` …… This person is.@
+` Even though there is no need to do so, for a person like me.\
+`"…… It's okay, Senpai.@ I'm going home.@ I can't cause you any more trouble."@
+
+
+ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+
+`"What are you saying, Tohno-kun?@ You said you can't go home, right?@ I've already bought food for two, so please take responsibility!"@
+`"Responsibility---?@ Senpai?@"
+`"Please warm yourself up, eat dinner, and get yourself together before you go home.@ If you just go home with a face like that, I'll be so worried I won't be able to sleep."@
+`"--------"@
+` My chest hurts.@
+` Happiness.@ I'm so happy I'm about to cry, but on the other hand, I'm in fear of her kindness.\
+`"…… Why?"@
+
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+
+`"Yes?@ What is it, Tohno-kun?"@
+`"…… Why do you go so far, Senpai?@ I---don't have any right to be treated kindly by you."@
+` ---I killed someone.@
+br
+` I can't have someone taking care of me.@
+br
+`"…… I'm hopeless.@ I made a very big mistake just then, and I ran away without taking responsibility.@ I was even considering just dying---"\
+
+br
+br
+br
+br
+br
+br
+` ---I'm trying to cling onto Senpai.\
+` That sin.@
+` The life I took with my own hands.@
+` I'm trying to make it something that didn't happen in my mind.@
+`"…… The mistake I made is unforgivable… no, I don't think it should be forgiven.@ That's why I'm hopeless.@ I have no right to be treated well by you here, Senpai."\
+
+
+ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+
+` Senpai sighs.@
+`"…… It seems you're convinced that you're a bad person, Tohno-kun," she answers simply.@
+` Senpai grasped the truth lying deep within me.\
+
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+
+`"But that just shows you have no confidence in your own actions.@
+` You know you made a mistake, but you don't understand whether it's good or bad.@ That's why you have no choice but to drive yourself into a corner until things become clear to you."@
+`"----No, that's----"@
+
+
+cl a,%type_crossfade_fst
+
+
+\
+
+` …… I don't know.@
+` But yeah, I am taking in the fact that I did it, yet I still don't understand why.@
+` I've killed someone, and that makes me a bad person.@
+` Maybe I've just been forcing myself into the role of a villain as I try to confirm where my sin lies---\
+
+
+ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+
+`"I don't know what your mistake is, and to put it bluntly, I don't care.@
+` You say you have no right to kindness, but that's just your point of view.@
+` I'm not being kind to you for your sake, so please don't worry about it."\
+
+
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+
+`"…… Well, I mean, I'm doing this because I want to.@
+` It has nothing to do with your circumstances.@ It may be a bother to you, but please just think of yourself as having been caught by a mean-spirited senpai and give up."@
+
+
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_mid
+
+
+` Saying this, Senpai smiles.@
+` That soft, protective, faint smile.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+playstop
+
+
+bg "image\bg\bg_18b.jpg",%type_crossfade_slw
+
+
+play "track09.ogg"
+
+br
+` I can hear the sound of rain.@
+br
+` …… In the end, I couldn't shake off Senpai's kindness after all.@
+` She lets me use the bath and prepares pajamas for me.@
+` She treats me to dinner, and she lends me a bed because it's raining outside, and I'm about to go to sleep like this.\
+
+`"-------"@
+` My throat feels blocked.@
+` Senpai has taken care of me so much my senses feel numb.@
+` During dinner, she spoke cheerfully like she always does.@
+` She raised all the usual topics, about school, about the many shops in the business district, and so on.\
+` …… And although I couldn't give her even one proper answer, every time I responded, I felt a little bit of myself coming back.@
+` Right now, I'm sleeping in Senpai's bed, and can't stop thinking about Senpai, who's sleeping on the floor.\
+
+br
+br
+` ---What a turn of events.@
+` I killed someone only hours ago and now I'm getting excited like a normal student.@
+` My senses really do feel numb.@
+` I didn't think I could ever be showered in happiness like this ever again.\
+`"…………"@
+` I can't sleep, so I just look around.@
+` I don't know what I should do next.@
+br
+` I can hear the sound of the downpour outside.@
+br
+`"You're going to be late tomorrow if you don't hurry up and sleep, Tohno-kun."@
+`"---Senpai, you're awake?"@
+`"Yes, I can't sleep until you do.@ I am a girl, after all."\
+`"…… I'm sorry.@ I'll sleep in the kitchen then."@
+`"Oh, how many times do I have to tell you?@ You've got a cold, so you can't sleep in a place like the kitchen.@ It's alright, so please just hurry up and forget your unpleasant thoughts so you can go to sleep."@
+`"-----Unpleasant thoughts."@
+` …… That's impossible.@
+` That's not something I can forget---it's something I shouldn't forget.@
+` Whatever the reason, I killed someone.@
+` To forget about the person I killed would be a sin deep beyond imagination.\
+`"…… No.@ I can't just gloss over my sins, Senpai.@ I can't forget about them, and I won't try to.@
+` …… But thanks.@ You really helped me with all sorts of things today.@ I really might have died if I stayed like that."@
+` That would be running away.@
+` If I really think I had made a mistake, I shouldn't deny it.\
+
+`"Sins, you say?@ It seems like your mistake is something unimaginable for me."@
+` Senpai speaks in a cheerful voice, like she's telling a joke.\
+`"But there's no such thing as a human who doesn't commit sin.@
+` It's not like the world is divided into sinners and the innocent.@
+` As long as you're alive, you'll make mistakes.@
+` …… It's sad, but it's unavoidable.@ To live is to be worn down.@
+` We are only beings who influence other things while we fade away ourselves."\
+`"…… What?@ Then you're saying we're beyond salvation?@ I don't like that story about how everyone makes mistakes."@
+`"…… Yes, I guess we can't be saved if that were the case.@
+` But you can atone for your sins.@ There are only people who can and who cannot atone for their sins.@
+` I think those beyond salvation are those who cannot atone for their sins."@
+br
+` …… For some reason, Senpai's voice sounds very sad.\
+
+`"But you can atone for your sins, Tohno-kun.@ I don't know what kind of mistake you've made, but you are the kind of person who can atone for your sins.@
+` If you're too worried to sleep, then just think about how you intend to live and atone for your sins from now on.@
+` It's a really hard thing to come up with, so your brain is sure to tire out, and you'll fall right asleep."@
+` I don't know how serious she is, as she seems to be throwing jokes into the mix.\
+`"…… I can atone for my sins, huh?@ But Senpai, my mistake is definitely one that can't be atoned for.@ That's something I can say for sure."@
+`"Ahaha, that's right.@ No matter what form it takes, sin cannot be atoned for.@
+` If you injure someone, the sin is not gone even if you heal the wound, is it?@
+` No matter how hard you try, you can't erase the mistakes you've made.\
+` I think atoning is not about the results, but about the process.@
+` That's what I mean by those who atone for and those who don't.@ That's why you're the kind of person who can atone for your sins."\
+`"…… I don't understand.@ I'm a terrible person.@ I'm not the great person you think I am."@
+`"I can easily see that.@ I was really moved just then.@ You have a terrible wound on your chest, right?"@
+`"Eh…?@ Yes, but what about it?"@
+`"You must have had a serious accident to get a scar like that… scars tend to distort your mind.@ A wound that size which doesn't disappear is a little out of the ordinary."\
+
+`"But you're a very natural person.@ Anyone with that kind of wound who can lead a normal life can be proud of his own strength.@ You must have had a very proper childhood."@
+` Satisfied, Senpai concludes her musings and falls silent.@
+` I can hear her even breathing if I strain my ears.\
+`"…… Are you asleep, Senpai?"@
+` There is no reply.@
+` I can only hear the sound of the rain from outside.@
+`"…… Atone for my sins, huh?"@
+` A punishment to fit the sin I had committed.@
+` I guess they'll find the body of the girl I had killed tomorrow, and there'll be a new serial killer story on the news.@
+` I can't even begin to count the things I'll lose when that happens.@
+` It'll be trouble for Akiha for sure, and I'll never be able to talk to Senpai like this again.@
+`"…………"\
+` But if that would atone for my sin, then I have no choice but to accept it.@
+` If I can atone for my sin with that---then there might be salvation somewhere.@
+`"Haa----aahhhh."@
+` I feel a little sleepier.@
+` I don't know about tomorrow.@
+` I don't know, but if I can be forgiven…
+` Until the moment my sin is discovered, until the moment I'm confronted with my sin…
+` I wish I could keep living this kind of life.\
+
+playstop
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+!w1000
+
+` …… Fwoomp.@
+` …… Sssh.@
+br
+`"…… Nn."@
+br
+` …… There's a noise coming from nearby.@
+` I don't feel like waking up at all, but I lazily open my eyes in reaction to the noise.\
+
+bg "image\event\cel_e03a.jpg",%type_crossfade_slw
+
+
+` -----Senpai is changing.@
+br
+` It's still the middle of the night.@ There's no light coming in from the window.@
+` Maybe the rain stopped; it's very quiet now.@
+br
+` Senpai is taking off her clothes.\
+`"………"@
+` What a shame.@
+` If I wasn't in such a deep state of regret over the murder I've committed, or half-asleep, I would be able to fully appreciate how sexy Senpai looks.@ Right now, though, my head doesn't seem to function properly.\
+` Senpai's eyes look lifeless.@
+` More importantly, there's something strange.@
+br
+` ----What----is that?@
+
+
+bg "image\event\cel_e03b.jpg",%type_crossfade_fst
+
+
+br
+`"…………"@
+` There are odd bruises on her arms.@
+` …… No, those aren't bruises, more like tattoos.\
+
+br
+br
+br
+br
+br
+br
+br
+` …… There's… something… not right… about this.\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\event\cel_e03b.jpg",%type_crossfade_fst
+
+
+`"………"@
+br
+` I feel sleepy again.@
+` I think… a lot of things are cluttered around Senpai's feet.@
+br
+` But that's it.@
+` I fall into a deep sleep.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+!w3000
+
+
+return

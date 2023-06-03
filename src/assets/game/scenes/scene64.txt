@@ -1,0 +1,25 @@
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_50.jpg",%type_lcartain_mid
+
+
+` I decide to eat in the chaotic, student-filled cafeteria as usual.@
+br
+` For some reason, the udon and the soba are better than the meal sets at our school, so naturally I decide to have some udon.\
+` Sitting down at the table, I eat my tanuki udon.@
+` The cafeteria's TV is showing the news.@
+` The TV was set up so students can watch the recorded morning news during lunchtime.\
+` The news is having a special feature on the serial killings.@
+` It's been a whole month since the killings started, but no one yet has any idea who this killer is.@
+` He is an unidentified killer demon, leaving no trace and acting with no motive.@
+` His identity still remains a mystery, even though there has already been eight killings in our little town alone.@
+` It's certainly very frightening, says the newscaster.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w2000
+
+
+
+return

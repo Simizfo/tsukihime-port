@@ -1,0 +1,24 @@
+
+
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+`"---I'm sorry, but, I can't have any special feelings for you."@
+` I answer clearly while looking her straight in the eye.\
+
+ld c,":a;image\tachi\stk_t09.jpg",%type_crossfade_fst
+
+`"----I… see."@
+` …… Both Yumizuka's voice and body tremble.@
+`"…………"@
+` …… I can't think of anything else to say.@
+` Maybe this makes me a horrible person, but those are my true feelings.@
+` I never had any special feelings for my classmate Yumizuka Satsuki.@
+` I'm only here because what happened on the way home two days ago left such an impression on me, I couldn't just forget about it---\
+
+ld c,":a;image\tachi\stk_t08.jpg",%type_crossfade_fst
+
+`"…… Yeah, I knew that.@ I guess that's why things turned out this way.@ …… It's okay.@ Since you say that, I'll be honest to myself too, Shiki-kun."\
+
+cl c,%type_crossfade_fst
+
+return

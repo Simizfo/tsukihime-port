@@ -1,0 +1,39 @@
+
+bg "image\bg\bg_34a.jpg",%type_nowaitdisp
+
+` …… Yeah.@
+` I've decided not to have any regrets, and I don't want Kohaku-san to worry about me.@
+`"I'm in favor.@ I'm not about to turn down my own welcome party, am I?"\
+
+ld l,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
+
+`"It's decided!@ Well, then, I'll prepare the food.@ Hisui-chan---can you take care of my work for today?"@
+
+ld r,":a;image\tachi\his_t02.jpg",%type_crossfade_fst
+
+`"That will be fine.@ Sweeping the lobby and the east building?"@
+
+ld r,":a;image\tachi\aki_t04b.jpg",%type_crossfade_fst
+
+`"Well then, I shall… what should I do, Kohaku?"@
+
+ld l,":a;image\tachi\koha_t05b.jpg",%type_crossfade_fst
+
+`"Akiha-sama and Shiki-san should rest in their rooms.@ I'll prepare dinner early to make time for the party, so if you have anything you need to do, please try and be done by then, okay?"\
+
+cl a,%type_lshutter_mid
+
+
+` Kohaku-san goes into the kitchen, Hisui out to the courtyard.@
+
+ld c,":a;image\tachi\aki_t08b.jpg",%type_crossfade_fst
+
+`"Well then, I'll go to my room."@
+
+cl a,%type_lshutter_mid
+playstop
+
+br
+` So.@ What should I do?@
+
+return

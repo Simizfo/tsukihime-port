@@ -1,0 +1,138 @@
+
+bg "image\bg\bg_06b.jpg",%type_nowaitdisp
+
+` …… The events which happened during lunch break still weigh on my mind.@
+` I'm sure she can walk home alone, but I feel I ought to go and check on Akiha.\
+
+bg "image\bg\bg_11b.jpg",%type_lshutter_mid
+
+
+` I walk along the corridor lit by the fading sun.@
+` I think Akiha's class is first grade, class one.@
+br
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_06b.jpg",%type_lshutter_fst
+
+
+` The classroom is silent.@
+` A girl stands alone in the empty, red classroom.\
+
+playstop
+
+monocro #ff0000
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+
+`"……"@
+` …… I feel… a little dizzy.@
+` The classroom dyed by the evening glow.@
+` Alone, a girl with long, faintly red hair is preparing to leave.@
+br
+` No matter how I look at her, she's Akiha.@
+` So why?@ Why do I feel as if I am seeing a stranger for the first time?\
+
+bg "image\bg\bg_06b.jpg",%type_crossfade_mid
+
+monocro off
+play "track03.ogg"
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"Nii-san?"@
+`"------"@
+` As she calls out to me, the dizziness subsides.@
+`"You're---Akiha, right?"@
+
+ld c,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+
+`"…?@ Nii-san, are you feeling poorly again?"@
+` Akiha addresses me in her usual tone.@
+` …… Looking at Akiha's black hair, I feel that without a doubt, this is my own little sister, Tohno Akiha.\
+
+`"…… Nah, it's nothing.@ Come on, Akiha, it's time to go back.@ If you're not doing anything, do you want to walk home together?"@
+
+ld c,":a;image\tachi\aki_t09.jpg",%type_crossfade_fst
+
+`"Yes… if you don't mind, let's walk home together."@
+` For some reason, Akiha smiles tenderly.@
+` …… My heart thumps.@
+` Perhaps it's the dizziness from earlier, or perhaps the strangeness of seeing Akiha in my own school.@
+` For some reason, my heart beats far harder than it needs to.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_01b.jpg",%type_lcartain_mid
+
+
+` I leave the school building with Akiha.@
+` As we reach the school gates, I catch sight of Senpai waving at me.@
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_lshutter_mid
+`"Ah, you came at last, Tohno-kun."@
+`"Huh, Senpai?@ What are you doing, standing here like this?"@
+
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+`"Geez, I wasn't just standing here, I was waiting for you, Tohno-kun, but---"@
+
+cl a,%type_crossfade_fst
+
+` Senpai glances at Akiha next to me.@
+` Somehow, at a glance she realizes that Akiha and I are walking home together.\
+
+ld l,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+`"Tohno-kun, is this your little sister?"@
+` Senpai throws a sidelong glance at Akiha.@
+
+ld r,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"………………………"@
+` Akiha says nothing.@
+` Nothing is said, but both Senpai and Akiha tell me with their eyes to "Introduce me to this person".@
+br
+` ----Ahh.@
+` It seems like this is going be a really tiresome job.\
+
+`"Senpai, this is my younger sister, Akiha.@ She transferred to our school just today."@
+` Akiha bows to Senpai.@
+
+ld l,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"I see.@ Hello.@ My name is Ciel and I'm a friend of Tohno-kun."@
+
+ld l,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+
+ld r,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
+
+` …… What is it?@
+` Senpai and Akiha just stare at each other, saying nothing.\
+
+cl a,%type_crossfade_fst
+
+`"Senpai, you sounded like you were waiting for me… What's going on?"@
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+`"Well, it just happened that I wanted to spend a little time with you, but---
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+` ---Since it's already late today, I'll leave it for another time.@ Bye, Tohno-kun.@ See you tomorrow as well, Akiha-san."@
+`"Bye" says Senpai, and she walks away from us.\
+
+cl a,%type_lshutter_fst
+
+`"----Ah."@
+` Senpai leaves without giving me a chance to stop her.@
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"Let's go home, Nii-san.@ It will get dark soon."@
+` Akiha says this as if nothing happened.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+
+
+return

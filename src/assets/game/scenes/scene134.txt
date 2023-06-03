@@ -1,0 +1,28 @@
+
+bg "image\bg\bg_11a.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+`"Tohno-kun, did you sleep well last night?"@
+`"Eh?"@
+` She looks directly into my eyes as she asks.@
+cl c,%type_crossfade_fst
+
+
+` …… Sleep well?@ That goes without saying.@ I couldn't get to sleep easily last night, and also--\
+
+`"Uh……"@
+` I blush as the memories resurface.@
+` With a piercing gaze, Senpai looks up at me.@
+`"Senpai, um--"@
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+`"Tohno-kun, you pervert."@
+`"Huh?"@
+cl c,%type_lshutter_mid
+
+` With a look indicating she wants to say more, Senpai quickly walks away.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w1000
+
+
+return

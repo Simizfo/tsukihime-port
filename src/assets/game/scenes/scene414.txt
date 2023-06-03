@@ -1,0 +1,1186 @@
+
+
+
+
+
+bg "image\bg\bg_11c.jpg",%type_nowaitdisp
+
+
+
+waveloop se1
+
+
+`"Heee----!"@
+` SHIKI lunges with a cry.@
+` His black shape explodes forward like a firework.\
+br
+`"Ko---------"@
+` I can't make it from here.@
+` If there's anything that would make it, that would be----
+br
+`"Dam---"@
+` Akiha turns towards SHIKI.@
+` Akiha instantly prepares for his attack.@ But the black figure isn't going towards Akiha.@
+` SHIKI lunges not at Akiha, but at Kohaku-san who stands next to her.\
+
+`"Koha---------"@
+br
+` ---He knows.@
+` Just like I am able to move right now because of Hisui's power…
+` He knows that Akiha's overwhelming power is possible from Kohaku-san's help.@
+br
+`"Kohaku-san, get down---------!"@
+br
+` I shout.@ Like if I knew SHIKI was going for Kohaku all along, I shout from the bottom of my lungs.\
+
+`"Kohaku………!"@
+` Akiha throws her body in front of Kohaku.@
+br
+` -----I don't believe it.@
+` Is she sacrificing her body to protect Kohaku-san?@
+br
+`"Hee---eeeeeee!"@
+` SHIKI raises his voice, and with his arm thrusting like a spear, aims for Kohaku's face.@
+` Akiha forces herself in between them.\
+
+` ----Her timing is perfect.@
+br
+` I don't want to look.@
+` I don't want to see Akiha die as she protects Kohaku-san.@
+br
+wavestop
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+
+
+`"N-----o……!!!!"@
+` Right before it all happens,
+` I hear a voice which I've never heard before: Kohaku-san's crying voice.\
+
+bg "image\bg\bg_11c.jpg",%type_lshutter_fst
+
+play "track08.ogg"
+
+` The sound of rending flesh.@
+br
+` Red blood drips down onto the hallway.@
+`"Eh---------"@
+` Kohaku-san's voice almost sounds absent-minded.@
+` She has quickly pushed Akiha away.@
+` She pushed Akiha trying to protect her, and threw herself in front of SHIKI's claws.\
+
+`"Y-----you!"@
+` SHIKI's voice quivers with anger.@
+` …… Red blood continues to flow forth.@
+ld c,":a;image\tachi\hal_t05.jpg",%type_crossfade_fst
+
+`"Ah------no, no, Akiha.@ I, didn't mean, to hurt you----"@
+` He shakes his head.@
+` In front of SHIKI, Akiha lies collapsed, her arm coated with blood.@
+` …… Thanks to Kohaku-san pushing her away, it seems only Akiha's arm was shredded by SHIKI's claws.\
+
+`"…… G…… wah!"@
+br
+` Lying on the ground, Akiha writhes in agony, clutching her arm.@
+` SHIKI stands dumbstruck, shaking as he looks down.@
+` Kohaku-san, fixated with surprise, stands there unmoving, like a doll.@
+ld c,":a;image\tachi\hal_t04.jpg",%type_crossfade_fst
+
+`"You-----you bitch, are you trying to get in my way……!?"@
+` SHIKI lifts his head.@
+` Kohaku-san is in front of him.@
+` …… Why is it?@
+` She is just standing there, not moving a muscle, as if her soul had fled her body.\
+cl c,%type_crossfade_fst
+
+
+`"You----you, also get in my way………!?"@
+` SHIKI howls.@
+`"Shiki-sama………!"@
+` Hisui's pleading voice.@
+` She doesn't even have to tell me.@
+` Like Kohaku-san protecting Akiha, this time, I'll stop him for sure……!\
+
+`"SHIKI…………!"@
+` I run, my glasses already off.@
+` The lines I see are across his neck and from his upper left chest to his stomach.@
+` …… Either one will do.@ If I work my knife through either one, it will surely kill him.@
+` Gripping my knife firmly, I fly down the hallway with a speed that surprises even myself.\
+
+ld c,":a;image\tachi\hal_t02.jpg",%type_lshutter_fst
+`"----------!"@
+` SHIKI turns towards me.@
+wave se5
+
+bg "image\bg\ima_14.jpg",%type_lshutter_fst
+
+` But, I'm much faster.\
+
+bg "image\bg\ima_12b.jpg",%type_nowaitdisp
+bg "image\bg\bg_11c.jpg",%type_lshutter_fst
+
+
+`"Kuaaaaaaaaaaaaaaa!?"@
+` His anguished cry reverberates through the hallway.@
+`"Hii------ha, hahahahahahaha!"@
+` An insane laugh.@
+br
+` ----It was too shallow.@
+br
+` How naive.@ In front of Akiha---I hesitated in cutting her real brother's neck.@
+` The line that runs through his body.@ I was only able to cut it halfway.\
+
+`"Hiha, hahahahahahahahahaha!"@
+` Laughing wildly, SHIKI pulls back.@
+` Like that, he escapes towards the stairs.@
+br
+` …… Following him would be easy.@
+` But there's something more important for me to do.\
+
+`"----Akiha!@ Hang in there, Akiha……!"@
+` Kneeling down, I look over her body.@
+` …… This is terrible.@
+` Her right arm is almost split in two and painted an awful crimson.@
+br
+`"…… Ah…… Nii-sa…… why…… are you here----"@
+br
+` Her eyes are hazy.@
+` Her shallow breathing, her pale face.@
+` …… The figure of death stretches across her body.\
+
+`"…… Why, aren't…… you, resting, in your, room………?"@
+`"D----don't talk……!@ We can talk about it later, for now, just don't talk……!"@
+`"…… No, ……… I won't…… Nii-san, how long, have you, been, here----"@
+` It's spreading.\
+` With her bleeding, her lines of death spread across her body.\
+
+`"It's alright, just be quiet……!@
+` Please---I beg of you, for now, just calm down, please…………!"@
+`"………………………… Okay.@ If you say so---then I will, be obedient, Nii-san----"@
+` With a forced smile, Akiha closes her mouth.@
+` …… No, that…@
+` Simply put, she's so weak she can't even speak.\
+
+
+`"N---no………!!!!@ Wait, I'll stop the bleeding……!"@
+` Taking off my shirt, I wrap it around her arm.@
+`"Damn----this is useless……!@ Shit……!@ If the bleeding doesn't stop, she'll die, why doesn't………!"@
+` I frantically tie it around her arm.@
+` …… I know that it will not help her at all, but I can't think of anything else to do.@
+` I…
+` I know that I'm starting to go crazy, but I still cannot calm myself.\
+
+ld c,":a;image\tachi\his_t12.jpg",%type_crossfade_fst
+
+`"Shiki-sama, please calm down……!@ If you tie it any tighter, it will not help her."@
+`"Hisui-------but!"@
+`"…… It is alright!@ Akiha-sama will not die.@ If Nee-san is here, Akiha-sama will heal.@ …… Nee-san, is that not right?"@
+cl c,%type_crossfade_fst
+ld c,":a;image\tachi\koha_t01c.jpg",%type_crossfade_mid
+
+` Hisui pulls Kohaku-san, who's still standing like a motionless doll, and sits her next to Akiha.\
+
+`"…… Nee-san.@ For now, please synchronize with Akiha-sama.@ You destroyed everything because you wanted Akiha-sama saved, is that not right?"@
+`"-------------"@
+` Hisui wraps both of her hands around Kohaku-san's white hand.@
+` But Kohaku-san's gaze is still empty.@
+` But---maybe Hisui's words reach her after all.@ Akiha's blood stops spilling forth.\
+cl c,%type_crossfade_mid
+
+`"Ha--------ah."@
+` …… I relax.@
+` With this---I can be assured.@
+` The uneasiness that gripped me before.@ The uneasiness that Akiha would meet the worst fate starts to gradually disappear.@
+`"--------"@
+` Akiha will be helped by Hisui and Kohaku-san.@
+` So.@
+` As Tohno Shiki, I will have to end this.\
+
+`"------Hisui.@ I leave Akiha and Kohaku-san up to you."@
+`"…… Shiki-sama, you are still planning to go, are you not?"@
+`"-----We are the same type, he and I.@ The least I can do is put him to rest."@
+`"…………………"@
+` Hisui wordlessly stares at me.@
+` …… Her eyes beg me not to go, but I can't listen to them.\
+
+`"…… Thanks for everything up until now, Hisui.@ I'm so glad you were with me."@
+` I walk away.@
+` Feeling her watch me as I leave, I follow after SHIKI.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+playstop
+
+bg "image\bg\bg_11c.jpg",%type_lshutter_mid
+
+waveloop se1
+
+` ---The path of blood continues.@
+br
+` Maybe he didn't try to really escape, or maybe he isn't even sane enough to understand what running away means.@
+` SHIKI is standing in the hallway as if waiting for me.@
+`"-----SHIKI!"@
+` I call out.@
+` SHIKI looks over at me with his unfocused eyes.\
+
+`"Ha------you again?"@
+` SHIKI doesn't move.@
+` …… Probably because of the wounds by me and Akiha.@
+` He doesn't have a body that can move properly.@
+`"Shit----I failed again.@ It won't work out right.@ Why is everything getting ruined……!?@
+` It won't work, it never works out right, I always mess up………!!!!@
+` That's strange, why is she getting in my way!?@ He, he came just like I was told, so why does he always always always always always always always always always always always always get in my way!?"\
+
+` …… SHIKI's eyes are just hollow orbs.@
+` Maybe he didn't even see anyone from the very beginning?@
+` He only sees me before him, holding my knife, as just another obstacle.\
+
+`"SHIKI.@ Are you, in pain?"@
+`"In pain?@ Me?@ Why?"@
+` SHIKI laughs as if it is so funny, and slowly stands up.@
+`"I'm not in any pain.@ This is a wonderful life.@ No matter what I do, no one can punish me."@
+` SHIKI's eyes burn with the desire to kill.@
+` …… It seems he's ready.@
+` Underneath the moonlight.@
+` Even though I've known him for so long, I take my first step towards the enemy I just met tonight.\
+
+`"Fine, let's fight to the death!@ All those who get in my way are my enemy.@ I'll kill you all.@ You, you, Akiha, Kohaku!@ Just like that old man who wanted to lock me up till I died, I'll kill you all……!"@
+` SHIKI screams like a raving lunatic.@
+br
+` ---Maybe because that figure looks terribly pitiful.@
+br
+` Even though this is a fight to the death, I remain cool and collected, like ice.\
+
+`"HA, HAHA, HAHAHAHAHAHAHAHA!"@
+` SHIKI attacks me head on.@
+`"--------------"@
+` It's nothing difficult.@
+` Like I'm cutting meat on a plate, I easily slice through Tohno SHIKI.\
+
+bg "image\bg\ima_10.jpg",%type_tshutter_mid
+bg "image\bg\bg_11c.jpg",%type_tshutter_mid
+
+wavestop
+
+` Thud.@
+` SHIKI's head falls to the floor.@
+` His powerless body falls against mine.@
+br
+`"---------"@
+br
+` I don't feel anything.@
+` I don't feel regret, pain, hatred, or disgust.@
+` Like Kohaku-san was earlier, I just stand like a doll.\
+
+`"Ku------kuku, ku."@
+` …… An unbelievable laughing voice.@
+` SHIKI's laughing head rolls on the ground.@
+`"You're wonderful---this is the first time I felt this cold pain!@ What a---what a superb hinderer you are!"@
+` Still laughing, his face dissolves into ash.@
+` Gradually, it disappears into the wind.\
+
+` SHIKI is disappearing.@
+` Before he does, he looks up at me, and curiously says.@
+`"---So who are you, anyway?"@
+`"…… Eh?"@
+`"Who are you?"@
+`"…… You don't know?@ I'm the Tohno Shiki you were always targeting."@
+`"Ah, I see.@ You're Shiki."@
+br
+` His disappearing face.@
+br
+`"What's this?@ ----You look nothing… like what I heard."@
+` With that, he completely disappears.\
+
+bg "image\bg\ima_01.jpg",%type_crossfade_fst
+
+play "track09.ogg"
+
+br
+br
+br
+br
+br
+br
+br
+` -------It's over.\
+` With this, it's over.\
+
+` I don't feel anything.@
+` I won't feel those splitting headaches, I can return to life as normal--but I don't feel happy.\
+
+br
+br
+br
+br
+br
+br
+br
+` ----And?@ Just what ended?\
+
+`"-----Why?"@
+` I feel dizzy.@
+` SHIKI's last words won't fade away.@
+` Something did end.@
+` But I don't know what ended, or in the beginning, what I was trying to end.@
+`"--------"@
+` I look up at the moon.@
+` In the vague darkness, my heart is enthralled.@
+` Until Hisui came, I just stood in dumb amazement, standing in the moonlight.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+playstop
+
+!w3000
+
+
+
+
+
+
+mov $phasebg,"image\bg\ima_05.jpg"
+mov $phasetitle_a,":a;image\word\PHIS_14B.PNG"
+mov $phasetitle_b,":a;image\word\epi.jpg"
+gosub *left_phase
+
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+
+
+bg "image\bg\ima_03.jpg",%type_crossfade_mid
+play "track02.ogg"
+
+
+br
+` The next week passed quickly.@
+br
+` SHIKI's body vanished without a trace and the wound in Akiha's arm was treated.@
+` Even though my place as Tohno Shiki became vague, I can't go back to being Nanaya Shiki.@
+` I don't know if she understands my feelings or not about it, but Akiha hasn't said one word about that night.@
+` If Akiha, the head of the household, is going to play dumb, then I think I can continue my life as Tohno Shiki.\
+
+br
+` ----The peaceful days have returned.@
+br
+` Since SHIKI disappeared, all my strength returned and Akiha is healing well, too.@
+` Kohaku-san and Hisui go back to their regular duties at the mansion and there isn't a trace of uneasiness.@
+br
+` …… I want to believe that there isn't.\
+playstop
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+
+!w2000
+
+`"Nii-san?@ It's noon already, Nii-san."@
+br
+` …… I hear a voice.@
+br
+`"Geez, even though it's so nice outside, please do not sleep in such a place.@ If you want to take a nap, do so in your room."@
+br
+` …… Fingers tap my shoulder.@
+br
+`"Nnn----"@
+` With that, I wake from my dream.\
+
+bg "image\bg\bg_34a.jpg",%type_crossfade_mid
+play "track03.ogg"
+
+ld c,":a;image\tachi\aki_t03b.jpg",%type_lshutter_mid
+
+
+`"……… Nnn, morning, Akiha."@
+`"Don't say 'morning!' Coming to the sitting room only to sleep… Just what were you thinking, Nii-san?"@
+`"……………… Well, I was thinking about this and that."@
+` Giving a deep sigh, I get up from the sofa.@
+ld c,":a;image\tachi\aki_t02b.jpg",%type_crossfade_fst
+
+`"Wait a minute, Nii-san.@ Are you going to actually go sleep in your room?@
+ld c,":a;image\tachi\aki_t13b.jpg",%type_crossfade_fst
+
+` …… Hey, don't you think you should actually do something worthwhile on your day off?@ To give you examples, like going out to deepen bonds with family members, or invite them to have fun out of gratitude."\
+
+`"…………………"@
+` I think what Akiha says is worthwhile is very limited.@
+`"…… Well, I do think so.@ It's just that what you think is worthwhile is different from what I think is worthwhile.@ Sleeping twice would just be a waste.@
+` The reason why I want to go to my room is simple.@ It takes a lot of effort to face you right after waking up, so I thought I'd refresh my head in my own room."@
+ld c,":a;image\tachi\aki_t07b.jpg",%type_crossfade_fst
+
+`"Wh, what is that supposed to mean, Nii-san!?"\
+`"Nothing, I just can't answer to your all your little scolding when my head's still dozy.@ So I'm just going to my territory to regroup, that's all.@ We can talk more during lunch."@
+` Waving, I turn away.@
+ld c,":a;image\tachi\aki_t21b.jpg",%type_crossfade_fst
+
+` Akiha watches me silently, but her face tells me she wants to complain.@
+` …… It looks like I will have to be ready during lunchtime.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_40a.jpg",%type_lcartain_mid
+
+
+` I come to my room.@
+` While I was dozing in the sitting room, it looks like Hisui cleaned my room.@
+`"…… But, this really is a dull room, if I have to say it myself."@
+` Other than a bed and a desk, the room is completely empty.@
+` It's close to winter, so I should probably get some heating equipment.@
+` Akiha is pretty noisy about it, but I'd never feel like using the fireplace.@
+`"……?@ What's this on the desk----"\
+` A letter I don't remember about is placed there.@
+` I'm curious, so I open it up.@
+`"-----------------"\
+playstop
+
+` …………………………………………… The letter just says "I am waiting underneath that tree."@
+br
+`"--------Why?"@
+br
+` Saying that, I crumple the paper.@
+` Opening the drawer, I put the knife with the engraving "Nanatsu Yoru" in my pocket.@
+`"--------"@
+` …… I can't pretend like I didn't see it.@
+` Taking a deep breath to compose myself, I leave my room.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_42a.jpg",%type_lcartain_mid
+
+
+` ----I don't know when I realized it.@
+` It all started when I thought that everything turned out pretty conveniently.\
+
+` The happenstances and circumstances surrounding the connection between SHIKI and I were too convenient.@
+` SHIKI had his lair at my school----but he never attacked me, his most hated enemy.\
+` If SHIKI had ever felt like it, I probably would have been killed a long time ago.@
+` I could only think that things ended this way because someone readied a convenient plot.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\cmo_20.jpg",%type_crossfade_mid
+play "track08.ogg"
+
+
+` When I get there, she is waiting with her usual smile.\
+
+ld c,":a;image\tachi\koha_t03b.jpg",%type_crossfade_mid
+
+`"You're late, Shiki-san.@ I've been waiting since morning, but it's noon already."@
+`"Yeah, sorry.@ I fell asleep in the sitting room and just got back to my room."@
+`"Ah, I see.@ …… I messed up.@ I knew I should have told you directly."@
+` "That may be true," I nod.@
+` She smiles at me.\
+
+ld c,":a;image\tachi\koha_t05b.jpg",%type_crossfade_fst
+
+`"But, it is good you came.@ Now we can talk, just the two of us."@
+`"-----"@
+` She smiles happily.@
+` With a smile on her face, she begins to speak like it's nothing.@
+br
+ld c,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
+
+`"You realized it, didn't you, Shiki-san?"@
+br
+`"…………………"@
+` I can't nod or shake my head.@
+` "I knew it," she laughs.\
+
+ld c,":a;image\tachi\koha_t02b.jpg",%type_crossfade_fst
+
+`"Shiki-san, I was the one who made SHIKI-sama like that."@
+`"…………"@
+` …… That…
+`"I gave Akiha-sama my blood so that she would turn more into one of the Tohno blood."@
+`"…………………"@
+` …… But that……
+`"I was the one that gave SHIKI-sama wrong information, and made him attack innocent people."@
+`"……………………"@
+` I didn't want her to say it.\
+
+`"When we were small, the one who was always watching from the distance wasn't Hisui, it was me."@
+`"……………… Kohaku-san."@
+`"Back then, I intentionally distracted Akiha-sama so that SHIKI-sama could have an opening."@
+`"……………… Kohaku."@
+`"But I really messed up.@ Akiha-sama and SHIKI-sama were both supposed to die there---"@
+cl c,%type_crossfade_fst
+
+br
+`"--------Kohakuuuuuuuu!"@
+br
+` Looking down,
+` All I could do is shout her name.\
+
+`"…………………… It's fine."@
+ld c,":a;image\tachi\koha_t09b.jpg",%type_crossfade_fst
+
+`"Shiki-san?"@
+`"…………… It's fine.@ All of it is over, so I-----don't want to hear that kind of story."@
+cl c,%type_crossfade_fst
+
+` Those words are truly how I feel.@
+` Such a reality, it is better if I don't realize it.@
+` Kohaku-san can just be Kohaku-san.@
+` Always smiling, thinking of Hisui dearly, being such good friends with Akiha, and laughing when we talk about stupid things, I wanted Kohaku-san to stay like that.\
+
+`"---I, I don't care about all that.@ You can just be here, and it'll be fine."@
+`"----------"@
+` …… She doesn't answer.@
+` A long,
+` painful silence.\
+
+`"No, that won't do, Shiki-san.@ What I did can't be ignored like that.@
+` I failed.@ I have lost the reason that moved me these past years, so this Kohaku will just disappear."@
+`"Wha----"@
+` I lift my head.@
+` Over there----
+ld c,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
+
+` She looks like she always does.\
+
+`"But, I thought you had the right to blame me.@
+` You are the only one who is not connected with the Tohno house.@
+` I used you in my plot against Akiha-sama and SHIKI-sama.@ So if you wish to blame me, you can do whatever you like."@
+`"The right----no one has the right to blame you, Kohaku-san."@
+` …… That's right.@
+` Ever since she was a small child and came to this mansion, she had to receive all the crimes of Tohno Makihisa.@
+` She could not ask for help, nobody helped her, if she lived that life for years, then that's…\
+
+`"…… If you want to talk about rights, you had to have every right to take revenge.@ …… I can only imagine what happened to you, but you only could hold nothing but a grudge against the Tohno family."@
+` I know that I'm just sounding clever, but I say those unsatisfactory lies.\
+
+
+`"----No, I didn't have a grudge against Makihisa-sama or Akiha-sama at all.@
+` So what I did wasn't revenge.@
+` I just thought that was what a human would have done.@
+` Only for my sake, I put Makihisa-sama and SHIKI-sama in a trap, and tried to get Akiha-sama dead too.@
+` ----That was all I had.@
+` There really weren't any feelings behind it."\
+
+` Her smile does not fade.@
+` But that's a lie.@
+` If that's true, then I---I would have hated her from the bottom of my heart.\
+
+`"…… No, that's wrong.@ Kohaku-san, you just want to think that.@
+` If that was true---then why did you protect Akiha?@
+` Kohaku-san, you had emotions.@ …… You liked Akiha, so you destroyed your own plan yourself……!"@
+ld c,":a;image\tachi\koha_t17.jpg",%type_crossfade_fst
+
+`"------"@
+` For just an instant.@
+` She lowers her glance just a little bit, and smiles again.\
+
+ld c,":a;image\tachi\koha_t12.jpg",%type_crossfade_fst
+
+`"…… That's right.@ I destroyed my own plan.@ Really, SHIKI-sama should have killed me back then.@ …… I made it so that only one of us would stay alive after that.@ But why did we both end up surviving?@
+` She seemed troubled as she says this, and her smile returns.\
+
+`"…… That's simple.@ It's because you wanted Akiha to live, and you wanted to stay alive too.@
+` Then---everything's alright.@ Even though you planned it all, I'm happy.@ Akiha's still alive, and you're still alive, that makes me really happy.@
+` Is that----not enough for you, Kohaku-san?"@
+br
+` Tears come out as I say so.@
+` …… I can't stop my feelings, which are more full of regret than pity.\
+
+` ----I already understand.@
+br
+` That this person will not return.@
+` Since then, from the time she protected Akiha, she became broken and couldn't come back.@ I understand that too well-----\
+
+ld c,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
+
+`"Shiki-san, are you crying?@ That's stupid, crying over a doll in a play that broke.@
+` …… Yes, it really is stupid.@
+cl c,%type_crossfade_fst
+!w2000
+ld c,":a;image\tachi\koha_t19.jpg",%type_crossfade_fst
+
+` Hey, Shiki-san.@ I said that I didn't hate anyone, but there is one person I hated.@
+
+` You understand, right?@ I think I hated you.@ Because if you weren't there, I could have just stared out the window without even thinking."@
+
+cl c,%type_lshutter_fst
+
+
+` Smiling, she turns away.\
+
+` Her sleeves flutter like butterfly wings.@
+` My legs want to dash forward.@
+` But I can't move.@
+` Even one step.@
+` I feel that if I move one step towards her---something will happen that I can't take back.\
+
+playstop
+
+`"You are the only one I hated.@ Everyone else, I neither liked nor hated.@
+` I lost those emotions.@ So----saving Akiha-sama was only an accident."@
+` Her figure starts to become hazy.@
+`"Kohaku, san---"@
+` I have a bad feeling about this.@
+` I can't place it, but I have a terrible feeling.@
+br
+` ---Then.@
+br
+`"Nee-san-----!"@
+` A voice calling for her echoes through the air.\
+
+ld c,":a;image\tachi\his_t12.jpg",%type_lshutter_fst
+`"Hisui------?"@
+`"Hisui, chan……?"@
+` Our voices overlap.@
+` Gasping for breath, Hisui looks directly at her.\
+
+`"…… Hisui-chan, why?"@
+` Her voice is shaking.@
+` Taking it, she looks sharply at her.@
+
+`"…… Lies."@
+` With a short, strong voice, Hisui says so.@
+`"Everything you say are lies, Nee-san.@
+` You saved Akiha-sama back then because you like her---and I know you can't hate Shiki-sama."\
+
+`"--------"@
+` I hear a sharp gasp.@
+` Still turned around---she looks extremely frightened.\
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"Is that not right?@ You played my role, so you cannot hate Shiki-sama.@
+` You played the role of Hisui from back then.@ So you loved Shiki-sama and tried to protect Akiha-sama……!@ You're not an empty human like you think you are……!"@
+` Hisui's voice hangs in the air.@
+` Kohaku doesn't turn back, and just answers "no".\
+
+cl c,%type_crossfade_fst
+
+`"…… Geez.@ If you had never slept in the sitting room, then Hisui-chan never would have noticed us.@
+` Shiki-san, you really do throw all my plans into disarray."@
+` Still facing the other way, she laughs.@
+` She holds up a finger to her mouth.@
+br
+` Gulp.@
+` I hear the sound of something being swallowed.\
+
+`"------------"@
+` I run.@
+` But, I don't make it in time.@
+` Before I can reach her, she collapses to the ground, coughing up blood.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+` Thud.@
+` A hard, sickening noise.@
+` Still smiling, she drips red blood from her mouth.@
+br
+`"Nee-san------------!"@
+br
+` Hisui holds her.@
+` But, that.@
+` No matter who looks at it, it is already too late.\
+
+bg "image\event\his_f02.jpg",%type_crossfade_fst
+play "track07.ogg"
+
+
+`"No----Nee-san, Nee-san, Nee-san-----!!!!"@
+` Cradling the unmoving girl's head, Hisui frantically calls out.@
+` It seems her feelings overflow like the blood pouring from Kohaku's mouth.@
+` Her mouth opens and closes over and over.@
+wave se0
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\event\his_f02.jpg",%type_crossfade_fst
+
+`"Nee-san……?@ Nee-san, hold on……!!"@
+` A desperate cry.@
+` Seeing that, the girl smiles like a child.\
+
+`"…… Huh?@ …… Don't do that, Hisui-chan.@ Crying like that, it feels…… like back then."@
+`"What---Nee-san, why----"@
+`"…… Yeah, because if I, don't do, so, you won't be, able to return, to the way, you were."@
+` Her words in pieces,
+` and with glazed eyes, she speaks to Hisui.\
+
+wave se0
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\event\his_f02.jpg",%type_crossfade_fst
+
+
+`"---------Nee, san."@
+` Hisui's face contorts in grief.@
+` Her tears flood her face.@
+`"…… Why?@ That's fine.@ I was okay with the way I was.@ If you were happy, then I was happy.@
+` I---I was always protected by you, so---"@
+` I was always happy.@
+` Painfully, she swallows her last words.\
+
+
+`"Why……?@ You should have stayed like Hisui, Nee-san.@ Like Hisui, the one you admired long ago, so why---why are you returning it to me now----"@
+wave se0
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\event\his_f02.jpg",%type_crossfade_fst
+
+` A tear falls.@
+` Maybe Hisui's tears caused that.@
+` She nods quietly.\
+
+`"…… That's, right.@
+` I, really, had fun.@ It was all just an act, but it was really fun, Hisui-chan.@
+` So I hoped, Hisui-chan, you were having fun, too----"@
+` Her blood drips out.@
+` As she speaks, blood dribbles out of her mouth.\
+
+wave se0
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\event\his_f02.jpg",%type_crossfade_fst
+
+
+`"Ne--Nee-san, hang on, Nee-san……!@ This, this can't be……!@ Why, why do you have to die, Nee-san……!?@
+` There is---there is no reason for you to die, Nee-san……!"@
+br
+` Hisui's voice can no longer reach her.@
+` Her chest rising and falling, she just looks up at the deep, deep blue sky.\
+
+`"…… It's pretty.@ I could never go outside, but I always remembered the color of the sky."@
+`"Nee-san---Nee-san……?"@
+`"…… Just those little things were my days.@
+` Hisui-chan, Shiki-san, and Akiha-sama were there.@
+` And there was such a pretty sky overhead."\
+
+`"Yeah…… I can't remember it too well.@ Those fun things…… are starting to disappear."@
+` …… Her energy drains away.@
+` The remaining light in her eyes is disappearing.@
+wave se0
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\event\his_f02.jpg",%type_crossfade_fst
+
+` That.@
+` I could not let it be.\
+playstop
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+waveloop se1
+
+` I take out my knife.@
+` My glasses are already off.@
+` All that is left---
+br
+`"Shiki-sama, what are----!"@
+` Hisui holds on to me.@
+`"----I am going to save Kohaku-san.@ Please be quiet and trust me."@
+` I pull free and look hard at her body.@
+` …… Just like the time with Yumizuka.@
+` That time, I found Yumizuka's polluted blood and "killed" it.@
+` So I should be able to kill the poison she drank.\
+
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+
+`"-----------Gah."@
+` The headache gets worse.@
+` It feels like someone is stabbing my skull with a knife.@
+` It's so bad I want to close my eyes.@
+`"-----------"@
+` …… I guess looking at something wrong in someone else's body is difficult.@
+` The pain warns me that this is surpassing the limits of my ability.\
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+`"AH------ha, ah."@
+` My breathing explodes into harsh gasping.@
+` Bubbles escape from my open mouth.@
+` My entire world is red.@
+` As if all my bodily fluids turned into poison, my body is burning from the inside.@
+`"Ahh----g---gaah!!"@
+br
+` Yeah.@ But, still------
+br
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+`"Ku-------ah, ahh-------!"@
+br
+` I stare at it, not caring if I go blind.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+
+
+br
+br
+br
+br
+br
+` ------My senses disassociate.@
+br
+` My world becomes a white sheet.@
+` As the sound of my blood vessels burning away roars in my ears, I quickly, before I am unable to move, find the poison in her body and kill it.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+wavestop
+
+!w4000
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+!w4000
+
+
+bg "image\bg\bg_55.jpg",%type_crossfade_fst
+play "track03.ogg"
+
+
+` The first scenery I've seen in a few days is this white examination room.@
+br
+`"…… All set.@ It seems like you are fine, Shiki-kun.@ I do not see any cloudiness and your condition should not return.@ You can go back to your normal life now."@
+` The doctor continues scribbling away, as he's done these past few days.@
+` His face which I see for the first time looks somewhat kind.\
+
+`"Well then, take care.@ Yeah, but don't strain yourself for a while.@ You always seem to push yourself too hard."@
+`"---I understand.@ Thank you so much for your help."@
+` I bow with heartfelt thanks.@
+` And, I stand up from the chair.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+
+
+` I go out into the hallway.@
+` In the waiting room is Hisui.@
+` Not having seen her face in days, I wave to her excitedly.@
+` Hisui quickly runs to my side to support me.\
+
+`"Well then, shall we go?@ We can meet Kohaku-san starting today, right?"@
+` Hisui nods.@
+`"…… Um, Shiki-sama.@ Is your body really okay?"@
+` Hisui looks up at me, full of worry.\
+
+`"Hey.@ A doctor is a person who can't let unhealed people go free.@ If I get to leave the hospital, that means I'm fine.@ I'm used to being in hospitals, so trust me."@
+`"-----Yes.@ That is why I worry.@ There never was an instance where you would come back from the hospital fully healed."@
+`"………… Hmph."@
+` …… Hisui really talks a lot now.@
+` Well, that's the truth, so I can't disagree.\
+
+`"---Anyway, I finally got those bandages off my eyes.@ I can see your face and my body is healed, so there's no more problems.@
+` C'mon, let's go see Kohaku-san."@
+` Pulling Hisui, who's still wanting to say something, I walk towards Kohaku-san's room.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+playstop
+
+bg "image\bg\cmo_20.jpg",%type_crossfade_fst
+
+
+` -----After that.@
+br
+` After seeing me plunge my knife into Kohaku-san, Hisui panicked.@
+` But, after seeing that Kohaku-san's body was not harmed, that her breathing returned after that, and seeing me collapsing, Hisui ran to save all of us, even though she was still in a panic.\
+
+` As a result, Kohaku-san was saved.@
+` I fell into a condition where my eyes would not function in addition to the decrease in my physical body strength.@
+br
+` …… Well, I somehow understood that I went blind.@ When I stabbed my knife into her body, the only thing I was able to see were those "lines".@
+` So when I was told I went blind, it didn't shock me that much, but then, my sight came back shortly after.\
+
+` The examination revealed absolutely nothing wrong with my eyes, but only problems with my nerves.@ Rather than my cut nerves connecting themselves, it seems that it's more like the nerves which were numb healed up.@
+` …… It seems like my eyes will not go blind that easily.@
+` Or it might be that even if I do go blind, I'll still see those "lines".\
+
+` …… Well, those are trivial matters.@
+` The important fact is that Kohaku-san and I were saved.@
+` …… But Kohaku-san wasn't fully saved.@
+br
+` She was able to recover.@
+` But, in turn, she lost something.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+
+`"Shiki-sama."@
+`"Eh----yeah, go ahead.@ I think it's probably better if you went in first."@
+` After answering yes, she knocks on the door.@
+` A voice tells us to come in and we enter the room.\
+
+bg "image\bg\bg_51.jpg",%type_lshutter_slw
+play "track09.ogg"
+
+
+` ----Kohaku-san is the only one in the room.@
+br
+` She sits up in bed and looks at Hisui and I.@
+`"……………………"@
+` …… Kohaku-san isn't smiling.@
+` With uneasy eyes, she looks at her guests.@
+br
+`"Um…… May I please ask who you are?"@
+br
+` With those words, Hisui's shoulders shake a bit.\
+
+`"We have come to see how you are doing.@ Please excuse us, Nee-san."@
+` Kohaku-san looks at Hisui with surprised eyes after she hears the word "Nee-san".@
+
+` Hisui sits down next to Kohaku-san.@
+` I don't want to be in the way, so I sit down on a chair by the wall.@
+` Kohaku-san looks uneasily back and forth between Hisui's face and mine.\
+
+`"Um…… I am sorry.@ It's a bit strange.@ I feel that I do know both of you, but I cannot remember either of you."@
+` Her voice sounds very apologetic.@
+` This isn't a joke or anything as she really does mean those words.\
+
+
+bg "image\bg\ima_10b.jpg",%type_crossfade_fst
+
+` -----There is some problem with her memory.@
+br
+` I think I was told so before by Hisui.\
+
+` Kohaku-san was no longer the Kohaku-san from before.@
+` …… No, that's not quite right.@
+` The system of the brain can be divided into four functions: recording, preserving, playback, and recognition.@ And it seems that Kohaku-san has something wrong with her preserving function.\
+
+` The doctor said that she can return to her normal lifestyle, but…… she can't remember most of her past.@
+` …… It isn't so much that she can't remember, rather, it is more like she lost it.@
+` The preservation of her memories up until now---all that information was lost, so there is nothing to remember.@
+` So Kohaku-san cannot remember me or Hisui.@
+` …… Having Kohaku-san return to the way she was before really is a hopeless dream.\
+
+` I don't know if it was the near-fatal shock from the poison or if Kohaku-san closed it off herself.@
+` But, I know that the Kohaku-san has the body and heart she had before, but she has forgotten all about me, Hisui, and Akiha.\
+
+bg "image\bg\bg_51.jpg",%type_crossfade_fst
+
+
+`"Um………"@
+` Kohaku-san looks up at Hisui.@
+` "Yes," Hisui answers, and Kohaku-san hesitantly starts to speak.@
+`"Your face is the same as mine, might I ask who you are?"@
+`"---------"@
+` Hisui's body freezes.@
+` But that is just for an instant.@
+` With a light smile, Hisui holds Kohaku-san's hand.\
+
+`"I am your little sister, Hisui."@
+`"Hisui…… chan?"@
+` She manages to let this response out.@
+` That is probably the most cruel response she could have given.@
+` But Hisui still smiles gently, and answers "Yes."\
+
+`"…… I am so sorry.@ I, do not remember anything about you, Hisui-chan, or that person over there.@
+` …… Ahaha, I'm a little scared.@ I don't remember anything about you, Hisui-chan.@ Maybe there must be something wrong with me."@
+` Downcast, Kohaku-san looks like a lost child.@
+` Her face clouds over and her eyes are uneasy; she is not like Kohaku-san.@
+br
+` ---But still.@
+` Hisui grips her hand tightly.\
+
+`"No, do not worry, Nee-san.@ No matter how uneasy you are, I will always be with you.@
+` …… Like how you always protected me, I will always, always protect you from now on, Nee-san."@
+` Kohaku-san's face is pure bewilderment.@
+` After looking at Hisui in surprise, Kohaku-san thanks her.@
+`"Eh----ah, yes."@
+` Looking down in embarrassment, Hisui mumbles a response.\
+
+`"Uum, is there anything you need?@ Like, something to eat, or something you want?"@
+` Kohaku-san says yes and nods with her eyes in response to Hisui's attempt to hide her shyness.@
+br
+`"…… There isn't anything I want to eat, but there is something I want.@ Can I ask you?"@
+br
+` Kohaku-san does not look just at Hisui, but looks at me sitting by the wall, too.\
+
+`"Yes.@ What is it, Nee-san?"@
+`"…… I, think I never liked the name Kohaku.@ So---I, want a new name."@
+`"……………… Name?"@
+` I wonder why.@
+` Once she says that, only one name comes to me.@
+` That name has been discarded and only remains in memories.\
+
+`"……………… Shiki-sama."@
+` Hisui turns to me.@
+` …… Is she thinking of the same thing?@ She looks at me as if she wants confirmation.@
+`"……………… Mm."@
+` I nod in response.@
+` Hisui turns back to Kohaku-san and asks,
+br
+!w1000
+`"How does Nanaya sound?"\
+
+`"…………… Nanaya."@
+br
+` Kohaku-san murmurs it as if testing the sound.@
+` Right after, she lifts her face up as if she remembered something.@
+br
+`"---Yes.@ I, think I like the sound of that.@ It seems, awfully nostalgic for some reason."@
+br
+` Saying that, she smiles.@
+` Her usual smile that blossoms like a rose.@
+br
+` ---Finally.@
+` For the first time since she's awakened, she smiles happily.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+
+
+bg "image\bg\ima_05.jpg",%type_crossfade_slw
+play "track07.ogg"
+
+
+` ---The two of them talking looks perfectly natural.@
+` Naturally, the two of them peacefully pass the time as sisters.\
+
+` …… I don't know if her losing her memory was good or bad.@
+` Since all of her memories were painful, maybe it was a good thing that it happened.@
+` Because from now on, there will be nothing but happiness.@
+` Forgetting all the sorrowful incidents, she can earn a normal happiness.\
+
+`"----------"@
+` But, looking at this blue sky, I just can't help but think back.@
+` That young girl standing by the window.@
+` I know that the past for her is something to be forgotten about.@
+` But, still----if I could, I wanted that Kohaku-san to become happy.\
+
+` …… But that is a wish that can no longer be granted.@
+` So I just have to end that wish right now.@
+br
+` ----Underneath that longed-for blue sky.@
+` I imagine for the last time her care-free smile, like a lingering flower----\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+
+bg "image\bg\ima_03.jpg",%type_crossfade_fst
+
+
+`"Shiki-sama, may I please have a moment?"@
+
+` After we leave the hospital,
+` Hisui suddenly asks me that question.@
+
+`"Eh……?@ Sure, what is it?"@
+`"Yes.@ We still have time, so there is somewhere I wish to go."@
+`"Somewhere you wish to go……?"@
+` Not understanding, I tilt my head.@
+`"Come on, let's go, Shiki-sama!"@
+` Hisui pulls my hand forcefully and starts running.\
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w2000
+
+bg "image\bg\bg_58.jpg",%type_lcartain_mid
+
+play "track02.ogg"
+
+
+`"-----------------"@
+` She takes me to a grassy plain outside of the city.@
+` Autumn is ending and the sky is deep.@
+` The wind that blows through the flowers and onto our faces seems to blow through our hearts.\
+
+`"Hisui……?@ Why did you want to come here?"@
+`"Hmm, who knows?@ To be honest, there really isn't a reason.@
+` It's just that when we were coming to the hospital, I saw this field from the train."@
+` Hisui says this trivially as she stands by my side.\
+
+`"…… I don't get it.@ This is a nice place, but it doesn't seem that special.@ If you wanted to play, we should go to another----"@
+`"No.@ This is the right place to visit.@
+` I wanted to come not somewhere in the city, but somewhere quiet and beautiful, and it makes me feel positive.@
+` A place where you could return to your usual self."@
+` With a light smile, she looks up at me.\
+
+`"My usual self----Hisui?"@
+`"Yes.@ Well, when you were in the hospital room, you looked so depressed.@
+` …… I understand how you feel, and I'm glad you feel that way.@
+` But, that is not what Nee-san wanted."@
+` Hisui reaches out.@
+` She lightly places her hands on mine.\
+
+`"Is that not right?@ I think it is better if you cheer up.@
+` …… Hey, Shiki-sama.@ You may not have realized it, but you smell like sunshine.@
+` That is the Shiki-sama that I like, and will always like."@
+` Her eyes look at me directly.@
+` Those eyes are really kind, and optimistic.@
+` Hisui is the one that smells like sunshine.@
+` Eight years ago.@
+` It feels like we returned to that time, when Akiha and I and her would run around the garden.\
+
+
+`"----Really.@ I think I'm the gloomy one if you ask me."@
+`"You are just someone who does not start conversation that much.@
+` But to me--no, to us, you are like this open field."@
+`"----------"@
+` Her fingers move.@
+` I feel her squeeze me tighter.\
+
+`"So there, please don't make that face, Shiki-sama.@
+` Akiha-sama was saved, and even Nee-san was saved.@ There is no reason for you to be sad.@
+` Nee-san is still alive.@ Then I am sure she will return to the way she was someday, and even if not, I will make her many times happier.@
+` You do not have time to be sad.@ Because we have to help Nee-san and Akiha-sama be happier from now on."\
+
+`"------"@
+` What she's saying is fairly preposterous.@
+` So I wonder why?@
+` After hearing those words----I feel a ray of light shining into my gloomy heart.@
+`"-----That's, right.@
+` I'm her big brother, so its only natural to do such a thing."@
+` Hisui nods.\
+
+`"…… Yeah.@ It might be hard, but we have to do it.@ Because I want them to be happy too."@
+`"------Yes.@ I know you can do it."@
+` Nodding strongly, she holds my hand against her chest.@
+br
+` …… I can feel her heartbeat.@
+` The delicate warmth of her body serenely blows like the wind through the grass into my own heart.\
+
+`"---Besides.@ If you do not cheer up, I would be very troubled."@
+` "Why?" I ask.@
+` Hisui's cheeks flush, but she still looks directly at me----\
+br
+`"…… You are the only one who can make me happy.@ I want to always be near your side, always be near your sunshine."@
+br
+` ----She stands on her tiptoes to kiss me.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\ima_03.jpg",%type_crossfade_fst
+
+
+` The sky is high.@
+` Underneath that sky where there is no sadness, I receive the warmth of the one I love the most.@
+br
+` ----From the field,
+`    is the gentle smell of the sunshine.\
+
+br
+` ----Yeah, Hisui's words are exactly right.@
+br
+` We lost a lot, but we haven't lost everything.@
+` The days will still go on into the future.@
+` Then, we have to go on, and try our best to make everyone live happily.\
+
+`"…… Thanks, Hisui."@
+` Holding her delicate body, I close my eyes.@
+br
+` Tears flow down my cheeks, but there is no sadness.@
+` Life itself is fun enough, I've known that for a long time.@
+br
+` ----Then.@
+` Holding Hisui's hand, I'll walk on and have no regrets------\
+
+
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+
+playstop
+
+!w4000
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+mov %rockending, 0
+
+gosub *ending
+
+
+return

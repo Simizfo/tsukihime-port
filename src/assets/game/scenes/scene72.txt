@@ -1,0 +1,21 @@
+
+bg "image\bg\bg_34a.jpg",%type_nowaitdisp
+
+
+`"Akiha.@ About Kohaku-san…"@
+ld c,":a;image\tachi\aki_t01a.jpg",%type_nowaitdisp
+
+`"Yes?@ What about Kohaku?"\
+`"She's a really nice person, isn't she?@ I was just scolded by her in the hallway.@ 'You won't grow without eating breakfast!' she said."\
+ld c,":a;image\tachi\aki_t04a.jpg",%type_crossfade_mid
+`"Hmmmn.@ That sounds like something she would say.@ Do you like Kohaku, Nii-san?"\
+
+`"Eh---No, that's not what I mean.@ I was just surprised because I was never scolded like that when I was at the Arima household.@ Thanks to her, it doesn't seem like I'll be able to skip breakfast from now on."@
+`"That's right.@ You are anemic after all, so it would not do you good to skip breakfast."@
+` The dizziness isn't really linked to my diet, but I just nod obediently.@
+cl c,%type_nowaitdisp
+\
+
+
+
+return

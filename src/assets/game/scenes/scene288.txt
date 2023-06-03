@@ -1,0 +1,448 @@
+
+bg "image\bg\bg_40c.jpg",%type_nowaitdisp
+
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Thanks to the goodwill of Makihisa-sama, Nee-san received training in pharmacy.@
+` Until Makihisa-sama passed away, she also was consulted in maintaining his health."@
+` Hisui's face returns to its usual lack of expression and tells me things I didn't even ask about.\
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+
+`"Gh…………!"@
+` Sharp pain stabs through my head.@
+br
+` Even though I'm in this much pain, she seems to be tending me without even batting an eyelash.@
+br
+` …… Well, that's only to be expected.@
+` I'm the one in pain, not her.@
+` If she acted like she was in pain or had a clouded expression, it would be troublesome.\
+
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+`"Gh----!"@
+`"Shiki-sama, are you still in pain?"@
+`"---Sorry Hisui."@
+`"Yes, what is it?"@
+`"You're an eyesore, so please leave.@ I can't sleep with you here."@
+ld c,":a;image\tachi\his_t05.jpg",%type_crossfade_fst
+`"----I understand, then please excuse me.@ If you need anything, please call for me."@
+cl c,%type_lshutter_mid
+` Hisui leaves the room.@
+br
+` With that, I actually do relax.@
+` My headache also weakens, so maybe I can sleep now.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+!w1000
+playstop
+
+bg "image\bg\bg_40c.jpg",%type_crossfade_mid
+
+waveloop se10
+
+` ……@
+` …………\
+` ………………@
+` ……………………@
+` …………………………@
+` ………………………………@
+` ……………………………………\
+
+` Knock-knock.@ The door opens.@
+br
+ld c,":a;image\tachi\aki_t12b.jpg",%type_lshutter_mid
+`"---Excuse me, Nii-san.@ Are you awake?"@
+`"…… Yeah, I'm up.@ You need something, Akiha?"@
+`"No, I heard you were resting because of your anemia, so I just came to see how you were doing."@
+` She looks over at me as I lie in bed.@
+` A soft gaze that tells me she's worried.@
+br
+` …… To be honest, it's annoying as hell.\
+
+`"I'm fine.@ It's not that bad, that's why I'm resting here by myself.@ Go back to your room, Akiha."@
+ld c,":a;image\tachi\aki_t21b.jpg",%type_crossfade_fst
+`"---Nii-san, what are you saying?@
+` It's already dinnertime you know.@ I came here to tell you that."\
+
+` …… Dinner……?@
+` Oh, is it that time already?@
+` But I'm not very hungry, and I don't feel like eating anything.@
+br
+`"I don't have an appetite, so I'll skip dinner.@ I'm fine, so go away for today.@ I don't feel good."\
+
+ld c,":a;image\tachi\aki_t12b.jpg",%type_crossfade_fst
+
+`"…… I understand.@ Please get your rest.@ But Nii-san, if you are awake, please turn the lights on in your room.@ Your eyes will go bad in the dark."@
+`"---I'm fine.@ I can relax this way."@
+`"………………"@
+cl c,%type_lshutter_mid
+
+` Even though her eyes tell me she wants to say more, she leaves the room.\
+
+`"………………"@
+` I'm so irritated.@
+` Hisui's reactions, Akiha's worried eyes, they all seem to treat me as something fragile.@
+br
+` Isn't this like always?@
+` It's not like I'm coughing up blood or sucking up blood, so why can't they just leave me alone?\
+
+br
+` ----Grit.@
+br
+` In the darkness, I hear myself grinding my teeth.@
+`"…………"@
+` My nerves are fraying, I know that.@
+` If I stay awake like this, I'll become completely depressed.@
+` I'm not tired, but I have to sleep.\
+
+wavestop
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+!w1000
+play "track06.ogg"
+
+bg "image\bg\bg_40c.jpg",%type_nowaitdisp
+
+monocro #0000ff
+
+bg "image\bg\bg_46a.jpg",%type_nowaitdisp
+bg "image\bg\bg_33d.jpg",%type_nowaitdisp
+bg "image\bg\bg_48d.jpg",%type_nowaitdisp
+
+bg "image\bg\bg_32d.jpg",%type_nowaitdisp
+bg "image\bg\bg_47.jpg",%type_nowaitdisp
+bg "image\bg\bg_22c.jpg",%type_nowaitdisp
+bg "image\bg\bg_24c.jpg",%type_nowaitdisp
+
+
+bg "image\bg\bg_25b.jpg",%type_crossfade_fst
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+` I go out to the main street.@
+` The date has changed about two minutes ago.@
+!w1000
+
+\
+br
+br
+br
+br
+br
+br
+` The dead of night on Sunday.@
+` No one is walking the streets.@
+!w1000
+
+\
+br
+br
+br
+br
+br
+` Did I mistake the time?@
+` If I started walking around an hour earlier, I wouldn't have had to work so hard.@
+!w1000
+
+\
+br
+br
+br
+br
+br
+br
+` Dragging, walking.@
+` What makes this dragging sound,
+` isn't my walking,
+` but something else.\
+
+br
+br
+br
+br
+br
+br
+` The time was right.@
+` If I started walking an hour earlier, I never would have been able to walk like this.\
+br
+br
+br
+br
+br
+br
+` Dragging,
+` With one hand gripping the woman's hair, I continue to walk.@
+` Long hair.@ Because she looked like Akiha, I chose this woman.@ Not her face, but I liked her hair.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+
+` I let go of her hair.@
+` Unconscious, she collapses to the ground.@
+` I did not kill her.@
+` I didn't eat dinner, so I want to make it as appetizing as possible.@
+` I've heard somewhere that the blood of the dead is cold and tastes terrible.\
+
+` I have no complaints about her unblemished neck.@
+` Gripping my knife in one hand, I draw my mouth closer---
+
+
+playstop
+
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+monocro off
+
+
+` After seeing that dream, I wake up.@
+`"-----!"@
+` I wake up from my sleep and my mind starts to clear.@
+` My throat is horribly parched and my entire body feels excited.\
+
+`"What---kind of dream……"@
+` was I watching?@
+` I can't believe it.@
+` Leaving at night, knocking a woman I don't know unconscious, and dragging her to an alley.\
+
+` That's just plain wrong.@
+` Because it was in a dream, it is okay, but I'd have to be crazy to do that in reality.\
+
+` My panting fills the room.@
+` I have to catch my breath.@
+` Rubbing my eyes, I take a deep breath.@
+` …… After that, I don't think I can go back to sleep.@
+` Turning on the light, I decide to read a book until morning.\
+
+monocro #ff00ff
+
+bg "image\bg\ima_10b.jpg",%type_crossfade_mid
+
+br
+br
+br
+br
+br
+br
+br
+` My eyes, gradually,\
+
+monocro #0000ff
+
+bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+
+br
+br
+br
+br
+br
+br
+br
+` get used to the dark.\
+
+monocro off
+
+bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+
+`"-----------Wha……"@
+` I gasp.@
+` This isn't my room.@
+` A back alley.@
+` Knife in hand.@
+` In front of me,
+` lies an unconscious woman I don't know.\
+
+wave se0
+
+`"Ha-----------"@
+` What,
+` What am I doing?@
+br
+` Isn't this a dream?\
+` Isn't this what I dreamt before?\
+
+
+wave se0
+
+`"----------"@
+` It has to be a dream.@
+` Because I've never even wanted to do such a thing before.@
+` Attacking some woman I don't know,
+` running my knife along the "lines" all over this supple body,
+` wanting to see the red, red blood coming from the chopped pieces, no way----no way?\
+
+
+wave se0
+
+` Yeah, there's no way I want to do it.@
+` But, for no reason---I'm thinking, that I have to do it.\
+
+
+wave se0
+
+br
+` Take her apart.@
+wave se0
+
+` Take her apart.@
+wave se0
+` Take her apart.@
+wave se0
+` Take her apart.@
+wave se0
+br
+` If I do that,
+` I can be released, and become something unable to be bound by anyone.@
+br
+` Come to think of it,
+` there was someone that said something like that before.\
+
+br
+br
+br
+br
+br
+br
+br
+` ---You're the same.@ You, like me, will end up as a killer, Tohno Shiki.\
+
+
+wave se0
+
+`"………… up!"@
+br
+` ---Just admit it, killer.@
+`   Your inversion impulse is nothing more than what you wish for---
+br
+`"Shut…… up!"\
+
+
+wave se0
+
+` But, what is this?@
+` Just what is this?@
+` Why am I doing this?\
+` And even after realizing this, why am I still trying to press my knife against her neck?\
+
+
+wave se0
+
+` If this isn't a dream, and if this is reality,
+` doesn't that mean I'm crazy, like I thought earlier?\
+
+
+wave se0
+
+`"----Mm."@
+br
+` Her eyelids flutter.@
+` She starts to open her eyes.@
+` Before that,
+` I have to chop her apart, or I---\
+
+`"Ah."@
+br
+` My knife moves.@
+` But that's,
+br
+`"…… Who are you?"@
+` I can hear her voice.@
+` She suddenly realizes the knife next to her throat.\
+
+br
+`"Kya---"@
+`"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH!"\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+
+bg "image\bg\bg_25b.jpg",%type_lcartain_fst
+
+waveloop se1
+
+` Her scream vanishes into my yelling.@
+` Yelling.@ Like a broken siren, I keep yelling as I run.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+bg "image\bg\bg_22c.jpg",%type_lcartain_fst
+
+` I breathe rapidly.@
+` My fingers shake.@
+` My mind has gone blank.@
+` But I manage to pull my knife back and run before I slice her.@
+br
+` But, if she had screamed before me,
+br
+` I would have----\
+
+`"Ha, ha, haha, hahahahaha………!"@
+br
+` Scary.@
+` That's scary.\
+` Scarier than any of the things that have happened until now.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+bg "image\bg\bg_32d.jpg",%type_lcartain_fst
+
+` Half-laughing, half-panting, I run.@
+` It's following me.@
+` It drapes over my back.@
+` No matter how much I run---I can't escape from my own fear.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+bg "image\bg\bg_33d.jpg",%type_lcartain_mid
+bg "image\bg\bg_40d.jpg",%type_lcartain_mid
+
+` *pant* *pant* *pant*
+` I fly into my room and try to lock the door.@
+` I clamor about, but I can't get it done.\
+
+` My fingertips.@
+` My fingertips shake crazily.@ It's just sliding a simple metal piece, but I can't do it.\
+
+` *pant* *pant* *pant*
+` I'm scared.@
+` If I don't lock the door quickly, it will come in.\
+` Some unknown thing will come in.\
+
+`"Gh…………!"@
+` I have to, lock the door.@
+` I can't let it come in this room.\
+` I can't let it leave this room.\
+
+` But why?@
+` I don't know.@
+` I don't know, but I continue to try and lock the door wildly.\
+
+wavestop
+
+` I try all night to lock the door.@
+` But no matter how long I try, I can't even lock the door.\
+br
+br
+br
+br
+br
+br
+` That's when it hits me.@
+` I've been crazy all along.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+!w3000
+
+
+return

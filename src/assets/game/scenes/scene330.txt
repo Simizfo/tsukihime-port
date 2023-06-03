@@ -1,0 +1,201 @@
+
+
+bg "image\bg\bg_04.jpg",%type_nowaitdisp
+
+
+ld l,":a;image\tachi\ari_t05.jpg",%type_lshutter_fst
+
+`"Here ya go, lunch for three people… huh?@ What, am I interrupting something?"@
+
+ld r,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"No, nothing of the sort, Senpai.@
+
+ld r,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+
+` You are a friend of Nii-san?@ I am Tohno Shiki's younger sister, Akiha.@ It is a pleasure to meet you."@
+` Akiha bows softly.\
+
+ld l,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+`"Not at all, the pleasure's mine.@ I'm Inui Arihiko, I've known Tohno since junior high, but today was the first time I've found out about you, Akiha-chan."@
+` …… Maybe he's still holding a grudge against me for not telling him about her, as he says things he doesn't have to.\
+
+`"Alright, Arihiko, let's eat.@ Lunch break is short, so there's no time for chit-chat with Akiha."@
+
+ld r,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
+
+` I ignore Akiha glaring at me, and I accept the lunch from Arihiko.@
+`"Here, Akiha.@ Here's curry bread and milk, and you can eat them here.@ There isn't much time, so you can't take too long over them."\
+
+ld r,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
+
+`"I know that.@ I'm not a child, so you don't have to explain every little thing to me."@
+
+ld l,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+
+`"That's right, Tohno.@ Aren't you a bit mean to Akiha-chan?"@
+` Arihiko boos at me.@
+`"…………"@
+` Ignoring them, I open my own bread, and stick the straw into my milk.\
+
+cl a,%type_crossfade_fst
+
+` Munch.@
+` Munch munch.@
+` Munch munch munch.@
+br
+`"-----"@
+` Right.@ Lunch is over, so it's time to go back to class.\
+
+ld c,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
+
+`"…… Ah, Nii-san."@
+` Akiha speaks up timidly.@
+` Looking over, I see that she hasn't even opened her curry bread yet.@
+`"What is it, Akiha?@ You're not hungry?"@
+`"It's… well, it's not that, it's just…"@
+` She glances upward, like she's embarrassed or something.@
+br
+`"…… Could you… teach me how to eat these…?"@
+br
+`"……"@
+` She glances hesitantly towards me.@
+` And… what am I supposed to say?\
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+`"Waddya mean, how to eat them?@ You just break open the wrapper and eat it.@ It's not hard, is it Tohno?"@
+`"Arihiko, sorry, but could you go get a napkin from the cafeteria?"@
+`"…… Eh, me?"@
+` I nod silently.@
+
+ld c,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+
+`"Fine, but you'll owe me one."@
+
+cl a,%type_lshutter_fst
+
+` Arihiko runs off towards the school building again.\
+
+`"Alright, give it to me.@ You open the bag here, like this.@ And you just bite into it… it's okay, but don't expect too much for the taste.@ Kohaku-san's cooking and this are like heaven and earth."@
+
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"Ahh… really, Nii-san?"@
+`"I'm not kidding.@ Or what are you going to say?@ Don't tell me that even though you've transferred to our school, you can't eat our food.@
+` I don't want to think less of you."\
+
+ld c,":a;image\tachi\aki_t17a.jpg",%type_crossfade_fst
+
+`"No, it's not that, it's just… this bread, it's so big, I don't think I could get it into my mouth…"@
+`"…… No one said you have to eat it all in one bite.@ It's bread, so you bite off a bit at a time.@ You'll get crumbs round your mouth, but Arihiko's bringing you a napkin to wipe it, okay?"@
+
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"…… Yes.@ Thank you, Nii-san."@
+
+cl a,%type_crossfade_fst
+
+` Saying so, Akiha starts to bite into the curry bread.@
+` …… I don't think there ever was a girl getting this nervous to start eating curry bread.\
+
+bg "image\bg\ima_10.jpg",%type_tshutter_mid
+bg "image\bg\bg_04.jpg",%type_bshutter_mid
+
+
+` It's a few minutes after Akiha finished her lunch.@
+` Arihiko's appearance doesn't seem to bother her, as they are engaged in pleasant conversation.\
+
+ld l,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+
+`"So Inui-san, you have been a friend of Nii-san's since junior high school?"@
+
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+`"Yeah, I've known him for about five years now.@ He's been a bothersome guy since the moment we met.@ I helped him out with all kinds of stuff, and before I knew it, he kind of grew on me."@
+`"…… Arihiko, that's the wrong word.@ You should call it extortion."@
+
+ld r,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
+
+`"Ahh, whatever you wanna call it, we're stuck with each other!"@
+` Arihiko laughs.\
+
+`"Yeah.@ Kind of like how stuff sticks to the bottom of your shoe.@ I guess we both give each other a lot of trouble."@
+` I return Arihiko's laugh cynically.@
+
+ld l,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
+
+`"………………"@
+` …… Somehow, Akiha seems to be having trouble stomaching Arihiko and myself.\
+
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+`"Oh, by the way Akiha-chan, can I ask you something?"@
+
+ld l,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+
+`"Certainly, if it is something I can answer."@
+`"Well, I've been wondering for a while… Tohno has chronic anemia, right?@ Was he always like this?"@
+` …… The amazing thing about Arihiko is how he is so straightforward when asking awkward questions like this.\
+
+ld l,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"Yes, Nii-san has been anemic since birth.@ But all the people of the Tohno family have similar problems; his is not a special case."@
+`"Eh…?@ Really, Akiha?"@
+`"Yes.@ Father suffered from manic depression.@ Divergent Identity Disorder, to give it its full title."\
+
+ld r,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+
+`"Wha?@ Divergent Identity…?"@
+
+ld l,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+
+`"More commonly called split personalities.@ Though, Father's wasn't severe enough to cause muddiness of memory."@
+
+cl a,%type_crossfade_fst
+
+br
+` ----I didn't know.@
+br
+` But looking back on it, Tohno Makihisa's character did seem to switch often from tenderness to brutality.\
+
+`"Hmm… so, it was a medical condition, that old man…"@
+` Looking at it like that, everything becomes clear.@
+` Before the accident, I always felt father was a tender man, who kept his distance.@
+` But after the accident, Makihisa clearly hated me.@
+` Looking back, it may have been because of his condition.\
+
+
+wave se2
+
+
+ld l,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+
+`"Argh!@ Lunch break's over, Tohno!"@
+`"Don't complain to me about it.@ C'mon Akiha, you should hurry back to your classroom.@ It'll be embarrassing to be late on your first day at school."@
+
+ld r,":a;image\tachi\aki_t09.jpg",%type_crossfade_fst
+
+`"I understand.@ Take care, Nii-san."@
+
+cl a,%type_crossfade_fst
+
+` As the bell resounds, we return to our classrooms.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w1000
+
+
+bg "image\bg\bg_06b.jpg",%type_rcartain_mid
+
+
+
+
+` A day full of ups and downs finishes.@
+` What should I do now---
+br
+
+return

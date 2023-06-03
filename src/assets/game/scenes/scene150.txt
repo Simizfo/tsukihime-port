@@ -1,0 +1,71 @@
+
+
+
+
+
+bg "image\bg\bg_06a.jpg",%type_crossfade_mid
+play "track03.ogg"
+
+` Fourth period class is about modern society.@
+` The mood in the classroom is somewhat lighter than usual before lunch.@
+br
+` Today is Wednesday, so there's one less hour of classes than usual.@
+` After lunch, there's homeroom and an hour of deciding what to do for the Culture Festival.@
+` What's more, tomorrow is a school holiday, so after this fourth period is over, it's practically vacation already.@
+` It's only natural for everyone to be waiting for the end-of-class bell to ring.\
+
+`"----Sleepy."@
+` I give a big yawn.@
+` The class is completely unchanged, the whole day progresses with nothing out of the ordinary.@
+br
+` Come to think of it, I've been through so many strange experiences, I almost feel odd just sitting in class.@
+` And after classes are over and night falls, I'll have to go out once more with Arcueid.@
+` Thinking of that, I really don't have the time to be fooling around here.\
+
+` I look at my reflection in the window glass.@
+` Tohno Shiki's face seems to be happy for some reason.@
+`"----Grr."@
+` I tighten my expression.@
+` It's not like roaming the streets with Arcueid is fun, so why am I acting like this?@
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\event\ark_e09.jpg",%type_crossfade_mid
+bg "image\bg\bg_06a.jpg",%type_crossfade_mid
+
+br
+`"…… Arcueid……"@
+` There's really, something wrong.@
+` Looking out the window and into the rear courtyard, I can see an illusion of her waving her hand at me and saying "Hey".\
+
+br
+br
+br
+br
+br
+br
+br
+` ----Hey, wait a minute……!\
+
+bg "image\event\ark_e09.jpg",%type_tshutter_mid
+
+`"Wha, wha, wha----"@
+` I push myself onto the window and look down.@
+` I can only see the very edge of the rear courtyard,
+` but without a doubt,
+` Arcueid, in her usual manner, is at my school.\
+
+`"!!!!!"@
+` I look around the classroom.@
+br
+` ----Fortunately, there's no one who noticed the strange foreigner waving to me.\
+
+`"What is she thinking……!?"@
+` I moan to myself as I clutch my head.@
+` But, complaining does me no good.@
+` …… There's about twenty minutes till lunch.@
+` What are you going to do Shiki?@ If you leave her alone, who knows what she'll do……!?@
+br
+
+
+
+
+return

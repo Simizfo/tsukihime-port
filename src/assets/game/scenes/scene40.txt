@@ -1,0 +1,110 @@
+
+bg "image\bg\bg_22b.jpg",%type_nowaitdisp
+
+playstop
+
+` …… Akiha isn't the only person I haven't seen since then.@
+` I can't remember all the details because it's been eight years, but there were other children at the mansion around the same age as me.\
+
+` I don't remember their names, but there were two girls who were twins.@
+` Father has once said that they didn't have any relatives, so he took them to work as servants.@
+`"…… That's weird.@ We played together so often when we were small, but I can't remember their names."@
+` I close my eyes and cast my mind back.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+play "track09.ogg"
+
+bg "image\event\his_e01.jpg",%type_crossfade_mid
+
+
+` I should be able to remember.@
+` She was a girl who was always cheerful… so cheerful that you would become cheerful just by looking at her.@
+` A girl with a carefree personality who was loved by everyone at the mansion.@
+` Because she was close to my age, I got along very well with her, and it seemed like every day we would run around the garden together.@
+`"Let's play together, Shiki-chan."@
+` She would say, and I could remember her taking me out of my room after I secluded myself inside.\
+
+` She would often laugh and take shy Akiha's hand, trying to make her play with us.@
+` Maybe she was older than the both of us.@
+` She would guide me and Akiha to play together, but once we started playing, she would just watch over us.@
+` Even Akiha's tutor, the harsh butler, would say "I don't mind, as long as ****** is with you guys", and let Akiha out to play, as if there was no helping it.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+` In contrast to that girl was the other one.\
+
+bg "image\event\his_e02.jpg",%type_crossfade_mid
+
+` On the second floor.@
+` While we played in the garden, there was always a girl looking down at us every time I turned to look at the mansion.\
+
+` She was the twin of that cheerful girl, but she would always gaze at us expressionlessly.@
+` That girl would never try to leave the house.@
+` All she would do was watch us with those cold eyes.\
+
+br
+br
+br
+br
+br
+` ---Well, in the end, I only ended up talking a little with her.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_22b.jpg",%type_crossfade_fst
+
+
+`"I wonder if those girls are still at the mansion…"@
+` While I think about that, I take a white ribbon out of my bag.@
+` An old white ribbon that the girls gave me at the very end.\
+
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+
+bg "image\bg\cmo_20.jpg",%type_crossfade_mid
+
+
+` ---Eight years ago.@
+` After I was involved in the accident.@
+` The day I was entrusted to the Arima family.@
+br
+` Right before I was to leave the mansion, the girl gave me this for some reason.@
+br
+` …… I'm just lending it to you, so be sure to return it.@
+` Saying something along those lines, she ran off.\
+
+` Afterwards, I was quickly found by one of the servants and taken to the front entrance.@
+` With no one to see me off, I walked out of the gates of that giant mansion while the Arima lady held my hand.@
+br
+` It was my last memory of when I left the Tohno mansion, eight years ago.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_22b.jpg",%type_crossfade_fst
+
+
+
+` *sigh*@
+` I put the ribbon back in my bag.@
+`"But it's been eight years, after all…"@
+` Not only do I not know if they are still at the mansion, I can't even remember their names.@
+` To make things worse, I can't even remember which girl gave me the ribbon.\
+
+`"…… Still, it's not like it was some important promise or anything."@
+` But I want to keep the promise, as long as I still remember it.@
+` I agreed to return to the mansion because Akiha is now there all by herself.@
+` I left her there for eight years, pushing all responsibility onto her while I selfishly lived freely.@
+br
+` I am going back because I feel guilty for what I did to her.@
+` …… I didn't exactly plan to use this as an opportunity to do so, but if that girl is still at the mansion, I want to properly fulfill the promise from eight years ago.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+playstop
+
+
+
+
+
+
+
+
+return

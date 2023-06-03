@@ -1,0 +1,58 @@
+
+playstop
+
+bg "image\bg\bg_06b.jpg",%type_crossfade_mid
+
+` …… As expected, the debate over what to do for the Culture Festival is a stormy one.@
+` Since everyone's opinions are different, the decision gets postponed till next week.@
+` By the time it's over, it's late in the afternoon.@ Everyone gets up tiredly from their chairs and leaves the classroom.@
+br
+`"----Well then."@
+` There's nothing to do in the classroom.@
+` I should get ready for tonight and go back to the mansion---\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_32b.jpg",%type_lcartain_slw
+play "track01.ogg"
+
+` I don't swing by anywhere else and head right back to the mansion.@
+` The sun hasn't quite set so Akiha probably isn't back yet.\
+`"That Akiha.@ I wonder if she's still mad like this morning……"@
+br
+` …… Well, that can't be helped either.@
+` I can't tell her the truth, so I'll probably just continue to be hated as a terrible older brother.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_33b.jpg",%type_lcartain_mid
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Welcome back, Shiki-sama."@
+` Hisui bows as I enter the mansion.@
+`"…… Yeah, I'm back.@ Thanks for greeting me, Hisui."@
+` ---It's been a week since I've come back, but I'm not used to this yet.\
+
+`"Um, Akiha isn't back yet?"@
+`"No.@ She told me to tell you she would be back especially late tonight so please eat dinner on your own, Shiki-sama."@
+cl c,%type_crossfade_fst
+
+` …… I knew she'd still be angry from this morning.\
+
+`"----Sigh."@
+` I slump my shoulders as I start to walk to my room.@
+` ---And then,
+br
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Shiki-sama."@
+` Hisui looks around the lobby before she speaks again.\
+
+`"Forgive me for asking an awkward question, but will you be leaving tonight again, Shiki-sama?"@
+`"Eh----?"@
+` She fixates her emotionless eyes on me.@
+` I think she simply wants to know what time I'll be back because she's so dedicated of a servant, but letting her know means Akiha would know.@
+` I should---
+br
+cl c,%type_crossfade_fst
+
+
+
+
+return

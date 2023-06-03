@@ -1,0 +1,331 @@
+
+bg "image\bg\bg_34a.jpg",%type_nowaitdisp
+
+`"Shiki-san, it's ready!"@
+` I can hear Kohaku-san's voice from the dining room.@
+br
+`"Right, so I'm gonna get some grub."@
+ld c,":a;image\tachi\aki_t03a.jpg",%type_nowaitdisp
+`"Oh, Nii-san!@ Please refrain from talking in such an unrefined manner!"@
+` Akiha shoots me a sharp glare.@
+`"Aw, you've finally gone back to normal.@ I liked you more when you were calm because you were worried about me."@
+ld c,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
+`"I was not worrying about you, Nii-san!"@
+` Akiha quickly looks away.@
+` Looking at her with a faint smile, I go to the dining room.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+
+playstop
+
+!w1000
+bg "image\bg\bg_48a.jpg",%type_lcartain_slw
+
+
+` I'm escorted outside by Hisui.@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Please take care."@
+` Saying the same thing she always does, she continues to stare at me.@
+`"Shiki-sama, what happened to you last night?"@
+`"Last night?@ Nothing in particular.@ I was just feeling sick at school, so I left early.@ I was on my way back when---"@
+br
+` On my way back?@
+br
+`"I just collapsed in the park.@ Well, I guess I was just being careless like Akiha said.@ …… Yeah, I'll be careful from now on."\
+`"I am not placing any blame on you, Shiki-sama, but you look like you are pushing yourself this morning.@ Please take care along the way."@
+` Hisui makes a deep bow and sees me out.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_24a.jpg",%type_lcartain_slw
+
+` As I approach the school, I begin to catch sight of more and more students in uniforms.@
+` It's Saturday, so most of them are smiling while they walk.\
+` It's only a little way to the main gate once I pass this intersection.@
+` It's still only seven-thirty.@
+` Looks like I'll be able to get to school with time to spare today.@
+br
+` The light turns red, and I stop in front of the cross walk.@
+` The school fence is just on the other side.@
+` Since it's a school path, the footpath is protected by a guardrail.@ Even now, the students in front of me are heading towards the school gate.@
+br
+` There's no one but students from our school on the other side at this time of day.@
+` …… There should be no one but the students.@
+` But between the cars rushing by, I feel like I catch a glimpse of someone in white.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\event\ark_e02.jpg",%type_lshutter_mid
+
+
+`"-----Wha……"@
+br
+` She is there.@
+br
+` Dressed in white, with golden hair down to her shoulders.@
+` Long, slender brows and red eyes.@
+` I've seen her only once before, but there's no way I could mistake her for someone else.\
+`"------"@
+` But that's impossible.@
+` I killed her myself yesterday, cutting her into pieces.@
+`"Wha----"@
+` No.@ Even that's a lie.@
+` It's all just a dream.@ Hisui told me so----\
+`"-----"@
+` No, she didn't say anything of the sort.@
+` It's just that I wanted to believe it was a dream.@
+` Then it really wasn't a dream.@
+` But then…
+` Why?@ Why does she exist, as real as anything---?\
+` The light turns green.@
+` The students around me walk towards the other side.@
+` I'm the only one amongst them who stands there, stunned.\
+` She sits on the guardrail, her legs swinging idly,
+` as if she is waiting for someone.@
+` I can't tell how long she's been waiting, but her expression isn't a grim one.@
+br
+` ---Who is she waiting for?@
+br
+` She fidgets restlessly, as if she were waiting for her lover.\
+
+br
+br
+br
+br
+br
+br
+br
+` ---I have a bad feeling about this.@
+`"Ah-----"@
+` The girl in white looks over in my direction.@
+` It's probably nothing more than a coincidence.@
+br
+` She's just a stranger who looks like her.@ She must be waiting for someone else.@
+` If not, then this moment must surely be a bad dream, too.@
+` After all, I completely and utterly killed her with my own hands----\
+` But she's looking this way and smiling.@
+` Looking very satisfied at having found the person who killed her, her smile seems to say, "you've finally come----"\
+
+bg "image\bg\bg_24a.jpg",%type_lshutter_mid
+
+
+` Giving a familiar wave and a smile, she hops off the guardrail.@
+` Fluttering her hair, she heads towards me.@
+`"------Don't come."@
+` This… is a bad dream.@
+` The light turns red.@
+`"------Don't come near me."@
+` She doesn't even look like she cares, walking straight across the street while the cars pass by.@
+br
+` There's only a few meters between us.\
+`"…… I'm telling you not to come----!!!"@
+` The reality before my eyes does not change even when I scream out.@
+` Screaming in a voice even I don't understand, I run from the girl in white.\
+
+bg "image\bg\bg_23a.jpg",%type_lcartain_mid
+
+waveloop se1
+
+` I run.@
+` I run with all my strength.@
+` With no regard to embarrassment or shame, I blast through the passersby, running full speed across the asphalt.@
+br
+` *huff* *huff* *huff* *huff*@
+br
+` My breathing is wild, and my heart screams out.@
+` But still, I run.@
+` I feel like I'm going to go crazy if I don't.\
+` I look behind me.@
+` The girl in white is walking towards me.@
+` She's definitely following me.@
+` The girl I've killed is chasing me.@
+` That's more than enough reason for me to run.\
+
+bg "image\bg\bg_25a.jpg",%type_lcartain_mid
+
+` *huff* *huff* *huff* *huff*@
+br
+` My heart feels like it's about to explode, but I ignore it and keep running.@
+` When I look back, the girl is still there.@
+` With those light footsteps, she follows me as I run away.@
+br
+` *huff* *huff* *huff* *huff*@
+br
+` My head droops down.@
+` My arms feel heavy.@
+` My legs feel like they're going to tear off.@
+` But despite that,
+` I'm running with all my strength, and yet, I can't get away from someone just walking after me---!\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_30a.jpg",%type_lcartain_mid
+
+` *huff* *huff* *huff* *huff*@
+br
+` My breathing is out of control.@
+` I think I've already run several kilometers.@
+` But even so, when I look back, she's always there, walking towards me.\
+` Naturally, like she's taking a stroll, she follows right behind me.@
+` *huff* *huff* "…… Haha, hahaha!"@
+br
+` It's not funny, but I begin to laugh.\
+br
+`"Haha, hahaha, ahahahahahaha!"@
+br
+` I can't stop laughing.@
+` But even so, I run.@ My body complains that I'll die if I run any more, but I keep running.@
+` The reason is simple.@
+` If she catches me, she'll kill me for sure.@
+` I ask myself what I base that on, trying to shake it off as mere imagination.@ But even as I try to console myself, I am the one who knows best it's true.@
+br
+` There's no reason, no basis, no evidence.@
+` I already know it as a fact that if she catches up to me, I will be killed-----\
+
+
+bg "image\bg\bg_31a.jpg",%type_lcartain_mid
+
+wave se4
+quakey 2,100
+
+`"Ah---!"@
+` Pathetically, I collapse to the ground.@
+` I fall forward, not because I tripped, but because I simply can't move my body a single step further.@
+`"Guh---ha, aah."@
+` Lying there, collapsed, I somehow manage to crawl my way to the wall.\
+`"----"@
+` I try to pull myself up against the wall, but it's no good.@
+` My knees lose their strength as I try to rise, and I collapse back down.@
+` My body won't move anymore.@
+br
+` *pant* *pant* *pant*@
+br
+` I look up as I breathe.\
+` ----It hurts.@
+` I don't have enough oxygen.@
+` I can't think properly because of it.@
+` I can't even tell what I'm doing anymore.@
+` I don't know why I'm doing this.\
+` Why?@ Why?@ I don't even know why the girl I've killed is alive.@
+` Unmistakably, I've utterly and completely killed her in the most final way imaginable.@
+` So why?@
+` How can she be waiting for me in front of my school, smiling--?\
+
+
+`"…… I'm sure I killed her."@
+br
+` ---That's right.@
+` I'm sure I killed her.@
+!w500
+` I'm sure I killed her.@
+!w500
+` I'm sure I killed her.@
+!w500
+` I'M SURE I KILLED HER, SO
+!w500
+br
+` Why why why why why why why why why why why why why why why why why why why why why why why why why why why why-----!?\
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_lshutter_fst
+wavestop
+
+`"Oh?@ Is the chase over already?"@
+` With light footsteps, she comes into the alley, shrugging her shoulders in disappointment.\
+`"Hello.@ You really gave me some trouble yesterday."@
+ld c,":a;image\tachi\ark_t01.jpg",%type_crossfade_fst
+play "track09.ogg"
+` With a warm smile, she comes into the alley.@
+` ----I've got to run away.@
+br
+` Thinking that, I retreat, only to hit my head against a concrete wall.@
+br
+`"The chase is already over, right?@ This is a dead end, after all.@ There's no need to worry about anyone coming along or interfering."@
+` She smiles, looking very happy.@
+cl c,%type_crossfade_fst
+
+\
+
+` Panicking, I look around at my surroundings.@
+` A desolate alley.@ I'm disgusted at my stupidity.@
+` Running away here is like asking her to kill me.\
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+`"It's been a long time.@ Eighteen hours since then, I finally found you."@
+` She takes another step into the alley.@
+br
+`"Y-you----!"@
+`"What?"@
+`"I definitely----"@
+`"Yes.@ I'm the girl you killed yesterday.@ I'm glad you remember."@
+`"Th---"@
+` That can't be true.@ There's no way that can happen…!\
+`"Don't be ridiculous!@ Dead people can't be alive!"@
+`"That's true, but there's no need for you to be so surprised.@ I just revived, that's all."@
+` With that curt response, she takes another step, the sound of it reaching my ears.@
+br
+` The distance between us is gradually decreasing.\
+`"…… Re… vived?"@
+` Stunned, I repeat her phrase back to her.@
+` Revived… you mean some doctor saved her with some surgery…?\
+`"---Don't be stupid!@ There's no way any human could revive from being cut apart like that---!"@
+`"Yeah.@ Then again, I'm not human."@
+`"-----Huh?"@
+` Her words are so simple there's no way I could have misinterpreted them.@
+br
+` I'm not human.@
+br
+` That's what the girl in front of me said.\
+`"…… You're not human…?"@
+ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
+`"Geez, isn't that obvious?@ Do you think there's a human being out there who can revive after being cut into pieces?"@
+cl c,%type_crossfade_fst
+`"-------"@
+` There's no way a human like that could exist.@
+` Something like that is just a monster who looks human.@
+br
+` Something that revives even when killed.@
+` Something that death is irrelevant to.@
+` Something that quickly returns to normal and starts moving even after being cut to pieces isn't something you can call human.\
+`"No… way."@
+` That seems to be the girl right before my eyes.@
+` I try to laugh, but my throat is so dry, I can't.\
+`"…… What the hell is that?"@
+` It's not exactly a funny story.@
+` Besides, there's too many things in this story that aren't funny.@
+` Because definitely…
+` If she's not human, it explains why she's alive even after I've killed her.@
+br
+` ---I start to calm down.@
+br
+` This is a situation where I've got to observe everything and think it over.\
+`"…… You said you're not human.@ So what are you?"@
+`"Me?@ I'm called a vampire.@ To put it in your terms, I'm a monster who lives off human blood."@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+` …… Ah, good.@
+` "Vampire" is at least something I can easily understand.\
+`"I see.@ You're a vampire---"@
+` She smiles in satisfaction to indicate her assent.@
+` …… What a crazy reply.@
+` I've heard that vampires can't walk around during daytime, but I guess that's a trivial matter right now.@
+`"…… So, what does this monster want from me?"@
+` For some reason, she recoils as if surprised.@
+ld c,":a;image\tachi\ark_t12.jpg",%type_crossfade_fst
+` After a moment, she puts her hands on her hips and looks at me, irritated.\
+
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+
+`"Have you forgotten what you did to me yesterday?@ Even though you didn't know me, you cut me apart the moment we met.@ You've got to be pretty used to this to ask me what I want with you now."@
+` She looks more disgusted than angry.@
+` But right now, that's how I feel, too.@
+` Because someone I've killed is complaining to me about me killing her.\
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+`"Hey!@ Are you listening, murderer?"@
+`"…… Yeah, I'm listening.@ Sorry, could you shut up for just a minute?@ I'm reflecting on how unlucky this is, even for me."@
+cl c,%type_crossfade_fst
+
+
+br
+` ---Sheesh.@ I have the worst luck.@
+` There was a girl I wanted to kill for no reason, and I killed her on pure impulse.@
+` My memory wasn't clear after that, so I calmed down, thinking it was just a dream… but it turned out to be real.@ What's more, it turns out the person I've killed isn't even human.\
+
+
+
+return

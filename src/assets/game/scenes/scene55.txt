@@ -1,0 +1,39 @@
+
+bg "image\bg\bg_34a.jpg",%type_nowaitdisp
+
+
+`"Hey.@ Morning, Akiha."@
+ld c,":a;image\tachi\aki_t01a.jpg",%type_lshutter_mid
+`"--Good morning, Nii-san."@
+` In contrast to my hurried entrance, Akiha is perfectly calm.@
+cl c,%type_crossfade_fst
+
+ld c,":a;image\tachi\koha_t03.jpg",%type_lshutter_mid
+`"Good morning, Shiki-san.@ If you're looking for breakfast, it's ready in the dining hall, so please eat up."@
+` Kohaku-san greets me with a warm smile, in contrast to Akiha's coolness.\
+cl c,%type_crossfade_fst
+
+
+`"Ah, thank you very much.@ …… It looks like you're having your after-meal tea.@ Have you already finished breakfast, Akiha?"@
+ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+`"Of course.@ I don't care to know when you get up, Nii-san, but please at least allow time for breakfast.@ Having breakfast after seven is a sign of sloppiness."@
+`"…… I think having breakfast at seven is pretty normal.@ What time do you get up, Akiha?"@
+`"I get up at five in the morning.@ What about it?"@
+`"………"@
+` …… Wow.@ I don't know why she gets up so early, but it was so perfect a time to get up that I have no room to retort.\
+
+ld c,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
+`"Besides, your school is thirty minutes from here on foot, is it not?@ Please don't be late to a school that's so close by.@ It would be an embarrassment."@
+`"…… Urgh."@
+` Akiha's words are filled with thorns that stab at me.@
+` But as it's the truth, I once again have no room to make any counter-argument.@
+`"Argh, geez!@ I couldn't help it.@ It was so noisy last night that I couldn't get to sleep."@
+ld c,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+`"Ah, I see.@ You must not be used to your room yet, having just returned… Well, I'll let you off the hook this time."@
+`"No, it's not because I'm not used to the room, but--"@
+br
+cl c,%type_crossfade_fst
+` At any rate, those stray dogs last night were really noisy.@ It wasn't because of the room, it was because of them.\
+
+
+return

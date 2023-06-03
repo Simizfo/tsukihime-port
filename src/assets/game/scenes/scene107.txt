@@ -1,0 +1,348 @@
+
+mov $phasebg,"image\bg\bg_11c.jpg"
+mov $phasetitle_a,":a;image\word\PCEL_09B.PNG"
+mov $phasetitle_b,":a;image\word\day_09.png"
+gosub *left_phase
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\ima_01.jpg",%type_crossfade_mid
+
+
+play "track09.ogg"
+
+` In my dream, I'm staring at the moon.\
+
+` I can't remember where I am or why I'm looking up at it.@
+` Maybe I looked up into the night sky not wanting to see anything, and the moon happened to be there.\
+
+` My back creaks.@
+` Coursing through my veins is an image of coldness.@
+` A solitary darkness that makes me dizzy.@
+` A radiant moon that sickens my heart.\
+
+` …… Strange.@
+` The overwhelming coldness feels more like a sense of nostalgia.\
+playstop
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+
+`"---Shiki-sama."@
+` …… I can hear Hisui's voice mingling with the morning light.@
+br
+`"---Shiki-sama, it is time.@ Please wake up."@
+` Her inflectionless voice awakens me.\
+
+
+bg "image\bg\bg_40e.jpg",%type_crossfade_mid
+
+`"------"@
+br
+` As soon as I wake up, terrible things enter my vision.@
+` I get a headache like I was just shot in the head.@
+`"Ah----"@
+` I almost lose my just awakened consciousness.@ Before I fade away completely, I quickly grab my glasses.\
+
+bg "image\bg\bg_40a.jpg",%type_crossfade_mid
+play "track02.ogg"
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_mid
+`"Shiki-sama……?@ Are you not feeling well?"@
+`"…… No, I'm just a little tired from yesterday.@ I'll be alright, so don't worry."@
+` Lightly shaking my head, I clear my head of what I was seeing.@
+` …… Last night, I forced myself to keep my promise with Arcueid, so my body isn't back to normal yet.\
+
+
+`"Good morning, Hisui.@ Thanks for coming to wake me up, as always."@
+` Sitting up in bed, I do my best to smile naturally.\
+ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+`"No, this is my duty.@ There is no need for you to thank me, Shiki-sama."@
+`"Really, but I am grateful.@ You are infinitely better than an alarm clock."@
+br
+` I stand up.@
+` It's not yet seven o'clock---about ten minutes earlier than I usually get up.\
+
+`"…… Hmm, breakfast?@ I'll be there soon, so please go ahead of me."@
+`"Yes, I will wait for you in the sitting room."@
+cl c,%type_lshutter_mid
+` Giving a bow, Hisui exits the room.\
+
+` ----Well then.@
+` I'm still feeling a little sluggish, but it's not so bad that I have to skip school.@ I'm sure after I eat the breakfast Kohaku-san prepared, I'll feel a lot better.\
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_34a.jpg",%type_lcartain_mid
+
+` As usual, Akiha is sitting on the sofa, and Hisui is waiting by the wall.@
+br
+ld c,":a;image\tachi\aki_t04a.jpg",%type_lshutter_mid
+
+`"Good morning, Nii-san.@ Did you sleep well last night?"@
+` Akiha greets me calmly as I enter the room.@
+` She doesn't know I left last night.@ …… Since she was so worried, I feel guilty for sneaking out.\
+
+
+`"…… Yeah, good morning Akiha.@ You're up early today, too."@
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"No, I'm like always…… Nii-san?"@
+` As if reading my mind, she looks directly at me.@
+`"Um----Is there something on my face, Akiha?"\
+
+ld c,":a;image\tachi\aki_t17a.jpg",%type_crossfade_fst
+
+`"No, that isn't it…… Nii-san, are you really alright?@ You still do not look well, so if you are still sick, maybe it is better if you just rest today----"@
+br
+` ----Oh, that's it.@
+` I relax, realizing she did not find out about last night.\
+
+`"No, I'm really okay.@ I'll be better sooner or later, so please don't look so worried."@
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"…… Okay.@ If you say so, Nii-san, then I will not say anything."@
+cl c,%type_crossfade_mid
+` She goes quiet, still looking worried.\
+
+`"Hm, it's quite rare for you to be convinced this quickly.@ It's not like you."@
+ld l,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
+
+
+`"Hey, I'm always sensible.@ I only warn you because you're the one with the problems.@ So please do not blame me for your imperfections."@
+` She glares at me.@
+`"Oh, that's more like it.@ Hey, Hisui, doesn't it not feel like morning unless Akiha gets harsh?"@
+ld r,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"……………………"@
+` Is it because I suddenly called out to her or because she doesn't know what to say?@ Hisui neither confirms nor denies my statement.\
+
+
+`"See?@ Look, Akiha, Hisui thinks so, too."@
+`"Don't be foolish.@ Hisui doesn't say anything because she is surprised."@
+` Wrinkling her forehead in a frown, Akiha glares again.@
+ld l,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+`"Also, I've always wanted to say this, but you rely on Hisui too much.@ You have been sleeping since yesterday, so it would have been fine if you woke up earlier.@ But you always wake up late.@ Are you slacking off because Hisui does not say anything?"\
+
+`"Wha----You make it sound like I'm causing her trouble!"@
+ld l,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
+`"Not 'like', you are causing her trouble.@ Hey, don't you think so, Hisui?"@
+`"………………"@
+` Hisui still doesn't say anything and stands there quietly.\
+
+ld l,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+`"See?@ Hisui says she thinks so, too."@
+`"No way!@ She didn't say anything!"@
+ld r,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+
+`"……………………"@
+` Hisui is silent.@
+` But, her silence feels like she's agreeing more with Akiha.\
+
+`"………… Oogh."@
+` I feel like it's now two against one.\
+
+`"Shiki-san.@ Breakfast is ready~"@
+` With great timing, Kohaku-san's voice echoes through the room.@
+`"Um, I'm gonna go eat."@
+` I quickly head towards the dining room.\
+
+ld l,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
+ld r,":a;image\tachi\his_t08.jpg",%type_crossfade_fst
+
+`"……………………"@
+` I feel the silent pressure of the two behind me drilling into my back.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w2000
+
+bg "image\bg\bg_34a.jpg",%type_lcartain_mid
+
+
+` After breakfast, I head back to the sitting room.@
+` Akiha isn't there, and Hisui is the only one standing.\
+
+`"Huh?@ Akiha left for school already?"@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Yes.@ It is also time for you to go to school as well, Shiki-sama."@
+`"Ah, it's already twenty after?@ I guess I should get going soon."@
+` …… To be honest, I still don't feel too good, but I'm sure I'll return to normal soon.\
+
+`"Sorry, Hisui, but can you get my bag from my room?@ I'm going to wash my face."@
+`"As you wish."@
+cl c,%type_lshutter_mid
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_48a.jpg",%type_lcartain_mid
+
+
+` After getting all my preparations done, I leave the mansion.@
+` Holding my bag, Hisui sees me off at the entrance.\
+
+`"I'll be going.@ I'm not sure when I'll be back, but probably by dinner."@
+ld c,":a;image\tachi\his_t05.jpg",%type_crossfade_fst
+`"Yes, I will be waiting."@
+` She gives a silent bow.@
+` …… There's a trace of uneasiness in her face.\
+
+`"Hisui?@ Are you feeling sick?"@
+`"No----it is not me, but you do not appear well.@ I am unsure if it is a good idea to let you go."@
+` She speaks hesitantly.\
+
+`"I'm alright.@ I don't feel great, but just a little heavy.@ Geez, both you and Akiha like to worry a lot."@
+`"…… Is that so?@ If it is just us, then that will be fine, but…"\
+
+`"…… Geez.@ I'll come back early today and rest, so that should be good, right?@ I won't overdo anything, so don't look like that."@
+`"………… Yes.@ Forgive me, Shiki-sama."@
+` She still looks very worried.\
+
+`"I'm off.@ I'll be better by the time I get back, so please relax."@
+ld c,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
+
+`"Ah----Shiki-sama----"\
+bg "image\bg\ima_03.jpg",%type_lcartain_mid
+
+` I ignore her and leave the mansion.@
+` The image of Hisui watching me uneasily remains in my head.\
+playstop
+
+bg "image\bg\bg_22a.jpg",%type_lcartain_mid
+play "track03.ogg"
+
+` I head towards school.@
+` My feet are heavy and it feels like I'm in another person's body as I head down the hill.@
+` …… It's probably just the weariness from last night.@ Even though I thought I would recover right away, the sluggishness doesn't fade.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_01a.jpg",%type_lcartain_mid
+
+` It's ten minutes until eight.@
+` The school gate is flooded with arriving students.@
+`"---Ah."@
+` By the gate, I see a familiar figure.\
+
+`"…… Ciel… Senpai."@
+` It's a completely normal, morning scene.@
+` But, what I saw that time----
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+monocro #ffff00
+
+bg "image\event\cel_e04.jpg",%type_crossfade_fst
+monocro off
+
+bg "image\bg\bg_01a.jpg",%type_lshutter_fst
+
+` If it wasn't for that, it would be a normal morning.@
+`"------"@
+` Not even knowing what I plan on doing, I chase after Senpai.\
+
+bg "image\bg\bg_03a.jpg",%type_lcartain_mid
+
+`"Senpai!"@
+` I call after her.@
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_lshutter_mid
+
+`"Oh, good morning, Tohno-kun.@ It's strange meeting you out here."@
+`"…… Yeah, I saw your figure from behind, so I ran after you, Senpai.@ Um…… there was something I wanted to ask."@
+` I sneak a look at her face.\
+`"Yes, what is it?"@
+` She faces me with her usual, gentle smile.\
+
+`"…… Uh Senpai.@ Two nights ago, were you near my house?@ In a black coat and a skirt flowing in the wind."@
+ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+`"……?@ What are you talking about?"@
+`"Um……!@ well--yeah, the high-laced boots suited you.@ I was kind of fascinated, you looked, really cool."\
+
+
+ld c,":a;image\tachi\cel_t05.jpg",%type_crossfade_fst
+
+` ……"Huh?" Senpai tilts her head.@
+` She frowns like she doesn't understand my words completely, and then denies it.\
+
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+`"Um, I don't quite understand, but you're saying that I was near your house two nights ago, looking like that?"@
+`"Yeah.@ Senpai, that was you, right?"@
+ld c,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
+
+`"No way.@ Tohno-kun, are you saying I look like I really have that much free time?"@
+br
+` ---Senpai is really angry.@
+` She can't be playing dumb or lying.\
+
+
+`"Ah----No, that's not it, but I just…… saw someone that looked like you in park last night, so---"@
+` Senpai gives a sigh.@
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"Tohno-kun, that wasn't me.@ I don't have that kind of hobby."@
+`"Ah---Yeah, I know.@ I just wanted to ask."\
+
+` …… Certainly after having her say that, she is right.@
+` Ciel-senpai and the person that night aren't related at all.@
+` In the first place, Senpai's just a normal person, and if she was actually there---she had to have seen me fight that bandaged guy with my knife.@
+` If she saw such a gruesome scene, there'd be no way she could talk with me normally like this.\
+
+`"…… Sorry, please forget about it.@ I guess it was just someone else."@
+ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
+
+
+`"That's fine, but…… did that person really look like me?@ That weird person?"@
+`"Well, I'm not too sure.@ It was dark, and far away………… huh?"@
+` Yeah, it was far and I couldn't make out her face.@
+` So why did I think it looked like Senpai……?\
+
+`"…… Hmm… Maybe there is something wrong with me."@
+` I cross my arms and think.\
+br
+wave se2
+
+
+` Then, the ten minute bell rings.@
+`"---Crap, we'll be late.@ Bye, Senpai, see you later!"\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_06a.jpg",%type_lcartain_mid
+
+` I dash into my classroom.@
+` It's still five minutes before class, so it's very noisy inside.@
+`"Arihiko, isn't here."@
+` Knowing him, he'll probably come in around second period.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+playstop
+
+!w1000
+
+
+
+bg "image\bg\bg_06a.jpg",%type_crossfade_mid
+
+wave se2
+
+
+` Lunch time.@
+` It looks like Arihiko's not coming.@
+` …… Inui Arihiko and Yumizuka Satsuki are the two people absent today.@ Yumizuka Satsuki has caught a cold or something and she will be absent for a while.\
+
+`"…… Senpai doesn't seem to be coming too, so I guess I'll eat by myself."@
+` I say that, but I'm not hungry.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\bg_06a.jpg",%type_crossfade_fst
+
+` …… What is it?@
+` I didn't feel so good to begin with, but after coming to school, I feel a lot worse.@
+` It's not just my body feeling heavy.@ The scar on my chest is irritating; it's an annoying sensation.\
+
+`"…… Maybe I shouldn't have come to school."@
+` …… For a brief moment, I see the worrying faces of Hisui and Akiha in my mind.@
+` Maybe the fact that I ignored Akiha's wishes for me to rest last night and instead went to see Arcueid might've caused this.@
+` Being worn out by just sitting, I start to feel a strange uneasiness.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+return

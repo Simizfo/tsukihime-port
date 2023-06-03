@@ -1,0 +1,716 @@
+
+mov $phasebg,"image\bg\ima_02.jpg"
+mov $phasetitle_a,":a;image\word\PCEL_12A.PNG"
+mov $phasetitle_b,":a;image\word\day_12.png"
+gosub *left_phase
+
+bg "image\bg\bg_18a.jpg",%type_crossfade_fst
+
+` The room feels empty without Ciel here.@
+` It's past seven in the morning.@
+` My body still feels tired after everything that happened last night.\
+
+` Monday.@
+` Normally, it would be time for me to go to school, but Ciel firmly told me not to leave this room.@
+` It's better if I don't go anywhere until Ciel returns.@
+` …… Having to tell Akiha I won't be coming back for a while.@
+` …… And to Kohaku-san.@ It can't be forgiven, but the fact is, I have to apologize to her.@
+` It's painful to leave those two things aside, but right now I think dealing with Roa takes priority.@
+br
+`"…………………"@
+` I pull the sheets over my head.@
+` Resisting the tightness I feel in my chest, I fall asleep once more.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w3000
+
+bg "image\bg\cmo_15.jpg",%type_crossfade_mid
+play "track04.ogg"
+
+br
+br
+br
+br
+br
+br
+` ----Has your goal changed?@
+!w750
+
+\
+` No, the goal itself has not changed.@
+` I aim for eternity.@
+` I tried to seek out eternity for no reason.@
+br
+` That was, really a pure, undefiled will.\
+
+` Changed.@
+` I've changed.@
+` My goal.@ The goal of attaining eternity has been degraded to a means to an end.\
+
+` How ugly is this.@
+` I understand so myself, yet I cannot change my heart.@
+` That woman.@
+` Because of that woman.@
+br
+` Because of that woman----I became impure.\
+
+` But, what should I do?@
+` The human species does not have the power to live for a thousand years.@
+` Mentally and physically, a human vessel cannot resist the wearing down of time.@
+` Even if you gained an immortal body as a vampire, you cannot stop the aging of the mind.\
+
+` You can stop the aging, but that is only a halt.@ There is no meaning to a mind which has stopped.@
+` I have to exist with the purity of my essence preserved.@
+br
+` Unless I can be like that---I won't reach that woman.\
+
+` As expected, I will use the method of reincarnation.@
+` Restarting from birth, being myself, and dying once more.@
+` In this cycle, I can exist while preserving the purity of my self.@
+br
+` What I regret is that I've lost my original purity.@
+` I, like those other pitiful wretches, am wishing to continue existing as my self as it is right now.\
+
+` It was the first time I knew hate.@
+` Because everything, it was a downfall which would have never occurred if that woman did not exist.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+bg "image\bg\bg_18a.jpg",%type_crossfade_mid
+
+`"…… That…… woman……?"@
+` I remember a strong will and wake up.@
+
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_18a.jpg",%type_nowaitdisp
+
+
+`"That--woman?"@
+br
+` ---Throb.\
+br
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_18a.jpg",%type_nowaitdisp
+
+bg "image\bg\bg_18e.jpg",%type_crossfade_slw
+
+`"Ou----ch."@
+br
+` --------Throb.\
+
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_18a.jpg",%type_nowaitdisp
+`"…… This…… woman, I know……?"@
+br
+` --------------Throb!\
+br
+quakex 4,100
+`"Gah---!"@
+br
+` ---What, is, this, headache?@
+br
+` It isn't, it isn't, natural……!\
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_18a.jpg",%type_nowaitdisp
+
+bg "image\bg\bg_18e.jpg",%type_crossfade_slw
+
+`"Ah…… gh……!"@
+` I hold my head with both hands.@
+` It hurts.@ I've never felt pain like this before.@
+` My head.@ My head feels like it's being hit with a hammer.\
+
+quakey 2,100
+`"G---gah………!"@
+` Sto, sto, p
+` If this, if this keeps up, it'll split apart.@
+br
+` My head, will, shatter apart------
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_18e.jpg",%type_nowaitdisp
+!w2000
+\
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_18e.jpg",%type_nowaitdisp
+quakey 2,100
+
+`"Gi-----!"@
+` My body convulses.@
+` It hurts.@ Won't it, ever, stop?\
+
+!w2000
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_18e.jpg",%type_nowaitdisp
+
+quakey 3,100
+
+`"Hya----"@
+` It hurts so much that I smash my head against the table.@
+br
+` A shattering sound.@
+` The glass table breaks into pieces.@
+` Blood flows from my forehead.@
+` But, it doesn't hurt one bit.@
+` More than that, this headache that comes for no reason, is far more----\
+
+!w1000
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_18e.jpg",%type_nowaitdisp
+
+quakey 3,100
+
+`"-------,t"@
+` Unbearable.@
+` I can't even pass out.@
+` How many seconds?@ How many minutes?@ How many hours, will this, pain last?\
+
+!w1000
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_18e.jpg",%type_nowaitdisp
+quakey 2,100
+
+`"---He,lp."@
+` It hurts.@
+` Trying to do something about it, I stab my hand with my knife.@
+` It's no good.@ It doesn't, hurt at all.\
+
+!w1000
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_18e.jpg",%type_nowaitdisp
+quakey 3,100
+
+`"-------"@
+` Ciel…… Ciel-senpai, has not come back yet.@ I look at the clock and it isn't even noon.@
+` It hasn't even been an hour since I woke up.\
+
+!w750
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_18e.jpg",%type_nowaitdisp
+
+quakey 4,100
+
+` There is, another twenty hours until tomorrow morning.@ Just knowing that almost makes me go insane.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+waveloop se1
+
+!w5000
+
+monocro #0000ff
+
+bg "image\bg\bg_18e.jpg",%type_crossfade_slw
+
+`"---------"@
+` Throb, throb, throb.@
+` I don't even know how long I withstood this pain.@ I passed my limit long ago.@
+` With all this pain, I'll die long before Ciel comes back.@
+br
+`"-------Gah."@
+` If I'm in this room, this headache will stay.@
+` Outside.@
+` I have to go outside or I'll go insane.\
+
+`"I-----can't."@
+` Ciel told me not to leave this room.@
+` But---If I stay here, I'll die before Roa takes over me.\
+
+`"I'm saying----I can't."@
+` My legs head towards the door.@
+br
+` For no reason.@
+br
+` I really wanted to see the golden moon.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+monocro off
+playstop
+
+bg "image\bg\bg_24d.jpg",%type_lcartain_slw
+
+br
+` ---The lines won't disappear.@
+` The wavering in my vision worsens.@
+` The night city is shrouded in a white fog, as if it was a city that died thousands of years ago.\
+
+br
+` There's no sign of anyone else.@
+` A cocoon that's like a spider's web is everywhere on every building.@
+` It's terribly quiet.@
+` Like a dead city at the bottom of a vast ocean.\
+
+br
+` In that illusion, I still walk.@
+` Overhead, the large golden moon shines radiantly.@
+` Is it the mercy of the moon?@
+` My headache has disappeared and my head is in a daze.@
+br
+` Under the moon.@
+` As if under a spell, I continue walking.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_27b.jpg",%type_lcartain_slw
+
+` Night hangs over the park.@
+` In the middle of my hazy vision, there is one figure that looks clear.@
+br
+`"------"@
+` For some reason, it seems like the other "me" wanted this.\
+
+br
+br
+br
+br
+` The moonlight is strong.@
+` Under the light as bright as the sun.\
+br
+br
+br
+br
+br
+br
+br
+` There, Arcueid stands dressed in white.\
+play "track09.ogg"
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"It's been a while.@ Isn't it a wonderful moon tonight, Shiki?"@
+`"--Arcueid.@ Didn't you go back?"@
+ld c,":a;image\tachi\ark_t05b.jpg",%type_crossfade_fst
+`"No, I haven't fulfilled my objective yet.@ I can't go back before then, can I?"@
+br
+` ---Effortlessly.@
+` Arcueid looks at me with crimson eyes.\
+
+
+`"Ts------"@
+` My breathing stops in my throat.@
+` An unnatural pressure, nothing like when I confronted Senpai.@
+` This is---the pressure that I feel being confronted as her "enemy".@
+`"------"@
+` I can't breathe.@
+` My throat doesn't move.@
+` If I do such extraneous movement---she would tear it out at that moment.\
+
+`"Stupid Shiki.@ This wouldn't have happened if you didn't side with that woman."@
+` Arcueid shows just a brief moment of pity.@ Then, her eyes light up with pure delight like a happy child.@
+ld c,":a;image\tachi\ark_t05d.jpg",%type_crossfade_fst
+
+`"So how is it, Shiki?@ How does it feel to have Roa inside you?"@
+` The white vampire princess speaks with indescribable enmity in her voice.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_27b.jpg",%type_crossfade_mid
+
+ld c,":a;image\tachi\ark_t05c.jpg",%type_crossfade_fst
+
+` Feeling the danger that sends chills up my spine, I clearly realize the situation.@
+br
+` ---Standing before me is Arcueid, who is trying to kill me.@
+` Our distance is---about seven meters.@
+` Damn it.@ With an opponent like this, you can't even feel safe with a hundred meters, but she is only seven meters away.\
+
+`"---What kind of nonsense are you saying?" I confirm that the knife is in my pocket and play dumb.@
+`"It's useless, you know.@ In the first place, Roa was made into a Dead Apostle by me.@ It's very easy for me to tell where the person who stole my power is."@
+br
+` ---I see.@
+` Come to think of it, Ciel said it before.@
+` That Roa became a vampire because he had his blood sucked by Arcueid.\
+
+`"I don't know why.@ There have been seventeen reincarnations before this, but this is the first time this has happened."@
+` She doesn't even move one bit.@
+` There's, no reason for her to come closer.@
+` Because, this is well within her range.\
+
+` …… Crimson, eyes.@
+` Being stared at by them, my headache returns again.@
+br
+` Throb.@ Throb.@
+br
+` Inside my head.@
+` The vampire called Roa is wanting to emerge.\
+
+`"Certainly, I can sense Roa.@ Back then, Roa must have transmitted himself to you.@ I really don't understand why though."@
+`"-------"@
+` …… It hurts.@
+` Every time Arcueid says his name, the memories of this guy rage in my brain.\
+
+br
+br
+br
+br
+` Throb.@
+br
+` Throb.@
+br
+` Thro-----b.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+bg "image\event\ark_e06a.jpg",%type_crossfade_fst
+
+br
+` ---Where… was it?@
+` Deep in the mountains, an old castle.@
+` The figure of a solitary girl bound there.@
+` Only that is burned into this man's soul, which has already become only a memory.\
+
+br
+` I… don't understand.@
+` Even though she was a True Ancestor, she was not even told the meaning of her own existence, and was only used as a tool to hunt fallen True Ancestors.\
+
+br
+` She herself does not receive any wounds whatsoever.@
+` The girl painted only in the crimson blood of her enemies.@
+br
+` Not knowing words, the woman was just looking up at the moon as if she was some sort of an idiot.@
+` Overhead, the huge golden moon.@
+` In that withering courtyard, only her figure was distinct.\
+
+br
+` He felt her figure was beautiful.@
+br
+` For the first time since he was born.@
+` Probably, no definitely, the only time in his life.\
+br
+br
+br
+br
+br
+br
+` ----Michael Roa Valdamjong fell in love with that white woman-----\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+`"--------"@
+` This is the first time.@
+` Not an impulse, but truly Roa's heart.@
+` The only remaining emotion.@
+` Roa's personality had long died, but it continues to exist without disappearing, that eternal memory.\
+
+`"…… I, see."@
+` That's why---he hated Arcueid so much.\
+` The woman who stole his purity.@
+` Just an instant.@ He only saw her for an instant, but his heart was stolen.@
+br
+` That hated True Ancestor that caused his purity to fall.@
+` That existence.@ He hated everything about that white vampire princess.\
+
+`"…… What a mistake."@
+` What a mistake it was.@
+` Roa hated her so much that he reincarnated so many times and always waited for Arcueid to come pursue him each time.\
+
+` For that, he did anything.@
+` He deceived Arcueid, fooling her when she didn't even know she was a vampire, and let her suck his blood.@
+br
+` Becoming a Dead Apostle of Arcueid, he used her power to destroy the remaining True Ancestors, and waited for her.\
+
+` Why did he not understand?@
+` The hate that caused him to reincarnate and wait for Arcueid.@
+` That isn't hatred.@
+` The man called Roa was so pure, he didn't even understand his own emotions.@
+` To think about someone else so much it makes you go almost crazy.@ That feeling is very similar to hatred.\
+
+` But, merely a single word.@
+` If this man called Roa could have been told his feeling was love, he wouldn't have made this mistake---\
+
+bg "image\bg\bg_27b.jpg",%type_crossfade_mid
+
+`"………………"@
+` ----For just an instant.@ No, for a long time.@
+` I saw the dream of the instigator of it all, the man who reincarnated to stay in the "present".\
+
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+`"You're pretty composed.@ You're in front of me and not even running away.@
+` Or, did you already give up, Shiki?"@
+`"Give up?@ What am I going to give up about?@ I won't lose to Roa.@
+` Tomorrow, for sure---"@
+` Ciel will return.@
+` So until then,
+` I can't let myself be killed by Arcueid.\
+
+`"---Hm?@ I didn't think you could still bluff around.@ I really thought over half of you was taken over by Roa already---I see, that's how it is."@
+br
+` Her voice sounds happy.@
+` …… I don't know what's so enjoyable, but it seems she still does have those kinds of human feelings.@
+` Then, if I can do something.@
+` Maybe there will be a chance to run away---\
+
+`"…… I don't know what you think you understood, but I'll settle the thing with Roa myself.@
+` I won't lose to Roa.@ If you say you want to kill Roa, then I'll kill him myself for you.@
+` So, you can just---"@
+ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
+`"I won't listen if you tell me to go back.@ You intend to get the help of The Church, right?@ I refuse to let them seal away Roa.@
+` Shiki, I want to eliminate Roa so I can get back my power.@
+` So, you know?@ If I don't do it myself, it would be meaningless."\
+
+`"----Then, no matter what---"@
+br
+` You're going to kill me, Arcueid?@
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+`"But Shiki, the Roa inside you is very weak.@
+` He probably can't take away a person's will unless he's born into their body.@ He somehow managed to transmit himself to you, but that was all he could do.@ He is only able to live as your dark side."@
+`"……… Eh?"@
+br
+` Does that mean that Roa's will is almost nothing in me……?\
+
+
+`"Arcueid, that means--"@
+`"Yes.@ There's no need for me to kill you if that's the case.@ I'm fine just having the power Roa stole from me working under me."@
+`"----?"@
+` She's saying there's no need for me to be killed.@
+` So why did she come to see me?@
+` Why---does she look at me with those serious eyes?\
+
+`"…… I don't understand.@ What are you trying to say, Arcueid?"@
+`"I'm telling you to become my servant."@
+`"Wha-----"@
+br
+` ---She doesn't seem like she's joking.@
+` When Arcueid and Senpai were fighting, she said it was just a joke.\
+
+`"…… What?@ That wasn't a joke?"@
+`"No.@ I like you.@ So isn't it natural for me to want you by my side rather than to kill you?"@
+br
+` ----Snap.@
+br
+` With that line, my headache pounds more than it ever has before.\
+
+` Roa.@ The guy inside my head rages against her words.@
+` …… I don't know if that comes from delight or from deep jealousy.\
+
+`"If you are willing to become my servant, I will stop Roa from consuming you.@
+` I don't think you even need to think about it, seeing how Roa will consume you like this."@
+`"…… You say it so simply, but how do you intend to stop this Roa inside me?"@
+`"Huh?@ The only one who can stop Roa is you, Shiki.@
+` But that method would mean your death.@
+` My method is simply strengthening you.@ As long as your will is stronger than Roa's, then it doesn't matter how much he rages in you, right?"\
+
+` Something bursts in my head again.@
+` Roa keeps raging.\
+` Don't let her fool you, he rages.@ This woman wants to make you her puppet.\
+
+wavestop
+
+` -----*sigh*@
+br
+` I take a deep breath.@
+` …… I won't believe Roa's words.@
+` But, even I can understand.@ The Arcueid now is slightly different from the one I knew.@
+` Certainly what she says might possibly stop Roa.@
+br
+` But---a heart strong enough to resist these headaches means a heart that is so strong that it won't feel anything.\
+
+` I take off my glasses.@
+` I take the knife out of my pocket.@
+` I take the blade out and hold it at eye level.\
+
+ld c,":a;image\tachi\ark_t05c.jpg",%type_crossfade_fst
+
+`"----Shiki."@
+`"I refuse.@ Sorry, but I won't be yours to possess."@
+` Because Ciel is going to come back.\
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"I see.@ Then, I guess it'll just have to be by force."@
+br
+` A hard footstep cracks through the air.@
+br
+`"You killed me once, so I always thought I should pay you back."@
+
+cl c,%type_nowaitdisp
+
+` Her white figure rushes forth with a gust of wind.@
+br
+` ----In that instant,
+` the fight begins.\
+playstop
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\ima_14.jpg",%type_lshutter_fst
+
+wave se11
+
+` Clang!@
+` Her claws meet my knife.@
+br
+` Under the golden moon, even if she is my enemy, her figure is still beautiful.\
+
+wave se11
+
+` Clang!@
+` We repel each other again.@
+` To be honest, I can't even see her movements.\
+
+wave se11
+
+` Clang!@
+` We repel each other once more.@
+` Arcueid isn't serious at all.@
+` But still, it should be easy for her to rip off my arms and legs.\
+
+wave se11
+
+` Clang.@
+` We repel each other again.@
+` My body moves without thinking.@
+` My arms and legs, this body, with just the intention of not dying, fends off Arcueid's claws by itself.\
+
+`"Tch-----"@
+` My lips curl in irony.@
+` I don't want to admit it, but it seems my body has become beyond that of a human's.@
+` In the dead of night, it seems Tohno Shiki has become like SHIKI, probably able to easily jump off the third floor of a building and be just fine.\
+
+` Cl, ang.@
+` But, this is it.@
+` From the very start---I knew I couldn't win against Arcueid.@
+` First of all, I can't see any "lines" on her.@
+br
+` I have no way of hurting her.@
+` Arcueid said it once.@
+` That during nighttime, there is nothing which can cause her death.\
+
+` Clang.@
+` She hits my knife.@
+` With just a swing of her arm, I fly through the air.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+
+`"K-----!"@
+` I manage to land on the ground and ready my knife.@
+` No matter how much I look, I can't see any "lines" on her.@
+`"Damn it.@ What nonsense you are……!"@
+br
+` ----Yes, I am so right.@
+` In the deep night without the mercy of the sun,
+` facing the princess of the moon is too reckless.\
+
+bg "image\bg\bg_29b.jpg",%type_lshutter_mid
+
+`"Ha----ah, ha."@
+` My throat is burning.@
+` My heart feels like it'll explode.@
+` I realize that since I saw her tonight, I was under the pressure of her crimson eyes and I haven't been able to breathe well.\
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_lshutter_fst
+
+`"Have you realized it yet?"@
+` She isn't even out of breath.@
+` Even though I'm gasping for air and my heart feels like it'll stop, she's completely relaxed.\
+
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+`"Geez, you really are stubborn.@ If you had that much strength, you should have gone ahead and killed Roa."@
+`"Wha---what, are, you, saying?"@
+` Gasping, I manage to suck in air.@
+`"Kill, Roa?@ That means… to kill myself, right?"@
+` …… Well, to fight and kill myself rather than running away may indicate a strong heart, but…\
+
+`"You don't seem to understand.@ Shiki, your eyes do not kill the body, but the meaning… existence itself.@
+` The death of things, those "points" are not something that kills the body.@
+` It does not mean you are killing their life.@ That kind of power is very common in this world.\
+
+`"Shiki, your unique eyes, they kill the meaning of things.@ What is destroyed is the existence.@ The extinguishing of life is only a side effect that comes afterwards.@
+` With your power, it is possible to kill the soul without harming the body.@ Usually, a body without a soul will cease to live, so it is like suicide.\
+
+`"But that's different for you right now, right?@ Because you have two souls in one body.@
+` Well--it's always the case that the weaker one loses.@ You do seem to be about even right now with Roa.@ I suppose there is a high probability that you both will disappear."@
+`"Eh-----hey, wait.@ What do you………"@
+ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_fst
+
+`"No, I won't wait."@
+cl c,%type_nowaitdisp
+
+\
+
+quakey 4,375
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+wave se4
+
+`"Gh----!"@
+` I hear a sound from behind my head.\
+` Her body pushes up against my shoulders.@
+` I'm down.@
+` In an instant, without me knowing what's going on, Arcueid has pinned me down.\
+play "track08.ogg"
+
+bg "image\event\ark_e04b.jpg",%type_crossfade_fst
+
+wave se0
+
+`"------"@
+` Arcueid glares at me without speaking.@
+` Her body weight against my shoulders.@
+` She stops as if hesitating over what to do with me.@
+wave se0
+
+`"------"@
+` I gasp.@
+` But, it might have been just her silence.\
+
+wave se0
+
+`"------"@
+` This close.@
+` Now that we are so close---I may be able to see it.\
+
+wave se0
+
+
+` ------I stare at her body.@
+br
+` The core of my brain screams in protest.@
+` Completely unlike the pain of my headache before---as if it really were tearing itself apart.\
+
+wave se0
+
+`"-------"@
+` But it's no good.@
+` I can't read the "death" from an existence like Arcueid.@
+` Daytime might be different, but at night, she is close to being a perfect life form that doesn't even carry the concept of death.\
+
+wave se0
+
+`"…… What do you intend to do with Roa, Arcueid?@ You said you wouldn't kill me, but as long as I live, Roa will still be alive."@
+`"I don't care about a diluted Roa.@ …… Yes, that's why I could have let you go, Shiki."\
+
+wave se0
+
+`"---Oh, you don't have to hold back, go ahead and let me go.@ Don't worry about me and go home, back to your daddy."@
+`"But you know, isn't it natural for me to take back my own power?@ And more than anything else, I do like you."@
+br
+` Squeeze.@
+` The body weight on my shoulders becomes even heavier.\
+
+wave se0
+
+`"More than killing you and destroying Roa, I want to take you in."@
+br
+` So, I won't kill you,
+` her red eyes seem to say.\
+
+wave se0
+
+`"I can't believe it, but it seems I really like you.@ That's why I'll save you.@ I won't suck your blood, and I won't do anything you won't like."@
+` So please listen to what I tell you, her red eyes say.\
+br
+` ---Those are, without a doubt, her true feelings.@
+br
+
+
+
+
+
+return

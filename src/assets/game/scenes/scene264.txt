@@ -1,0 +1,35 @@
+
+bg "image\bg\bg_05a.jpg",%type_nowaitdisp
+
+`"…… Why?@ Why were you doing those things?"@
+`"Why?@ I do it because it's my job."@
+` Saying that, she looks directly at me.\
+
+`"I am here to execute vampires.@
+` So---in the worst case, I cannot leave you like this now, Tohno-kun."@
+`"Wha----"@
+` Being stared at with those emotionless eyes, my heart skips a beat.\
+
+`"Let me ask you, Tohno-kun.@
+` Why you are associated with a vampire like her?@ Depending on your answer, I will---"@
+br
+` It feels like the air has literally frozen.@
+` ---I thought I would be asking the questions, but our positions have been reversed.@
+br
+` But I don't know what Senpai will do if I don't answer, and a chill runs through me.\
+
+
+`"Now, tell me.@ Why you---Tohno-kun is with that vampire."@
+`"Ah---no, no Senpai, that's not it.@
+` Certainly I did agree to help her, but that's already over.@
+` But yesterday, I thought Arcueid was the one behind the serial killings, but that couldn't be right, so I went to ask her and---"@
+cl c,%type_crossfade_fst
+\
+
+` I tell her all about last night.@
+` Senpai listens to it all silently.@
+` How I met her accidentally, how she explained to me about the vampire in this city, how I teamed up with her to save the city, and everything up until now.\
+
+
+
+return

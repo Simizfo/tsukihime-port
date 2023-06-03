@@ -1,0 +1,52 @@
+
+
+
+
+
+bg "image\bg\bg_06b.jpg",%type_nowaitdisp
+play "track03.ogg"
+
+
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+
+
+` You have reached Hisui's Good Ending.@ Well done.@
+br
+` Each heroine (with one exception) has two different kinds of endings.@
+` A True Ending and a Good Ending.@
+` Since you can't reach Hisui-san's Good Ending without seeing the True Ending, you have now finished Hisui-san's route completely!\
+
+
+` Well then, thank you very much for playing up to this point.@
+` Let's meet again somewhere in Tsukihime.@
+
+br
+`"Ciel-san.@ I also have something I must impart."@
+br
+` Huh, Professor Roa?@ This is rare indeed for you to come to a place like this."\
+
+ld l,":a;image\tachi\roa_t05a.jpg",%type_lshutter_fst
+`"This circumstance is unique.@ I will get to the point right away.@ Now that you have cleared Hisui-san's route, there should be another choice for you on the first day.@
+` This is the unlocking of the last route in Tsukihime.@
+` …… Well, even if I do not tell you this, it is very clear if you go to the graphic mode."@
+br
+` That's right.@
+` Well then, please continue on and enjoy Tsukihime!\
+
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+
+
+
+
+return

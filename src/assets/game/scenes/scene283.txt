@@ -1,0 +1,194 @@
+
+monocro #ff0000
+bg "image\bg\bg_09b.jpg",%type_nowaitdisp
+
+
+`"Tsss, ah…………!"@
+` My body falls with a crash.@
+`"Ah, ah, ah…………!"@
+` My entire body is convulsing.@
+` It, hurts.@
+` My chest, my chest is, burning,,,,,,!\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_mid
+monocro off
+
+
+`"----,---,aaaah………!"@
+` My mind is drifting away.@
+` My fingers claw at the tatami mats in pain.@
+` I pull and rip at the mats.@
+` But, it doesn't stop the pain.\
+
+`"Hagh, gah, ghaaaaa……!"@
+` Pain.@
+br
+
+` Pain.@
+br
+` Pain.@
+` Such pain, is frightening.\
+
+`"U, ugah, kuaaaa………!"@
+` I can't bear it.@
+` If it lasts another second,
+` then, it would be better, just to die----!\
+
+br
+br
+br
+br
+br
+br
+` "Fine.@ I'll grant your wish, Shiki."@
+\
+
+`"----Eh?"@
+` I lift my head off the floor.@
+` Before that.@
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+playstop
+
+!w6000
+
+\
+
+bg "image\bg\bg_09c.jpg",%type_crossfade_slw
+
+
+` Before that.@
+` My pain disappears.@
+` I don't feel pain anywhere.\
+` I don't even feel heavy.@
+` I don't even feel… alive.\
+
+`"----"@
+` I try to say something, but my throat doesn't move.@
+!w750
+
+` There's nothing.@
+!w750
+` No pain,
+!w750
+` no sensation,
+!w750
+` not even, freedom.\
+
+
+`"-----!"@
+` I don't know what's going on, so I try to get up.@
+br
+` My body doesn't even twitch.@
+` It's not that I'm tied down, nor is it that my entire body is numb.@
+br
+` If I have to give a metaphor,
+` it's like my body is already dead, but my mind is mistakenly still lingering in my body.\
+
+
+`"------"@
+` Of my five senses, only my sight is still alive.@
+` …… the room is dark.@
+` It's night outside already.@
+`"---"@
+` I can't move my face, so I move my eyes.\
+
+`"---Oh?@ I thought you had completely disappeared, but you're awfully persistent, Shiki."\
+
+` I can hear a voice I shouldn't be able to hear.@
+`"----!"@
+` I glance around the dark as best as I can.@
+` There,
+` I see something I don't know about.\
+
+ld c,":a;image\tachi\roa_t04a.jpg",%type_crossfade_fst
+
+`"----"@
+` Who is that?@
+` I've never seen him.@ I've never seen him---but I feel like, I've known him from a long, long time ago.\
+
+waveloop se1
+
+`"What's this?@ How mean of you, Shiki.@
+` You've been looking for me for so long and when I come out, you don't remember me?"@
+` With an amused laugh, he stares at me with blood-shot eyes.\
+
+`"-----"@
+` My mind, the only thing still working, freezes.@
+` He didn't say it yet,
+` But---I know he is a vampire.@
+` That he is the "Serpent" Senpai and Arcueid are looking for.\
+
+ld c,":a;image\tachi\roa_t05a.jpg",%type_crossfade_fst
+
+`"…… No, that's wrong.@ Certainly I am the vampire known as the Serpent of Akasha.@
+` But to you, I'm not the Serpent, but rather, SHIKI, right?@
+ld c,":a;image\tachi\roa_t04a.jpg",%type_crossfade_fst
+` ---Man, how cold of you.@ You make me look stupid for thinking about you all these eight years."\
+
+` -----?@
+` SHIKI?@
+` Eight years?@
+` What is that----?\
+
+`"---Did you really forget Shiki?@
+` …… Was the old man's hypnosis that good or---did you lose your memory after dying once?@
+` Shit, either way, what a waste!@
+` Do you understand!?@ These eight years, I've waited these eight years!@ I've waited for this instance where I could steal everything from you, the one who killed me!@ But what use is it now if you don't remember!?"\
+
+`"-----"@
+` What is, he saying?@
+` I---killed him?\
+
+`"That's right!@ If you've forgotten, then remember.@ The three of us were always together, right?@
+` In the Tohno mansion.@ Akiha and you, and I would play in the garden together.@ Before I became like this eight years ago that day!"\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\cmo_06.jpg",%type_nowaitdisp
+bg "image\bg\bg_09c.jpg",%type_nowaitdisp
+
+
+` ---I, can't remember.@
+` Certainly---it seems like there was another kid with us back then.\
+
+ld c,":a;image\tachi\roa_t04a.jpg",%type_crossfade_fst
+
+`"…… You can't remember?@ And we were such good friends too."@
+` He grits his teeth.@
+` His whole body quivers with emotion as if he was brimming with vexation.\
+
+`"---Geez.@ Was I the only one in pain?@
+` That's terrible, Shiki.@ I was always locked away by my old man, but I could always sense you.@
+` Haha.@ Because I was using your 'life'.@ Even though we're not connected by blood, we're connected by our souls."\
+
+`"That's why you---I wanted you to have a terribly gruesome end."@
+` How unfortunate, he says.\
+
+`"What I wanted to say is this, Shiki.@ I'm your brother.@ But you and Akiha seem to have heartlessly forgotten that."@
+`"-----"@
+` My…… Tohno Shiki's, brother………?\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+`"---If you've forgotten, then there's nothing to talk about.@
+` Your painful death is the goal of this body…… of Tohno SHIKI.@
+` I've gone along with that this long, but it's time to lower the curtain.@
+` Even for me---to have two bodies with one life is not very efficient."\
+
+` The voice nears.@
+` I'll be killed like this.@
+` …… No, I say I'll die, but maybe I'm already dead.@
+` My arms and legs can't move.@
+` My eyes, my ears, my nose don't work.@
+br
+` That's why there isn't even any pain.@
+` I am killed so vaguely that I don't even realize it.\
+wavestop
+
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+return

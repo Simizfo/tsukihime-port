@@ -1,0 +1,51 @@
+
+
+
+bg "image\bg\bg_06b.jpg",%type_crossfade_mid
+
+
+` The last class of the day ends.@
+` I don't feel like going to the mansion right away, so I just blankly stare out of the window overlooking the school grounds.@
+` The classroom is dyed orange by the sunset.@
+` It's like red watercolor paint, and it hurts my eyes.@
+br
+` …… I don't like red.@
+` It feels like it soaks deep into the back of my eyes and I want to throw up.\
+
+bg "image\bg\ima_08.jpg",%type_crossfade_fst
+
+` It seems I am weak against things that resemble blood.@
+` No, I should say I am weak against blood itself.@
+` Eight years ago, I had a near-death experience.@
+` I was in an accident where I was injured in the chest and I teetered between life and death for days.@
+` I should've died instantly.@ But, miraculously, I survived.@ Maybe it's because of the great medical treatment.@
+` However, the injuries were so severe that I don't even remember the accident.\
+
+` Eight years ago, when I was a child.@
+` I felt a "thud" pass right through the middle of my chest, then I passed out.@
+` When I woke up, I was in a hospital bed.@ All I could remember afterwards was the pain and the cold.@
+br
+` I don't remember much of the accident, but even today, the scar on my chest remains.@
+` I guess numerous fragments of glass pierced my chest, leaving burn-like scars there and in my back.\
+
+` …… Actually, I was quite surprised at being saved.@
+` Ever since then, I frequently collapse from an anemia-like dizziness, and cause a lot of trouble for others.@
+` Maybe that's why my old man believed I was unfit to be heir to the Tohno household and entrusted me to our relatives.@
+br
+bg "image\bg\bg_06b.jpg",%type_crossfade_fst
+`"…… The wound on my chest, huh."@
+` The huge scar in the middle of my chest, hidden from view by my uniform.\
+
+` Now that I think about it, after that accident was when I started to see those "lines".@
+` I am able to forget them, thanks to the glasses that Sensei gave me.@ But I think I would have completely gone mad if I never met her.@
+` Keiko-san---the person who had been my mother up until now, said when I left that the Tohno household wasn't "normal".@
+br
+`"…… No problem.@ I'm not a 'normal' person myself."@
+br
+` Adjusting my crooked glasses, I pick up my bag.@
+` I can't stay in the classroom forever.\
+
+` Now then---
+br
+
+return

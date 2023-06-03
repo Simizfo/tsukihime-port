@@ -1,0 +1,42 @@
+
+
+bg "image\bg\bg_15c.jpg",%type_nowaitdisp
+
+` ----I refuse.@
+` I know I have to refuse.@
+` No matter how much I think about it, I can't do anything.@
+br
+`"----Arcueid.@ Sorry, but I----"@
+br
+` Am I going to abandon her?@
+` It's my fault.@ Because of Tohno Shiki, she can't move as she needs to.\
+
+`"----I----"@
+br
+` Am I running away?\
+` From that----monster who mercilessly, cruelly, one-sidedly slaughtered all those people?@
+br
+` Run away and pretend like I never saw it?@
+` After being the only one to survive, I'm just going to run away without any pangs of guilt?\
+
+`"--------"@
+br
+` The lines of death only I can see.@
+` Didn't that important person once tell me that I have this power because there would be a time when I would need it----?\
+
+ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
+`"----Shiki?"@
+`"…… Yeah, I know.@ I can't run away by myself."@
+cl c,%type_crossfade_fst
+
+br
+` I look up at the ceiling and take a deep breath.@
+` Fortunately, that prepares me just a bit for what is to come.@
+br
+`"Alright----I'll help you, Arcueid.@ I think it's my duty to do so as the only one who survived in that hotel."\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w1000
+
+
+return

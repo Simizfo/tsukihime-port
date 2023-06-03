@@ -1,0 +1,127 @@
+
+
+bg "image\bg\bg_32d.jpg",%type_lcartain_mid
+
+play "track06.ogg"
+
+` …… I go up the residential hill and arrive at the outskirts of the mansion.@
+` It's around two in the morning.@
+` As expected, I'm totally assailed by sleepiness.\
+
+`"…… I wonder if she's going to be okay."@
+` I'm concerned about how she seemed when we parted.@
+` It seemed like it wasn't pain from her wound, but---\
+`"Hm…… crap, the front gate is locked."@
+` It's only natural, but it's still locked.@
+br
+` …… If I climb over the wall like yesterday, alarms will probably go off.@
+`"…… Dang…… does this mansion have a rear entrance or something?"\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_47.jpg",%type_lcartain_mid
+
+` …… I walk around the mansion perimeter.@
+` Anyway, there is something like a rear entrance, but it's locked so I can't get in.@
+` It's probably not possible to force my way through to the garden.\
+
+`"…… Dang.@ If this keeps up I'll have to spend the night out here……"@
+` I want to avoid that if possible.@
+` People don't really go by the mansion, so after the sun sets it's just a deep darkness around here.@
+` Walking around during these hours sends chills down my spine.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_47.jpg",%type_crossfade_fst
+
+
+`"Hm?"@
+br
+` What is that?@
+` It feels like there's someone lurking in the shadows not illuminated by the streetlights.\
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_47.jpg",%type_nowaitdisp
+
+
+
+br
+` ---Thu,mp.@
+br
+` My heart stops my breath.@
+` My blood rushes through my body, this sensation---\
+
+br
+br
+br
+br
+br
+br
+br
+` Certainly, there's someone standing there.@
+` The figure gets closer and closer.\
+
+br
+` Footsteps.@
+br
+` The sound of dry footsteps reaches my ears.\
+
+br
+` ----Thu, mp.@
+br
+` I have a bad feeling about this.@
+` Chills race up my spine.\
+
+`"----"@
+` The figure draws near.@
+` Suddenly----the streetlights shatter loudly.@
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+` The moon is hidden by the clouds.@
+` The whole world instantly turns to darkness.@
+br
+`"!"@
+br
+` ----Thump………!@
+
+` My heartbeat skips, as if warning me of death.@
+` Perhaps I was tired after having walked the perimeter of the mansion for so long.@
+` My body gave an all-too-sluggish reaction as I tried to leap backwards.\
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+wave se5
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+
+` A knife running through the dark.@
+` The sound of the flesh over my heart being sliced.@
+br
+
+bg "image\bg\ima_13.jpg",%type_lshutter_fst
+
+`"Ah---eh?"@
+br
+` ---I don't, understand.@
+br
+` Just… that… there's a knife, sticking through my chest.\
+
+bg "image\bg\bg_47.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\roa_t07b.jpg",%type_crossfade_fst
+bg "image\bg\bg_47.jpg",%type_crossfade_fst
+
+
+` The clouds part for a brief moment and the dark figure is illuminated.\
+br
+`"Ah----"@
+` An eerie figure wrapped entirely in bandages.@
+` That's… the last thing I see.\
+playstop
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+return

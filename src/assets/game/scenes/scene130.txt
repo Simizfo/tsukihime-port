@@ -1,0 +1,58 @@
+
+
+bg "image\bg\bg_01a.jpg",%type_lcartain_mid
+
+` ----I arrive thirty minutes earlier than usual.@
+` The figures of students around the school gate are sparse.@ It seems I'm the only one who's arrived at this odd time.\
+
+bg "image\bg\bg_03a.jpg",%type_lcartain_mid
+
+
+` On the school grounds, the athletic clubs are holding their practices.@
+` …… I'm not in any clubs right now, but truthfully, I like to move around a lot.@
+` I know that I have some athletic ability, at least enough to be proud of.@
+br
+` But, I can't join any clubs.@
+` My body always has this recurring anemia so I would just be a bother----and my doctor has told me that I should not exercise frequently.\
+
+` Since middle school, I've been asked more than a few times to join a club.@
+` But I always have to say "it's not my thing" and refuse.@
+` Every time I refused----I felt a sense of separation.@
+` That might have been…
+` a subconscious wall that told me I will never be able to mix in with the people on the other side.\
+
+`"…………"@
+` Ah, that's enough.@ This really isn't my thing.@ I'll stop thinking such thoughts and hurry on to the classroom.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_06a.jpg",%type_lcartain_mid
+play "track03.ogg"
+
+`"Huh----?"@
+` I thought I was the first one, but it seems like some of my classmates are already here.\
+
+`"Yo, you're early Tohno."@
+`"Morning.@ This class seems to have a lot of people with spare time."@
+`"Nah.@ Our practice just got over with.@ Those that come here this early who aren't in clubs are usually only those with daily duties."@
+br
+` I see.@ That does makes sense, now that he mentions it.@
+` Greeting those around me, I take my seat.@
+` It's half an hour before homeroom.@
+` It's not a bad idea to just watch my classmates arrive.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_06a.jpg",%type_lshutter_mid
+
+
+` The classroom starts to get busy around seven fifty.@
+`"----Huh?"@
+` I think I saw Senpai in the hallway.\
+
+`"She's down at the first year hallway again----what is she doing?"@
+` Maybe she came to see me?@
+` Then----
+br
+
+
+
+return

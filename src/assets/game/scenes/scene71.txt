@@ -1,0 +1,38 @@
+
+bg "image\bg\bg_34a.jpg",%type_nowaitdisp
+
+
+`"Ah, Akiha.@ If I remember correctly, you go to Asagami Ladies' Academy, right?"@
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+`"---That's right.@ Asagami Ladies' Academy goes all the way from middle school to university."@
+` Akiha's gaze seems to ask, "What about it?"@
+`"Well, that's a boarding school for ladies, isn't it?@ I'm wondering why you're commuting there from home."@
+`"Dear Mr. Asagami and Father were friends, so he indulges my requests.@ There is a provision to attend school from one's home under certain circumstances."@
+` Akiha gives a concise response.\
+`"No, that's not what I'm asking about.@ You were living in the dormitory up until the old man died, right?@ Why are you only starting to commute there now?"@
+`"Eh----"@
+ld c,":a;image\tachi\aki_t16a.jpg",%type_crossfade_fst
+` She holds back her words and looks away.@
+cl c,%type_crossfade_fst
+\
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Shiki-sama, Akiha-sama has traditionally spent half of every week here.@ It is nothing extraordinary for her to commute to the Academy from the mansion."@
+`"Ah, really?@ That sounds tough.@ Asagami Ladies' Academy is in the next prefecture, right?@ Isn't it easier for you to enjoy the dormitory life rather than having to come back to the mansion all the time?"\
+cl c,%type_crossfade_fst
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+`"…… Yes, you may be right.@ But it is what Father wanted, so I spend half the week here."@
+`"Hmm… but the old man isn't here anymore, so you don't have to force yourself, right?@ Dormitory life looks kind of fun, after all."@
+ld c,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
+`"Well, I wouldn't be troubled if it were that easy.@ But if I were to leave you by yourself, there's no telling what might happen to you, is there?@ With things like what happened yesterday, I will still be attending school from the mansion for now.@
+` ---One more thing, Nii-san…"@
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+` She straightens her posture and looks right at me.\
+`"…… Uh… yeah?"@
+`"The lodgings at Asagami Ladies' Academy are not dormitories.@ They are boarding houses.@ Please get it right next time."@
+cl c,%type_crossfade_fst
+` …… Akiha's words are wrapped in thorns.@
+` Actually, I was pricked plenty of times by them my first day back, but this morning there is something sulky about them.\
+
+
+return

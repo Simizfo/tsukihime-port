@@ -1,0 +1,81 @@
+
+
+bg "image\bg\bg_19d.jpg",%type_nowaitdisp
+
+` ---As long as Arcueid is unable to move, blindly going outside would be dangerous.@
+br
+`"…………"@
+` Gripping the knife with one hand, I hold my breath.@
+` Arcueid is silent too.@ She looks like she's being careful of what's around her.\
+
+` The floor below is being noisy.@
+` Perhaps the shock woke up the guests and maybe they're complaining to the hotel people.@
+` It's still four in the morning, but even so, the noise is as loud as that of a festival.@
+br
+` ---Even that falls silent a few minutes later.\
+
+wave se0
+` The noise disappears.@
+` A sickening silence.@
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+playstop
+`"------!"@
+` The lights go out.@
+` At the same time,
+wave se4
+wave se4
+wave se4
+wave se4
+` the sound of countless things hitting the door.\
+
+`"Are you prepared, Shiki?"@
+` Arcueid whispers in the dark.\
+
+`"…… Prepared, for what?"@
+` I don't even have to ask her.\
+wave se4
+!w1200
+!w1200
+wave se4
+wave se4
+!w1200
+wave se4
+!w1200
+wave se4
+!w1200
+wave se4
+!w1000
+wave se9
+br
+` ---If remaining in here was a mistake…
+` Then that question was also a mistake.@
+
+` I turn towards the door at the sound of it breaking.@
+`"--------"@
+` No sound escapes from my mouth.@
+` As I turn around, bright white teeth fill my vision.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+
+` Like a giant maw, capable of consuming me whole.@
+` Somehow, I'm able to calmly tell it's the jaws of a shark.\
+
+bg "image\bg\ima_12.jpg",%type_lshutter_fst
+
+` Fresh blood spills everywhere.@
+` With a thump, what remains of my body falls to the floor.@
+` What falls is my head.@
+` Everything below my face has been consumed in one bite.@
+br
+` That    is the last scene     I ever see.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+return

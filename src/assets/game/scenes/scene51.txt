@@ -1,0 +1,111 @@
+
+
+
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+
+
+
+` The howling continues.@
+` There's no way I can sleep like this.@
+` …… I can't sleep, but that's just normal.@
+br
+`"…… I'm sleepy, so I'll pass."@
+` Pulling the sheets over me, I stretch out on the bed.@
+` I can just think of the howling as the sound of something mundane, like cars driving by on the street.\
+
+` *sigh*@
+` Today's been a very long day.@
+` I'm mentally tired from eating dinner in this unfamiliar mansion and my conversations with Akiha and everyone else.@
+` After all that, the howling is just background noise.@
+` I close my eyes and gently fall asleep.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w2000
+play "track07.ogg"
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+
+br
+` ---I have a nostalgic dream.@
+br
+` The end of summer eight years ago.@
+` After I was injured, was taken to that hospital where no one ever visited, and met Sensei.@
+` Upon returning to the mansion, I heard from my old man that I would be taken in by a family I had never heard of.@
+br
+` Everything happened so fast.@
+` Right after the day I left the hospital, I ended up going to the Arima household.\
+
+` There was not a single cloud in the blue sky that day.@
+` The start of autumn.@
+` I was led away from the Tohno mansion.@
+br
+` But a little before that…
+` That girl had come to see me, sneaking past the eyes of the adults.\
+
+bg "image\bg\cmo_20.jpg",%type_crossfade_mid
+
+
+br
+br
+br
+br
+br
+br
+`"When you are about to leave, please come to the tree in the rear courtyard."@
+` After being told that, I snuck out from under my old man's eye and out to the rear courtyard.\
+
+` The sky was blue.@
+` Below that deep blue sky that seemed to extend forever, she waited for me.@
+` As far as I knew, this was the first time she had left the mansion to come outside.\
+
+`"Take this."@
+` Saying that, she undid the ribbon that bound her hair and handed it to me.@
+` I guess it was her farewell gift to me, but as a child, I didn't even feel happy about it.@
+br
+` …… After all, what kind of a nine year old boy would feel happy about receiving a ribbon?\
+
+`"That ribbon is my favorite, so give it back to me later, okay?"@
+` But those were the words that saved me.@
+br
+` "Give it back," she said.@
+` "Come back," is what I heard from those words.@
+br
+` ---Just that was good enough for me.@
+` That last day, with no one to even see me off.@
+` For her, who I had never even spoken to, to say that to me… it made me happy.\
+
+` ---But I could not say, "I'll definitely return it."@
+br
+` As clever as I was at the time, I realized I would never be able to return to this mansion ever again.@
+br
+` …… Those were the only words we exchanged.@
+` Something about her icy eyes was very sorrowful.@
+` It was time, so I began walking towards the doorway.@
+` The girl just stood there like a doll, watching me leave.\
+
+br
+br
+br
+br
+br
+br
+` A distant dream of what happened on one fine day.@
+` Under the cloudless blue sky.\
+
+!w1000
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+playstop
+
+!w3000
+
+
+
+
+
+
+
+
+
+return

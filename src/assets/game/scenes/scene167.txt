@@ -1,0 +1,20 @@
+
+
+bg "image\bg\bg_32a.jpg",%type_nowaitdisp
+
+`"How the heck am I supposed to know?@ You're a vampire, so I bet you think a lot differently than we do."@
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+`"Hey……!@ What do you mean!?@ My thought processes are basically the same as a human's, so there's only a little difference!"\
+
+`"But still different, right?@ Well, leaving that aside, it's impossible to understand another's feelings.@ I'm not too sure about my own emotions, so it's impossible for me to understand a vampire's train of thought.@
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+`"Yeah!@ I don't understand you either; there's no need to understand!@
+` Yeah, yeah, I'm just an idiot for asking you!"@
+cl c,%type_crossfade_mid
+` Arcueid turns away with a "hmph!"\
+
+` …… She's gotten a little angry, but at least she seems convinced.\
+
+
+
+return

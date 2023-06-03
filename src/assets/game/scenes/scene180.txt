@@ -1,0 +1,62 @@
+
+bg "image\bg\bg_25b.jpg",%type_nowaitdisp
+
+` ----I'll go to Arcueid's apartment.@
+br
+` I don't know what's behind it all, but she was breathing so painfully.@
+` Rather than trying to hunt The Dead, she might have just gone back to her room.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_12b.jpg",%type_lcartain_mid
+bg "image\bg\bg_13b.jpg",%type_lcartain_mid
+
+` …… I press the doorbell.@
+` It doesn't seem like anyone's coming out.@
+`"----Shit, she hasn't come back?"@
+` No matter how many times I push the button, her door doesn't open.\
+
+`"………"@
+` Did she not come back, or is she just not coming out?@
+br
+` ----After hesitating, I decide to go inside.@
+br
+` It'd be a simple thing to cut the "lines" on the door.@
+` But, I should just check the knob first.\
+
+`"…… Huh?"@
+` It's not locked.@
+` The door opens simply with a turn.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_15b.jpg",%type_lcartain_mid
+
+
+`"…… Arcueid, are you here?"@
+` …… No response.@
+` Did she not lock it in the first place?@ There's no one around.@
+`"Where does she think she's going in that condition……!?"@
+quakex 1,300
+` I slam my fist against the wall.@
+`"…… Grr."@
+` …… what am I doing?@
+` If I have time to let it out on the wall, I have to go out and look for her----\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w2000
+
+bg "image\bg\bg_25b.jpg",%type_lcartain_mid
+
+
+` …… I can't find her.@
+` Come to think of it, if she really intends not to be found, there's no chance of me finding her at all.\
+
+`"…… She said we'd meet again tomorrow."@
+` All I can do in this situation is to trust her and wait for tomorrow night.@
+`"………………"@
+` With a great uneasiness in my chest, I return to the mansion.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w2000
+
+
+return

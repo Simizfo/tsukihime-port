@@ -1,0 +1,69 @@
+
+
+bg "image\bg\bg_04.jpg",%type_nowaitdisp
+
+
+`"Arihiko's just one of my classmates.@ But you haven't answered my question, either."@
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"Very well.@ What is it, Nii-san?"@
+`"What is it!?@ Why have you transferred to this school?@ What possible reason could you have for transferring to a second-rate elevator school!?"\
+
+ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+`"So you say, Nii-san.@ But I can go to school wherever I choose; I do not need to explain myself to you."@
+`"…… Don't be stupid.@ I'm your brother!@ I can't just overlook things that are against your best interests.@
+` Frankly, I can't see any benefit in you transferring to this school.@ Since our old man isn't around anymore, it's my responsibility to look out for you…!"\
+
+ld c,":a;image\tachi\aki_t16a.jpg",%type_crossfade_fst
+
+`"…… What?@ It's not fair to say things like that at times like these."@
+`"'Not fair' is my line.@ What were you thinking, transferring without even telling me?@
+` I won't accept this transfer until I hear a good reason!"@
+
+ld c,":a;image\tachi\aki_t17a.jpg",%type_crossfade_fst
+
+`"Ah----"@
+`"If I'm not satisfied with the reason, I'll send you right back to your own school.@ So, tell me, Akiha.@ Why did you change schools?"@
+
+cl a,%type_crossfade_fst
+
+` Akiha falls silent and looks down.@
+` A very brief moment later, she raises a brave face.\
+
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"…… I was worried about you, Nii-san.@ Is that not a sufficient reason?"@
+br
+` -------Eh?@
+br
+`"…… Ha, hang on.@ What do you mean, worried about me…?"@
+` What sort of reason is that for transferring?\
+
+ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+`"Well, looking at your unruly behavior recently, I decided that in order to prevent you from disgracing the Tohno name, I would have to keep a close eye on you."@
+` Akiha explains clearly.@
+`"Erk----"@
+` When she says "unruly behavior", I can't help but nod.@
+` It's true; my everyday life since coming here has surely been an annoyance to Akiha and the others.\
+
+`"Bu, but, transferring is still a bit much, isn't it?@ What about your friends?"@
+
+ld c,":a;image\tachi\aki_t05a.jpg",%type_crossfade_fst
+
+`"That's none of your concern, Nii-san.@ If you feel even a little bad for me, then all you have to do is change your way of thinking from now on."@
+` Akiha turns sharply away.@
+` …… Well, this is just the way she is.\
+
+`"…… Alright, do as you please.@ But one day, you'll regret it."@
+
+ld c,":a;image\tachi\aki_t06.jpg",%type_crossfade_fst
+
+`"That's fine.@ I wasn't thinking of having you worry over me, Nii-san."@
+` With a sound of exasperation, Akiha starts to sulk.\
+
+cl a,%type_crossfade_fst
+
+return

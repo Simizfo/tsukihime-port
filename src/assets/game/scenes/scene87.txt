@@ -1,0 +1,96 @@
+
+bg "image\bg\ima_06.jpg",%type_nowaitdisp
+
+br
+` ----I value my life.\
+
+` I recall the scene yesterday when I killed Arcueid.@
+` The stench of death and blood.@ ---I never want to experience something like that again.@
+` If I were to remain with Arcueid, there'd be no question that I would be subjected to that scene again.@ If I don't want that, I'll have to go back to the mansion.\
+
+`"------"@
+` …… I get the feeling that there's some major flaw in my decision.@
+` But right now, everything is a mess in my head and my sense of logic refuses to function properly.@
+` Anyhow, for now, I'll return to my own room for some rest.@ I'm sure I'll calm down and think clearer then.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_22c.jpg",%type_lcartain_slw
+
+` The sun has gone down, and my surroundings have been cast into darkness.@
+` It's probably past seven now.@
+` The curfew for the mansion is eight, so I'd better hurry back if I don't want to be scolded by Akiha.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_47.jpg",%type_lcartain_slw
+
+` The streets around the mansion are deserted like always.@
+` The sun's only just gone down, but the silence is like that of midnight.\
+
+`"Come to think of it, this place is…"@
+` Where I've gone to check out that noisy stray dog the night I first returned to the mansion.@
+wave se0
+`"Huh……?"@
+` I'm beset by a terrible premonition of misfortune.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_47.jpg",%type_crossfade_fst
+
+bg "image\bg\ima_10.jpg",%type_tcartain_fst
+
+br
+br
+br
+br
+br
+br
+` ----Strange.@
+` Suddenly, my surroundings became completely black.\
+
+` I hear a dripping sound.@
+` …… Where's that sound coming from?@
+` It's coming from nearby.@
+` My body is starting to cool.@
+` It's coming from nearby.@
+` Alarms are going off somewhere in my head.\
+
+br
+br
+br
+br
+br
+br
+br
+` Drip, drip.@ Drip, drip.\
+
+br
+br
+br
+br
+br
+br
+br
+` The sound…
+` I think it's coming from right behind my neck.\
+
+`"Ah----"@
+wave se4
+` I collapse onto the asphalt.@
+` My limbs won't move, and my consciousness dims.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\nero_t01a.jpg",%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+` At the bottom of my thinning consciousness…
+!w500
+` all I find out…
+!w500
+` is a few black dogs are feeding on my arms and legs.\
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+return

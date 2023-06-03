@@ -1,0 +1,18 @@
+
+bg "image\bg\bg_08b.jpg",%type_nowaitdisp
+
+` ----I should look for Arcueid.@
+br
+` No matter how impossible it might look, no matter how hopeless it seems, it's all I can think of.@
+` I'll keep searching until I find her.@
+` I can't leave her by herself, and I can't let her----settle things with Roa by herself.\
+
+`"----Alright."@
+` My mind is set.@
+` So I can't waste any more time here.@
+` I have to go in town this very minute, and even if it means looking for a needle in a haystack, I have to find Arcueid----\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+return

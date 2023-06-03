@@ -1,0 +1,109 @@
+
+
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "track03.ogg"
+
+
+ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+` Bonjour!@
+` And now the hint corner for the sake of the precocious Tohno-kun who easily meets another Dead End,
+` It is time for "Teach me, Ciel-sensei!"@
+br
+` Now, the first period lesson of the third day.@ The only remaining lessons are about Akiha-san's route.\
+
+ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+
+`"Nnya?@ Sensei, why would Hisui's lessons be done before Akiha's?"@
+br
+` Question denied.@
+` Now, Tohno-kun.@
+` I understand how you feel, but Yumizuka-san is in big trouble.@
+br
+`"????@ Isn't Shiki the one in trouble?"\
+
+` Enough, it is big trouble.@
+` A girl your own age is in trouble, so this is no time to be shying away from danger.@
+` Please go back a little earlier and be sure to investigate the back alley.@
+` Well then, see you in the next lesson!\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+ld c,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+`"…… I don't get it.@ Why would Hisui be done before Akiha?"@
+br
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+`"I just don't get it.@ I'm the main heroine and I don't get much screen time, and Shiki ignores me!"@
+br
+ld r,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+
+`"Yeah, I don't get it!@ It's just me, and even Ciel has an appearance!@ But you only get to see me from behind.@ What's more, Sacchin is acting more like a vampire than I am!@ What the heck is this, Kinoko!?"\
+
+ld r,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld l,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld r,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld r,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld l,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld r,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld r,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld l,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld r,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+br
+br
+br
+br
+br
+br
+br
+`"I just don't get it.@ Don't get it, don't get it!!!"\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+
+
+
+
+return

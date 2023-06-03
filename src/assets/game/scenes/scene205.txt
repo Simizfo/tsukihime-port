@@ -1,0 +1,127 @@
+
+
+
+mov $phasebg,"image\bg\bg_22b.jpg"
+mov $phasetitle_a,":a;image\word\PARK_02A.PNG"
+mov $phasetitle_b,":a;image\word\day_02.png"
+gosub *right_phase
+
+
+
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+
+bg "image\bg\cmo_05.jpg",%type_crossfade_mid
+play "track09.ogg"
+
+
+` Back then, the whole mansion was like a giant playground.@
+br
+` The garden, a deep forest.@
+` The house, a tall castle.@
+br
+` We played in our own little world, which would take days to explore.\
+
+` Every day was fun.@
+` No one thought about ever growing up,
+` and we believed that days and nights would always be the same.@
+br
+` It was just a childhood spent playing like puppies.@
+` We got along wonderfully, and were the best of playmates.\
+
+` Whenever I turned back, Akiha would be there, waving her hands and hiding shyly.@
+` Yes, always the same.\
+
+` Back then, the whole mansion was like a giant playground.@
+br
+` The garden, a deep forest.@
+` The house, a tall castle.@
+br
+` We played in our own little world, which would take days to explore.\
+playstop
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+
+`"---Good morning."@
+br
+` …… I hear an unfamiliar voice.@
+` The dream disappears, and all that remains is the feeling of my languid, waking body.@
+br
+`"It is morning.@ Time to wake up, Shiki-sama."@
+br
+` An unfamiliar voice greets me.@
+` …… Stop calling me Shiki-sama already.@
+` I told you yesterday, it sends chills down my back----\
+
+
+play "track02.ogg"
+
+bg "image\bg\bg_40a.jpg",%type_crossfade_mid
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+` ---I wake up.@
+br
+` Hisui stands far from the bed, like a statue.@
+`"……"@
+` Where am I?@
+
+ld c,":a;image\tachi\his_t16.jpg",%type_crossfade_fst
+
+`"Good morning, Shiki-sama."@
+` A girl in a maid uniform bows.@
+`"Ah… yeah, I came home, right…"@
+` I push myself up, and look around the room.\
+
+`"Good morning, Hisui.@ Thanks for coming to wake me."@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"There is no need to thank me.@ It is my duty to come and wake you, Shiki-sama."@
+` Hisui answers indifferently, completely expressionless.@
+`"Ah, really…?@ Okay then…"\
+
+` …… Even in an unfavorable light, I think Hisui's features are beautiful.@
+` It should be wonderful for such a girl to wake me every morning, but as Hisui never smiles, I don't feel that happy about it.@
+` …… What a shame.@
+` If Hisui only had half of Kohaku's brightness, she would be really cute.\
+
+`"---Do you need something?"@
+` Realizing I am looking at her, Hisui stares straight back at me.@
+`"No, nothing at all.@ Waking up with you there makes me feel like I'm really at the Tohno mansion."@
+` Now then.@ Getting off the bed, I stretch out both arms.\
+
+`"Shiki-sama, there is no time.@ From the mansion to your school is a thirty minute trip.@ This leaves only twenty minutes for breakfast."@
+`"Eh?@ …… Ahh!@ It's already seven o'clock!?"@
+` I gasp in amazement after looking at the clock.@
+` …… My repeated awakenings last night must have messed up my sleep pattern.\
+
+`"Your uniform is folded and awaits you over there.@ Please come to the sitting room after you have changed."\
+
+cl a,%type_lshutter_fst
+
+`"Damn it, if you're going to wake me, wake me up earlier…"@
+` Muttering selfishly to myself, I reach for the uniform.@
+` It's folded neatly, and the shirt has even been ironed.@
+` Passing my wrists through the sleeves feels good.@ It's that fresh, brand-new feeling.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_34a.jpg",%type_lcartain_fst
+
+
+
+ld l,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+ld r,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+
+` Akiha and Kohaku-san are relaxing in the sitting room.@
+` Akiha is wearing the uniform of the Asagami Ladies' Academy, a famous school for young girls.@
+` They are drinking tea together gracefully, as if breakfast ended a long time ago.\
+
+cl a,%type_crossfade_mid
+
+
+
+
+
+
+return

@@ -1,0 +1,21 @@
+
+bg "image\bg\bg_27b.jpg",%type_nowaitdisp
+
+`"---Wait a minute.@ Senpai, didn't you say I can do as I wish……?"@
+
+ld c,":a;image\tachi\cel_t01b.jpg",%type_crossfade_fst
+
+`"Yes, please do as you wish, Tohno-kun."@
+` Senpai nods and smiles.\
+
+`"…… Good, I wasn't just imagining it.@ Then, this is goodbye.@ You shouldn't be following me anymore."@
+ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
+
+`"Huh?@ I'm not really following you or anything."@
+`"---Um, Senpai?"@
+ld c,":a;image\tachi\cel_t01b.jpg",%type_crossfade_fst
+`"I simply have something to do in the park.@ I don't know where you are going, Tohno-kun, but if you're not going to the park, then this is where we say goodbye."\
+cl c,%type_crossfade_fst
+
+
+return

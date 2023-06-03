@@ -1,0 +1,222 @@
+
+
+bg "image\event\aki_e05a.jpg",%type_nowaitdisp
+
+
+
+
+
+` *pant* *pant* *pant*
+br
+` I can't breathe properly.@
+` Senpai's eyes don't even appear interested in my death.@
+` Her dagger is poised directly in front of my heart.@
+` A situation where I'm a second away from being killed.\
+
+`  *pant* *pant* *pant* *pant*
+br
+`"That's odd.@ You've killed so many people, yet you are frightened to die yourself."@
+` Her voice, tinged with disgust.@
+` Her eyes, rimmed with contempt.@
+br
+` Her dagger, ready to kill me.\
+
+bg "image\bg\ima_13b.jpg",%type_nowaitdisp
+
+
+` I will be killed.@
+` I will be killed.@
+` I will be killed.@
+` I will be killed.@
+` I WILL be killed.@
+` I WILL BE KILLED.@
+`                 Then.@
+
+monocro #ff0000
+bg "image\bg\ima_13b.jpg",%type_nowaitdisp
+
+` If I kill.@
+` If I kill.@
+` If I kill.@
+` If I kill.@
+` IF I Kill.@
+` IF I KILL.@
+`                 It's alright?\
+
+monocro off
+bg "image\bg\bg_10f.jpg",%type_nowaitdisp
+
+
+`"------Ha------ha, ah."@
+br
+` I.@
+br
+`"Goodbye.@ Please die here, Tohno-kun."@
+br
+` Can hardly.@
+br
+`"----Haha----a----ha, ha----"@
+br
+` Breathe.\
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+!w500
+
+wave se12
+bg "image\bg\ima_12b.jpg",%type_nowaitdisp
+
+
+` But, I was faster.@
+` Before she can plunge her dagger deeply into me, my knife runs through the 'line' on Senpai's neck.@
+br
+`"A--------"@
+br
+` Which one of us said that?@
+` The sound of a head hitting the ground and the sound of gurgling.@ The neck, "neck", / face?@ / it rolls, rolls, rolls, rolls.\
+
+monocro #ff0000
+bg "image\bg\ima_13b.jpg",%type_tshutter_fst
+play "track04.ogg"
+
+
+`"Ah------eh?"@
+br
+` But, that's strange.\
+` It had to have been the same time.@ But only I am alive.@ Senpai's head, HEAD, is the only thing rolling and rolling and rolling.\
+
+`"Haha----a!"@
+br
+` In other words.@
+` From the very beginning,
+` Senpai never… intended… to kill me.@
+br
+`"A, haa, a, haahaahaahaa, haha!"@
+br
+` My throat seems stuck.@
+` Senpai's body is so red.@
+` The hallway gets wet.\
+` Red paint coats everything.\
+
+bg "image\bg\bg_10f.jpg",%type_bshutter_fst
+
+
+`"Haha----"@
+` Once someone is decapitated, it seems they add a different function.@
+` Spurting.@
+` Like a sprinkler, spraying red blood everywhere.@
+br
+`"Ha, haha------ha."@
+br
+` My whole body is now crimson.@
+` More than my knife, from my hair to my shoes, it's sickeningly speckled red.\
+
+`"----What's this?@ This isn't a big deal."@
+br
+` Yeah, it really not a big deal.@
+` I thought there would be something more, but I only have this floating feeling.@
+br
+`"If it's like this… my dreams were more…"@
+br
+` Lively and real.\
+
+` I stand up and start walking.@
+` My feet splash with each step.@
+` Before me lays the head of the woman named Ciel.@ Her eyes seem to stare at me.@
+br
+`"How stupid, Senpai.@ I don't know how much confidence you had, but there's nothing that can't die."@
+br
+` So, it was your mistake.@
+` Mistake.@
+` Mistake.@
+` Mistake.@
+` Mistake.@
+`                 No.\
+br
+br
+br
+br
+br
+br
+br
+` What's mistaken is everything.\
+
+` The illusion is over.@
+` Even though I desperately denied it until now, this confirms it.@
+` I am just a killer.@
+` With my own hands, I destroyed what shouldn't have been destroyed.@ The foundations of my being are crumbling away.@
+br
+`"Kk----what's this, Yumizuka?@ It's just like you said."@
+br
+` I start to laugh.@
+` It seems I have gone insane.@
+` The truth that I am the killer seems so funny to me.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\ima_18.jpg",%type_lshutter_fst
+
+
+` Outside the window, the far, distant moon shines.@
+` My vision has turned red with no signs of returning normal.@
+` But my mind on earth has been swapped with that from some other planet.@
+` The years of accumulated perceptions exceedingly enumerate towards unknown equations of evolution.@
+` Nothing is even remotely the same.@ You can not tell the difference between the crimson you see and the crimson I see.@
+` Alas.@
+` It seems I am broken.@
+br
+br
+br
+#ff0000
+` Or was everything just a humorous lie from the beginning?@
+` In that case, please let it all disappear tomorrow.\
+
+#ffffff
+br
+br
+br
+br
+br
+` …… The stage set in the dark forest begins.@
+` I don't quite understand, but if I am a killer, I must act like a killer.@
+` To begin with, let's go out into town and continue my dreams.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+` I catch a random person.@
+` I take them to the alley and wait for the person to awaken.@
+br
+` After a while, the person's eyes open.@
+` As gently as possible, I offer a welcome with both arms spread wide.\
+
+bg "image\bg\bg_31b.jpg",%type_bcartain_mid
+
+
+br
+br
+br
+br
+br
+br
+br
+` ----Now then,
+`    welcome to this wonderful killing chamber.\
+
+bg "image\bg\ima_12b.jpg",%type_nowaitdisp
+monocro off
+playstop
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+
+
+
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+
+
+return

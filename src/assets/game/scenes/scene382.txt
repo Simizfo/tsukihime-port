@@ -1,0 +1,107 @@
+
+
+
+
+
+` ---I cannot come up with an answer.@
+` But I do know that I can't leave Akiha alone.@
+`"-------!!"@
+` I kill the flood of emotions.@
+` Without thinking, I go after Akiha.\
+
+!w1000
+bg "image\bg\bg_54a.jpg",%type_lcartain_mid
+
+play "track08.ogg"
+
+
+` --To my surprise, Akiha has not gone beyond the mansion.@
+br
+` Under the moonlight.@
+` Under the autumn leaved tree we once talked under.@
+` Akiha just stands there.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\event\aki_e06.jpg",%type_lshutter_mid
+
+
+` She is standing quietly.@
+` Not doing anything.@
+` Like a child, she innocently stares at the falling autumn leaves.\
+
+`"--------"@
+` What---could I do about it?@
+` No reason, no intelligence, a girl that's just there.@
+` There's no crime.@
+` Akiha is not the one to blame…
+br
+` -----Please kill me.@
+br
+` I recall those words.\
+
+` ---Please kill me with your hands.@
+br
+` What a cruel wish.@
+` She could only ask for that---she couldn't even ask for help.@
+` If you asked---I would have been on your side until the very last moment, even if the whole world was against me.@
+br
+` ---Please keep our promise.@
+br
+` …… What severe treatment.@
+` I did leave her for eight years, but I never thought I'd be retaliated against in such a way.\
+
+`"---------"@
+` Akiha said…
+` Not knowing who you are and going around killing people out of instinct is more frightening than death.\
+
+` Senpai said…
+` If you become something that just kills because of instinct, sometimes death is the only salvation.\
+
+`"--------"@
+` I grip my knife.@
+` Surprisingly, I feel no sadness.@
+` It's like my mind has gone empty; I don't want to feel any emotions.@
+`"Akiha---"@
+` I step on the dead autumn leaves as I walk towards her.@
+` Akiha notices me and greets me with a smile.\
+
+`"-----At least."@
+` I grip hard onto my knife.@
+` Akiha laughs.@
+` She laughs happily as she greets the person that will kill her.@
+`"-------!!"@
+` My mind weakens.@
+` But I have started walking.\
+
+` ---Death can be salvation.@
+br
+` I walk.@
+` Akiha does not run away, but waits for me happily.@
+br
+` ----Please kill me.@
+br
+` The autumn leaves fall.@
+br
+` ---That was your last wish.\
+
+` Akiha is laughing.@
+` There's no more distance to cross.@
+` Now all I have to do is stick out this arm.@
+br
+` ----No matter how painful it is for me,
+br
+`"I have to kill you."@
+playstop
+br
+` Saying that,
+` my eyes suddenly overflow with tears.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+
+
+
+
+
+
+return

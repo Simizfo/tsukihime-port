@@ -1,0 +1,275 @@
+
+
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+
+
+
+` ---I'll walk around the night-shrouded town and find the serial killer.@
+br
+` Then, I can prove that my dreams were just dreams.@
+` Because if I find the killer…
+` …… Then all the incidents must be the work of that killer.@
+br
+`"……… Alright."@
+` For safety's sake, I put my knife in my pocket and start my investigation.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w2000
+bg "image\bg\bg_25b.jpg",%type_lcartain_mid
+play "track06.ogg"
+
+
+` -----I go out into the night-shrouded town.@
+br
+` There isn't exactly a way to search for the serial killer.@
+` The only thing I can do is wander the streets and look for anything suspicious---or I use myself as a decoy to bring out the killer.@
+br
+`"………………"@
+` After what happened with Yumizuka, maybe I've become numb to danger.@
+` Since the serial killer is just a human, I can roam the streets without any nervousness.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_27b.jpg",%type_lcartain_fst
+
+` I wander around aimlessly.@
+` The time is about eleven at night.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_26a.jpg",%type_lcartain_fst
+
+br
+br
+` …… I don't see anything suspicious.@
+` The clock has by now gone past midnight.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_12b.jpg",%type_lcartain_fst
+
+br
+br
+br
+br
+` …… There's no use coming here.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_24c.jpg",%type_lcartain_fst
+
+br
+br
+br
+br
+br
+` …… Damn it.@ I don't see anyone that looks like a killer.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_25b.jpg",%type_lcartain_fst
+
+
+` *pant*…… *pant*…… *pant*…… *pant*\
+br
+br
+br
+br
+br
+br
+` ------I'm starting to get really annoyed.@
+br
+` Why can't I find anyone like that?\
+
+` That's not the person.@
+` That's not the person.@
+` That's not the person.@
+` Unable to stand it, I put my hand in my pocket, gripping my knife.\
+
+` That's not the person.@
+` That's not the person.@
+` That's not the person.@
+` That's not the person.@
+` That's not the person.@
+` That's not the person.@
+` That's not the person--------
+
+`"-----Eh?"@
+` For a brief instant, I see the face of a man with bloodshot eyes.@
+` …… It's nothing.@
+` It is merely my reflection off of a show window.@
+`"--------"@
+` How-----stupid.@
+` Gripping my knife.@
+` Breathing out of control.@
+` Unconsciously acting exactly like the killer in my dreams.\
+
+`"No------!"@
+` No.@ I didn't want to do these kinds of things.@
+`"Damn it…… What am I doing…………!?"@
+` …… Seriously, what am I doing?@
+` If I didn't recognize my face like that, I would---I would really, take anyone and…
+br
+` Tell myself it is the killer and would have killed anyone.@
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+
+
+`"Tsk---------"@
+` I start to run.@
+` I can't stay here.@
+` I won't find out anything this way.@
+` I---there's something wrong with me---\
+playstop
+
+bg "image\bg\bg_40d.jpg",%type_lshutter_mid
+
+` I breathe heavily.@
+br
+` I reach my room as if running away, and I collapse onto my bed.@
+`"Da……!"@
+` In the end, I didn't solve anything.@
+
+` …… I start to get sleepy.@
+` All I can do is try to sleep deeply so that I won't dream at all.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+!w3000
+waveloop se10
+
+bg "image\bg\bg_26a.jpg",%type_nowaitdisp
+
+
+` *pant*---*pant*----*pant*\
+
+` I feel like I am being watched.@
+` I.@
+` With bloodshot eyes, I look at the people walking down the streets.\
+
+br
+br
+br
+br
+br
+br
+` ---Maybe it's because of the time?@
+`   Compared to last night, there's hardly anyone around.\
+
+` …… Someone is watching me.@
+` I can't find what I'm looking for.@
+` Again.@ Tonight, I can't find the person I'm looking for.@
+
+br
+br
+br
+br
+#ff0000
+`      I'm starting to get annoyed.\
+#ffffff
+
+` I pant heavily.\
+
+` I should change my spot.@
+` I'm going to stop looking in town.\
+
+bg "image\bg\bg_24c.jpg",%type_crossfade_fst
+
+
+` I go from roof to roof and end up somewhere crowded.@
+` …… Looking from the roof of the highest house, I scan the streets.\
+
+br
+br
+br
+br
+br
+br
+br
+#ff0000
+`             Don't look!\
+#ffffff
+
+
+`"----There."@
+` I see a person walking alone.@
+` A woman.@
+` This time, there can be no mistake…
+` It'll be great if it's Akiha.\
+
+#ff0000
+
+br
+br
+br
+br
+br
+br
+br
+`        Don't look at me.\
+#ffffff
+
+` No, it really doesn't matter.@
+` Once more.@
+` Once more, I want to taste that wonderful sensation----\
+
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+wave se12
+
+
+bg "image\bg\ima_12b.jpg",%type_lshutter_fst
+
+
+` I kill her from behind, taking care not to damage her body.@
+` Holding her long hair, I drag Akiha's body.@
+
+bg "image\bg\bg_22c.jpg",%type_lshutter_mid
+
+
+` *pant*----*pant*----*pant*
+` Biting into Akiha's neck, I suck her blood.@
+
+br
+` ---Boring.@
+` This is nowhere near as exciting as last night.@
+` If her hair is this short, it's not Akiha at all.\
+
+`"…… Boring……!"@
+` I start to get pissed off.\
+` Even though I slice the body into pieces, I'm still mad.@
+` Impostor.@
+` This impostor pisses me off.\
+
+#ff0000
+
+br
+br
+br
+br
+br
+br
+br
+`         Stop watching me!\
+#ffffff
+
+` *pant*----*pant*----*pant*----
+br
+` I've used up extra energy.@
+` Soon, dawn will arrive.@
+` Once it becomes morning, Shiki will awaken.@
+br
+`"I'm tired tonight.@ I'll start again, tomorrow."@
+` Yeah, that'll do.@ That's what I'll do.\
+
+` Now then.@
+` Before the morning comes, before any one realizes, I must go back to school----\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+wavestop
+
+!w3000
+
+
+
+
+
+
+return

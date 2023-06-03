@@ -1,0 +1,32 @@
+
+bg "image\bg\bg_27b.jpg",%type_nowaitdisp
+
+`"------"@
+br
+` …… I can't do it.@
+` I don't want her to see me like this… like a killer.@
+` No one can save me.@
+` I can't ask anyone for help.\
+
+` This impulse.@ There can only be one way to eliminate this "Roa" inside of me.@
+` Like that previous person I saw in that dream.@
+` I can be killed by that white vampire princess, or---- in order to prevent any more victims from appearing, I can lower the curtain on myself.\
+
+`"---Kk."@
+` …… No, not yet.@
+` There's still some of me remaining.@
+` I haven't killed anyone yet.@
+` So---there has to still be a way.@
+` I can't end here.@
+` The vampire in this city is gone.@
+` And Senpai is still here.@
+` I became happy, like in a dream.@
+` So---I can't wake from this dream yet.\
+
+` As long as I live.@
+` As long as there are pieces of me remaining, I have to look for a way to do something about this monster inside of me---\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+
+
+return

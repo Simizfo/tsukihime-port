@@ -1,0 +1,229 @@
+
+
+
+bg "image\bg\bg_40c.jpg",%type_nowaitdisp
+
+
+`"----I can't."@
+` I can't go.@
+` The few remaining things I can be certain about.@
+` My life at school, Ciel as my Senpai… I can't lose them.@
+`"--------"@
+` I know this can't last forever.@
+` But still----I don't want to lose my peaceful life I have left.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+!w1000
+bg "image\bg\bg_40d.jpg",%type_crossfade_mid
+
+
+
+` ----Night.@
+br
+` The time I promised to meet Senpai has already passed and I will watch that dream tonight once more.@
+`"…………"@
+` No, that's not right.@
+` I won't rely on Senpai's help.@ This is my problem, so I will solve it myself.@
+` In order to keep living the way I have until now, I will have to settle matters with this "killer" myself----\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+br
+` To prove that I am a killer or not.@
+` …… I don't even have to think about it.@
+` I just have to look around the town at night and find the killer which isn't me------\
+
+
+
+!w2000
+wave se0
+bg "image\bg\bg_25b.jpg",%type_crossfade_mid
+
+
+` I let out a breath.@
+br
+` ------I walk around the night-shrouded town.\
+br
+` I put a hands in my pocket, feeling the knife in there on my fingertips as I walk around town.\
+
+wave se0
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_26a.jpg",%type_crossfade_mid
+
+play "track06.ogg"
+
+` *pant*-----*pant*
+br
+` -------I breathe quietly as I walk around.@
+` Trying not to draw attention.@
+` I look at the people passing by as I stand concealing my presence from everyone.\
+
+wave se0
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_27b.jpg",%type_crossfade_mid
+
+br
+` *pant*------*pant*, *pant*.@
+br
+` --------I am searching for the killer.@
+` Someone will get attacked tonight.@ He is looking for a new victim.@
+` Say, a girl with long, black hair.@
+` A girl around my age would be best.@
+` No need to mention the beauty of her hands and feet, but the beauty of her neck should be considered.@
+` In the end, everything counts on that one spot.\
+
+wave se0
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_30b.jpg",%type_crossfade_mid
+
+
+` *p-pant*, *pant*, *pant*.@
+br
+` --------I look for the killer.@
+br
+` …… I know I won't find him easily.@
+` I knew from my dreams that the perfect prey is hard to find.\
+
+wave se0
+
+` *pant*…… *pant*…… *pant*
+br
+` B… u… t
+` Tonight, this town bores me.@
+` I cannot find my PREY.@
+` I'm getting angry.@ My objective was to find someone, or to kill someone, or something like that.\
+
+`"------------Ha."@
+br
+` I'll hold my breath.@
+` I'll hold on to my knife.@
+` I should concentrate, so I will be able to return death at any time.\
+
+wave se0
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_31b.jpg",%type_crossfade_mid
+
+
+` I pant more and more.@
+br
+` ---I look for the KILLER.@
+br
+wave se0
+
+` But I can't find him.@
+` Only time passes.@
+` *pant*, *pant*.@
+wave se0
+
+` It overflows, sharpens, is used, is used up, and over time stands up, and changes form and-------\
+wave se0
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+monocro #ff0000
+bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+
+waveloop se1
+
+` In front of me lies tonight's prey.@
+br
+` My panting fills the air.@
+br
+` It is a dead woman's corpse.@
+` In my hand is a knife.@ The red blood on my knife drips to the ground.@
+br
+` --------Why?@
+` I was looking for the killer, but all of a sudden, there's the dead body of a woman right in front of me.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+
+
+` *pant*, *pant*, *pant*, *pant*.@
+` My breathing gets out of control.@
+` A dead body in front of me.@
+` A bloody knife in my hand.\
+
+br
+br
+br
+br
+br
+br
+br
+` --------------I don't understand.\
+
+` When, at what time, what I did.@
+` Did something happen to my mind?@
+` Yes, like…
+` it overflows, sharpens, is used, is used up, and over time stands up, and changes form, changes its meaning, becomes free, explodes, and lightens up.@
+` On that path.@
+` The theory of evolving consciousness and meaning.@
+` But an important path is missing.\
+
+br
+br
+` Since when.@
+br
+br
+` Did I.@
+br
+br
+` Turn into.@
+br
+br
+` The other "me"?\
+
+
+
+` ---------I see.@
+` There was no need for me to give you a push, Shiki.\
+
+` From behind me,
+` that voice sounds out.@
+br
+` Heavy breathing.@
+br
+` I turn around.@
+` There.@
+
+ld c,":a;image\tachi\hal_t01.jpg",%type_crossfade_fst
+cl c,%type_crossfade_fst
+br
+` Someone I have never seen before, yet someone who looks like me, stands there.\
+
+` ------It can't be helped if you're already broken.@
+`  Bye, Shiki.@ I wanted to play around with you for a bit longer.\
+
+wave se5
+
+bg "image\bg\ima_12b.jpg",%type_crossfade_fst
+
+
+` Slash.@ I'm cut with a knife.@
+br
+` It hurts.@
+` It's funny.@
+` It's deep.@
+` It's great!\
+
+`"Ha------haha, ha."@
+` I start to pass out.@
+` Like that, in that ambiguous state, I was killed.@
+` …… I'm happy, in a way.@
+` Tohno Shiki was killed by the killer.@
+` That's proof that I wasn't the killer.\
+playstop
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+monocro off
+!w2000
+
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+
+return

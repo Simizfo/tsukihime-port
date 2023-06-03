@@ -1,0 +1,209 @@
+
+
+
+
+
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+` …… no, I'll keep my promise with Akiha.@
+` Akiha told me not to go there, and I can't break a promise just because of trifling curiosity.@
+br
+`"…… Nn."@
+` A calm drowsiness permeates my body.@
+` I'll keep quiet tonight and sleep.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w1000
+
+playstop
+monocro #ff0000
+
+
+
+!w2000
+wave se0
+
+!w600
+` ----Hot.\
+
+wave se0
+!w600
+br
+br
+br
+` ----Hot.\
+
+wave se0
+!w600
+br
+br
+br
+br
+br
+` ----Hot.\
+
+wave se0
+!w600
+br
+br
+br
+br
+br
+br
+br
+` ----My throat, dry with thirst, hot.\
+
+!w600
+br
+br
+br
+br
+br
+br
+br
+br
+` ------I can't sleep like this.@
+`      I'll go and get a drink of water.\
+
+bg "image\bg\bg_47.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_24c.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_25b.jpg",%type_crossfade_mid
+
+play "track04.ogg"
+
+` It seems I went into town at night.@
+` It seems like I'm waiting with bloodshot eyes for someone to pass by.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ------It is hot.\
+
+` Suddenly, I see a face reflected in the window.@
+` The eyes are bloodshot, and the face looks quite insane.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ------It is just so hot.\
+
+` It seems I found my prey.@
+` Strangling her from behind, it's all over.@
+` It seems that the unknown woman has died just from that.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ---I am just, so hot.\
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_30b.jpg",%type_nowaitdisp
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+
+bg "image\bg\ima_13b.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_31b.jpg",%type_nowaitdisp
+
+
+` Taking the dead body, perhaps I bit into its throat.@
+` There's a gurgling sound.@
+` Drinking the blood flowing out of the rended neck, my thirst is quenched.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ---I don't understand.\
+
+` The sound of heavy breathing.@
+` Does this act…
+` Does this act really excite me so much?@
+` I stick my finger in the chest of the dead body.@
+` The sound of crushing meat, the sound of breaking bones.@
+` The sound of a heart being ripped out with my bare hand.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ---As I watch, my head fills with pure white.\
+
+` This, the ultimate pillage.@
+` The height of immorality.@
+` Just gazing at it, I feel hot.@
+` You might say it's negative pleasure, but for making one hot, it's still the same.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ---I don't understand.\
+
+bg "image\bg\ima_18.jpg",%type_crossfade_fst
+
+` Hot blood dripping from my mouth, I gaze up at the night sky entranced.@
+` My long hair waves around.@
+` Above is the spiraling sky.@
+` Such a beautiful, silver moon.\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ---And so, I don't understand.@
+`   I am just, only, hot----\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+monocro off
+playstop
+
+!w3000
+
+
+
+
+
+
+
+
+return

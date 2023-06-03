@@ -1,0 +1,18 @@
+
+
+bg "image\bg\bg_32a.jpg",%type_nowaitdisp
+
+`"Does that clear it up?@ Then let's go…… Arcueid, do you have anywhere in mind?"@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"Hmm, I don't know so I'll let you decide.@ Just take me wherever?"@
+cl c,%type_crossfade_fst
+` …… So she told me we're going somewhere and now it's this?\
+
+` Oh well--I'm not sure what kind of place she likes, but I'll take her to a good hangout place.@
+` Well then--
+br
+
+
+
+
+return

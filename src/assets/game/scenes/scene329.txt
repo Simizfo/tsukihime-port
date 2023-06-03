@@ -1,0 +1,28 @@
+
+
+bg "image\bg\bg_04.jpg",%type_nowaitdisp
+
+
+`"He's a friend of mine from middle school--Akiha?"@
+`"Yes?@ What is it, Nii-san?"@
+`"You seem to have calmed down a whole lot.@ All your confusion earlier in the cafeteria seems like it never happened."@
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"----What are you trying to say, Nii-san?"@
+`"No, I was just thinking… maybe you were pretending to be naive earlier?"@
+` There is a strong possibility that is the case.@
+` Come to think of it, there was no reason for Akiha to just stand there stupidly in the middle of the crowd like that.\
+
+ld c,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
+
+`"Oh?@ Nii-san, is that what you think of me?"@
+` Akiha looks me over from head to toe.@
+` …… I knew it.@ She was just putting on an act to fool me.@
+ld c,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
+
+`"Yes, please go ahead and imagine what you like.@ It isn't like I wanted you to be worried."@
+` She puffs out her chest and pouts.\
+cl c,%type_crossfade_fst
+
+
+return

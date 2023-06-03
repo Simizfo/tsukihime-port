@@ -1,0 +1,39 @@
+playstop
+
+bg "image\bg\bg_25b.jpg",%type_lcartain_mid
+
+
+` …… There is no one around.@
+` The shopping district still had some people, but the way back to the mansion should be completely empty.@
+`"………"@
+` The words "serial killer" run through my mind.@
+` Midnight.@ Walking through town alone.@ I might be an easy prey for such an attacker.\
+
+wave se9
+
+
+`"----!?"@
+` A sound.@
+` Somewhere behind a building, there is a sound.@
+` I think it is the sound of someone falling?@
+`"…… The back alley……?"@
+` The noise came only once.@
+` An eerie silence surrounds me.\
+
+wave se9
+
+` …… I have a bad feeling about this.@
+` Did someone collapse in the back alley?@
+` Did the wind just knock something over?@
+` …… Whatever it was, I probably shouldn't get involved.@
+br
+` -----But.@
+` Is it because I was looking for Yumizuka a while ago?@ I feel like she's there for some reason.\
+
+`"…… What… should I do……?"@
+` There's no one around.@
+` The only help I can rely on is this knife Kohaku-san handed me this morning.@
+br
+` I-------
+br
+return

@@ -1,0 +1,29 @@
+
+bg "image\bg\bg_19d.jpg",%type_nowaitdisp
+
+
+` …… It's suspicious.@
+` There's something very suspicious about how she says "I'm not going to break them".\
+
+`"--Not even just to look at.@ I know about your ridiculous powers, after seeing you in that alley.@ What would I do if you crushed them by accident?"@
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+`"Hey!@ What do you mean 'ridiculous powers'?@ Let me tell you, in terms of non-fighting strength, you're stronger than I am.@ I won't break things at random."@
+` Saying that, Arcueid extends her hands as if she is about to take them by force.@
+br
+` …… Her attitude is becoming more and more suspicious.\
+
+cl c,%type_lshutter_mid
+` I bounce up off the bed to get away from her.@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+`"Hey, you're running away."@
+`"Of course.@ I'll tell you now: I'm not handing over these glasses.@ Even if there's only a one in a million chance you'll break them, they're irreplaceable to me.@ After all, you're the one who said I wouldn't be able to stay sane without these glasses.@ Do you want me to go crazy?"\
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"Huh?@ N… no, that's not it at all."@
+` …… Arcueid is obviously trying not to look at me.@
+cl c,%type_crossfade_fst
+`"--Come on, Arcueid.@
+` I don't know what you're planning, but if I lose these glasses, I won't be in any position to help you.@ If I were to see the lines 24 hours a day, I think I'd die from the headache before I'd go mad."\
+
+
+return

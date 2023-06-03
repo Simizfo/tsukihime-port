@@ -1,0 +1,365 @@
+
+
+
+
+
+bg "image\bg\bg_04.jpg",%type_nowaitdisp
+
+
+
+` …… No, there's no reason to.@
+` What can Ciel-senpai do if I talk to her about my dreams?@
+` That dream.@
+` If I'm the person who dreams about killing people, then I'm the only one who should be able to solve that problem.@
+ld c,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+
+`"Yo, Tohno, we don't have much time."@
+`"------I know, we won't make it unless we run, right?"@
+` Saying so, I start running toward our classroom.\
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w2000
+play "track01.ogg"
+
+bg "image\bg\bg_06b.jpg",%type_tshutter_mid
+
+
+` ----------School is over now.@
+br
+` I was confused about myself and Akiha, but today is about to end.@
+`"------Should I go back?"@
+` I should go get Akiha and go back to our mansion.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_24b.jpg",%type_lcartain_mid
+
+
+` I walk home together with Akiha.@
+` …… Just like lunchtime, we grow quiet as soon as there are only the two of us.@
+br
+` ---While I want to talk to Akiha, I also feel embarrassed looking at Akiha.@
+br
+`"…… Man, it's not like I'm some middle schooler."@
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"…?@ Did you say something, Nii-san?"@
+`"Oh---no, it's nothing, just talking to myself."@
+cl c,%type_crossfade_fst
+
+` …… *sigh*@
+` Really, what the hell am I doing?\
+
+bg "image\bg\bg_22b.jpg",%type_lcartain_mid
+
+
+` We reach the long hill.@
+` Once we go up it, our mansion will be right there.@
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"Nii-san.@ I would like to ask you one thing before we get home."@
+` Akiha's feet stop and she looks straight at me.@
+`"-----"@
+` The kind of silence that was there before is gone.@
+` Akiha looks at me seriously.\
+
+`"Go ahead, what do you wanna ask about?"@
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"If you don't want to answer, that's fine but-----do you have something you are hiding from me, Nii-san?"@
+`"Huh-------?"@
+` The question is so abrupt, I stop in my tracks.\
+
+`"Um…… What are you talking about?"@
+` I decide to act like I don't know what she's talking about.@
+ld c,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
+
+`"What?@ That's what I am asking.@ You have been acting very strange these past few days.@ I can easily tell since we live together."@
+` Akiha looks at me as if she can read my mind.@
+`"--------Uhh."@
+` …… No, there's no way I can lie to her without her finding out.\
+
+`"…… So you are hiding something.@
+` Is that the reason you have not been feeling well recently, like this morning?@ I do not know what is troubling you but is it so bad you have to hide it?"@
+`"--------"@
+` …… I'm surprised.@
+` Akiha knew that I was worrying about the problem by myself.@
+`"Akiha…… you noticed?"@
+ld c,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
+
+`"Of course.@ We are brother and sister.@ I can tell when you are depressed, Nii-san.@ Yet you keep the problem to yourself and don't even ask us for help."\
+
+`"!!@-------I can't ask you for help-----"@
+` I can never do that.@
+br
+` How I dream about murder every night.@
+` And that I can't tell if it's real or just a dream, and the victims in real life are just like the ones in my dream.@
+` I can't tell her that I, Tohno Shiki, might be a killer, so be careful at night.\
+
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"Nii-san.@ We're brother and sister, right?@ Then please rely on me a bit.@ Not just me, but both Kohaku and Hisui are also worried about you.@
+` If it's a problem you can't solve by yourself, we will gladly help you, so please tell us about it."@
+`"Akiha----------"@
+cl c,%type_crossfade_fst
+
+` Akiha just stares at me.@
+` …… Her eyes are filled only with worry.@
+` Akiha is not complaining to me for hiding something from her, but she is trying to help me solve my problem.\
+
+`"………… D-"@
+br
+` That's why I can't tell her.@
+` I---Tohno Akiha's brother might be a killer---those words would never come out of my mouth.@
+br
+`"Don't say stupid things.@ I'm not hiding anything and I don't have any problems.@
+` I wasn't feeling well recently because I wasn't used to the life in the mansion-----"@
+ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+`"……………"@
+` Akiha looks at me angrily.\
+
+`"A----Akiha?"@
+`"I understand.@ You won't listen to me even after all that I've said.@ If you can't trust me or Kohaku or Hisui, then there's nothing more I want to say."@
+ld c,":a;image\tachi\aki_t05a.jpg",%type_crossfade_fst
+
+` Akiha breathes out and looks away.\
+
+`"No, that's wrong, Akiha.@ It's not that I don't trust you guys, but-----"@
+ld c,":a;image\tachi\aki_t07.jpg",%type_crossfade_fst
+
+`"I don't want to hear your excuses!@ If you like secrets so much, then do what you want!!"@
+cl c,%type_lshutter_fst
+
+` Akiha screams at me and runs up the hill.\
+
+` ------I could not chase after her.@
+br
+` Even if I chased her, I would not be able to tell her anything.@
+` …… Then that means,
+` it doesn't matter what goes on; I do not trust them well enough.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w2000
+bg "image\bg\bg_40c.jpg",%type_tshutter_mid
+
+
+` Dinner has ended and it's time to go to bed.@
+` Akiha ignored me during dinner and during the tea afterwards.@ She must be still mad about that conversation we had at the hill.@
+` …… This time, it doesn't seem like her anger will fade in a matter of days.@
+br
+`"No, that's better for me."@
+` ------Yes, I can't be afraid of my own dreams anymore.@
+` I didn't ask Ciel-senpai for help and I rejected Akiha's offer for help, because I've decided I will solve this on my own.\
+
+`"To prove that I, Tohno Shiki, am not the killer-----"@
+` I can only think of one way to do that.\
+playstop
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+bg "image\bg\bg_40d.jpg",%type_crossfade_mid
+
+
+` I turn off the lights in my room and put the knife in my pocket.@
+`"……… Let's go."@
+` I leave the room, trying not to make any noise.@
+br
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+` To prove if I am a killer or not.@
+` …… I don't even have to think about it.@
+` I just have to look around the town at night and find the killer which isn't me------\
+
+!w2000
+wave se0
+bg "image\bg\bg_25b.jpg",%type_crossfade_mid
+
+
+` I let out a long breath.@
+br
+` ----------I walk around the night-shrouded town.\
+br
+` I put a hand in my pocket, feeling the knife in there on my fingertips as I walk around town.\
+
+wave se0
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_26a.jpg",%type_crossfade_mid
+
+play "track06.ogg"
+
+` *pant*-----*pant*
+br
+` -------I breathe quietly as I walk around.@
+` Trying not to draw attention.@
+` I look at the people passing by as I conceal my presence.\
+
+wave se0
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_27b.jpg",%type_crossfade_mid
+
+br
+` *pant*------*pant*, *pant*.@
+br
+` --------I am searching for the killer.@
+` Someone will get attacked tonight.@ He is looking for a new victim.@
+` Say, a girl with long, black hair.@
+` A girl around my age would be best.@
+` No need to mention the beauty of her hands and feet, but the beauty of her neck should be considered.@
+` In the end, everything counts on that one spot.\
+
+wave se0
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_30b.jpg",%type_crossfade_mid
+
+
+` *p-pant*, *pant*, *pant*.@
+br
+` --------I look for the killer.@
+br
+` …… I know I won't find him easily.@
+` I knew from my dreams that the perfect prey is hard to find.\
+
+wave se0
+
+` *pant*…… *pant*…… *pant*
+br
+` B… u… t
+` Tonight, this town bores me.@
+` I cannot find my PREY.@
+` I'm getting angry.@ My objective was to find someone, or to kill someone, or something like that.\
+
+`"------------Ha…"@
+br
+` I'll hold my breath.@
+` I'll hold on to my knife.@
+` I should concentrate, so I will be able to return death at any time.\
+
+wave se0
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_31b.jpg",%type_crossfade_mid
+
+
+` I pant more and more.@
+br
+` ---I look for the KILLER.@
+br
+wave se0
+
+` But I can't find him.@
+` Only time passes.@
+` *pant*, *pant*.@
+wave se0
+
+` It overflows, sharpens, is used, is used up, and over time stands up, and changes form and-------\
+wave se0
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+monocro #ff0000
+bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+
+waveloop se1
+
+` In front of me lies tonight's prey.@
+br
+` My panting fills the air.@
+br
+` It is a dead woman's corpse.@
+` In my hand is a knife.@ The red blood on my knife drips to the ground.@
+br
+` --------Why?@
+` I was looking for the killer, but all of a sudden, there's the dead body of a woman right in front of me.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+
+
+` *pant*, *pant*, *pant*, *pant*.@
+` My breathing gets out of control.@
+` A dead body in front of me.@
+` A bloody knife in my hand.\
+
+br
+br
+br
+br
+br
+br
+br
+` --------------I don't understand.\
+
+` When, at what time, what I did.@
+` Did something happen to my mind?@
+` Yes, like…
+` it overflows, sharpens, is used, is used up, and over time stands up, and changes form, changes its meaning, becomes free, explodes, and lightens up.@
+` On that path.@
+` The theory of evolving consciousness and meaning.@
+` But an important path is missing.\
+
+br
+br
+` Since when.@
+br
+br
+` Did I.@
+br
+br
+` Turn into.@
+br
+br
+` The other "me"?\
+
+
+
+` ---------I see.@
+` There was no need for me to give you a push, Shiki.\
+
+` From behind me,
+` comes a voice.@
+br
+` Heavy breathing.@
+br
+` I turn around.@
+` There.@
+
+ld c,":a;image\tachi\hal_t01.jpg",%type_crossfade_fst
+cl c,%type_crossfade_fst
+br
+` Someone I have never seen before, yet someone who looks like me, stands there.\
+
+` ------It can't be helped if you're already broken.@
+`  Bye, Shiki.@ I wanted to play around with you for a bit longer.\
+
+wave se5
+
+bg "image\bg\ima_12b.jpg",%type_crossfade_fst
+
+
+` Slash.@ I'm cut with a knife.@
+br
+` It hurts.@
+` It's funny.@
+` It's deep.@
+` It's great!\
+
+`"Ha------haha, ha."@
+` I start to pass out.@
+` Like that, in that ambiguous state, I was killed.@
+` …… I'm happy, in a way.@
+` Tohno Shiki was killed by the killer.@
+` That's proof that I wasn't the killer.\
+playstop
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+monocro off
+!w2000
+
+
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+
+
+return

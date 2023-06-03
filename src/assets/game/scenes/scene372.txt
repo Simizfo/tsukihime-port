@@ -1,0 +1,31 @@
+
+
+
+
+
+
+` ---I should not consider my own safety.@
+br
+` The only sure thing is that this guy is the reason for everything going on.@
+` The one sucking the blood out of all the people in town.@
+` The one that hurt Senpai and tried to rape her.@
+` …… And Yumizuka.@
+` The one who turned Yumizuka into a vampire and made her suffer like that.@
+br
+` Everything.@ Everything is this "enemy's" fault.@ Then----\
+
+`"----"@
+` I grit my teeth and hold on to my hatred.@
+` Trying to cool myself down, I take off my glasses.@
+bg "image\bg\cmo_18.jpg",%type_crossfade_fst
+
+br
+` ----Let's get started.@
+` Fortunately, this is my third time fighting in a life-or-death situation.@
+` By now, I know more than enough about how exactly I should be moving---.\
+
+
+
+
+
+return

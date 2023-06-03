@@ -1,0 +1,129 @@
+
+
+bg "image\bg\bg_29b.jpg",%type_crossfade_mid
+
+`"I'm---exhausted…"@
+` I collapse onto the ground.@
+` I fall on my rear and try to keep my body up with my hands.\
+
+`"---Cold."@
+` I'm cold.@
+` The pain is numbed; it feels almost comfortable.@
+` My body is ripped with canine bite marks and beak marks.@
+br
+` ----Well, there's no mistake that I'll probably die like this.\
+
+`"-----"@
+` I let out a deep breath.@
+` I raise my chin and look up at the sky.@
+br
+`"-----The moon."@
+` Only the pretty moon is in the night sky.@
+` …… What is it?@
+` It seems awfully familiar… like I saw a dream like this before.\
+
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+play "track08.ogg"
+
+`"Shiki, are you okay?"@
+` Arcueid walks toward me as if nothing happened just now.@
+`"…… You… stupid idiot…… If I was okay… I wouldn't be human."@
+` I speak and breathe haltingly.@
+` Even talking is painful, so maybe I shouldn't have responded.@
+`"Kk------ah."\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+
+` My consciousness starts to fade.@
+` And then,
+
+quakey 2,100
+
+
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+` Whack!@ Arcueid hits me on the head and forcefully returns me to consciousness.\
+
+`"…… What… was that for?"@
+ld c,":a;image\tachi\ark_t11.jpg",%type_lshutter_fst
+
+`"That won't do.@ If you sleep with those wounds, you'll definitely end up dying.@ You can't sleep until we close them."@
+br
+` ---Her argument is perfectly just.@
+` It's so just, it makes me angry.@
+br
+`"…… Arcueid.@ Can I say what I've always thought from before?"@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"Hm, what?"@
+`"----Don't say such unreasonable things, you idiot."@
+` I crash onto the ground.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\ima_18.jpg",%type_crossfade_fst
+
+` ---My consciousness starts to fade.@
+br
+` Arcueid is raising a racket, but I don't have any strength to hold my eyes open any longer.@
+` It's terribly----cold.@
+br
+`"Hey, Shiki.@ You really will die……!"@
+br
+` …… I told you, I'm sleepy.@
+` I'll sleep before I die, so I'll wake up in the morning.\
+
+`"Shiki, you mustn't sleep----!@ We have to at least close your wounds and stop the bleeding, otherwise you won't wake up……!"@
+br
+` ---Man, she's loud.@
+` I'm going to sleep, so just do whatever you want.@
+br
+`"Eh, it's okay if I heal you?@ Why didn't you say that earlier?"@
+br
+` After she says this cheerfully,
+` I feel cold fingers, colder than even my body, touch my skin as if in sympathy.\
+
+`"Well, I'm not too happy about using someone else's familiars, but in these circumstances, it can't be helped."@
+
+` …… I feel like something is being plastered to me.@
+` I don't know why,
+` but it feels awfully pleasant--
+br
+`"As to be expected from the vampire called the primordial sea.@ Even after the destruction of the source, Nrvnqsr, the familiars still have their regenerative ability…… hm, in this case, all I have to do is give it a little hand.@
+` First, let it live on me----once it's back to normal I'll put it back on you, Shiki----"@
+br
+` The fingers pull away.\
+
+`"I guess this'll do.@ How is it?@ It's a non-polar life, so it can adapt itself easily to your body, right?@
+` Hey, are you sleeping Shiki----?"@
+br
+` ---Yeah, I'm asleep.@
+br
+`"Oh well.@ Your house is the mansion on top of the hill, right, Shiki?@ I'll make sure you get home."@
+br
+` ---I look up only at the white moon as I sleep.\
+
+`"…… You really did well, Shiki.@ And thanks.@ You really saved me tonight."@
+br
+` …… She thanks me without the slightest hint of heaviness in her words.\
+br
+br
+br
+br
+br
+br
+` …… I can't hear her voice anymore.@
+` I fall into a deep sleep without anyone interrupting me this time.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+
+playstop
+
+
+
+!w3000
+
+
+return

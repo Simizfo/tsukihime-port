@@ -1,0 +1,90 @@
+
+
+
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+
+
+
+
+` …… But I might be overreacting if I go apologize to her.@
+` Kohaku-san told me to keep that conversation a secret.@ Besides, considering Akiha, if I apologize to her like "I'm sorry for everything", I can see her getting mad at me.@
+br
+`"…… Yeah, I guess I'll wait until lunchtime."@
+` I stay in the classroom and get ready for the next period, still feeling a bit unsettled.\
+
+bg "image\bg\ima_10.jpg",%type_tcartain_mid
+!w1500
+play "track03.ogg"
+
+bg "image\bg\bg_06a.jpg",%type_tcartain_fst
+
+
+` It's lunchtime.@
+` It's like an unspoken agreement, but if I go out to the courtyard, I will end up having lunch with Akiha.@
+` …… *sigh*@
+` But it's a bit depressing today.@
+` I want to apologize about this morning, but I don't have any idea how I can apologize.@
+ld c,":a;image\tachi\ari_t01.jpg",%type_lshutter_fst
+`"Yo, Tohno.@ Let's hurry up and go to the courtyard.@ Akiha-chan is waiting."@
+` …… Says one guy.@ Besides, I can't leave her by herself.@
+` …………… *sigh*@
+` I let out a big sigh and leave the classroom with Arihiko.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_04.jpg",%type_lshutter_mid
+
+
+` Akiha isn't here yet.@
+` Since Ciel-senpai will be coming too, I guess we'll eat on the grass instead of on the bench.\
+
+bg "image\bg\ima_10.jpg",%type_tshutter_fst
+bg "image\bg\bg_04.jpg",%type_bshutter_fst
+
+ld l,":a;image\tachi\cel_t01a.jpg",%type_lshutter_mid
+
+`"I'm here.@ Hey, Akiha-san isn't here yet?"@
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+`"Yeah, she should be here any minute now----Oh, there she is.@ Akiha-chan, over here!!"@
+` Arihiko waves his hands around hard.@
+` Looking a bit puzzled, Akiha comes onto the grass.\
+
+cl l,%type_crossfade_fst
+ld l,":a;image\tachi\aki_t04a.jpg",%type_lshutter_mid
+
+`"I'm sorry I'm late.@ I received an invitation to have lunch with my classmates, and it took me some time to decline their invitations."@
+ld r,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
+
+`"Don't worry, we just got here too.@ Here, sit here."@
+
+` Arihiko pats the grass.\
+ld l,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"Is it alright?@ I do not see anyone else eating their lunch on the grass."@
+`"It's okay.@ It's not prohibited or anything.@ There's no problem.@ You don't have to worry about it."@
+` Arihiko pats the grass once again.\
+
+`"-----Okay, then excuse me."@
+` Akiha bows faintly and sits next to me.@
+cl a,%type_crossfade_fst
+
+`"Ug…………"@
+` …… I still haven't gotten over the incident from this morning.@ I feel a bit nervous if she sits this close to me.@
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"----What's wrong, Nii-san?@ You don't look too well.@ Are you not hungry……?"@
+` Akiha gives me a quiet glance as if to find out my condition.\
+
+`"What-----no, I don't feel bad at all."@
+` …… I don't, but it does feel a bit awkward being here.@
+` It seems that Akiha doesn't care about what happened this morning, but it really bugs me as Kohaku-san's words keep flickering in my head.\
+cl c,%type_crossfade_fst
+
+`"…………"@
+` As a result, I can't think of anything to say as I fall silent.\
+
+
+
+
+return

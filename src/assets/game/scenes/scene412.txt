@@ -1,0 +1,56 @@
+
+
+
+
+
+
+
+!w4000
+
+bg "image\bg\bg_40a.jpg",%type_crossfade_mid
+
+
+
+` ………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………… I can't hear the annoying sound of the clock anymore.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\bg_40a.jpg",%type_crossfade_fst
+
+
+` Knock, Kno----ck.@
+br
+` The rhythm of my breathing has gone totally erratic and I can't fix it.@
+` …… It's deathly cold.@
+` If it's this cold, I want to stop caring about everything----I feel like sleeping.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+` Knock Kno, Knock.@
+` Kno, Kno, Knock.@
+` Kno Kno Kno, Kno Kno.@
+` Kno, Kno, Kno---Kno.@
+` Kno, Kno Kno, Kno-----Knock.@
+` kno-----,,,,,,knock.@
+` ,,,,---Kno kno, knock knock.@
+br
+`"--------"@
+br
+` I think I hear a knocking sound.@
+` Maybe it's Hisui.@
+` But my body doesn't move anymore.@
+` Tohno Shiki, will live forever in this cage, and no one will kill Tohno Shiki…\
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+
+
+
+
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+
+return

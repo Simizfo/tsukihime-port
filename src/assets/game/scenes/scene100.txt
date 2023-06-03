@@ -1,0 +1,52 @@
+
+bg "image\bg\bg_29c.jpg",%type_nowaitdisp
+
+` …… No, it's too early.@
+` Nrvnqsr just arrived.@
+` A little more---until his attention is focused more on Arcueid, I can't launch a surprise attack.\
+
+ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
+`"Don't get it wrong, Nrvnqsr.@ The Ancestors of the Dead Apostles are not a group of twenty-seven, but of twenty-eight.@ You do not recognize 'The Serpent' as one of your own?"@
+
+cl c,%type_crossfade_fst
+
+ld c,":a;image\tachi\nero_t02a.jpg",%type_crossfade_fst
+`"Of course.@ His ideals differ from ours.@ He is a vampire, but he does not hold to the meaning of being a vampire.@ Consequently, we do not accept him as one of us."\
+
+ld c,":a;image\tachi\nero_t02c.jpg",%type_crossfade_fst
+`"----But, we are old friends.@ I believe I understand him more than the other Dead Apostles."@
+
+cl c,%type_crossfade_fst
+
+ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
+
+`"…… I see.@ Come to think of it, you are like 'The Serpent' as well, as you are unlike the other vampires too.@ Since you are both heretics, you must share common interests."\
+
+cl c,%type_crossfade_fst
+
+
+ld c,":a;image\tachi\nero_t02a.jpg",%type_crossfade_fst
+`"Wrong.@ Heresy is isolated therefore it is heresy.@ Just because we both are separated from the flock doesn't mean we comprehend one another."@
+
+cl c,%type_crossfade_fst
+ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
+
+`"Really?@ Coming as far as this country to pursue me, I think you guys are similar."@
+
+cl c,%type_crossfade_fst
+ld c,":a;image\tachi\nero_t02a.jpg",%type_crossfade_fst
+
+`"Do not be ridiculous.@ You are the capricious one.@
+` Your purpose is to execute Dead Apostles, so why do you persistently pursue the Serpent of Akasha?@ The 'Serpent's' poison is not something the Princess of the True Ancestors should be persistent about."\
+
+cl c,%type_crossfade_fst
+
+` …… Nrvnqsr's voice gets slightly louder.@
+` Arcueid's taunting must be working.@ Nrvnqsr is looking only at his enemy Arcueid.@
+br
+` ---What do I do now?@
+br
+
+
+
+return

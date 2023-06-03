@@ -1,0 +1,119 @@
+
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_01c.jpg",%type_lcartain_mid
+
+` ----Concerned about what happened this afternoon, I come to my school.@
+br
+` …… Thinking back, Arcueid was strange when we were here earlier.@
+` There's no logic to it, but if she's just wandering around, I think she may end up here.\
+
+bg "image\bg\bg_03c.jpg",%type_lcartain_mid
+
+` There's no sign of anyone; not even a single sound.@
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_03c.jpg",%type_crossfade_fst
+
+`"…………"@
+` But still, I feel like there's someone in the building.\
+
+wave se0
+
+
+` Something.@
+!w500
+
+` Without the presence of the sun,
+!w500
+
+` the school building has changed into an ominous "place".\
+
+`"…… Let's go in, Shiki."@
+` I don't have time to hesitate.@
+` Encouraging myself verbally, I walk inside the building.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+play "track06.ogg"
+
+bg "image\bg\bg_10c.jpg",%type_lcartain_mid
+waveloop se1
+
+br
+` ----There's no one on the first floor.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_07b.jpg",%type_lcartain_mid
+
+br
+br
+br
+` ----I feel a numb sensation behind my neck.@
+` Ignoring it, I walk up to the second floor.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_11c.jpg",%type_lcartain_mid
+
+br
+br
+br
+br
+br
+` ----I arrive on the second floor.@
+` No one here.\
+
+wave se7
+
+` No one here.@
+wave se7
+
+` No one, here.@
+br
+` But.@
+` On my back,
+` A soft, cold sensation like the belly of a snake covers me.\
+
+`"------Who's there!?"@
+` I whirl around.@
+` I think there was…
+ld c,":a;image\tachi\roa_t07a.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+\
+
+`"Eh----?"@
+` I hear a stabbing sound.@
+` In the next instant,
+` My chest is sliced open.\
+
+bg "image\bg\ima_12b.jpg",%type_lshutter_fst
+
+` Blood flows forth.@
+` I'm stabbed from behind, as if to open my old wound.@
+`"Ah----"@
+` My body falls.@
+br
+` ----I don't know what's going on.@
+\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+` Everything fades.@
+` In the last instant,
+br
+wavestop
+
+bg "image\bg\cmo_06.jpg",%type_crossfade_mid
+` I see a scene from a distant summer day, repeating in my mind.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+playstop
+
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+return

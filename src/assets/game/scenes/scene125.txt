@@ -1,0 +1,27 @@
+
+
+bg "image\bg\bg_34a.jpg",%type_nowaitdisp
+
+
+`"Good morning, you two."@
+ld r,":a;image\tachi\koha_t01a.jpg",%type_lshutter_fst
+`"Good morning, Shiki-san."@
+` Wearing a white apron that suits her, Kohaku-san replies with a smile that could not possibly be any larger.@
+cl r,%type_crossfade_fst
+
+` On the other hand, Akiha just casts a glance at me.@
+ld l,":a;image\tachi\aki_t01a.jpg",%type_lshutter_fst
+`"Good morning.@ You certainly took your time this morning, Nii-san."@
+` She certainly knows how to put a damper on things.\
+
+`"Took my time?@ It's barely past seven!@ It only takes thirty minutes to get to school from here, so I'm actually up early."@
+ld l,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
+`"So you're saying you're going to finish breakfast in just ten minutes?@ You're not some starving dog, so if you're going to eat breakfast, I'd like you to take your time."@
+cl l,%type_crossfade_fst
+`"------"@
+` Akiha's words really do have thorns.\
+
+
+
+
+return

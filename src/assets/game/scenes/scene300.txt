@@ -1,0 +1,531 @@
+
+
+bg "image\bg\bg_02a.jpg",%type_nowaitdisp
+
+
+
+` ---I fall forward.@
+br
+` I felt from before that if I turned and ran, my heart would be shot from behind.@
+br
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_02a.jpg",%type_nowaitdisp
+wave se11
+
+`"Hya----!"@
+` Her sword flies past my head.@
+` It seems really slow.@
+` I evade her attack, move right beside her, and----\
+
+bg "image\bg\ima_14.jpg",%type_lshutter_fst
+wave se5
+
+
+`"-----!"@
+` The instant I tried to run forward, Senpai's movement changed drastically.@
+` In an instant, with a speed that makes her seem to have literally disappeared, she swings her weapon horizontally.\
+
+` The rush of the wind fills my ears---and for some reason, I am standing many meters away from her.@
+
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+
+ld c,":a;image\tachi\cel_t06c.jpg",%type_crossfade_fst
+`"-------"@
+` She clicks her tongue and glares at me.@
+cl c,%type_crossfade_fst
+
+\
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_02a.jpg",%type_nowaitdisp
+
+
+
+`"Ow……!"@
+` My left arm hurts.@
+`"What…… Huh-----!?"@
+` I'm surprised.@
+` From the elbow down, my arm is broken.@
+` Not broken normally, but my lower arm is bent in the shape of a triangle.\
+
+ld c,":a;image\tachi\cel_t06c.jpg",%type_crossfade_fst
+`"---Sacrificing your arm to save your head?@ If you didn't do anything, I would have ended it painlessly for you."@
+`"Wha----"@
+` Even though I didn't notice it, I must have broken my arm defending against her attack.\
+
+`"Aren't you going to pull out your knife?"@
+` She looks at me with a bored expression.@
+` …… She's looking down at me.@
+` She looks down at me as if saying she could kill me at any moment.@
+cl c,%type_crossfade_fst
+
+\
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_02a.jpg",%type_nowaitdisp
+
+
+`"Gg……!"@
+` Pain.@ Pain shoots from my arm to my brain.@
+` The blood from my broken arm seems to flow like poison into my nerves.@
+` Sharply.@
+` Just with that, my mind fills with a white blankness.\
+
+ld c,":a;image\tachi\cel_t06c.jpg",%type_crossfade_fst
+
+`"-----"@
+` She continues to look at me with those cold eyes.@
+`"You---!"@
+` You break my arm, and you still act that way!?@
+` Do you know how much this hurts!?@
+` Making such a fool of me.@
+` Making such a fool of me!@
+` Making such a fool of me------!\
+
+`"If that's how you're going to be, Senpai----"@
+br
+` I grip the knife in my pocket.@
+br
+`"I'm not just going to stand here helplessly----"@
+br
+` The hard feeling of metal.@
+br
+`"--and let you kill me."@
+br
+` With a quick snap,
+` I take out the blade of my knife.\
+
+
+`"---Are you stupid?"@
+cl c,%type_lshutter_fst
+
+` Instantly,
+` her body, explodes.\
+
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+
+br
+` ----No, that's not right.@
+` She crouches down low to the ground---almost like a lizard, and runs up towards me in a flash.@
+br
+` She closes the distance of six meters in a flash.\
+
+` She's not in my vision at all.@
+` Her whole body is below my knee-height, and explodes upward from there.@
+br
+` A thud.@
+br
+` From right beneath me, her bayonet accurately shoots directly for my throat.\
+
+bg "image\bg\bg_02a.jpg",%type_lshutter_fst
+wave se4
+
+quakey 4,500
+wave se9
+
+`"Ga----ah!"@
+` I gasp.@
+` Pain, is there pain?@ Yes, I can still feel pain.@
+br
+`"Ha-----ugh."@
+` Conscious, am I conscious?@ Alright, I still have that.@
+br
+`"A, aaaaaa…………!"@
+` My body.@ My body----is not okay.\
+
+bg "image\bg\ima_13.jpg",%type_lshutter_fst
+
+` A dripping sound.@
+` It's coming from my left shoulder.@
+` Looking at it, it's already a waterfall of blood, which pours straight down.@
+` Just now.@
+` The bayonet didn't hit my throat, but my left shoulder.\
+
+bg "image\bg\bg_02a.jpg",%type_lshutter_fst
+
+`"A, Aa, Aaaaaaah!"@
+` It hurts.@
+` It hurts so much the word pain doesn't come close to describing it.@
+br
+`"Haa, aaa, aggggg------!"@
+` But, I'm alive.@
+` Still, I'm alive.\
+
+` My body.@ My body is away from her again.\
+` I smell a whiff of gunpowder from my shoulder.@
+br
+`"A, Aah, ah."@
+` Just now.@ The instant that bayonet pierced me, she must have pulled the trigger.@
+` I was blown away by that, and there's distance between us again.\
+
+ld c,":a;image\tachi\cel_t06c.jpg",%type_crossfade_fst
+`"…… To happen twice, that must mean it's not a coincidence.@ With that much blood pouring out, not dying from shock must already be a sign that your body has begun to change."@
+br
+` Ga-chang!@ A metallic sound.@
+` The sword on the end of that weapon changes into a new one.@
+` The sword that shot me just now falls---and turns into pages of a book and scatters.\
+
+`"…… That's…… ridiculous."@
+` But that ridiculous thing is really frightening.@
+` That---just touching me carries a fatal poison.@
+` Death.@
+` I'll die.@
+` Without a doubt, I'll be killed.\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+
+` Will I die?@
+` Is that what I'm scared of?@
+` I don't know.@
+br
+`"Ah, gg………!"@
+br
+` My shoulder is burning.@
+` Hot, it's so hot, as if my entire body will burst into flames.\
+
+` She readies her weapon once more with another metallic clang.@
+` …… Twice.@
+` Withstanding that twice can be nothing but a miracle.@
+` The next time will certainly----\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+
+waveloop se1
+
+
+` I imagine that bayonet piercing me right in the face.@
+` That's more repulsive than frightening.@
+br
+` Death is.@
+` No matter how it happens, something useless, dirty, and disgusting.@
+` I like myself---so I don't want that to happen.\
+
+` Is that why I'm scared?@
+` I don't know.@
+` Come to think of it---I was always able to see "death", but I never thought about "death" at all.\
+
+` No, that doesn't really matter right now.@
+` *pant*, *pant*, *pant*-----
+` I have to escape.@
+` I don't want to die, so I have to get away.@
+
+br
+ld c,":a;image\tachi\cel_t07c.jpg",%type_crossfade_fst
+`"--You won't take off your glasses?"@
+` A simple, plastic voice.@
+` Those words.@ I gasp at their meaning.@
+` Because taking them off means I would see Senpai's "lines".@
+` If that happens, I might kill her----\
+
+`"Wha--What are you, saying, Senpai……!?"@
+ld c,":a;image\tachi\cel_t06c.jpg",%type_crossfade_fst
+`"-------"@
+` A chill runs through me.@
+` The air suddenly becomes saturated with a murderous intent.\
+
+`"…… I can't spend any more time with you.@ Please just die already."@
+cl c,%type_crossfade_fst
+` Her figure plunges low again.@
+br
+` ---She's coming.@
+br
+` Even though I know she's going to run towards me again, it's hard for me to even see her.\
+
+` ---I can only think of escaping.@
+` If I don't want to be killed---escape is my only option.@
+` Fortunately, our distance is almost ten meters.@ If I run as fast as I can, I can make it to the school building.@ Maybe I might be able to do something if I can get into a less open space-----!@
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+bg "image\bg\bg_03c.jpg",%type_lcartain_fst
+
+monocro #ff0000
+bg "image\bg\bg_03c.jpg",%type_nowaitdisp
+
+monocro off
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+wave se6
+
+
+br
+`"------"@
+` My back.@
+` Something----pierced, my back.@
+`"Aa----ah."@
+waveloop se1
+
+` My body falls forward.@
+` Just a little more.@
+` And it was just a little more before I could enter the school building.\
+
+`"Kk-----"@
+` I lift myself up with one arm.@
+` What sticks through me is one of those swords that looks like a nail that Senpai was using before.\
+
+`"Why----you………!@
+` I must be numbed to pain, and I pull out the sword skewering my back from behind.@
+` …… Since it penetrated through me, I got mad and pulled it out from my chest.@
+`"Alright………!"@
+` Now I can escape inside……!\
+
+
+`"What do you plan on doing by escaping, Tohno-kun?"@
+br
+` Before that,
+` I hear Senpai's voice from behind me.\
+
+`"You still don't understand?@ How fast do you think you just ran here?@ Why are you still alive after receiving that fatal wound?"\
+
+`"St-------"@
+` My mind begins to white out.@
+` Don't let her trick you.@
+` Don't let her trick you.@
+` Hasn't she been deceiving you all along?@
+` Don't listen to her anymore.@
+` If you listen, you'll die.@
+` Ignore her.@
+` Don't accept it.@
+` Even if it is the truth, this body can only reject it---\
+
+`"----Stop, it."@
+`"Geez, there's nowhere for you to run to.@
+` You can only fight or be killed.@ But if you can't fight, you can only die."@
+` Her footsteps.@
+` With the sound of footsteps, Senpai approaches.\
+
+`"-------!"@
+` I leap.@
+` My back, my shoulders, my arm are all almost dead, but I leap as if it was nothing.@
+br
+` ---I can't even believe it myself.@
+` Still breathing wildly and with a speed that matches Senpai, I run into the school building.\
+
+wavestop
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+!w1000
+
+play "track08.ogg"
+
+bg "image\bg\bg_11c.jpg",%type_lcartain_fst
+
+` *pant*, *pant*, *pant*, *pant*-----
+` I run.@
+` Without thinking, just wanting to escape, I continue running.\
+
+` *pant*, *pant*, *pant*, *pant*-----
+` But I'm at my limit.@
+` Is it because I'm out of breath or is it that my wounds won't let me move my arms and legs anymore?@
+` Whatever it is, it doesn't matter.\
+
+` My breathing becomes more forced.@
+` At the end of the hallway.@
+` Coming onto a wall aimlessly, I fall.@
+` I fall on my back, and try to get back up, and feel foolish for doing so.\
+
+` …… *pant*…… *pant*…… *pant*
+` Sitting cross-legged on the floor, I lean my back against the wall.@
+` Throwing back my head, I take a big breath of air.\
+
+`"-----The moon."@
+` Looking up, I can see the moonlight through the window.@
+` Is it because I'm so exhausted?@
+` Everything I look at seems vague, as if everything was covered in a mist.@
+br
+` Vagueness.@
+` Does that mean it is indefinite?@
+` The same as me.@ The same as the person called Tohno Shiki, indefinite.\
+
+`"…… Ou…… ch……"@
+` My shoulder throbs in pain.@
+` If I was as definite as this pain, maybe this wouldn't have happened?\
+
+` I'm starting to not understand.@
+` I always thought I was Tohno Shiki.@
+` But that was a different person, and they tell me I'm just an adopted son from somewhere.@
+` Being adopted means I should have memories of before I came to the Tohno mansion, but there's nothing.@
+` I…… really, I only have the memories of Tohno Shiki.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\ima_01.jpg",%type_crossfade_fst
+
+` In the night sky is the solitary moon.@
+`"----"@
+` It's incredibly… strange.@
+` Why didn't I realize it until now?@
+` Tonight is so---\
+
+bg "image\bg\bg_11c.jpg",%type_crossfade_fst
+
+br
+` …… In the end, just what was I?@
+` It's stupid not knowing anything about myself and just disappearing like this.@
+br
+` Everything is so vague, it's stupid.@
+` A world where I can see death.@
+` A vision where I can perceive death.@
+` That day eight years ago.@
+` I was able to meet Sensei and was able to live normally.@
+` I can still declare that it was proper to meet her.\
+
+`"…… But, Sensei.@ I, guess I, was someone, who shouldn't be alive."@
+` …… I should end my life while some part of me can still think that.@
+` But I can't do it.@
+` I can't kill myself.@
+` Even if it is pointless, even if it is a mistake, I want to keep on living.\
+
+` If I die, everything will become a lie.@
+` I want to keep on living.@
+` No matter how wrong it is, no matter how many things I have to lose, I want to keep on living.@
+br
+` Only her.@
+` If only I had Ciel-senpai with me.@ I wouldn't care what else I had to lose.\
+
+br
+br
+br
+br
+br
+` ---For that sole reason, I have kept on living like this.@ But, that is all over now.@
+` These past five years.@ Was it a long time?@ Was it a short time?@ I don't know.\
+
+`"…… Liar."@
+` I don't want to hear those words.\
+
+br
+br
+br
+br
+br
+` ---I have to thank you, Tohno-kun.@
+` My work here is done now.@ All that's left is for me to take responsibility for all my actions.\
+
+`"…… Li, ar."@
+` Yeah.@ But, maybe there was some truth in there, too.@ Because even though she deceived me, not even once…\
+
+br
+br
+br
+br
+br
+` ---Thank you so much for everything until now.@ It has been a long time since I've been this happy.@
+` So, let's finish with a handshake.\
+
+`"…… You, big liar."@
+` Not even once did she lie to me.\
+
+br
+br
+br
+br
+br
+` ---Even though I'm not going to be here, please stay friends with Inui-kun.@
+` I wanted to be a student like you and Inui-kun----\
+
+`"…………………"@
+` But that person herself was a lie.@
+` I can't even think that smile could really be a lie.\
+
+` But, this is what reality is.@
+` …… Ciel is a lie, and she was staying near me only so she could kill me.@
+` I was fooled.@
+` She did not love me at all.@ And when she helped me when I was completely lost, too.@
+` And the time we spent during breaks for no reason, too.@
+` All of it was just to confirm if I was Roa or not.\
+
+` I grit my teeth.@
+` I grit my teeth hard.@
+br
+`"…… Damn it."@
+` I scratch the wall in frustration.@
+` Yes, I was tricked.@
+` Ciel got closer to me, calculating everything.\
+
+`"…… Even still."@
+` Feeling pain in my heart, I scratch the wall.@
+` …… Yes, I was tricked.@
+` But, still----
+br
+`"---I, can't hate Senpai."@
+!w1000
+
+\
+
+` There's no way I can hate her.@
+` Even if it was all a lie for her, I really enjoyed it.\
+` No matter what, that's still true.@
+` It was only less than two weeks since I met Senpai, but---I really was happy.@
+br
+`"…… Damn it-----"@
+` That's why I can't hate her.@
+` But that's an illusion only for me.@
+` That's why I regret only that.\
+
+bg "image\bg\ima_01.jpg",%type_crossfade_fst
+
+` My vision wavers.@
+` Outside the window lies the white night.@
+` It's quiet here, almost like the bottom of a deep sea.@
+` Wavering quietly.@
+br
+` Everything is fake, an illusion that disappears when you approach it.@
+` Like a mirage you can never grasp.@
+
+playstop
+
+!w2000
+
+\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_11c.jpg",%type_crossfade_fst
+wave se7
+
+` I can hear her footsteps.@
+` …… She's coming.@
+wave se7
+
+br
+`"----Kill her?"@
+br
+` Inside my head, I hear those words.@
+` If you don't want to die, slice her apart.@
+wave se7
+
+` If you think you're not mistaken, slice her apart.@
+` Just slice her apart already!@
+wave se7
+
+` Slice her apart.@ Slice her apart, Slice her apart, Slice her apart, Slice her apart, Slice her apart, Slice her apart, Slice her apart, Slice, slice, slice, slice, slicesliceslicesliceslicesliceslice-------\
+
+`"------"@
+` …… It looks like I'm really done.@
+wave se7
+
+` My head starts to rage again.@
+` But still, I don't want to die.@
+` If I don't want to die---there's only one thing to do.@
+br
+wave se7
+
+` The footsteps get louder.@
+` Her shadow grows larger.\
+
+br
+` ---Aren't you going to take off your glasses?@
+br
+` Even knowing what it meant, she said that.@
+` In that case.@
+br
+
+
+
+
+
+
+
+return

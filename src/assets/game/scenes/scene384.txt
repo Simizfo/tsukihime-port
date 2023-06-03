@@ -1,0 +1,91 @@
+
+
+
+
+
+
+
+bg "image\bg\ima_01.jpg",%type_crossfade_mid
+
+play "track07.ogg"
+
+` ----And then,
+` I embrace Akiha's body from the front.\
+
+` ---There's no way I could kill her.@
+br
+`"…… I want you to live."@
+` Akiha tilts her head questioningly.@
+`"No matter what you become---I still want you to live, Akiha."@
+br
+` My tears cannot be stopped.@
+` Akiha hugs back joyfully---and bites on my neck.\
+
+`"-----!!"@
+` It hurts.@
+` But it is not an act to suck my blood.@
+` It is just a primitive act to bite me.\
+`"A-Akiha."@
+` Akiha just frantically bites my neck.@
+` She tears off the meat and my bones are being chipped away.@
+` Akiha has no intelligence.@
+` She does not know who is holding her, or the meaning of an embrace.@
+br
+` Akiha is no different from a beast in human form.@
+` But still----\
+
+`"---Still…… I want you to live."@
+` …… Is it wrong to wish such a thing?@
+` Is it a crime to wish for her to stay alive even though she goes around killing people?@
+` Even if Akiha says she cannot endure such a thing, I want her to endure past it.\
+br
+` ----Even if.@
+` To think that the crime is borne by me is selfish thinking.\
+
+`"…… I'll save you."@
+` Hard.@
+` With all my might, I embrace Akiha.@
+`"Uh, uhhh, uhh!!"@
+` I embrace the wildly moving Akiha.@
+` Crunch.@
+` She breaks my shoulder bone by biting through it.\
+
+`"------A, Akiha-------"@
+` Even though one of my shoulder's bones is broken, I embrace Akiha with one arm.@
+`"Ugh!!@ Uhnn………!!"@
+` Akiha rages wildly.@
+` I embrace her for a long time.@
+` …… Is it because this might be our last embrace?@
+` I have never held someone so dearly, trying to remember everything… their heartbeat, their warmth…\
+
+`"Uh…… Mm……"@
+` …… Maybe since she found out I am not going to do anything, Akiha stops fighting.@
+br
+` I don't know how long we were like this in the falling autumn leaves.@
+` But Akiha has fallen asleep in my arms.\
+
+bg "image\bg\bg_54a.jpg",%type_crossfade_mid
+
+
+`"………………"@
+` I rest Akiha's body on the ground as gently as I can.@
+` Akiha's hair is still red.@
+` If SHIKI's words are true, then…
+` There is no way for it to return it to black except for that one method.\
+
+`"………………"@
+` I swore I would save her, no matter what happened.@
+` It's really easy to save her.@
+` The reason why Akiha is living as one of the Tohno Blood.@
+` If the human she is sharing her life with disappears, she can go back to the original "Tohno Akiha".@
+` But that means---the death of Tohno Shiki.\
+
+` I don't know what leads to happiness or what can save us.@
+` I don't know if death can be the way to save her.@
+` But right now, I can't tell what is the right thing to do.@
+br
+` I------
+br
+
+
+return

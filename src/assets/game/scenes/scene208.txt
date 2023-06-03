@@ -1,0 +1,25 @@
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+
+br
+` -----I know Yumizuka was smiling yesterday.@
+br
+` I didn't think that she could make such a face, say "bye bye", and then run away from home.\
+
+`"---Sensei."@
+`"What is it, Tohno?@ A question?"@
+`"Yes.@ Is it true that a student in our class has run away from home?"@
+`"Hrm------"@
+` Instantly, the air in the classroom solidifies.@
+` He frowns, then, with a difficult expression, bows his head in assent.\
+
+`"Yes, that is what we've heard from Yumizuka Satsuki's parents.@ Yumizuka didn't come home last night, but they've been searching, and I'm sure they've already found her."@
+` Saying so, he departs.@
+br
+` The classroom becomes noisy again.@
+` I have a bad feeling about this.@
+` …… It's really heavy.@ A terrible feeling as if my body is tied down to this chair.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+return

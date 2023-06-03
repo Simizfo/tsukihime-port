@@ -1,0 +1,68 @@
+
+monocro #0000ff
+
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+cl c,%type_nowaitdisp
+
+` Arcueid looks up at me full of amusement.\
+
+`"Uh----"@
+` She's acting like the Arcueid from last night's dream.@
+br
+`"It doesn't concern you, so leave me alone."@
+` I look away from her and refuse.@
+` But Arcueid keeps saying "Come on, come on," over and over.\
+
+ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
+
+`"Come on, tell me.@ You can at least tell me who you dreamed about."@
+` She asks like a curious kid.@
+` Every time I turn away she keeps jumping in front of me, saying "Come on, come on."@
+br
+` …… This is pure torture.@
+` She's as mischievous as last night's dream.\
+
+` I bury my face in my hands.@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"Hey Shiki, don't be quiet and tell me."@
+` Arcueid keeps looking at me with those upturned eyes.@
+` ---I can't, God.@
+` This is my limit.@
+br
+`"…… You."@
+` I hesitatingly let it out in a quiet voice.\
+
+
+`"---Eh?@ What about me?"@
+`"Don't make me say it again.@ I'm saying that it was you who came!"@
+` I shout angrily as I look away.@
+` Arcueid's eyes widen in surprise.@
+
+ld c,":a;image\tachi\ark_t13.jpg",%type_crossfade_fst
+`"M, me……?"@
+`"Yeah, it's not a joke.@ You came, and----"@
+` There's no way I can finish.\
+
+ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
+
+playstop
+
+`"Ah----"@
+` Now Arcueid looks away from me, looking very uncomfortable.@
+cl c,%type_crossfade_fst
+br
+`"………………"@
+`"………………"@
+` Neither of us know what to say.@
+` The uncomfortable silence continues.\
+
+` ……@
+` …………@
+` …………………@
+` …………………………@
+` ………………………………… *ahem*@
+` I can't bear the silence any longer and force out that cough.\
+
+return

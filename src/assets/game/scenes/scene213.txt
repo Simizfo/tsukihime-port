@@ -1,0 +1,222 @@
+
+
+
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+
+
+
+`"…… Sorry.@ I really don't feel too good right now.@ I'm going to the clinic, so please just have lunch with Arihiko."@
+
+ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
+
+` Senpai sighs.@
+` "…… I don't know what is going on, but please do not push yourself, Tohno-kun."@
+`"Haha--I'm going to the clinic so I won't push myself."@
+
+cl c,%type_lshutter_mid
+
+` Forcing a smile, I leave the classroom.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+playstop
+
+!w2000
+bg "image\bg\bg_06b.jpg",%type_lshutter_mid
+
+
+` When I get back, homeroom has ended.@
+` I'm the only one left in the classroom as everyone else has rushed off to club activities or to their houses.@
+br
+`"----Well."@
+br
+` There's really no need for me to stay here.@
+` Putting my things in my bag, I leave the classroom.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_23b.jpg",%type_lcartain_mid
+
+
+` It's past four o'clock.@
+` I told Hisui that I'd return around four, so I don't have time to wander around.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_22b.jpg",%type_lcartain_mid
+
+
+`"……"@
+` I suddenly stop as I walk up the hill.@
+` Yesterday, at this same time.@
+` I remember how natural the parting was between Yumizuka and I.\
+
+`"…………"@
+` To be honest, I'm concerned about Yumizuka.@ But no matter how much I worry, there's nothing I can do.@
+` I told her I would help her as much as I could whenever she was in a pinch.@
+` But now, I don't even know how I can help.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_32b.jpg",%type_lcartain_mid
+play "track01.ogg"
+
+
+` I reach the top of the hill, walk along the wall and reach the front gate of the mansion.@
+`"…… This western mansion does seem out of place."@
+` In the middle of a residential area and at the top of a hill, this imposing mansion really does give the impression that it is from a country other than Japan.@
+` Besides, to top it all off----
+
+ld c,":a;image\tachi\his_t16.jpg",%type_lshutter_mid
+
+`"Welcome back, Shiki-sama."@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+` And standing there in front of the gate to welcome me is a maid.@
+` Hisui stands like a statue in front of the gate.\
+
+`"Thanks, Hisui…… Um, forgive me for asking, but have you been waiting for me here the whole time?"@
+
+
+`"No, not the whole time.@ I have only waited for half an hour.@ Is there something wrong?"@
+` She speaks extremely matter-of-factly.@
+` …… Wait a minute, waiting for me like that is going overboard.\
+
+`"---I'm really happy that you waited to greet me, but you don't have to go that far.@ Wearing that and standing so conspicuously, I feel a little embarrassed."@
+` Plus it is autumn.@ It'll get pretty cold out soon.@
+
+`"……………………"@
+` Hisui is silent.@
+` She might be part foreigner, as her blue eyes are like finely crafted glass, staring at me lifelessly without emotion.@
+` A brief silence ensues.\
+
+ld c,":a;image\tachi\his_t01b.jpg",%type_crossfade_fst
+
+`"…… I understand.@ Then, starting tomorrow, I will wait in the lobby."@
+` Hisui gives a brief bow and opens the gate.@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+` After that, she resumes her immobile depiction of a statue.@
+` After I walk through the gate and enter the garden, she quietly follows behind me.\
+
+bg "image\bg\bg_48b.jpg",%type_lshutter_mid
+
+
+` When we reach the entrance, Hisui whooshes past me.@
+`"Uwaa!"@
+` I instinctively jump back.@
+
+ld c,":a;image\tachi\his_t08.jpg",%type_crossfade_fst
+
+`"…… What is it, Shiki-sama?"@
+`"Uh, no-----nothing, it's nothing."@
+`"……………"@
+
+cl c,%type_lshutter_mid
+
+` She silently opens the front door.@
+` She must have moved ahead of me to do so.\
+
+` Waiting behind her master until her turn arises and quietly fulfilling her duty.@
+` Perhaps that is the duty of a maid, but it makes a normal person like me a little nervous to have her attending my every move.@
+` …… This isn't good at all.@ This just makes me feel like a perpetual guest in my own home.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+
+bg "image\bg\bg_33b.jpg",%type_lshutter_mid
+
+
+`"Um, Hisui?"@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
+
+
+`"Yes, what is it, Shiki-sama?"@
+`"I said this yesterday already, but I'd like to do things that I can do by myself.@ No, please let me.@
+` This is sort of a secret, I suppose, but the truth is, I really am pretty lazy deep inside, so I tend to let things go."@
+` Yeah, I really want that to be a secret from Akiha.\
+
+
+`"…… I do not understand, are you telling me to be more strict?"@
+`"No, that's definitely not it.@ I just want to live as relaxed as possible."@
+`"…… I am deeply sorry.@ I do not appear to understand what you are saying, Shiki-sama."@
+`"…… Um, that's why I'm saying--you don't have to look so serious."@
+` …… This is troubling.@
+` Last night when I talked to her a little about this I had a premonition, but I didn't know she took things this seriously.\
+
+`"---Sheesh, what I'm saying is that you don't have to worry about me.@
+` I don't mind being helped with things like laundry and cooking, but other than that, I can take care of myself.@
+` Isn't it just you and Kohaku-san taking care of this enormous mansion?@ So I don't want to add to your duties; just relax!"@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"………"@
+` Her expression doesn't change.@
+` She doesn't answer or even give a nod.@
+` Just… a quick closing of the eyes, I think.\
+
+`"I understand.@ But you do not have to worry about me, Shiki-sama."@
+
+cl c,%type_lshutter_mid
+
+br
+` ----Argh, she doesn't understand at all………@
+br
+` Hisui swiftly swishes to the side to make way for me.\
+
+` I sigh.@
+` …… I am really taken aback…@
+` All this devotion really does make me happy, but I think it'll be good if she was just half as cheerful as Kohaku-san.@
+` She has such a beautiful atmosphere around her, maybe if I just relax a little bit, that would be--\
+
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_mid
+
+`"Shiki-sama, are you not going to return to your room?"@
+`"No, I was just thinking about something."@
+` I turn to the side and face the stairs.@
+` Hisui looks rather longingly at the bag in my hand.@
+` …… I think she wants me to let her carry it.@
+` She already went through all this trouble just to greet me, and now she wants to carry my bag.@
+` I ignore her longing attitude as I quickly walk towards my room.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+bg "image\bg\bg_40b.jpg",%type_lcartain_fst
+
+
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
+
+`"Please take off your school clothes and place them here.@ I have to clean the mansion, so if you need anything, please call for me."@
+`"…… Hisui, you clean the mansion?@ I wonder what Akiha and Kohaku-san are doing."@
+`"Akiha-sama is in the salon taking care of Makihisa-sama's business and inheritance matters.@ Nee-san would most likely be sweeping in the courtyard."\
+
+`"…… Huh?@ My old man's business inheritance?@ Is she talking with a lawyer or something?"@
+`"Yes.@ It seems that she is being informed about all of the administration policies, so she will be extremely busy until dinner time."@
+`"……………"@
+` Well, the old man DID suddenly pass away, so he probably didn't tell her anything about his company.@
+
+`"Sorry for taking your time.@ I'll call you if anything happens, so you can return to what you were doing."@
+
+ld c,":a;image\tachi\his_t16.jpg",%type_crossfade_fst
+
+`"I understand.@ Well, then, please excuse me."\
+
+cl c,%type_crossfade_fst
+
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+
+bg "image\bg\bg_40b.jpg",%type_lshutter_mid
+playstop
+
+
+` I change out of my uniform and into some normal clothes.@
+` The clock says it's just past five o'clock.@
+` It'd be a waste if I just spaced out in my room, so now I should----
+br
+
+
+
+
+
+return

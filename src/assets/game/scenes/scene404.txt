@@ -1,0 +1,54 @@
+
+
+
+
+
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
+
+
+`"…………"@
+` I don't know what to say.@
+` Even though I'm only a little better than yesterday, at least now I feel alive.@
+` But, after making Hisui do that---making her drink that completely, maybe it was just better if I stayed like that.\
+
+ld c,":a;image\tachi\his_t21.jpg",%type_crossfade_fst
+
+`"------"@
+` Hisui straightens out her clothes and moves away from the bed.@
+`"…… Hisui…… I"@
+`"Shiki-sama.@ Please do not tell anyone of this.@ …… I do not want you to say it even to myself."@
+`"---"@
+` …… Of course, Hisui must hate what she just did enough to not even want to be reminded of it.@
+`"Shiki-sama.@ This was something that I did on my own.@ Please think that nothing happened.@ Otherwise, I will be unable to serve you any longer."\
+`"-------"@
+` I don't know how to respond.@
+` I don't have words to apologize to her, and I don't have the words to thank her either.@
+
+`"Well then, please excuse me."@
+cl c,%type_lshutter_mid
+
+`"A………"@
+` Hisui leaves.@
+` All I can do is watch as she does so.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w2000
+bg "image\bg\bg_40a.jpg",%type_crossfade_mid
+
+
+` …… It's two o'clock.@
+` Even though it's time for my checkup, Hisui probably won't come.@
+` ………… *sigh*@
+` All I can do is sigh.@
+` Just how did all of this happen?@
+` Even though it was Hisui that started all this, what was I doing holding her head and coming in her mouth like that?\
+
+
+
+
+
+
+
+
+
+return

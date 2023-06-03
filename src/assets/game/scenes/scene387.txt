@@ -1,0 +1,81 @@
+
+
+
+
+!w1000
+bg "image\bg\bg_06a.jpg",%type_lcartain_mid
+
+
+` I get to the classroom, and the class starts uneventfully, as always.@
+br
+` …… There's no one at Yumizuka's desk.@
+` Even though a classmate is gone forever, class life remains unchanged.@
+br
+`"………"@
+` I become a little uneasy.@
+` Because of Hisui, I had forgotten all about that.@
+` Perhaps because of that incident?@
+` With that uneasiness, my thoughts drift towards the sky.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_06b.jpg",%type_crossfade_mid
+
+
+` Before I realized it, the school day was over.@
+` I let out a sigh.@
+` I don't really feel like seeing Arihiko or Senpai.@
+` Right now, it seems I'm just more at ease in the Tohno mansion than in school.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_32b.jpg",%type_lcartain_mid
+bg "image\bg\bg_33b.jpg",%type_lshutter_mid
+
+play "track01.ogg"
+
+` I enter the lobby and immediately encounter Hisui.@
+
+ld c,":a;image\tachi\his_t16.jpg",%type_lshutter_mid
+
+`"Welcome back, Shiki-sama."@
+`"I'm home, Hisui.@ Are Kohaku-san and Akiha here?"@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_mid
+
+`"Akiha-sama has not returned yet.@ Nee-san will most likely be in the rear courtyard sweeping."@
+`"As usual.@ Well, I'll be in my room; please continue whatever you were doing."@
+`"Yes.@ Please excuse me."\
+
+cl c,%type_lshutter_mid
+
+
+` I head up the stairs to the second floor.@
+`"Ah, Shiki-sama?"@
+`"Hm?"@
+
+ld c,":a;image\tachi\his_t23.jpg",%type_lshutter_fst
+
+`"I will be in Makihisa-sama's room sorting things out.@ If you need me, please call for me."@
+
+cl c,%type_lshutter_mid
+
+` Hisui disappears towards the east end of the mansion.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_40b.jpg",%type_lshutter_fst
+playstop
+
+
+` Putting down my bag, I take off my jacket.@
+`"…… Well, then."@
+` There's still time until evening, so what should I do?@
+
+br
+
+
+
+
+
+
+
+
+return

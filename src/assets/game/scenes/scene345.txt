@@ -1,0 +1,233 @@
+
+
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
+
+
+` --That's right.@ Having just had a bad dream, my chest's still a little jumpy.@ I can't have breakfast right away.@
+` I'll go to the sitting room in about ten minutes.\
+
+bg "image\bg\ima_10.jpg",%type_tshutter_mid
+!w2000
+bg "image\bg\bg_34a.jpg",%type_bshutter_mid
+
+
+ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+`"Ah, good morning, Shiki-san.@ Breakfast is already made."@
+` Seeing my face, Kohaku-san immediately greets me with a smile.@
+`"Yeah, morning.@ Sorry, as always."@
+` I return the greeting, and glance over at the sofa.@
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
+
+` And there is Akiha, looking like she has something to complain about.\
+
+`"Morning, Akiha.@ You're… up early again today."@
+
+ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+`"Good morning.@ You're up late again, Nii-san."@
+`"…… Ahh.@ It looks like you're completely recovered, Akiha; I'm glad."@
+` She really does seem much better, mind and body.@
+
+ld c,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
+
+`"Ah, you were worried?@ It still seems like you didn't come to check on me even once."\
+
+`"Hold on, Akiha, I did want to come watch over you.@ Don't you remember ordering me not to come near you?"@
+
+ld c,":a;image\tachi\aki_t06.jpg",%type_crossfade_fst
+
+`"That was depending on the situation.@ I was having only a temporary fit so you should not have really listened to what I said."@
+
+cl a,%type_crossfade_fst
+
+` …… Akiha's words are unreasonable.@
+` She seems to be in a bad mood this morning, so maybe she wants to yell at me for whatever reason.\
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Shiki-sama.@ If you don't eat breakfast soon, you'll be late for school."@
+` Crap, come to think of it, I was already running late.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_34a.jpg",%type_rshutter_mid
+
+
+` When I finish breakfast and return to the sitting room, Akiha is still drinking tea gracefully.@
+` …… Waiting for me… is that the right explanation, I wonder?@
+`"Akiha, will you be taking a car to school by any chance?"@
+
+ld c,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
+
+`"Now wait a minute.@ To take a car to your school would be in poor taste.@ Even I can understand that."@
+` Ahh.@ I guess it was that, after all.\
+
+`"Well then, shall we go?@ At this time we might have to run a bit, but it can't be helped."@
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"Eh… Nii-san?"@
+`"I'm saying, let's go to school together.@ I'll show you the best route to take…… Well, if you don't want to go with me, I don't really mind."@
+
+ld c,":a;image\tachi\aki_t16a.jpg",%type_crossfade_fst
+
+`"…… If you say so, I don't mind, but…"@
+`"Then it's settled.@ C'mon, you're ready, right?@ We'll be late if we don't hurry."@
+
+cl a,%type_crossfade_fst
+
+` I take Akiha's hand from the sofa, and pull her up.\
+`"Ah…"@
+`"Hisui, we won't need to be seen off.@ I'll be back in the afternoon today too, so take care."\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+!w2000
+
+play "track03.ogg"
+
+bg "image\bg\bg_01a.jpg",%type_lcartain_fst
+
+
+` ---And so, we come out of the mansion, descend the slope at a run, and race on to school.@
+` Matching my speed to Akiha's, even though it takes longer, we still make it in just under fifteen minutes.@
+`"Right, we're here.@ You should just about make it to homeroom, Akiha."@
+
+ld c,":a;image\tachi\aki_t06.jpg",%type_crossfade_fst
+
+`"Yes, we're going to make it in plenty of time, since we ran all the way!"@
+br
+` ---Ah.@
+` For some reason, Akiha seems to be angry.\
+
+`"What's wrong, Akiha?@ Such an angry face.@ Maybe you should have come by car after all?"@
+
+ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+`"---Oh please.@ Not at all.@ I'm angry for a much simpler reason."@
+` Breathing heavily, shoulders heaving, Akiha glares at me.@
+`"Then, did I run a little too fast?"@
+
+ld c,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
+
+`"Yes.@ Not a complete answer, but that is one of the reasons."\
+
+`"Well, perhaps it's that?@ Two of us running together to school, being seen and pointed at?"@
+
+ld c,":a;image\tachi\aki_t06.jpg",%type_crossfade_fst
+
+`"True.@ Although I was really embarrassed, I don't really care about that."@
+br
+` ----?@
+` …… I don't get it, then.@ Why is Akiha so angry?@
+` She's not angry because she's tired, and we made it to school on time.\
+
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"Never mind, I am making an issue out of it on my own.@ Thinking about it, you have no reason to get up early… Really, I don't know what I was hoping for."@
+
+cl a,%type_crossfade_fst
+
+` With a sigh, Akiha hangs her head.@
+` …… I don't really get it, but I guess Akiha's saying she wanted to go to school more leisurely?\
+
+ld c,":a;image\tachi\aki_t16a.jpg",%type_crossfade_fst
+
+`"But, I'm surprised.@ I'm a fast runner, but I wasn't able to keep up with you, Nii-san.@ Even though you don't do any clubs, you're quite fast, aren't you."@
+`"…… Well, vigorous activity isn't good for my body, so I can't do clubs, but I still move around.@ Actually, I'm pretty athletic."@
+
+ld c,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+
+`"Yes.@ I heard from Hisui, but I wasn't expecting this.@
+
+ld c,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
+
+` But, I still would like to refuse going to school at such a pace every morning."\
+
+bg "image\bg\bg_03a.jpg",%type_lshutter_mid
+
+
+` Passing the main gate, we come to the entrance.@
+` Here I part from Akiha; she goes to the fourth floor, and I go to my classroom on the third.@
+br
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"…… Well then, Nii-san, I shall go to the first year classrooms.@ I shall see you after school."@
+`"What are you talking about?@ There's lunch break before that.@ I'll be waiting in the courtyard, so come quickly."@
+
+ld c,":a;image\tachi\aki_t09.jpg",%type_crossfade_fst
+
+`"Ah----yes.@ I'll be waiting."\
+
+cl a,%type_crossfade_fst
+
+` Giving a cute little bow, she runs inside.\
+` ---Then.@
+` As if remembering something, Akiha stops and turns.@
+
+ld c,":a;image\tachi\aki_t08a.jpg",%type_crossfade_fst
+
+`"Nii-san, this morning's race was enjoyable.@ Though I wouldn't want to do it every day, perhaps it's not so bad once in a while!"@
+
+cl a,%type_lshutter_fst
+
+` Her breath bouncing, Akiha disappears inside.\
+
+
+`"……"@
+` …… Well, I guess she does have a cute side.@
+`"How nice!@ The two of you get along well, don't you?"@
+` !?@
+
+ld c,":a;image\tachi\cel_t04.jpg",%type_lshutter_fst
+`"Ci… Ciel-senpai!@ Please don't sneak up on me like that…!"@
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"Yes, I'll be careful from now on."@
+` Smiling sweetly, Senpai gazes at me happily.\
+
+`"…… What is it, Senpai?@ If you want to say something, say it."@
+
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"No, no; I don't think I need to say anything.@ You look really happy, Tohno-kun."@
+`"---Wha…!"@
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+`"If you go into the classroom with a face like that, Inui-kun will surely tease you.@ Well, Tohno-kun, I'll see you at lunch again."@
+
+cl a,%type_lshutter_fst
+
+` Senpai walks indoors, laughing to herself.\
+
+`"------"@
+` I pinch my cheek.@
+`"…… Did I look that happy?"@
+` …… Well, I guess I did.@
+` Since just seeing Akiha smile made me feel real happy inside.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w1000
+wave se2
+
+!w1000
+
+bg "image\bg\bg_06a.jpg",%type_tshutter_mid
+
+wave se2
+
+
+` ----Fourth period ends.@
+br
+` Lunch break comes, and the school fills with noise.@
+`"----Right."@
+` Akiha should be waiting in the courtyard.@
+` …… Since it's Akiha, I think she probably got Kohaku-san to make her lunch, but I should go buy something just in case.\
+
+
+return

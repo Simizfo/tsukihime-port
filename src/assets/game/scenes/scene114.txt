@@ -1,0 +1,29 @@
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_25a.jpg",%type_lcartain_mid
+
+` I go out in town aimlessly.@
+` Why the heck am I walking around here for no reason?@
+br
+bg "image\bg\bg_25a.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\ark_t22.jpg",%type_crossfade_fst
+bg "image\bg\bg_25a.jpg",%type_crossfade_fst
+
+`"----Ah."@
+` It's just a mistake.@
+` There's no way she'll still be around, and it's not like I have any reason to talk to her.\
+
+` So why did I think it was her?@
+` Why----am I walking around town pointlessly like this?@
+br
+`"…… I have to go back to the mansion."@
+` I shake my head as if trying to clear my head of drunkenness and turn away from the nonexistent illusion of Arcueid.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+!w1000
+
+
+return

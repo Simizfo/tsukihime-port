@@ -1,0 +1,33 @@
+
+bg "image\bg\bg_05a.jpg",%type_nowaitdisp
+
+`"…… Why?@ Why were you doing those things?@
+`"Why?@ I do it because it's my job."@
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+`"More importantly, Tohno-kun, you were lying when you told me you would not go out at night, right?"@
+` She grins as she says this.@
+`"Oh……"@
+` I did promise her that, but--\
+
+ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+
+`"You didn't keep the promise we made.@ You told me you wouldn't go out at night anymore."@
+`"……… Uh."@
+` She stares at me.@
+` I start to feel like the bad guy all of a sudden, feeling guilty about what I did.\
+
+ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
+
+`"I made the promise with you so something like this wouldn't happen.@ Is that how little a promise with me means to you, Tohno-kun?@ That makes me sad."@
+`"Ah---no, that's not it.@
+` About last night, I thought Arcueid was the one behind the serial killings, but that couldn't be right, so I went to ask her---"@
+cl c,%type_crossfade_fst
+\
+
+` I tell her all about last night.@
+` Senpai listens to it all silently.@
+` How I met her accidentally, how she explained to me about the vampire in this city, how I teamed up with her to save the city, and everything up until now.\
+
+
+
+return

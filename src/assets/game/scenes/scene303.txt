@@ -1,0 +1,933 @@
+
+bg "image\bg\bg_11c.jpg",%type_nowaitdisp
+
+wavestop
+
+br
+` Then---What do I do?@
+br
+`"No…… way."@
+` I bring my slightly trembling fingers up to my glasses and throw.@
+` Clang.@ The dull sound echoes through the hallway.\
+
+`"There's no way I can do that!"@
+` I shout angrily at the other person inside my head.@
+` It's the first time I ever wanted to kill myself.@
+br
+` Clang.@ Clang.@ The hard object rolls along the floor.\
+
+` …… I don't see any lines.@
+` What I threw away was my knife.@
+` I won't take off my glasses.@ …… I'll never do that.@
+` It's just that, since I didn't have confidence in myself, I threw away my knife.@
+` If I kept holding it, I know I would've done something worse than me dying.\
+
+play "track09.ogg"
+
+ld c,":a;image\tachi\cel_t15.jpg",%type_lshutter_mid
+`"-------"@
+` And then, she arrives.@
+` Neither her emotionless eyes nor that foreboding weapon change.@
+br
+` She stops in front of me as I sit on the ground.@
+` How come?@
+` She doesn't finish me off.@
+` We just both stare at each other aimlessly.\
+
+!w1000
+
+`"---I have one question."@
+` The tip of her bayonet aims at my chest.@
+br
+`"Why didn't you take off your glasses?@
+` Why---didn't you even try to fight me once?"@
+`"…… It's simple."@
+` It's just that the thought never crossed my mind.@
+`"I can't do such a horrible thing to you, Senpai."\
+
+`"Horrible?@ …… Are you stupid?@
+` I am going to kill you.@ I am not your Senpai.@ I told you everything was a lie, and you still don't understand……!"@
+` …… Her voice sounds irritated.@
+br
+` ---She's really… angry.@
+br
+` I realize that even though her face is calm, her arms and legs are literally shaking with anger.\
+
+`"…… I know.@ Senpai, you were deceiving me up until now.@ This person called Ciel-senpai never existed from the beginning.@ I understand that."@
+`"If you understand, then why……!"@
+`"…… It's okay.@ Even if "Senpai" is a lie, it doesn't matter.@
+` I really had a lot of fun.@ The time we spent together may not mean much to you, but it was very dear to me."@
+br
+` …… That's why it's okay.@
+` Even if it's all a lie to Senpai,
+` the fact that I was saved by that is still true.\
+
+`"---That's why it's okay."@
+` These past two weeks really were fun.@
+` But, if I hate you here, I'll lose even that.@
+` Even if it's a lie to you, that's only half of it.@
+` As for my half, I want to make it real, until the very end.@
+br
+` …… Although exchanging my life for that might be a comical wish.\
+
+`"---For that… for that you are going to throw away your life?@ Such a wish, your wish is something that small?"@
+`"…… I see.@ Maybe it is, kind of small."@
+br
+` ---But, right now, that is the second dearest thing to me.@
+` I can only think of one wish other than that.\
+
+`"---I have seen many people, but,"@
+` She takes a step forward.@
+`"This is the first time I've met someone as stupid as you."@
+` Senpai places the tip of her bayonet right up against my heart.\
+
+`"------"@
+`"------"@
+` …… How come?@
+` She doesn't pull the trigger.@
+` The eyes looking at me are completely empty.@
+` …… Those emotionless eyes that Senpai shows me.@ That doesn't mean she's a cold-hearted person, but…
+` Simply---She can't deceive herself, so in the end, I suppose all she could do was just kill her emotions.\
+
+`"-----"@
+` Yeah, I finally realized it.@
+` That whenever she showed those eyes, she wasn't fooling me--she was fooling herself.\
+
+`"…… You're not going to kill me, Senpai?"@
+`"---I forgot.@ In the end, I still must hear your confession.@ I am a member of The Church after all."@
+`"…… Oh.@ I don't have anything to confess, but can I ask something?"@
+`"----Yes.@ Please make it short."@
+`"…… Yeah, it'll be quick.@ It's just, I was wondering why you look like you're going to cry."@
+` Like a jolt,
+` I think Ciel's body trembled.\
+
+`"---I'm, not, crying."@
+` Certainly her face is stone cold as she denies this.@
+` …… Hearing that, I even tilt my head to the side.@
+br
+` But, all the same, I----
+br
+`"…… But you still look like you're about to cry.@ I don't know why though."@
+`"That's just your imagination.@ I don't feel anything."\
+
+`"---The only emotion I have is the desire to die as a human.@ There's nothing else."@
+` She says this with her emotionless eyes.@
+` It's… terribly sad.@
+` Knowing she's lying right now is just too ironic.\
+
+`"…… How terrible.@ Even to the end, you're going to lie to me, Senpai?"@
+`"-------"@
+` There's no response.@
+` As if she was frozen, she doesn't move.\
+
+`"---What about you?@ You're lying.@ I don't think your wish is to be killed here by me, right?"@
+`"…… Of course.@ Because if you die, there's nothing.@ I've already experienced it once, so I understand that.@ …… To tell the truth, I want to live.@ But I don't want to just live."\
+
+` …… Yes, I don't want that.@
+` Even if I manage to keep living, there's nothing for me after that.@
+` The person called Tohno Shiki would die and would do things just like this person experienced.@
+` But, more than that.@
+` If I live here, that means Senpai will be gone.@
+` I would not be able to bear living like that.\
+
+`"…… Senpai, everything was fun up until now.@
+` The times I spent with you and Arihiko weren't bad.@ Even during breaks when you came, it was fun, almost like a dream.@
+` …… That's probably what my wish is.@ It can't ever be granted, but---I really wanted that kind of life to continue."@
+`"You still don't understand?@ I already said it was all fake."@
+`"Yeah, but still----it really was fun."@
+` The instant I say that, my heart calms down.@
+cl c,%type_crossfade_fst
+\
+
+` It's okay if it's just an unreachable illusion.@ I don't care if it was a mirage that never existed in the first place.@
+` No, maybe because it was an illusion---Even now, the times I spent with Senpai feel so dear to me.@
+` No matter what, I can't escape now.@
+` Then---if I can just keep watching that dream, then it would be such a great----\
+
+ld c,":a;image\tachi\cel_t15.jpg",%type_crossfade_fst
+
+`"H-----how,"@
+` Foolish, she says.@
+` And she slightly moves her bayonet.@
+br
+` It sticks into my chest.@
+` Just a little bit.@ It only goes into me slightly, like a fingernail's depth.@
+` Her eyes have stopped.@
+` All that's left,
+` is for her to take another step and it'll all be over.\
+
+`"---------"@
+` But that final step doesn't start.@
+` Bracing the bayonet, she stares at me with her emotionless eyes.@
+` She grits her teeth painfully.\
+
+`"……… I see."@
+` …… It must be too difficult for her to do it while I'm looking at her.@
+` More than anything else, I also don't want to see this person's face on the verge of tears.@
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+` So I won't trouble her anymore.@
+` I decide to close my eyes and accept my end.\
+playstop
+
+!w2000
+
+
+br
+` ---Thump.@ My heart quivers.@
+` Even though I'm prepared, the nausea and chills don't go away.\
+
+br
+br
+br
+br
+br
+br
+` ---Thump.@
+`   Thump, Thump.\
+`   Thump, Thump, Thump.\
+
+`"--------"@
+` My throat is burning.@
+` My fingertips shake uncontrollably.@
+` I know.@ I know this is the best way, but still---I'm just scared.\
+
+` ----*pant*, *pant* ,*pant*
+br
+` I frantically try to hold my breath that tries to spill out.@
+` She simply has to move ten centimeters forward and I'll turn into a mere lump of flesh.\
+` Even though I'm supposed to be ready for this, my fearful heart is scared of disappearing without a trace.\
+
+` ----*pant*, *pant*, *pant*, *pant*.@
+br
+` All I do is frantically close my mouth, and try to accept my fate.@
+` It would probably hurt if I get stabbed in the chest.\
+` I'm scared of not being able to think like I am right now.\
+
+`"U-----ah."@
+` Sweat beads on my forehead.@
+` But still, I don't want to speak.@
+` If I quietly let everything end,
+` Senpai probably won't have to feel guilty.\
+
+!w2000
+
+`"--------Ss."@
+` I hear a gasp.@
+br
+`"Why-----"@
+` A forced voice.@
+br
+`"Why, how?"@
+` The sword sticking into my chest quivers.@
+br
+`"How can you not hate me?"@
+` No.@ What's quivering is Senpai's voice.\
+
+`"I, I am trying to kill you……!@ I've deceived you until now, I've betrayed you, and mercilessly hunted you down!@ Why does your face look so peaceful……!?"@
+br
+` Tap.@
+` With her sword still in place, she takes another step towards me.\
+
+`"Answer me……!@ I am going to kill you.@ Without any regards to your own will, just a one-sided murder……!@ Then, you won't be compensated unless you hate me, right……!?"@
+br
+` Senpai questions me with burning intensity.@
+` …… Quit it.@ I'm working so hard to resist this fear, but if I answer now, my feelings might flow out.\
+
+`"Or are you really just that stupid……!?@ I'm exterminating you as a dirty vampire, so why---"@
+br
+` …… Didn't I tell her it was nothing earlier?@
+br
+`"---Because, it isn't your fault, Senpai."@
+`"………!!"\
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+
+
+` Slice.@
+` The tip of the blade cuts into me further.@
+` It must have broken the skin because fresh blood seeps over my chest.\
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+`"Ss----Ah, u……… gh!"@
+br
+` ----Sharp pain.@
+br
+` The wound isn't even deep.@ But just the slightest penetration by the Seventh Holy Scripture causes my mind to shatter.@
+`"AH----a, Ah………!"@
+` My body shakes uncontrollably.@
+` The blood in my body reverses flow and I almost cough up blood in my pain.\
+
+`"---It hurts, right?@ I can actually terminate you without making you feel pain, but I'm hurting you like this on purpose.@
+` …… Unless I enjoy this, we won't be able to call it even for all the time I had to spend with you until now."@
+` She seems to be speaking with difficulty.@
+` The bayonet plunges deeper.\
+
+`"Hya----ah!"@
+` The pain causes sweat to pour out from me.@
+` I feel like my insides are going to flow out through my mouth.\
+
+`"See, don't you hate me, Tohno-kun?@
+` So please hate me……!@ Tell me I betrayed you.@ Tell me it would have been better if you never trusted me.@
+` If you don't---I won't be able to kill you……!"@
+` Her voice shakes as she says this.@
+` …… But, that's just strange.@
+` It's better if I don't hate her, but she still wants me to hate her.@
+` It's like she's telling me that being the bad guy like that, is her punishment.\
+
+`"Ah……………… Ah."@
+` But, that is an impossible order.@
+` There's no way I can hate her.@
+` I just can't hate this person who looks like a child on the verge of tears.\
+
+`"…… You can't be serious.@ I can't hate you, Senpai."@
+`"St---stop it please……!@
+` Why, why are you saying that till the very end……!?@ I'm the one who's to blame, and you're just a victim……!"@
+`"…………"@
+` …… Isn't Senpai a victim too?@
+` And no matter what, I'll be taken over by Roa soon.@
+` Before that, before I make mistakes like Ciel-senpai did, I have to kill Roa.@
+` There isn't any other way to vanquish Roa than my death---so it just can't be helped.\
+
+`"…… It's okay.@ It's not your fault.@ More than that, I'm sorry.@ Sorry to make you do this, Senpai."@
+`"St----op."@
+` Stop it, she says in a quiet voice and her bayonet pulls from my chest slightly.\
+
+`"No-----I, I-----can't, let Roa escape."@
+` The tip of the Seventh Holy Scripture wavers.@
+` …… But, that should end soon.@
+`"I can't---allow that, Tohno-kun."@
+` A grinding sound.@
+` Senpai grits her teeth and stops the Seventh Holy Scripture.@
+` The tip of it points at my heart.\
+
+`"------"@
+` I hear her suck in a breath.@
+` Even with my eyes closed, I can feel her finger gripping the trigger.@
+` Click.@
+` Right before the hard metallic sound,\
+
+`"Thank you.@ Even if it was a lie---it was good having you as Senpai."@
+br
+` In the end, I say what I wanted to tell her the most.\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_mid
+
+wave se9
+
+quakey 3,100
+!w3000
+
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+!w3000
+
+
+
+br
+`"……… U, u."\
+
+br
+` ---I can, hear a voice.\
+
+br
+`"Uah…… ah, aah, ah."\
+
+br
+` ---Sobbing.@
+`   I can hear a voice that sounds like a crying child.\
+
+br
+`"Uwah…… ah…… ah, ah."\
+
+br
+` ---A loud thud.@
+` The metallic pile falls to the floor.@
+` A bayonet sticks into the wall behind me like a spear.\
+
+br
+` ---Hic.@ Hic.@ A pained voice.@
+` I realize who that voice is coming from and I open my eyes slowly.\
+
+bg "image\bg\bg_11c.jpg",%type_crossfade_mid
+
+`"------"@
+` There isn't the Senpai that was there just now.@
+` The one I see standing before me is just a girl crying painfully.@
+br
+` Her hands are empty.@
+` The Seventh Holy Scripture lies fallen on the floor.@
+` The bayonet that should have pierced my heart is thrust by my side.\
+
+`"…… U…… uwaah, ah, aah……!"@
+` …… Senpai just cries.\
+` I don't know what she's sad about, but she cries so painfully I expect her to cough up blood.\
+
+`"…………… Sen, pai."@
+` I call out to her.@
+`"…… That's not fair…… Tohno-kun, it's, not, fair……!"@
+br
+` Hic.@ Her throat convulses as she shouts like a spoiled child.@
+br
+`"…… Saying…… Saying such a thing, isn't fair……!@ Why, why can't I……!"@
+br
+` Her tears course down her face.\
+
+
+`"I can't…… Even though I can even kill myself at any time, if you say that to me, I can't……!"@
+br
+` She seems ashamed to see me.@
+br
+`"Saying thank you like that---I can't, let such a happy person die like that----"@
+br
+` She covers her face with her hands and continues to weep.\
+
+`"…… Senpai.@ Seeing you cry makes me troubled."@
+` …… Because I won't know what to do.@
+`"Uu…… uu, uwaaaaaaah……!"@
+` …… My words might have been the wrong choice, as Senpai cries even louder.@
+br
+`"Geez-----why are you doing this all of a sudden……!"@
+` I don't even understand why I did that.@
+` But, I can't leave this person who's crying in front of me, so I pull her to me and embrace her.\
+
+bg "image\event\cel_e07a.jpg",%type_crossfade_mid
+
+play "track07.ogg"
+
+br
+` ----We collide with a thud.@
+br
+` Senpai collapses against my chest and continues crying as she stifles her voice.@
+`"……… I'm, sorry……!"@
+br
+` ---I'm sorry.@
+br
+` With a quivering voice, she says this over and over.\
+
+`"------"@
+` …… What is this?@
+` Then, the real lie was the Senpai up until now.@
+` Finally, I get to meet Senpai.@
+` It was about an hour after I called her, but I feel like I've waited for so long.\
+
+`"…… You don't have to apologize, Senpai."@
+` I just wanted to do so, and I embrace her with my still functional right hand.@
+`"Ah--------"@
+` A voice like something stretched was just snapped.@
+` Senpai finally stops crying.\
+
+br
+` …… Thump.@ Thump.@
+` I can hear the heartbeat of the person across from me like my own.\
+`"………………"@
+` It's awfully quiet.@
+` I can't find the right words to say.@
+` But staying like this---just hearing her heartbeat is good enough.@
+br
+` ---What I really wanted.@
+` What I really wished for was just a small thing.@ Like this, it was just fine having Senpai like she is.\
+
+`"…… Senpai.@ Your body is warm."@
+`"…… No.@ The one who is warm is you, Tohno-kun.@ I am a very cold person.@ I---did such terrible things to such a nice person."@
+` …… No, Senpai.@ I'm not kind.@
+` Even now, I just want to touch you, Senpai.@
+` I just----want to stay like this forever.@
+`"…… It's okay.@ I'm still alive, so it's okay.@ If…… we can keep doing this, it's okay."\
+
+br
+` I died once a long time ago.@
+` After that, I realized how much happiness it was just to be alive.@
+` A world where death can be seen.@
+` A world where I can see death.@
+` Every time, things that are easily lost.@
+br
+` But, that's why----being alive is happiness.@
+` To feel that, being able to feel Senpai's warmth like this, is an exceeding happiness by itself.\
+
+`"---Senpai.@ You are really dear to me."@
+`"…………"@
+`"I don't want to die.@ I want to live as much as I can, and I want to be with you like this, Senpai."@
+` Firmly,
+` I grip her hands.@
+`"So I want you to live.@ Please…… please don't say your wish is to die."@
+`"……………"@
+` There's no answer.@
+` Thump, Thump.@
+` Just the beating of her heart through our skin.\
+
+bg "image\event\cel_e07b.jpg",%type_crossfade_mid
+
+
+
+`"……………… No, that can't happen."@
+` Suddenly,
+` she speaks in a crying voice.\
+
+`"…… That's the only thing that kept me going until now.@
+` I could die.@ If Roa disappeared, I could die.@ I must die.@ That's why I could bear everything so far.@
+` Because I killed my father and mother, because I killed everyone, because I became like this, and because I tricked you and tried to kill you----I, without delay, I have to die."\
+
+`"…… Why do you have to die?@
+` Certainly you've done a lot of painful things, but that wasn't your fault, Senpai……!"@
+`"You say that, but I did them all with my own hands, Tohno-kun."@
+`"No……!@ The one who's at fault is Roa.@ There's, no reason you have to die, Senpai!"@
+`"---But, there's no reason for me to live either."@
+br
+` Saying that,
+` Senpai gives a mirthless laugh.\
+
+`"…… I know.@ I know I don't have the right.@ I, did so many horrible things."@
+br
+` But why?@
+` She asks with a quivering voice.@
+br
+`"I don't deserve to be happy.@ That's why I never thought of it, that's why I never even dreamed of it……!@
+` But, but why---"@
+` Thud.@
+` Like a crying child, Senpai beats her hand against my chest.\
+
+`"So why---now, do I see,"@
+` this sinful dream?@
+br
+` She buries her face deep in my chest as she says this.\
+
+`"…… It was so fun.@
+` Even though I knew it was all a lie and I'm just playing out the life where I'm having fun, I thought it was fine the way it was----it was so much fun, I didn't want it to end even if I knew it was all a lie.@
+` An almost dream-like happiness that I wanted to always last just one day longer."@
+br
+` …… I see.@ What we wanted, what we wished for, was the same after all.\
+
+`"---But, that selfishness can't be allowed.@
+` I have to kill Roa quickly and receive my punishment.@
+` I have no right to live a normal life like you, Tohno-kun.@
+` Such a thing, I understand without you saying it.@
+` If I'm wishing for such a dream and I can't even kill you, I can't do anything but disappear.@
+` There's no longer a reason for me to stay here."@
+` Senpai speaks with an anguished face.\
+
+`"…… Farewell.@ I was, really happy to hear you thank me."@
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+` Senpai pulls back from me.@
+` The heartbeat I felt up until now cuts off.\
+
+` …… This person has told me farewell so many times.@
+` Even that time.@
+` With a smile, she said it as if it was very important to her.@
+br
+` ---Farewell.@ I really did want to be a student like you and Inui-kun.@
+br
+` …… Really, why didn't I ever realize it?\
+
+` She would always say those simple things,
+` as if they were a distant dream for her.\
+
+
+`"---No.@ It's not a dream."@
+bg "image\event\cel_e07b.jpg",%type_crossfade_fst
+
+`"Eh----kya……!"@
+` I pull Senpai's body back towards me.@
+` Less out of love and more out of sorrow, I draw her close.\
+
+`"To, Tohno-kun, that's enough-----"@
+`"No.@ I won't be fooled by your lies anymore, Senpai."@
+` I hold her close to me as she tries to escape.@
+`"If you want to continue, then go ahead and do so.@ What you're talking about is definitely not a dream."@
+`"That…… that's impossible."@
+`"Why?@ After all, it really happened in reality.@ It's a way of life that if you wish for it, it will come back.@ Please don't call such simple things like that a dream."\
+
+`"…… It's impossible.@ I've hurt you so much, Tohno-kun, it's too late to go back."@
+`"Oh, that's okay.@ I don't mind, so you shouldn't either.@
+` See, I think I got to experience something as rare as truly being chased by the one I like."@
+` I try to sound as jokingly cheerful as I can.@
+`"……………"@
+` Senpai is silent.\
+
+`"And tonight, you looked really cool.@ Those clergy robes are good too, but your outfit tonight really suits you too.@ I was lucky to see it."@
+`"………………"@
+` Senpai is silent.\
+
+`"Senpai, you look different without your glasses.@ You were handsome, and you looked older."@
+`"……………………"@
+br
+` …… As expected, Senpai is silent.\
+
+` --------*sigh*@
+` Not matter what I say, Senpai does not answer.@
+` I try as hard as I can to soften the mood but fail miserably.@ I don't know what else I can say.@
+br
+`"…… Senpai, say something.@ Or don't you want to talk to me now?"\
+
+`"…………………………"@
+` Senpai doesn't answer.@
+` She just pats her forehead on my chest.@
+` Softly, like a murmur,
+br
+`"…………………… Idiot,"@
+br
+` …… is what she ends up saying.\
+
+`"…… Tohno-kun, you're an idiot.@
+` I, I'm not the person you think I am, so how can you be so nice?"@
+`"Because I don't want you to cry.@ I want you to laugh; I want you to cheer up."@
+`"…… But, I don't have the right.@ I don't have the right to receive your kindness."\
+
+`"………………"@
+br
+` ---A right to receive kindness.@
+` I didn't have such a thing either.@
+` But, still---the one who laughed it off and told me that I didn't need such a thing, was her.\
+
+`"I don't know.@ I don't know your circumstances, and honestly I don't care.@ I'm not being kind to you for your sake, so don't worry about it."@
+br
+` That time.@
+` After I killed Arcueid and when I could only think of killing myself, just like what you said to me that time.\
+
+`"…… Um, well.@ I think I'm doing this because I want to be kind to you.@
+` Your circumstances have nothing to do with this.@ It may be a bother to you, but just think of yourself as having been caught by a mean-spirited underclassman and give up."@
+` Harder,
+` I hold her even more strongly to me, and press our bodies together.\
+
+`"Ah-----Tohno, kun."@
+`"I don't know about your sins.@
+` I like you---I love you Senpai, that's why I'm being kind to you.@
+` Everything else doesn't matter.@ I just want to be happy with you.@ ---I want to be with you forever, so I don't want you to die."@
+`"But---I, I----"@
+`"…… But still.@ Still, if you say you don't want to be happy, that's fine too.@ I'll just do what I want, and no matter how much you might hate it, I'll be by your side and make you happy……!"\
+
+`"So---please, don't say farewell anymore."@
+` Saying that, I bring my hands to her face.@
+`"Shiki------kun."@
+` After she says this faintly…
+` Completely naturally, our two lips come together.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+!w1000
+
+bg "image\bg\bg_11c.jpg",%type_crossfade_fst
+
+`"-----Mm."@
+` …… Our lips separate.@
+` Ciel-senpai lets her arms fall to the side and pulls back from me.\
+
+`"……………"@
+` …… The hallway is silent.@
+` Seeing the blue moonlight faintly shading the world jolts me back to reality.\
+
+`"Ha…… ah."@
+` I just… made a big fool of myself.@
+` Even though there's no way out even for me, it's meaningless to embrace her.@
+` But, I couldn't refrain from doing so.@
+` If I could, I wanted to stay like that forever.\
+
+`"Tohno-kun.@ Is it okay to say that?"@
+`"---Sorry, I wasn't thinking.@ I don't even know what to do with myself---and I was saying such haughty words."@
+`"That's not what I'm saying.@ I'm asking you if you really can make that sort of promise with me."@
+` The weakness she had in her voice has disappeared completely.\
+
+`"…… Of course.@ I'm like this, but as long as there's a piece of me remaining, I'll always love you, Senpai."@
+`"Please don't say irresponsible things.@ If you're going to make me happy, you have to stay as Tohno-kun."@
+br
+` …… That's true, but it won't happen.@
+` I can't even trust if I'll be myself by the time tomorrow comes.\
+
+`"…… Sorry.@ I, I'm hopeless.@ Senpai, when I get to a point where I can't turn back, at that time---"@
+`"---I will not let you die."@
+` She declares.@
+` She strongly interrupts my words.\
+
+`"I will not let you die.@ I won't let Roa have you."@
+`"Senpai, but---"@
+`"I will protect you.@ I will save you, no matter what.@ So---please do not say that."@
+` Senpai quickly stands up and with a serious face, tends to my wounds.\
+
+ld c,":a;image\tachi\cel_t14.jpg",%type_crossfade_fst
+`"…… It seems they have already healed.@ It's nighttime, so your body is more like that of a vampire's right now.@
+` Um, thanks to that, you were not killed.@ Maybe we should give Roa some thanks."@
+` …… Trying to lighten the mood or something, Senpai gives a joke that isn't exactly easy to reply to.\
+
+`"Tohno-kun, can you stand by yourself?"@
+`"I can stand, but---Senpai, is there really a way to save me……?"@
+ld c,":a;image\tachi\cel_t07c.jpg",%type_crossfade_fst
+
+`"…… I can't say for sure, but if I go back to the Vatican, there might be a way.@
+` Um, unlike before, they had a sample, me, to research on, so they should have researched into how to seal Roa's soul while leaving the reincarnated human's consciousness."@
+`"---What's that?@ If there was such an easy way, then why---"\
+
+`"…… Tohno-kun.@ Certainly The Church may be able to help you, but what awaits you may be hell.@
+` To the people of The Church, you and I are both heretics.@ You will get the treatment in return for helping their research.@
+` …… Although if you stay quiet about your eyes, you may not be treated like a lab specimen like I was, but---"@
+`"---In other words, it'll really hurt?"\
+
+ld c,":a;image\tachi\cel_t15.jpg",%type_crossfade_fst
+`"---Yes.@ And if they still could not heal you, you would be treated as a vampire.@
+` …… I don't want you to experience those terrible things worse than death.@
+` That's why, I---"\
+
+`"…… It's okay, Senpai.@ Right now, we're at a dead end.@ If there's even the slightest chance, then we have to go wherever.@
+` …… And no matter how it turns out, I won't complain, Senpai."@
+ld c,":a;image\tachi\cel_t07c.jpg",%type_crossfade_fst
+`"---No.@ I won't let anyone hurt you.@ Please trust me on that."@
+`"…… Yeah, I trust you, Senpai."@
+` …… I say that, but being a real small-town person, I'm actually kind of worried about things like my passport and airfare.\
+
+`"But what are we going to do?@ Are we going to the Vatican right now?"@
+ld c,":a;image\tachi\cel_t14.jpg",%type_crossfade_fst
+
+`"No, I will treat you for tonight.@ Roa is a vampire, so when it becomes morning, he will calm down.@
+` …… It would be simple if it was just a matter of taking you to the Vatican, but your problem is something that should be kept low-profile.@ Just like with me, you are something that should not exist, so you have to go to the hidden part of The Church.@
+` But, to take you there, I have to get some permission.@ Even if we were to minimally purify you, there aren't any places in this city where we could do that.@
+` There is only one place where we can purify you in our way in this country, so I have to take you there first."\
+
+`"Hmm.@ So, are you saying we're going to The Church tomorrow morning?"@
+`"No, it's not that simple.@ For an unbeliever like you to enter the Vatican, there is a long and frustrating approval process.@
+` So, tomorrow, I will go to the church in this country so that you can get a temporary permit.\
+
+`"…… And, that may take a number of days, so please wait in my room until then.@ I will place a blockade against vampires in my room, so you should be able to last against Roa for a week or two there."@
+`"…… Your room---you mean, I'm staying in your room!?"\
+
+
+`"…… Um, Tohno-kun.@ Your life is in danger, so please put up with it.@ Oh, you can at least let your sister know, but please don't tell her the details."@
+
+`"…… Well, it's not like I can tell her in the first place---"@
+`"Then shall we go?@ We have to separate the Roa inside of you to start off."@
+cl c,%type_lshutter_mid
+` She grabs my arm and starts to walk.\
+
+` …… There really is no trace of her weakness before.@
+` But, it is a forced cheerfulness.@
+` Senpai really doesn't want me to be worried, so she's forcing herself.@
+`"…… Thanks, Senpai."@
+` I speak in a low voice so she won't hear me.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_17b.jpg",%type_lcartain_slw
+
+ld c,":a;image\tachi\cel_t14.jpg",%type_lshutter_mid
+
+`"Here we are.@ It is a small place, but please make yourself at home."@
+`"Ah…… yeah.@ Um, sorry for intruding."@
+` Being quite aware that I'm entering a girl's room this late at night, I walk in.\
+
+bg "image\bg\bg_18b.jpg",%type_lcartain_mid
+
+` Ciel-senpai's room hasn't changed a bit.@
+`"Senpai, so, what do I do now?"@
+ld c,":a;image\tachi\cel_t14.jpg",%type_crossfade_fst
+
+`"Well, first we will temporarily silence the Roa inside of you, Tohno-kun.@
+` …… Well, I say that, but my place itself is holy ground, so the advancement of Roa's consciousness will be greatly slowed just by staying here."@
+`"---Oh?@ Then I'm safe as long as I stay here?"\
+
+`"Yes, if we were to just stop Roa's mind from invading yours, this room should be enough, but……"@
+`"Hm……?"@
+` Her cheeks flushing red, Ciel-senpai hesitates as if she wants to say something more.\
+
+ld c,":a;image\tachi\cel_t14b.jpg",%type_crossfade_fst
+
+`"…… Senpai?@ What's wrong, is there another problem?"@
+`"No, it's not what I would call a problem, but it can be dangerous to your life."\
+
+`"…… Senpai.@ If it's dangerous to my life, wouldn't that be very, very important?"@
+`"Well you're right, but um…… If I say directly, Tohno-kun, is there any part of your body that feels strange?"@
+`"Feels strange?@ Well, I do have inhuman strength right now."\
+
+
+`"…… That's not what I mean, but don't you feel like, 'this is really hot!', or like, 'I need to let it out!' or something like that?"@
+`"Eh---th, that is---"@
+` …… Well, that urge to destroy was certainly in me until recently.@
+` And I did that horrible thing to Kohaku-san.\
+
+`"…… No, I'm fine.@ Since I entered this room, I haven't heard that guy's voice once.@ Just like you said, it looks like he'll calm down if I'm in here."@
+`"But that is the mental side of your problem, not your body."@
+`"---?"@
+cl c,%type_crossfade_fst
+\
+
+` Ciel-senpai still hesitates like she has to say something rather difficult.@
+` …… I have no clue.@
+` I sit down on the floor to rest for now.\
+
+`"Hey, you don't need to stand, sit down.@ You must be tired after all that."@
+`"…………………"@
+` Without answering me, she looks deep in thought.@
+br
+` And then.@
+ld c,":a;image\tachi\cel_t07c.jpg",%type_crossfade_fst
+`"Tohno-kun, please take a shower."@
+`"----Huh?"\
+
+`"Because, like you just said, all that's happened, so it's strange if you don't wash yourself and calm down."@
+`"Well---but…"@
+`"No buts, Tohno-kun.@ You used my bath once anyway, so please don't hesitate."@
+cl c,%type_crossfade_fst
+` Ciel-senpai pulls on my arm forcefully.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+`"H, hey Senpai, I said it isn't good……!"@
+` She won't listen to me.@
+` She drags me to the changing area and forces me to take a shower.@
+br
+` Of course, by myself.@
+` Ciel-senpai is waiting for me in her room.\
+
+`"…… How did this happen?"@
+br
+` I resign myself to showering.@
+` …… As Ciel-senpai said, my body is filthy.@
+` There's mud all over my arms and neck and my body reeks of sweat.\
+
+`"I see…… I locked myself in my room since yesterday.@ And it was like I was horny all that time too……"@
+br
+` ……?@
+` Horny, um---that's odd, I'm still standing very erect right now too……?\
+
+`"Huh---huh?"@
+` I'm not really excited or anything, so how come---it's so erect down there?\
+
+`"Wait a minute, this is weird---!"@
+` It's full of blood ignoring anything I tell it.@
+`"----Don't tell me----"@
+` Since last night.@
+` Urged by Roa's consciousness, since I attacked that woman on the street, I---I've always been like this?\
+
+`"…………"@
+` I feel terrified.@
+` …… That's bad.@
+` I'm supposed to be safe from Roa's will inside of Ciel-senpai's room, but it seems like my body isn't calming down.\
+
+`"…… Hey.@ Staying erect for a long time, um, maybe, isn't that a bad thing?"@
+` No, not "maybe", but "definitely".@
+` In the first place, being stiff for an hour hurts, so if I stay stiff for an entire day, that's just wrong.\
+
+`"-----I guess I have to?"@
+` I speak aloud, and get shocked.@
+` So, I've been stiff all day.@
+` And since this can't be good, I'm going to whack off in Ciel-senpai's bathroom?@
+br
+`"I don't---believe it."@
+` I can't do such an, embarrassing thing……!@
+` This is the bathroom, so if I did something she wouldn't find out, but still, this is too miserable…\
+
+` …… But, being erect for a whole day is seriously bad.@
+` I think it was calm after I attacked Kohaku-san, so it hasn't been a whole day, but still---\
+
+`"---Geez!@ Even though I was almost killed by someone I liked until just now, why do I have trouble over such stupid stuff!?"@
+` …… Screaming out won't solve anything.@
+` I give up and decide to let it out.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w1000
+
+bg "image\bg\bg_17b.jpg",%type_lcartain_mid
+
+
+`"………"@
+` I leave the bathroom.@
+ld c,":a;image\tachi\cel_t14.jpg",%type_crossfade_fst
+`"Ah, you're all clean now.@ You really did take a long time, do you like taking baths, Tohno-kun?"@
+`"---No, that's, not it, but…"@
+` I hardly have the strength to answer.@
+` I---did such a thing that made my dignity literally wash down the drain, but still---\
+
+`"So, how was it?@ Could you let it out yourself, Tohno-kun?"@
+`"Eh----Senpai, you mean, um……"@
+ld c,":a;image\tachi\cel_t14b.jpg",%type_crossfade_fst
+` She sighs.@
+`"I knew it.@ If you've, um…… held it in so long, it might not be possible to release it unless it is Roa's will."@
+`"-------"@
+` Ciel-senpai starts to blush and my cheeks flush red as well.@
+` Hold it in…… it's a little troubling if she says that directly.\
+
+`"Ah……… uh……………"@
+` But like Ciel-senpai said, no matter how hard I tried, I couldn't get the fire out of me by myself.@
+` In the end, I gave up trying to let it out and left the bathroom.\
+
+`"I'll come out honestly.@ This isn't a situation where embarrassment should stop me.@ As you say Senpai, my body is strange right now.@
+` I swear, but I'm not thinking of any perverted things.@ Um, I'm not, but, my body, just by itself, has a hard on and---"@
+` I can't really say that I'd rot staying up like that.\
+
+`"See, didn't I tell you to tell me if your body was strange anywhere?"@
+`"---!@ Then, you were asking about this before……!?"@
+`"Yes.@ Tohno-kun, you may not have realized it yourself, but you are pretty excited.@ I was able to calm your mind, but we have to calm down the body too, or Roa will be able to take over."\
+
+`"I see…… Hey, tell me those kind of things clearly.@ I feel so stupid not even realizing it until I was naked!"@
+
+ld c,":a;image\tachi\cel_t06c.jpg",%type_crossfade_fst
+`"If I could say it clearly, it wouldn't be difficult!"@
+` ---Oh.@
+` That's right.@ Of course she can't say it clearly, because Ciel-senpai is a girl.\
+
+`"Sorry.@ But what should I do?@ I tried to do something about it, but it just won't calm down.@
+` It's like my mind and body are two completely separate things.@ My body feels like it's not mine, and I can't even get in the mood for it---"@
+br
+` Geez, to say it frankly, it's like I have no sensitivities whatsoever!@
+` …… It would be easy if I could say it out loud like that, but I can't say that sort of thing to Senpai.\
+
+ld c,":a;image\tachi\cel_t14b.jpg",%type_crossfade_fst
+`"…… I know.@
+` Tohno-kun, I brought you here to heal your body.@
+` Um, I knew it would be impossible just by yourself.@ Um…… I was the same way a long time ago, too."@
+br
+` She speaks hesitantly.@
+` I see…… Ciel-senpai also had the experience of Roa taking over her body.@
+` So she knew this was going to happen to me.\
+
+`"Senpai, then you know what I should do……?"@
+`"Of course.@
+` …… Um, well.@ Your mind right now is somewhat disconnected from your body.@
+` So, more than yourself, um…… someone else's skin, someone else helping you, will make you feel better."@
+`"------"@
+` Instantly.@
+` As soon as I hear her words, my mind goes blank.\
+
+`"…… Someone else helping me…… um, Senpai?"@
+ld c,":a;image\tachi\cel_t07d.jpg",%type_crossfade_fst
+
+`"That's what I mean.@ You may be unwilling to do it with me, Tohno-kun, but please bear it.@ It is a technique to calm the soul, so it isn't sexual.@
+` So, please don't be so embarrassed."@
+`"Ah……… h."@
+` After she says it so directly, I don't know how to respond.\
+
+`"Then, Tohno-kun, please wait in the room.@ I also have some preparation to do."@
+`"Wait?@ …… Senpai, are you going somewhere?"@
+`"Yes, I will also take a shower.@ I don't want to do it with all this paint on my arms."@
+` Even though she tells me not to be embarrassed, she also blushes.\
+
+`"Senpai, this…… um, we really shouldn't."@
+`"It's fine, so please wait in the room!@ I'll prepare myself and go, too……!"@
+
+cl c,%type_lshutter_mid
+
+
+` Senpai dashes off to change and slams the door.@
+`"Ah-----"@
+` There's no time to stop her.@
+` Either way, I can't do anything unless I calm this thing down.@
+` I know it's taking advantage of her, but I'll have to take her goodwill for now.\
+
+` I convince myself like that and as I enter her room,
+br
+`"…… Oh, Tohno-kun?@ Um, well, do you object to me wearing glasses or anything……?"@
+br
+` I hear her voice from the other side of the door.@
+`"?@ Glasses…… Senpai, why are you asking that?"@
+`"Well, um…… I know there are those kind of guys who, care about that sort of thing."@
+` She sounds very embarrassed.\
+
+`"…… Glasses, huh?@ …… Senpai, really is concerned about the weirdest things."@
+` …… But, her blushing face by the doorway is just too cute.@
+br
+` Well, as for me----
+br
+
+
+
+
+return

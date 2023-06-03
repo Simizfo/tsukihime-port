@@ -1,0 +1,26 @@
+
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+
+`"---To be honest, I don't know.@ But I can't just leave you alone."@
+` …… Yes.@
+` Since I talked to Yumizuka two days ago, she has never left my mind.@
+` So that must mean…
+`"…… Unlike your case, I don't feel like I've known you for years, but---"@
+` Even though I knew it was dangerous, I still came here.@
+`"I… think I do… like you."\
+
+ld c,":a;image\tachi\stk_t09.jpg",%type_crossfade_fst
+
+`"----"@
+` Yumizuka looks at me, aghast.@
+` I stare back at her.@
+`"---No…"@
+` She shakes her head.@
+` She seems about to burst into tears.@
+`"---I don't want that…"@
+`"…… Yumizuka… san?"@
+`"…… Because that, that just makes me look---stupid…"@
+cl c,%type_crossfade_fst
+` Still aghast, Yumizuka looks down as she murmurs.\
+return

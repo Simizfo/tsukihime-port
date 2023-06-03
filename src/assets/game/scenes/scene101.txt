@@ -1,0 +1,49 @@
+
+bg "image\bg\bg_29c.jpg",%type_nowaitdisp
+
+` …… Still, still too early.@
+` There's about ten meters in between me and Nrvnqsr.@
+` I need a more definite opening before I can draw close without him realizing me.\
+
+`"------"@
+` I gulp.@
+` A little more----a little more, something----\
+
+`"…… I do not understand."@
+` Muttering.@
+` As if speaking to the moon above, Nrvnqsr mutters aloud.\
+`"It is displeasing to be faced by such unsightly enmity, but I cannot think this is one of the Princess's familiars.@ Is that just trash?"@
+`"------!@ Shiki, run away!"@
+` Arcueid's composed voice.\
+
+`"……… Eh?"@
+` But, I can't understand in time.\
+
+bg "image\bg\ima_10.jpg",%type_bcartain_slw
+wavestop
+
+
+` My legs start to sink in something.@
+` The firm ground beneath me is like quicksand.@
+`"Ah------"@
+` The ground is full of something pitch-black.@
+` My body collapses.@
+` My ankles which sunk into the black puddle are attached to nothing.\
+
+`"------"@
+` I fall with a splash into the puddle.@
+` …… There's no bottom.@
+` This black puddle transforms into a mouth of a large animal and compresses my body-----
+
+\
+
+resettimer
+waittimer 2000
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+return

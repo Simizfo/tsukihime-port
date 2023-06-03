@@ -1,0 +1,85 @@
+
+bg "image\bg\bg_33a.jpg",%type_nowaitdisp
+
+` ---I'll try telling the truth.@
+br
+` I don't want to lie to Akiha, and if I explain everything sincerely, Akiha may understand.@
+` …… Well, the possibility of that is like winning a lottery.@
+br
+`"--Alright, let's go."@
+` Taking a deep breath, I open the sitting room door.\
+
+bg "image\bg\bg_34a.jpg",%type_lcartain_mid
+` In the sitting room, Akiha is on the sofa and Hisui is standing by the wall.@
+
+ld c,":a;image\tachi\aki_t02.jpg",%type_lshutter_mid
+`"---Good morning, Nii-san."@
+` Her gaze is telling me, "I am angry."@
+`"Yo, morning, Akiha."@
+` A defiant person is strong.@
+` I give a cheerful greeting to Akiha's bullying gaze.\
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+`"----"@
+` She might be confused with my cheerfulness, as she just stares at me.@
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+`"Nii-san, let's dispense with the greetings.@ Please sit here; I wish to speak with you."@
+`"Sure.@ Let's keep it short though."@
+` I solemnly and calmly sit down on the sofa across from Akiha.\
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"Well then, Nii-san.@ This is very abrupt, but may I ask about these past two days?"@
+`"-----Hm."@
+` …… I knew it.@
+` Since I left the house for two days, there's no excuse.@
+` Time to honestly tell her all about Arcueid and these past two days.\
+
+`"About that, Akiha."@
+`"Yes, what is it, Nii-san?"@
+`"These past two days, I was hunting a vampire.@ You know about the recent killings, right?@ They were the work of a vampire, so I helped the 'good vampire' I met recently, and I fought with the 'bad vampire'."@
+br
+` ----Like that, I explain concisely.\
+
+ld c,":a;image\tachi\aki_t15a.jpg",%type_crossfade_fst
+
+`"Wha------"@
+` Akiha is taken completely by surprise.@
+` …… Well, I guess it is a natural reaction.@
+` In her head, she's probably thinking I'm making a fool of her, and anytime in the next instant,
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+ld c,":a;image\tachi\aki_t07.jpg",%type_crossfade_fst
+`"Are you making a fool out of me, Nii-san!!!!???"@
+` She'll shout something like that to me--
+bg "image\bg\bg_34a.jpg",%type_nowaitdisp
+\
+
+ld c,":a;image\tachi\aki_t10.jpg",%type_crossfade_fst
+`"…………………"@
+` ……… Huh?@
+` She seems upset, but she doesn't say anything.\
+
+`"Um…… Akiha?"@
+ld c,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
+`"…… Nii-san, is this some sort of a bad joke?"@
+`"------Uh…"@
+` Akiha looks at me quietly, like she was seeing directly into my heart.\
+
+`"No…… well, how should I put this…"@
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+`"A joke, right?"@
+`"…… Well, I know it sounds like one, but…"@
+ld c,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
+`"---No, it has to be a joke.@ So please do not say such things in the future, even if it is a joke."@
+cl c,%type_crossfade_fst
+` She stares at me, more uneasy than angry.\
+
+` Since her stare looks so serious,
+`"……………… Yeah."@
+` I can only nod to her.\
+cl c,%type_crossfade_fst
+
+
+
+return

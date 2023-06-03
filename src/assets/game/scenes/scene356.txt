@@ -1,0 +1,135 @@
+
+bg "image\bg\bg_33a.jpg",%type_nowaitdisp
+
+
+` …… Let's go back to my room for now.@
+` I don't think I would even be able to look at Akiha if I went into the sitting room now.@ I don't want to look suspicious.@ It would be better if I stay in my room until Akiha leaves.\
+
+bg "image\bg\ima_10.jpg",%type_tshutter_mid
+bg "image\bg\bg_40a.jpg",%type_tshutter_mid
+
+
+` ………@
+` ……………@
+` ……………………@
+` ……………………………@
+` ………………………………… It's past seven thirty now.@
+` I look out the window and see Akiha leaving.@
+`"…………"@
+` Phew.@ I let out a deep sigh.@
+` I feel bad for Akiha, but I should worry about my own troubles for now.\
+
+` Yesterday's dream.@
+` Even though I knew I was asleep, I seemed to have wandered out at night.@
+` With my hands full of this problem, I don't have the energy to act out my "usual self".@
+`"………… Shit."@
+` I leave my room as if I was pushed by my self-hatred.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_34a.jpg",%type_lcartain_mid
+
+play "track02.ogg"
+
+` No one is in the sitting room.@
+` There is one teacup on the table.@ Probably the one Akiha was using until just now.@
+`"------------"@
+` I enter the sitting room quietly, probably because I feel guilty about Akiha.@
+br
+` ------------And.@
+br
+ld c,":a;image\tachi\koha_t04b.jpg",%type_bshutter_fst
+
+`"Shiki-san!!"@
+` Suddenly, Kohaku-san comes out of the kitchen, scolding me.\
+
+`"Oh…… good morning, Kohaku-san."@
+`"It's not 'good morning'!@ What time do you think it is, Shiki-san!!"@
+` Kohaku-san might be really mad, as she unleashes quite the scary attitude.@
+`"…… I'm sorry.@ I couldn't wake up this morning so I decided it didn't matter if I'm late for school or not."@
+`"Geez, I'm not talking about school!!@ I'm asking you why you didn't show up and talk to Akiha-sama for just a little while!!"@
+` Kohaku-san draws her eyebrows together.@
+`"Well…… Um, I kinda felt like it was hard for me to face Akiha this morning, um-----"\
+
+`"Felt like it!?@ Akiha-sama was waiting for you all this time!!@ But you don't say a word to her and show up after she leaves?@ That's terrible!"@
+`"…… Ugh."@
+` …… I can't counter that.@
+` It's because I do feel guilty for avoiding Akiha.@
+`"…… I understand.@ But it's not like I dislike Akiha.@ But this morning… I really didn't feel like I could talk to her."\
+
+`"No, you do not understand anything!@ You don't know how much Akiha-sama was looking forward to this while waiting for you up until now."@
+`"What---Waiting for me, you mean this morning?"@
+`"No.@ Akiha-sama told me not to tell you, but I can't bear this anymore!"@
+
+ld c,":a;image\tachi\koha_t08.jpg",%type_crossfade_fst
+
+`"Listen, Shiki-san.@ Now, Akiha-sama eats breakfast with you normally, but it was a real hassle before she transferred."@
+` Shiki-san, do you remember where her old school was?"\
+cl c,%type_crossfade_fst
+
+
+` …… I think the ladies' academy Akiha used to go to was in the next prefecture.@
+br
+`"-----Next prefecture……?"@
+br
+` Hold on.@
+` That's more than an hour's worth of driving.\
+
+ld c,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
+
+`"You finally noticed.@
+` To begin with, Akiha-sama would not have made it to school unless she left here at six.@ Nevertheless, she overlooked that because she was looking forward to eating breakfast with you."@
+`"…… Looking forward to?@ Why?@ She complains every time she sees me."@
+`"Because Akiha-sama isn't honest.@ If you ever woke up on time, I do not think she would have any complaints."\
+
+`"But all you did was sleep in and didn't eat with her even once.@ But Akiha-sama told me just seeing your face in the morning is good enough, and she never told us to go wake you up."@
+`"Wha--------"@
+ld c,":a;image\tachi\koha_t02b.jpg",%type_crossfade_fst
+
+`"Now do you understand?@ If you do, can you please apologize to Akiha-sama about earlier?"@
+`"------------"@
+` ………… I was going to do that already, but…
+` Such, such a talk doesn't help me out.\
+
+`"I don't get it.@ What do you want me to do, Kohaku-san?"@
+ld c,":a;image\tachi\koha_t15.jpg",%type_crossfade_fst
+
+`"No, don't think too hard about it.@
+` You just act normally.@ But Akiha-sama isn't direct, so I just wanted you to be more considerate of her."@
+`"……………"@
+` Act normally?@ I think that's the most difficult thing for me to do right now.\
+
+ld c,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
+
+`"Oh, and all this is a secret.@ If Akiha-sama finds out I told you this, I will get in trouble."@
+cl c,%type_lshutter_fst
+
+
+` Kohaku-san heads into the dining room with a smile on her face.@
+`"……………"@
+`"Shiki-san, your breakfast is ready, so please come eat."@
+` I can hear Kohaku-san's voice from the dining room.@
+` I head into the dining room, hiding my embarrassed face with my hand.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_01a.jpg",%type_lcartain_mid
+
+` -----I ended up being late for school.@
+br
+` The entrance to the school is empty.@
+` I walk through the school's gate during first period.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+!w1000
+bg "image\bg\bg_06a.jpg",%type_tshutter_mid
+
+
+wave se2
+!w2000
+
+` It's the end of second period.@
+` …… If I'm going to go apologize to Akiha about this morning, now would be the right time.@
+br
+
+return

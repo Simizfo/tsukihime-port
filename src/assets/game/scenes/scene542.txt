@@ -1,0 +1,41 @@
+
+
+
+bg "image\bg\bg_06b.jpg",%type_nowaitdisp
+play "track09.ogg"
+
+
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld c,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+
+
+` You have reached Akiha's True Ending.@ Well done.@
+br
+` Each heroine (with one exception) has two different kinds of endings.@
+` Usually, they are called "True Ending" and "Good Ending", but Akiha-san's are called "Normal Ending" and "True Ending".@
+br
+` Akiha-san's route is different from everyone else's in that how much Akiha-san likes you does not determine which ending you receive.\
+
+
+` Well then, thank you very much for playing up to this point.@
+br
+` Let's meet again somewhere in Tsukihime.\
+
+
+
+
+
+
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+
+return

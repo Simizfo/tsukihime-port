@@ -1,0 +1,10 @@
+
+
+bg "image\bg\bg_06a.jpg",%type_lshutter_mid
+
+` It's lunchtime.@
+` Now then, where should I eat lunch?@
+br
+
+
+return

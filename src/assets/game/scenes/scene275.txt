@@ -1,0 +1,23 @@
+
+bg "image\bg\bg_01a.jpg",%type_nowaitdisp
+
+`"……"@
+` I'll wait here.@
+` I don't think Senpai will come… but maybe she'll come to school like she did yesterday.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+!w1000
+
+bg "image\bg\bg_01a.jpg",%type_lshutter_mid
+
+` ---It's about time.@
+br
+` At about ten minutes before homeroom, the main gates are closed.@
+`"……"@
+` Senpai is not coming.@
+` Sighing, I head towards the classroom with heavy steps.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+return

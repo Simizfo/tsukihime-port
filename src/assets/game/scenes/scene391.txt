@@ -1,0 +1,209 @@
+
+
+
+
+
+
+
+bg "image\bg\bg_40c.jpg",%type_lcartain_mid
+play "track01.ogg"
+
+
+` ---After dinner, I return to my room.@
+br
+` It's ten at night.@
+` Since I had tea with Akiha and the others after dinner, it's already time for bed.\
+
+`"Nnn……"@
+` I'm not really tired, but my body feels sluggish.@
+` It seems like I've finally gotten used to life in this mansion.@
+` Expressionless Hisui, bright and cheery Kohaku, and Akiha, who worries over me constantly.@
+` …… Certainly, getting used to this lifestyle… is fun.@ It seems like I've returned to the me that existed eight years ago.\
+
+` I never had a chance to relax this much when living with the Arimas.@
+` The Arimas have a child in middle school as well, but we were always distant and we never really had a chance to talk.@
+`"Nnn…… I really am sleepy."@
+` Changing into my pajamas, I lie down in bed.@
+
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+
+` I'll go to bed early, wake up early, and give Akiha quite a surprise---\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+playstop
+
+!w3000
+
+waveloop se10
+
+bg "image\bg\bg_25b.jpg",%type_nowaitdisp
+
+
+`"----Huh?"@
+` All of a sudden, I find myself in town.\
+
+br
+br
+` Midnight.@
+` I walk through the empty town.\
+
+bg "image\bg\bg_26a.jpg",%type_crossfade_mid
+
+
+` I pant heavily.@
+br
+` For some reason, I'm out of breath.@
+` I.@
+` With bloodshot eyes, I am looking at people walking down the street.\
+
+br
+` Foolish people.@
+` Walking the streets so carelessly even though the killer has not been caught.@
+br
+` ----Do they think that they're special and won't get killed?@ Or maybe, they want to die but are unable to kill themselves and want someone to kill them?@
+br
+` Well, it's probably the latter.\
+
+br
+` ---A group of people that I don't know continues to walk by.\
+
+` That's not the person.@
+` That's not the person.@
+` That's not the person.@
+br
+` I diligently stare at them one by one, but shake my head.\
+
+br
+br
+br
+br
+br
+br
+` That's not the person.@
+` That's not the person.@
+` That's not the person.@
+br
+` I still can't find that person.\
+` I definitely heard what this person looks like, but I can't seem to find that person.\
+
+#ff0000
+`   I'm   getting  a little   annoyed.@
+#ffffff
+br
+`                      Not here.\
+`     Not here.@
+`                 Not here.@
+` Not here.@
+`         Why.@
+`    Not here.@
+`            Not here.@
+`                       Not here.@
+`   Not here.\
+
+` I start panting even more.@
+br
+` It's really ticking me off.@
+` Why isn't that person here,
+!w500
+` why isn't that person here,
+!w500
+` why isn't that person here,
+!w500
+` why isn't that person here,
+!w500
+` why isn't that person here,
+!w500
+` why isn't that person here-----!?\
+
+`"Ku-----haha, ha."@
+br
+` I've decided.@
+` Tonight, I'll change my plan.@
+` Anyone will do.@
+` If I can kill, anyone will do.@
+` Once more.@
+` Once more, I want to taste that wonderful sensation----\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+
+bg "image\bg\bg_26a.jpg",%type_crossfade_fst
+
+
+br
+` ---There.@
+br
+` A girl with long hair walks by.\
+
+`"Aki, ha!"@
+` Yeah, that is Akiha.@
+` Akiha.@ Akiha.@ My sister.@ My beautiful sister, only mine.@
+br
+#ff0000
+`       That is what I want.@
+#ffffff
+br
+` My sister, only mine.@
+` She is definitely mine, and mine only.\
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+bg "image\bg\bg_30b.jpg",%type_nowaitdisp
+
+
+` I kill her from behind, taking care not to damage her body.@
+` Holding her long hair, I drag her body.\
+
+bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+
+
+` Heavy breathing.@
+br
+` Biting into her neck, I suck her blood.@
+br
+` -----My breath becomes wild.@
+br
+` This murder is different than the others.@
+` Akiha.@ Just thinking this is Akiha makes it feel so wonderful.@
+` My brain becomes numb.@
+` I get fully aroused.\
+
+br
+br
+br
+br
+br
+` As I suck her blood,
+` sucking every last drop of blood, I ejaculate over and over.\
+
+`"H------huh?"@
+` When it's all over, I realize it.@
+`"…… Who is this person?@ This isn't Akiha at all……!"@
+` I'm angry.\
+` Even though I slice the body into pieces, I'm still mad.@
+` Impostor.@
+` This impostor is pissing me off.\
+
+` *pant*----*pant*----*pant*----
+` I've used up extra energy.@
+` The night isn't that long.@
+` Once it becomes morning, Shiki will awaken.@
+br
+`"I'm tired tonight.@ I'll start again, tomorrow."@
+` Yeah, that'll do.@ That's what I'll do.@
+br
+` Now then.@
+` Before the morning comes, before anyone realizes, I must go back to my own bed----\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+wavestop
+
+!w3000
+
+
+
+
+
+
+
+return

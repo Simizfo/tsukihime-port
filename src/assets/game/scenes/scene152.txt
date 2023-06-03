@@ -1,0 +1,112 @@
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+
+` ---But I can't just leave in the middle of class.@
+br
+`"……… Please."@
+` I bring my hands together and pray silently that she won't start any "interesting" trouble for twenty minutes.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w1000
+bg "image\bg\bg_06a.jpg",%type_lshutter_mid
+
+wave se2
+
+` Class ends.@
+` I dash out of the classroom engulfed in the lunchtime commotion.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_11a.jpg",%type_lcartain_mid
+
+` I bolt down through the hallway.@
+` …… Arcueid is out back.@
+` Because it's lunchtime, there may be one or two students going there.@
+` Before that, I have to send her away from school……!\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_04.jpg",%type_lcartain_mid
+
+` I pant with exertion.@
+` I exit the hallway and out into the courtyard.@
+` Fortunately, no one else has gone outside.@
+` All that's left is to grab Arcueid, but…
+
+bg "image\bg\bg_05a.jpg",%type_lcartain_mid
+br
+`"…… The worst."@
+` Entering the back of the school, I unthinkingly voice my thoughts.\
+
+` In the back,
+ld l,":a;image\tachi\ark_t07.jpg",%type_lshutter_mid
+` I can see a very hostile Arcueid and…
+ld r,":a;image\tachi\cel_t07a.jpg",%type_lshutter_mid
+` through the worst twist of fate, Ciel-senpai is also present.@
+br
+` As if facing an invader, Senpai is staring at Arcueid.\
+
+`"Arcueid……!"@
+` Both of them turn around.@
+ld l,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+`"Shiki."@
+ld r,":a;image\tachi\cel_t06a.jpg",%type_crossfade_fst
+`"-------"@
+cl a,%type_crossfade_mid
+\
+
+` …… Thank goodness.@ Arcueid's hostility seems to fade.@
+` After looking back at Arcueid, Senpai leaves in another direction.@
+`"Ah…… Senpai."@
+` She must've been offended by being glared at by Arcueid.@
+` For Senpai to just disappear like that without saying anything must mean something.\
+
+`"Arcueid, you……!"@
+` I run over to her.@
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+`"Shiki you slowpoke!"@
+` She yells at me as I get to her.\
+
+`"Hey…… slow?@ Hey now."@
+`"But weren't you?@ I know you saw me, but you never came down.@ If you came earlier, I wouldn't have been seen by that person!"@
+` …… "That person" must mean Senpai.\
+
+`"It couldn't be helped, I have my circumstances.@ I'm different from you, I'm just a normal student.@ In the first place, why the heck did you come here?"@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"I just felt something from around here.@ Then I picked up your scent and realized it was your school."@
+`"…… So you weren't thinking and you just came for no reason?"@
+` I give a frown.@ Is she a dog or something?\
+
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+
+`"Well excuse me!@ I came here for a reason.@ There's hardly any traces of The Dead here, so I wanted to see it for myself."@
+`"Really?@ But if there's no traces of The Dead here, then shouldn't this place be unimportant?@ There's no one at school at night, so if The Dead wanted some prey, they would go downtown, not to a school."\
+
+ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
+`"…… Well, that does make sense."\
+`"There's nothing strange here.@ I can't really sense The Dead, but since my eyes see death, I can tell without taking off my glasses."@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+`"I see.@ If you say so, Shiki, then there's nothing strange about this place, perhaps."@
+`"Not 'perhaps', definitely."@
+` Arcueid looks like she doesn't believe me.\
+
+`"Anyway, if we stay here any longer, people will see us.@
+` I'll keep my promise for sure, so just go home and rest.@ We may see the 'enemy' tonight."@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"Oh?@ You sound like you want me out of here, Shiki?"@
+` She starts to look angry again.\
+
+`"Ah, that's just your imagination, so hurry on back.@ Otherwise things might get a little hairy."@
+` Go, go.@ I push her from behind.@
+`"………………"@
+cl c,%type_lshutter_mid
+` Though her eyes indicate she wants to say something, she just leaves silently.\
+
+`"…… Man.@ If I see Senpai, I have to apologize to her about Arcueid."@
+` Thinking aloud, I go back.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w1000
+
+
+
+
+return

@@ -1,0 +1,152 @@
+
+
+
+
+bg "image\bg\bg_40b.jpg",%type_nowaitdisp
+
+
+
+
+` …… That's right, she's been taking care of me since yesterday.@ So if I have time to fool around, then I should go help Kohaku-san.@
+`"I guess she's sweeping in the garden."@
+` If it's just sweeping the garden, even I could help with that.@
+` I psyche myself up, and head towards the garden.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_42b.jpg",%type_lcartain_mid
+play "track03.ogg"
+
+ld c,":a;image\tachi\koha_t06.jpg",%type_lshutter_mid
+
+
+`"Oh, welcome back, Shiki-san."@
+` Kohaku-san faces me with a tender smile.@
+`"Thanks.@ You're sweeping the garden by yourself?"@
+`"Yes.@ The gardener will not be here for another three days, so I thought I should just straighten up these fallen leaves."@
+` Kohaku-san holds the bamboo broom with both hands.@ She looks like she's really enjoying herself.@
+` Cleaning up this large area by herself should be quite a huge task.\
+
+`"You're really something, Kohaku-san.@ I'd complain if I had to sweep this whole garden."@
+`"Oh no, it isn't like that at all.@ This is my duty, so I have to do it to put food on the table.@ That is why I must push back my tears and sweep this garden.@ Ahaha!"@
+` Kohaku-san laughs and gives a care-free smile.@
+` She certainly is cheerful.\
+
+`"Besides, there are some things I do in the back courtyard, so when I am not busy, I always check up on the garden."@
+`"Eh……?@ 'Things you do'?@ Like what?"@
+`"Well, let's see.@ Ever since I was a child, I've liked growing flowers.@ I gathered so many kinds of flowers on whim that it is more like a jungle than a flowerbed."\
+cl c,%type_crossfade_fst
+
+
+`"Ahaha," Kohaku-san laughs brightly once again.@
+` …… But I didn't know that.@ I rarely go back here so I didn't realize it, but I guess I have seen something like a flower garden from the second floor.\
+
+`"I see.@ You like gardening, Kohaku-san?@ What kind of flowers?"@
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+
+`"Well, lots of kinds.@ But most of them are morning glories."@
+`"Oh, morning glories?@ That seems like a fitting choice."@
+`"Really?@ I always thought that they didn't quite match the mood of the mansion though…"@
+`"No, not the mansion.@ I mean they suit you well, Kohaku-san.@ Morning glories are so pretty in their simplicity."\
+
+ld c,":a;image\tachi\koha_t18.jpg",%type_crossfade_fst
+
+`"Shiki-san, I think you have the wrong idea.@ The ones in the garden are Korean morning glories.@ They are a bit dangerous."@
+` Kohaku-san laughs as if something was really funny.@
+`"Is that so?@ But Korean morning glories are still morning glories, right?"\
+
+ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+`"Yes.@ It is also known as crazy eggplant, or datura.@ The flowers can be made into an anesthetic.@ The world's first general anesthetic, Tsuusensan, was made in Japan with the Korean morning glories as its main active ingredient.@ If you drink it by accident, it will cause dangerous hallucinations, so please be careful, Shiki-san."@
+br
+` …… Um, I don't really think I'd ever "accidentally drink" the flowers, Kohaku-san.\
+
+`"I also wanted to grow some cactus and other cute things like that, but Akiha-sama was vehemently against it so I had to stop.@ It really is too bad that I tell you all these things, but cannot show them to you."@
+cl c,%type_crossfade_fst
+
+` Saying that, she takes up the broom again.@
+`"…… I see.@ So you sweep the garden because you like flowers and stuff like that?"@
+ld c,":a;image\tachi\koha_t06.jpg",%type_crossfade_fst
+
+`"No, that isn't really the reason.@ Actually, I'm terrible at cleaning inside the mansion.@ I don't know why, but I always seem to break something."\
+
+`"Huh?"@
+`"I seem to break or rip the most valuable thing in the room.@ Well, but I don't do it on purpose, right?@ But Hisui-chan told me, 'Nee-san, maybe you should just stick to the family finances and cooking.' How mean of her!"@
+` Kohaku-san is still smiling while acting angry.@
+` But----this is quite different from my first impression of her.\
+
+`"…… You don't mean… Kohaku-san, are you clumsy?"@
+` My statement is more of a blurted outburst than a direct question.@
+` Kohaku-san groans in disappointment.@
+`"You're saying it too, Shiki-san?@ Hisui-chan is too cruel and says, 'Nee-san, you are too slow', while Akiha-sama teases me and says, 'You are not being careful enough.'
+` I don't mess up because I want to!@ They're so mean!"@
+`"…… That's right.@ There really aren't too many people that mess up because they want to."@
+` I didn't know what to say, so I tried to be somewhat neutral.\
+
+`"That's right!@ It's the thought that counts, so I think they should overlook it if I mess up ten or twenty times!"@
+cl c,%type_crossfade_fst
+
+` Kohaku-san starts quickly sweeping the leaves again.@
+` ---Well, I didn't come here to get in her way.\
+
+`"Kohaku-san, is there another broom?"@
+ld c,":a;image\tachi\koha_t06.jpg",%type_crossfade_fst
+`"Yes, there are many in the shed.@ What are you going to use it for?"@
+`"No, I just thought I'd sweep up some leaves too."@
+` Kohaku-san's broom freezes.@
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+
+`"----That will not do, Shiki-sama.@ If you were to do that, I would be in trouble."@
+`"Get in trouble?@ Who would get you in----well, I guess there really is only one person who would."@
+`"Yes."@
+` Kohaku-san nods quickly.\
+
+`"Don't worry about it.@ I'm doing it because I want to.@ So it's wrong for Akiha to complain.@ If Akiha has any complaints, she'll have to blame me, not you."@
+`"Oh, that is true."@
+`"Isn't it?@ So relax.@ Besides, it's more fun if we both do it."@
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+`"…… Um.@ Shiki-san, you do not seem to understand Lady Akiha.@ If you did that, she would get angry for another reason, I think."@
+`"…… I don't get it, but you're saying she'll get angry whatever happens?"\
+
+ld c,":a;image\tachi\koha_t18.jpg",%type_crossfade_fst
+`"Ahaha, that's it.@ So please do not worry about sweeping."@
+` Still smiling, Kohaku-san says this directly.@
+`"…… Oh.@ No matter what happens, Akiha will get mad at you.@ Then I don't want to make any trouble for you.@ Sorry, forgive me for just being careless."@
+`"No, you were not being careless.@ I'm very happy you wanted to help me."@
+` Even though she says that with her bright smile, I feel bad because I really did want to help her.@
+br
+` I sigh.@
+` Kohaku-san looks up at my face cheerfully.\
+
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+`"Shiki-san, did you really want to help me?"@
+`"Yeah, if I won't get you in trouble…"@
+`"Then, shall we go somewhere else?@ Akiha-sama will find us here, so I think it is better if we sweep behind the mansion."@
+`"Behind…… in the backyard?"@
+`"Yes.@ Akiha-sama will never find us there, so we can sweep all we want.@
+` Here you go," Kohaku-san hands me the broom she had in her hands.\
+
+`"I will go to the shed to get another broom, so please go ahead, Shiki-sama.@ Please don't let Hisui-chan or Akiha-sama spot you as you go, okay?"@
+cl c,%type_lshutter_mid
+
+` Trot trot trot!@ Kohaku-san dashes with quick, light steps.@
+br
+` ---She really looks like a mischievous kid.@
+br
+` Before I realize it, a grin creases my lips.@
+` Akiha and Hisui don't seem to be the joking type, so Kohaku-san's brightness is quite charming.\
+
+`"Alright, let's do this----!"@
+` Gripping the broom that Kohaku-san was using earlier, I covertly walk to the garden behind the mansion.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+playstop
+
+!w2000
+
+
+
+
+
+
+
+return

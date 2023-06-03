@@ -1,0 +1,81 @@
+
+
+
+
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
+
+
+
+
+
+` ----That's true.@ Thanks to my nightmare, I'm still a little unsettled.@
+` I have a little time, so I should rest.\
+
+bg "image\bg\ima_10.jpg",%type_tshutter_mid
+!w500
+bg "image\bg\bg_40a.jpg",%type_tshutter_mid
+
+
+` At some point, I realize that I've slept in.\
+` I shake my groggy head and look around.@
+br
+` And then,
+ld c,":a;image\tachi\his_t01.jpg",%type_bshutter_fst
+
+`"Shiki-sama."@
+`"Uwaa!"@
+` Hisui is standing right by my bed looking into my face.\
+
+`"Wha, wha----"@
+`"Shiki-sama, is the time acceptable?@ It is past eight o'clock."@
+`"----Eh?"@
+cl c,%type_crossfade_fst
+
+` I look at the clock.@
+` Certainly, the arm is pointing towards eight.@
+`"Crap, I overslept……!"@
+` I jump up from bed.@
+` Flustered, I start to change and then realize Hisui is still here.\
+
+`"Hisui.@ Um, sorry, but…"@
+ld c,":a;image\tachi\his_t09.jpg",%type_crossfade_fst
+`"I understand.@ Please go to the sitting room this time."@
+cl c,%type_lshutter_fst
+` Hisui exits my room…… Her eyes were obviously showing she was upset.@
+`"…… Well, of course.@ She already came to wake me up, so for me to fall asleep again like that……"@
+` Ruminating to myself, I quickly change.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+playstop
+
+!w1500
+bg "image\bg\bg_01a.jpg",%type_lcartain_fst
+
+
+` …… I manage to make it to school.@
+` First period has started a while ago and no one is at the gate.@
+` I give a sigh as I enter the school building.\
+
+bg "image\bg\ima_10.jpg",%type_tcartain_mid
+
+wave se2
+
+!w1000
+
+bg "image\bg\bg_06a.jpg",%type_tshutter_mid
+play "track03.ogg"
+
+
+` ----Fourth period ends.@
+br
+` Lunch break comes, and the school fills with noise.@
+`"----Right."@
+` Akiha should be waiting in the courtyard.@
+` …… Since it's Akiha, I think she probably got Kohaku-san to make her lunch, but I should go buy something just in case.\
+
+
+
+
+
+return

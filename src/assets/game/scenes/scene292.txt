@@ -1,0 +1,17 @@
+
+
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+
+`"Yumizuka----I…"@
+` I… can't answer.@
+` Maybe this makes me a horrible person, but those are my true feelings.@
+` I never had any special feelings for my classmate Yumizuka Satsuki.@
+` I'm only here because what happened on the way home two days ago left such an impression on me, I couldn't just forget about it---\
+ld c,":a;image\tachi\stk_t10.jpg",%type_crossfade_fst
+
+`"I thought so.@ You never even knew I existed, so you couldn't have fallen in love with me."\
+
+
+
+return

@@ -1,0 +1,47 @@
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "track03.ogg"
+
+
+ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+` …… It's now time for lunch during our third day.@
+` I usually go outside to get lunch, but this time, I don't feel like doing so……@
+br
+ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+
+`"You got your head cut off.@ Even if you eat, it won't get to your stomach.@ Shiki does some nasty things, but isn't it your own fault, Ciel?"@
+br
+` Hahaha, shut up.@
+` It's better than not even appearing.\
+
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+
+`"Ugh.@ You're right!!@ Why don't I get to appear?@ It's stupid!"@
+br
+` I bet it's your karma, but I have no time to play with you right now.@
+` Tohno-kun.@
+` Please go back to the previous choice and choose the selection that's more in tune with your character.@
+` With things like the way they are now, neither I nor Tohno-kun will be saved!\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+
+
+
+playstop
+
+
+
+
+return

@@ -1,0 +1,101 @@
+
+
+bg "image\bg\bg_03a.jpg",%type_nowaitdisp
+
+wave se2
+
+` The ten minute bell rings.@
+`"--Uh-oh, we'll be late.@ Well, bye Senpai, see you later!"@
+
+
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+
+`"Yes, I'll come see you during lunchtime."\
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+bg "image\bg\bg_06a.jpg",%type_lcartain_mid
+
+play "track03.ogg"
+
+` I fly into my classroom.@
+` It's still five minutes before class, so it's very noisy inside.@
+br
+`"--Whew."@
+` I take a breath and head to my seat.@
+` With this much time left, I didn't even need to run at all.@
+`"Yo, Duke of Delinquency."@
+`"………"@
+` From behind, I hear the voice I never look forward to.\
+
+
+ld c,":a;image\tachi\ari_t01.jpg",%type_lshutter_fst
+
+
+`"What's going on, Tohno?@ I never heard you were skipping class.@ It's a lot of trouble.@ You have to tell me when you skip school and go play!"@
+` Arihiko says those preposterous words with an unbelievably happy expression.\
+`"…… Why should I have to tell you when I don't go to school?"@
+`"Isn't it obvious?@ When you don't show, neither does Senpai, so it's bad unless I think of something ahead of time."@
+` …… What's bad for this guy?\
+
+`"But seriously--What happened?@ Since middle school, you've had anemia, but never skipped school.@ Well, you did a cool trick several times, leaving as soon as you arrived."@
+`"It's kind of like that.@ I made it to the intersection and felt bad, so I went back home."@
+
+
+ld c,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
+
+
+`"Hmmm… Both you and Yumizuka seem to be acting like bad students lately."@
+`"--Well, I'm guilty as charged, but …… is something wrong with Yumizuka-san?"\
+
+
+ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+
+`"Her?@ She's been absent lately.@ She was always such an honor student, so I think she might have been stressed out.@ But I bet she can't call a raise 'cause she has a bad hand."@
+`"……………"@
+` Arihiko's words are always… very unique.\
+
+wave se2
+
+
+` --While we are talking, the homeroom chime rings.@
+br
+`"Well, I'm off.@ Since you skipped Saturday, make sure you study hard today."@
+
+
+cl c,%type_lshutter_fst
+
+
+` Arihiko goes back to his seat.\
+
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+
+
+bg "image\bg\bg_06a.jpg",%type_lshutter_mid
+
+wave se2
+
+
+` Fourth period ends and the class erupts into pandemonium all over again.@
+` The guys dash off to the cafeteria, the girls eat their lunches at their desks, and Inui Arihiko's carrying a sandwich and coming over to me.@
+br
+
+
+ld c,":a;image\tachi\ari_t02.jpg",%type_lshutter_fst
+
+
+`"Yo Tohno!@ Lunch, lunch."@
+`"---"\
+
+` …… What should I do?@
+` Since morning, I haven't really had an appetite.@ I don't feel hungry, so maybe I don't have to force myself to eat.@
+` …… If I eat, I might throw it up again and cause trouble.@ I should---.@
+br
+
+
+return

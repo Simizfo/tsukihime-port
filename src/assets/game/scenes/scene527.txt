@@ -1,0 +1,82 @@
+
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "track03.ogg"
+
+
+ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+` Merci!@
+` Congratulations!@ It's Ciel-san's Good Ending!@
+br
+` …… Eh?@
+` ………… Huh?@
+` ………… Huh?@ Huh???@
+` Wait just a minute!@
+` What is this?@
+` What is this ending!?\
+
+
+ld l,":a;image\tachi\ark_t30.jpg",%type_crossfade_mid
+
+`"……………………………… Sneak, sneak."@
+br
+` Hey you!@ Stop, you thief cat----!@
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+
+wave se9
+quakey 1,50
+!w1000
+ld l,":a;image\tachi\ark_t31a.jpg",%type_crossfade_mid
+
+br
+`"Owieeee!@ Don't be so violent!@ Ciel-sensei, you shouldn't resort to corporal punishment!"\
+
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+
+wave se9
+quakey 1,50
+ld r,":a;image\tachi\cel_t20.jpg",%type_lshutter_fst
+
+` ----Dismissed.@
+` …… Oh, geez, okay!@
+` Each heroine has two different kinds of endings.@
+` This is Ciel-san's Good End.@
+` Please return to a previous choice and choose a different story!@
+` That will be the True End!\
+
+
+` Oh, and one more thing.@
+` Ciel-san's and Arcueid's routes are the Near Side of the Moon routes.@ But there is also a completely different story: the Far Side of the Moon route.@
+` It is the "Tohno Family" route, associating with people like Akiha-san.@
+` It seems difficult to know what requirement is needed to be able to choose that route, so I will give you a little hint.\
+
+` On the first day, you should not go meet Ciel-san.@
+br
+` It might be better to stay in your classroom during lunch.@
+br
+` And most importantly.@
+` I think that if you don't meet the vampire called Nrvnqsr, this current storyline will never happen.@
+` So first, how to cause the new storyline.@
+` During that specific time, if you do not try to perform that one action, a completely different event should be waiting for you.@
+br
+` Well then, let's meet again once more in the main story!\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+
+return

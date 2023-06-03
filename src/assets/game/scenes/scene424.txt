@@ -1,0 +1,63 @@
+
+
+
+
+
+
+
+
+bg "image\bg\bg_40c.jpg",%type_tshutter_mid
+
+play "track01.ogg"
+
+` I realize that someone is taking care of me.\
+
+ld c,":a;image\tachi\koha_t02b.jpg",%type_lshutter_mid
+
+`"Good evening.@ How are you feeling, Shiki-san?"@
+` She speaks with her usual smile.@
+`"Ah…… Kohaku, san."@
+` I somehow manage to speak through my tattered breathing.@
+
+ld c,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
+
+`"Ah, you do not have to speak.@ I probably understand your condition better than you do."@
+` She removes the towel from my forehead, still smiling.\
+
+` ---Was that thing before just an illusion?@
+br
+` Kohaku-san is acting normal.@ She keeps smiling and continuing her portrayal of Hisui.@
+` …… That.@
+` Am I going to die here without being able to take off that mask?\
+
+`"Akiha-sama told me everything.@ She said that she would wait until tomorrow, but that may be too long.@
+` Akiha-sama seems to have lost her ability to think clearly.@
+` I don't think you'll be able to make it through the night like that, Shiki-san."@
+`"---------"@
+` *wheeze* *wheeze*
+` Kohaku-san's words are unmercifully true.\
+
+ld c,":a;image\tachi\koha_t08.jpg",%type_crossfade_fst
+
+`"Shiki-san, you told me before.@ You said that you were numb to death.@
+` Is that still true?@ Are you still going to act against Akiha-sama hopelessly with a body like that?"@
+`"---------Kohaku-san?"@
+` …… I'm surprised.@
+` Kohaku-san's voice, it's completely different than before.\
+
+`"…… No way.@ I told you that I am more attuned to death than most people…… So I think I understand the situation I'm in.@
+` Without you telling me---I knew that surviving the night will be extremely difficult."@
+`"Then you are not scared of death?@ If you accept Akiha-sama then you will recover quickly, but you still do not.@ There's something wrong with you."\
+
+`"…… Maybe.@ But, I think it's okay.@ I like the me that acts like this, and I like Akiha for liking me as I am.@
+` …… Yes, and, well… I enjoy small things like just being able to talk with you, Kohaku-san.@
+` …… But I feel like if I lie to myself, all those small things would lose their enjoyment, and I'm scared of that----"@
+
+
+
+
+
+
+
+
+return

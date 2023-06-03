@@ -1,0 +1,75 @@
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "track03.ogg"
+
+
+ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+` Merci!@
+` And now, the hint corner for the sake of the insane Tohno-kun who has come so far only to reach this Dead End,
+` It is time for "Teach me, Ciel-sensei!"@
+br
+` It is finally the sixth period of the second day.@
+` We are getting closer and closer to the end.\
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+`"I envy you, Ciel.@ You get a lot of appearances.@ I'm the main heroine, but they still treat me like this scribble."@
+br
+` Hey you, don't say weird things.@
+` That's fine.@ At least you have more dignity than me, the do-it-all character.@
+br
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+`"No-!!@ Unsatisfactory!@ I want to be dressed like you and be called smart!!"\
+
+` …………@
+br
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+`"No appearance!@ No appearance!@ No appearance!@ No appearance!@ No appearance!"@
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+`"No appearance!@ No appearance!@ No appearance!@ No appearance!@ No appearance!@ Ciel-glasses!@ No appearance!@ No Ciel!"@
+
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+`"No appearance!@ No appearance!@ No appearance!@ No appearance!@ No appearance!@ Ciel-glasses!@ Ciel-too plain!@ Ciel-get out!@ Ciel-glasses!@ Fake-Frenchie!@ Gun-fetish!@ Ciel-India!"@
+
+br
+` ………… (Anger)\
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+wave se9
+`"Kyuuuuuuuuu………………"@
+br
+ld r,":a;image\tachi\cel_t20.jpg",%type_lshutter_fst
+br
+` ----Well, let's start the lecture.@
+br
+` To say it directly, you need to re-submit.@
+` It looks like Tohno-kun could not attract Hisui-san's heart well enough.@
+` Go back to the fifth or sixth day and please try again.\
+
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+playstop
+
+
+
+
+return

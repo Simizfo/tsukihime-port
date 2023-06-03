@@ -1,0 +1,43 @@
+
+bg "image\bg\bg_11b.jpg",%type_nowaitdisp
+
+
+` I can't go that far.@
+` Senpai is probably saying it out of goodwill, but I don't want to let her see me like this.\
+
+`"--No, I think I can make it.@ Your words are enough to fill me up."@
+ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
+`"…… Is that so?@ Tohno-kun, you haven't had anything all day.@ Are you sure you won't collapse on the way……?"\
+
+`"Let your heart not be troubled.@ Someone like me who's always fainting sees it coming a mile away.@ And today, my body says I'm perfectly okay."@
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+`"…… Well.@ If you say so, I guess it's alright."@
+` Giving somewhat of an amazed sigh, Senpai continues walking down the hallway.\
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_01b.jpg",%type_lcartain_mid
+
+
+` We walk out the gate.@
+` From here, we have to go our separate ways.@
+br
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_mid
+`"Well then, this is goodbye for now.@ We got here pretty quickly."@
+` …… I feel the same way.@ I was really thinking it would be better if the school were a bit bigger.\
+
+`"Well, then, Senpai, see you tomorrow."@
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"Yes, let's meet at school tomorrow."@
+cl c,%type_lshutter_mid
+
+` Smiling as she responds, Senpai disappears in the opposite direction.@
+` After watching her go, I head down the street towards my house.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+
+playstop
+
+
+return

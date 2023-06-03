@@ -1,0 +1,58 @@
+
+bg "image\bg\bg_34a.jpg",%type_nowaitdisp
+
+
+
+
+`"Morning, Kohaku-san.@ Today is a lovely day."@
+ld r,":a;image\tachi\koha_t05.jpg",%type_lshutter_mid
+`"Yes.@ Good morning, Shiki-san."@
+` Kohaku-san delivers her ordinary morning greeting with a smile on her face.\
+
+ld r,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+
+`"Did you sleep well last night?@ I was worried that you might be inconvenienced, staying in an unfamiliar mansion and all."@
+`"Ah, no, there were no problems.@ I used to live here, after all, and now I've got you to watch over me, Kohaku-san."@
+ld r,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
+`"Oh, you're quite good at this, Shiki-san."@
+`"Eh?@ No, I'm just saying what I think… what is it I'm good at?"@
+` Kohaku-san just looks at me, smiling.@
+cl r,%type_crossfade_fst
+` …… Somehow, I feel embarrassed when she looks directly at me, so I shift my gaze to the side.\
+br
+` ---And then.@
+br
+ld c,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
+` --I realize another stare, one which has been on me silently for a while now.@
+cl c,%type_crossfade_fst
+`"Ah… hey there."@
+` I give a light wave to greet her.@
+` Akiha continues to stare at me… or perhaps, glare would be a better word.\
+`"Well… um… good morning, Akiha."@
+ld l,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
+`"Oh?@ You don't have to force yourself to greet me.@ Please, go right ahead and ignore me.@ After all, it seems you'd prefer to enjoy the morning with Kohaku."@
+`"Uuh…"@
+` Akiha's words sting.@
+` …… It's not like I had intended to ignore her.@ I just said hello to Kohaku-san…\
+
+ld r,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+`"Please don't tease Shiki-san too much, Akiha-sama.@ We don't have much time, and Shiki-san hasn't finished his breakfast yet."@
+ld l,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+`"Well, that's Nii-san's fault for waking up late, isn't it?@ He's just getting what he deserves for leaving everything to do in a rush in the morning."@
+`"Hmph!" Akiha sniffs.@
+` …… It seems like my failure to greet her was another point she was unimpressed with, in addition to her objection to my late arrival.\
+`"Um… Kohaku-san.@ Is my breakfast ready?"@
+ld r,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+`"Yes, I've laid it out in the dining hall.@ Please, eat up at your leisure."\
+ld l,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
+`"That won't do, Kohaku.@ Nii-san has no time to eat breakfast at this time."@
+`"Hey, listen, Akiha.@ It's only seven, so I've got at least that much.@ It's an easy thirty minute walk from here to school, so I can take it easy for at least ten minutes, can't I?"@
+`"Are you saying you're going to finish breakfast in just ten minutes?@ You're not some starving dog, so if you're going to eat breakfast, I'd like you to take your time."@
+`"------"@
+` Akiha's words really do have thorns in them.\
+cl a,%type_crossfade_fst
+\
+
+
+
+return

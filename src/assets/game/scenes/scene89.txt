@@ -1,0 +1,245 @@
+
+bg "image\bg\bg_19d.jpg",%type_nowaitdisp
+
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"Hmmm.@ I suppose there must be a strain on your brain from being able to see 'death'… Yeah, there's definitely some kind of reason for those eyes of yours, but this is all I can tell you for now.@ If we get the chance later, I'll go over it in a little more detail."@
+`"That's alright.@ I'm not into long stories anyway."@
+ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
+`"Is that so?@ Personally, I enjoy talking to other people."@
+` Arcueid gives a carefree laugh.@
+` It really does seem like she enjoys doing nothing more than talking.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+
+
+bg "image\bg\bg_19d.jpg",%type_rshutter_mid
+
+` Night descends.@
+` Arcueid sits on the bed and we both stare absentmindedly at the clock.@
+` It's past four in the morning.@
+` About an hour until dawn.\
+
+`"Just one more hour?"@
+` Nothing out of the ordinary has happened up until now, and Arcueid shows no signs of tension.@
+` We're surrounded by complete tranquility.@
+` Somehow, I'm beginning to believe that tonight might just end like this.\
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"Hey, Shiki."@
+` Arcueid calls me again.@
+`"What?@ I don't have anything else to talk about."@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"Really?@ But it's such a waste not to talk, now that we're in a situation like this."@
+`"…… Listen, how many hours do you think I've had to put up with your nonsense talking?@ Six hours.@ That's making me more tired than keeping watch."@
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+` Arcueid gives me a dissatisfied glare.\
+
+` ---That's right.@
+` For some reason, Arcueid has been talking to me for six hours straight.@
+` I told her she should sleep if she was feeling weak, but she replied with "It's more fun to talk", so in the end, we ended up facing each other and talking the whole time.@
+` *sigh*@
+` I just don't know what she's thinking.@
+br
+` ---Gruuuuuu.@
+br
+` To top things off, I'm hungry.@
+` Come to think of it, my last meal was breakfast, so I haven't eaten anything for a whole day.\
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"Why don't you eat something if you're hungry?@ We're in a fancy hotel, after all, so you can call room service."@
+`"That's okay.@ I'd lose my sense of tension if I filled my stomach now.@ More importantly, shouldn't you be getting something to eat?@ You're weakened but you aren't sleeping, so you should at least get something to eat."@
+`"If you're not going to eat, then neither am I.@ Normal food is meaningful in its own way, but it's boring to eat by myself."\
+
+`"Normal food?@ There's nothing normal or special about---"@
+cl c,%type_crossfade_fst
+br
+` …… Ah, wait.@
+` Arcueid is a vampire.@ I suppose to her, "food" would mean drinking someone's blood.@
+br
+`"---Or is there?@ I guess being a vampire, you wouldn't usually consume much except blood."\
+
+` She doesn't look like it, but Arcueid is a vampire.@
+` She says vampires need the blood of humans to survive.@
+` Then---just how many people has she drained blood from and how many people has she killed before?\
+
+`"-----"@
+` I sneak a quick glance at her face.@
+` …… I can't imagine.@
+` Even though I know she's a vampire, for some reason, I can't imagine her sucking anyone's blood---\
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"What?@ Is there something on my face?"@
+`"……!"@
+` She meets my gaze, and I quickly look away.@
+` Arcueid continues to stare at me, and then gives a laugh of comprehension.\
+
+`"Are you curious?"\
+`"A-about what?"@
+`"About how many people I've sucked blood from?"\
+
+`"Erk-----"@
+` …… She's completely read my mind.@
+br
+` Arcueid's smile grows even wider, and I don't like it.\
+cl c,%type_crossfade_fst
+
+
+`"…… Well, of course I'm curious.@ I am helping you, so if I don't know, I won't have any idea about when you might have a change of heart and try to attack me."@
+` That would really be a problem.@
+`"I see, I see," Arcueid says.\
+
+`"Well, then.@ Here's a question.@ How many people's blood have I sucked so far?"@
+` She bounces lightly up from the bed and walks to the window.@
+`"How many people?@ That's---"@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+` Arcueid gives a cheerful smile and silently looks in my direction with an air of delight.@
+` …… Damn it, it's obvious that she's trying to provoke me.@
+` Fine.@ I'll answer.@
+` Let's see… it has to be…\
+
+`"In the hundreds?"@
+`"Sorry, you're off."@
+ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_fst
+`"Then in the thousands?"@
+`"Nope, that's wrong too."@
+` Arcueid laughs like it's so funny.@
+` …… Somehow, this feels really frustrating.\
+
+`"Damn!@ Then… well, I doubt it's the case, but… in the tens?"@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+`"That's wrong too.@ Oh, really!@ Tens, hundreds, thousands… do you really see me as that sort of person?@ That's so mean, that would make me indiscriminate."@
+`"Am I wrong?@ Vampires are indiscriminate, aren't they?@ Even humans get hungry merely by being alive, and when it's a matter of life and death for you, you wouldn't be picky either."@
+`"Yes, that's true, but…"\
+
+ld c,":a;image\tachi\ark_t22.jpg",%type_crossfade_fst
+
+`"I haven't tasted blood these last eight hundred years.@ Nor have I ever killed an ordinary human."@
+br
+` ----Eh?@
+br
+`"Wait---is that true?"@
+`"It's the truth.@ After all, I'm afraid of sucking blood."\
+
+` ---Huh?@
+` Afraid of sucking blood?@
+br
+`"You've got to be kidding, right?@ A vampire that's afraid of sucking blood?@ Why?"@
+`"…… I suppose I'm a coward.@ That's why I'm a failure as a vampire."@
+` Arcueid grumbles as she looks up at the night sky from the window.@
+cl c,%type_crossfade_mid
+br
+` She stays like that for a long time, continuing to look up at the sky.@
+` Her white back looks vague… hazed over, as if she was merely an illusion.\
+
+`"…… I see, a failure."@
+` I whisper, and I feel relieved.@
+` …… Somehow, that makes me happy.@
+` Of course, it's only natural to be relieved.@
+` Because now I know the person that's standing before me isn't some kind of vicious, evil being.@
+` For now, if I were to believe what she says, I won't just be killed by her at random.\
+
+` So, I'm safe.@ …… I'm safe, but I feel like that's not the only reason I'm relieved.@
+br
+` ---Damn it, what's wrong with me?@
+br
+` Being relieved over something like this… how can I be happy over something like Arcueid being a failure?\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+
+playstop
+
+bg "image\bg\bg_19d.jpg",%type_crossfade_fst
+
+
+`"Ah----"@
+` Suddenly, I feel a faint dizziness.@
+br
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+`"Shiki?@ What's wrong?@ You're sweating an awful lot."@
+`"No, it's just this twinge of pain in my head---"@
+` I realize something with a shock as I reply to Arcueid.@
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\cmo_16.jpg",%type_crossfade_fst
+` The window behind Arcueid.@
+` Beyond the glass, within the city streets still sunken in the darkness of night.@
+br
+` A blue crow is looking in my direction.\
+
+`"That's---"@
+` I can do no more than stare at its dim figure through the window.@
+` Arcueid turns towards the window too.@
+`"…… Nrvnqsr?"@
+br
+`"INDEED.@ I HAVE FINALLY FOUND YOU, PRINCESS OF THE TRUE ANCESTORS."@
+br
+` From somewhere,
+` a force of will flows into the room.\
+
+` Arcueid's eyes are full of enmity.@
+` Outside the window, the crow gives a loud, high pitched scream.@
+br
+`"THIS IS IT.@ I AM HEADING THERE RIGHT NOW."@
+br
+bg "image\bg\ima_18.jpg",%type_crossfade_fst
+` The blue crow flies off.@
+` All that remains is the dark of night and the white moon.\
+
+bg "image\bg\bg_19d.jpg",%type_nowaitdisp
+
+play "track06.ogg"
+
+` --------Suddenly
+br
+quakex 5,100
+` Boom!@
+` With a heavy noise, the room shakes violently.@
+` No, to be more precise,
+` the entire hotel shook from that impact.\
+
+`"What the hell---!?"@
+` I get up from the bed.@
+ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
+` Arcueid is silent, biting her lip with a vexed expression.@
+`"Arcueid, that shaking just now---"@
+`"-----"@
+` She doesn't answer.\
+
+`"…… Say something!@ That wasn't an earthquake, was it?"@
+` ---If I had to guess, it felt more like someone had driven a large dump truck into the hotel lobby at full speed.@ It was that kind of impact.@
+`"…… Arcueid!"@
+` She… doesn't answer.@
+cl c,%type_crossfade_fst
+br
+` If I listen closely, I can hear noises from downstairs.\
+
+` …… Arcueid's face is grave.@
+` She said she was powerless right now.@
+` That's probably why she's not saying anything.\
+
+`"------"@
+` Only time passes by.@
+` Two minutes.@
+` It's been two minutes after the impact, but the hotel is awfully quiet.@
+br
+` Arcueid remains silent and still.@
+` Just biting her lip, as if withstanding something.@
+` I can see a trail of red blood slowly flowing down from her lip.\
+
+`"----Arcueid----"@
+` Is she worried?@ Frustrated?@
+` She remains still, almost as if she's embracing herself, bearing with something.@
+br
+` She said she wouldn't leave the room.@
+` Then,
+` what am I here for?@
+br
+
+
+
+
+return

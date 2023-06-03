@@ -1,0 +1,47 @@
+
+bg "image\bg\bg_19d.jpg",%type_nowaitdisp
+
+` Arcueid doesn't look like she's going to give up.@
+`"…… Fine.@ Give them back as soon as you're done looking."@
+bg "image\bg\bg_19d.jpg",%type_crossfade_fst
+
+monocro #ff00ff
+
+` I hand her my glasses.@
+` Arcueid stares intently at the glasses, and then looks at me with frightening eyes.\
+
+ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
+
+`"Shiki, is the person who made these glasses in this city right now?"@
+`"I don't think she is.@ It's been eight years, and it seems like she was only here for a week."@
+`"--I see.@ That's good.@ I don't have to deal with more… well, it's probably safer not to deal with Blue in the first place, anyway."@
+` Arcueid retreats to her thoughts.\
+`"Arcueid, you know Sensei--I mean, the person who made these glasses?"@
+`"…… I know her.@ A Sorceress, she is one of only four of her kind.@ These glasses are truly a masterpiece.@ Even I can't break them."@
+` Arcueid's face grows even more serious.\
+`"…… Wait--you were going to break them?"@
+ld c,":a;image\tachi\ark_t12.jpg",%type_crossfade_fst
+
+`"----Eh?@ D-did I say that part out loud?"@
+`"…… I knew it.@ You were going to break them after all."@
+` I retrieve the glasses from Arcueid.@
+monocro off
+
+bg "image\bg\bg_19d.jpg",%type_crossfade_fst
+
+
+\
+
+`"Geez.@ You're the one who just said I couldn't stay sane without these glasses.@ Or do you want me to go crazy?"@
+ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
+`"That's not what I meant.@ I just didn't like how you treasured them so much."@
+`"--Hey, listen, you…"@
+cl c,%type_crossfade_mid
+br
+` …… Geez.@ Somebody, please tell me how a mind like hers works.@
+br
+`"It's true my memories of Sensei are precious to me.@ But more importantly, I can't live without them.@ If I were to see the lines 24 hours a day, I think I'd die from the headache before I went mad."\
+
+
+
+return
