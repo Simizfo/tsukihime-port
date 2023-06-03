@@ -17,11 +17,11 @@ const Window = () => {
   const [bg, setBg] = useState('')
 
   useEffect(() => {
-    fetchScene()
+    fetchScene(20)
   }, [])
 
-  const fetchScene = async () => {
-    const script = await fetch('./scenes/scene21.txt')
+  const fetchScene = async (scene: number) => {
+    const script = await fetch(`./scenes/scene${scene}.txt`)
 
     const data = await script.text();
 
