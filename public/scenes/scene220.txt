@@ -1,8 +1,8 @@
 
 bg "image\bg\bg_33a.jpg",%type_nowaitdisp
 
-`"…… That's right.@ I think that's the best choice."@
-` I don't think Akiha will understand about non-humans like Arcueid and Nrvnqsr, and since I can't tell the truth, I should at least sincerely apologize.@
+` Well, I just have to deceive her somehow.@
+` I don't think Akiha will understand about non-humans like Arcueid and Nrvnqsr, so I'll have to minimize my lying without telling the truth.@
 br
 `"--Alright, let's go."@
 ` Taking a deep breath, I open the sitting room door.\
@@ -10,88 +10,99 @@ br
 bg "image\bg\bg_34a.jpg",%type_lcartain_mid
 
 ` In the sitting room, Akiha is on the sofa and Hisui is standing by the wall.@
-ld c,":a;image\tachi\aki_t01a.jpg",%type_nowaitdisp
 
+ld c,":a;image\tachi\aki_t03a.jpg",%type_lshutter_mid
 `"--Good morning, Nii-san."@
 ` Her gaze is telling me "I am angry."@
 `"Um, uh…… Morning, Akiha."@
 `"Let's dispense with greetings.@ Please sit there.@ I wish to speak with you, Nii-san."@
-cl c,%type_nowaitdisp
-
 `"------"@
 ` Her words are so forceful, I can't say no.@
-` I solemnly and calmly sit down on the sofa across from her.\
-
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+` I solemnly and calmly sit down on the sofa across from Akiha.\
 
 `"Nii-san.@ This is very abrupt, but may I ask about these past two days?"@
 `"----Ugh."@
 ` Despite her polite language, Akiha's words are unmistakably a threat.@
 ` But, her Onii-chan cannot tell her such a story.\
-br
+
 `"About that, Akiha."@
-`"Yes, what is it?"@
-`"I'm sorry, but I can't tell you."@
-cl c,%type_nowaitdisp
-\
 
-` Crash.@
-` The teacup that Akiha was holding falls to the table.@
-` Rather, I think she dropped it intentionally.\
-
-ld l,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"Akiha-sama---"@
-ld r,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
-
-`"Oh, I'm sorry Hisui.@ Would you please clean it up?"@
-cl a,%type_crossfade_fst
-
-` Hisui silently cleans up the spilled tea and the shards of the (very expensive-looking) teacup.@
-br
-` I uneasily watch her do so while Akiha is glaring at me.@
-` Once done cleaning, Hisui goes to the kitchen.\
-
-ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
-
-`"---Then, Nii-san."@
-`"…… Yes?"@
-`"Could I ask you again?"@
-` Akiha doesn't give up.@
-` I can feel her drive to get the story out of me no matter what.@
-` But still, I don't think I can tell her about it.@
-` Of course not just for my sake, but hers as well.\
-
-`"…… No.@ No matter how many times you ask me, I can't tell you.@ I feel sorry that I made you worry, but I can't tell you about it."@
-ld c,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
-
-`"--Even though you are sorry, you can't tell me, Nii-san."@
-`"That's right.@ I'm sorry I haven't contacted you and for not being able to talk about it.@ But I haven't done anything wrong the past two days.@ …… I don't even want to think that was a wrong thing to do."@
-cl c,%type_crossfade_fst
-
-\
-
-` ---That's right.@
-` Even these past two days were simply kill or be killed--I want to believe it was the right thing to do.@
-br
-` I did it to help Arcueid, but most of all… I do not regret killing that cannibalistic monster.@
-br
-` At the very least, there will be no more victims killed by having their blood drained.\
-
-`"----I'm sorry, Akiha.@ I'm sorry to worry you, but please don't ask me anymore."@
 ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
 
-`"------"@
-` Akiha looks me in the eye.@
-` For a while, she stays like that.\
+`"Yes, what is it?"@
+`"The truth is, I ran into a minor acquaintance of mine and I showed that person around the city."@
 
-`"…… I understand.@ After thinking about it, you must have your reasons, so I won't press you on this anymore, Nii-san."@
-`"…… I'm sorry.@ Thanks for understanding."@
+ld c,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
+
+`"Oh?@ A minor acquaintance?"@
+`"Yeah, I got to know the person just recently, and we met just outside of school.@ I was asked to keep this acquaintance company until Sunday, so--"\
+
+`"So you skipped school and stayed away from home without even notifying me or asking permission."@
+br
+` …… Akiha's gaze is extremely frigid.@
+` She seems even more shocked than angry.\
+
+`"…………………"@
+`"…………………"@
+` I remain quiet as Akiha stares at me wordlessly.@
+
+
 ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
 
-`"-----"\
+`"And, who was it?"@
+`"Eh?"@
+
+ld c,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
+
+`"I asked who this acquaintance of yours is."@
+` She looks at me directly in the eye.@
+` I can feel her thinking "I will not be deceived".\
+
+`"--Well, I--"@
+`"If you can't tell me, that means you feel guilty about it, Nii-san."@
+` Her gaze shoots right through me.@
+` I get the feeling she'll attack me more if I look away, so I stare back at her.\
+
+` …… Well, this is totally random, but…
+` She does not remind me of the Akiha from back then.@
+` Her stretched back, her perfect posture, her unwavering eyes.@
+` Perhaps this is imprudent, but I honestly think she has become very beautiful.\
+
+`"You know, Akiha."@
+
+ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+`"What?"@
+`"Your eyebrows are pretty thick."@
+
+ld c,":a;image\tachi\aki_t15a.jpg",%type_crossfade_fst
+
+`"------!?"@
+` Bam!@ Akiha's leg smacks the table as she jumps up.@
+`"………… Ah."@
+` How do I say this--she's surprisingly surprised?@
+`"…… I don't get you at all.@ That wasn't something to be surprised about."@
+`"---------"@
+` With a deep breath, Akiha slumps her shoulders.\
+
+ld c,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
+
+`"Nii-san, it seems like you do not wish to answer me seriously."@
+`"…… That's not right.@ Honestly, I won't lie to you.@ It's just that I have a lot of things I can't say to you."@
+
+ld c,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
+
+`"Geez.@ Really, ever since we were small I was never able to tell if you were an honest or dishonest person, Nii-san."\
+
+`"…… Really?@ I don't really remember how I was when I was small."@
+
+ld c,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
+
+`"You don't have to remember.@ But, I haven't changed either.@ Pressing you like this even when I know how it will turn out… maybe I haven't grown up at all."\
 
 cl c,%type_crossfade_fst
+
+
 
 
 return

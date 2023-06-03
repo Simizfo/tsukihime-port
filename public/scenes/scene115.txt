@@ -1,47 +1,69 @@
 
-bg "image\bg\bg_06b.jpg",%type_nowaitdisp
 
-` …………… *sigh*@
-` I don't feel like going back to the mansion, so I kill time spacing out in the classroom.\
+bg "image\bg\bg_32b.jpg",%type_lcartain_mid
 
-` Outside, the sun is setting.@
-` I can hear the voices of those practicing in athletic clubs; I'm quite comfortable with sitting at my desk peacefully.@
-` It's probably because yesterday and the day before were out of some extraordinary world.@
+play "track01.ogg"
+
+` I head up the road and draw near the mansion.@
+` After a little more walking, I see Hisui standing by herself at the front gate.@
 br
-` ----And then,
+`"……?@ I wonder what Hisui is doing?"@
+` Tilting my head to the side, I head for the front gate.@
+` Hisui realizes I'm here and bows her head.\
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Welcome back, Shiki-sama."@
+`"---Ah, yeah---thanks, Hisui."@
+` I can barely reply since I'm bewildered by the respectfulness of it all.@
+`"Um---were you waiting for me to come home?"@
+`"Yes.@ Greeting the master is a servant's duty."@
+` Answering very matter-of-factly, she doesn't even bat an eyelash.\
+
+`"Um, Hisui, I'm truly happy you waited to greet me, but there's really no need to wait outside.@
+` I'll come back on my own, so you can just greet me whenever you realize I'm back."@
+ld c,":a;image\tachi\his_t05.jpg",%type_crossfade_fst
+
+`"-----"@
+` Hisui's face clouds slightly.@
+` …… Oh, maybe…
+` Maybe she was waiting for me to return like this on Saturday and Sunday.\
+
+`"--Hisui, um--"@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"I understand.@ Starting from tomorrow, I will await your return in the lobby."@
+` Hisui gives a quick bow and opens the mansion gate.@
+` Hisui turns around as she does so.\
+
+` ………… *sigh*@
+` For some reason, the atmosphere isn't exactly conducive to conversation.@
+` Hisui closes the gate after I pass through, then she silently walks to the entrance to open the door and leads me into the lobby.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_40b.jpg",%type_lcartain_mid
+
+` I get to my room.@
+` Akiha isn't back yet from her lessons, Kohaku-san is preparing dinner, and Hisui is cleaning the mansion.@
 br
-ld c,":a;image\tachi\cel_t01a.jpg",%type_lshutter_fst
-`"Good.@ I see you're still here, Tohno-kun."@
-` Senpai's face suddenly comes into view.\
+`"---Geez, there's nothing to do."@
+` Well, there's quite a mountain of studying, reviewing, and memorizing a student like me has to do.@
+` But, I just don't feel like doing anything.\
 
-`"Hm?@ Senpai……?@ What makes you come down to a second year classroom?@ Is there something special you had in mind?"@
-ld c,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
-`"Yes, I was wondering if you were still here, so I came to take a look."@
-` Senpai says something that makes me happy.\
+` Suddenly, Arcueid's face flashes in my mind.@
+` Whether good or bad, it's probably just a reaction to the crazy two days I just had.@
+` Perhaps spacing out here in my room will be good, giving my mind and heart a break.\
 
-`"Yes, I'm here… What is it?"@
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w1500
 
-`"There is something I forgot to say during lunch.@ I was thinking of waiting until tomorrow, but I thought I should just say it as soon as possible."@
-`"…… Hm.@ Something you forgot to say?"@
-ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_mid
 
-`"Yes.@ Tohno-kun, you seem to be going out at night lately, so I wanted to warn you.@ There have been a lot of dangerous things going on, so you shouldn't stay out too late."@
-`"Ah----um, well……"@
-` ……?@ How does Senpai know that?@ Do I look pale from a lack of sleep?@ Or, maybe she saw me walking around at night……?\
 
-`"Well Tohno-kun, I let you know.@ You shouldn't involve yourself in dangerous things."@
-cl c,%type_lshutter_mid
-` As quickly as she arrived, Senpai disappears like a gust of wind.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-bg "image\bg\bg_01b.jpg",%type_lcartain_slw
-
-` After spending an hour doing nothing in the classroom, I decide to go home.@
-` It's past five o'clock.@
-` If I'm too late, Hisui will worry, so I should head back soon----\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-!w1000
+` After eating dinner by myself in the large dining room, Kohaku-san treats my wounds and I go back to my room.@
+` Akiha didn't make it back in time for dinner.@ Her lesson was apparently going to last a while, so she was going to eat away from home.@
+` It's past ten at night now.@
+` It's a bit too early, but since I'm exhausted, I should sleep early tonight--\
+playstop
 
 
 return

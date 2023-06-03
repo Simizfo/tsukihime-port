@@ -1,47 +1,56 @@
 
-bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+playstop
 
-` ----I'll ignore her.@
+bg "image\bg\bg_06b.jpg",%type_crossfade_mid
+
+` …… As expected, the debate over what to do for the Culture Festival is a stormy one.@
+` Since everyone's opinions are different, the decision gets postponed till next week.@
+` By the time it's over, it's late in the afternoon.@ Everyone gets up tiredly from their chairs and leaves the classroom.@
 br
-` If I just run down to her and people see me, it'll be a problem.@
-` No matter what she does, if I act like a stranger, it won't hurt me.@
-` …… Well, tonight she'll probably say "Why did you ignore me?" But, it can't be helped.@
-` All I want is for the school to remain peaceful and not do anything.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-!w1000
-bg "image\bg\bg_06a.jpg",%type_lshutter_mid
-
-wave se2
-
-` It's lunchtime.@
-` I'm not in the mood for bread for lunch, so I'll go to the cafeteria.@
-`"…… Huh?"@
-` I feel like I forgot something, but, whatever.\
+`"----Well then."@
+` There's nothing to do in the classroom.@
+` I should get ready for tonight and go back to the mansion---\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_slw
-bg "image\bg\bg_50.jpg",%type_lcartain_slw
+bg "image\bg\bg_32b.jpg",%type_lcartain_slw
+play "track01.ogg"
 
-` The cafeteria is in chaos as usual.@
-` Most of the tables are filled, so if I don't hurry, I won't have a seat.\
-
-`"Ah, Senpai."@
-` I see Ciel-senpai sitting in a group.@
-` Are those her friends from class?@ While talking with a group of girls, she's seriously eating curry udon.@
+` I don't swing by anywhere else and head right back to the mansion.@
+` The sun hasn't quite set so Akiha probably isn't back yet.\
+`"That Akiha.@ I wonder if she's still mad like this morning……"@
 br
-` …… Come to think of it, she's always eating a "curry-something".@
-`"She, really likes curry, I guess."@
-` I'll have to ask her about it.\
+` …… Well, that can't be helped either.@
+` I can't tell her the truth, so I'll probably just continue to be hated as a terrible older brother.\
 
-`"………"@
-` But, something pulls at me.@
-` I feel like I forgot something important.@ Something, dangerous if left alone.@
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_33b.jpg",%type_lcartain_mid
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Welcome back, Shiki-sama."@
+` Hisui bows as I enter the mansion.@
+`"…… Yeah, I'm back.@ Thanks for greeting me, Hisui."@
+` ---It's been a week since I've come back, but I'm not used to this yet.\
+
+`"Um, Akiha isn't back yet?"@
+`"No.@ She told me to tell you she would be back especially late tonight so please eat dinner on your own, Shiki-sama."@
+cl c,%type_crossfade_fst
+
+` …… I knew she'd still be angry from this morning.\
+
+`"----Sigh."@
+` I slump my shoulders as I start to walk to my room.@
+` ---And then,
 br
-`"…… Well, if I don't remember, it can't be that important."@
-` Even though it seems really important, I just turn all my attention to my lunch for now.\
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Shiki-sama."@
+` Hisui looks around the lobby before she speaks again.\
 
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-!w1000
+`"Forgive me for asking an awkward question, but will you be leaving tonight again, Shiki-sama?"@
+`"Eh----?"@
+` She fixates her emotionless eyes on me.@
+` I think she simply wants to know what time I'll be back because she's so dedicated of a servant, but letting her know means Akiha would know.@
+` I should---
+br
+cl c,%type_crossfade_fst
 
 
 

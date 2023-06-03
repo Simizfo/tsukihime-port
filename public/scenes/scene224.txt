@@ -1,38 +1,63 @@
 
 bg "image\bg\bg_03a.jpg",%type_nowaitdisp
 
-` …… Wait a minute.@
-` All of that happened, and Senpai still greeted me with her usual smile.@
-` Last night----if she saw me fighting Nrvnqsr, then she definitely can't just greet me like this.\
+` ---I gather up my courage and ask her about last night.@
+br
+`"…… Uh--Senpai.@ Last night, were you in the park?@ I thought I saw you wearing something like a black coat, with your skirt flowing in the wind."@
+
+
+ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
+
+
+`"…… What is that?"@
+`"Um……!@ well--yeah, the high-laced boots suited you.@ I was kind of fascinated, you looked… really cool."\
+
 
 ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
 
-`"Tohno-kun?@ Did you want to say something?"@
-`"Um, hold on."@
-` …… If I think back, that person who helped me last night may not have looked like Ciel-senpai at all.@
-` I couldn't get a good look at her face because it was dark, and her atmosphere was completely different.\
 
-`"Senpai, could I get a good look at your face?"@
-`"Uh, yes?"@
-` She curiously tilts her head and looks up at me.@
-br
-` …… Of course.@
-` Once I think it through calmly, that person didn't resemble Senpai at all.\
-
-`"…… Sorry, it's just a mistake.@ It's nothing, so please forget about it."@
-`"A mistake?@ I'm a little interested--Mistake about what?"@
-` She still stares up into my face.@
-`"Uh…… It's, ummm."@
-` Looking away, I try to hide my blushing face.@
-` …… Having her so close to me at the school gate is embarrassing.\
-
-`"N, nothing.@ I just thought I saw someone that looked like you last night, but it must have been a mistake."@
-`"…… Hmm, a person that looked like me?"@
-` Senpai gives a very interested nod.@
-` It seems she isn't going to just forget about it.\
+` ……"Huh?" Senpai tilts her head.@
+` She frowns like she doesn't understand my words completely, and then denies it.\
 
 
+`"Um, I don't quite understand, but you're saying that I was near your house two nights ago, looking like that?"@
+`"Yeah.@ Senpai, that was you, right?"@
 
+
+ld c,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
+
+
+`"No way.@ Tohno-kun, are you saying I look like I really have that much free time?"@
+` ---Senpai is really angry.@
+` She can't be playing ignorant or lying.\
+
+`"Ah----No, that's not it, but I just…… saw someone that looked like you in park last night, so---"@
+` Senpai gives a sigh.@
+
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+
+`"Tohno-kun, that wasn't me.@ I don't have that kind of hobby."@
+`"Ah---Yeah, I know.@ I just wanted to ask."\
+
+` Certainly after having her say that, she is right.@
+` Ciel-senpai and the person that night aren't related at all.@
+` In the first place, Senpai's just a normal person, and if she was actually there---she had to have seen me kill that vampire with my knife.@
+` If she saw such a gruesome scene, there'd be no way she could talk with me normally like this.\
+
+`"…… Sorry, please forget about it.@ I guess it was just someone else."@
+
+
+ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
+
+
+`"That's fine, but…… did that person really look like me?@ That weird person?"@
+`"Well, I'm not too sure.@ It was dark, and far away………… huh?"@
+` Yeah, it was far and I couldn't make out her face.@
+` So why did I think it looked like Senpai……?@
+`"…… Hmm… Maybe there is something wrong with me."@
+` I cross my arms and think.\
 
 
 return

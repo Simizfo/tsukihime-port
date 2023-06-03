@@ -1,139 +1,248 @@
 
 bg "image\bg\bg_06a.jpg",%type_nowaitdisp
 
-` --Even still, I need to get at least some nutrition.@
 br
-` I'm already prone to passing out as it is; and if I don't push myself to eat, I'll probably just pass out.\
-
-`"Sorry, go ahead and eat.@ I gotta go buy food."@
-`"Oh yeah?@ Guess I'll start eating without you."@
-cl c,%type_crossfade_fst
-` I leave Arihiko happily unsealing his sandwich behind me as I exit the classroom.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-!w1000
-
-bg "image\bg\bg_06a.jpg",%type_lcartain_mid
-
-` I buy some bread and some milk, and then go back.@
-` Arihiko and Ciel-senpai are already over at my desk by the window.@
-
-ld l,":a;image\tachi\cel_t03.jpg",%type_lshutter_mid
-`"Oh, Tohno-kun.@ I'm joining you guys."@
-ld r,":a;image\tachi\ari_t02.jpg",%type_lshutter_mid
-`"Ah, no, no.@ You don't have to mind much.@ We're pretty happy when you can join us.@ Isn't that right, Tohno?"@
-` Is Arihiko that pleased just to be with Senpai?@ He happily asks me for agreement.@
-` Well, for once we do seem to be in agreement.\
-
-
-`"That's right.@ You really helped me out by coming, Senpai.@ I don't know what I would've done if I had to eat while staring at this guy's face."@
-` I answer lightheartedly and take my seat.@
-cl a,%type_crossfade_mid
-` Senpai's eating from a large lunchbox and Arihiko is long since finished with his sandwich.\
-
-
-`"……… Alright."@
-` I take a bite from my bread.@
-` I still have no appetite, so I forcefully wash it down with some milk.@
+` ---I won't.@
+` Skipping two meals won't kill me.@
 br
-` Arihiko holds a lively conversation with Senpai since they are both done with lunch.@
-` They talk about the strange events like serial murders and whatnot, which really does not help my appetite.\
+`"…… Mm, I'll pass.@ Do what you want."@
+` Seeing a vision of food with something red on it isn't something I want to do again.@
+` To be honest, I'm already feeling bad looking at Arihiko's sandwich.@
+` Because there are many bright red tomatoes in it.\
+
+
+ld c,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+
+
+`"What's this?@ You're becoming more and more unhealthy.@ Is your new lifestyle not suiting you that much?"@
+`"That might be it.@
+` They complain about me being late when I wake up at seven o'clock and the curfew's at eight o'clock.@ If I spend the night somewhere without asking, they interrogate me afterwards.@ It's like a prison, right?"@
+
+
+ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+
+`"Isn't that alright?@ It's a proper life.@ Early to bed and early to rise, right?@ You won't be able to grow up to be a good guy if you burn out when you're young."@
+`"I agree.@ …… But, you seem to lend the argument more strength than anyone else can."@
+br
+` As the ultimate counter-example, that is.\
+
+
+ld c,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
+
+
+`"Oh yeah?@ You're pretty honest today.@ Alright, alright, I'll split the sandwich with you."@
+`"I said, I didn't want to eat.@ Don't worry about me and eat; lunch'll end soon."@
+`"Okay, down the hatch."@
+` Arihiko holds his sandwich with both hands and begins to eat.@
+
+
+cl a,%type_crossfade_fst
+
+
+br
+` ------And then.@
+br
+
+
+ld l,":a;image\tachi\cel_t04.jpg",%type_lshutter_fst
+
+
+`"Hello everyone."@
+` Senpai comes in with something that looks like a boxed lunch.\
+
 
 ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
-`"Really?@ They haven't found all those missing people yet?"@
-ld l,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
-`"It seems that way.@ There was even another new report this morning.@ Inui-kun, didn't you see the news this morning?"@
-`"Nah, I don't have time to do anything in the morning so I didn't watch it."@
-`"That's no good you know, staying up late at night.@ You shouldn't walk around at night, there's some scary people out there."\
-
-ld r,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
-`"That's no problem.@ I'm a scary person myself."@
-ld l,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
-`"Well, you might be right.@ Inui-kun, you do seem like a shady character."@
-` "Ahahaha." The two of them laugh.@
-br
-` …… Hm, Ciel-senpai might be serious, but Arihiko probably said that as a joke.@
-` "Hahaha." Arihiko's eyes twitch as he smiles.\
 
 
-` Anyway, I can't exactly ignore their conversation.\
+`"Oh?@ Senpai, I thought you always ate in the cafeteria?"@
 
-`"---Senpai.@ You mentioned a new report--what is it……?"@
-ld l,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-
-`"In the news this morning, a young woman who went shopping last night--about our age--and she went missing.@ Her house is close to the park, I heard."@
-`"…… Oh, close to the park."@
-br
-` As soon as I say that, the contents of my stomach threaten to rise up.\
-
-` --Last night.@
-br
-` That unknown girl who just by chance was by the park, was destroyed by that irrational violence.@
-` Missing might be a better description, since she was devoured without even so much as a hair left behind.\
-
-ld r,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
-`"That makes her the ninth victim, no, the tenth?@ Damn, what an amazing pace, all in a single month."@
-ld l,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
-
-`"Yes, but I hear last night's disappearance was a little different from the other ones.@
-` The families of all the other girls who disappeared noticed it a short time later."\
 
 ld l,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
 
-`"By the way, you didn't watch the morning news either Tohno-kun?@ Don't tell me you're not a morning person either?"@
-`"…… Hmm.@ I wouldn't say I'm a morning person, but I'm not terrible in the morning either.@ But, leaving that matter aside, I still won't be able to watch it for a while.@ At my house, there's no TV."@
 
-cl a,%type_nowaitdisp
+`"No, I don't have a set lunch routine.@ It just depends what mood I'm in."@
+` Senpai takes out an boxed lunch wrapped up in a cute handkerchief.@ But it seems just a little too big for a girl.@
 
-` Senpai and Arihiko stare blankly.\
+
+`"…… You mean you managed to get up early and make lunch this morning?"@
+`"Yes, that's it.@ I managed to wake up before seven this morning and…… wait a minute, what are you making me say, Tohno-kun!?"@
+
 
 ld l,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
 
-`"No TV--Your house is… that big mansion, right?"@
-ld r,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
-`"Heh, there's no way you don't have a TV in that mansion.@ I won't let you say you don't have one in your room, being a student and all."\
 
-`"No, there really isn't one.@ My old man always said there was no need for such brainwashing machines.@
-` There's a small one in Kohaku-san's room, but I'm not about to barge into a girl's room in the morning."@
-` If I want to get the news, I just have to rely on a newspaper.\
+`"…… No, that's not what I meant, but…… Senpai, you're not a morning person?"\
 
-ld l,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
 
-`"Tohno-kun, what do you mean by a girl?"@
+ld l,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
+
+
+`"Eh----?@ Ah, yes, I'm not… not good at waking up early."@
+` Senpai suddenly looks like a student being scolded by a teacher.@
+
+
+ld l,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+
+`"My family owned a bakery, so we'd get up very early every morning.@
+` But I'm terrible in the morning.@ My father would always get angry when I was a kid."\
+
+` What!?@ A bakery!?@
+
 
 ld r,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
 
-`"You can't just say that and get away with it, Tohno."@
-` They're both glaring at me.@
-` I slap my hand over my mouth, but it's far too late.\
 
-`"Uh, um--simply put, just that there's a servant at my house named Kohaku-san."@
+` Me and Arihiko look at each other.@
+` He must be imagining the same thing I am: Ciel-senpai kneading dough with those white fingers of hers and baking it.\
+
+
+ld l,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+
+`"My daily battle with my father lasted ten years, but in the end, he gave up and told me working two people's worth is better than trying to train me.@
+` Since then, I can wake up when I want to."@
+br
+` Ciel-senpai sticks out her well-developed chest.@
+br
+`"Oh, is that so?@ I'm a little surprised; you seem so reliable."@
+
+
+ld l,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
+
+
+`"Yes, I always try hard to not make any mistakes in front of you.@ But really, I'm more of a clumsy person."\
+
+` Yeah, maybe she is a bit clumsy.@
+` Come to think of it, I really started to get close to Senpai when I saw her, an upperclassman, all alone in the courtyard fixing those splints and helped her out.@
+` A really clumsy person would never do something that wouldn't benefit them the least bit.\
+
+`"I see.@ ---But, I like people that are clumsy.@ I can relax better with them."@
+` "Yup." Arihiko agrees next to me.@
+`"So, since you're not a morning person, you usually eat in the cafeteria?"@
+
+
+ld l,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+
+`"Yes, although I usually eat in the cafeteria, there are times when I make lunch.@ Aren't you two part of the cafeteria group?"@
+
+
+ld r,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+
+
+`"Nah, it depends on what mood we're in too.@ When we were freshmen, my sister made me something, but Tohno here would always eat in the cafeteria or buy bread, so I end up doing what he does."\
+
+
 ld l,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
 
-`"Huh, a servant?@ You're really lucky to have a girl around you at all times to take care of your every need."@
-`"That's not it!@ There isn't anyone to take care of the mansion, so we have to hire people to do it.@
-` Whether she's male or female is entirely irrelevant."\
 
-`"Oh reeeeallly?@ Hey Inui-kun, doesn't Tohno-kun sound real intimate with this Kohaku-san?@
-`"Yeah yeah, he looked so happy when he said her name.@ I wanted to ask before, but just what kind of a life does Tohno lead right now?"@
-cl a,%type_crossfade_fst
-` They trade glances.\
+`"I see.@ So Tohno-kun is a person of many moods."@
 
-`"……… Ugh."@
-` I choke on the bread I'm eating.@
-` Arihiko, even Ciel-senpai with her cool glance, interrogates me with bizarre intensity.@
+
+ld r,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
+
+
+`"Yeah, yeah.@ Being with him will just drain you out, so be careful Senpai."@
+
 
 ld l,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
 
-`"Tohno-kun, there is still plenty of time left.@ Please tell us all about your life at the mansion."@
-` She approaches with a smile that won't seem to let me get away.@
-`"……………"@
 br
-` Just thinking about the twenty minutes or so I have left to live through this makes my head spin.\
+` "That's true," Senpai agrees and she opens her lunch.@
+` The round box is half rice and half side dish.@ It's pretty much a normal lunch, but it seems a little large.\
 
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-!w1000
 
+ld l,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+
+`"Then, I'll start eating.@ Is it okay if I use this person's chair?"@
+`"A person who isn't here has their chair up for grabs.@ I'm sure Takada-kun would love for you to have his seat, Senpai."@
+` Takada-kun is a guy who sits next to me.@ He's pretty plump, but a good guy.@
+` Sometimes, he borrows money with a grace period which lasts about until the end of eternity.@
+
+
+cl a,%type_crossfade_fst
+
+
+` Senpai doesn't put her lunch on my desk, but puts it in her lap.@
+` Next to her, Arihiko starts opening his second pack of bread while still standing up.@
+` Next to these two, I stare aimlessly out the window.\
+
+
+ld l,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+
+`"Huh?@ Tohno-kun, are you not eating?"@
+`"No, I thought I'd skip today."@
+
+
+ld l,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+
+`"Not eating…… Won't that make you hungry?"@
+`"No, not really.@ I'm not hungry and skipping lunch doesn't affect me that much."@
+
+
+ld l,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
+
+
+`"Wow, that's amazing.@ If I skip a single meal, I can't function.@ I'd just collapse of hunger.@
+` …… It's a little embarrassing, I always eat more than most people, and I still get hungry."\
+
+
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+
+`"Not at all.@ Senpai, you've developed a lot more than other women.@ I'm sure you have to eat a lot to maintain that large chest of yours."@
+` Yeah, Arihiko speaks the truth.@
+` To tell the truth, we both want her to eat more and grow more.@
+
+
+ld l,":a;image\tachi\cel_t11.jpg",%type_crossfade_fst
+
+
+` Is Senpai embarrassed or shy?@ She makes a face I don't quite understand.@
+` …… Well, I'm sure she's probably happy.\
+
+
+ld l,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+
+`"But Tohno-kun, will you really be alright if you skip lunch?"@
+`"I'll be fine.@ Skipping meals during the day isn't that rare.@ I only didn't eat breakfast, so I'll probably be fine until evening."@
+
+
+ld l,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+
+`"Wow---Tohno-kun, your body will break down with that kind of lifestyle."@
+`"It won't break.@ This is more of a mental restriction.@ …… Well, thanks to an accident long ago, my doctor told me it wasn't good to gain weight, so it's better for me to skip meals once in a while."\
+
+
+ld l,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+
+`"Huh.@ I guess even guys still think about their diet after all."@
+` Senpai looks up at me for some reason, and after thinking a little bit, closes her lunch.@
+
+
+ld l,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+
+`"Um, I just remembered I had something to do, so excuse me."@
+` Gathering up her things quickly, she disappears like the wind.@
+
+
+cl l,%type_lshutter_fst
+
+
+`"---Mmm, how cute."@
+` Arihiko comments on Senpai regretfully while watching her leave.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
 
 
 return

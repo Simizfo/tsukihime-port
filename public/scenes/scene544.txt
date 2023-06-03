@@ -16,15 +16,36 @@ ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
 
 ` Thanks for waiting!@
 ` Time for Ciel-sensei's What & Why corner.@
-` Due to popular demand, here is a supplementary lesson (number one)!\
+` Due to popular demand, here is a supplementary lesson (number two)!\
 
-` Oh my, Tohno-kun has gotten really serious.@
-` That's a no-no.@ Even though Akiha-san has turned on her invincible mode, you shouldn't try to kill her.@
-` When it comes to killing, you are by far the expert.@
-` You have some leeway, so you should just observe Akiha-san for now.\
+` …… Oh my, Akiha-san is like a monster.@
+` Maybe she had something pent up all this time against Tohno-kun, but she has gone pretty crazy.@
 
-` Well, we'll end this lesson now.@
-` The conclusion of Tsukihime is near.@ Do your best so you don't have to receive any more supplementary lessons.\
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+br
+`"I don't think so.@ That's nothing."\
+
+` Yeah, yeah, I don't recall ever asking a nonhuman like you anything.@
+` Heroines that don't even appear should just be quiet.@
+br
+ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+`"…… Unyaa!@ I was treated like this until the very end.@ Do you want to eat Ramen?"\
+
+cl l,%type_lshutter_fst
+
+` ----Well then.@
+` This time, the cause was your carelessness, Tohno-kun.@
+` SHIKI-kun showed you that method was not going to work, but you repeated it anyway, right?@
+` I'll make this a re-submit, so please go back and try again.\
+
+` ----After this, it will finally be the end.@
+br
+` This will be the final lesson.@
+` Thank you so much for listening up to now!\
+
+
+
 
 
 

@@ -1,139 +1,120 @@
 
 
+
 bg "image\bg\bg_40c.jpg",%type_nowaitdisp
-
-br
-` ----I… just can't let her be.@
-br
-` I know that looking for Yumizuka is dangerous.@
-` No matter what her reason is, she did kill that many people.@
-` But I can't let it go.@
-` That way home in the sunset.@
-` I cannot forget the last words she said.\
-
-`"…… I'll go.@ Obsessing over it won't do any good."@
-` I change clothes, and slip my knife into my pocket.@
-` I tiptoe out the mansion, so as not to wake Akiha or the others.@
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_33d.jpg",%type_lcartain_mid
-
-br
-` …… The lights in the lobby are out.@
-` It's a dark, lonely place; perfect for a secret departure.\
-
-` Creak, creak.@
-` I go down the stairs which creak only when they shouldn't, and walk quietly to the door.@
-br
-` --And…
-br
-
-ld c,":a;image\tachi\aki_t01b.jpg",%type_crossfade_fst
-
-`"Nii-san?@ You're going out, at this hour?"@
-` Already in the lobby, Akiha speaks quietly.\
-
-`"Akiha--so, you got back, huh?"@
-`"Yes, just a little while ago.@
-
-ld c,":a;image\tachi\aki_t12b.jpg",%type_crossfade_fst
-
-` But anyway--what are you doing, Nii-san?@ You've changed your clothes, so it appears you are going out."@
-` Akiha gazes intently at me.\
-` It's not a look of blame.@
-` She is merely gazing at me uneasily.\
-
-`"You're going to go out and get hurt again, like last night.@ Aren't you, Nii-san?"@
-`"…… I'm sorry.@ A friend of mine is in trouble.@ I can't let it go."@
-
-ld c,":a;image\tachi\aki_t23b.jpg",%type_crossfade_fst
-
-`"…… I see.@ I'm sure you're going to go even if I stop you, Nii-san."@
-`"Yeah, but I won't do anything dangerous.@ I'm just going to check it out a bit.@ …… I'm sorry to cause trouble like this, when I've only just come home."@
-` Saying so, I begin walking out.\
-
-cl a,%type_crossfade_fst
-
-`"Ah--"@
-` A soft voice comes from behind me.@
-`"Nii… san."@
-` A weak voice, so unlike Akiha's usual tone.@
-` …… It's just like her voice from eight years ago--tinged with unease.\
-
-`"Akiha…?"@
-
-ld c,":a;image\tachi\aki_t17b.jpg",%type_crossfade_mid
-
-`"You'll… come back, won't you?"@
-`"----"@
-` Akiha's weak, vulnerable face.@
-` It has none of its earlier coldness, but like Akiha's childhood face, it's close to tears.\
-
-`"…… What are you talking about?@ I'm only going out for a moment.@ You shouldn't make a face like that."@
-`"I… I know, but…"@
-`"It's okay.@ I'll come right back.@ I'm sorry, Akiha; I've always been causing you trouble."@
-`"Ah--Nii-san!"@
-
-bg "image\bg\ima_10.jpg",%type_lcartain_fst
-
-
-` Ignoring Akiha's voice behind me, I leave the mansion.\
-
-` …… Outside, a moonlit night.@
-` Perhaps because I saw Akiha's unsettled expression.@
-` For some reason, I feel I may never return here.\
 
 playstop
 
-!w1000
-bg "image\bg\bg_26a.jpg",%type_rcartain_mid
 
-
-` I arrive at the shopping district.@
-` If Yumizuka's anywhere, she'll most likely be here.@
-` It's because the murder victims are found near this shopping district.@
+` ----I don't know.@
 br
-`"…… Damn it, what am I thinking…!"@
-` I curse my own logic.@
-` …… But, at least I'm more likely to find her here than anywhere else.@
-` Putting all thoughts aside, I start to look around for Yumizuka.\
+` I was so intent on looking for Yumizuka until this evening.@
+` But with nightfall, the events of last night suddenly appear fresh in my mind.@
+` The dead bodies scattered about the alley.@
+` Yumizuka, who said she killed them.@
+` …… No matter what the reason, she killed them.\
+` So I understand that staying out of it is the best choice.\
+
+`"……………"@
+` I understand, but I can't cast aside my doubts.@
+` What am I thinking?@ It's just foolish.@
+` I just can't comprehend what's happening to Yumizuka.@
+` I do realize she is the vampire serial killer causing all these incidents in town.@
+br
+` But still,
+` I can't forget her last words she said in the sunset on our way home----\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w1000
+bg "image\bg\bg_40d.jpg",%type_crossfade_fst
+
+
+` …… Before I realize it, it's almost midnight.@
+` Lost in thinking about what I should do, I've passed some of the night wide awake.@
+br
+wave se3
+
+`"…… Shiki-sama, are you awake……?"@
+` …… Hisui's voice.@
+` Why is she up this late at night?@
+
+bg "image\bg\bg_46c.jpg",%type_lshutter_mid
+
+`"I'm up, but why, Hisui?"@
+ld c,":a;image\tachi\his_t01.jpg",%type_tshutter_fst
+
+`"---Yes, I was unsure, but if you were awake, I thought that I should tell you."\
+
+`"Tell me what?"@
+`"Just a while ago, a call came for you, Shiki-sama.@ The message was that 'I'll be waiting in the park.'"@
+`"Phone call…… This late at night?"@
+`"Yes, the call ended before I could ask for a name, so I was unsure if I should tell you, Shiki-sama--"\
+`"No--that is……"@
+` …… This doesn't require any thought.@
+` That phone call had to have been from Yumizuka.\
+
+`"…… Thanks.@ But, it's a little late, so I'll wait until tomorrow.@ She's one of my classmates, so I'll see her tomorrow."@
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"That is not true.@ There is something wrong with smiling like that with such a strained face."\
+`"Stupid, I'm not lying at all.@ I'm fine, I won't go out this late at night.@ Akiha would get mad, and you would get in trouble, so there's no reason for me to do that."@
+`"…………………"@
+` Hisui descends into silence.@
+` The conversation between us dies.\
+
+ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+
+`"…… Shiki-sama.@ Please do not push yourself too hard."@
+`"…… Nah, I'm not pushing anything.@ I'll go to sleep, so please go back to your room."@
+`"…………………"@
+` Hisui just looks at me.@
+`"---Well, good night."@
+` Not being able to endure her stare, I slam the door.\
 
 bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_40d.jpg",%type_rshutter_mid
 
-!w2000
-play "track06.ogg"
+
+`"…… Sheesh.@ I can't hide anything from Hisui."@
+` I take my knife out of the drawer.@
+` …… I don't intend to necessarily use it, but I just feel better with it by my side.@
+br
+`"---The park?@ Why would she call me out at this hour---"@
+br
+` Muttering, I think back to those foolish tales.@
+` Vampires can only move about during night time.@
+` So supposing that's true, then Yumizuka didn't call me out at this hour.@
+` It's more like if it wasn't this hour, then she couldn't call me at all.\
+
+`"…… No matter how much I think about it nothing will get done."@
+` Right now I have to go to the park.@
+` I exit the mansion quietly to avoid Hisui's notice.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
 !w1000
-bg "image\bg\bg_26a.jpg",%type_rcartain_mid
+play "track01.ogg"
+
+bg "image\bg\bg_27b.jpg",%type_lcartain_mid
 
 
-` …… How long has it been?@
-` There's no sign of Yumizuka; not in the back alleys nor in the crowds.@
-br
-` *pant*---*pant*----*pant*
-br
+` *pant*--*pant*--*pant*
 ` I rest my body, burning from all the running.@
-` It's almost midnight.@
-` …… It might be useless to keep looking around.\
+` It's almost midnight.\
 
-`"Where has she gone…?"@
-` I start walking again.@
-` There's one place I haven't looked yet.@
-` I'll give up after my body really can't move anymore--\
+` The park located off of the main road.@
+` Because of the serial killings these past several days, there's not a soul to be seen around here.@
+`"………"@
+` Thump.@ My heart beats loudly.@
+` My throat dries up from the tension.@
+` If the phone call that Hisui received was from Yumizuka,
+` then she has to be waiting there for me.\
 
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_27b.jpg",%type_lcartain_fst
-
-
-` …… Leaving the brightly-lit main street behind, I arrive at the park.@
-` Because of the serial killings recently, there's not a soul to be seen around here.@
-`"…………"@
-` Even though I can't imagine Yumizuka being here, it's the only place left to look.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_28b.jpg",%type_lcartain_mid
 
 
-`"-----"@
+
+`"……………"@
 ` The park is empty at night.@
 ` There isn't a sound under the moonlight.@
 ` I don't know why, but a chill runs through me.@
@@ -164,7 +145,7 @@ bg "image\bg\bg_28b.jpg",%type_crossfade_fst
 
 ` Something is strange.@
 ` This park, it feels like something bad is around here.@
-`"…… A little more till I reach the center of this park."@
+`"…… Just what am I afraid of?"@
 ` I shake the headache off, and walk deeper in.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
@@ -184,12 +165,12 @@ bg "image\bg\bg_29b.jpg",%type_lshutter_fst
 
 play "track09.ogg"
 
-`"Yumizuka--!?"@
-` I guess there is the joy of finally finding her.@
-` Not thinking about last night, I run towards her.@
+`"Yumi… zuka?"@
+` Her figure is tormented.@ Without a thought for what happened last night, I run towards her.@
+
 ld c,":a;image\tachi\stk_t04.jpg",%type_tshutter_fst
 
-`"Wait…!"@
+`"Wait… !"@
 ` Yumizuka stops me with just a word.\
 
 `"…… Wait, Shiki-kun.@ I'm glad you came, but I don't want you any nearer right now.@ Please, don't come any closer."@
@@ -197,13 +178,12 @@ ld c,":a;image\tachi\stk_t04.jpg",%type_tshutter_fst
 ` Her body convulses as she speaks, as if she's about to collapse any second now.\
 
 `"Don't be stupid!@ I'm not going to leave someone looking as painful as you alone…!"@
+cl c,%type_crossfade_fst
+
 ld c,":a;image\tachi\stk_t03.jpg",%type_crossfade_mid
 
 `"No, I'm okay… You came, so I'm fine now."@
-` Forcing herself up, Yumizuka smiles at me.@
-` It seems like a show of bravado.@
-` …… But I can't approach her.@
-` I do at least understand that Yumizuka doesn't want me near her.\
+` Forcing herself up, Yumizuka smiles at me.\
 
 `"…… What's going on, Yumizuka?@ Why haven't you been home?@ What was that about, yesterday?@ Why, that----"@
 `"Hm?@ That what?"@
@@ -249,7 +229,7 @@ ld c,":a;image\tachi\stk_t10.jpg",%type_crossfade_fst
 br
 ` She recalls nostalgically.@
 ` Those ancient days.@
-` …… Like she is remembering something that happened a long time ago.\
+` …… like she is remembering something that happened a long time ago.\
 
 `"I… was always watching you.@
 ` I knew you'd never notice me, but I watched you anyway."@
@@ -264,6 +244,8 @@ cl a,%type_crossfade_fst
 ` How can I answer her right now---?@
 br
 playstop
+
+
 
 
 return

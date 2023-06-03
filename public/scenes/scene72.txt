@@ -2,20 +2,27 @@
 bg "image\bg\bg_34a.jpg",%type_nowaitdisp
 
 
-`"Akiha.@ About Kohaku-san…"@
-ld c,":a;image\tachi\aki_t01a.jpg",%type_nowaitdisp
+`"Oh, that's right.@ What's happening with our mansion now, Akiha?"@
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
 
-`"Yes?@ What about Kohaku?"\
-`"She's a really nice person, isn't she?@ I was just scolded by her in the hallway.@ 'You won't grow without eating breakfast!' she said."\
-ld c,":a;image\tachi\aki_t04a.jpg",%type_crossfade_mid
-`"Hmmmn.@ That sounds like something she would say.@ Do you like Kohaku, Nii-san?"\
+`"What do you mean?@ If you are talking about ownership of the mansion, I am inheriting it."@
+`"No, not that.@ The only people in the mansion right now are you, me, Kohaku-san, and Hisui, right?@
+` I was wondering what the rooms are being used for, and so on."\
 
-`"Eh---No, that's not what I mean.@ I was just surprised because I was never scolded like that when I was at the Arima household.@ Thanks to her, it doesn't seem like I'll be able to skip breakfast from now on."@
-`"That's right.@ You are anemic after all, so it would not do you good to skip breakfast."@
-` The dizziness isn't really linked to my diet, but I just nod obediently.@
-cl c,%type_nowaitdisp
-\
+ld c,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
 
+`"Nothing.@ As a general rule, all the rooms except the ones we are using are locked.@
+` Your room is at the back of the second floor of the west wing, and mine is in the east wing.@
+` Hisui's room is right before the stairs on the west wing, second floor, and Kohaku's room is just before the west wing, first floor.@
+` Father's room is next to Kohaku's room.@ That's open for now, too."@
+` Incidentally, the sitting room is the first right turn in from the lobby.@ In Akiha's words, it would be something like "right before the lobby on the first floor of the east wing".\
+
+`"The gaming room and the guest rooms next to the sitting room are closed, but I will open them if you decide to bring friends here.@
+` The archives are… well, there are some bad rumors going around about them, so currently they are off limits."@
+cl c,%type_crossfade_fst
+
+`"I see.@ Okay, got it."@
+` I get a strange suspicious feeling about those "off limits archives", but for now, they have absolutely nothing to do with me.\
 
 
 return

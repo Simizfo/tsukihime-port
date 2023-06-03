@@ -1,36 +1,177 @@
 
-bg "image\event\stk_e01a.jpg",%type_nowaitdisp
 
 
 
-` ……………… Cold.@
-` Were you bearing this much cold all by yourself, Yumizuka?@
-` Even as I said sorry----and pitied you, I didn't understand your pain at all.@
-br
-` But, that's over.@
-` Tohno Shiki will soon disappear, and everything will end.\
-
-playstop
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-
-
-` ---My heartbeat gets farther away.@
-br
-` My body warmth, everything that is living, ceases.@
-` A familiar sensation.@
-` That summer day eight years ago, a hatching cold.@
-br
-` THUMP
-br
-` After screaming loudly, my heart stops.@
-` And everything.@ Everything that is Tohno Shiki disappears.\
 !w3000
 
-cl a,%type_waitdisp
-bg "image\word\end.jpg",%type_crossfade_slw
+bg "image\bg\bg_33d.jpg",%type_crossfade_mid
 
-resettimer
-waittimer 3000
+waveloop se10
+
+` The door opens with a creak.@
+` With a heavy body and dulled mind, I make it back to the mansion.@
+` My footsteps drag behind me.@
+` The moonlight illuminates my figure, making it look like an exhausted ghost.\
+
+`"-----------"@
+` …… My left arm hurts where Yumizuka wounded me.@
+` The bleeding has stopped, and the gradual lessening of the pain tells me it couldn't have been too deep.\
+`"-----------"@
+` I reach the stairs.@
+` I don't even care about treating my wounds.@
+` Right now, I just want to stumble back to my room and sleep like a rock----\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+wavestop
+
+!w4000
+
+
+
+
+
+
+
+
+
+mov $phasebg,"image\bg\bg_54b.jpg"
+mov $phasetitle_a,":a;image\word\PHIS_04A.PNG"
+mov $phasetitle_b,":a;image\word\day_04.png"
+gosub *right_phase
+
+
+
+
+
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+bg "image\bg\bg_40a.jpg",%type_crossfade_fst
+
+play "track02.ogg"
+
+` I wake from a long sleep.@
+` The sunshine from the window looks closer to mid-day than morning.@
+` It must be because of how late I got back last night.@
+` It seems I've overslept.\
+
+`"……………"@
+` Dragging myself up from bed, I look down at my hand.@
+` ----The sensation of how I stabbed Yumizuka remains.@
+` Two nights ago.@
+` When I met Yumizuka and saw that hideous dream.@
+`"…… If only yesterday…… was just a dream."@
+` But wishing it won't make it so.@
+` I've no clue why or how Yumizuka became a vampire, and I couldn't do anything to help her.\
+
+` ---No.@
+` Once Yumizuka had become like that, there was probably no way for anyone to help her.@
+` She was already dead.@
+` All I did was return that corpse somehow moving about as if it were a living thing back to being a dead body.@ That's the only way I can think of it.@
+br
+` But, still---
+br
+wave se3
+
+`"Please excuse me, Shiki-sama."@
+` With that voice I have become accustomed to, Hisui enters the room.\
+
+ld c,":a;image\tachi\his_t01.jpg",%type_lcartain_mid
+
+`"Good morning, Shiki-sama.@ How are you feeling today?"@
+`"Hm…… ah, I slept well, so I don't feel bad at all."@
+`"Is that so?@ Hearing that makes me feel very relieved."@
+` …… Even though she says that, I don't see her even relax her shoulders, or give any other indication of it.\
+
+`"……………"@
+` But, I feel relieved as well.@
+` Because of what happened last night, the long night is over.@ Because I don't have to enter that unnatural world any longer, my heart can relax.@
+`"…… Thanks, Hisui.@ You've always come to check up on me from early in the morning, right?@ Your concern means a lot to me."@
+
+ld c,":a;image\tachi\his_t03.jpg",%type_crossfade_fst
+
+`"----Not at all.@ It is my duty to be concerned with your welfare."@
+` There is a hint of happiness in Hisui's expression.\
+
+` …… Moreover, I feel like I've been somewhat rescued.@
+` While I've been sleeping in bed like this, Hisui came as always to wake me up.@
+` With just that trivial thing, I honestly feel like I have returned to my normal life.\
+
+
+ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+
+`"Um…… Shiki-sama, this is somewhat difficult for me to say, but… can I?"@
+`"……?@ Difficult to say?@ If it's about me sleeping in till noon, I really can't do anything but apologize."@
+
+ld c,":a;image\tachi\his_t23.jpg",%type_crossfade_fst
+
+`"No, that is not what I meant, but it is perhaps related to when you went to sleep."@
+` Hisui fidgets with her fingers as she struggles to come up with the right words.\
+
+ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+
+`"…… Um, I did not say anything, but Akiha-sama found out about last night."@
+`"Eh…… about last night…… what?"@
+`"I mean when you left late last night, Shiki-sama."@
+`"Oh----"@
+` I unconsciously turn my eyes away from her.@
+` I thought I'd managed to slip away undetected, but I should have known Hisui would still find out.\
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Shiki-sama, your return late at night has gained the attention of Akiha-sama, so I believe you will be asked to explain yourself sooner or later.@
+` She is in the sitting room and may be angry, so please be prepared."@
+`"……… I see.@ Oh well, I can't complain, since it was me that went out past curfew."\
+
+`"About that, will it be occurring again?@ I cannot stop you, but if you continue doing such things, I must tell Akiha-sama."@
+`"----No, nothing like last night will happen again.@ Everything…… has ended last night…… There won't be any phone calls anymore."\
+
+` ---Yes.@ It really has ended.@
+` With these words, it truly is over.@
+` Yumizuka Satsuki is no more.@
+` The vampire skulking the streets has vanished.@ I, with my own hands, sent away a classmate who said she liked me, for all eternity.\
+
+ld c,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
+
+`"……………………"@
+` Hisui looks at me with a painful expression on her face.@
+` …… Geez, if Hisui is making that sort of face, then I must look terrible right now.@
+`"---Well, I should get up sooner or later.@ Hisui, is Akiha still here?@ She's an awfully busy person, so does she have a routine on her day off?"@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Yes, she does have plans during her day off, but today she is still in the mansion."@
+`"………?"@
+` She has plans, but she's still here……?\
+
+`"I don't quite get it, but…… well, I'll go and get changed, so please head to the sitting room before me."@
+`"Yes.@ Well then, please excuse me."@
+
+cl c,%type_lshutter_mid
+
+` As usual, Hisui walks away without a sound.@
+br
+` ---But, I forgot something really important.@
+br
+`"Hisui."\
+
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_mid
+
+
+`"Yes?@ What is it, Shiki-sama?"@
+`"Yeah, I forgot to say something.@ Thanks for coming to wake me up.@ It's a little late, but good morning, Hisui."@
+
+ld c,":a;image\tachi\his_t03.jpg",%type_crossfade_fst
+
+`"---Yes.@ Please have a nice day, Shiki-sama."@
+
+cl c,%type_lshutter_mid
+
+` Well then.@
+` I should hurry up and change, and head to the sitting room.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w1000
+
+
 
 return

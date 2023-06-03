@@ -1,336 +1,88 @@
 
+
 bg "image\bg\bg_31a.jpg",%type_nowaitdisp
 
 
-`"------Ha… haha…"@
-` I can't help but laugh.@
-` …… But it's not all bad.@
-` If the person I killed has come back to life, then that means I haven't actually killed anyone, right?@
-` Well, I suppose the fact remains that I "killed" someone, but she's still alive.@
-br
-` ---And that's something I should honestly be happy about---\
-` Yeah.@ With this, I should be able to get back to living my normal life.@
-` A normal school life, just like I did up until now.@
-` …… Well, in exchange, I seem to have been cornered by this strange person, but you might argue that it's a heck of a lot better than becoming a murderer.\
-`"…… Okay, I've calmed down.@ If you've got something to say, I'll listen: complaints, grudges, whatever.@ Talk all you want."@
-`"Yeah, I've got a whole lot of things to say to you… but you're weird."@
-ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
-`"I'm just taking everything in right now.@ You could say I've built up a resistance to weird stuff like this."@
-` I don't think it's of much help in this case, though.\
+play "track09.ogg"
 
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
 
-`"Hmph……"@
-` She stares at me.@
-` It isn't malicious.@
+`"I---"@
 br
-` …… It's strange.@ I'd thought that to get someone back when they got you was one of the common laws of the world.@
-` Then she should be trying to kill me, but---\
-`"--What are you staring at?@ You're here to get revenge, right?@ Then--"@
+` …… For some reason, I can't decline.@
+` I did kill her, after all.@
+` It's my fault she's weak and has to ask others for help.@
+br
+` ---It is my responsibility.@
+` Besides, although I've only known her for a little while, she doesn't seem like a bad person.\
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+`"So how about it?@ Can't a human like you cooperate with a vampire like me?"@
+`"---Well, that would be the obvious answer, but…"@
+ld c,":a;image\tachi\ark_t17.jpg",%type_crossfade_fst
+
+`"----"@
+` Argh, don't look at me with those eyes!@
+` …… Why is it?@ It's making me feel overcome with guilt and unable to refuse.@
+`"But now that I've gotten myself into this mess, I won't be able to sleep at night if I just deny all responsibility."@
+br
+` ---Man, I just know I'm going to regret this.\
+`"…… So, yeah.@ I think I could probably do it.@ The enemy's the serial killer, right?@
+` As a resident of this town, I'd probably be struck with some kind of divine punishment if I refused to help you."@
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+`"Eh--?@ You mean---"@
+`"I'm not going to be your shield, but if it's just being your lookout, I'll do it."@
+` I feel disgusted at how stupid I am as soon as those words are out of my mouth.@
+br
+` I feel disgusted, but----\
+
+ld c,":a;image\tachi\ark_t12.jpg",%type_crossfade_fst
+`"------"@
+` There is something about her deeply shocked expression that's----\
+br
+`"Wow!@ Are you serious!?@ I'm really a vampire, you know!"@
+`"…… Hey, listen.@ Why are you saying all this now, after you've threatened me so much?"\
+ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
+`"Ah… Hm.@ That's true, but---"@
+ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
+`"---Well, whatever!@ If you're going to cooperate with me, then I should be grateful!"@
+` …… With a very happy expression on her face, she approaches me as I lie there on my rear, up against the wall.\
+
+ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_mid
+
+`"Our contract is established."@
+` She extends her hand towards me.@
 ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"Yeah, I guess I'm supposed to kill you back, in theory.@ I'll kill you if you really want me to, but otherwise I'll pass for now.@ It's not very efficient that way."@
-` She stares at me head on.\
-
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"So!@ Are you sorry?"@
-`"----Eh?"@
-` I'm stunned for a moment.@
-` The things she says are so… out of place.\
-`"I'm asking you if you're sorry for killing me.@
-` I'm thinking about forgiving you if you are, you see.@
-` Besides, I get the feeling you're a pretty bad liar for a human."@
-`"Sorry---me?"@
-`"Yep.@ If you apologize to me, then I'm fine with that."\
-br
-` ---This is unbelievable.@
-br
-` What's so unbelievable?@
-` Not that the person I killed is forgiving me, but… her voice sounds so kind.\
-
-ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
-
-`"Hey!@ You have to give an answer when people ask you seriously, you know.@ Come on, hurry up and answer.@ We can't get on with things until we make it clear whether or not you're sorry."@
-` She is angry.\
+`"I guess I can finally introduce myself now.@
+` I'm Arcueid---hmm… my last name is really long, so just Arcueid is fine for now.@ I'm a True Ancestor type vampire.@ How about you?"@
 cl c,%type_crossfade_fst
-` ---Am I sorry, she asks?@
-` That goes without saying---\
 br
-`"…… Yeah, I regret it.@ No matter what the reason is, I did kill someone."@
+` I heave a heavy sigh at her unprecedented introduction.@
+` …… It's a sigh of resignation, evidence I've decided to accept this nonsensical situation.\
+`"I'm Tohno Shiki.@ Sadly, I'm just your everyday student.@ …… I've said it before, but I'm really not going to be much use."@
 br
-` Without mercy or reason.@ I killed just for myself.@
+` Grasping her---Arcueid's hand, I stand up.@
 br
-`"…… I do regret the fact that I killed someone.@ But more importantly, the person I killed was you, and so---"\
-` …… It's a lie that it's alright if she's alive.@
-` It's a fact that I killed her.@
-` It's the ultimate violation; the greatest violence possible.@
-br
-`"So---you can get your revenge on me--I thought it was only natural you'd be here to get revenge."@
-br
-` …… I hang my head, mumbling, like I'm confessing to someone.\
+` She takes a long hard look at me, and then offers me her hand again.\
 
 ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_fst
-
-`"---I see.@ Hmm.@ You're not a bad person."@
-` She smiles.@
-` Despite calling herself a vampire, she has a very honest face.@
-br
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-`"I've decided.@ I'm going to make you help me."@
-`"Eh-----?"@
-` Help her?@ What is she talking about?\
-`"…… Hey.@ What do you mean by helping you?"@
-`"It's simple.@ I'm going to get you to help me deal with the vampire which took root in this town."@
-br
-`"----?"@
-` …… Hold on, I'm getting more and more confused.@
-br
-`"Dealing with vampires?@ But you're a---"@
-`"Oh, no, no.@ I am a vampire, but the vampire in this town is a different kind altogether.@
-` You live here, don't you?@ Then you should know about the murders that have been occurring lately, right?"@
-`"Yeah, quite a few people have been killed already… hey, wait."\
-` …… I remember now.@
-` Come to think of it, all of the killer's victims had their blood extracted or something, didn't they?@
-br
-`"Don't tell me that----"@
-`"Exactly.@ Even the news is saying stuff like 'the work of a vampire', right?@ It's a funny thing; they obviously know what kind of creature is doing it, but no one is going around trying to vanquish it.@ That's why I've got no choice but to do it for them."@
-`"Wait, but---vampires don't exist."\
-
-ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
-`"Hmph!"@
-` She lowers her brows in annoyance.@
-` …… Oh, that's right.@
-` There's an unidentified person standing in front of me claiming to be a vampire herself.\
-`"---I don't really understand, but what you're trying to say is that you're here in this town to exterminate vampires, right…?"@
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-`"That's right, but before I could, I was attacked and killed by some unknown killer.@
-` Yeah, that really got me.@ It was a perfect surprise attack and I was cut into seventeen pieces without a chance to do anything."@
-`"Ugh----"@
-` I see.@ She must mean me.\
-
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-
-`"That's right.@ Until I was fully recovered like this, I was really planning to kill you, you know.@ That's the first time anyone's embarrassed me like that.@ And, it took about eighty percent of my power to fully recover."@
-ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
-`"But more importantly, it really, really hurt.@
-` It was so painful I thought I was going to go crazy.@ However, the pain was so great, it restored my sanity.@
-` Do you know what it's like experiencing that over and over for a whole night?"@
-br
-`"…………"@
-` I don't know.@
-` Actually, I don't want to know.\
-
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-
-`"So, full of hatred, I went out to look for you.@ I was so worked up that I didn't even care about the vampire, the very reason why I'm here.@ I knew you were a student, so that's why I waited over there for you."@
-`"…… I don't get it.@ If you hated me so much, why are you forgiving me?"\
-`"---Let's see… to put it simply, I calmed down after a while.@
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-` I already used up a lot of power, and I thought that it would be more efficient to use you as a shield than to kill you."@
-`"…… Hold on.@ You just said something really bad for me."@
-`"Eh?@ Did I say something like that?"@
-`"You said you were going to use me as a shield."\
-
-ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
-`"Of course.@ I already did forgive you, but that's just my personal feelings.@ You've got to atone for your murder through action, not just emotion, right?"@
-`"---Well, even if you ask me…"\
-ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
-`"What's with you?@ I can't tell when you're being sincere and when you're not.@ Let me repeat it again: you killed me.@ You probably can't imagine it, but it takes a lot of energy to regenerate once you've been killed.@
-` Well, actually, it wouldn't be a big deal if you had just killed me, but the way you killed me was something I've never seen before.@ I couldn't heal the wounds, so I had no choice but to remake my body parts.@ That's why it took so much energy to revive---"\
-` She looks angry.@
-` …… It seems like she's recalling her forgotten anger while she talks.\
-`"Anyhow, I'm weak right now!@ I think I'll be able to recover after two nights, but if the enemy attacks before then, I'll be in danger.@
-` That's why for now, I'll have you be my shield."@
-`"You'll have me do it---?@ What are you doing, deciding everything by yourself?"@
-`"What?@ This is all your fault to begin with, so isn't that much to be expected?"@
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-`"Or are you not sorry after all?"@
+`"Nice to meet you, Shiki.@
+` I'll have you take responsibility for killing me."@
+` Arcueid grins as she extends her left hand.@
 cl c,%type_crossfade_fst
-
-` She looks straight at me with honest eyes.\
-`"……… Uhh."@
-` This is unfair.@
-` Sorry or not, using those eyes is unfair.@
-` …… It's unfair she has such pure eyes like that when she claims she's a vampire---
-br
-`"I'm… um---"@
-` Stuck for an answer, I lift my gaze.\
-playstop
-
-`"…… Huh?"@
-br
-` …… What is it?@
-` Something odd is there, in the gap between the buildings.@
-br
-`"Hold on.@ What's that?"@
-` I get up and walk.@
-` I walk to the middle of the alley, and I finally realize what it is.\
-play "track06.ogg"
-` A blue-colored bird.@
-` A crow, to be precise.@
-br
-` …… A blue… crow.@
-` That inauspicious thing I saw two nights ago---\
-
-ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
-
-`"---Oh, man…"@
-` The girl murmurs.@
-br
-` The crow just stares at us.@
-br
-`"Geez, thanks to your slowness, he found us."@
-` The girl looks at the entrance to the alley.@
-`"Found us?@ Who?"@
-cl c,%type_nowaitdisp
-
-` I cast my gaze towards the alley entrance.@
-br
-` -----Then.\
-`"-----!"@
-` I take a step back in shock.@
-` Before I knew it, a dog had appeared in the narrow path running into the alley.@
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-ld c,":a;image\tachi\kemo_t01.jpg",%type_crossfade_fst
-
-
-` It has four tough legs and a tense neck like steel frame.@
-` That form, far removed from that of a human, is one made solely for hunting.\
-` …… It doesn't need to resort to verbal intimidation.@
-` Most humans would become nervous just by looking at that kind of "hunting" beast.@
-` As a fellow life form, it inspires awe by its dishearteningly superior athletic ability.\
-
-bg "image\bg\bg_31a.jpg",%type_crossfade_mid
-
-
-`"…… A black… dog?"@
-br
-` ---I start to shake.@
-br
-` …… The black dog looking in our direction isn't small like a stray.@
-` As big as a German Shepherd or a Doberman, it just stands there, menacing us.\
-
-ld c,":a;image\tachi\ark_t05c.jpg",%type_crossfade_fst
-
-`"………"@
-` The girl says nothing, but looks at the dog with disinterested eyes.@
-cl c,%type_nowaitdisp
 \
-` Then…
-` Suddenly, the black dog jumps.@
-` No, it's running, but with a speed that makes it seem like it's jumping.@
+
+` *sigh*@
 br
-`"------Eh?"@
+` …… There are all sorts of responsibilities in this world, but this is probably the first and last time someone takes responsibility by helping someone they've killed.@
 br
-` I can't do anything.@
-` The black dog jumps straight for my throat.\
-` I can see it.@
-` I can see its black body moving towards me, but I don't even have time to think about dodging it.\
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-quakex 4,100
-
-
-` Thud!@
+`"…… Damn it… this is seriously messed up."@
+` But there's nothing else I can do.@
 br
-` I feel a shock on my body.@
-`"Guh-----!"@
-` I was hit hard from the side.@
-` It's not the black dog.@
-br
-` It seems the girl pushed me before it could crush my throat.@
-` With an easy movement, like someone throwing a ball, she hurls me into the wall using just one hand.\
+` I grudgingly extend my left hand and shake hands with the woman in white claiming to be a vampire.\
 
-wave se4
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
 
-`"-----!"@
-` With a terrific "wham!", I fall on my rear.@
-bg "image\bg\bg_31a.jpg",%type_nowaitdisp
-`"Why… you!@ What in the world are you doing!?"@
-`"Never mind that, keep your eyes in front!"@
-` The girl yells.@
-` I look---Having lost sight of me, its target, the black dog bounds towards the wall.@
-` Sticking to the wall like a lizard, it jumps again.@
-` It bounces from the wall towards me.@
-` The dog's path is like black lightning.\
-
-ld c,":a;image\tachi\kemo_t02.jpg",%type_nowaitdisp
-
-
-`"---!"@
-` It's too fast; I can't react.@
-` The black dog opens its mouth, filled with teeth and saliva.@ This time, it clamps down towards my windpipe----\
-`"Kuh……!"@
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-` I close my eyes.@
-` The dog's teeth sink into my throat.@
-` But in that instant,
-` the dog lets out a yelp and releases me.\
-
-bg "image\bg\bg_31a.jpg",%type_nowaitdisp
-
-`"Eh---?"@
-br
-` ---That's… impossible.@
-br
-` The black dog lets out a scream and leaps straight up.@
-` There is nothing there, but nonetheless it flies high into the sky by itself.@
-` Just like that---the black dog, after going several meters into the sky, makes a scream and falls back down onto the concrete.@
-br
-` No, perhaps more accurately, it was hit into the concrete.\
+!w1500
 playstop
-
-`"----What was that?"@
-ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
-`"Geez, you just made me waste more of my energy."@
-cl c,%type_crossfade_fst
-` The girl quietly approaches the black dog.@
-` It is crushed against the concrete like a pressed flower.\
-`"---That's quite a mongrel of a familiar.@ …… I suppose it was some kind of scout."@
-` The black dog liquifies into some kind of tar-like substance, and is absorbed into the concrete.\
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-`"…… It melted… no, maybe it's just dissolving.@ ----It can't be, can it?@ There's no way Chaos would be in a place like this."@
-` Heaving a long sigh, she approaches me.\
-
-play "track01.ogg"
-
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-
-`"Oh?@ You don't seem to be hurt, so there's no problem."@
-` …… She's mumbling something.@
-` My throat---I can still feel the dog's teeth sinking into it.\
-`"Hey---what was that thing?"@
-`"A familiar of an enemy vampire.@ We were discovered because you weren't being clear."@
-`"Discovered---you mean… by that enemy vampire you mentioned?"@
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"Yeah, this isn't good.@ It looks like I really will need you as a shield now."@
-` She says it so casually, and with a smile.\
-`"S---stop saying such crazy things, you idiot!@ You saw me!@ What do you think I can do!?@ You're a lot better off by yourself…!"@
-`"Not really.@ With the power I just used to protect you, I really am empty now."@
-`"Wha---!?"@
-` What in the world?@
-` I'm grateful she helped me just then, but still---
-`"…… I can't do it.@ I can't.@ I don't have the power to drive away something like that.@ Sorry, but I can't even be a shield."\
-ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
-
-`"----Liar.@ You killed me.@ Why would you lie after doing something like that?"@
-`"That was---"@
-br
-` That was something I don't even understand myself.@
-br
-`"---No.@ Look, I can't do it.@ I'm just a normal human.@ I can't help you."@
-ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
-`"…… Not true.@ All you have to do is keep watch while I sleep, that's it.@ You can do that much without any problems, right?"\
-`"That's---"@
-cl c,%type_nowaitdisp
-br
-` She looks straight at me.@
-` …… Somehow, those eyes are making me weaker.@
-` I---
-br
 
 
 

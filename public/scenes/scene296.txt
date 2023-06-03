@@ -1,87 +1,32 @@
 
-
-
-bg "image\bg\bg_47.jpg",%type_lcartain_mid
-
-` I leave the mansion.@
-` …… What the hell is going on?@
-` Even though there's no one around, I can feel the presence of people.@ Buildings.@ From the houses around me, I sense people.\
-
-` *pant*----*pant*------
-br
-` With all these people here, I won't be able to hold back again.@
-` Somewhere---I have to go somewhere without any people around or I'll never be able to calm down.@
-` Where no one is.\
-` Where there's no residences nearby.@
-br
-` …… Somewhere, where even if I go crazy again, I won't cause anyone any trouble.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-
-bg "image\bg\bg_27b.jpg",%type_crossfade_slw
-
-` …… *pant*…… *pant*………
-` There's no one else in the park.@
-` There's no houses nearby.@
-` …… No one's supposed to be here, but I still can't calm down.@
-` No matter how far away they are, there are houses all around here.@ I can see the lights of town in the distance, too.\
-
-`"It doesn't, exist."@
-` Yeah, it doesn't exist.@
-` There's no place in a city where you can't sense any presence of humans.@
-` There's really no place where I can truly be alone in this civilized city.\
-
-`"Damn-----it."@
-` All around me.@
-` So many people all around me.@ If I walk just a little, I can catch all the prey I want.@
-br
-
-bg "image\bg\ima_11b.jpg",%type_nowaitdisp
 bg "image\bg\bg_27b.jpg",%type_nowaitdisp
 
-`"Shut---up."@
-` My head hurts.@
-` Even though I finally don't see the "lines" anymore, I'll start to see them again like this.\
-
-`"----Eh?"@
-` Wait, Shiki.@
-` Isn't this strange?@
-` Because it's not like I was seeing these "lines" because I was excited.@
-` Those "lines" are things I can't help but see when I don't have my glasses on.@
-` So even if I'm calmed down, I would still see them if I don't have my glasses on.@
-` But I have dropped my glasses---\
-
-`"----They're… here."@
-` I bring my fingers to my face and find out my glasses were there all along.@
-` In other words,
-` Even if I wear the glasses Sensei gave me, I cannot control my eyes anymore.\
-
-`"Ha---haha."@
-` I am hit with the truth.@
-` Just like Roa said, I just didn't realize that I was already insane.@
-` That night.@
-` Ever since that time when I wanted from the bottom of my heart to kill that bastard who was disgracing Ciel.\
-
-`"…… Oh…… then, the headache from that time was……"@
-` The headache from when I was fighting Roa.@
-` When I saw those "lines" of death even when I don't remember taking off my glasses, and when I got Ciel-senpai to go find them for me.@
+`"------"@
 br
-` Since that time, I---even when I wore my glasses, regardless of what my intentions were, I've been able to see those "lines".\
+` …… I can't do it.@
+` I don't want her to see me like this… like a killer.@
+` No one can save me.@
+` I can't ask anyone for help.\
 
-`"…… Senpai…… knew."@
-` No, she probably just didn't tell me.@
-` So as not to worry me, she lied to protect my mistaken perceptions.@
-`"…… I see…… Sen…… pai."@
-` She told me to talk to her if anything happened.@
-` I've already memorized her phone number.\
+` This impulse.@ There can only be one way to eliminate this "Roa" inside of me.@
+` Like that previous person I saw in that dream.@
+` I can be killed by that white vampire princess, or---- in order to prevent any more victims from appearing, I can lower the curtain on myself.\
 
-`"Phone---"@
-` There's a payphone nearby.@
-` But---what am I going to do by calling her?@
-` No one can heal my body.@
-` Even Ciel-senpai can't heal what's inside me.@
-br
+`"---Kk."@
+` …… No, not yet.@
+` There's still some of me remaining.@
+` I haven't killed anyone yet.@
+` So---there has to still be a way.@
+` I can't end here.@
+` The vampire in this city is gone.@
+` And Senpai is still here.@
+` I became happy, like in a dream.@
+` So---I can't wake from this dream yet.\
 
+` As long as I live.@
+` As long as there are pieces of me remaining, I have to look for a way to do something about this monster inside of me---\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
 
 
 return

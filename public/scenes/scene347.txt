@@ -2,80 +2,245 @@
 
 
 
-bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
 
-
-
-
-` ----That's true.@ Thanks to my nightmare, I'm still a little unsettled.@
-` I have a little time, so I should rest.\
-
-bg "image\bg\ima_10.jpg",%type_tshutter_mid
-!w500
-bg "image\bg\bg_40a.jpg",%type_tshutter_mid
-
-
-` At some point, I realize that I've slept in.\
-` I shake my groggy head and look around.@
-br
-` And then,
-ld c,":a;image\tachi\his_t01.jpg",%type_bshutter_fst
-
-`"Shiki-sama."@
-`"Uwaa!"@
-` Hisui is standing right by my bed looking into my face.\
-
-`"Wha, wha----"@
-`"Shiki-sama, is the time acceptable?@ It is past eight o'clock."@
-`"----Eh?"@
-cl c,%type_crossfade_fst
-
-` I look at the clock.@
-` Certainly, the arm is pointing towards eight.@
-`"Crap, I overslept……!"@
-` I jump up from bed.@
-` Flustered, I start to change and then realize Hisui is still here.\
-
-`"Hisui.@ Um, sorry, but…"@
-ld c,":a;image\tachi\his_t09.jpg",%type_crossfade_fst
-`"I understand.@ Please go to the sitting room this time."@
-cl c,%type_lshutter_fst
-` Hisui exits my room…… Her eyes were obviously showing she was upset.@
-`"…… Well, of course.@ She already came to wake me up, so for me to fall asleep again like that……"@
-` Ruminating to myself, I quickly change.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
-playstop
-
-!w1500
-bg "image\bg\bg_01a.jpg",%type_lcartain_fst
+bg "image\bg\bg_04.jpg",%type_lcartain_mid
 
 
-` …… I manage to make it to school.@
-` First period has started a while ago and no one is at the gate.@
-` I give a sigh as I enter the school building.\
+` ----And there,
 
-bg "image\bg\ima_10.jpg",%type_tcartain_mid
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
 
-wave se2
+`"Yo, Tohno.@ You're late."@
 
-!w1000
+ld l,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
 
-bg "image\bg\bg_06a.jpg",%type_tshutter_mid
-play "track03.ogg"
+`"Indeed; you are rather late, Nii-san."@
 
+cl a,%type_crossfade_fst
 
-` ----Fourth period ends.@
 br
-` Lunch break comes, and the school fills with noise.@
-`"----Right."@
-` Akiha should be waiting in the courtyard.@
-` …… Since it's Akiha, I think she probably got Kohaku-san to make her lunch, but I should go buy something just in case.\
+` ---For some reason, it seems that Arihiko has come to the courtyard ahead of me, and was keeping Akiha company.\
+
+`"…… I was wondering where you've been all morning, Arihiko.@ I guess you've been here."@
+
+ld c,":a;image\tachi\ari_t05.jpg",%type_crossfade_fst
+
+`"Oh!@ I knew if I waited here after fourth period it would be worth it!"@
+` Arihiko boasts, puffing out his chest.@
+` …… If he's that happy, I guess I can't complain.\
+
+cl a,%type_crossfade_fst
+
+`"So, Akiha.@ What'll we do for lunch today?@ Did you have Kohaku-san make you a boxed lunch?"@
+
+ld c,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
+
+`"Eh?@ …… a 'boxed lunch'…?"@
+`"…… Never mind.@ I shouldn't have asked such a common thing."@
+
+cl a,%type_crossfade_fst
+
+` From the bread I bought, I offer her the best sandwich and a strawberry milk.\
+
+`"Here, today's lunch.@ It's better than yesterday, so eat it in comfort."@
+
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"…… Alright."@
+` Akiha timidly accepts the sandwiches and strawberry milk.@
+` …… I wonder uneasily whether Akiha will ever get used to having lunch at our school.\
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\ari_t05.jpg",%type_crossfade_fst
+
+`"Aw, nice, nice!@ Hey, Tohno, nothing for me?"@
+`"…… Well, yeah, for some reason there is."@
+` I hand him a sausage roll and a suitable drink.@
+
+ld c,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+
+`"Hey, what is this!@ 'Balsam Pear Drink'?@ This stuff isn't even fit for animals to drink!"@
+`"Can't be helped, the rest were all gone already.@ Well, there were some Cactus Mixer's, but that's not what you would call a drink."\
+
+`"…… Muh.@ I guess you still had a bit of compassion, Tohno."@
+`"I have loads for anyone but you.@ This makes us even for yesterday."@
+
+cl a,%type_crossfade_fst
+
+` Though he clicks his tongue in irritation, Arihiko puts the straw into the drink pack happily.@
+`"I got a napkin for you too, Akiha…"@
+
+ld c,":a;image\tachi\aki_t15a.jpg",%type_crossfade_fst
+
+cl a,%type_crossfade_mid
+
+`"…!"@
+` Wha, what a shock.@
+` Why's Akiha making such a face?@
+`"Wha, what is it, Akiha?@ Is there a bug on you?"@
+
+ld l,":a;image\tachi\aki_t16a.jpg",%type_crossfade_fst
+
+`"…… It's nothing at all.@ I just thought, Nii-san and Inui-san seem to be really close."\
+
+ld r,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
+
+`"Hahaha!@ Akiha-chan, you're giving us too much credit.@ Tohno and I are best friends and bitter enemies, so just call us pals!"@
+
+ld l,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
+
+` Arihiko laughs happily, and Akiha looks at me as if wanting to say something.@
+
+cl a,%type_crossfade_fst
+
+br
+` ----And then.@
+br
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_lshutter_mid
+
+`"Ah, you were all here, then?"@
+` Boxed lunch in hand, Senpai appears.\
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\ari_t05.jpg",%type_crossfade_fst
+
+`"Ah, it's Ciel-senpai!@ Today's a jackpot, right, Tohno?"@
+`"……"@
+
+cl a,%type_crossfade_fst
+
+` …… Sorry, Arihiko, I can't be as easily pleased as that.@
+` That's because---
+
+ld c,":a;image\tachi\aki_t10.jpg",%type_lshutter_mid
+
+br
+` Akiha has a really scary expression right now.\
+
+cl a,%type_crossfade_fst
+
+ld r,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+`"May I join you all for lunch?"@
+` Arihiko nods eagerly.@
+` I don't mind either, but---
+
+ld l,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+`"No."@
+` For some reason, Akiha refuses directly.\
+
+cl a,%type_crossfade_fst
+
+` The air in the courtyard is cold.@
+` It's not going to be warm in October, but it's still quite cold.@
+` Arihiko, who until now knew only the ladylike Akiha, gapes silently.@
+`"…… Ahh."@
+` Well, as an older brother, it would be bad if I didn't respond to what Akiha just said.\
+
+`"What're you talking about, Akiha.@ That was rude, even for a joke."@
+
+ld l,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
+
+`"Nii-san, I am not joking.@ I meant what I said."@
+`"Wha---what are you saying!@ You've only just met Senpai!@ You've no reason to dislike her, so why…!?"@
+
+ld l,":a;image\tachi\aki_t06.jpg",%type_crossfade_fst
+
+`"I don't like what I don't like.@ She and I are entirely incompatible.@
+
+ld l,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
+
+` You feel the same, don't you?@ You know there's no way we can get along, don't you, Senpai?"\
+
+ld r,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"No, no, not at all.@ Certainly we seem to be incompatible types, but I think I can somehow restrain myself."@
+`""---Erk.""@
+` Arihiko and I pull ourselves back.@
+` …… Amazing.@
+` Akiha spoiling for a fight is amazing, and Senpai's smiling face turning it aside is also amazing.\
+
+ld l,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+`"Hm.@ So, you're suggesting we merely counterbalance each other, then?"@
+
+ld r,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+`"To sum it up, yes.@ My business is not with you, Akiha-san, but with Tohno-kun and Inui-kun."@
+
+cl a,%type_crossfade_fst
+
+br
+` Sparks crackle between the two of them.@
+` It's like a face-off between a dragon and a tiger, as they used to say.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_04.jpg",%type_rshutter_fst
 
 
+` …… At last, with the allegedly incompatible Ciel-senpai and Akiha, lunch began.@
 
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+`"But, I never knew Tohno-kun had a sister almost his age.@ I always thought Tohno-kun was an only child."@
+`"…… Huh?@ Didn't I mention that I had a younger sister before?"@
+
+ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+`"Yes, I heard about a little sister living alone in the Tohno mansion."@
+
+cl a,%type_crossfade_fst
+
+` …?@
+` What, so she already knew about Akiha?\
+
+ld l,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"I did not know that Nii-san's friends were like you, either.@ When did you join this school, Ciel-senpai?"@
+
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+`"Mm?@ Akiha-chan, Senpai's been here for three years.@ It's a shame that she graduates this year."@
+
+ld l,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+
+`"Really.@ She doesn't seem accustomed to the school uniform yet, so I thought she might have transferred from another school, like me."\
+
+ld r,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"Ah, yes… I really wanted to wear a uniform like Akiha-san's.@ Akiha-san, is that the uniform of your last school?"@
+
+ld l,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"Yes.@ Since the uniform here isn't to my liking, I wear the uniform from my old school."@
+br
+` Akiha says such an outrageous thing casually.@
+` …… I see.@ I had assumed the uniform simply hadn't been made yet, but it seems she never intended to wear our school's uniform at all.\
+
+ld r,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+`"Ahh.@ Well, I think this one suits your level of activity well.@ What do you think, Tohno-kun?"@
+`"Eh?@ Uh, about what?"@
+
+ld r,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"About Akiha-san's uniform.@ Which one would suit her better?"@
+`"…… Which one suits her better, huh…"@
+br
+
+cl a,%type_crossfade_fst
+
+` I would have to say---
+
+br
 
 
 return

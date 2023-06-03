@@ -1,28 +1,46 @@
 
+bg "image\bg\bg_06b.jpg",%type_nowaitdisp
+
+` …………… *sigh*@
+` I don't feel like going back to the mansion, so I kill time spacing out in the classroom.\
+
+` Outside, the sun is setting.@
+` I can hear the voices of those practicing in athletic clubs; I'm quite comfortable with sitting at my desk peacefully.@
+` It's probably because yesterday and the day before were out of some extraordinary world.@
+br
+` ----And then,
+br
+ld c,":a;image\tachi\cel_t01a.jpg",%type_lshutter_fst
+`"Good.@ I see you're still here, Tohno-kun."@
+` Senpai's face suddenly comes into view.\
+
+`"Hm?@ Senpai……?@ What makes you come down to a second year classroom?@ Is there something special you had in mind?"@
+ld c,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
+`"Yes, I was wondering if you were still here, so I came to take a look."@
+` Senpai says something that makes me happy.\
+
+`"Yes, I'm here… What is it?"@
+
+`"There is something I forgot to say during lunch.@ I was thinking of waiting until tomorrow, but I thought I should just say it as soon as possible."@
+`"…… Hm.@ Something you forgot to say?"@
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+`"Yes.@ Tohno-kun, you seem to be going out at night lately, so I wanted to warn you.@ There have been a lot of dangerous things going on, so you shouldn't stay out too late."@
+`"Ah----um, well……"@
+` ……?@ How does Senpai know that?@ Do I look pale from a lack of sleep?@ Or, maybe she saw me walking around at night……?\
+
+`"Well Tohno-kun, I let you know.@ You shouldn't involve yourself in dangerous things."@
+cl c,%type_lshutter_mid
+` As quickly as she arrived, Senpai disappears like a gust of wind.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_slw
-bg "image\bg\bg_25a.jpg",%type_lcartain_mid
+bg "image\bg\bg_01b.jpg",%type_lcartain_slw
 
-` I go out in town aimlessly.@
-` Why the heck am I walking around here for no reason?@
-br
-bg "image\bg\bg_25a.jpg",%type_crossfade_fst
-ld c,":a;image\tachi\ark_t22.jpg",%type_crossfade_fst
-bg "image\bg\bg_25a.jpg",%type_crossfade_fst
+` After spending an hour doing nothing in the classroom, I decide to go home.@
+` It's past five o'clock.@
+` If I'm too late, Hisui will worry, so I should head back soon----\
 
-`"----Ah."@
-` It's just a mistake.@
-` There's no way she'll still be around, and it's not like I have any reason to talk to her.\
-
-` So why did I think it was her?@
-` Why----am I walking around town pointlessly like this?@
-br
-`"…… I have to go back to the mansion."@
-` I shake my head as if trying to clear my head of drunkenness and turn away from the nonexistent illusion of Arcueid.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-
-
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
 !w1000
 
 

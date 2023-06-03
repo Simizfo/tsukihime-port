@@ -1,268 +1,167 @@
 
 
 
-bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+mov $phasebg,"image\bg\bg_42a.jpg"
+mov $phasetitle_a,":a;image\word\PHIS_07A.PNG"
+mov $phasetitle_b,":a;image\word\day_07.png"
+gosub *left_phase
 
 
 
 
+!w3000
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
 
-` ---If I don't sleep tonight, it'll be fine.@
+
+` I cannot wake up.@
+` Immersed in a dark dream, I can't wake up.@
 br
-`"…… That's right.@ If I don't sleep, and if--"@
-` If there is another victim tomorrow, then for sure, I won't have had anything to do with it.\
+` ---I feel a chill go down my spine.@
+` Without reason, without purpose.@
+` I realize I will never be able to wake from this dream.\
 
-`"----Alright."@
-` I do understand this is a bit off course.@
-` I know it's a bit strange staying here and not sleeping, waiting for someone I do not know to be killed.@
-`"---But, what else can I do?"@
-` Since I---my memory is not to be trusted, there is no other way to do this.@
-br
-` ---Anyway.@
-` There is no other way for me to do this than to stay in my room without dreaming and wait until morning.\
+!w5000
+
+`"Shiki-sama, please wake up.@ You will be late for school."@
+
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
+play "track02.ogg"
+
+`"---------Eh?"@
+` Hisui is in front of me.@
+` This is my room, and there is surprisingly great weather outside.@
+`"Hi…… sui?"@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
+
+`"Good morning, Shiki-sama.@ You do not have as much time today, so please hurry to the sitting room."@
+` As usual, Hisui speaks in her detached tone.\
+
+`"Oh------h."@
+` With that, everything disappeared.@
+` I embrace my recently awakened but still throbbing body.@
+` …… I feel relieved.@
+` The awful world I was in until just now has just turned into a dream.@
+`"…… Thanks.@ If you hadn't woken me up, I might have never woken up."\
+
+`"Shiki-sama……?@ If you are not feeling well, please tell me so."@
+`"No, that's not it.@ ---Morning, Hisui.@ I'm glad that you're here."@
+
+ld c,":a;image\tachi\his_t02.jpg",%type_crossfade_fst
+
+`"Eh----ah, thank you very much, Shiki-sama."@
+` She blushes slightly and lowers her head.@
+`"No, I'm the one who should be saying thank-----it's past seven-thirty already!?@ Sorry, I'll get up, so please go wait in the sitting room!"@
+`"Yes, I will be waiting."@
+
+cl c,%type_lshutter_fst
+
+` Right as Hisui leaves the room, I change into my school uniform.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
-
-bg "image\bg\bg_40d.jpg",%type_crossfade_mid
-
-
-br
-br
-br
-` -----Time passes.@
-` I still manage to stay awake.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-bg "image\bg\bg_40d.jpg",%type_crossfade_mid
+!w1000
+bg "image\bg\bg_32a.jpg",%type_lcartain_mid
 
 
+` Jumping out of bed, I scarf down a little of the breakfast Kohaku-san made and leave the mansion.@
+` It all took me less than ten minutes.@
 br
-br
-br
-br
-br
-` ----Another hour.@
-` I still manage to stay awake.\
+`"I'm leaving--see you later, Hisui!"@
 
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_40d.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
 
+`"Yes, I will be awaiting your return."\
 
+cl c,%type_lshutter_mid
 
-br
-br
-br
-br
-br
-br
-br
-` -----An hour.@
-` I still, manage… to stay awake.\
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+bg "image\bg\bg_22a.jpg",%type_lshutter_fst
+bg "image\bg\bg_24a.jpg",%type_lshutter_fst
+bg "image\bg\bg_03a.jpg",%type_lshutter_fst
 
 
-br
-br
-br
-br
-br
-br
-br
-br
-br
-` ----It is now past one o'clock in the morning.@
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\bg_40d.jpg",%type_nowaitdisp
-
-` I… still  manage   to stay    awake.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-
-
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-` ----In just four hours, it will be morning.\
-bg "image\bg\ima_11b.jpg",%type_nowaitdisp
-bg "image\bg\bg_40d.jpg",%type_nowaitdisp
-
-` …… Something is wrong.@
-` I am… still  conscious… but…
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\bg_40d.jpg",%type_nowaitdisp
-
-` …… My field of vision collapses.@
-
-bg "image\bg\ima_11b.jpg",%type_nowaitdisp
-bg "image\bg\bg_40d.jpg",%type_nowaitdisp
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\bg_40d.jpg",%type_crossfade_mid
-
-br
-` I must stay up.@
-` I am not sleepy yet, but…
-` Why?@
-!w750
-` Why?@
-!w1350
-` Why?@
-!w1750
-` Why does my    body   want   to sleep   this much-----?\
-
-bg "image\bg\ima_10.jpg",%type_tcartain_mid
+wave se2
 !w2000
 
+`"…… I made it……"@
+` I breathe out and rest my body.@
+` I made it just in time before they closed the gate, but I still have to make it to class.\
 
+bg "image\bg\bg_06a.jpg",%type_lshutter_fst
 
-
-
-!w3000
-waveloop se10
-
-bg "image\bg\bg_26a.jpg",%type_nowaitdisp
-
-
-` *pant*---*pant*----*pant*\
-
-` I feel like I am being watched.@
-` I.@
-` With bloodshot eyes, I look at the people walking down the streets.\
-
-br
-br
-br
-br
-br
-br
-` ---Maybe it's because of the time?@
-`   Compared to last night, there's hardly anyone around.\
-
-` …… Someone is watching me.@
-` I can't find what I'm looking for.@
-` Again.@ Tonight, I can't find the person I'm looking for.@
-
-br
-br
-br
-br
-#ff0000
-`      I'm starting to get annoyed.\
-#ffffff
-
-` I pant heavily.\
-
-` I should change my spot.@
-` I'm going to stop looking in town.\
-
-bg "image\bg\bg_24c.jpg",%type_crossfade_fst
-
-
-` I go from roof to roof and end up somewhere crowded.@
-` …… Looking from the roof of the highest house, I scan the streets.\
-
-br
-br
-br
-br
-br
-br
-br
-#ff0000
-`             Don't look!\
-#ffffff
-
-
-`"----There."@
-` I see a person walking alone.@
-` A woman.@
-` This time, there can be no mistake…
-` It'll be great if it's Akiha.\
-
-#ff0000
-
-br
-br
-br
-br
-br
-br
-br
-`        Don't look at me.\
-#ffffff
-
-` No, it really doesn't matter.@
-` Once more.@
-` Once more, I want to taste that wonderful sensation----\
-
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-wave se12
-
-
-bg "image\bg\ima_12b.jpg",%type_lshutter_fst
-
-
-` I kill her from behind, taking care not to damage her body.@
-` Holding her long hair, I drag Akiha's body.@
-
-bg "image\bg\bg_22c.jpg",%type_lshutter_mid
-
-
-` *pant*----*pant*----*pant*
-` Biting into Akiha's neck, I suck her blood.@
-
-br
-` ---Boring.@
-` This is nowhere near as exciting as last night.@
-` If her hair is this short, it's not Akiha at all.\
-
-`"…… Boring……!"@
-` I start to get pissed off.\
-` Even though I slice the body into pieces, I'm still mad.@
-` Impostor.@
-` This impostor pisses me off.\
-
-#ff0000
-
-br
-br
-br
-br
-br
-br
-br
-`         Stop watching me!\
-#ffffff
-
-` *pant*----*pant*----*pant*----
-br
-` I've used up extra energy.@
-` Soon, dawn will arrive.@
-` Once it becomes morning, Shiki will awaken.@
-br
-`"I'm tired tonight.@ I'll start again, tomorrow."@
-` Yeah, that'll do.@ That's what I'll do.\
-
-` Now then.@
-` Before the morning comes, before any one realizes, I must go back to school----\
+`"…… Whew."@
+` The teacher hasn't arrived in the classroom yet.@
+` I try to catch my breath as I sit down.@
+` …… The classroom seems more lively today than usual.@
+` Tomorrow is a holiday, so everyone probably feels like today is a Saturday.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
-wavestop
+playstop
 
-!w3000
+!w2000
+bg "image\bg\bg_06b.jpg",%type_crossfade_fst
+
+
+` School ends.@
+` Since I don't have any reason to stay at school, I'll head back to the mansion.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_23b.jpg",%type_lcartain_mid
 
 
 
+`"…… Yesterday's dream."@
+` This is definitely the place where I saw someone get killed in my dream.@
+` Even though I tried as hard as I could not to dream, I guess you can't run away from yourself.@
+`"-----Kk."@
+` I grind my teeth.@
+` I feel pitiful about my weakness.@
+` After all, it's all a dream.@
+` Certainly there is something wrong with me seeing those dreams, but I think I'm still sane.\
+
+bg "image\bg\bg_22b.jpg",%type_lshutter_mid
+
+` …… My old man is my old man.@
+` I don't know about the Tohno blood.@
+` But I don't want to become a burden on Akiha and the others while I'm sane.@
+` I have to try and act as normally as possible, and try to find a way to solve all of this---\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_33b.jpg",%type_lshutter_mid
+
+play "track03.ogg"
+
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
+
+`"Welcome back, Shiki-sama."@
+` As soon as I open the door, Hisui politely greets me.@
+`"I'm back.@ I'll be in my room, so it's okay if you return to whatever you were doing."@
+`"Thank you.@ I will return to cleaning the sitting room.@ If you need anything, please call for me."@
+
+cl c,%type_lshutter_fst
+
+`"…… Hisui is cleaning the sitting room…"@
+` I don't see Kohaku-san, but she's probably sweeping the rear courtyard or going out to get groceries.@
+` It appears Akiha hasn't come back yet, so I'll go back to my room.\
+
+bg "image\bg\bg_40b.jpg",%type_lshutter_mid
+
+
+` Putting away my bag, I change out of my uniform.@
+` I spend about an hour just sitting around my room.@
+` All of a sudden, I hear a gurgling noise.@
+` It's not a strange noise or anything.@
+` It's just the sound of my stomach.\
+
+`"…… That's right, I didn't really have a chance to eat since this morning."@
+` Not wanting to be late this morning, I was only able to eat just a little of what Kohaku-san made for breakfast.@
+` I thought about eating at the cafeteria, but I lost my appetite as soon as I remembered what I saw at the cafeteria yesterday.\
+
+`"…… I wonder if I can get something to snack on before dinner……"@
+` …… I really don't want to be a bother, but I'm really starving.@
+br
+` I should---
+br
 
 
 

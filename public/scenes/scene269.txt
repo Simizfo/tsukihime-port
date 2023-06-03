@@ -1,34 +1,21 @@
 
 bg "image\bg\bg_27b.jpg",%type_nowaitdisp
 
-` I should just tell her directly to go home.\
+`"---Wait a minute.@ Senpai, didn't you say I can do as I wish……?"@
 
-`"Senpai, you don't have to worry about me so please go back.@ Things will get ugly if we go on like this."@
 ld c,":a;image\tachi\cel_t01b.jpg",%type_crossfade_fst
-`"Huh?@ Ugly?@ What do you mean by that?"@
-` …… She doesn't even seem to be listening to me.\
 
-`"---Look, why don't you listen to me?@ Senpai, didn't you say I could do as I wanted?@ So why are you still getting in my way!?"@
-`"Like I said, please do as you wish.@ I'm also just doing as I wish myself."@
-cl c,%type_lshutter_mid
+`"Yes, please do as you wish, Tohno-kun."@
+` Senpai nods and smiles.\
 
-` Still smiling, Senpai walks ahead of me.\
+`"…… Good, I wasn't just imagining it.@ Then, this is goodbye.@ You shouldn't be following me anymore."@
+ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
 
-`"Hey---Senpai!"@
-ld c,":a;image\tachi\cel_t07b.jpg",%type_lshutter_fst
-`"Huh?@ What is it, Tohno-kun?"@
-`"What is it!?@ Do you enjoy troubling me like this!?"@
+`"Huh?@ I'm not really following you or anything."@
+`"---Um, Senpai?"@
 ld c,":a;image\tachi\cel_t01b.jpg",%type_crossfade_fst
-` She smiles.@
-` …… It seems she really does enjoy it.\
-
-`"…… I get it.@ I understand that you're quite a mean person, but let me off the hook for today.@ If you keep following me, things will not only be dangerous for me, but for you as well."@
-`"Oh really?@ I'm not really following you or anything."\
-
-`"Eh---?"@
 `"I simply have something to do in the park.@ I don't know where you are going, Tohno-kun, but if you're not going to the park, then this is where we say goodbye."\
 cl c,%type_crossfade_fst
-
 
 
 return

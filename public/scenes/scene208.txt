@@ -1,25 +1,51 @@
 
-bg "image\bg\bg_06a.jpg",%type_nowaitdisp
 
-br
-` -----I know Yumizuka was smiling yesterday.@
-br
-` I didn't think that she could make such a face, say "bye bye", and then run away from home.\
+bg "image\bg\bg_06a.jpg",%type_lcartain_mid
+play "track01.ogg"
 
-`"---Sensei."@
-`"What is it, Tohno?@ A question?"@
-`"Yes.@ Is it true that a student in our class has run away from home?"@
-`"Hrm------"@
-` Instantly, the air in the classroom solidifies.@
-` He frowns, then, with a difficult expression, bows his head in assent.\
 
-`"Yes, that is what we've heard from Yumizuka Satsuki's parents.@ Yumizuka didn't come home last night, but they've been searching, and I'm sure they've already found her."@
-` Saying so, he departs.@
-br
-` The classroom becomes noisy again.@
-` I have a bad feeling about this.@
-` …… It's really heavy.@ A terrible feeling as if my body is tied down to this chair.\
+` I still feel down even when lunch time arrives.@
+` While the news of Yumizuka Satsuki running away from home was shocking, it seems it wasn't a topic that could last forever.@
+` The classroom is just like always, and it seemed that I'm the only one troubled by our absent classmate.\
 
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
+ld c,":a;image\tachi\ari_t01.jpg",%type_lshutter_fst
+
+`"Tohno, let's go get lunch."@
+`"That's okay.@ I don't really feel like it."@
+`"Huh… I guess it can't be helped.@ Don't be troubled with other people's problems too much."@
+
+cl a,%type_lshutter_fst
+
+`"……"@
+` Other people's problems, huh.@
+` Arihiko's words are too close to the truth.\
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_lshutter_fst
+
+`"Huh?@ You're not with Inui-kun today?"@
+`"…… Senpai?@ What are you doing in our classroom?"@
+
+ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
+
+`"Well, I thought I'd have lunch with you guys… Tohno-kun, aren't you going to eat something?"@
+` Senpai sits down on the desk, looking at me anxiously.\
+
+`"Nah, I just don't seem to have any appetite today."@
+`"Ahh… Are you not feeling well?"@
+`"…… Something like that.@ Don't worry about me, you go on to the dining hall.@ Arihiko's probably already there."@
+
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+`"Oh, you're not energetic at all!@ I don't know what happened, but if you don't eat lunch, you'll just feel even worse."@
+`"That's… true.@ But…"@
+` But since I'm not hungry, there's not a lot I can do.\
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+`"Alright, I'll take you somewhere special.@ It's really a secret, but you're special, Tohno-kun."@
+
+cl a,%type_lcartain_mid
+
+` With that, she grabs my arm and pulls me out of the chair.\
 
 return

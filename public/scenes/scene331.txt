@@ -1,138 +1,194 @@
 
+
+
+
 bg "image\bg\bg_06b.jpg",%type_nowaitdisp
 
-` …… The events which happened during lunch break still weigh on my mind.@
-` I'm sure she can walk home alone, but I feel I ought to go and check on Akiha.\
 
-bg "image\bg\bg_11b.jpg",%type_lshutter_mid
-
-
-` I walk along the corridor lit by the fading sun.@
-` I think Akiha's class is first grade, class one.@
+` I don't know how to face Akiha once I get home to the mansion.@
+` So, I sit and think right here before I go home.@
 br
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\bg\bg_06b.jpg",%type_lshutter_fst
-
-
-` The classroom is silent.@
-` A girl stands alone in the empty, red classroom.\
-
-playstop
-
-monocro #ff0000
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-
-
-`"……"@
-` …… I feel… a little dizzy.@
-` The classroom dyed by the evening glow.@
-` Alone, a girl with long, faintly red hair is preparing to leave.@
 br
-` No matter how I look at her, she's Akiha.@
-` So why?@ Why do I feel as if I am seeing a stranger for the first time?\
+br
+br
+br
+br
+br
+br
+br
+br
+\
 
-bg "image\bg\bg_06b.jpg",%type_crossfade_mid
+` It looks like no ideas are forthcoming.@
+` Before I knew it, the classroom was empty.@
+`"---I guess I'll go home."@
+` What a waste of time.@
+` If I had time to think, it would have been more productive if I just faced Akiha without any plans.\
 
-monocro off
-play "track03.ogg"
-
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-
-`"Nii-san?"@
-`"------"@
-` As she calls out to me, the dizziness subsides.@
-`"You're---Akiha, right?"@
-
-ld c,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
-
-`"…?@ Nii-san, are you feeling poorly again?"@
-` Akiha addresses me in her usual tone.@
-` …… Looking at Akiha's black hair, I feel that without a doubt, this is my own little sister, Tohno Akiha.\
-
-`"…… Nah, it's nothing.@ Come on, Akiha, it's time to go back.@ If you're not doing anything, do you want to walk home together?"@
-
-ld c,":a;image\tachi\aki_t09.jpg",%type_crossfade_fst
-
-`"Yes… if you don't mind, let's walk home together."@
-` For some reason, Akiha smiles tenderly.@
-` …… My heart thumps.@
-` Perhaps it's the dizziness from earlier, or perhaps the strangeness of seeing Akiha in my own school.@
-` For some reason, my heart beats far harder than it needs to.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_01b.jpg",%type_lcartain_mid
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+bg "image\bg\bg_11b.jpg",%type_lcartain_fst
 
 
-` I leave the school building with Akiha.@
-` As we reach the school gates, I catch sight of Senpai waving at me.@
+`"Tohno-kun!"@
+` Someone calls my name as I step out into the hallway.@
+ld c,":a;image\tachi\cel_t03.jpg",%type_lshutter_fst
 
-ld c,":a;image\tachi\cel_t03.jpg",%type_lshutter_mid
-`"Ah, you came at last, Tohno-kun."@
-`"Huh, Senpai?@ What are you doing, standing here like this?"@
+`"Thank God you're still here.@ Um, are you going home right now?"@
+`"Umm, something like that.@ Since I don't have anything to do, I was thinking of just going straight home.@ Are you heading home too, Senpai?"@
+`"Yes, since I don't have anything I have to do, I was thinking of going shopping."@
+`"I see, shopping.@ You mean by the station?"@
+ld c,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
 
+`"No, it's on sale here."@
+` Senpai starts to talk weird again.\
+
+`"…… Here--you mean here?"@
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+` Yes, says Senpai with a big smile.@
+`"…… What's on sale here?"@
+ld c,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
+
+`"This."@
+` Senpai points with her finger.@
+` Only my face is in her slender finger's way.\
+
+`"You mean, me?"@
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"Yes, since you're still here, I've decided to buy your time.@ So let's go home together, Tohno-kun."@
+` Senpai tugs at my arm and starts to walk.@
+`"W-wait a second, I'm glad we can go home together, but isn't your house in the opposite direction of mine?@ Did you come by just to walk together to the gate?"@
+`"No, I'm going to go shopping by the station, so we'll walk together for a while."@
+`"I see, then we will be walking together for a while---wait, what are you shopping for anyways?"\
+
+ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+`"Well, I thought since it's starting to get cold, I should buy some heating equipment."@
+`"Heating equipment, huh… I think it's a bit too early for that, but I guess autumn goes by quickly.@ So what are you buying?@ An air conditioner?"@
 ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
 
-`"Geez, I wasn't just standing here, I was waiting for you, Tohno-kun, but---"@
+`"A high schooler can't afford an air conditioner.@ So, I was thinking of buying the cheap, efficient, traditional Japanese craft, Kotatsu-san."@
+` I never knew kotatsu was a traditional Japanese craft.@
+` With that aside.\
 
-cl a,%type_crossfade_fst
+`"----Senpai, you were going to talk me into carrying your stuff, right?"@
+ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
 
-` Senpai glances at Akiha next to me.@
-` Somehow, at a glance she realizes that Akiha and I are walking home together.\
+`"That's not true.@ I just thought we could walk together for a bit, and you could accompany me while I shop."@
+`"…… And you would say this to me after shopping.@ Tohno-kun, I can't carry such a heavy load!"@
+ld c,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
 
-ld l,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+`"Hey.@ Tohno-kun, I wouldn't ask you to do such a thing.@ Even if I did, I'd ask in a much more roundabout manner."@
+`"You're right.@ Either way, I'd tell you I wouldn't want to do it."\
 
-`"Tohno-kun, is this your little sister?"@
-` Senpai throws a sidelong glance at Akiha.@
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
 
-ld r,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+`"Ahaha, it's alright.@ I would never ask you to do such a thing."@
+`"I know you're not that kind of a person, Senpai."@
+` We laugh together for a while.@
+` We were laughing together for a while, but Senpai suddenly drops her shoulders.@
+ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
 
-`"………………………"@
-` Akiha says nothing.@
-` Nothing is said, but both Senpai and Akiha tell me with their eyes to "Introduce me to this person".@
+`"…………… Meanie."@
+` Oh no, I guess I made too much fun of her.@
+` She was relying on me, so maybe I should have cooperated with her a bit more.\
+
+`"---Alright.@ If you'll buy me lunch next time, I'll do the carrying or anything else you want me to do."@
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+`"You don't have to help me if you don't want to.@ I just thought it might be a bit too heavy for me alone."@
+`"What are you saying?@ There's no way you'll be able to carry it with your weak arms.@ I'll go.@ You said you'll buy my time, Senpai.@ I'll work for lunch, so take advantage of that all you want."\
+
+ld c,":a;image\tachi\cel_t05.jpg",%type_crossfade_fst
+
+`"--Alright.@ I'll take your kind words and I'll rely on you today."@
+`"Yeah, rely on me all you want."@
+` I hit my arm to appeal to her that I have some power in there.@
+` Senpai laughs and starts to walk.@
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+`"Oh, I wanted to ask you one thing before that."@
+`"What?"@
+`"Can I bring you a bentou for lunch?"@
+` Of course.@
+` I found myself nodding even before I thought about it.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_03b.jpg",%type_lcartain_mid
+
+
+` We exit to the school grounds.@
+` There's no one out here except for the track team.@
+ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
+
+`"There's less after school activity now."@
+` Senpai says this regretfully.@
+` Due to that vampire incident, most of the after school clubs have been cancelled and the only guys that are left are the track team.\
+
+` …… But that incident will not occur again.@
+` Since Yumizuka is no longer alive, there will be no more victims.@ But I bet no one would believe me even if I said that.@
+`"…… You're right.@ There's been several victims, so I guess the parents had a say."@
+`"I feel a bit down.@ I liked that after school atmosphere."\
+
+bg "image\bg\bg_01b.jpg",%type_lshutter_mid
+
+
+` We exit to the gate.@
+`"Huh-?"@
+` At the same time, I face an unexpected person.@
+ld l,":a;image\tachi\aki_t21.jpg",%type_lshutter_mid
+
+`"Geez, you go home late too, Nii-san."@
+`"A, Aki-"@
+` As I start to finish with "ha", Senpai comes along.@
+ld r,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"Tohno-kun?"@
+` Senpai calls me as I stand still.\
+
+ld l,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+` It seems that Akiha understood the fact that Senpai and I were going home together.@
+` She stares at Senpai and me as if criticizing us.@
+`"Akiha---what are you doing?"@
+`"I thought I would go home with you, Nii-san."@
+` Akiha answers while staring at me coldly.@
+
+`"Tohno-kun, is that your little sister?"@
+` Senpai glances at Akiha.@
+` They don't say it directly, but both Senpai and Akiha tell me with their eyes to "Introduce me to this person".@
 br
-` ----Ahh.@
+` -------*sigh*@
 ` It seems like this is going be a really tiresome job.\
 
 `"Senpai, this is my younger sister, Akiha.@ She transferred to our school just today."@
 ` Akiha bows to Senpai.@
-
-ld l,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-
 `"I see.@ Hello.@ My name is Ciel and I'm a friend of Tohno-kun."@
 
-ld l,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+ld l,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
 
-ld r,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
+ld r,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
 
-` …… What is it?@
+` …… What's going on?@
 ` Senpai and Akiha just stare at each other, saying nothing.\
 
-cl a,%type_crossfade_fst
+`"Akiha, I'm going to go shopping with Senpai today, so-"@
+ld l,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
 
-`"Senpai, you sounded like you were waiting for me… What's going on?"@
+`"Is that true, Senpai?"@
+` …… Before I could tell her to go home, Akiha questions Senpai.@
+ld r,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
 
-ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
-
-`"Well, it just happened that I wanted to spend a little time with you, but---
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-
-` ---Since it's already late today, I'll leave it for another time.@ Bye, Tohno-kun.@ See you tomorrow as well, Akiha-san."@
+`"Yes, but I'll do so on another occasion.@ Tohno-kun, you should be nicer to your sister."@
+cl r,%type_lshutter_mid
 `"Bye" says Senpai, and she walks away from us.\
 
-cl a,%type_lshutter_fst
-
-`"----Ah."@
+`"------Hey."@
 ` Senpai leaves without giving me a chance to stop her.@
-
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-
 `"Let's go home, Nii-san.@ It will get dark soon."@
 ` Akiha says this as if nothing happened.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
-
-
 
 return

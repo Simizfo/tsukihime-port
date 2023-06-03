@@ -1,608 +1,129 @@
 
 
+bg "image\bg\bg_29b.jpg",%type_crossfade_mid
 
-bg "image\bg\cmo_18.jpg",%type_crossfade_fst
-play "track06.ogg"
+`"I'm---exhausted…"@
+` I collapse onto the ground.@
+` I fall on my rear and try to keep my body up with my hands.\
 
-`"Ah------"@
-` A ceiling overhead like a black umbrella.@
-` And all around, the glowing eyes of the beasts.\
-
-` Rip.@ My skin is being ripped.@
-` ----Die.@
-` Rip.@ My flesh is being eaten.@
-` ----Die.@
-` Grit.@ My bones are being scraped.@
-` ----Die.@
+`"---Cold."@
+` I'm cold.@
+` The pain is numbed; it feels almost comfortable.@
+` My body is ripped with canine bite marks and beak marks.@
 br
-` My mind can no longer think of anything.@
-` Only, to frantically use my arms to protect my face.@
-` My right hand tightens, keeping a firm grip on my knife.\
+` ----Well, there's no mistake that I'll probably die like this.\
 
-` ----Die.@
-` I'm being eaten.@
-` Strange----being attacked by this many beasts, they should be able to eat me completely in just one minute, yet they take their time.\
-
-` ----Die.@
-` I'm bleeding too much.@
-` My blood and their saliva coat my body.@
-` It feels----terrible.\
-
-` ----Die.@
-` I can't see anything outside.@
-` Just, complete blackness.\
-
-` ----Die.@
-` Those countless pairs of eyes say it.@
-` They say it as they truly eat me only bit by bit.@
-` They can't talk, so they speak with their blazing eyes.\
-
-` ----Die.@
-` Hurry up and die.@
-` The black dome of beasts chants in unison.\
-
-bg "image\bg\cmo_19.jpg",%type_crossfade_fst
-
-`"------!"@
-` A scream leaks out.@
-` But no one is going to help me.@
-` ---I'll be killed.@
-` Like that person before, I'll be devoured alive.@
-`"Ah---a, ah…"\
-
-` ----No.@
-` I don't want that.@
-` I don't want to die this way.@
-` I don't want to be eaten while being conscious.@
-` I don't want to be killed like this.@
-` Scary.@ That's scary.@ Very scary.@
-` Scary, scary, frightening, frightening, frighteningscaryscaryscaryscaryscary----\
-
-`"I'll--be killed."@
+`"-----"@
+` I let out a deep breath.@
+` I raise my chin and look up at the sky.@
 br
-` Yes, I'll be killed.@
-` There's nowhere to run.\
-
-`"I'll be killed… like… this."@
-br
-` I'll be torn apart and become a meal for all of them.@
-br
-` There's nothing I can do.@
-` With my eyes painted vermillion, I stare at myself emptily.\
-
-`"Ha.@ Hahaha, ha."@
-br
-` I start to laugh.@
-` Because, I don't even know why I'm being killed.@
-br
-` But----still, Tohno Shiki will be killed like this.\
-
-`"You are stubborn.@ If you break down, it will be easier for you."@
-br
-` Ha, haha, ha.@
-br
-` He laughs in the distance.@
-` Slowly eating me and laughing.@
-br
-` Ah----it's like my whole body… is dissolving.\
-
-`"--------"@
-br
-` …… Horrible.@ Too horrible.@ This is too horrible.@
-` My wounds hurt.@ They hurt.@ Hurt a lot.@
-` Death is frightening.@ It's frightening.@ Very frightening.@
-` He's laughing in the distance.@
-` Watching me die and laughing.@
-` If I strain my ears,
-` I can still hear chewing and the smashing of bones coming from within.@
-br
-` Not only did he devour all those people yesterday.@
-` And not only did he eat that unknown person.@
-` He's trying to eat and kill even me----\
+`"-----The moon."@
+` Only the pretty moon is in the night sky.@
+` …… What is it?@
+` It seems awfully familiar… like I saw a dream like this before.\
 
 
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\cmo_19.jpg",%type_nowaitdisp
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+play "track08.ogg"
+
+`"Shiki, are you okay?"@
+` Arcueid walks toward me as if nothing happened just now.@
+`"…… You… stupid idiot…… If I was okay… I wouldn't be human."@
+` I speak and breathe haltingly.@
+` Even talking is painful, so maybe I shouldn't have responded.@
+`"Kk------ah."\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
 
 
-`"Gah----"@
-` Something like claws digs into my chest.@
-` It's where the scar from my old wound is.@
-` A really painful, frightening, only hateful place.@
+` My consciousness starts to fade.@
+` And then,
+
+quakey 2,100
+
+
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+` Whack!@ Arcueid hits me on the head and forcefully returns me to consciousness.\
+
+`"…… What… was that for?"@
+ld c,":a;image\tachi\ark_t11.jpg",%type_lshutter_fst
+
+`"That won't do.@ If you sleep with those wounds, you'll definitely end up dying.@ You can't sleep until we close them."@
 br
-` ----Eight years ago----that summer day.@
+` ---Her argument is perfectly just.@
+` It's so just, it makes me angry.@
 br
-` Yeah, it really was hateful.@
-` There wasn't any room for pain or fear.\
+`"…… Arcueid.@ Can I say what I've always thought from before?"@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"Hm, what?"@
+`"----Don't say such unreasonable things, you idiot."@
+` I crash onto the ground.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\ima_18.jpg",%type_crossfade_fst
+
+` ---My consciousness starts to fade.@
+br
+` Arcueid is raising a racket, but I don't have any strength to hold my eyes open any longer.@
+` It's terribly----cold.@
+br
+`"Hey, Shiki.@ You really will die……!"@
+br
+` …… I told you, I'm sleepy.@
+` I'll sleep before I die, so I'll wake up in the morning.\
+
+`"Shiki, you mustn't sleep----!@ We have to at least close your wounds and stop the bleeding, otherwise you won't wake up……!"@
+br
+` ---Man, she's loud.@
+` I'm going to sleep, so just do whatever you want.@
+br
+`"Eh, it's okay if I heal you?@ Why didn't you say that earlier?"@
+br
+` After she says this cheerfully,
+` I feel cold fingers, colder than even my body, touch my skin as if in sympathy.\
+
+`"Well, I'm not too happy about using someone else's familiars, but in these circumstances, it can't be helped."@
+
+` …… I feel like something is being plastered to me.@
+` I don't know why,
+` but it feels awfully pleasant--
+br
+`"As to be expected from the vampire called the primordial sea.@ Even after the destruction of the source, Nrvnqsr, the familiars still have their regenerative ability…… hm, in this case, all I have to do is give it a little hand.@
+` First, let it live on me----once it's back to normal I'll put it back on you, Shiki----"@
+br
+` The fingers pull away.\
+
+`"I guess this'll do.@ How is it?@ It's a non-polar life, so it can adapt itself easily to your body, right?@
+` Hey, are you sleeping Shiki----?"@
+br
+` ---Yeah, I'm asleep.@
+br
+`"Oh well.@ Your house is the mansion on top of the hill, right, Shiki?@ I'll make sure you get home."@
+br
+` ---I look up only at the white moon as I sleep.\
+
+`"…… You really did well, Shiki.@ And thanks.@ You really saved me tonight."@
+br
+` …… She thanks me without the slightest hint of heaviness in her words.\
+br
+br
+br
+br
+br
+br
+` …… I can't hear her voice anymore.@
+` I fall into a deep sleep without anyone interrupting me this time.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+
 playstop
 
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
 
-waveloop se1
 
-
-` Yes.@ I just… hated.@
-` Then what is to be done is already decided.@
-br
-` ----If you are going to kill me, then…
-br
-` My whole body is already numb.@
-` All that remains is the sensation of the knife I refused to drop in my right hand.\
-
-br
-` Be killed----be killed?@
-br
-` Who?@
-` By what?\
-
-`"Haha, ha----------"@
-br
-` I laugh out.@
-br
-` Right, that's exactly how it is.@
-` Running away is absolutely impossible.@
-` Escape is absolutely impossible.@
-` There's only one thing to be done.\
-
-` Be killed.@
-` Be killed.@
-` Definitely, without a doubt, be killed.@
-br
-` By nothing else,
-!w500
-
-` and by no one else.\
-br
-br
-br
-br
-br
-br
-br
-` ------He will be killed by me.\
-
-wavestop
-
-monocro #ff0000
-
-bg "image\bg\bg_29c.jpg",%type_lshutter_fst
-
-`"Ahahahahahahahahaha!"@
-` In place of a yell, I start to laugh like an idiot.@
-` Strange.@
-` Strangely, I can't stop laughing.\
-br
-` Slice.@ Slice.@ Slice.@ Slice.@ Slice.@ With each sound, another beast dies.@
-` My brain is in agony.@
-` All throughout my body: my nerves, my blood vessels, my cells, my blood; everything has gone abnormal.\
-
-br
-` ----The black dome disappears.@
-` I just killed about seventy beasts which were eating my body.@
-br
-`"Wh----at?"@
-` I can hear Nrvnqsr's voice.@
-` Alright----I have to stand, or I won't be able to kill any more.\
-
-monocro off
-
-bg "image\bg\bg_29c.jpg",%type_crossfade_fst
-
-
-` I stand up.@
-`"----"@
-` There's no problem.@
-` There's not a single place where I'm not wounded, but I can still move around for a while.@
-
-ld c,":a;image\tachi\nero_t02d.jpg",%type_crossfade_fst
-
-`"What----did you--"@
-`"----Yeah, I understand how you feel, vampire."\
-
-` My brain is on fire.@
-` It's similar----just like when I killed Arcueid, I can't even breathe properly.@
-` Along with the headache and heat which almost drives me insane,
-!w500
-
-` almost enough to make me puke,
-!w500
-
-` the world is saturated with death----\
-
-`"So you want to kill me, monster?"\
-
-br
-br
-br
-br
-br
-br
-br
-` Then, we have something in common.\
-
-`"Fine.@ ----Let's fight to the death, Nrvnqsr Chaos……!"@
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-
-` With that, my stiff right hand moves freely.@
-` Switching to a reverse grip on my knife, I run towards Nrvnqsr.\
-
-ld c,":a;image\tachi\kemo_t03.jpg",%type_crossfade_fst
-
-` A bigger beast appears from his body.@
-` Finally, he's letting out the big stuff he used for Arcueid.\
-
-bg "image\bg\ima_14.jpg",%type_crossfade_fst
-
-`"------"@
-` But, they don't last long.\
-` No matter how large, fast or brutal they are, they basically cannot kill me unless they touch me.@
-` If they try to touch me,
-` I slice whatever part tries.@
-` In the end, it made no difference whether it was a black dog, a lion or a tiger.\
-
-bg "image\bg\bg_29c.jpg",%type_crossfade_fst
-
-` Two of the large ones collapse and change into black water.@
-` To get to Nrvnqsr--there's still some distance left to close.@
-
-ld c,":a;image\tachi\nero_t02e.jpg",%type_crossfade_fst
-br
-`"----How can this be?@ Those of us even the princess could not eliminate----are returning to nothingness."@
-br
-` He's… saying something.@
-br
-`"----I do not understand.@ What did you do?"@
-br
-` I fix my gaze on Nrvnqsr's body.\
-
-ld c,":a;image\tachi\nero_t02f.jpg",%type_crossfade_fst
-
-` Countless points.@
-` ----If I want to live.@
-` If I want to kill him, I have to kill each and every one of them.\
-
-`"……………"@
-` It's probably not possible.@
-` Still----I can't finish like this.@
-` Arcueid, who was swallowed by the black liquid.@
-` All of those hundreds of people that were killed.@
-br
-` ----And, this body being almost killed.@
-br
-`"………………!"@
-` I grit my teeth.@
-` There's no time to speak words of hatred.\
-` Unfortunately, moving takes all of my power.@ I don't have any extra energy to answer Nrvnqsr.\
-
-` ----No.@
-` If I do have that sort of energy, as quickly as possible----
-br
-`"----Very well.@ I now recognize you as an obstacle to me."\
-br
-br
-br
-br
-br
-br
-` ----killing this beast-smelling monster would be far better.\
-
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-
-` His black coat opens wide.@
-` The vile stench of beasts.@
-` The sense of danger before was nothing compared to what it is now.@
-br
-` From inside his coat, things come out which I've seen at least once when I was a child.@
-` Like this horse with a horn on its forehead, or this huge, winged lizard.@
-` Those are troublesome.@
-` It's not simple to kill them,
-` because they have very few "parts vulnerable to death".@
-br
-` So---I get more serious.\
-
-` Is it because I said "kill"?@
-` The pulsing of my blood is painful.@
-` My nerves are grinding together.@
-` Everything in my body links together to remove that which gets in my way.\
-
-
-` I slice in half the horned horse along with its horn.@
-` I slice the lizard from its back to its lower-right abdomen.@
-br
-`"----Impossible."@
-` I hear that obstacle's voice.@
-` Unfortunately, I can't even see properly now.@
-` All I can see are those black points and lines.@
-`"Scum----why must I attack a mere human with my full force----!?"\
-
-` With a squishy, fleshy sound,
-` Nrvnqsr's half-body returns to its previous human shape.@
-` ----It seems he finally put back the half of his body binding Arcueid.@
-
-
-bg "image\bg\bg_29c.jpg",%type_crossfade_fst
-
-br
-ld c,":a;image\tachi\nero_t03.jpg",%type_crossfade_fst
-`"----I will kill you.@ You will find out that existence far superior to yours exists within me----"\
-
-` His arms tear into his own chest.@
-` As if ripping apart darkness,
-` he rips into his own chest.@
-` From the hole in Nrvnqsr,
-` something bizarre emerges----\
-
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-
-` If I have to describe it simply, it's a crab-like spider.@
-` A bit bigger than the giant elephant which Arcueid killed.@
-
-br
-`"------"@
-` My vision has gone red; I can't see very well.@ All I can see are their bizarre silhouettes and their "death".\
-
-` My fingers are cold.@
-` Maybe I've lost too much blood.@ My whole body is frigid.@
-` But still----my body isn't screaming.@
-` It orders me forward, saying that if I have enough strength to scream, use that energy to kill Nrvnqsr even faster.@
-br
-` ----My spine hurts.@
-`   My body is cold.@
-`   My fingers are frozen.@
-`   Yet, my brain burns with fire.\
-
-` These crab-spider beasts keep crawling out from Nrvnqsr.@
-` Nrvnqsr is only a little bit away.@
-` These things are in the way of me getting to him.\
-
-
-bg "image\bg\bg_29c.jpg",%type_nowaitdisp
-
-` For now, these three.@
-` I completely kill those emerged obstacles.\
-
-ld c,":a;image\tachi\nero_t02a.jpg",%type_crossfade_fst
-
-`"----Impossible."@
-` As if dizzy, Nrvnqsr moves back.@
-`"----There is no way someone can destroy all my killing beasts.@ Such a fact is impossible……!@
-` We are immortal.@
-` As long as I live, the immortal beasts return to chaos and are reborn----so then, why do they return to the original nothingness after only being stabbed by you----!?"@
-br
-` I walk towards my screaming enemy.@
-cl c,%type_crossfade_fst
-ld c,":a;image\tachi\nero_t04.jpg",%type_crossfade_fst
-
-` Nrvnqsr tries to pull back in retreat, but stops himself.\
-
-`"----Unsightly."@
-` His previously machine-like eyes finally start to burn with crimson hatred.@
-br
-` I understand how he feels.@
-` ----Probably,
-` the killer in Nrvnqsr is ordering himself to retreat.@
-` But, the vampire in him does not allow defeat from a mere human.@
-` He doesn't understand.@
-` He doesn't even let himself withdraw.@
-` So, he does not allow himself to even take a single step back.@
-` His mind stubbornly doesn't allow him to realize his powerlessness.\
-
-` Another step forward.@
-` From here, I can jump and slice his body with my knife.@
-br
-`"----No, never----!@
-` My name is Nrvnqsr, the immortal called Chaos of the undecaying vampire race!@ It is not possible for me to look this unsightly……!"@
-cl c,%type_crossfade_mid
-
-br
-` ----His body starts to form a shape.@
-` The body which was only darkness begins to transform.\
-
-
-`"This body is immortal.@
-` I have surpassed death long ago----!"@
-` His body leaps forward.@
-` Not his beasts.@
-` Condensing all his remaining beasts to the limit, he transforms himself into the best Beast and moves in to kill me.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-
-` His speed is as fast as Arcueid's.@
-` He reaches out with arms which would pulverize my neck if he contacted me.@
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\bg\ima_14.jpg",%type_lshutter_fst
-wave se11
-
-` Dodging that, I cut the 'line' on his arm.\
-
-
-bg "image\bg\bg_29c.jpg",%type_crossfade_fst
-
-` As if unable to control his speed, he rushes past me without stopping.@
-br
-` ---The distance between us grows once again.\
-
-bg "image\bg\ima_11b.jpg",%type_nowaitdisp
-bg "image\bg\bg_29c.jpg",%type_nowaitdisp
-
-br
-br
-br
-br
-br
-br
-` ---I feel dizzy.@
-`   I can't stop shaking.\
-
-ld c,":a;image\tachi\nero_t04b.jpg",%type_crossfade_fst
-
-
-`"------What is this?"@
-` Nrvnqsr stares at his severed arm in astonishment.@
-`"What is this----!?@ Why--why does this severed part not regenerate!?@ How can such a ridiculous thing be occurring……!?@ He isn't a magus or a Burier, so how can he destroy me just by cutting me------!?"@
-
-`"----How stupid.@ If you get too concerned over appearances like that, you'll get killed, Nrvnqsr Chaos."@
-` I hear a familiar voice near Nrvnqsr.\
-cl c,%type_crossfade_fst
-
-
-`"You----!"@
-` With bloodshot eyes, Nrvnqsr stares at Arcueid standing elegantly to the side.@
-br
-` ----Oh, I see.@
-` When he ceased being only half a body, she became free.\
-
-ld c,":a;image\tachi\ark_t05d.jpg",%type_crossfade_fst
-
-`"Oh, don't worry about me.@ Shiki will take care of you.@ Right now, he would even kill me if I got in the way."@
-` A giggling voice.@
-`"It's your fault for thinking you should kill him painfully.@
-` You should kill your enemy quickly without allowing the opportunity for a counterstrike, right?@ That was your mistake."\
-
-cl c,%type_nowaitdisp
-
-
-
-ld c,":a;image\tachi\nero_t04b.jpg",%type_nowaitdisp
-`"----Silence.@ I do not make mistakes.@ I still have 560 lives remaining.@
-` …… Just wait.@ Once I kill him, I will get you once more."@
-cl c,%type_nowaitdisp
-
-ld c,":a;image\tachi\ark_t01a.jpg",%type_nowaitdisp
-`"Really?@ It won't happen, but I'll be waiting."\
-cl c,%type_crossfade_fst
-
-
-` Arcueid doesn't go near him.@
-` Nrvnqsr is only looking at me.@
-br
-` ----He's coming.@
-br
-` I brace my right hand with my left as I grip my knife.@
-br
-` Nrvnqsr crouches.@
-` It's the action of a predator preparing to pounce on his prey.\
-
-
-`"Oh, I forgot to tell you one more thing, Nrvnqsr."@
-` Her voice flows like the wind before that.@
-`"It may be a little late, but he's killed me once before."@
-`"Wh----at?"@
-` This time, it's for real.@
-` In his astonishment, Nrvnqsr loses sight of his identity.\
-
-` For a moment,
-` his entranced thoughts flow into my mind like a curse.\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-
-` ----Is this a nightmare?@
-` Kill Arcueid Brunestud?@
-` This monster, for whom even the words immortality isn't enough to describe, was killed by that human?@
-br
-` No, that cannot be true.@
-` But, wait.@ Hypothetically, if it is true…\
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-br
-br
-br
-br
-br
-br
-` ----Then,
-` just which one of us was the pretentious one?\
-
-bg "image\bg\bg_29c.jpg",%type_nowaitdisp
-`"Exactly.@ It seems the pretentious one is you, Nrvnqsr Chaos."@
-br
-`"Ku----huhu, hahahahahahaha!"@
-br
-` At the end of hatred and chaos.@
-` Nrvnqsr laughs with pleasure from the bottom of his heart.\
-
-` ----I can't wait any longer.@
-`  I start running towards my unmoving target.@
-br
-`"I see.@ You are going to kill me, human----!"@
-br
-` ----The Beast roars.@
-`   With one arm,
-`   he dashes forth to pierce my heart.\
-
-bg "image\event\nero_e04.jpg",%type_crossfade_fst
-
-
-br
-br
-br
-br
-br
-` His speed is so fast, you can't ask for any more.@
-!w750
-` A simple,
-!w750
-` efficient,
-!w750
-` motion to kill me.@
-!w750
-` A motion too beautiful.@
-!w750
-\
-
-`"------"@
-` I slice his outstretched arm.@
-` Hundreds of "points of death" are on his body.@
-` But, more than that,
-` deep inside of him, in his very center, I can see his "Ultimate Point".\
-
-` ----It doesn't matter how many lives he has.@
-` I am only going to kill the "existence" of Nrvnqsr Chaos.@
-` So, it isn't killing Nrvnqsr,
-` but the chaos which is him.@
-` I am going to kill one world-------\
-
-` I attack him head-on.@
-wave se11
-
-` A light sound of impact.@
-br
-
-` ----The knife pierces into his center.@
-br
-` Twisting his lips in a grin, the vampire laughs voicelessly.\
-br
-br
-br
-br
-br
-br
-br
-`        "This can't be."@
-\
-
-` Numbly,
-` The Black Beast starts to crumble from his fingertips.\
-
-
-br
-br
-br
-br
-br
-br
-br
-`    "------You… are my death?"\
-
-
-` His body temperature rapidly dwindles.@
-` The end is instantaneous like a dropping curtain.@
-` With this one attack,
-` along with the remaining 560 beasts, Nrvnqsr Chaos is annihilated.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-
+!w3000
 
 
 return

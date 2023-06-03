@@ -1,13 +1,11 @@
 
 
-`"…… Um…… Senpai, if you say it's a bother, then please take them off."@
-`"Is that so?@ Well, it doesn't really have a prescription, so it could be a bother, but are they alright?"@
-`"………………………………"@
-` Thinking she's making a big deal, I decide to tell her directly.@
-`"You don't have to worry about strange things……@ Um, you're going to go through so much trouble anyway-----"@
-`"Ah-------"@
-` Senpai gives a quiet reaction.@
-`"Yes…… That's true.@ Then please wait in the room."@
+`"Please wear them."@
+`"…… Tohno-kun?@ I'm sorry, I couldn't hear you very well……"@
+`"I said, please wear them."@
+` For a few seconds after my declaration,
+` only empty silence greets me from across the door.@
+`"Um…… Yes, I understand.@ Then please wait in the room."@
 ` …… I hear a knob turn and the sound of spraying water in the shower.\
 
 
@@ -35,7 +33,7 @@ br
 ` While I do that, Ciel-senpai comes out from the bathroom.\
 
 
-bg "image\event\cel_h03a.jpg",%type_lshutter_mid
+bg "image\event\cel_h03b.jpg",%type_lshutter_mid
 
 `"------"@
 ` My jaw drops down.@
@@ -186,7 +184,7 @@ br
 ` Unable to resist the temptation, I look down without thinking.\
 
 bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\event\cel_h04a.jpg",%type_lshutter_fst
+bg "image\event\cel_h04b.jpg",%type_lshutter_fst
 
 `"------"@
 ` My mind goes blank.\
@@ -245,7 +243,7 @@ bg "image\bg\bg_18c.jpg",%type_lshutter_fst
 ` Trying not to look at her, I do my best to focus on just letting it out.\
 
 bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\event\cel_h04a.jpg",%type_lshutter_fst
+bg "image\event\cel_h04b.jpg",%type_lshutter_fst
 
 `"Ah……… m, mm---"@
 ` I can hear her small breaths.@
@@ -317,7 +315,7 @@ br
 ` I push her down on the bed.\
 
 bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\event\cel_h05a.jpg",%type_lshutter_fst
+bg "image\event\cel_h05b.jpg",%type_lshutter_fst
 
 `"Ah-----"@
 ` Her face stiffens.@
@@ -451,7 +449,7 @@ bg "image\bg\bg_18c.jpg",%type_crossfade_fst
 ` …… She raises her legs off the bed.@
 ` Supporting them with my hands, I gently take my shaft and ease it into Senpai…… Ciel.\
 
-bg "image\event\cel_h06a.jpg",%type_crossfade_fst
+bg "image\event\cel_h06b.jpg",%type_crossfade_fst
 
 
 `"Nah--------!"@
@@ -684,7 +682,7 @@ br
 
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
 
-bg "image\event\cel_h07a.jpg",%type_lshutter_fst
+bg "image\event\cel_h07b.jpg",%type_lshutter_fst
 
 `"N, ah----!"@
 ` Looking away, Ciel lowers herself onto me.@
@@ -742,8 +740,8 @@ br
 ` Gently, I grab her soft yet firm cheek.@
 `"Ah…… ahn, nmm………"@
 ` Her expression changes.@
-` It's a slightly different reaction than before.@
-` With one palm still on her hip, I bring my finger down to her ass.\
+` It's a little different reaction than before.@
+` With one palm still on her hip, I bring my finger down to her butt.\
 
 ` Between those ample mounds, my finger slips through the soft, soft flesh.@
 ` And buries itself between her cheeks, lightly covering her other opening.\
@@ -841,7 +839,7 @@ bg "image\bg\bg_18b.jpg",%type_crossfade_fst
 
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
 
-bg "image\event\cel_h08a.jpg",%type_crossfade_fst
+bg "image\event\cel_h08b.jpg",%type_crossfade_fst
 
 
 ` It feels completely different.@
@@ -923,7 +921,7 @@ br
 ` I thrust once more.\
 ` My shaft penetrates deeper.\
 
-bg "image\event\cel_h11a.jpg",%type_crossfade_fst
+bg "image\event\cel_h11b.jpg",%type_crossfade_fst
 
 `"N, ah-----!"@
 ` Ciel's arms collapse.@
@@ -978,7 +976,7 @@ br
 ` Thump!@ The feeling assails me.@
 ` The feeling of spurting forth is so intense, it almost feels like I'm releasing hot magma inside of her.\
 
-bg "image\event\cel_h09a.jpg",%type_crossfade_fst
+bg "image\event\cel_h09b.jpg",%type_crossfade_fst
 
 `"Ah---aha, ahh---I, I-----!"@
 br

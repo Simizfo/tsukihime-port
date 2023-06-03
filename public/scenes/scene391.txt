@@ -3,202 +3,227 @@
 
 
 
+mov $phasebg,"image\bg\bg_47.jpg"
+mov $phasetitle_a,":a;image\word\PHIS_06A.PNG"
+mov $phasetitle_b,":a;image\word\day_06.png"
+gosub *left_phase
 
 
-bg "image\bg\bg_40c.jpg",%type_lcartain_mid
-play "track01.ogg"
 
 
-` ---After dinner, I return to my room.@
+
+bg "image\bg\bg_40a.jpg",%type_tshutter_fst
+waveloop se1
+
+quakey 2,10
+
+`"Ah-------!"@
 br
-` It's ten at night.@
-` Since I had tea with Akiha and the others after dinner, it's already time for bed.\
-
-`"Nnn……"@
-` I'm not really tired, but my body feels sluggish.@
-` It seems like I've finally gotten used to life in this mansion.@
-` Expressionless Hisui, bright and cheery Kohaku, and Akiha, who worries over me constantly.@
-` …… Certainly, getting used to this lifestyle… is fun.@ It seems like I've returned to the me that existed eight years ago.\
-
-` I never had a chance to relax this much when living with the Arimas.@
-` The Arimas have a child in middle school as well, but we were always distant and we never really had a chance to talk.@
-`"Nnn…… I really am sleepy."@
-` Changing into my pajamas, I lie down in bed.@
-
-bg "image\bg\bg_40d.jpg",%type_nowaitdisp
-
-
-` I'll go to bed early, wake up early, and give Akiha quite a surprise---\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-playstop
-
-!w3000
-
-waveloop se10
-
-bg "image\bg\bg_25b.jpg",%type_nowaitdisp
-
-
-`"----Huh?"@
-` All of a sudden, I find myself in town.\
-
+` Ah-------.@
 br
-br
-` Midnight.@
-` I walk through the empty town.\
+` I gasp for air.@
+` It's---morning… now.@
+` This is my room.@
+` Up until now, I've been here,
+` just like this,
+` and I should have been sleeping---------\
 
-bg "image\bg\bg_26a.jpg",%type_crossfade_mid
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_31b.jpg",%type_nowaitdisp
+
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
 
-` I pant heavily.@
-br
-` For some reason, I'm out of breath.@
-` I.@
-` With bloodshot eyes, I am looking at people walking down the street.\
+`"Ahh……"@
+` My forehead is hurting.@
+`"Dre…… am."@
+` I had a terrible dream.@
+` A dream where I killed someone.@
+` A dream where I ejaculated over and over as I killed.\
 
-br
-` Foolish people.@
-` Walking the streets so carelessly even though the killer has not been caught.@
-br
-` ----Do they think that they're special and won't get killed?@ Or maybe, they want to die but are unable to kill themselves and want someone to kill them?@
-br
-` Well, it's probably the latter.\
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
-br
-` ---A group of people that I don't know continues to walk by.\
 
-` That's not the person.@
-` That's not the person.@
-` That's not the person.@
-br
-` I diligently stare at them one by one, but shake my head.\
+`"Ho…… t…"@
+` My throat is burning.@
+` My body feels like lead, and my hands…
+` The feeling of breaking someone's neck still lingers on my hands.\
 
-br
-br
-br
-br
-br
-br
-` That's not the person.@
-` That's not the person.@
-` That's not the person.@
-br
-` I still can't find that person.\
-` I definitely heard what this person looks like, but I can't seem to find that person.\
+`"That… can't be."@
+` That can't be.@
+` That was a dream.@ Unmistakably a dream.@
+` But are dreams really that vivid?@
+` I remember it so vividly.@
+` The street in the dead of night,
+` the feeling of snapping someone's neck,
+` the stickiness of blood gurgling down my throat,
+` the face of the woman so cruelly killed-----\
 
-#ff0000
-`   I'm   getting  a little   annoyed.@
-#ffffff
-br
-`                      Not here.\
-`     Not here.@
-`                 Not here.@
-` Not here.@
-`         Why.@
-`    Not here.@
-`            Not here.@
-`                       Not here.@
-`   Not here.\
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
-` I start panting even more.@
-br
-` It's really ticking me off.@
-` Why isn't that person here,
-!w500
-` why isn't that person here,
-!w500
-` why isn't that person here,
-!w500
-` why isn't that person here,
-!w500
-` why isn't that person here,
-!w500
-` why isn't that person here-----!?\
 
-`"Ku-----haha, ha."@
-br
-` I've decided.@
-` Tonight, I'll change my plan.@
-` Anyone will do.@
-` If I can kill, anyone will do.@
-` Once more.@
-` Once more, I want to taste that wonderful sensation----\
+` But it's merely a dream.@ Since I'm here, it had to have been a dream.@
+` But the problem is…
+` I am dreaming that I am having fun killing people.\
 
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-
-bg "image\bg\bg_26a.jpg",%type_crossfade_fst
+bg "image\bg\ima_08.jpg",%type_crossfade_fst
 
 
 br
-` ---There.@
+` ---You and I are the same, Shiki-kun.@
+!w1000
+bg "image\bg\bg_25b.jpg",%type_crossfade_fst
+
+
 br
-` A girl with long hair walks by.\
+` Before my eyes, the world starts spinning.@
+bg "image\bg\ima_13b.jpg",%type_crossfade_fst
 
-`"Aki, ha!"@
-` Yeah, that is Akiha.@
-` Akiha.@ Akiha.@ My sister.@ My beautiful sister, only mine.@
+
 br
-#ff0000
-`       That is what I want.@
-#ffffff
-br
-` My sister, only mine.@
-` She is definitely mine, and mine only.\
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-
-bg "image\bg\bg_30b.jpg",%type_nowaitdisp
-
-
-` I kill her from behind, taking care not to damage her body.@
-` Holding her long hair, I drag her body.\
-
+` ---Someone who can't resist the pleasure from killing.@
+!w1000
 bg "image\bg\bg_31b.jpg",%type_crossfade_fst
 
 
-` Heavy breathing.@
 br
-` Biting into her neck, I suck her blood.@
-br
-` -----My breath becomes wild.@
-br
-` This murder is different than the others.@
-` Akiha.@ Just thinking this is Akiha makes it feel so wonderful.@
-` My brain becomes numb.@
-` I get fully aroused.\
+` And that crazy speed.\
 
-br
-br
-br
-br
-br
-` As I suck her blood,
-` sucking every last drop of blood, I ejaculate over and over.\
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
-`"H------huh?"@
-` When it's all over, I realize it.@
-`"…… Who is this person?@ This isn't Akiha at all……!"@
-` I'm angry.\
-` Even though I slice the body into pieces, I'm still mad.@
-` Impostor.@
-` This impostor is pissing me off.\
+!w1000
+wavestop
+play "track02.ogg"
 
-` *pant*----*pant*----*pant*----
-` I've used up extra energy.@
-` The night isn't that long.@
-` Once it becomes morning, Shiki will awaken.@
-br
-`"I'm tired tonight.@ I'll start again, tomorrow."@
-` Yeah, that'll do.@ That's what I'll do.@
-br
-` Now then.@
-` Before the morning comes, before anyone realizes, I must go back to my own bed----\
+` "Excuse me," Hisui says as she enters the room.@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
+
+`"Good morning.@ It seems that you have already awakened, Shiki-sama."@
+`"……… Ah.@ Morning, Hisui."@
+` The world stops spinning.@
+` As soon as Hisui spoke, the whirlpool I was trapped in disappeared like an illusion.\
+
+!w2000
+ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+
+`"…… Shiki-sama?"@
+`"Eh-----what is it, Hisui?"@
+`"How are you feeling this morning?@ You are not saying anything."\
+`"…… Ah, sorry, I was just staring at you.@ I understand; I have to go to school.@ I'll go to the sitting room right away, so wait for me there."@
+
+ld c,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
+
+`"Shiki-sama.@ If you are not feeling well, please do not push yourself.@ Your health is more important than school."\
+
+`"Haha, no way, Hisui.@ I can't skip school.@ It's nothing---really.@ So don't spoil me like that."@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"No, please rest.@ I will tell Akiha-sama so please rest."@
+` Hisui is unusually persistent.@
+` …… Does my face look that haggard?@
+`"Hisui, you worry too much.@ It really is nothing at all, so don't worry about it… I'll just wash my face, so please wait for me in the sitting room."\
+
+cl c,%type_lshutter_fst
+
+` Getting out of bed, I walk past Hisui, who seems like she wants to say more.@
+
+ld c,":a;image\tachi\his_t07.jpg",%type_lshutter_fst
+
+` Leaving the room,
+` it is a little painful seeing Hisui watch me with such uneasiness in her eyes.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
-wavestop
 
-!w3000
+
+` I look in the mirror in the bathroom.@
+`"…… I don't look like I'm sick.@ Why is Hisui worrying so much?"@
+` I splash cold water onto my face.@
+br
+` ---Just thinking about the dream I had last night makes me want to puke and not go to school.@
+br
+` But if I stay home from school because of that, that will just be like confirming something, which makes me feel uneasy.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_34a.jpg",%type_lcartain_mid
+
+` Akiha and Kohaku-san are in the sitting room, and Hisui is standing nearby.@
+` As usual, I'm the last one to enter the room.\
+
+ld l,":a;image\tachi\koha_t01a.jpg",%type_lshutter_fst
+
+`"Ah, good morning, Shiki-san."@
+
+ld r,":a;image\tachi\aki_t15a.jpg",%type_lshutter_fst
+
+`"No way!?@ It isn't even six-thirty yet!"@
+` Kohaku-san looks towards me with a soft smile while Akiha gets up from the sofa and gapes at me in surprise.\
+
+`"Good morning, Kohaku-san, oh, and Akiha too."@
+
+ld r,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
+
+`"Wha… What do you mean, 'Akiha too?'"@
+`"Well, 'Akiha too' means 'Akiha too'.@ That should be enough for someone who's so surprised to see me get up early when you tell me to get up early every day."@
+
+ld r,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+`"----I see.@ Nii-san, you wake up early for once and now you triumphantly walk around with your head held high."@
+`"Head held high, Akiha---"\
+
+br
+br
+br
+br
+` Head.@ Neck.@
+` Neck……?@
+` I remember the sensations from my dream and feel like vomiting.\
+
+`"…… Sorry, Kohaku-san.@ I don't mean to be a bother, but could you get me something cold to drink before I eat?"@
+ld l,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+`"Not at all.@ Would you like soda or fruit juice?"@
+`"Ummm, I'll have a soda please."@
+`"Coming right up."@
+
+cl l,%type_lshutter_mid
+
+` Kohaku-san disappears towards the kitchen.\
+
+ld r,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"…… Nii-san?@ You're not arguing back.@ Are you feeling alright?"@
+`"…… Geez.@ You and even Hisui, what do you think I am?@ I just woke up early and my throat is dry, there isn't anything wrong with me…!"@
+` Trying to resist the urge to vomit, I shout back.\
+
+ld r,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"…… I'm sorry, Nii-san.@ But there is obviously something wrong, and I want to help."@
+`"Ah---no, that's not it.@ The fact that you're worried about me makes me really happy.@ I just had a really bad nightmare last night and my mind is elsewhere, that's all.@
+` …… I'm sorry, Akiha.@ I'm the one who should apologize."@
+
+cl r,%type_lshutter_fst
+
+` I sit down on the sofa.@
+` I know that something's wrong with me, but I can't do anything about it.\
+
+ld c,":a;image\tachi\aki_t12a.jpg",%type_lshutter_fst
+
+
+`"Nii-san, is there something bothering you?@ If it's something to do with this mansion, please tell me, and I'm sure I can be of help…"@
+`"No, it isn't that I'm not used to living here---"@
+
+cl c,%type_lshutter_mid
+
+` …… That's right.@
+` Maybe if I ask her indirectly, it might help me feel better.@
+br
+` I decide to---
+
+
 
 
 

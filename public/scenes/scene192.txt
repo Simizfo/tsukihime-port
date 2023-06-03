@@ -1,21 +1,68 @@
 
-bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+` ----I'll go to Arcueid's room.@
+br
+` If Arcueid is as weak as Senpai says, she had to have returned to her room to rest.\
+
+bg "image\bg\bg_12b.jpg",%type_lcartain_mid
+
+` I gasp for air.@
+` My legs, which ran as hard as they could, finally stop.@
+` Trying to catch my breath, I enter the apartment.\
+
+bg "image\bg\bg_13b.jpg",%type_lcartain_mid
+
+` …… I grab the doorknob.@
+` It isn't locked.@
+` Without hesitating, I turn it and open the door.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+bg "image\bg\bg_15b.jpg",%type_crossfade_mid
 
 
-` …… I'll stay here.@
-` We promised.@ We promised to meet here.@
-` We still haven't fulfilled our promise for tonight.@
-` To meet here, and to fight together.\
+` …… Even though it wasn't locked, there's no one here.\
+br
+`"Arcueid…… are you here?"@
+br
+` There's no response.@
+` Does she never lock her door?@ There's no sign of her having even returned here.\
 
+`"Damn…… Then she's still in town……!?"@
+` I hit the wall.@
+` But letting it out on the wall is not going to get Arcueid to come out.@
+`"…… Where did you go…… where did you go, Arcueid……!?"@
+br
+` ------If there really is a God, I want to ask him for help.\
+
+` Arcueid isn't here.@
+` But I can't find her just running around aimlessly.@
+` At this rate I'll never----never see her again.@
+br
+`"------"@
+` No, I'm not done yet.@
+` I still haven't fulfilled my promise with Arcueid.@ The promise to help her defeat the vampire, and the promise to meet tonight so we can fight together.\
+
+`"…… Pro…… mise……"@
+` …… That's right.@ There's still our promise.@
+` Even if it's just one-sided, I----even if it's just me, I'll fulfill our promise.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_29b.jpg",%type_lcartain_slw
+
+` I return to the park.@
+` Our promise still remains here.@
+` Our unfulfilled promise for tonight remains here.@
+br
 ` ----So,
 ` If I can't break this promise, and if she thinks it's important too,
 br
 ` Arcueid will come back here.@
 ` I can only continue to believe in her and wait here.\
 
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-!w3000
-
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
 
 
 

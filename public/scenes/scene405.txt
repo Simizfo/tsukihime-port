@@ -2,369 +2,451 @@
 
 
 
-bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
-
-` --------It's not enough.@
-br
-#ff0000
-` *pant* *pant* *pant*
-#ffffff
-
-br
-` I'm out of breath, but…
-` It's not even close to being enough.@
-` Being done this much.@
-` Being done this much by Hisui, I can't let it end now.\
-
-`"---Shiki-sama……?@ You should be able to move your body now……"@
-`"-----"@
-` Hisui comes a little closer.@
-` Her face sets it off.@ Pulling on her arms, I yank her onto the bed.\
-
-`"Ah---Shi, Shiki-sama, what are you……!"@
-`"What does it look like?@ After doing all that---are you going to say no, Hisui?"@
-`"N, No……!@ I was just trying to help you, and---"@
-` Hisui tries to escape.@
-` But that doesn't last very long.@
-` With her back against the pillow, she realizes that she can't move back any further.\
-
-` ----Thump.@
-` My heart races.@
-` All my blood vessels are ordering me.@
-#ff0000
-
-` VIOLATE HER
-#ffffff
-
-` Do it.@
-` These words echo in my head.\
-
-`"It's hot---I'm so hot I could die, Hisui."@
-`"No……!@ Please calm down, get a hold of yourself, Shiki-sama……!"@
-br
-` ----Thump.@
-br
-` It's impossible.@
-` What made me this way,
-!w750
-` what did this to me,
-!w750
-` what I now want,
-!w750
-` what made me want it?@
-!w750
-br
-` All of it… is what Hisui did to me.\
-
-#ff0000
-
-
-` *pant* *pant* *pant* *pant*----
-#ffffff
-
-br
 
 bg "image\bg\ima_11b.jpg",%type_nowaitdisp
 bg "image\bg\bg_40a.jpg",%type_nowaitdisp
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
 
 
-`"Sto…… Please stop, Shiki-sama……!"@
-` I can hear her voice.@
-` But… her voice… has the opposite effect.@
-`"Hisui----!"@
-` And just like that,
-` I get on the bed and keep her from escaping.\
+`"-----"@
+` I have a headache.@
+` …… I don't quite understand how, but what I did with Hisui helped me regain some of my strength.@
+` But in exchange, my headaches have gotten much worse.@
+wave se3
 
-play "track06.ogg"
+` …… I hear a knock at the door.@
+` It's probably…… Kohaku-san, I suppose.\
 
-bg "image\event\his_h03.jpg",%type_crossfade_mid
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
+play "track09.ogg"
 
-`"N, Hwa……!"@
-` Hisui's voice is bewildered, and her body starts to shake.\
+`"Please excuse me, Shiki-sama."@
+`"---------Eh?"@
+` The one who came was Hisui.@
 
-` I don't care about foreplay.@
-` I tug her clothes out of the way and thrust my burning organ into her.@
-` …… She is somewhat wet from before, so I slide in rather easily.@
-br
-` The sound of me burying myself in Hisui's tender body is like ripping meat.\
-
-`"A---n, n…… ah………"@
-` Hisui doesn't even resist.@
-` All she does is surrender herself shamefully, blushing brightly as I start to move.@
-`"…… This is wrong, Shiki-sama…… If… Akiha-sama finds, out----"@
-` Even though she refuses me with her words, her body tells a different story.@
-` She lifts her skirt so it won't get dirty, and, in my mind, to give me better access.\
-
-`"I don't care---you… are the only one… right now---"@
-` I thrust even deeper.@
-` I continue to bury myself in her.\
-
-`"Nn-----!"@
-` Hisui's legs start to shake.@
-`"Nn…… Ah, it's coming in……"@
-` As if they are not hers, Hisui lifts her legs and stares at where we are connected.\
-
-`"Ah---"@
-` Deeper… Deeper.@
-`"It's hot…… Hisui, inside of you…… so hot……"@
-` This isn't figurative.@
-` Her passage is really, extremely hot.@
-` She tightens around me.@
-` Her muscles squeeze me tenderly, and her contractions draw me deeper and deeper.\
-
-`"U----,……!"@
-` As if to resist, I start to pull back, then push back in.@
-`"Nnn---!@ Shiki-sama, there!"@
-` Hisui's hips start to float.@
-` Her insides tighten even harder.@
-` Her tender contractions become softer and pull me even deeper.\
-
-`"Ha----wait, Hisu… i----"@
-` Strange.@
-` Hisui's insides are… terribly strange.@
-`"Ho…… t, it's so hot, yet---?"@
-` It feels so good.@
-` It almost feels as if countless fingers are caressing me.@
-` Those fingers are hot, delicate, and moving as if wrapping around every millimeter of me.\
-
-`"K----aah."@
-` I don't even need to thrust.@
-` Just being inside her gives me pleasure enough.@
-`"A---Shiki… sama…… please, move……"@
-` She whispers as if ashamed.@
-br
-` ----Thump.@
-br
-` My heart starts to throb.@
-` That's right.@
-` I'm the one who said it wasn't enough.@
-` This ordinary pleasure is not enough.@
-` If this is enough pleasure right now, then there should be pleasure beyond imagination in what lies ahead.\
-
-`"Ha---a, k---"@
-` I move my hips.@
-` Fighting against Hisui's tightness inviting me in to her depths, I pull out, then thrust back in.@
-`"Nn……!"@
-` Hisui's body starts to pull away.@
-` In response, my body presses harder.\
-
-` Sliding… sliding.@
-br
-`"Ha---n, na, ah, ah……!"@
-` Sliding on her juices, I thrust again and again and again.@
-` Her hips glide with mine.\
-
-`"A--hwa, ah, Shiki… Sa---n……!"@
-` She tries to take me in completely.@
-`"K, haa, ah, aa----ah."@
-` Her swaying hair.@
-` Her eyes, drenched with passion.\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-
-bg "image\event\his_h03.jpg",%type_crossfade_fst
+cl c,%type_lshutter_fst
 
 
-`"---Ah, aah, ah."@
-` My hips rock back and forth.@
-` I can think of nothing else.@
-` Once.@ I start to feel everything well up inside me and I hold it back.@
-` Twice.@ Even as I resist, Hisui tightens her hold on me.@
-` Three times.@ Hisui's insides even take away my will to hold back.\
-
-`"Ha---ah, ah."@
-` I don't even know whose voice is whose.@
-` Only for the time being,
-` I am literally drowning in Hisui's body.\
-
-#ff0000
-
-br
-` *pant* *pant* *pant* *pant*
-#ffffff
-
-bg "image\event\his_h14.jpg",%type_nowaitdisp
-bg "image\event\his_h03.jpg",%type_nowaitdisp
-
-br
-`"…… No, that's wrong……!"@
-` This isn't like that.@
-` I'm just doing this because I love her.\
-
-bg "image\event\his_h14.jpg",%type_nowaitdisp
-bg "image\event\his_h03.jpg",%type_nowaitdisp
-
-
-`"Definitely---"@
-` I start to forget myself as I thrust.@
-`"Definitely,"@
-` Within her depths, I can forget what I am, so I keep thrusting.@
-`"Definitely, I am---!"@
-`"Na……!"@
-` Hisui's head falls back.@
-`"Ha,a----!@ Shiki-sa… ma---it… hurts……!"@
-`"I'm different!@ Different!@ Different……!"@
-` I keep thrusting.@
-` Hisui's body shakes uncontrollably.\
-
-`"St---Sto… p, please Shiki-sama……!@ If this, keeps up, I'll---!"@
-` I can't hear her.@
-` Lost in this pleasure.@ The heat of pre-climax.@
-`"N, a, Aa……!@ Stop, please, this……!"@
-` Hisui's back begins to arch.@
-` Her arms reach out, and she tries to push me away.\
-
-` ---Thump.@
-br
-`"Not done yet……!@ You started this, so why----!?"@
-` I don't care.@
-` I don't care if I break her.@
-
-bg "image\event\his_h14.jpg",%type_nowaitdisp
-bg "image\event\his_h03.jpg",%type_nowaitdisp
-
-` My mind is burning.@
-` Burning.@ Flaring.@ Erupting.@
-` Frying.@ Roasting.@ There is nothing left.\
-
-`"Shiki, Shiki-sa---please, stop……!"@
-` *pant* *pant* *pant*
-` Thrust, thrust, thrust.@
-` Hisui keeps struggling.@
-` But I keep thrusting.\
-
-`"Ha-----a, n…… ah-----"@
-` She stops trying to push me away.@
-`"Haa…… haha, hahaha, ha……!"@
-` Hisui collapses, powerless.@
-` She welcomed me so eagerly before, but now lies exhausted and twitching on the bed.\
-
-`"…… Sto…… p…… please, forgive… me……"@
-` A weak, faltering voice.@
-` And then,
-#ff0000
-
-` Ha HAHAHA HAHAHAHAHAHA
-#ffffff
-
-` I shiver.@
-` An order enters my brain.\
-
-
-`"Fine, I'll end it right here---drink up, Hisui……!"@
-` I pull out of her.@
-` She drips fluid all over as I pull my rock hard cock out of her abused hole.\
-
-
-bg "image\event\his_h04a.jpg",%type_crossfade_mid
-
-
-`"Here, you like it, don't you……!"@
-` Tearing back her clothes, I expose her small breasts.@
-` I start to rub myself between her perfectly shaped mounds.\
-
-`"Nn-----!?"@
-` I push on the back of her head and make her swallow it.@
-`"Ha,n,nnn----!"@
-` This is entirely different from before.@
-` Dripping and mixed with her love juices, I thrust it into her mouth.\
-
-`"A---n, No……!"@
-`"Here I come, Hisui……!"@
-` The sensation shoots along my body.@
-` Squeezed between her breasts, I release the heat that was boiling inside of me.\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-
-bg "image\event\his_h04b.jpg",%type_crossfade_mid
-
-`"Na----!"@
-` I shoot it into her face.@
-` My squirting come splatters onto Hisui.\
-
-`"A---ha, ha……!"@
-` Holding back tears, Hisui spits out what was in her mouth.@
-` She sticks her tongue out, showing it to be painted an impure white.@
-` Erotically, some of our mingled fluids trickle from the corner of her lips.@
-`"A…… ha, a------"@
-` Hisui is drained of all energy.@
-`"Ha…… Haa…… ha."@
-` It looks like I can still move.@
-` Not being able to resist, Hisui becomes a doll which I hold onto as I move.\
-
-
-` My tool still moves around.@
-br
-`"Ha…… A, ah."@
-` Still… overflowing.@
-` The sticky whiteness continues to pour.@
-br
-`"A-----ha."@
-` It flows from her breasts and dirties even her neck.\
-
-`"----Ha."@
-` And… it is completely finished.@
-` Both my lust and the whirlpool of energy that was flowing in my body.@
-` As if my earlier recovery never happened, my body once again returns to its pitiful state.\
-
-
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-playstop
-
-
-
-bg "image\bg\bg_40a.jpg",%type_crossfade_mid
-
-
-
-`"…………"@
-` My body… does not move.@
-` …… I'm able to move a little bit, but the aliveness I had before disappears.@
-` …… Probably because I climaxed so hard.@
-` It seems that the energy I gained was sucked up by Hisui.\
-
-ld c,":a;image\tachi\his_t20.jpg",%type_lshutter_mid
-
-`"------"@
-` Hisui straightens her clothes and moves away from the bed.@
-` I---can't say anything to her.@
-` Even though I was so excited---I did such terrible things to her.@ There's no way I can give her any justification.\
-
-`"…… Hisui…… I"@
-`"Shiki-sama.@ Let's forget about this."@
-`"---But Hisui, I"@
-`"I've already forgotten about it.@ So… please do the same, Shiki-sama."@
 `"-------"@
-` I don't know how to respond.@
-` I don't have words to apologize to her, and I don't have the words to thank her either.\
+` Hisui wordlessly performs her usual check-up.@
+` Because I haven't slept today, I'm not bleeding.@
+` I'm not using an IV, so after taking a few measurements and changing the sheets, she gives me some water and medicine.\
 
-ld c,":a;image\tachi\his_t16b.jpg",%type_crossfade_mid
+`"-------"@
+` The whole time, there is nothing but silence between us.@
+` …… After doing what I did, I can't look at her in the face.@
+` I think Hisui is like that too, but Hisui probably still dutifully and methodically carries out all her normal tasks because of her role as a servant.\
 
-`"Well then, please excuse me.@ I'm repeating myself, but please don't tell Akiha-sama or my sister about this."@
+` And all of a sudden.@
+
+ld c,":a;image\tachi\his_t02.jpg",%type_lshutter_fst
+
+`"Shiki-sama, how is your body's condition?"@
+` She talks to me.@
+`"Um, I, uh-----"@
+` As far as my condition goes, I can move a little more than before because of what happened earlier, but---
+
+ld c,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
+
+`"Shiki-sama, is there something the matter?@ Your face appears very red."@
+`"My, my face is red… because---Hisui, you…"@
+`"Yes?@ What did I do?"@
+` Hisui tilts her head to the side questioningly.\
+
+`"Uh-----"@
+` Damn it, I can't just say it.@
+` And I still haven't been able to apologize for before.@
+`"That is, I…… I'm sorry about before.@ You must have been embarrassed to do it, but I treated you a bit rough."@
+
+ld c,":a;image\tachi\his_t20.jpg",%type_crossfade_fst
+
+`"Ah…………"@
+` Hisui lowers her gaze as if embarrassed.@ I suppose she remembers now.@
+br
+` ----I guess that's not the reason.\
+
+ld c,":a;image\tachi\his_t02.jpg",%type_crossfade_fst
+
+`"…… Do not worry, Shiki-sama.@ I must apologize as well, for doing that to your body without asking.@ It is only natural if you end up hating me."@
+`"Wha---hate you?@ I have no reason to hate you……!@ No matter what happens, I won't hate you.@ …… Besides, it is only natural if you end up hating me."@
+cl c,%type_crossfade_fst
+
+` My whole body becomes heavy as I say this.@
+` Even though I'm the one who said it, it should be about time Hisui is getting tired of hearing me.\
+
+` I bet she's remembering what happened before and hating me even as I speak…… Huh?@
+
+ld c,":a;image\tachi\his_t14.jpg",%type_lshutter_mid
+` …… That's odd.@
+` Why is Hisui smiling so happily?@
+`"…… Hisui.@ Why, are you smiling?"@
+`"Shiki-sama, your words and mine were the same.@ I thought it was amusing."@
+` Hisui giggles, as if it is really funny.\
+
+` …… My head starts spinning.@
+` Hisui's rare smile is so cute, I'm about to go crazy.@
+
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\his_t29.jpg",%type_crossfade_fst
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
+
+
+` That might be why.@
+` Her smile looks incredibly scary to me.\
+
+`"…… Anyway, I haven't said thanks yet.@ Thank you for before, Hisui.@ …… The, method was a little problematic, but thanks to you my body is better.@ I may even be able to walk a little."@
+
+ld c,":a;image\tachi\his_t03.jpg",%type_crossfade_fst
+
+`"Eh---ah, yes.@ Even though what I did is a small thing, I am happy that I could be of some use."@
+` Hisui looks at me directly.@
+` …… Seeing her like that makes me remember what happened, and I start to get a little uncomfortable.\
+
+`"…… But, about before, I don't think it was really appropriate.@ I'm happy, but it's not quite right."@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"…… Not quite, right?"@
+`"Yes.@ That's, something that both parties should agree to… and even though you're a servant, you don't have to go that far…"@
+
+ld c,":a;image\tachi\his_t08.jpg",%type_crossfade_fst
+
+`"I understand.@ As you say, I will ask for your permission before I touch you next time."@
+` …… No, you're missing my point…
+
+ld c,":a;image\tachi\his_t16.jpg",%type_crossfade_mid
+
+`"Please excuse me.@ If anything happens, please call for me, Shiki-sama."@
 
 cl c,%type_lshutter_mid
 
-`"A………"@
-` Hisui leaves, or rather, escapes the room.@
-` …… But that's understandable.@
-` After going through that, she probably doesn't want to be in this room for even a second longer.\
+` Hisui walks out of the room.\
+
+`"…… She's really calm……"@
+` I'm a bit taken aback.@
+` Just seeing Hisui's face makes me blush, but Hisui acted just like she always does.@
+`"…………"@
+` I don't get it.@
+` Something doesn't feel quite right and lingers in the back of my mind.\
+
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+playstop
+
+!w2000
+waveloop se1
+
+!w3000
+
+monocro #fffff0
+bg "image\bg\bg_40b.jpg",%type_crossfade_slw
+
+
+`"A------"@
+` When I open my eyes, the day has already passed.@
+` …… It seems I fell asleep, but I don't remember when.\
+
+` *pant* *pant* *pant* *pant*
+br
+` My breathing is ragged.@
+` My body is burning.@
+` My body.@ My body feels like it's roasting, erupting into flames.\
+
+`"…… Wa…… ter……"@
+` My throat is thirsty.@
+` It's so hot, I can't even speak.@
+` I can't even call for Hisui or Kohaku-san.@
+`"………"@
+` My empty room.@
+` I start to feel down staying in this room for so long.@
+` This restless room.@
+` This room I don't remember.@
+` …… This room, it feels, like it isn't my room.\
+
+`"…… Wa…… ter……"@
+` I'm thirsty.@
+` Water.@ I should go back to my house, and quickly, get some water to drink.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+bg "image\bg\bg_46b.jpg",%type_crossfade_fst
+
+` I gasp for air.@
+br
+` Placing my hand on the wall and feeling like I'll collapse any second, I manage to drag myself out of my room.@
+br
+` I have trouble breathing.@
+br
+` …… What is this?@ I haven't even walked thirty feet and already my heart feels like it will explode.\
+
+` I need more air.@
+br
+` Still, I have to go.@
+` I might die if I walk anymore.@
+` But if I don't get any water to drink, I'll probably die anyway.@
+` Then, I'll walk and go get some water.@
+` I can't just stay and lounge on my bed forever.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_42b.jpg",%type_crossfade_mid
+
+
+` *pant*…… *pant*…… *pant*……
+br
+` I go out into the courtyard.@
+` Water----this, isn't, the kitchen though.@
+br
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_54b.jpg",%type_crossfade_fst
+
+
+` ……… *pant*……… *pant*
+br
+` I enter the woods.@
+` …… Soon.@
+` Soon, I will be able to be at a place with water, a familiar place.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_44a.jpg",%type_crossfade_mid
+
+` *pant* ………… *pant*
+br
+` With the fever getting to me, I arrive at the place.@
+` White, sunshine.@
+` Even though the day is already ending, the entire world is white.@
+` This place is burning hot like a desert, and I squint my eyes since the world is so white.@
+br
+br
+` …… Thud.@ I hear a noise.@
+` …… It comes from the detached house.@
+` …… Someone.@
+` …… Someone's inside?\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\bg_45b.jpg",%type_crossfade_fst
+
+
+` Opening the sliding door very slightly, I peer in from the porch.@
+` Inside, I see the figures of Akiha and Kohaku.@
+` They look a little strange.@
+` I hear the swishing of an obi being removed.@
+br
+` -----What…?@
+br
+` Without a word, Kohaku pulls down her kimono and bares her breasts.\
+
+monocro off
+bg "image\event\aki_h13.jpg",%type_lshutter_mid
+
+
+` Kohaku stands there with a blushing face, but does not move.@
+` Akiha presses her lips against the bared white chest.@
+br
+` Tension.@
+br
+` Kohaku looks down at her bare chest, and Akiha crouches so that she is burying her face in Kohaku's breasts.@
+` A thin red drop makes a line down her breast.\
+
+` Akiha's throat starts to move, swallowing something.@
+` What---what is she drinking?@ There's no need to ask; I already understand.@
+br
+` Akiha, she's drinking, Kohaku's blood----\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+
+bg "image\event\aki_h13.jpg",%type_nowaitdisp
+
+` …… I feel dizzy.@
+` My mind goes blank.@
+` All I can do is stare at the strange event happening before my eyes, like in a daydream.@
+` Suddenly, Akiha opens her mouth with her arms still around Kohaku.\
+
+`"About the killer…… what do you think, Kohaku?"@
+`"Let's see.@ I think there can be no mistake that it's the work of SHIKI-sama."@
+br
+` ----What.@
+br
+`"I---I suppose so.@ I have no idea how he can walk around with that body, but we can't leave him alone.@ The impurity of the Tohno blood that has awakened must be cleansed by those of the Tohno blood."@
+br
+` ----Just, what are they saying?\
+
+`"Then, Akiha-sama."@
+`"Yes.@ As the head of the Tohno family, I will kill my brother."@
+br
+` ----Those words send chills down my spine.@
+br
+` Akiha isn't playing around.@ Even Kohaku-san nods seriously.\
+
+`"Then, Akiha-sama.@ We should let Hisui-chan know about this too."@
+`"You're right.@ …… But we shouldn't need her help.@ My brother can't move around as he likes, so we should be enough to kill him."@
+br
+` ----*pant* *pant* *pant*
+` My breathing gets out of control.@
+br
+`"You understand, Kohaku?@ Don't let Nii-san pick up on any of this.@ It will all be over in a few days, so let's not trouble him."@
+`"Yes, I understand.@ He can't even move from his bed by himself, so he will never find out."\
+
+` -----*pant* *pant* *pant*
+br
+` My fingers shake uncontrollably.@ Nausea permeates my being and I almost pass out.@
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+br
+` But, I can't pass out here.@
+br
+` -----I have to get away.@
+br
+` If I pass out here, I'll surely be killed.@
+` If they find out I was watching them, they'll kill me right here.\
+
+` I struggle for breath.@
+` …… I don't understand.@
+` I don't understand why they would want to kill me.@
+` Even my brain trying to understand doesn't work because of the fever.@
+` …… I don't understand.@
+` This, has to be a bad dream.\
+
+br
+br
+br
+br
+br
+br
+` ----------Dream
+`         Dream----------?\
+
+` Yes, this is a dream.@
+` Like always, this has to be just another one of my nightmares.@
+` Then, I have to wake up quickly.@
+` Before this horrible vision consumes me, I have to wake up and return to my normal life----\
+
+monocro off
+wavestop
+
+
 !w2000
-bg "image\bg\bg_40a.jpg",%type_crossfade_fst
+bg "image\bg\bg_40b.jpg",%type_lcartain_slw
+
+play "track01.ogg"
+
+`"Ah-----"@
+` …… Somehow, I make it to my room.@
+` Now---yes, now I, should lock the door--
+br
+ld c,":a;image\tachi\his_t12.jpg",%type_lshutter_fst
+
+`"Shiki-sama."@
+`"-------"@
+` …… I don't know how long she has been there, but Hisui is standing in my room.\
+
+ld c,":a;image\tachi\his_t13.jpg",%type_crossfade_fst
+
+`"What are you doing?@ In your condition, walking is very dangerous."@
+`"Hi…… sui."@
+`"Please, lay down.@ If you push yourself, Akiha-sama will scold me."@
+`"Akiha…… will scold……?"@
+br
+` Why would she get in trouble if I went outside?@
+` …… No, I understand perfectly.@
+` Akiha realizes that I'm the killer.@ So she plans to lock me in my room, and when night comes, kill me.\
+
+`"----Please leave, Hisui."@
 
 
-` …… It's two o'clock.@
-` Even though it's time for my checkup, Hisui probably won't come.@
-` *sigh*@
-` All I can do is sigh.@
-` How did all of this happen?@
-` Even though Hisui started it and my body got so excited, I didn't have to force her down and treat her that roughly.\
+`"Shiki-sama……?"@
+`"I won't let anyone in this room.@ Even you, no one will ever come in again……!"@
+
+ld c,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
+
+`"Shiki-sama---kyaa!"@
+
+cl c,%type_lshutter_fst
+
+` I don't know where I got the strength, but I push her out into the hallway.@
+` Then, I shut the door and lock it.\
+
+`"Shiki-sama---!?@ Shiki, sama, please open the door, Shiki-sama……!"@
+` She knocks on the door.@
+` Ignoring it all, I crumble to the floor.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w3500
+
+wave se0
 
 
+br
+` ----Pai, n.@
+br
+` It sticks inside my brain.@ The poison permeates every pore in my body.@ Every time I take a breath, the mold invades my whole body.@
 
+wave se0
+
+
+br
+` ----I can't move freely.@
+br
+` Something other than my organs or my functions, but something more from the core, like my very own energy, seems to be flowing out of my body.\
+
+wave se0
+
+
+` My heart has an invisible pipe sticking out of it.@
+` My "life" is flowing along this pipe to him.\
+
+wave se0
+
+
+br
+` -----It, hurts.@
+br
+` So I can't make it.@
+` No matter how hard my body tries to recover, he takes away everything.@
+` So unless I take in something from the outside world, I can't live.@
+
+wave se0
+
+
+` Intravenous drip.@ Nutrient supplement.@ Injection.@ Sedative.@ Moisture.@ Blood.@ Reason.@ Intelligence.@ Feelings.@ Memory.@ Sight.@ Sound.@ Taste.@ Touch.@ Smell.@ Bodily fluids.@ Love.@ Impulse.\
+
+` ------Ha…… a
+br
+` These drugs, all they can do is barely keep me alive.@
+` This isn't healing me.@
+` If there's something that will help me move, it's----\
+
+wave se0
+
+
+bg "image\event\his_h14.jpg",%type_nowaitdisp
+!w1500
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+!w1000
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+
+` Knock.@ Knock.@ The sound wakes me up.\
+
+br
+` Knock Knock.\
+`     Knock Knock.@
+`        Knock Knock.\
+
+`"…… Sh…… ut, up!"@
+` Placing my hand on the wall, I manage to stand up.@ My own wheezing fills my ears.@
+br
+` Knock Knock.@ Knock Knock.@ Knock Knock.@
+br
+`"Nii-san!@ Please open the door, Nii-san."@
+` Akiha is banging on the door.@
+` …… That's right.@ I locked it, so no one can get in.@
+br
 
 
 

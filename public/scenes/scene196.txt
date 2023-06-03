@@ -1,16 +1,13 @@
 
 bg "image\bg\bg_08b.jpg",%type_nowaitdisp
 
-` ----I should look for Arcueid.@
+` --I'll go back to the mansion.@
 br
-` No matter how impossible it might look, no matter how hopeless it seems, it's all I can think of.@
-` I'll keep searching until I find her.@
-` I can't leave her by herself, and I can't let her----settle things with Roa by herself.\
+` It's not like I've given up on Arcueid, but without any leads, I don't think I could find her.@ Then instead of running around blindly, I should go back to the mansion and think calmly about what I can do.\
 
-`"----Alright."@
-` My mind is set.@
-` So I can't waste any more time here.@
-` I have to go in town this very minute, and even if it means looking for a needle in a haystack, I have to find Arcueid----\
+`"…… Is that all I can do?"@
+` I am pained by my lack of ability to do anything.@
+` But right now, it is all I can think of.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 

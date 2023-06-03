@@ -2,126 +2,344 @@
 
 
 
-
-
 bg "image\bg\bg_53b.jpg",%type_nowaitdisp
 
 
 
+`"………………"@
+` I stop walking.@
+` I stare at the crouching SHIKI as I stand on the slimy ground.\
 
-`"------------"@
-` I won't fall for that trick.@
-` My body stops working properly when I listen to him.@
-` If there is a way to turn back Akiha, I'll find it myself.@
-` No way---no way will SHIKI, the one who turned Akiha that way, tell me.\
+`"Ha-----haha, ahahahahahaha!!"@
+` SHIKI is laughing loudly.@
+` …… I know.@ If I stop now, he will recover from his wounds.@
+` I know I have thrown away my last chance.@
+` But still----if there's a way to get Akiha back, I have to hear it.\
 
-`"----Huh!@ I guess you won't fall for it.@ Alright then.@ It's all about killing each other from now on.@
-` Let's see who's the better killer."@
-` SHIKI laughs, still down on the ground.@
-`"------------"@
-` I don't answer and instead walk straight to him.@
-` About ten more meters to go.@
-` I will be able to jump at him within a few seconds.\
+`"…… Really?"@
+`"What?@ I can't hear you."@
+`"…… Is it for real, SHIKI?"@
+`"Yeah, I talk a lot but it's against my policy to ever lie.@ So I'll tell you if you stay there a bit longer---and depending on your attitude, I could go ahead and save Akiha myself."\
 
-`"…… Heh.@ Don't tell me you think you're good just because you cut one of my arms off, Shiki."@
-`"--------"@
+`"…………… Save, Akiha…………?"@
+` Is it that I felt something bad in those words?@
+` My body shakes and I almost fall.@
+` The ground is slippery because it's slimy------
 br
-` One meter.\
-
-`"I'll teach you one last thing.@
-` You know everyone in the Tohno family has different powers, right?@ I guess Akiha's good at taking heat from her surroundings.@ Well, it's kind of like that, influencing the outside world, like an interference ability."@
-`"--------"@
+`"Sli-------ppery?"@
 br
-` Two meters.\
+wave se0
 
-`"It seems the ability to interfere with the outside world has been scarce even in the Tohno family.@ You can say that Akiha's ability is rare.@ Since she has such large potential, it doesn't wake up easily.@ Any time I try to wake it up, it's like throwing a rock into the ocean.@
-` The best way to use her full ability is to have someone take over her mind and control her."@
-`"--------"@
+` ------Wait.@
+` I am now…\
+
+`"Well, you should know how to save her.@ She has no power to live as a human, so she has to live as a Tohno.@
+` And since she is using the power of the Tohno blood, she became one of the Tohno blood, rather than someone of human blood."@
 br
-` Three meters.\
+wave se0
 
-`"Well, let's put Akiha off to the side.@ It's more important to talk about me right now."@
-`"--------"@
+` His weapon made out of red blood…\
+
+`"So if you reset things back to the state where she can live as a human, she doesn't have to rely on the Tohno blood.@
+` See?@ Isn't it easy?@ If you want to save Akiha, all you have to do is eliminate the cause for her current state."@
 br
-` Four meters.\
+wave se0
 
-`"Shiki, I'm like the old man; I have no method to interfere with the outside world.@ The vampire ability isn't my original ability.@ This is more like a bonus that I got later.@ My real ability is 'immortality'."@
-`"--------"@
+` I am standing in a puddle of blood-----\
+
+`"So all I want to say is, everything will be fine if you just die--------!!"@
 br
-` Five meters.\
+wave se0
 
-`"Well, there are limits to my immortality, since I can't heal my own wounds.@ Isn't it weird that this ability is called immortality?@
-` But it's true that dying is hard for me.@ My body changes its context so that it can survive whatever state it is in at that moment.@
-` Humans die when they lose a large portion of their body, right?@ That's because humans need a 'Human shape' with all the necessary parts to live as a human.@ If they can't find a substitute for their lost part, they die.@ Well, it might be more correct to say they cannot continue to live."@
-`"--------"@
+`"----------!!"@
 br
-` Six meters.\
+` At the same time.@
+` I jump to the side with all my power.\
+playstop
 
-`"But in my case, it's the opposite.@
-` I don't supplement my lost parts.@ Instead, I continue to live even if I lose an arm or all my blood.@ My body changes its internal organs so that I can live without the parts I lost.@
-` See, can't you say that this is 'immortality'?@ I would probably live even if my head only remained.@ …… Well, there's no way I'd want to be like that."\
-
-`"--------"@
-` Seven meters.@
-` …… One more step.@
-` Then, I am within reach----\
+bg "image\bg\ima_12b.jpg",%type_lshutter_fst
 
 
-`"…… You're about to kill me, huh?@
-` Well, what I want to say is this.@ I have the ability not to influence the outside world, but rather my inner body.@
-` Do you get it?@ Even if it seems like a useless part of your body to you, for me------"@
-`"--------"@
+`"----------"@
+` It really was a matter of a split second.@
+` The blood that was flowing from SHIKI's body…
+` All of it turns into a mountain of needles.@
+` How could I be so careless?@
+` If that red sword was made of his blood, then it would be easy for him to make his flowing blood into swords as well.\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\ima_13b.jpg",%type_crossfade_fst
+waveloop se1
+
+` Grunting with exertion, I jump from the puddle of blood and roll onto the ground.@
+` …… But I couldn't get away unscathed.@
+` My left arm is useless now.@
+` My left arm wasn't stabbed, but cut from the inside out.@
+` …… In other words…
+` The blood I wiped off with this arm cut through through me like an exploding firework.\
+
+`"Agh------gh………!!"@
+` I roll on the ground and fight the pain.@
+` I still got lucky.@ If I hadn't of wiped that blood off my chest, I would have grown swords out of my back and died instantly.\
+
+`"Shit------!!"@
+` I hear a voice.@
+` The sound of SHIKI running toward me through the grass accompanies it.@
+`"You don't know when to stay down.@ You should have died with that-----!!"@
+` He's coming.@
+` I cannot fight back since I'm on the ground.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+
+
+` He's coming.\
+` He sticks out his arm with sharp nails and approaches, trying to dig my heart out.\
+
+wave se0
+
+bg "image\bg\ima_02.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+
 br
-` This is it.@
-` Now, I'll-----\
+br
+br
+br
+br
+br
+` It's like a circus.@
+` Dark forest.@ I get excited thinking about when the curtain will rise.\
 
-quakey 1,200
-monocro #ff0000
+wave se0
+bg "image\bg\cmo_05.jpg",%type_nowaitdisp
+br
+br
+br
+br
+br
+br
+br
+` The far away voices of cicadas.@
+` Blue sky, and high, high, summer clouds.\
+
+bg "image\bg\ima_13b.jpg",%type_nowaitdisp
+
+br
+` And then.@
+` I'll be killed again in the forest?@
+` That pisses me off.@
+` Again.@
+` Again and again, being killed in the same way?@
+br
+` -----Wake up, Tohno Shiki.@
+` Enough of that.@
+` Aren't you tired of seeing that over and over----?\
+
+wave se5
+
+bg "image\bg\ima_14.jpg",%type_lshutter_mid
+
+!w2000
 bg "image\bg\bg_53b.jpg",%type_nowaitdisp
 
+`"What--------?"@
+` The voice comes from SHIKI.@
+` SHIKI's arm is not in my chest, but on the ground.@
+` …… It's nothing, really.@
+` My body has learned to react after having been killed so many times in the same way.@
+br
+` Tohno Shiki simply avoided the enemy's arm and then cut across the line on the enemy's torso.\
+
+`"Are----you kidding me?"@
+` With a sound,
+` SHIKI's body slides to one side.@
+` SHIKI desperately supports it as he gets away.\
+
+ld c,":a;image\tachi\hal_t03.jpg",%type_crossfade_fst
+
+`"Why-----why, why, why?@ Hey Shiki, this is wrong.@ This cut, why----won't it stick back?"@
+` With a cramped smile on his face, SHIKI staggers back.@
+
+cl a,%type_tshutter_mid
+
+` His upper body and lower body slowly separate.@
+` SHIKI looks like a circus clown trying to desperately hold onto his body.\
+
+`"Ou----ch.@ It hurts.@ I don't like it.@ I'm going to pass out.@ I can't stop bleeding.@ My body is separating.@ It hurts.@ It hurts.@ It hurts.@ It hurts.@ It hurts.@ It hur----"@
+` Saying that,
+` SHIKI falls to the ground.@
+` His legs are still standing.@
+` Only his upper body falls to the ground like some kind of joke.\
+
+`"--------"@
+` He's still alive.@
+` He's still alive after becoming like a weird spider with only his upper body left.@
+`"Ghu……………"@
+` I push my body and manage to stand up.@
+` He's still alive.@
+wave se0
+play "track09.ogg"
+
+` Then----I have to kill him.\
+
+`"Hi------!?"@
+` I kneel down in front of that thing that is dragging itself with its right hand.@
+` I raise my knife.@
+` Now, all I have to do is to drop it.@
+` If I drop my knife in the center of his body, in the "point" next to his heart, everything will end.\
+
+wave se0
+
+`"Ah----Hiii, hiiii?"@
+` …… Will end.@
+` Everything.@
+` A stupid story that has continued for eight years will end with just that.\
+
+wave se0
+
+`"Hya------Hyaiiiiiii!?"@
+` SHIKI's voice resists death.@
+` …… It's not like I feel sorry for him.@
+` It's not that I got scared of killing him.@
+` It's not that my anger has gone away, but "…… Why?"\
+
+
+
+wave se0
 
 br
 br
 br
 br
 br
-` Stab.@
-` Suddenly, from my ankles to my head…
-` I am stabbed by numerous swords that popped out of the ground.\
+` Why?@
+` Why can't I do something so easy as bringing down this knife……?\
 
-bg "image\bg\ima_13.jpg",%type_tshutter_fst
+!w2500
+`"Hi----Hihi, hihihihihihihi……!!!"@
+` Laughing, that thing disappears into the bushes.@
+`"---------"@
+` I look with a blank stare at my bloody knife.@
+` …… I did not kill him.@
+` Or was it that I could not kill him?\
 
-`"-----I can change it to an important weapon like this.@
-` You need to pay more attention.@ There's no way I would scatter this much blood for no reason."@
-` …… I… understand.@
-` How stupid of me.@
-` I followed his trail of blood,
-` and walked onto a mountain of needles.\
+` Hihi, hihihi, hihihihihihihihi.@
+br
+` I hear the annoying laughter.@
+` It seems like he is going toward the detached building, where Akiha is left.\
 
-`"I don't have the ability like you or Akiha to hurt others directly, so I have to rely on little tricks like these.@
-` But if this 'someone' in my head becomes clearer, I might be able to use his ability as a vampire."\
+`"----!!"@
+` I get up.@
+` How stupid of me!@ I should have known that he would have gone to Akiha.@
+`"Ku-----!"@
+` I start to move my weak legs and head for the detached building.\
 
-monocro off
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+` The trail of blood goes straight to the detached building.@
+` Around the red trail are remnants of organ-like pieces.@
+` …… With an injury like that, SHIKI would have died anyway without me finishing him off back there, but he is using his last energy to get to Akiha.@
+`"Ku----"@
+` I support my weak body and run.@
+` I reach the detached building after following the red trail of blood.@
+` The blood goes directly into the building.\
+
+bg "image\bg\bg_45e.jpg",%type_tshutter_mid
+
+
+` ---I made it in time.@
+br
+` Nothing is different inside the room.@
+` Akiha sits by the wall with a blank stare.@
+` On the tatami floor is a trail of blood, and there,
+`"Ah----a, aa, a----"@
+` Crawling.@
+` A man with only his upper body, dragging himself desperately on the ground.\
+
+`"A----A-Aki, ha---!"@
+` Dragging on.@
+` Leaving a trail like a slug, SHIKI crawls toward Akiha by the wall.\
+
+`"He, lp, me-----Aki, ha----"@
+` SHIKI reaches out his hands asking for help.@
+` His bloody fingers reach out to Akiha.@
+`"--------"@
+` I won't let him.@
+` I have to go over there and finish him off----\
+playstop
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+wave se5
+bg "image\bg\ima_12b.jpg",%type_nowaitdisp
+
+
+`"What----?"@
+` The exclamation of surprise comes from both me and SHIKI.@
+br
+` Hu, huhu.@
+br
+` Innocent laughter.@
+br
+`"Gi----A, hya, a.@ Ahhhhhhhh!!"@
+` SHIKI screams as his heart is ripped out.\
+
+` Ahahahaha.@
+br
+` Childlike laughter.\
+
+`"Hi, hyaaaaaaaaaaaaaaaaaaa!!"@
+` SHIKI's scream.@
+` Blood sputters all over.@
+` Waves of red blood color the tatami floor and the walls.@
+br
+` Aha, ahaha, ahahaha.@
+br
+` Laughter of unbearable happiness.@
+br
+`"S-stop, stop, Aki, AKIHAAAA!!"@
+` SHIKI's scream ends there.@
+` It's because his throat, the organ allowing him to talk, is crushed, and was torn away along with his head from his body.\
+
+bg "image\bg\bg_45e.jpg",%type_crossfade_fst
+
+
+`"Aki----ha."@
+` Akiha does not react to my voice.@
+` …… She probably doesn't even know that's her name.@
+` Akiha waves her red hair around and laughs like a little girl.\
+
+`"Aki----ha."@
+` There's no answer.@
+` That is all I can say to her.@ She's lost her mind.\
+
+` Giggling.@
+` The sound of Akiha's laughter echoes in the room.@
+` She was fiddling with the body of SHIKI, but seems to have gotten bored of her toy which didn't move anymore.@
+` After looking around the room, she rips through the shouji and runs outside.@
+br
+` Her hands are still drenched in blood.\
+
+`"Wa-------"@
+` I can't tell her to wait.@
+` …… I know.@
+` I know that everything is too late.\
+
+` That childlike Akiha.@
+` She is now an innocent creature, not knowing good or evil.@ Just a living creature that can only kill.@
+br
+` ---Please, kill me.@
+br
+` So.@
+` To go after Akiha right now means…
+` I am going to kill her.\
+
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 
-`"-----I guess you can't keep yourself together anymore.@
-` Then this is it.@ You can leave the rest to me and you can go back to your grave, Shiki-----"\
-br
-` I hear laughter.@
-` It echoes through my head as my mind falls into the darkness-----\
-playstop
-
-!w2000
 
 
 
-
-cl a,%type_waitdisp
-bg "image\word\end.jpg",%type_crossfade_slw
-
-resettimer
-waittimer 3000
 
 
 

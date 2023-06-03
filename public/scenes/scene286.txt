@@ -1,167 +1,76 @@
 
+
 bg "image\bg\bg_33a.jpg",%type_nowaitdisp
 
-
-` ---Even still, I can't break my promise.@
+` ---Certainly, if I went to see Ciel-senpai with this headache, I'd just be a bother.@
 br
+`"…… That's, right…… I haven't even had a chance to rest from last night.@ I guess I pushed myself a little."@
+ld l,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+`"Then please rest.@ Shiki-san, can you walk by yourself?"@
 
 bg "image\bg\ima_11b.jpg",%type_crossfade_fst
 bg "image\bg\bg_33a.jpg",%type_crossfade_fst
 
-waveloop se1
 
-`"Tss-----!"@
-` I feel like spikes are being driven into my head.@
-` Bearing that, I manage to walk forward.\
+`"Ah---no."@
+` It seems impossible right now.\
 
-`"You mustn't, Shiki-san!@ If you go out like that, we will get in trouble with Akiha-sama!"@
-` Kohaku---san, tries, to get in my way, to stop me from leaving.\
+ld l,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
 
-`"----"@
-` …… I can understand why.@
-` Even if I go out with this headache, I might very well collapse somewhere.\
-` That's why she wants me to stay here.\
-
-` But I won't listen.@
-`"…… Shut…… up."@
-` Why?@
-` For no reason at all, I thought.@
-` I thought that if I didn't see Senpai now, I'll never see her again normally.\
-
-`"If you made some sort of promise, I will go and tell them for you, so please go back to your room and--"@
-`"Shut up!@ I'm telling you to get out of my way……!"@
+`"That's right, oh, Hisui-chan!@ Carry Shiki-san to his room."@
+ld r,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
+`"Eh---Nee-san, but---"@
+ld l,":a;image\tachi\koha_t04.jpg",%type_crossfade_fst
+`"Hisui-chan!@ Shiki-san is sick, are you just going to abandon him like that?"@
 `"Ah----"@
-` I violently push her away and dash towards the door.\
+`"I will allow it for today, so take him to his room."\
 
-bg "image\bg\bg_48a.jpg",%type_lcartain_mid
+ld r,":a;image\tachi\his_t21.jpg",%type_crossfade_fst
+`"…… Yes.@ Sorry for saying such selfish words."@
+ld l,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+`"As long as you understand, it's fine.@ Did you find the medicine?"@
 
+ld r,":a;image\tachi\his_t23.jpg",%type_crossfade_fst
+`"…… Um, you had too many medicines, is this the fever medicine?"\
 
-`"You shouldn't, Shiki-san……!"@
-` I ignore her voice and resist the urge to puke as I run.@
+ld l,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
+
+`"Ahaha, that's used for something else.@ Shiki-san is still conscious, so we don't need to use medicine that would stabilize him."@
+ld l,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+`"It seems his fever is from being too tired, so I'll make some medicine.@ Hisui-chan, please take care of the rest."@
+cl l,%type_lshutter_mid
+` Kohaku-san swiftly disappears towards the west hall---where her room is.\
+
+ld r,":a;image\tachi\his_t20.jpg",%type_crossfade_fst
+
+`"Shiki-sama, I will take you to your room."@
+` With an "excuse me", she lends me her shoulder.@
+cl r,%type_crossfade_fst
+
 br
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_22a.jpg",%type_lcartain_mid
+` Thanks to Hisui's help, I manage to get up the stairs.@
+` On the way, even more than my terribly throbbing headache, Hisui's incredibly embarrassed face burns into my memory.\
 
-` I just run.@
-` As if chasing down my promise with Senpai,
-` as if running away from something I can't see,
-` I propel my body down the street as it is on the verge of collapse.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-bg "image\bg\bg_25a.jpg",%type_lcartain_mid
-
-bg "image\bg\ima_11.jpg",%type_nowaitdisp
-bg "image\bg\bg_25a.jpg",%type_nowaitdisp
-
-` ---The street is full of people.@
-` The hot sunshine.@
-` The saturation of activity is painful to watch.@
-bg "image\bg\ima_11.jpg",%type_nowaitdisp
-bg "image\bg\bg_25a.jpg",%type_nowaitdisp
-` Why do they do this?@
-` Like unthinking insects, ones with intelligence still group up without any theory to solve.\
-
-bg "image\bg\ima_11.jpg",%type_nowaitdisp
-bg "image\bg\bg_25a.jpg",%type_nowaitdisp
-
-`"-------"@
-` …… Everything gets hazy.@
-` Is it because of this nausea?@
-` I feel like I… am not me.@
-`"------Sen, pai."@
-` I look around me.@
-` Where is----she?@
-bg "image\bg\ima_11.jpg",%type_nowaitdisp
-bg "image\bg\bg_25a.jpg",%type_nowaitdisp
-` My mind is dizzy and I can't find her.\
-
-
-
-` -----Still can't find her.@
-` With all these people,
-`              I can't find her.@
-`              All this randomness.@
-` Nothing.@
-`             Feeling like everything is pointless,
-!w1000
-
-`        a dizziness that……
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w2000
-
-bg "image\bg\ima_11.jpg",%type_nowaitdisp
-bg "image\bg\bg_25a.jpg",%type_nowaitdisp
-\
-
-ld c,":a;image\tachi\cel_t01c.jpg",%type_lshutter_mid
-
-`"Oh, Tohno-kun.@ I'm surprised you actually made it here on time."@
-`"Sen…… pai?"@
-br
-` ---It's the first time I've seen her in regular clothes.@
-br
-`"…… Um, I was being a bit mean earlier.@ Sorry for making you run here and be exhausted like this."@
-br
-` ---She gives a quick bow of the head.\
-
-`"-----"@
-` That's silly.@ She shouldn't worry about that.@
-br
-bg "image\bg\ima_11.jpg",%type_nowaitdisp
-bg "image\bg\bg_25a.jpg",%type_nowaitdisp
-wavestop
-
-`"Oh, Tohno-kun---!?"@
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-br
-` …… Uck.@ I feel sick.@
-` But I'm glad I came.@
-` I got to see Senpai in her normal clothes, so I have to bear this dizziness, and we have to have fun together-----\
-
-
-!w3000
-
 play "track01.ogg"
 
-bg "image\bg\bg_40c.jpg",%type_crossfade_slw
+bg "image\bg\bg_40c.jpg",%type_crossfade_mid
+
+
+
 br
-` ----When I wake up, I'm in a bed.\
-
-`"Huh---?"@
-` Moving my head, I look around me.@
-` This is my room, and it's night outside.@
-` Hisui is here, and she must have been watching over me as I slept.\
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"Shiki-sama, have you awoken?"@
-`"…… Hisui.@ Why am I here?"@
-` My arms and legs don't respond.@ Moving just my neck, I look at Hisui.\
-
-`"Shiki-sama, you collapsed outside.@
-` Your friend from school called here and carried you back to the mansion."@
-`"----Oh.@ That means, I"@
-` Pushed aside Kohaku-san like that, and lost consciousness.\
-
-`"…… I'm an idiot.@ I can't possibly face Kohaku-san now."@
-wave se0
-
+` ---In the end,
+` I lie down in bed, drink the medicine Kohaku-san made, and entrust her to pass on my message to Ciel-senpai who is waiting at the movie theater.@
+br
 bg "image\bg\ima_11b.jpg",%type_crossfade_fst
 bg "image\bg\bg_40c.jpg",%type_crossfade_fst
 
-` Another headache arrives along with my regret.@
-` …… My body seems to have gotten a little better, but my headache doesn't go away.\
 
-`"…… Hisui.@ What, happened to me?"@
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-`"Please relax, Shiki-sama.@ It does not seem to be serious.@ Nee-san has prepared some medicine, so if you seem to have a headache, please drink it."@
-cl c,%type_crossfade_mid
-
-` Hisui carries a silver tray with some water and the medicine Kohaku-san prepared.\
-cl c,%type_crossfade_fst
-
-` But, I don't feel like drinking it right now.@
-`"…… Yeah.@ If it gets terrible, I'll drink it.@ Please put it over there."\
-
+`"………… Gah."@
+` My headache doesn't stop.@
+` As if in exchange, my body did seem to cool down.\
 
 
 return

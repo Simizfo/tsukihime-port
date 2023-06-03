@@ -14,7 +14,7 @@ ld c,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
 
 
 
-` You have reached Akiha's True Ending.@ Well done.@
+` You have reached Akiha's Normal Ending.@ Well done.@
 br
 ` Each heroine (with one exception) has two different kinds of endings.@
 ` Usually, they are called "True Ending" and "Good Ending", but Akiha-san's are called "Normal Ending" and "True Ending".@

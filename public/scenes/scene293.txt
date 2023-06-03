@@ -1,169 +1,227 @@
 
+bg "image\bg\bg_40f.jpg",%type_nowaitdisp
 
-bg "image\bg\bg_40e.jpg",%type_crossfade_mid
-
-bg "image\bg\ima_11b.jpg",%type_nowaitdisp
-bg "image\bg\bg_40e.jpg",%type_nowaitdisp
-
-
-` *pant*, *pant*, *pant*----
+` …… The door opens.@
+` It's too late.@ Even if I send her away, she's already come inside.@
 br
-` I see.@
-` This impulse.@
-` This impulse that tries to drive me insane while leaving me conscious.@
+` ----But still.@
+` I can't do the action called eating food.@
+` It will get me too excited, and it will smash the remaining "Tohno Shiki" within me to pieces.\
+
+` …… *pant*…… *pant*…… *pant*……
 br
-` This is,
-` This is Roa.\
+` I breathe hard.@
+` Somehow.@
+` I have to resist it.\
 
-` But why?@ I was always sane.@
-` Until I came back to this mansion, I really was normal.@
+ld c,":a;image\tachi\koha_t02b.jpg",%type_lshutter_mid
+
+`"Shiki-san, I'm coming in…… wh, what happened?"@
+` Still smiling, she looks in surprise at the room lying in shambles.\
+
+` …… *pant*…… *pant*…… *pant*……
 br
-` I hear heavy knocking on the door.@
-` But I can't open it.@
-` If I open it, it will be completely over.\
+` Her cute face devoid of fear.@
+` Her completely unguarded, defenseless figure.@ Her red hair----and her delicious-looking skin.\
 
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
+`"Shiki-san……?@ This is strange, how did all of this happen?"@
+` Still smiling, she draws closer to where I lie curled on the bed.@
+cl c,%type_lshutter_mid
+\
 
-bg "image\bg\cmo_13.jpg",%type_crossfade_fst
-bg "image\bg\bg_40e.jpg",%type_crossfade_fst
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+` -----------------Hurry.@
+wave se0
+
+` No.@
+` --------------Hurry.@
+wave se0
+
+`    No.@
+` -----------Hurry.@
+wave se0
+
+`       Stop it.@
+` --------Hurry.@
+wave se0
+
+`         Shut up.@
+` ------Hurry.@
+wave se0
+
+`            I don't want to.@
+` --Hurry.@
+wave se0
+
+`               I.\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+`"Run---away."@
+` Using the very last vestiges of my will, I manage to let those words out.\
+
+ld c,":a;image\tachi\koha_t02b.jpg",%type_crossfade_fst
+
+`"Eh?@ I'm sorry, I couldn't hear you, could you please say it again, Shiki-san?"@
+` But it's working against me.@
+` Concerned, she draws closer to my bed.@
+` To my/TO MY,
+!w1000
+
+` body/BODY,
+!w1000
+` her face/HER FORM,
+!w1000
+` draws closer/INVITES ME
+!w1000
+` in.\
+
+waveloop se1
+
+` Her white fingers touch my shoulder lightly.@
+` Her fingers pulsing with blood.@
+` Her light body warmth.@
+` Small fireworks explode in the back of my head.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
 
 
-`"Ah-----"@
-` I finally understand.@
-` That dream was the memory of the Roa one generation before mine.@
-` Locked up in her room, killing both her parents, ruling over her town as a vampire, the final memories of someone I don't know.\
+`"Kya----!"@
+` I hear a scream.@
+` My hand wraps around her throat.\
 
-`"------"@
-` …… There's no way out.@
-` This is not a problem that can be solved by killing myself.@
-` This is nothing that can be helped.\
+`"Hwa---ha, a, h----"@
+` My breathing is out of control.@
+` What.@ am I.@ Trying.@ To do?\
 
-` I understand that previous person's feelings.@
-` Even if I die, the only thing to die would be my will.@ Then the will of Roa would take over my body completely.@
-` If that happened---things would get much worse.@
+`"Shi…… ki, sa---"@
+` Her voice cuts off.@
+` Not caring, I grip harder.@
+` Grip.@
+` The bones in her neck creak.\
+
+`"St, o---!"@
+` A small tearing sound.@
+` Her fingers dig into my arm.@
+bg "image\bg\ima_13.jpg",%type_crossfade_mid
+
+
+` She must be getting frantic, being on the verge of death like that.@
+` Her nails push through my clothes and into the meat of my arm.\
+
+`"A----ch."@
+` Pain.@
+` Well, not as much pain as Kohaku must be feeling.@
+` But blood flows.@
+` It runs down from my arm and onto my hand grasping Kohaku's neck.\
+
+`"Ha----ha."@
+` Painted deep red.@
+` Her unresisting neck is now running with blood.@
+` I can't really feel her anymore.@
+` Just the fact that she'll die in a few seconds,\
+
+`"Haha-----ha."@
+` Seems so funny to me, I start to laugh.@ It hasn't even been a minute since I grasped her neck.@
+` She won't die of suffocation.@
+` But here, by my hand.\
+
+`"Ha, haa, ha."@
+` For no reason, suddenly.\
+
+`"Hahaha, ha---ha, ha, ha."@
+` Like a simple appliance.\
+
+`"Ahahahahahahahahahahahaha!"@
+` She'll die by having the bones in her neck break.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+bg "image\bg\bg_40c.jpg",%type_crossfade_mid
+wavestop
+
+` In an instant,
+` like being freed from demonic possession, the heat disappears.@
 br
-`"Ha---haha, ha."@
-` …… In the first place, I don't have the slightest intention of killing myself.\
+` Before my eyes is the bloodied body of Kohaku-san.@
+` My hand is grasping her neck and any second now----
+br
+`"------!"@
+` I quickly let go.\
 
-`"Shiki-sama, please open up, Shiki-sama!"@
-` I hear her voice from behind the door.@
+` Without a sound,
 br
-` …… It almost sounds like it was in another language.\
-` So far away.@
-` Just one.@ It's just one sheet of wood between us.@
+` Kohaku-san falls to the floor.\
+
+`"Uu…… ha, ----"@
+` Kohaku-san breathes painfully with her eyes closed.@ "Kohaku----san."@
+` …… She's alive.@
+` Just a little longer.@ If I kept going just a little longer, I would have----\
+
+`"Uu……, u, u………"@
+` …… She's crying.@
+` Collapsed on the floor, not able to move, she's crying.@
+` Looking down.@
+` Her kimono is covered with white fluid.@
 br
-` But it seems as far away as the moon and the stars.\
+` That, is my semen.@
+` I----by doing that, was released from whatever it was inside me?\
+
+`"-----Ha."@
+` I can't believe it.@
+` While one hand was choking Kohaku-san, my other hand----was reveling in the pleasure of killing something?@
+br
+` ----Thump.@
+br
+` It, isn't over.\
+` I'm still fully erect, and more than that, I am not satisfied myself.\
+
+` I'm so thirsty.@
+` I've---done such a terrible thing to Kohaku-san, but it doesn't seem to end.@
+` The truth is, my regret is fading even now as I look at Kohaku-san's neck.@
+br
+` Her white neck.@
+` Put my teeth at her throat and.\
+
+br
+br
+br
+br
+br
+br
+br
+` -----I want, to suck, her blood.\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+`"----Haha."@
+` I broke apart.@
+br
+`"Aha, ahaha."@
+` I really broke down.@
+br
+` I'm done.@
+` No longer---do I have the confidence to stay sane.\
+
+`"Ahaha, hahaha, ha."@
+` Outside.@
+` I have to go outside.@
+` If I stay here, I'll kill Kohaku-san.@
+` If I stay in the mansion.@ I'll kill even Akiha and Hisui.@
+` So before those urges come again, I have to disappear.\
+
+`"Ahahahahahaha!"@
+br
+` A place where no one is.@
+` I have to go to a place where no one is or I'll go crazy again----\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_slw
-playstop
 
-bg "image\bg\bg_40e.jpg",%type_crossfade_slw
-
-waveloop se10
-
-` It's now ten in the morning.@
-` Hisui gave up and went back.@
-` Akiha and Kohaku-san came and took turns knocking but I ignored them.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-bg "image\bg\bg_40e.jpg",%type_crossfade_slw
-
-` Twelve o'clock.@
-` …… I'm hungry.@
-` But, I'm still fine.@
-` I pull the sheets over me and hug my shaking body.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-bg "image\bg\bg_40e.jpg",%type_crossfade_slw
-
-
-` Two o'clock.@
-` …… I'm dying of thirst.@
-` I've lost all sense of time.@
-` It feels very calm.@
-` But as if I was taking stimulants, my body wants to rage around.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-bg "image\bg\bg_40e.jpg",%type_crossfade_slw
-
-br
-` Four o'clock.@
-` …… More knocking.@
-` A name being called out.@
-` Whose voice is that?@ Whose name are they calling?@ I can't tell.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-monocro #ff0000
-
-bg "image\bg\bg_40e.jpg",%type_crossfade_slw
-
-br
-br
-` Five o'clock.@
-` It slowly starts to get dark.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-
-bg "image\bg\bg_40e.jpg",%type_crossfade_slw
-
-
-br
-br
-br
-` Six o'clock.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-monocro off
-
-bg "image\bg\bg_40f.jpg",%type_crossfade_slw
-
-
-br
-br
-br
-br
-` Seven o'clock.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-bg "image\bg\bg_40f.jpg",%type_crossfade_slw
-
-br
-br
-br
-br
-br
-` Eight o'clock.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-bg "image\bg\bg_40f.jpg",%type_crossfade_slw
-
-wave se3
-
-br
-br
-br
-br
-br
-br
-` ---Someone, comes by.\
-
-`"Shiki-san, I've brought you dinner.@ You haven't had anything since this morning, so you'll collapse you know."@
-br
-` Kohaku's voice.@
-` She knocks on the door.@
-br
-`"Geez, if that's how it is, I'll get you to at least eat."@
-` A rattling sound.@
-` Not knocking, but the sound of a lock opening.\
-
-`"Huhuhu, time to use my secret weapon, the master key!"@
-`"----Ah."@
-br
-` The lock unlocks.@
-br
-
-
-
+!w1000
 
 
 return

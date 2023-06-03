@@ -1,27 +1,420 @@
 
-
 bg "image\bg\bg_34a.jpg",%type_nowaitdisp
 
-`"Good morning, you two."@
-ld r,":a;image\tachi\koha_t01a.jpg",%type_lshutter_fst
-`"Good morning, Shiki-san."@
-` Wearing a white apron that suits her, Kohaku-san replies with a smile that could not possibly be any larger.@
+
+`"Hey, about what happened last night… does that happen every night?"@
+ld l,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+`"---What?"@
+` Akiha tilts her head slightly in response to my question.@
+` …… It seems the point of my question has completely failed to reach her.\
+
+`"I'm talking about what happened last night.@ That noisy 'woof woof woof woof' racket.@ Even you wouldn't have been able to sleep with that going on, right?"@
+`"---Nii-san?@ What are you talking about?"@
+`"What?@ I'm talking about last night, of course.@ Around eleven at night.@ Some stray dogs were barking their heads off."@
+cl l,%type_crossfade_fst
+
+
+` Akiha and Kohaku-san exchange looks, and then together, they both look back at me.@
+` …… It's like they think I'm some kind of nutcase.@ I can't just let this slip by.\
+
+`"Fine, I'm not asking you anymore, Akiha.@ Kohaku-san, it was really noisy last night, wasn't it?"@
+ld r,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+`"---Eh… was it really?@ I did think the wind was quite strong, but… the only unusual thing I found while looking around late at night was you, sleeping in your uniform on top of your bed."@
+`"…… Ah, yes.@ I'll be more careful from now on."\
+
+ld l,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+
+`"What?@ What happened, Kohaku?"@
+`"Oh, nothing in particular.@ Shiki-san just has bad sleeping posture, that's all."@
+` Kohaku-san dodges Akiha's question with a smile.@
+` …… Come to think of it, Kohaku-san is calling me "Shiki-san" now.@
+` It seems like Hisui passed on my message from last night.\
+
+`"…… Are you sure neither of you noticed?@ Those dogs were barking for about thirty minutes straight last night.@ 'Woof woof woof woof'.@ If that isn't noisy, I don't know what is."@
+ld r,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+`"Haha… It really was a woof-woof panic, wasn't it?"@
+br
+` …… Somehow, I get the feeling Kohaku-san has missed the point.\
+
+`"…… Well, that's basically how it was."@
+ld l,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+`"Hmmm---I don't remember anything like that.@ You don't either, do you, Kohaku?"\
+
+`"No, I don't.@ Sorry, Shiki-san.@ There wasn't anything particularly like that last night that I can remember."@
+ld l,":a;image\tachi\aki_t08a.jpg",%type_crossfade_fst
+`"Then it's decided.@ The only possibility left I can think of is that Nii-san had a dream about it."@
+`"…… Uuh."@
+br
+` Well, now that she mentions it, maybe it was a dream, but…\
+
+ld l,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+`"---You must have had a nightmare because you aren't used to the mansion yet, Nii-san.@
+` Oh, I know what.@ If that stray dog barks again tonight, perhaps we shall start keeping an extra-vicious guard dog here."@
+` A malicious giggle comes out from Akiha.\
+
+`"I am now out of time, so please excuse me, Nii-san.@ Please do take care not to get attacked by any dogs on your way to school."@
+cl a,%type_lshutter_mid
+` Akiha leaves the sitting room.@
+` Kohaku-san leaves to escort her to the doorway.\
+
+`"……"@
+` Now seems like a good time to come to a conclusion.@
+` Given what's happened from last night up until now, it's a no-brainer to work out that for some reason, Akiha really, really hates me.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+bg "image\bg\bg_33a.jpg",%type_lcartain_mid
+
+` I leave for the lobby after I eat the breakfast Kohaku-san made for me.@
+` Hisui is in the lobby, waiting with my bag.@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Will there be enough time, Shiki-sama?"@
+`"Yeah, it's not even twenty minutes to school from here if I run.@ It's seven-thirty now, so I could make it even if I take the long way."@
+` Satisfied with my explanation, Hisui nods.\
+
+`"Very well, I will escort you out."@
+`"Eh---Ah, yeah, thanks."@
+` …… It's a terribly embarrassing thing to have a personal servant.\
+
+`"Ah, Shiki-san!@ Please wait!"@
+` With pattering footsteps, Kohaku-san runs down from the second floor.@
+`"…………"@
+cl c,%type_crossfade_fst
+` Hisui steps back and falls silent as Kohaku-san appears.\
+
+ld c,":a;image\tachi\koha_t03.jpg",%type_lshutter_fst
+
+`"Huh?@ Weren't you with Akiha?"@
+`"Lady Akiha goes to school by car.@ Since I had something to give you this morning, I stayed behind."@
+`"Something to give me?"@
+`"Yes.@ This came from the Arima family yesterday."@
+` Kohaku-san smiles.\
+
+`"Eh?@ But, I have all my luggage already.@ The things I used while I was at the Arimas' house all belonged to them, so all I've got are my own clothes…"@
+`"Really?@ But this was sent here, nonetheless…"@
+` Kohaku-san hands me a thin wooden box, perhaps twenty centimeters long.@
+` It's not heavy at all.\
+
+`"…… Kohaku-san, I've never seen this before."@
+`"Well… apparently it was left to you by your departed father.@ It was to be given to you in the will."@
+`"…… By my old man?"@
+` …… I can't feel anything about that.@
+` What's the old man who expelled me from this mansion eight years ago doing leaving me things?\
+
+`"Oh well.@ Kohaku-san, please take it to my room for me."@
+ld c,":a;image\tachi\koha_t09.jpg",%type_crossfade_fst
+
+`"------"@
+` Kohaku-san is staring intently at the wooden box.@
+` She seems almost like a child who wants a toy.@
+br
+` Staaaaare.@
+br
+` No, she is a child.\
+
+`"…… I get it.@ You want to know what's inside, right?"@
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+`"Oh, not at all.@ I merely wondered for a moment."@
+` …… Like I said, you do wonder what's inside.@
+`"Alright, let's open it.@ One, two… three!"@
+` With a dry sound, the wooden box opens.@
+` Inside, there is----a ten-centimeter bar of thin iron.\
+
+`"…… It's… an iron bar."@
+` Undecorated and worn, it has finger marks all over it.@
+` …… The old man must have really hated me to leave me a piece of junk like this.\
+
+`"No, Shiki-san.@ It's a fruit knife."@
+` Kohaku-san takes the iron bar out of the box.@
+`"See, isn't it one of those folding knifes?@ One, two… three!"@
+` With a "pachink!", a ten-centimeter blade pops out from the bar.@
+` …… I see, it certainly is a knife.\
+
+`"It's old, but it seems pretty solid.@ The year and the era it was made in is written on the back."@
+` Kohaku-san replaces the blade, and hands over the knife.@
+cl c,%type_crossfade_fst
+` Certainly, there's a number written on the grip.@
+` The character 'seven', and under it, the character 'night'.\
+
+ld l,":a;image\tachi\his_t01.jpg",%type_nowaitdisp
+
+`"Nee-san, there is no era by that name.@ It just says 'Nanatsu-yoru'."@
+`"!"@
+` Surprised, I turn around.@
+` Hisui, who had been silent until now, was looking at the knife over my shoulder.\
+
+`"Y, you surprised me… Hisui, you should say something.@ You don't have to look over my shoulder like that, you know.@ If you want to see it, I'll show it to you."@
+ld l,":a;image\tachi\his_t02.jpg",%type_crossfade_fst
+`"Ah---"@
+br
+` Hisui's cheeks suddenly become a little redder.\
+
+`"P-please excuse me.@ Uh---That knife is so beautiful that I could not help myself."@
+`"Beautiful?@ You really think it's beautiful?@ It looks kind of beat up to me."@
+ld l,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"---Not at all.@ The tempering of the blade is masterful.@ I think it is a knife with its own proper history."@
+`"Really?@ It looks to me like a piece of junk…"\
+
+` But since Hisui seems so convinced, I begin to feel the same thing.@
+` …… Hmmm.@ In its own way, I guess it's not such a bad inheritance.\
+
+ld r,":a;image\tachi\koha_t02.jpg",%type_nowaitdisp
+`"'Seven nights'…?@ Maybe that's the name of this fruit knife?"@
+`"Maybe… though, I can't imagine him naming a knife like that."@
+` Whatever the case may be, it's obvious that it's an antique.@
+`"Well, in any case, I believe in taking what's given to me."@
+` I replace the blade, and put the knife in my trouser pocket.\
 cl r,%type_crossfade_fst
 
-` On the other hand, Akiha just casts a glance at me.@
-ld l,":a;image\tachi\aki_t01a.jpg",%type_lshutter_fst
-`"Good morning.@ You certainly took your time this morning, Nii-san."@
-` She certainly knows how to put a damper on things.\
+`"Shiki-sama, have you enough time…?"@
+`"Ah!@ I have to get going.@ Well, Kohaku-san, thanks for the delivery."@
+`"You're welcome."@
+` Kohaku-san smiles and waves.\
 
-`"Took my time?@ It's barely past seven!@ It only takes thirty minutes to get to school from here, so I'm actually up early."@
-ld l,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
-`"So you're saying you're going to finish breakfast in just ten minutes?@ You're not some starving dog, so if you're going to eat breakfast, I'd like you to take your time."@
-cl l,%type_crossfade_fst
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+playstop
+
+bg "image\bg\bg_32a.jpg",%type_lcartain_mid
+
+` Leaving the doorway, I pass through the garden.@
+` As I pass out the mansion gates, I sense a commotion.\
+
+`"…… What's going on?@ Sounds like something's happening on the right side of the mansion."@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"I heard that someone found bloodstains on the road east of the mansion."\
+`"---Bloodstains…?@ You mean leftover blood?"@
+`"Yes.@ There was blood on the mansion fence, too.@ The police came to inquire about what happened last night while you were sleeping, Shiki-sama."@
+`"…… Does that mean someone died…?"@
+`"No, all that has been found are the bloodstains."\
+
+cl c,%type_crossfade_fst
+
 `"------"@
-` Akiha's words really do have thorns.@
-`"I'm not a dog, Akiha---"@
-` Then I remember.@
-` Speaking of dogs, there is what happened last night.\
+` The east side of the mansion---That's around where the man in the black coat was last night.@
+` Bloodstains… traces of blood.@
+` Bloodstains---traces of red.@
+` Come to think of it…
+` I get the feeling I saw something red----.\
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Shiki-sama?"@
+`"Eh…?@ N-no, it's nothing."@
+` Shaking my head, I shake off the bad images.@
+`"Well, I'll be going now.@ Thanks for seeing me off, Hisui."@
+`"Goodbye.@ Please take care on the way."@
+` Hisui bows deeply.@
+` …… I'm not sure what to take care about, but she's probably just worried about my health.\
+
+`"Yeah, thanks.@ You take care, too, Hisui."@
+` It's only right to repay good intentions with good intentions.@ With an energetic wave of the hand at Hisui, I leave the gates of the mansion behind.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+play "track01.ogg"
+
+bg "image\bg\bg_23a.jpg",%type_rcartain_mid
+
+` ---I walk along the unfamiliar streets.@
+` Up until now, I've been going to school from the Arima house, so it's the first time I've taken this route to school.\
+` It's only the path I'm taking that's different, but I feel like I'm going to a new school.@
+
+`"---There doesn't seem to be a lot of students from my school around."@
+` Apparently, there are not many who live around here.@
+` Half past seven in the morning.@
+` I can't see anyone running along the streets in a school uniform except me.\
+
+bg "image\bg\bg_25a.jpg",%type_lcartain_mid
+
+` The business district is in a rush of activity.@
+` As usual, the scene is one of suited firm employees gearing themselves for today's battle.@
+br
+` No, it isn't quite the same as usual.@
+` For the last few days, the atmosphere has been a little heavier in this town.\
+
+` It's probably due to the serial killings.@ There are less people in the streets in the evenings now, too.@
+`"---You'd better cut down on the hanging out at night, Arihiko."@
+` The face of my bad friend drifts into mind.@ He'd be the sort to carry on hanging out at night regardless of the atmosphere in town.@
+` Well, it's not like he's going to listen to a word I say, anyway.\
+
+bg "image\bg\bg_24a.jpg",%type_lcartain_mid
+
+` I start to see some people in school uniforms intermingled with the crowd.@
+` There are only about ten minutes until the school gates close.@
+` I dash along the asphalt street so I won't be late.@
+bg "image\bg\bg_01a.jpg",%type_lcartain_mid
+` ---I arrive.@
+` It seems like it took twenty minutes rather than thirty from the mansion.@ I'll need to leave around seven if I want to go slowly, since I ran several times on the way.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_06a.jpg",%type_lcartain_mid
+
+play "track03.ogg"
+
+` The classroom, just minutes before homeroom, is full of commotion.@
+` Scattered all over the classroom are my classmates, intent on talking until the teacher arrives.@ It's like a festival in here, even though there are only a few minutes left.@
+br
+` I ease my way through to my seat next to the window.\
+
+` ---Then,
+`"Yo!@ You're late, Tohno."@
+ld l,":a;image\tachi\ari_t01.jpg",%type_lshutter_fst
+` In stark contrast to the otherwise pleasant classroom, there is someone waiting with a big grin on his face.@
+` And in addition---
+`"Ah, good morning, Tohno-kun."@
+ld r,":a;image\tachi\cel_t01a.jpg",%type_rshutter_fst
+` ---He is accompanied by someone very unexpected.\
+
+`"Senpai---why are you in our classroom?"@
+` Dumbfounded, I point to Ciel-senpai like I'm looking at a ghost.@
+`"Huh?@ Is it so unusual?@ I was just wondering if you were in class, so I decided to come over to see you, Tohno-kun."@
+`"Unusual?---The seniors never come to the junior classrooms.@ There's all sorts of reasons, but the biggest one is that they're just too far apart."@
+`"Oh, I see." Senpai nods with a serious face.\
+
+ld r,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+`"You don't have to worry about that.@ Despite my appearance, I'm a fast runner.@ It takes me less than a minute to get to my class downstairs from here."@
+` Senpai emphasizes her point.@
+`"……"@
+` I guess she's just not the kind of person who cares what other people think.\
+
+`"Quit whining, Tohno.@ What's wrong with it, anyway?@ Senpai's here because she wants to be."@
+` Arihiko, being Arihiko, plonks himself down on my desk and starts up a merry conversation with Senpai.@
+`"…… I don't mind, but you ought to get back to your class two minutes before homeroom starts, Senpai."@
+` I feel tired for some reason.@ Sighing, I sit down.\
+
+ld r,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+`"…… Inui-kun, it seems Tohno-kun is feeling down."@
+`"…… Yeah, he's probably feeling irritable because he's not used to his life after moving.@ Tohno doesn't mind most things, but he's got a bad habit of throwing a fit when faced with things he doesn't understand."\
+
+`"…… Really?@ Tohno-kun doesn't look like the type to get angry."@
+`"…… Nope, that's not true.@ Tohno, you see, is usually pretty mature, but when he encounters something he doesn't understand---Kaboom!"@
+`"…… Haah… 'Kaboom', is it?"@
+`"…… Yep.@ You'll change your opinion once you see him lose it, so you can't just trust him like that, Senpai."\
+cl a,%type_crossfade_fst
+
+` …… The two of them whisper to each other.@
+br
+`"…… Hey, listen.@ If you're going to talk privately, do you mind doing it in the hallway?@ I can hear every word you say when you do it on my desk, so there's no real point to it."\
+
+ld c,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+`"What!?@ You could hear us!?"@
+` Arihiko gives an exaggerated reaction of surprise.@ No one could stay angry after being hit with an act like that.\
+
+` Senpai puts her hands to her mouth, and I can't tell how serious she is.@
+` …… If it's Senpai, she may have actually intended to talk privately.\
+
+`"That's terrible, Tohno!@ Listening in on the lovey-dovey private conversation between Senpai and me!@ You've sure got some nasty hobbies!"@
+` Arihiko points at me.@
+`"---Are you trying to pick a fight with me, Arihiko?"@
+` …… Actually, please do.@ Right now, I'm more than willing.@
+` Arihiko shakes his head.\
+
+ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+`"Of course not.@ You're my dear friend, right?@ I'd exchange fists with even my parents, but I have a policy of not fighting with my friends.@ I'm the very model of chivalry."@
+` …… That's amazing.@
+` I guess chivalrous people could punch their parents in the world that's inside his head.\
+
+`"I see---That's a pretty rotten policy."@
+ld c,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
+`"Hahahaha!@ You pretended to be depressed, but deep down you're the same Tohno as always!@ Damn, I had nothing to worry about after all!"@
+` Arihiko hits me a couple of times in the back.\
+
+`"…… Arihiko, were you worried about me just then?"@
+`"Don't ask me trivial stuff like that, you dumbass!@ It's only good if I do it without you noticing!"@
+` Arihiko hits my back some more.@
+` …… We've been friends for a long time, but I still can't get a hold on this guy's personality.\
+
+ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+`"So, how's your new house?@ Pretty heavy and stressful by the looks of it."@
+`"Mmn.@ Can't really say.@ I had a bad dream last night, and the people at my house gave me the cold shoulder."@
+`"---Mmm, I see.@ Sounds rough."@
+` Arihiko nods with a difficult expression.\
+cl c,%type_crossfade_fst
+
+ld r,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+
+`"………"@
+br
+` ---And,
+` Senpai is silent, staring at us while we have our trivial conversation.\
+
+`"Senpai?"@
+ld r,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+`"Tohno-kun, you really do get on well with Inui-kun."@
+`"Are you serious, Senpai?@ You must need thicker glasses if that's what you think after seeing what just happened."@
+ld r,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+`"Not at all, Tohno-kun.@ You look really relaxed when you're with Inui-kun.@ You're really open and trust him a lot."@
+` Senpai smiles happily for some reason.\
+
+`"?"@
+` Arihiko and I exchange looks and tilt our heads.@
+ld r,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
+`"Oh, I'm so envious.@ I really admire how your friendship allows such understanding without you getting worried over each other."@
+` Senpai is impressed.\
+
+ld l,":a;image\tachi\ari_t03.jpg",%type_nowaitdisp
+`""Really?""@
+` Arihiko and I exchange looks and raise our eyebrows.@
+ld r,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+`"That's right.@ It's just that you two don't realize it.@ Ah, but maybe it'll end if you do… Hmmm… In that case, it'd be best if you two just remained as you are.@ Yes, truly a miraculous balance."@
+`"Well, I guess you could say our relationship is a miraculous tightrope."@
+` Arihiko nods in agreement.@ I guess that's one point we perfectly agree on.\
+
+`"Ah, it's almost time.@ I'll be going now.@ Did you watch the news this morning, Tohno-kun?"@
+`"---No, the house I moved to doesn't have a television, so I can't watch the morning news."@
+`"Is that so?@ Well, I'll just ask you straight out then.@ There was a big mansion on today's morning news.@ Is that where you live?"\
+
+`"---Eh?"@
+` This morning's news?@
+` …… Now that she mentions it, Hisui said the police had come to talk.\
+
+`"Yeah, that must be my house.@ I heard the police came this morning to ask us questions."@
+`"---Is that so?@ You mustn't be out playing late at night, Tohno-kun."@
+cl r,%type_lshutter_fst
+` Senpai leaves quickly.@
+` I watch her silently.@
+br
+` ---And,
+br
+cl l,%type_nowaitdisp
+ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+`"Tohno."@
+`"What?@ I'm not listening to any more of your trivial garbage."\
+
+ld c,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
+
+`"It's not trivial.@ It's becoming a big problem.@ You've become so familiar with Senpai that she even comes here to see you."@
+` Arihiko stares at me gravely.\
+
+`"Well, I don't know anything about it.@ I've only started talking to her recently.@ Maybe she just came here on a whim today?@ And come to think of it, aren't you pretty familiar with her too?"@
+`"No way, man.@ It's taken me seven days to get her to remember my name."\
+
+`"Oh?@ That's unusual.@ Wasn't it your policy not to deal with girls you can't pick up in a day because they're too much trouble?"@
+`"That's for normal girls, but Senpai is different.@ I've kept it a secret all this time, but actually, I---"@
+`"You like senior girls who look good with glasses on, don't you?"@
+`"Erk!" Arihiko's face turns red.\
+
+`"You knew all along, my dear friend."@
+`"Yeah, I knew.@ We're friends, after all.@ We get along and we've got the same interests."@
+`"I see, I see.@ You can understand how good Senpai is too, can't you---hey, wait!"@
+`"Yeah, like I said, we've got similar interests, right?@ That's why we're into the same type of woman."@
+` Arihiko nods in agreement, and heads back towards his own seat.\
+
+`"I guess it was a short friendship, Tohno."@
+`"Yeah, exactly right."@
+cl c,%type_lcartain_fst
+` I wave Arihiko off.@
+` The teacher comes in at about the same time.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+!w2000
+
 
 
 

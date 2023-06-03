@@ -1,156 +1,44 @@
 
+bg "image\bg\bg_06b.jpg",%type_nowaitdisp
 
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-
-bg "image\bg\bg_11b.jpg",%type_crossfade_slw
-
-play "track03.ogg"
-
-` I hurry to the tea ceremony room.@
-` Senpai has her hand on the door as I arrive.\
-
-`"Senpai!"@
-
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_lshutter_fst
-
-
-`"Ah, Tohno-kun.@ Are you going home now?"@
-`"No, I thought I'd talk with you a little bit.@ You're going to have some tea now, right?@ I was thinking of joining you."@
-
-
-ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
-
-
-`"No, I'm going home now.@ I have something to do, and this month club funding is getting a little low."@
-`"---Ah.@ I see, all those tea snacks were bought with club money."@
-` …… But, come to think of it, a club that can buy snacks with its own funds has to be wonderful.\
-
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-
-
-`"So I can't keep you company…… Tohno-kun, do you have any plans after this?"@
-`"Me?@ No, not anymore."@
-`"Well then, care to walk with me to the front gate?"@
-`"Yeah, it would be my pleasure."@
-
-
-ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
-
-
-` Senpai grins and nods, and walks by my side.@
-` We decide to walk together for five minutes to the school gate.\
-
+` I don't feel like returning to the mansion directly, so I'll wander around the city for a bit.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_25a.jpg",%type_lcartain_mid
 
-
-bg "image\bg\bg_01b.jpg",%type_lcartain_mid
-
-
-` Without any serious talk between us, we arrive at the school gate.@
-`"Well then, see ya tomorrow, Senpai."@
-` Raising one hand, I start off down the road in the opposite direction from her.\
-
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-
-
-`"Oh, please wait.@ I have something I wanted to ask you, Tohno-kun."@
-`"?@ What is it?"@
-`"Yesterday, you said there was someone that looked like me.@ I kind of got curious, so I wanted to hear a bit more about it."@
-` Her eyes burn with curiosity.@
-` …… But to me, that's not something I really want to recall.\
-
-
-`"…… Sorry, I don't want to talk about it.@ It was just a mistake I made, so it's okay."@
-
-` I look away from Senpai as I give a vague excuse.@
-`"Is that so?"@
-` Senpai quickly ends her questioning.\
-
-
-ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
-
-
-`"But you saw that person late at night, right?@
-` …… Tohno-kun, I think walking around late at night like that is pretty dangerous.@ Those serial killings have been continuing, you know?@ If you meet that serial killer, that would be terrible, wouldn't it?"@
-`"…… Senpai, you're worried about me walking out late at night?"@
-`"---Yes.@ You're a good person, so you're the type that'll get easily tricked and put in danger."@
-` Senpai looks like she is seriously worried.@
-`"-----Nn."@
-` Yes, her concern makes me extremely happy.\
-
-`"Thanks Senpai.@ But it's alright, the one behind those incidents is gone."@
-
-
-ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
-
-
-`"Eh?@ Gone?@ What do you mean?"@
-` …… Crap, Nrvnqsr is a secret between just me and Arcueid.@
-` I can't talk to Senpai about it, and besides, it's no use telling her about it.\
-
-`"Um, yeah, that's right.@ It is dangerous to walk around at night, really."@
-
-
-ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
-
-
-`"…… Anyway, from now on, please stop walking around at night.@ You're a good student."@
-`"Yeah, I know.@ I'm not sure about being a good student, but I won't play around at night anymore like you say."@
-`"…………………"@
+` ---I arrive in front of the station for no apparent reason.@
 br
-` Senpai stares at me.@
-` ---Does she not believe me?@ She doesn't seem convinced.\
+` Ever since I was invited back to live in the Tohno mansion, I've been low on money, so I really don't want to spend any money here.\
 
-`"…… I get it.@ Then, I promise."@
-` I stick out a hand.@
-`"Senpai, I owe you one for that time, so I'll do as you ask.@ So it's a promise."@
+` When I lived at the Arimas', Keiko-san would always give me some money for cleaning or tending the garden…… but now that I'm at the mansion, I don't think I can hope for that kind of income.@
+` I'd like to do a part time job, but Akiha would never allow it.\
 
+` ……………… *sigh*@
+` Reflecting on my complicated situation, I let out a sigh.\
 
-ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
-
-
-`"Um……………… you want to, shake hands?"@
-`"Yeah.@ We're a bit too old for pinkie promises, so we'll shake hands."@
-`"…………………"@
-` After standing there a little perplexedly, Senpai takes my outstretched hand.\
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_25a.jpg",%type_lshutter_mid
 
 
-ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+` Not doing anything, I watch the people passing by.@
+` I pass the time like that for an hour until I realize how pointless it is.\
 
+`"…… What the heck am I doing?"@
+` I don't know for sure myself.@
+` Was I thinking that I would see someone with golden hair walking by if I watched all these people?\
 
-`"I understand.@ It's a promise, Tohno-kun."@
-` She shakes my hand up and down.@
-
-
-ld c,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
-
-
-`"Well then, goodbye.@ Let's meet again at school tomorrow."@
-
-
-cl c,%type_lshutter_mid
-
-
-` Wrapped up in the sunset, Senpai disappears.@
-` After watching her go, I decide to head home, too.\
-
+`"…… How stupid.@ You'll never see Arcueid again, Shiki."@
+` I stop leaning on the wall and head back to the mansion.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_slw
-playstop
-
-
 bg "image\bg\bg_32b.jpg",%type_lcartain_slw
-
 
 ` I walk up the road and back to the mansion.@
 ` It's not quite six o'clock yet.@
 ` There's still an hour until dinner, so I'll kill some time in my room---\
 
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-!w2000
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w1000
+
 
 return

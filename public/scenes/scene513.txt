@@ -1,5 +1,4 @@
 
-
 wave se2
 
 bg "image\bg\bg_06a.jpg",%type_nowaitdisp
@@ -16,48 +15,29 @@ ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
 
 
 
-` Bonjour!@
-` This corner is for the unlucky Tohno-kun, who easily ended up in a Dead End again.@
-` It is time for "Teach me, Ciel-sensei!"@
+` ………… *sigh*@
+` What on Earth were you doing, Tohno-kun?@
+` I never thought you would come to the rare third period lesson, the second "Shakes 'n Shivers Animal Land".@
 br
-` Now, we will start second period.@
-` This time, we will present the first "Shakes 'n Shivers Animal Land" from the series that gives detailed observation of wild animals.@
-\
+` ----Well, Tohno-kun.@
+` Unfortunately, I'll have to ask for a make-up.@
+` It seems you have just drifted through every day without paying any particular attention to Arcueid, Ciel-san, or Akiha-san.\
 
-ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
-
-`"Sensei, I have a question before that.@ That name sounds really stupid.@ In Japanese, you can read your name as Chiel."@
+` To tell you the truth, this is the most important part of Ciel-san's route.@
+` But the fact that you still died means you have not received a charm from a certain person.@
+` The moral of this story is you should pay more attention towards your Senpai at school!@
 br
-` Question denied.@
-cl l,%type_lshutter_fst
-
-` ----Now then, Tohno-kun.@
-` I think it's good to be prudent, but this time, it seems to have backfired.@
-` Basically, you are a hero, so a little recklessness will be forgiven.@
-` It will be forgiven, but in a case with an absurd animal like a shark, I guess you couldn't do much.@
-` You'll just have to abandon Arcueid this time around.\
-
-ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
-ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
-
-`"Heeeeyyy!@ I don't want to hear that from Chiel!"@
+` First, go to the tea ceremony room after class.@
+` Second, you should honestly recognize the mistakes you have made.@
 br
-
-
-` ---Abandon her!@
-cl l,%type_lshutter_fst
-br
-`"Kyaah!@ No violence!"@
-br
-` Anyhow, please prepare yourself to explore the hotel alone.@
-` Inside, you'll find a whole animal kingdom.@
-` As the representative of primates, let's show the beasts what we've got.\
+` If you keep the above in mind, you should have no problems with the exam.@
+` That's all for the third period lesson.@
+` Please try hard so you won't end up here again next time.\
 
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 playstop
-
 
 
 return

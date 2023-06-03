@@ -1,154 +1,18 @@
 
-mov $phasebg,"image\bg\cmo_14.jpg"
-mov $phasetitle_a,":a;image\word\PARK_11A.PNG"
-mov $phasetitle_b,":a;image\word\day_11.png"
-gosub *left_phase
+bg "image\bg\bg_08b.jpg",%type_nowaitdisp
 
-bg "image\bg\bg_40a.jpg",%type_crossfade_slw
-
-` I wake up to the sound of Hisui's voice.@
-` Since then----after returning to the mansion, I must have made my way to my room somehow and slept.\
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-`"Shiki-sama, are you not feeling well?"@
-`"----No, I'm fine."@
-` Answering, I sit up in bed.@
+` ----I should look for Arcueid.@
 br
-` …… I'm almost amazed at myself.@
-` I don't even feel like talking, but my body tries to start my day as always.\
+` No matter how impossible it might look, no matter how hopeless it seems, it's all I can think of.@
+` I'll keep searching until I find her.@
+` I can't leave her by herself, and I can't let her----settle things with Roa by herself.\
 
-`"Breakfast?@ I'll be down soon."@
-ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+`"----Alright."@
+` My mind is set.@
+` So I can't waste any more time here.@
+` I have to go in town this very minute, and even if it means looking for a needle in a haystack, I have to find Arcueid----\
 
-`"……… Yes.@ I will be waiting."@
-` Looking as if she still wants to say something, Hisui leaves the room.@
-` I change my clothes and head to the sitting room.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-bg "image\bg\bg_34a.jpg",%type_lcartain_slw
-
-` Akiha and Kohaku are there.@
-`"Morning."@
-` Giving my usual greeting, I go to the dining room.@
-` I eat breakfast and return to the sitting room.@
-` I sit on the sofa and stare at the clock.\
-
-ld c,":a;image\tachi\aki_t17a.jpg",%type_crossfade_fst
-`"…… Nii-san?@ Um, you know you have school today, right?"@
-`"Hm----?@ Yeah, that's right.@ I guess I should go to school."@
-` I forgot.@
-` I didn't feel like doing anything, and I thought I would keep living like this empty shell.\
-
-`"…… I do have my life as Tohno Shiki.@ If I don't have anything to do, it won't hurt to go to school."@
-`"Nii-san……?"@
-` Akiha looks at me uneasily.@
-cl c,%type_crossfade_fst
-
-` …… Speaking is just a pain.@
-br
-` Without saying anything, I go to school.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-bg "image\bg\bg_06a.jpg",%type_lcartain_slw
-
-` Time passes by uneventfully.@
-` I emptily attend my lessons.@
-` The sound of the chalk.@
-` I mindlessly write down what's written on the board into my notes.@
-br
-` I look out the window into the rear courtyard.@
-` Of course there's no one there.\
-
-`"------"@
-` ----What am I doing?@
-` Just calmly attending my lessons like this.@
-` Not searching for her and just returning to my normal life.\
-
-`"------"@
-` But, there's no way for me to search for Arcueid.@
-` Since she left on her own, there's probably no possibility of me finding her.@
-br
-` That's why…
-` I've really lost Arcueid---.\
-
-br
-` *snap*@
-br
-`"…………"@
-` A sound comes from above my desk.@
-` …… Ah, it's nothing.@
-` I was just gripping my mechanical pencil so hard that I snapped another one.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-bg "image\bg\bg_06a.jpg",%type_lshutter_mid
-
-wave se2
-
-
-` Classes end.@
-` In the commotion of the classroom, I still remain seated.@
-br
-`"Tohno, can you come here for a moment?"@
-` My math teacher speaks up from the podium.@
-`"----Yes, what is it?"@
-` I respond and walk towards him.\
-
-`"Tohno, hasn't your recent behavior been a little wild?@ I have received information that you have been going out late at night.@ Does it ring a bell?"@
-`"…… Yes.@ These past few days, I had things to do in town at night."@
-`"----I see."@
-` My math teacher----well, my homeroom teacher as well----looks a bit concerned, then looks a little sorry.\
-
-`"I know you're not the kind of student to goof off at night, but there have been concerns voiced by the faculty.@ It appears the head of the student council would like to speak to you.@
-` Because of that, please go to the student council room after school.@ Just consider yourself unlucky and bear with it."@
-` Saying goodbye, he leaves the classroom.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-!w1000
-
-bg "image\bg\bg_08a.jpg",%type_lcartain_slw
-
-` After school.@
-` I stop by the student council room, but the teacher isn't there.@
-` …… Now that I remember, that teacher is also an adviser to the gymnastics team.@
-` He probably won't come until practice is over.\
-
-`"------"@
-` I sit in my chair and wait faithfully.@
-`"………… Kk."@
-` I bite my lip.@
-` I know this isn't the time to be doing this.@
-` I know, but there's nothing I can do.\
-
-` Outside the window, the sunset paints the sky vermillion.@
-` I can hear the voices of club members practicing outside and the students talking while going home.@
-` Within that, this classroom is the only quiet place.\
-
-` …… This makes me angry.@
-` Why am I here?@
-` I can't do anything.@
-` I'm angry at my powerlessness.@
-` However, I have no way to solve this myself, so in the end, all I can do is accept everything I'm told emptily.\
-
-`"…… What am I doing?"@
-` There's no answer.@
-` I just sit in the empty classroom listening to the sounds outside.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-bg "image\bg\bg_08b.jpg",%type_crossfade_mid
-
-` Tick.@
-` The second hand of the clock sweeps by, telling me it's now seven at night.@
-` No one comes by.@
-` The school closes at six and all the teachers leave at six-thirty, so no one else remains on the school grounds.\
-
-`"…… I guess I'm forgotten."@
-` I get up from my chair.@
-` After pondering matters so long, my head starts to clear a little.\
-
-` I was thinking all this time.@
-` About what I should do, what I should prioritize.@
-` From here, I should----
-br
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 
 return

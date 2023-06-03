@@ -1,15 +1,244 @@
 
 
-bg "image\bg\bg_40b.jpg",%type_nowaitdisp
 
 
 
-` …… No, I would feel bad about moving around and interfering with Hisui and Kohaku-san's work.@
-` It's still only been two days since I came back to the mansion.@
-` Perhaps it's because I'm not used to it yet, but for some reason, I feel tired.@ I should relax and rest until dinner.\
 
-bg "image\bg\ima_10.jpg",%type_tcartain_mid
-!w2000
+bg "image\bg\bg_34b.jpg",%type_tcartain_mid
+
+play "track01.ogg"
+
+` It's after dinner, and we drink tea in the sitting room.@
+` Akiha sits across from me and Hisui stands by the wall.@
+` There is no such thing as a TV in the room, and Akiha doesn't say much.@
+br
+` ---Everything seems so… high-class.\
+
+`"Shiki-saaan, can you come here for a moment?"@
+` Kohaku-san's cheerful voice calls from the lobby.@
+
+ld c,":a;image\tachi\aki_t01b.jpg",%type_lshutter_fst
+
+`"Nii-san?@ Kohaku is calling you.@ Did you do anything to make her call for you?"@
+`"No, I don't remember anything---I'll be right back."\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_33c.jpg",%type_lshutter_mid
+
+` I leave Akiha and Hisui behind and go to the lobby.@
+` Kohaku-san is pacing back and forth by the entrance.@
+`"…… Kohaku-san.@ What are you doing?"@
+
+ld c,":a;image\tachi\koha_t02.jpg",%type_lshutter_fst
+
+`"Ah, Shiki-san.@ Well, it's a little complicated…… Can you please step outside with me?@ Here is not a good place."@
+`"……?"@
+` I don't understand what's going on, but I follow her anyway.\
+
+bg "image\bg\bg_48c.jpg",%type_lcartain_mid
+
+
+`"You have something to tell me?@ Is it a secret or something?"@
+
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+
+`"Yes.@ If Akiha-sama were to hear it, she would get mad at you, Shiki-san."@
+` Something Akiha would get mad over……?@
+`"What do you mean?@ I haven't done anything to make her mad."@
+`"Oh, it isn't anything you did.@ But you know, while you were eating with Akiha-sama, a guest came to see you."\
+
+`"Huh?@ A guest, for me?"@
+`"Yes.@ She was walking around the front gate, so I called out to her.@ She was wearing the school uniform of your high school."@
+` And then Kohaku-san began to describe the guest's appearance.@
+` About my age, with a slightly childish face.@ A cute girl, her long hair tied in pigtails……?\
+
+`"…………"@
+` Thump.@ I feel as if my world is enveloped in darkness.@
+` That description.@
+` Isn't it Yumizuka Satsuki, who ran away from home---\
+
+`"She asked 'Is this Tohno-san's mansion?' And I answered 'Yes it is.' Then she asked 'Is Tohno-kun here now?'"@
+`"…… Hmm.@ And then what, Kohaku-san?"@
+`"Yes, well she seemed to want to talk to you, but she refused when I asked if she wanted to come in.@ She seemed okay that she would not get to meet you right now."@
+` Kohaku-san wonders aloud what it was all about, and she tilts her head.@
+` But, I'm the one who wants to know.\
+
+`"Why------why did Yumizuka-san come to my place……"@
+` I don't know.@
+` I don't know, but, I have a bad feeling about this.@
+`"…… Kohaku-san, how long ago was this?"@
+`"Um, it was before the end of dinner, so about ten minutes ago."@
+`"--!@ And, which direction did she go?"@
+`"She went down the hill, towards the station, I think."\
+
+` ---Can I make it?@
+` If I run---if I get lucky, I might make it.@
+`"…… Got it.@ I'll be gone for a little bit, so please keep this a secret from Akiha."@
+
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+
+`"I understand.@ If Akiha-sama found out, she would not leave you alone, Shiki-san."@
+` Giving a quick bow to the smiling and cheerful Kohaku-san, I run down the road and into the night.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+bg "image\bg\bg_24c.jpg",%type_lcartain_mid
+
+
+` *pant*----*pant*, *pant*----
+` Dashing with all my strength, I run toward the station.@
+br
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_25b.jpg",%type_lcartain_mid
+
+` *pant*, *pant*, *pant*, *pant*----!@
+` I look for someone like Yumizuka in the crowd in front of the station.@
+br
+` *pant*…… *pant*, *pant*………
+` I'm out of breath.@
+` My legs are painfully aware of how fast I was running, and they stop.\
+
+`"…… I, knew…… it wouldn't, be this easy, to find, her……"@
+` *pant*, *pant*.@
+` Trying to control my breathing, I start to run again.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_27b.jpg",%type_lcartain_mid
+
+br
+` ---I don't see Yumizuka Satsuki anywhere.@
+br
+` It's only natural, but I can't seem to give up that easily.@
+` …… I don't think it is because I am so worried about her.@
+` It's just that I have this terrible premonition, that's why I am running like this.\
+
+
+` ---I'll be going.@ Bye-bye, Tohno-kun.@
+br
+` That was a goodbye just like any other.@
+` …… A truly happy, gentle smile.@
+` That was not the face of someone who'd run away from home.@
+br
+` ---Tohno-kun, help me when I'm in a pinch, okay?@
+br
+` Yes, it really is that simple.@
+` I just… don't want to betray that smile----\
+
+bg "image\bg\bg_28b.jpg",%type_lcartain_mid
+
+
+` I pant with exertion.@
+` I don't see her in the park, either.@
+` …… There wasn't a way to find her from the beginning.@
+` I should just give up and go back to the mansion.@
+`"…… Damn…… it……"@
+` Still, I try to look for her as I turn to go back through town.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_25b.jpg",%type_lcartain_mid
+
+` I come to the front of the station once more.@
+` It's already past nine o'clock.@
+` It's probably because of all the recent serial killings that the area around the station is quite empty already.@
+br
+` ----At that moment,
+br
+`"Yumi----zuka."@
+` For an instant, I doubt my eyes.@
+` But the back of the figure in front of me, it resembles Yumizuka Satsuki too much.\
+wave se0
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_25b.jpg",%type_nowaitdisp
+
+
+` Yumizuka walks quickly into the midst of the crowd.@
+` …… I can't tell for sure.@
+` I may have been wrong, but I decided I should catch up to her and call out to her.@
+`"Wait, Yumizuka-san---!"@
+` I shout while running.\
+
+ld c,":a;image\tachi\stk_t10.jpg",%type_lshutter_fst
+
+`"------"@
+` Did she hear me?@ Yumizuka quickly turns around to face my direction.@
+wave se0
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_25b.jpg",%type_nowaitdisp
+
+
+` That face… there's no confusing it.@
+` The girl walking ahead of me is unmistakably Yumizuka Satsuki, and the expression on her face wasn't frightening.\
+
+`"----Ah."@
+` But I feel a chill run through my spine.\
+br
+wave se0
+
+` ---Thump.@
+` My heart starts to pound quickly.@
+` The back of my head throbs heavily, and my throat is burning.@
+br
+`"What is this… It's weird…"@
+` The inside of my body is burning.@
+` I feel dizzy as if I'm in the grip of a terrible fever.@
+br
+` In that moment, Yumizuka begins to walk again.\
+
+bg "image\bg\bg_26a.jpg",%type_lcartain_fst
+
+waveloop se1
+
+`"Wa---wait, Yumizuka-san…!"@
+` I call out, running.@
+` Yumizuka walks on unsteadily, not turning.@
+`"Ca… can't you hear me, Yumizuka…!"@
+` I urge my hot body onwards.@
+` But, no matter how much I try, I cannot catch Yumizuka.@
+br
+` …… No matter how fast I run, I cannot catch up to her even as she walks.\
+
+`"------"@
+` Something is… strange.@
+` I know that, but I couldn't tell what it is.@
+` Right now, all I can do is follow Yumizuka Satsuki.@
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_26a.jpg",%type_lcartain_mid
+
+
+br
+` --And then.@
+br
+` I lose sight of her.@
+` Yumizuka Satsuki, whom I had been chasing without success, is nowhere to be seen.\
+
+`"…… Shit… What the hell is going on…!"@
+` I stop, catching my breath.@
+` My chest heaves deeply.@
+` …… Though I hadn't realized until now, I must have been running for a long time.@
+`"What… time is it…?"@
+` Resting my hands on my knees, I glance up at a nearby store window.@
+` It is--already midnight.\
+
+`"----Can't be.@ I couldn't have been running for that long."@
+` …… It's hard to believe, but the clock is correct.@
+` Looking around, most all the lights in the shopping district are off.\
+
+`"---I should… go back."@
+` Even though I'm worried about Yumizuka, I feel like I won't be able to find her anymore.@
+` …… I chased her for almost three hours, calling her name all this time, but she did not even respond.@ What was she thinking?@
+br
+` With a big sigh, I decide to head back to the mansion.\
+wavestop
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
 
 
 

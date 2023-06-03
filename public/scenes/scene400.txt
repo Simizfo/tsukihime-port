@@ -2,166 +2,89 @@
 
 
 
-mov $phasebg,"image\bg\bg_42a.jpg"
-mov $phasetitle_a,":a;image\word\PHIS_07A.PNG"
-mov $phasetitle_b,":a;image\word\day_07.png"
-gosub *left_phase
+bg "image\bg\bg_40b.jpg",%type_nowaitdisp
 
 
 
 
-!w3000
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
+` …… It is a little selfish, but I'd better ask Kohaku-san to make me something to eat.\
 
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+bg "image\bg\bg_42b.jpg",%type_lcartain_fst
 
-` I cannot wake up.@
-` Immersed in a dark dream, I can't wake up.@
+ld c,":a;image\tachi\koha_t06.jpg",%type_lshutter_fst
+
+`"Ah, Shiki-san.@ You're back."@
+` Moving the broom off to one side, Kohaku-san bows.@
+`"Yeah, I'm back.@ I do have a little favor to ask, though."@
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+`"Yes?@ Is there something special you need?"@
+`"Um, I'm a little embarrassed, but…"@
+` Before I could even ask her nicely to make me something to eat,
 br
-` ---I feel a chill go down my spine.@
-` Without reason, without purpose.@
-` I realize I will never be able to wake from this dream.\
+` the growling of my stomach rumbles through the courtyard.\
 
-!w5000
+ld c,":a;image\tachi\koha_t09.jpg",%type_crossfade_fst
 
-`"Shiki-sama, please wake up.@ You will be late for school."@
+`"------"@
+` Surprised, Kohaku-san just gapes.@
+`"-----Uh."@
+` My face turns red… I didn't realize my body was that crass…
+`"…… Um, so that's it.@ I didn't have much to eat since morning, so I can't wait until dinner…"@
+`"------"@
+` Kohaku-san stares at me wordlessly and then, as if remembering, lets out a little laugh.\
 
-bg "image\bg\bg_40a.jpg",%type_nowaitdisp
-play "track02.ogg"
+ld c,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
 
-`"---------Eh?"@
-` Hisui is in front of me.@
-` This is my room, and there is surprisingly great weather outside.@
-`"Hi…… sui?"@
+`"I understand.@ So you want me to fix you something light?@ Shiki-san, is there something you want in particular?"@
+`"Something I want?"@
+` …… To be honest, I was just hungry, and I didn't even think about what I wanted to eat.\
 
-ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
+`"Um…… I guess some pancakes would be fine."@
+` I don't know why, but the image of golden pancakes just pops into my head.@
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
 
-`"Good morning, Shiki-sama.@ You do not have as much time today, so please hurry to the sitting room."@
-` As usual, Hisui speaks in her detached tone.\
+`"Pancakes……?@ Shiki-san, I've heard that you do not like sweets, but…"@
+` Kohaku-san tilts her head in surprise.@
+`"Ah---no, I don't eat a lot of sugar, but it's not like I don't like it… I did eat lots of Japanese candy at the Arima's too…"\
 
-`"Oh------h."@
-` With that, everything disappeared.@
-` I embrace my recently awakened but still throbbing body.@
-` …… I feel relieved.@
-` The awful world I was in until just now has just turned into a dream.@
-`"…… Thanks.@ If you hadn't woken me up, I might have never woken up."\
+`"Really!?@ If that was the case, you should have told me earlier.@
+` I was wondering all this time if I should get you something during teatime.@
+` But from now on, I'll make you the same thing that I make Akiha-sama."@
+` Kohaku-san's voice suddenly brightens.@
+` …… But eating the same thing as Akiha, does she mean I'll be eating those dainty little shortcakes from now on…?\
 
-`"Shiki-sama……?@ If you are not feeling well, please tell me so."@
-`"No, that's not it.@ ---Morning, Hisui.@ I'm glad that you're here."@
+`"But, Shiki-san, why do you want pancakes?@ If you want, I can fix you something a little better."@
+`"Hm…… no reason, I guess.@ I like them because they are pretty simple."@
+ld c,":a;image\tachi\koha_t18.jpg",%type_crossfade_fst
 
-ld c,":a;image\tachi\his_t02.jpg",%type_crossfade_fst
+`"Ahaha, Shiki-san, you just said the same thing as Hisui-chan.@
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
 
-`"Eh----ah, thank you very much, Shiki-sama."@
-` She blushes slightly and lowers her head.@
-`"No, I'm the one who should be saying thank-----it's past seven-thirty already!?@ Sorry, I'll get up, so please go wait in the sitting room!"@
-`"Yes, I will be waiting."@
+` This is a secret, but I think Hisui-chan really likes pancakes, too.@ Whenever she tries to cook something, it's almost always pancakes."\
 
-cl c,%type_lshutter_fst
+`"Really?@ …… That's pretty surprising.@ I thought she would like something a little more complex."@
+` Like, a very decorated cake that makes you wonder where to cut it from.@
+`"Isn't it?@ I think it is a little strange too, so I asked her.@ She told me it's because I told her that they are very simple to make.@
+` But she says she still can't make it to satisfy her…"@
+`"……………?"@
+` …… Um, so it's not that she likes pancakes, but just that she practices making them?\
 
-` Right as Hisui leaves the room, I change into my school uniform.\
+ld c,":a;image\tachi\koha_t06.jpg",%type_crossfade_fst
 
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-!w1000
-bg "image\bg\bg_32a.jpg",%type_lcartain_mid
-
-
-` Jumping out of bed, I scarf down a little of the breakfast Kohaku-san made and leave the mansion.@
-` It all took me less than ten minutes.@
-br
-`"I'm leaving--see you later, Hisui!"@
-
-ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
-
-`"Yes, I will be awaiting your return."\
-
+`"Ah, sorry Shiki-san.@ I will go make you some, so please wait in the sitting room."@
 cl c,%type_lshutter_mid
 
-bg "image\bg\bg_22a.jpg",%type_lshutter_fst
-bg "image\bg\bg_24a.jpg",%type_lshutter_fst
-bg "image\bg\bg_03a.jpg",%type_lshutter_fst
+` With her broom in hand, Kohaku-san hurries toward the rear entrance.@
+`"-----Well, whatever."@
+` In any case, I'll get to eat soon.@
+` I'll be able to have some tea and pancakes and then get to rest until dinner----\
 
-
-wave se2
-!w2000
-
-`"…… I made it……"@
-` I breathe out and rest my body.@
-` I made it just in time before they closed the gate, but I still have to make it to class.\
-
-bg "image\bg\bg_06a.jpg",%type_lshutter_fst
-
-`"…… Whew."@
-` The teacher hasn't arrived in the classroom yet.@
-` I try to catch my breath as I sit down.@
-` …… The classroom seems more lively today than usual.@
-` Tomorrow is a holiday, so everyone probably feels like today is a Saturday.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
 playstop
 
 !w2000
-bg "image\bg\bg_06b.jpg",%type_crossfade_fst
 
-
-` School ends.@
-` Since I don't have any reason to stay at school, I'll head back to the mansion.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_23b.jpg",%type_lcartain_mid
-
-
-
-`"…… Yesterday's dream."@
-` This is definitely the place where I saw someone get killed in my dream.@
-` Even though I tried as hard as I could not to dream, I guess you can't run away from yourself.@
-`"-----Kk."@
-` I grind my teeth.@
-` I feel pitiful about my weakness.@
-` After all, it's all a dream.@
-` Certainly there is something wrong with me seeing those dreams, but I think I'm still sane.\
-
-bg "image\bg\bg_22b.jpg",%type_lshutter_mid
-
-` …… My old man is my old man.@
-` I don't know about the Tohno blood.@
-` But I don't want to become a burden on Akiha and the others while I'm sane.@
-` I have to try and act as normally as possible, and try to find a way to solve all of this---\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_33b.jpg",%type_lshutter_mid
-
-play "track03.ogg"
-
-ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
-
-`"Welcome back, Shiki-sama."@
-` As soon as I open the door, Hisui politely greets me.@
-`"I'm back.@ I'll be in my room, so it's okay if you return to whatever you were doing."@
-`"Thank you.@ I will return to cleaning the sitting room.@ If you need anything, please call for me."@
-
-cl c,%type_lshutter_fst
-
-`"…… Hisui is cleaning the sitting room…"@
-` I don't see Kohaku-san, but she's probably sweeping the rear courtyard or going out to get groceries.@
-` It appears Akiha hasn't come back yet, so I'll go back to my room.\
-
-bg "image\bg\bg_40b.jpg",%type_lshutter_mid
-
-
-` Putting away my bag, I change out of my uniform.@
-` I spend about an hour just sitting around my room.@
-` All of a sudden, I hear a gurgling noise.@
-` It's not a strange noise or anything.@
-` It's just the sound of my stomach.\
-
-`"…… That's right, I didn't really have a chance to eat since this morning."@
-` Not wanting to be late this morning, I was only able to eat just a little of what Kohaku-san made for breakfast.@
-` I thought about eating at the cafeteria, but I lost my appetite as soon as I remembered what I saw at the cafeteria yesterday.\
-
-`"…… I wonder if I can get something to snack on before dinner……"@
-` …… I really don't want to be a bother, but I'm really starving.@
-br
-` I should---
-br
 
 
 

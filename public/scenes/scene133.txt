@@ -1,63 +1,28 @@
 
-bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+bg "image\bg\bg_11a.jpg",%type_nowaitdisp
 
-` …… Senpai is glancing all around the hallway.@
-` I don't know if she's looking for something or someone, but she looks really suspicious.@
-br
-`"………… He--hehe, he."@
-` I get this sudden irresistible urge.@
-` Senpai's always taking everything at her own pace; I think I can respond sometimes to balance things out.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_11a.jpg",%type_lcartain_mid
-
-` Senpai is seriously searching for something.@
-` I sneak up behind her.@
-` …… Luckily, Senpai doesn't sense me at all.@
-` Here goes,
-br
-`"Boo!"@
-`"----!"@
-` I grab her from behind, but----
-
-wave se4
-
-quakex 4,375
-
-
-ld c,":a;image\tachi\cel_t06a.jpg",%type_crossfade_fst
-` …… before I know it, I'm lying on the ground.\
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+`"Tohno-kun, did you sleep well last night?"@
+`"Eh?"@
+` She looks directly into my eyes as she asks.@
 cl c,%type_crossfade_fst
-`"Oh----Tohno… kun?"@
-` Senpai sounds worried.@
-`"Yeah--it's me, Senpai."@
+
+
+` …… Sleep well?@ That goes without saying.@ I couldn't get to sleep easily last night, and also--\
+
+`"Uh……"@
+` I blush as the memories resurface.@
+` With a piercing gaze, Senpai looks up at me.@
+`"Senpai, um--"@
 ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
-`"Geez, don't surprise me like that!@ I reflexively got away, but are you alright?"@
-`"Eh?@ I'm fine.@ I just tripped."@
-` I stand up.@
-` …… I guess the strange looks from all the other students in the hallway are to be expected.\
-
-`"Ooowowow…… Man, I think I hit my hip.@ Guess I shouldn't pull pranks like that."@
-` Regret.@
-`"Exactly.@ I think I overdid it, but since it was your fault I will not apologize."@
-`"Ah, I know, I know.@ Sorry Senpai, I interrupted your search.@ Well, this mischievous boy will now go back to his classroom."@
-
-` Rubbing my butt, I start to head to class.@
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-
-`"Oh, wait Tohno-kun.@ Can you stand there as a punishment?"\
-
-`"?"@
-` Stand here as a punishment?@ As usual, she says something strange.@
-`"Sure…… What is it?"@
-`"Just don't move, please."@
-
+`"Tohno-kun, you pervert."@
+`"Huh?"@
 cl c,%type_lshutter_mid
 
-` Like yesterday, she starts sniffing me again.@
-`"…… Um, Senpai……?"@
+` With a look indicating she wants to say more, Senpai quickly walks away.\
 
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w1000
 
 
 return

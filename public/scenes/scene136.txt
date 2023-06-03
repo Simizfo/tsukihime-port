@@ -1,165 +1,120 @@
 
 
-
-bg "image\bg\bg_06a.jpg",%type_crossfade_mid
-wave se2
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 
-` At lunch break, that guy who didn't even show up for a single class arrives.@
-ld c,":a;image\tachi\ari_t05.jpg",%type_lshutter_fst
+bg "image\bg\bg_32c.jpg",%type_lcartain_slw
 
-`"Yo Tohno!@ Food, let's get some food!"@
-` He's happy about something, being even more energetic than usual.\
-`"Of course, food.@ But you seem to be in a great mood.@ Did something happen, Arihiko?"@
-`"Yup.@ I just asked Senpai if she wanted to eat lunch together, and she refused."@
-`"………………"@
-` That's odd.@
-` "Senpai" must be referring to Ciel-senpai, but this guy seems to get happy when his offer is refused.\
+` It's quiet at the mansion gate.@
+` The time is seven o'clock at night.@
+` Akiha should be back, probably having tea in the sitting room.\
 
-`"Hey, Arihiko, you have that sort of taste?"@
-ld c,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
+` ……………… *sigh*@
+` I don't really feel like leisurely eating dinner at all, but if I don't go back, Akiha and the others will probably worry about me again.@
+` Looking for Arcueid will have to wait until after dinner.@ I'll leave when Akiha and everyone else go to sleep.\
 
-`"No, no, I'm not finished.@ So I asked Senpai why not, and she said 'If Tohno-kun is there, then I don't want to come'!!@ Uwahahahahahahahaha!@ Isn't that great, Tohno!?"@
-`"……………"@
-` That's odd.@
-` Why have I been friends with this guy since middle school?\
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w1000
 
-`"Oh man, she really hates you Tohno!@ A rival's loss is my gain, so I'll treat you to lunch today!"@
-` Arihiko happily slaps my back.@
-`"…… I see.@ Senpai's still mad at me about this morning."@
-` I have no idea why she's angry at me, but she definitely is angry.@
-ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_lcartain_slw
 
-`"Hey, let's go Tohno.@ There's only seats enough for half the people using the cafeteria."@
-` Arihiko takes me by the arm and drags me off.\
+` ----Dinner with Akiha is over and I head back to my room.@
+` I had some tea after dinner with Kohaku-san and the others, but I don't even remember what went on.@
+br
+`"----Where the heck is she?"@
+` My head is only filled with thoughts of that golden-haired vampire.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_32c.jpg",%type_lcartain_slw
+
+` At ten o'clock, the lights in the mansion are turned off.@
+` At bedtime, everyone goes back to their rooms, so I slip out of the mansion undetected.\
+
+`"…… She's, probably in the city?"@
+` …… I don't want to think about it, but most of the victims are usually found in alleys.@
+` If I want to find Arcueid----if I want to find the vampire killer who's continuing to murder, then I have to search the streets.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w1000
+
+bg "image\bg\bg_26a.jpg",%type_lcartain_mid
+
+` ------*sigh*@
+` I sit down on the guard rail.@
+` It's been several hours already.@
+` I looked around aimlessly, and I didn't even catch a single glimpse of Arcueid.\
+
+`"………… Damn it."@
+` It's so, frustrating.@
+` Of course, I knew it isn't easy to just randomly find someone in town, but I still felt optimistic I would find her.@
+br
+`"Where did she go……?"@
+` …… Why?@
+` I just wanted to ask her about the serial killings, but once I find out I can't see her, I----\
+
+`"Ah, stop.@ Stop.@ I should just stop."@
+` I stand up from the guardrail and start walking.@
+` It'll be midnight soon.@ Searching for Arcueid any longer really is just useless.@
+`"…………"@
+` But, if I've gone this far, I can do just a little more.@
+` There's one last place I need to check.@ If she's not there, then I'll go back to the mansion.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_50.jpg",%type_lcartain_mid
+bg "image\bg\bg_27b.jpg",%type_lcartain_mid
 
+` …… The deserted park.@
+` I arrive at the place where I cooperated with Arcueid and defeated Nrvnqsr.@
+` Having only looked in town, I've yet to search here.@
+`"…… Well, not that I'll find anything……"@
+` Grumbling to myself, I enter the park.\
 
-` I sit next to Arihiko and eat my lunch.@
-` My school's cafeteria has a television, and for better or worse for our education, they play back the morning news they recorded this morning.@
+bg "image\bg\bg_28b.jpg",%type_lcartain_mid
+
+` Midnight.@
+` As expected, there's no one here this late at night.@ With this much silence, it rather feels refreshing.\
+
+`"…… That's right.@ It's not like I can conveniently find her."@
+` I let out a sigh and slump my shoulders.@
+`"…… How stupid.@ Why am I so disappointed?"@
+` I don't understand it myself.@
+` Just, once more----I think maybe I wanted to see her smile.\
+
+ld c,":a;image\tachi\ark_t08.jpg",%type_lshutter_fst
+`"Ah, there you are.@ Good evening, Shiki."@
 br
-` At any rate, the news they are playing back is talking about a drunk customer stabbing to death a convenience store employee, something that makes me not want to go to a convenience store for a few days at least.\
-
-ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
-
-`"What a dangerous world we live in.@ Indiscriminate serial killers, drunken people stabbing people.@ A man can't even feel safe playing around at night anymore."@
-` Arihiko seems like he is seriously watching the news.\
-
-`"…… Well, certainly it is dangerous.@ But at least those serial killings won't happen anymore, so things should be like usual."@
-`"Oh really?@ Did they catch the serial killer?"@
-`"No, they haven't caught him…"@
+` …… Yeah, just like this.@ Her face that's so cheerful and carefree you can't believe it belongs to a vampire----
 br
-` ---But Nrvnqsr is no longer in this world.@
-` So the stupid title of the modern day vampire killings shouldn't be showing up in the news anymore and there will be no more of those meaningless killings.\
-
-`"Anyway, those terrible incidents won't happen anymore.@ There won't be any more victims, and the streets will be back to normal."@
-ld c,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
-
-`"No----I think there'll actually be another victim, Tohno."@
-`"----What?@ How can you be so sure, Arihiko?"@
-`"Well look for yourself.@ The news says they've found the tenth dead body."@
-br
-` -----Eh?@
-br
-`"Aw really…… that's right behind the movie theater I always go to."\
-
-`"Hey----hey, wait."@
-` I push Arihiko and look at the TV.@
-` What I see is without a doubt,
-` the news reporting that the tenth victim of the serial killings was found last night.@
-
-playstop
-
-`"That----can't be."@
-` He, Nrvnqsr, is dead.@
-` So why----is there another dead body with most of its blood drained?\
-
-ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
-
-`"Hmm, this modern vampire guy.@ I don't know anything about the person, but if it's like a sexy chick, I maybe wouldn't mind getting my blood sucked."@
-`"------"@
-br
-` If it's like a sexy chick, he maybe wouldn't mind getting his blood sucked?@
-br
-` His stupid talk----might be right.@
-br
-`"----No way."@
-` I don't want to think about it, but…
-` Even with Nrvnqsr gone, there's still one more vampire left, Shiki----\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-bg "image\bg\bg_06a.jpg",%type_crossfade_mid
-
-` Classes end and school is over.@
-` Actually, it's more like at some point, school was over.@
-` Wrapped up in my bad thoughts, I look up and suddenly find myself alone.\
-
-`"----The serial killings are still happening."@
-` I don't know what that means.@
-` The only one who knows the answer is probably Arcueid.@
-br
-` I don't know.@
-` I'm not involved in any of those incidents anymore.@
-` Once I settled things with Nrvnqsr, I came back to the ordinary world.@
-` Then----I can only be insane to want to go back to that abnormal world once again.\
-
-`"I shouldn't----be involved."@
-br
-` I understand even if I don't say it.@
-` That's probably my second most correct choice.@
-` But a long, long time ago, someone taught me the most correct choice.\
-br
-br
-br
-br
-br
-` ----Listen, Shiki.@ Every person's life is filled with pitfalls.@
-` You have more power to do something about it than most people, so you've got to get it together----
-!w750
-
+`"A,      Arcueid----!?"@
+` Without even thinking, I grab both of her shoulders.@
+ld c,":a;image\tachi\ark_t12.jpg",%type_crossfade_fst
+`"Eh----?"@
+` Arcueid flinches in surprise.\
+` Her shoulders are indeed real, and I quickly pull my arms back.@
+cl c,%type_crossfade_fst
 \
-`"----"@
-` So I just can't pretend I didn't see it.@
-` This incident isn't over yet.@
-` It seems once I got involved in this incident, I have to see this out to the very end--\
+
+`"Y, you, why----"@
+` Even though the one I've been searching for so long is right before me, I can't do anything but stumble over my words.@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"Why?@ That's odd.@ I was looking for you, so I don't think it's coincidence we met here."@
+`"Eh----You, were looking for me?@ Why?"@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+`"Why?----Oh, no reason."@
+` She says straight out that she has no reason to be looking for.\
+
+`"………………"@
+` …… I forgot.@ She really is kind of like a cat this way.@
+`"…… Well, I guess it works out.@ To be honest, I wanted to see you too.@ So meeting here, um----"@
+` I was about to say it makes me really happy, but I frantically choke those words off.\
+
+`"----Anyway, I want to have a serious talk.@ I want to talk about it somewhere else since I feel uneasy here, so is that okay?"@
+`"Sure----but talk about what?"@
+`"You'll see.@ …… Let's go more to the back of the park."@
+` Telling her to come on, I start walking.@
+cl c,%type_lshutter_mid
+` Tilting her head in curiosity, she follows me obediently.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_24a.jpg",%type_lcartain_mid
-
-
-` I leave school.@
-` First, let's go to Arcueid's place.@
-br
-
-bg "image\bg\bg_23a.jpg",%type_lcartain_mid
-bg "image\bg\bg_12a.jpg",%type_lcartain_mid
-bg "image\bg\bg_13a.jpg",%type_lcartain_mid
-
-bg "image\bg\bg_14a.jpg",%type_crossfade_mid
-bg "image\bg\bg_15c.jpg",%type_crossfade_mid
-
-bg "image\bg\bg_12a.jpg",%type_lcartain_mid
-
-` Her room is still the same, but Arcueid isn't there.@
-` …… Well, I didn't think I'd find her this easy.@ Looks like I have to go out into the city and look for her.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-!w3000
-
-
-bg "image\bg\bg_25b.jpg",%type_lcartain_mid
-
-` The sun sinks and the city is really starting to get dark.@
-` I looked around the major places in the city, but I didn't even catch a glimpse of her.\
-
-`"----Damn it.@ She was around when it didn't matter, so why can't I find her when I do need her?"@
-` …… What should I do?@
-` The night is just beginning, so---
-br
-
-
 
 
 

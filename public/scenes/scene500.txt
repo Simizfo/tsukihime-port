@@ -1,757 +1,119 @@
 
 
 
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_01c.jpg",%type_lcartain_mid
 
-bg "image\bg\bg_06g.jpg",%type_nowaitdisp
-
-
-
-
-
-
-play "track04.ogg"
-
-` This is it.@
-` I don't plan on ending up like SHIKI in that dream.@
-` I will dismantle Tohno Akiha right here and now.\
-
-`"----------"@
-` I focus on the "lines" running along the wall.@
-` …… On the other side, I can hear her footsteps.@
-` More intently, I stare hard at the wall, as if my brain would fry.@
-` …… The footsteps are right in front of me.@
-` Across this thin wall, Akiha is walking, completely defenseless.\
-
-`"--------"@
-` …… If I do this well, I don't even have to do it myself.@
-` Tohno Akiha will die, being crushed by the wall.@ …… No, the wall is too thin.@ That won't kill her.\
-
-`"--------"@
-` So, then.@
-` Cutting that long hair and dismembering her body is my role.\
-
-` Kill.@ Akiha.@
-` The no longer human Akiha.@ She is someone I can kill.@
-` …………………… She is no longer human.@
-` But, still.@
-` But, Akiha is, Tohno Shiki's, younger sister.@
-` Do that.@
-` Just because she isn't human anymore?\
-
-wave se0
-
-` -------Throb
+` ----Concerned about what happened this afternoon, I come to my school.@
 br
-`"Kk--------ah."@
-` Headache.@ I thought the headache was gone, so why?@
-br
-wave se0
-!w750
-` -------Throb Throb Throb
-br
-!w500
-` This headache.@ The pain feels like my eyes will burst from my head.@
-` …… It's because I tried to see the lines on the wall.@
-` My head, it hurts.@
-` …… Ah.@ If it hurts this much, my recent self feels like it will go away.\
+` …… Thinking back, Arcueid was strange when we were here earlier.@
+` There's no logic to it, but if she's just wandering around, I think she may end up here.\
 
-wave se0
+bg "image\bg\bg_03c.jpg",%type_lcartain_mid
 
-` -------Throb Throb Throb Throb
-br
-`"Ah----------ah."@
-` Don't think!@
-` Ignore the headache.@
-` If I think right now, I will definitely---recognize my mistake.@
-` Before that happens---before I return to Tohno Shiki, I have to kill Akiha before she kills me.@
-wave se0
-
-br
-`"-----------!"\
-
-bg "image\bg\ima_14.jpg",%type_lshutter_fst
-
-
-` I swing my knife with all my strength.@
-` A dry sound.@
-` With one giant swing, I draw a circle in the wall with my knife that cuts cleanly through the wall like butter.@
-br
-` And then.@
-` Facing the hallway, I kick down the cut wall.\
-playstop
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-
-
-`"------------Eh?"@
-` Akiha's voice almost sounds comical.@
-` …… That's only natural.@
-` Having a large circle suddenly appear in the wall and burst out against her, she should be surprised.\
-
-` And, it's all over.@
-` I jump through the opening in the wall and into the hallway.@
-` Over here---my figure is completely hidden from Akiha's view by the wall.\
-
-`"--------"@
-` The collapsing wall rushes towards Akiha.@
-` The red hair wraps around it.@
-` …… It even steals heat from inorganic things?@ The wall starts to break apart.@
-` But.@
-` Before she can break it down, my knife dismantles it.\
-
-bg "image\bg\bg_10f.jpg",%type_tshutter_fst
-
-
-` Pieces.@
-` The wall falls into clumps of varying size.@
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-wave se0
-ld c,":a;image\tachi\aki_t23b.jpg",%type_crossfade_fst
-cl c,%type_nowaitdisp
-play "track09.ogg"
-
-br
-` -------------Throb
-br
-` It all happens in an instant.@
-` This scene, it lasts for one instant.\
-bg "image\bg\bg_10f.jpg",%type_nowaitdisp
-
-
-
-` Her hair races back up.@
-` It wraps around my body.@
-` But---it is too late.@
-` I slice through both the wall and the fiery aura around her.@
-` She won't be able to instantly put out more heat, not that it matters.@
-br
-cl c,%type_nowaitdisp
-
-` Because my knife is far faster than her hair as I push her down and get on top of her.\
-
-wave se0
-
-`"Ah-------"@
-` Akiha's, voice.@
-` My knife is raised.@ All I have to do is pass through the "line" running from her left collarbone to her right lung.@
-` But, Akiha's hair is wrapping around my arm.@
-` It flows around my neck, around my body.@ I know that if I wait, in an instant, my body will be vaporized.\
-
-wave se0
-
-` ----------------Throb
-br
-` But, this headache does not go away.@
-` My head hurts, Akiha.@
-` Even though the command to kill repeated itself so many times in my head,
-` and I hated you so much,
-` but still---------\
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-
-bg "image\event\aki_e01.jpg",%type_crossfade_fst
-bg "image\bg\bg_10f.jpg",%type_crossfade_fst
-
-
-` …… Why?@
-` Why did I wake up?@
-` Why did Akiha suddenly look like her old self?@
-` If it wasn't for that, I would have brought this knife down.@
-br
-` But still--------\
-
-bg "image\event\koha_e02.jpg",%type_crossfade_fst
-bg "image\bg\bg_10f.jpg",%type_crossfade_fst
-
-
-` …… My skin is burning.@
-` The hair that wraps around my body steals my heat.@
-` My vision starts to fade.@
-` I can't force Akiha down.@
-` With a breath.@
-` My body is so light now that it feels like Akiha could blow me over with one breath.\
-
-` But---my arms are still alive.@
-` I can still make it.@ If I don't die, victory is mine.@ As long as I can kill her now, she can't steal any more of my heat.@
-br
-` But still---------\
-
-bg "image\event\aki_e07a.jpg",%type_crossfade_fst
-bg "image\bg\bg_10f.jpg",%type_crossfade_fst
-
-
-`"--------------"@
-` But still, for some reason, I can't bring down my knife.@
-` How incredibly naive.@
-` Akiha will kill me without hesitation.@
-` I already know that.@
-` Because Akiha, she's not the Akiha from before.\
-
-bg "image\event\aki_e01b.jpg",%type_crossfade_mid
+` There's no sign of anyone; not even a single sound.@
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_03c.jpg",%type_crossfade_fst
 
-br
-br
-br
-br
-` ------But still.@
-br
-`      But still, such a thing.@
-`      I just can't, do it.\
-playstop
+`"…………"@
+` But still, I feel like there's someone in the building.\
 
-bg "image\bg\bg_10c.jpg",%type_crossfade_mid
+wave se0
 
-` -----------------Throb
-br
-` …… Headache.@
-` It has bothered me many times, but I have to thank it this time.\
 
-` …… I was wrong.@
-` Thinking that just because she isn't human, she isn't like the old Akiha, it's acceptable to kill her.@
-` No matter how much she changes, Akiha is Akiha.@
-` Always helping me, always waiting for me, my dear sister.@
-br
-` ----That.@
-` Why did I think I could hurt her?\
+` Something.@
+!w500
 
-` ……………………………… Thro, b
-br
-` My headache disappears.@
-` The strength in my body also disappears.@
-` As my mind dims, I put all my strength into my arms so my knife will not descend on Akiha.\
-play "track07.ogg"
+` Without the presence of the sun,
+!w500
 
-!w3000
-`"Why…… won't you, kill me?"@
-` Akiha's voice.@
-`"I am a vampire, right……?@ A monster that feeds on human blood at night; I'm trying to kill you right now and I even killed Kohaku.@
-` So why----why do you have that sad look on your face?"@
-br
-` My heat is still being stolen.@
-` …… Unlike me, Akiha really has no mercy.@
-` Already.@ My body feels cold, as if I already died.\
+` the school building has changed into an ominous "place".\
 
-`"…… Stop it.@ It's not fair to die looking like that.@ …… I'm the one to blame here, so you should hate me to the end.@ Can't you even say that you hate me for killing Kohaku?@
-` Kohaku had to hate me too.@ I'm the daughter of Tohno Makihisa, and I kept her bound to the mansion while I knew her feelings."\
-
-`"…… That's why I thought it would be okay if it was Kohaku.@
-` If she wanted revenge on the Tohno family, then I would play along.@ Even if drinking her blood made me less than human---because she hated me, I thought it couldn't be helped."@
-br
-` ---I see.@
-` Akiha was the same as me.@
-` She knew.@ She knew that Kohaku-san plotted on our downfall, but still---\
-
-`"But it couldn't be helped, right?@ I had no way of making it up to her.@
-` …… If she wanted it, then the most I could do as a member of the Tohno blood was to support her."@
-br
-`"…………………… That's wrong."@
-br
-` I surprise myself as I voice my thoughts.@
-` I'm still---alive, it seems.\
-
-`"…… What?@ Nii-san, I can't hear you well."@
-`"…… That's wrong, Akiha.@ Kohaku-san doesn't hate anyone.@ She didn't wish for all this because she wanted to."\
-
-` ---That's right.@
-` It's just that she couldn't find any other purpose, so she only desperately acted out that plan.@
-` …… That, that was all she could do.\
-` All she could do was try with all her might to deceive herself into thinking that she had a purpose to live.\
-
-`"Akiha.@ I think I led a happier life compared to you or Kohaku-san.@
-` …… So, I'm sorry.@ I don't know.@ Neither your pain from being bound to the Tohno family, nor Kohaku-san's pain, where this was all she could do."\
-
-` How ironic.@
-br
-`"…… No one.@ No one is to blame.@ Not me, not you, not SHIKI, not Kohaku-san.@ …… No one is to blame----"@
-br
-` So why?@
-` Why did we end up choosing to kill each other?\
-
-!w3000
-
-`"…… Nii-san.@ Maybe you can still make it."@
-` Akiha still being pinned, she looks up at me aimlessly as she says this.\
-
-`"…… You'll die soon, Nii-san.@ But if you kill me, I think you can make it.@ …… Well, Kohaku is no longer alive, so I can't say that for sure."@
-br
-` Her eyes turn serious as she looks up at me.@
-br
-`"…… Right?@ So please hurry up and swing down your knife.@ That will save you."@
-` Akiha sulkily says those ridiculous words.\
-
-`"………………"@
-` …… Geez.@ I'm saying that if I could do that, I would've already done it a long time ago.@
-`"…… Fine, if you can't do that, then I will be the one who survives.@
-` Okay?@ Starting tomorrow, I will turn these streets into a painting of pure hell.@ Not just Hisui, but I will make people like your dear friends suffer."@
-br
-` …… I can tell she's pretty serious.\
-
-`"……… Idiot.@ If you did that, a scary person from somewhere would come and make things difficult.@ …… I bet there's a skilled vampire hunter out there that would fight you both day and night."@
-br
-` …… So, don't think about painting a scene of pure hell.@
-` If at all possible---I want her to resist sucking blood even though it might be hard, and just live like she did before all of this.\
-
-`"----Why?@
-` Why do you look at me like that, Nii-san?@
-` …… I'm no longer the Akiha from before.@ Even now, I want to bite into your neck.@
-` Just like SHIKI, I'm a crazed, possessed monster, right?@ Then you should return to how you were like before and kill me once and for all."@
-` She pouts and looks as if it was all my fault.\
-
-` …… She says I should kill her.@
-` That's certainly my own words from before.@
-` But, that.@ That isn't good.\
-
-`"----I can't do it.@ I can't kill you, Akiha."@
-`"You're thinking about me from before?@ But I'm different.@ I'm not the Tohno Akiha you know."@
-`"---No, that has nothing to do with it.@
-` Even if you were possessed and it was to destroy that---as Tohno Shiki, I can't harm Tohno Akiha."@
-br
-!w1000
-` …… I love this black haired girl who forgave me so much these past eight years.@
-` Even if I love her as a sister, different from the way she feels.\
-
-`"Akiha, you're my dear sister.@ I can't---ever hurt you."@
-`"-----------"@
-` Akiha opens her eyes.@
-` Her shoulders fall as she lets out a deep breath.\
-
-`"…… What are you saying?@ You have always hurt me, Nii-san.@ If you can't even realize that, then you really are dense, aren't you?"@
-` Her whispered voice is very gentle.@
-` And then, she brings both her hands on my stopped hand.\
-
-`"----------A…"@
-` With just that, I can see her intentions.@
-` I try to pull back, but I have no strength.@
-` …… Just like she said, I lost the freedom to control my body a long time ago.\
-
-`"Sto------stop it, Akiha………!"@
-` I frantically raise my voice.@
-` Akiha pretends not to hear me and smiles.@
-`"…… Geez.@ That's why I have to do it all myself even now."@
-` Her smile seems happy, but also full of sadness.@
-` She puts power into her hands.\
-playstop
-
-bg "image\bg\ima_10.jpg",%type_tshutter_mid
-
-
-` -------The knife descends.@
-br
-` But that's not where the line is.@
-` Just her heart.@ If that is pierced, it will be fatal and painful.@
-br
-`"A-------Aki, ha…………!"@
-br
-` I can't stop my arm.@
-` I can't prevent Akiha from doing this.@
-` How-----how can this happen?@
-` In the end.@
-` I tried to save two people important to me.@
-` Yet, I'm about to lose them before my very eyes---\
-
-bg "image\bg\bg_10c.jpg",%type_lshutter_fst
-
-`"Noooo---------!"@
-quakex 2,50
-
-br
-` ---------?@
-` What is it?@
-` My arm is stopped.@
-` Akiha's two hands pressing down on my hand… As if embracing them, someone drapes over them as well.\
-
-` Akiha looks disbelievingly at that figure.@
-` I---just like Akiha, stare blankly.\
-play "track08.ogg"
-
-`"Ko----haku?"@
-`"Yes……!@ Akiha-sama, it is me……!@ It is me, so please---please let go……!"@
-` With a face close to tears, Kohaku-san pulls the knife away from Akiha.@
-`"……………… Ko, haku."@
-` Akiha is in a daze.@ As if the demon that caught a hold of her has completely left, she stares at Kohaku-san in surprise.\
-
-`"…………… I see.@ You were alive, Kohaku."@
-`"----Yes.@ Akiha-sama, you only made me lose consciousness.@
-` At that last instant, you held back from killing me."@
-`"---------"@
-` Her eyes flicker with sadness.@
-` …… Even while possessed by fury, there was still humanity deep within Akiha.@
-` That---was what saved Kohaku-san and Akiha.@
-br
-` Akiha sighs.@
-` She closes her eyes as she lets out that breath.\
-
-`"---Goodness.@ I guess this means you've won everything.@ You're alive, and this is the end of the Tohno bloodline.@
-` …… But, maybe it's for the best.@ To be honest, I was thinking of resting, too."@
-` Her arms drop to her sides.\
-
-`"Go ahead, Kohaku.@ …… Nii-san wasn't able to, but you can kill me, right?@ I tried to kill you, and I am the daughter of the hated Tohno Makihisa."@
-`"……………"@
-` Kohaku-san holds the knife and stares at Akiha.@ And she shakes her head.\
-
-br
-br
-br
-br
-br
-br
-` ----It is, terribly quiet.@
-` Like melting ice, time flows by calmly.\
-
-`"……………… That's strange.@ I wonder why even Kohaku can't kill me."@
-` With her eyes still closed, she speaks softly as if she was sleeping.@
-`"Of course.@ It is because I like you, Akiha-sama."@
-` Clang.@
-` The knife Kohaku-san was holding clatters to the ground.\
-
-`"No matter how much you hate me, I want to always serve you.@
-` So Akiha-sama---if you feel sorry for me at all, please do not die.@ If you die like this, I---will go back to being the Kohaku from before."\
-
-`"…………… You're asking something pretty difficult."@
-` A deep sigh.@
-` Akiha averts her gaze as if she was pouting.\
-
-`"But, I guess it can't be helped.@ I owe you from before, so I won't do anything for now.@
-` …… Same for you, Nii-san.@ I will think that it's good enough for you to love me as your sister."@
-br
-` ----Her hair flows.@
-` The binding around my body disappears and I collapse to the floor.\
-
-bg "image\bg\ima_01.jpg",%type_crossfade_fst
-
-
-` At some point, the sky became deep and clear.@
-` The silver moon.@
-` The pale hallway now shows no trace of the fiery aura.@
-` Akiha's hair is still red, but the mirage that burdened her is long gone.@
-` Now---with Kohaku-san here, Akiha should be okay.\
-
-`"---------"@
-` My mind starts to recede.@
-` My cold body starts to drift towards sleep.@
-` But before that,
-` I watch the peaceful moonlight and think.@
-br
-` After a while, after I've gotten used to living in the mansion.@
-` I think selfishly that we'll be living happily like right now----\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-playstop
-
-!w3000
-
-
-
-
-
-
-mov $phasebg,"image\event\koha_f03.jpg""
-mov $phasetitle_a,":a;image\word\PKOHA_12A.PNG"
-mov $phasetitle_b,":a;image\word\epi.jpg"
-gosub *left_phase
-
-
-
-
-
-
-
-!w2000
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-
-
-`"Shiki-sama, please wake up.@ Shiki-sama."@
-br
-` …… I hear a voice.@
-` Hisui's voice that I have heard so many times.@
-br
-`"It is past time.@ I do not think it is a good idea to keep sleeping like this."@
-br
-` …… Hisui's reserved voice.@
-` But, with that, it's impossible to wake me up since I was so excited last night, I couldn't get to sleep.\
-
-
-`"---Shiki-sama.@ Please wake up or I think Akiha-sama will be mad at you again."@
-br
-` ---That instant.@
-` My mind snaps from its dozing.\
-
-bg "image\bg\bg_40a.jpg",%type_tshutter_fst
-
-play "track03.ogg"
-
-`"-------!"@
-` I jump up from bed.@
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-` Hisui stares at me from the side as I panic.@
-` I can hear the voices of cicadas from outside.@
-` It's still morning, but the sun is streaming in pretty strong, and my sweat drenches my pajamas.@
-` Well, that is, it's a pretty typical summer morning.\
-
-`"Ah----morning, Hisui."@
-ld c,":a;image\tachi\his_t16.jpg",%type_crossfade_fst
-
-`"Good morning, Shiki-sama."@
-` Hisui gives a succinct bow…… She acts very calm, but I get a bad feeling about all this.@
-`"Hisui.@ Don't tell me Akiha hasn't left yet……?"@
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"Yes.@ Akiha-sama is waiting in the sitting room until she sees your face, Shiki-sama…… That's right, I think she has been waiting for about an hour now."@
-`"----------!"@
-` I look at the clock.@
-` It tells me it is around ten in the morning.\
-
-`"Damn---why is she waiting around so late today, of all days……!?"@
-ld c,":a;image\tachi\his_t18.jpg",%type_crossfade_fst
-
-`"Because it is the morning that you leave for your trip, Shiki-sama.@ I think it is only natural for Akiha-sama to see you off."@
-`"……………… Ah."@
-` Her gaze is painful for some reason.@
-` …… That is supposed to be a secret, but maybe Hisui and Akiha already know about it.\
-
-`"…… Got it.@ Anyway, I'll go to the sitting room right away.@ Please go there ahead of me."@
-ld c,":a;image\tachi\his_t16.jpg",%type_crossfade_fst
-
-`"As you wish.@ Then, excuse me."@
-cl c,%type_lshutter_mid
-
-` …… Hisui courteously exits the room.@
-` After changing into the clothes I got ready yesterday, I sling a bag over my shoulder and leave my room.\
+`"…… Let's go in, Shiki."@
+` I don't have time to hesitate.@
+` Encouraging myself verbally, I walk inside the building.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_34a.jpg",%type_lcartain_mid
 
-ld c,":a;image\tachi\aki_t03b.jpg",%type_lshutter_fst
+play "track06.ogg"
 
-
-` ---I see Akiha in the sitting room, and she really doesn't seem to be in a good mood.\
-
-`"Hey, good morning, Akiha."@
-ld c,":a;image\tachi\aki_t18b.jpg",%type_crossfade_fst
-
-`"Good morning, Nii-san.@ You're taking things slow for the morning of a trip, aren't you?"@
-` She looks at me with a sharp glance.@
-`"…… Sorry.@ I couldn't sleep last night and was awake till early morning.@ This is still getting up early for me."\
-
-`"Oh?@ Looking forward to a trip so much you couldn't sleep?@ How cute.@
-` Nii-san, are you looking forward to playing with Inui-san so much?"@
-`"Why do you sound like that?@ Of course a trip is fun."@
-`"I see.@ You seem almost drunk with happiness.@ You've been waiting for this day since the start of summer, right?@ I don't know where you are going with Inui-san, but there has to be something really good waiting for you there, right?"\
-cl c,%type_crossfade_fst
-
-ld l,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"Akiha-sama.@ I do not think that is quite right.@ Something good is something that is there, not something that is waiting."@
-ld r,":a;image\tachi\aki_t08b.jpg",%type_crossfade_fst
-
-`"Ah, that's right.@ It would have to be a person to be 'waiting'.@ There must be something wrong with me.@ I guess I was just waiting for Nii-san too long."@
-`"……………………"@
-` …… These two.@ They seem to be in harmony all of a sudden.\
-
-ld r,":a;image\tachi\aki_t04b.jpg",%type_crossfade_fst
-
-`"Well then, Nii-san.@ How long will you be gone?"@
-`"…… Seven days.@ Why do you ask?"@
-`"Oh really?@ That's pretty short.@ Since you can only see her once in a while, I thought that you would spend your whole summer break there.@
-` Nii-san.@ Don't you feel sorry for Kohaku like that?"@
-`"Wh---wh, wh, what are you saying?@ I'm just going on a random trip with Inui, I'm not going to see Kohaku-san at all……!@ Anyway, I see her all the time.@ She's still coming here every weekend, so there's really no need for me to go see her…………"\
-
-ld l,":a;image\tachi\his_t18.jpg",%type_crossfade_fst
-
-ld r,":a;image\tachi\aki_t18b.jpg",%type_crossfade_fst
-
-`"--------------"@
-`"………… There's really no need, but…… she probably is lonely, and………"@
-cl a,%type_crossfade_fst
-
-` I stare down at the floor.\
-
-` ---Damn it, what's wrong with it?@
-` It is summer vacation after all, so they should pretend to not notice that I'm going to go see Kohaku-san.\
-
-ld c,":a;image\tachi\aki_t08b.jpg",%type_crossfade_fst
-
-`"---Oh, it's already late.@ I can't let her wait any longer, so I'll let you go for today, Nii-san."@
-` Akiha sounds like she's having fun as she rises from the sofa.\
-
-`"I'll leave it up to you, Hisui.@ I will be back in the evening, so we can maliciously gossip about Nii-san then."@
-`"Yes, let's."@
-br
-` …… So……
-` What's with all these shifts in Akiha's personality, and even Hisui's?\
-
-ld c,":a;image\tachi\aki_t04b.jpg",%type_crossfade_fst
-
-`"I will be going.@ Nii-san, you should be going as well.@ I'm not hoping for any souvenirs, so please relax."@
-cl c,%type_lshutter_mid
-
-` Akiha disappears towards the lobby.@
-` And then.@
-br
-`"Man, I want to find a good man too!"@
-br
-` She leaves her last complaint loudly.\
-
-
-`"……… She seems to be getting more cheerful each day."@
-` I really didn't think things would end up this way.\
-
-` …… It's been about a year since then.@
-` There's been a lot that has changed, but the biggest changes were in Akiha and Kohaku-san.@
-br
-` Simply put, Akiha is still like back then.@
-` Her hair is still red, but she dyes it black…… No, it's not like she uses any chemicals, but it seems she can change it with her will.\
-` …… She still has the urge to drink blood, so every once in a while she will suck on a blood pack used for transfusions.\
-
-` Akiha absorbed some sort of evil spirit from SHIKI.@
-` That's why she originally went on a rampage, but since then, I guess she has control over it.@
-` Simply put, it weakened when it transferred to Akiha, and its only influence is making Akiha strong-willed.@
-` …… Well, she's more like a bully than strong-willed, but if I tell her that, she will get angry, so I'm not going to.\
-
-` Not only did it make her a bit more honest, but it also increased her power.@
-` Thanks to that, Akiha can exert better control over her Tohno blood.@ That's probably why she can hide the color of her hair.@
-` …… To say the results, she's pretty much invincible, and as her dear Onii-chan, it's pretty troublesome to keep her under control.\
-
-` ---With regards to Kohaku-san, she became independent after the new year started.@
-` Because Akiha is now fine by herself, and maybe because she is planning something, Kohaku-san left to work in a mansion of a branch of the Tohno family in the mountain recesses of Nagano.\
-
-` …… But at the end of the week, she comes back here and the four of us pass the time together like always.@
-` Before, I asked her why she decided to do that, and she answered that there was something she wanted to investigate and that I should wait patiently until she is done.@
-` Because I love her, I couldn't refuse, so all I can do now is wait.@
-` Since then, even though Kohaku-san and I can meet at the end of every week, being alone together is difficult because of Akiha and Hisui.\
-
-` Also, Kohaku-san and Akiha are on very good terms.@
-` Kohaku-san likes Akiha, and Akiha cares for Kohaku-san.@
-` …… About me and Kohaku-san, Akiha has acknowledged it openly.@ She did, but…
-br
-`"That's fine.@ If you're going to do as you please, Nii-san, then I will just do as I please."@
-br
-` She added that random exclamation which can really mean anything.\
-
-` ……………… *sigh*@
-` That's how it was, and in the midst of all that complexity, I received a letter from Kohaku-san.@
-` The letter said that there was something she wanted to show me, so she wants me to go to Nagano during summer break.@ After seeing that, I planned this insane trip immediately.@
-br
-`  I am supposed to be spending the week with Arihiko.@
-` But Akiha and Hisui doubt me…… Geez, those two, what do they think of me?\
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"Shiki-sama."@
-`"Uwaaa!"@
-quakey 1,50
+bg "image\bg\bg_10c.jpg",%type_lcartain_mid
+waveloop se1
 
 br
-` …… My heart skipped a beat.@
-` I wish Hisui would stop sneaking up on me and suddenly speaking like that.\
+` ----There's no one on the first floor.\
 
-`"Shiki-sama, if you do not hurry, will you not miss the train?"@
-`"Ah---crap, this isn't the time to be spacing out."@
-` Always one to be prepared, Kohaku-san arranged transportation for me out to Nagano.@
-` I have a reserved seat on the train, so if I miss it, I'll have to pay out of pocket to ride…… For a poor student without a job, that would be like suicide.\
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_07b.jpg",%type_lcartain_mid
 
-`"Sorry, I'll be off.@ Sorry for being in a rush this morning………!"@
-` Carrying my bag, I exit the sitting room.@
-` From behind me,
 br
-ld c,":a;image\tachi\his_t19.jpg",%type_crossfade_fst
-
-`"Yes, please send my best regards to Nee-san."@
 br
-` Hisui's soft voice reaches my ears.\
+br
+` ----I feel a numb sensation behind my neck.@
+` Ignoring it, I walk up to the second floor.\
 
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_11c.jpg",%type_lcartain_mid
+
+br
+br
+br
+br
+br
+` ----I arrive on the second floor.@
+` No one here.\
+
+wave se7
+
+` No one here.@
+wave se7
+
+` No one, here.@
+br
+` But.@
+` On my back,
+` A soft, cold sensation like the belly of a snake covers me.\
+
+`"------Who's there!?"@
+` I whirl around.@
+` I think there was…
+ld c,":a;image\tachi\roa_t07a.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+\
+
+`"Eh----?"@
+` I hear a stabbing sound.@
+` In the next instant,
+` My chest is sliced open.\
+
+bg "image\bg\ima_12b.jpg",%type_lshutter_fst
+
+` Blood flows forth.@
+` I'm stabbed from behind, as if to open my old wound.@
+`"Ah----"@
+` My body falls.@
+br
+` ----I don't know what's going on.@
+\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+` Everything fades.@
+` In the last instant,
+br
+wavestop
+
+bg "image\bg\cmo_06.jpg",%type_crossfade_mid
+` I see a scene from a distant summer day, repeating in my mind.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
 playstop
 
-!w4000
 
-
-bg "image\event\koha_f02.jpg",%type_crossfade_fst
-
-play "track02.ogg"
-
-br
-` -------The train continues forward.@
-br
-` Bathed in the fragile, white sunlight, it runs past the mountain countryside.\
-
-` Maybe it's because this is a really rural area, but I'm the only one in this car.@
-` Sitting by the window, I stare at the flowing scenery.@
-` The radiant sun illuminates my vision while the wind wafts comfortably on my cheeks.\
-
-`"--------"@
-` I glance down at the letter.@
-` There is a picture included in the letter, and the address of where we're meeting.@
-` …… I say address, but there really isn't one.@ It's more of "take a left here, a right there, and down this path" sort of place without an address.@
-` This picture has to be of that place.\
-
-`"------A place to return to, huh?"@
-` Where it is, I do have a feeling without it being said.@
-` …… Kohaku-san probably remembered where it was.@
-` Those trivial words that Tohno Makihisa said.@ Just working off that information, she must have found that forest.@
-` That black forest.@
-` Hidden from sight, the old mansion in the heart of the mountains.@
-br
-` Long ago.@
-` The place where Nanaya Shiki spent his childhood.\
-
-`"----------"@
-` …… It'll still be a while until I reach my destination.@
-` Is it because the sunshine is unusually strong?@
-` Closing my eyes, I lean back against the seat---
-br
-br
-br
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-bg "image\event\koha_f03.jpg",%type_crossfade_fst
-
-
-` ---like that, I fall into a dream.\
-
-` The sunshine that is so white.@
-` The smell of the air untainted by the touch of civilization.@
-` The endlessly pure sky, the shimmering summer air that rides on the wind.@
-br
-` The wild grass of spring.@ The starry sky of autumn.@ The cold ground during winter of my home.@
-` In summer, it was---the bright flowers that steal your breath away.@
-br
-` ---There, she is waiting.\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-
-bg "image\event\koha_f01.jpg",%type_crossfade_mid
-
-
-` In front of a sea of flowers.@
-` The overwhelming scent of summer.@
-` A radiant smile that outshines even those sunflowers.@
-` In the midst of the burning heat, she greets me.\
-
-br
-br
-br
-br
-br
-br
-` ------Welcome back.@
-`      This time, it is for real.@
-`    As if fulfilling that childhood promise at last.\
-
-
-
-!w4000
-
-bg "image\event\koha_f01b.jpg",%type_crossfade_mid
-
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
 
 resettimer
 waittimer 3000
-
-mov %rockending, 0
-
-gosub *ending
-
 
 return

@@ -1,17 +1,178 @@
 
 bg "image\bg\bg_11c.jpg",%type_nowaitdisp
 
+` -----Everything.@
+`     All of it should turn into illusion.@
+!w1000
 wavestop
 
-*300
+\
 
 
+bg "image\bg\bg_11d.jpg",%type_crossfade_slw
+
+` I stand up as I strongly grip my knife.@
+br
+` The footsteps get even louder.@
+` I sense the enemy coming closer.@
+` All the time, someone's voice echoes in my brain.@
+` Slice her apart.@ Slice her apart.\ Slice her apart.@ Slice her apart.@ Slice her apart.\
+
+`"U----"@
+br
+` Slice her apart  Slice her apart  Slice her apart  Slice her apart  Slice her apart
+` Slice her apart  Slice her apart  Slice her apart  Slice her apart  Slice her apart
+` Slice her apart  Slice her apart  Slice her apart  Slice her apart  Slice her apart
+` Slice her apart  Slice her apart  Slice her apart  Slice her apart----
+br
+`"Shut up."@
+` Using my willpower, I force the voice in my head to be quiet.\
+
+`"This is, what I decided."@
+!w750
+
+` Slice----
+`"I don't need you to tell me what to do."@
+!w750
+
+` her----
+`"If you don't want to be killed by Ciel."@
+!w750
+` apart----
+`"Just shut up until it's over, Roa."@
+!w750
+` -----
+\
+
+` The voice disappears completely.@
+` The footsteps, and her approaching shadow.@
+br
+` ----Ciel appears before me.\
+
+ld c,":a;image\tachi\cel_t15.jpg",%type_crossfade_fst
+
+play "track07.ogg"
+
+`"---You finally decided to fight."@
+` Her voice seems almost relieved.\
+
+`"That's good.@ Now there is no sin for either of us.@
+` Now that we are both trying to kill each other, our sin will die.@ Now there is only punishment for the one who lives."@
+` …… Since we are both trying to kill each other there is no sin?@
+` Her words are part of a world I can't understand.\
+
+`"I see.@ Then is that punishment for the one that's left alive atoneable?"@
+`"Yes.@ Something that is atoneable is what we call punishment.@ If it is called punishment, there is no reason for it not to be atoneable.@ The only thing that does not disappear is the sin.@
+` So---we don't want to carry that burden, do we?"@
+` Saying that,
+` she takes another step forward.\
+
+`"--Then, killing you here isn't a sin, Senpai?"@
+`"Yes.@ I will kill you, so it is okay for you to kill me, Tohno-kun.@ Our conditions are equal."@
+` Another step.\
+
+`"--------"@
+` That's, not right.@
+` Certainly I am getting killed, so I'm killing her back to protect my own life.@
+` But to say there's no sin---what would happen to Ciel?@
+` From the beginning, she came here with an unrequited will to kill.@
+br
+` That is---\
+
+`"Farewell.@ Let us lower the curtain on this ridiculous play."@
+` The last step.@
+cl c,%type_lshutter_mid
+
+` Her readied bayonet shoots toward my heart.@
+br
+` Before then,
+` I lunge forward and aim for the "point" on her right lung.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+
+` ---I didn't think I could kill her.@
+br
+` It's only natural for her to pierce my heart before I get within knife range.@
+` That's why I was surprised.@
+` I easily dodged her blade and was able to pierce her "point" with ease.@
+`"----Sen, pai."@
+` It looked like she accepted my knife on purpose.\
+
+`"I made you… kill… me."@
+` Her faint, weak voice on the verge of death.\
+
+br
+br
+br
+br
+br
+br
+br
+`"That was, my, greatest sin."\
+
+` Sounding like she's crying, she uses her remaining strength to stab me with her bayonet.\
+
+wave se9
+
+bg "image\bg\bg_11c.jpg",%type_crossfade_mid
+quakey 1,100
+
+`"------Ga, hu."@
+` My blood flow reverses through my lanced heart.@
+` Coughing up blood, I collapse onto the ground.@
+br
+` Before my eyes,
+` the body of the one who died slightly ahead of me lies on the floor.\
+
+`"----How--"@
+` Did you, know?@
+`"----foolish."@
+` Did you know from the beginning---that if there was such a thing as sin, it would only be for you?\
+
+`"Ha----ah."@
+` The sensation in my limbs fades away.@
+` My consciousness, too.@ It will be seconds before I bleed to death.@
+` The instant I was stabbed,
+` I had a vision of something like an old book, scattering and crumbling away page by page.@
+br
+` Probably, with that, the thing called Roa was dispersed.\
+
+`"…………"@
+` I can't think.@
+` From the very beginning, she planned to give her life to take mine.@
+` Did she think that was her punishment?@
+br
+` ---How foolish.@
+` There's no---meaning in that.@
+br
+`"---Still."@
+` I was sad that she died before she apologized to me.\
+
+` If she could have apologized to me, then I bet she would have felt some relief…… But, she couldn't even say that.@
+` Since she knew it was something that wasn't atoneable by apology, she didn't apologize to the very end.@
+br
+` That determination.@ It makes me angry that I made her go that far.\
+
+`"What.@ In the end----"@
+` I liked her?@
+` Until the very end.@
+` Feeling sad like this until my own death, she was that dear to me.\
+
+`"------Tss."@
+` I cough weakly and spit out blood.\
+
+` It's all over.@
+` Staring dazedly at the moon, with these strange thoughts, I drift off to slee----\
+
+!w3000
+\
+playstop
 
 
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
 
-
-
-
-
+resettimer
+waittimer 3000
 
 return

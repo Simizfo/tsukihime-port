@@ -1,16 +1,12 @@
 
 
 bg "image\bg\ima_10.jpg",%type_lcartain_slw
-!w3000
-
+!w4000
 bg "image\bg\bg_29b.jpg",%type_lcartain_slw
 
-
-` It's now eleven o'clock.@
-` …… The park is completely still, as if entirely frozen.@
-` There's no fresh flow of air, nor the presence of anyone approaching.@
-` There's no sign of Arcueid coming.@
-` Time passes by meaninglessly.@
+` --Both hands on the clock approach the top of the dial.@
+` It's been two hours since I came here, yet there's no sign of Arcueid.@
+br
 ` I--
 br
 

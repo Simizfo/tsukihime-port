@@ -1,553 +1,101 @@
 
-bg "image\bg\bg_25b.jpg",%type_nowaitdisp
 
+bg "image\event\ark_h03.jpg",%type_nowaitdisp
 
-` ----I'll search the shopping district.@
+` ----I can't do it.@
+` I can't do anything she doesn't want again.@
+` Once, I gave in to this headache and I killed her.@
 br
-` Even though she was in so much pain, she's not the kind of person to rest because of it.@
-` She told me to go back.@ In other words, she was saying she won't be going back.@
-` I think she plans on finding the vampire by herself.\
+` That's why, never again.@
+` I can't lose to myself and make Arcueid cry.@ Even if this headache tears me apart, I won't do it----\
 
-` Then----I'll go to the shopping district and find the vampire or The Dead before she does.@
-` Arcueid can't find them, but I can spot The Dead if I take off my glasses.@
-br
-`"------Alright."@
-` Taking off my glasses and grimacing from the slight headache, I run to the shopping district.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
-monocro #ff00ff
-
-bg "image\bg\bg_26a.jpg",%type_lcartain_mid
-
-
-`"Ugh----"@
-` The pain races through my forehead.@
-` …… I'm not particularly concentrating on looking for "lines", but it seems running through town without my glasses on is a huge burden on my brain.@
-br
-`"Damn it----still, I'm not finding anything."@
-` …… All the people walking through the shopping district have normal "lines" on them.@
-` I don't see anyone painted with the disjointed scribbles I saw before.\
-
-`"…… Ow"@
-` I rub my temples with my fingers.@
-` As long as I have my glasses off, this headache will only get worse.@
-` But still--I can't give up this easily.@
-` Taking a deep breath, I start to run through the shopping district once more.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-!w1000
-
-bg "image\bg\bg_26a.jpg",%type_lshutter_mid
-
-
-` I start to pant from exertion.@
-` The exhaustion from running coupled with the pain in my head makes me nauseous.@
-` No matter how many times I run around, I can't find any Dead or anything out of the ordinary.@
-` Lifting up my hand to my forehead, I feel a feverish heat.@
-` It really does feel like I have a high fever.@
-`"…… Damn it, I'm not done yet----"@
-` I tell myself this as I start to run once more.\
-
-br
-` ----And then.@
-br
-wave se11
-
-mov %flushcount,0
-resettimer
-bg #0000ff,%type_nowaitdisp
-waittimer 16
-resettimer
-bg "image\bg\bg_26a.jpg",%type_nowaitdisp
-waittimer 16
-dec %flushcount
-if %flushcount>=0 skip -7
-
-`"…………… Ah."@
-` Not here, but somewhere farther away.@
-` In a narrow alley between two buildings, I can see something like sparks flying in the air.@
-` No, more accurately,
-` it feels like the "points" of death are shooting forth and disappearing.\
-
-`"----That's…"@
-` …… There's no mistake.@
-` It's exactly the same as when Arcueid defeated The Dead before.@
-` She----in that condition, is fighting by herself……!@
-br
-`"----Found her……!"@
-` Forgetting my pain and weariness, I dash towards the alley.\
-
-monocro off
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
-play "track06.ogg"
-
-` The entrance to the alley.@
-` I run to the narrow path between the buildings.@
-br
-`"Death" is flying through the air and fading away.@
-` …… How many is she fighting?@ There's an enormous amount of it.\
-
-`"------Gh."@
-` I can hardly bear it.@
-` As I run to the alley, my spine groans in protest.@
-br
-`"Ha------agh."@
-` As if a saw was slowly but surely slicing through my spine,
-` a pain works its way from inside me.@
-` My instincts scream at me.@
-` They say where I'm going is too dangerous, and I have to go back.\
-
-`"Shut----up."@
-` But, that goes without saying.@
-` The amount of death there isn't normal.@
-` Inside.@ I know something terrible is happening inside this alley.@
-` But I can't turn back now.@
-` I can't leave Arcueid alone.@
-` If----I run away here, she might go off and die.@
-` I can't shake off that feeling, and I enter the alley filled with death.\
-
-monocro #ff0000
-
-monocro #ff0000
-bg "image\bg\bg_31b.jpg",%type_lcartain_mid
-
-
-`"Wha------"@
-` My mind freezes.@
-br
-` What I see is surreal.@
-br
-` Scattered all across the ground are the figures of numerous people.@
-` Faceless, limbless, their stomachs sliced open, the corpses bathed entirely in crimson.@
-br
-` On the wall, the ground, even on the moon overhead.@
-` Everything here is just… red.\
-
-` A dull, sickening sound.@
-` The last one, the last human shape full of lines expires from her hands.@
-br
-` With a single hand.@
-` She smashes the head of The Dead into the wall, squishing it like a tomato.@
-` As if not satisfied, she tears the headless body vertically in half and smashes it onto the ground.\
-
-monocro off
-bg "image\bg\bg_31b.jpg",%type_crossfade_fst
-
-
-`"Ar----cueid."@
-` The world is only filled with red and the moonlight.@
-` In the center of it all stands Arcueid.@
-` She doesn't notice I am here.@
-` She only looks up at the moon----in a trance and breathing heavily.\
-
-`"------"@
-` I can't speak.@
-` The pain inside me reaches a feverish pitch.@
-` It seems like the saw has cut all the way through.\
-br
-` ----Creak Creak.@
-br
-` My entire mind is screaming.@
-` I shouldn't be here.@ I don't want to die, it shouts.@
-br
-` Then,
-` Arcueid's eyes suddenly shift.@
-playstop
-
-ld c,":a;image\tachi\ark_t20b.jpg",%type_nowaitdisp
-waveloop se1
-
-` Her eyes aren't her usual crimson, but a golden flare.@
-` It's not that our eyes have met.@
-` It's just that I looked at those "eyes".\
-
-` Th, ump.@
-` My blood races through my entire body and my mind is jolted.@
-br
-br
-br
-` ----At first, a sense of overwhelming crisis.\
-
-` I shouldn't be here.@
-` I shouldn't be in front of that thing.@
-br
-`   IT WILL KILL YOU.@
-`   YOU CAN'T STAND UP TO IT.@
-br
-` That "creature" is on an entirely different level.@
-` Not a matter of higher or lower, but something beyond evaluation.@
-` Before that thing----just being there means death.\
-
-` THU, MP.@
-` My entire body throbs.@
-br
-` At first, it was fear.@
-` Then, a desire to kill.@
-br
-` Because, that thing shouldn't exist.@
-` So kill it.@ Hurry up and kill it.@ Kill it here.@ Kill it now.@
-` In the name of this blood,
-!w500
-
-` take that thing here,
-!w500
-
-` and destroy it----\
-
-br
-` My heart pounds furiously.@
-br
-` I know there's no way I can face it, but my entire body screams for me to kill it.@
-` What a contradiction----Is it telling me to kill it even though I know it's going to kill me?\
-` Is it telling me I don't want to be killed, so kill instead?\
-
-`"Gah----, ah."@
-` …… No.@ I'm not… here.@
-` Those eyes----I must not look at those golden eyes.@
-` I know this, but I can't escape her eyes.\
-
-` Thump.@ Thump.@ My blood boils…@
-` The stimulating throb of my blood.@
-` But, there's something else that tries to burst through my consciousness.\
-
-monocro #ff0000
-bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
 
 wavestop
 
-ld c,":a;image\tachi\ark_t20b.jpg",%type_nowaitdisp
-play "track04.ogg"
+bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+
+play "track09.ogg"
+
+`"Ha----ah!"@
+` I pull back from her body.@
+` The headache disappears and my heart returns to normal.@
+` The urges rampaging inside me have also disappeared and I finally start to comprehend what I just did.\
+
+`"----What----have I…"@
+` I can't believe it.@
+` But the memory is all too clear.@
+` How I pushed her down.@
+` How I choked her and held my knife over her.@
+` …… and the disgraceful things I did afterwards.\
+
+`"------"@
+` I don't know what to say.@
+` Arcueid adjusts her clothes and stands up.@
+` I----don't know how to apologize.@
+` Just saying sorry… how can that make it up?@
+`"----Arcueid, I----"@
+ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
+
+`"Don't worry about it…… I'm the one who should apologize."@
+` She looks away uncomfortably.\
+
+`"Wha--what are you saying?@ I was the one who did something wrong.@ If only----I had been stronger, that never would have happened."@
+ld c,":a;image\tachi\ark_t17.jpg",%type_crossfade_fst
+
+`"No.@ I don't think it was something you could have resisted because you saw my 'Mystic Eyes'."@
+`"Eh----?@ Mystic Eyes?@ Like, Nrvnqsr's eyes……?"\
+
+ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
+
+`"…… Exactly.@ I wasn't sane earlier.@ I was so thirsty, I couldn't control myself.@
+` That's why----I found some of The Dead, and tried to replace that urge with the urge to destroy to stave it off.@
+` Back then, I was unable to hold myself back----so that's why you saw my Mystic Eyes when you came."@
+`"…… Certainly I felt odd from the time I saw your golden eyes----but that's just that.@ I, with my own will--"\
+
+`"No, that's wrong.@
+` Shiki, my Mystic Eyes of Enchantment completely captivate whoever looks upon them.@ …… I think that's why you started to feel all those sexual desires."@
+`"--That----can't be right."@
+` Because even if she wasn't controlling me.@
+` I, I might, still like her.\
+
+`"Anyway, this was all because of my carelessness.@ …… I'm sorry, Shiki.@ I manipulated your body without any regards to your feelings."@
+cl c,%type_crossfade_fst
+` Her gaze shifts away as she says this.@
+` …… Being apologized to like this hurts my heart.@
+` Because I didn't feel like I was manipulated at all.@
+` Rather----it seems like I used it to obey my own lust.\
+
+`"Arcueid, I----"@
+ld c,":a;image\tachi\ark_t17.jpg",%type_crossfade_fst
+`"Don't apologize.@ …… Shiki, this was all an accident.@ I'll forget about it, so please forget about it too.@ I think it's better for the both of us that way."@
+cl c,%type_lshutter_mid
+
+` Saying that, she starts to walk quietly.\
+
+`"…… Arcueid……?"@
+ld c,":a;image\tachi\ark_t22.jpg",%type_crossfade_fst
+
+`"----I think this is enough for tonight.@ I killed all these Dead tonight, so it's probably useless to search any further."@
+`"…… That's fine, but what do we do with that mountain of dead bodies?@ If someone finds it, there'll be trouble."@
+`"There's no need to worry.@ Once something becomes a vampire and dies, it won't leave a trace.@ Those who refused to return to the Earth become ash to be scattered in the wind once they die.@ They will return and disperse on their own in a while."\
+cl c,%type_lshutter_mid
 
 
-br
-br
-`"Gh----ah, ghaa----"@
-br
-br
-` Why do I want to kill?@
-` Are you going to kill before being killed because you don't want to die?@
-` No, that's not a reason.@
-` There's no need for a reason to kill.@
-` Be honest, Tohno Shiki.@
-` Already, from a long time ago----you wanted to take this woman and…\
+` Without turning around, she disappears from the alley with weak steps.@
+`"………………"@
+` I can't stop her now.@
+` I still feel the sensation of Arcueid on both my hands.\
 
-br
-br
-`"Shut----up."@
-br
-` No, your reason and conscience should shut up.@
-` That's how it should be.@
-` I just, want her.@ I want Arcueid.@ Remember.@ Remember the feeling from that time.@
-` You knew from the first time you saw her.@
-` Since that time you killed that creature with your hands and lost your virginity as a killer------!@
+`"----Idiot.@ What a stupid idiot I am."@
+` I groan to myself.@
+` In the alley which became a stage of tragedy, I look up at the moon in remorse.\
 
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
 
-bg "image\bg\ima_13b.jpg",%type_crossfade_mid
-monocro off
-
-\
-
-br
-br
-`"Ah------\Ah."@
-br
-br
-` Yes.@ I want all of it.@
-!w1200
-
-` Her heart, her body,
-!w700
-
-` Her tears, her saliva,
-!w500
-` Her blood, her flesh, sin and punishment, desire and impatience------\
-
-br
-br
-`"HA----agh……!"@
-br
-br
-br
-` My breathing is out of control.@
-` I can't get a grip on my mind.@
-` Her eyes are consuming me.@
-` Those swaying, golden eyes.\
-br
-br
-br
-br
-br
-br
-` That is,
-!w750
-
-` something that cannot be killed no matter how much I kill…
-!w750
-
-\
 playstop
 
-bg "image\bg\bg_31b.jpg",%type_crossfade_fst
-ld c,":a;image\tachi\ark_t18.jpg",%type_crossfade_fst
-
-`"----Shiki!?"@
-` Arcueid realizes I'm here.@
-` As soon as she sees I am fixated to her eyes, she changes them to their crimson color.@
-br
-` But, by now,
-` it's far too late.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-
-` I bring out my knife and push Arcueid down.@
-` Her powerless body is easy to push.@
-` I straddle her.@
-` One arm at her neck, the other arm holding my knife overhead.@
-br
-` All that's left,
-` is to strike between her breasts.\
-
-`"Calm down----!@ This isn't what you want, Shiki……!"@
-br
-` I can hear her voice.@
-` The core of my brain starts to overheat.@
-br
-`"Shut up------!"@
-` My arm tightens around her neck.@
-` She painfully lifts her chin.@
-` …… I can't believe it.@
-` With all of her strength, she can't even free this one arm right now.\
-
-`"Shi----ki."@
-` Breathing painfully, Arcueid coughs out my name.@
-` Thump.@
-` My heart beats hard in my chest.\
-
-wave se0
-
-` I pant.@ And pant.@
-` My breathing is out of control.@
-` My vision is blurry and indistinct.@
-` This fire inside of me----I have to release it right away.\
-
-wave se0
-
-` Panting.@
-` I slowly start to move.@
-` I move my hips down her stomach.@
-` Spreading her legs, I press myself between them.\
-
-waveloop se1
-
-`"Wha…"@
-` She looks at me uncertainly.@
-` That look makes my head pound.@
-br
-` Panting.@ And panting.@
-` Swelling.@
-` My shaft swells so fast it's almost painful.@ I have to violate her right now or I'll go crazy.\
-
-` Her vermillion-shaded cheeks.@
-` Her soft neck.@
-` And below me, her unparalleled body.\
-
-` My panting fills the air.@
-` I can feel her heartbeat.@
-br
-` Panting, panting, panting.@
-` Her golden eyes seem to suck away my soul.\
-
-` I release her neck.@
-` And instead touch her breasts.@
-` Her arms.@ Her legs.@
-` My fingers trace the white skin under her clothes, soaking up the coolness of her body.\
-
-`"No----this, this isn't like you, Shiki……!"@
-br
-` Her burning voice.@
-` Her inviting red eyes.@
-` Seeing these things, my mind completely shatters.\
-
-bg "image\event\ark_h03.jpg",%type_lshutter_mid
-
-`"N………!"@
-` She stifles her cries as if embarrassed.@
-` Frantically, she tries to push me back with both hands.\
-
-` Pushing them away, I press her onto the ground.@
-` Would it be better if I had some nails?@
-` With both arms pushed back and her figure spread open like a cross, Arcueid looks at me with naked hate in her eyes.\
-
-`"------Kk."@
-` Stretched out like this, she looks even more beautiful.@
-` Like this, I can't use my arms either.@ If I let go, she'll rip my throat open for sure.@
-br
-` This tension.@ This balance that makes us seem like we're killing each other rather than me violating her increases the beast-like lust in me.\
-
-`"--Stop, it----stop, or you'll regret it----"@
-` I won't let her finish.@
-` Since my mouth is free, I use that to undress her.\
-br
-` Breathing wildly, I violently tear the clothes from her body.\
-
-`"…… Nn, Shiki, get ahold of your----!"@
-` She squirms, still trying to resist as she trembles in my grasp.@
-br
-` ----Pan… ting.@
-br
-` My breath blows across her stomach.\
-
-`"Ah-----n……!"@
-` Is she that sensitive?@ Her whole body reacts.@
-` …… I feel excited.@
-` As I strip off her clothes, my tongue dances teasingly along her white skin.\
-
-`"Shiki, No----!"@
-` She struggles harder, but I'm stronger than her right now.@
-` I won't let her resist.@
-` I continue removing her clothes.@
-` In the middle of it, her bra gets stuck on her chest, but I simply tear it off.\
-
-` Her breasts move as I do so.@
-` Her well-shaped globes are bared for me to see.@
-` I bite down on one of them.@
-br
-`"Naha----!"@
-br
-` She lets out a gasp.@
-` Her entire body arches like a bow.@
-` I don't care.@
-` I run my tongue along the flesh between my teeth, relishing the taste.\
-
-`"Shi…… ki………, stop……!"@
-` Her voice becomes a bit hotter.@
-` Her pink nipples harden.@
-` Just like the hardening of a man, her nipples seem to stiffen regardless of what she's thinking.@
-`"N--------!"@
-` She must be embarrassed about it, as she stifles her voice.@
-`"Shiki----if you do this, afterwards----"@
-` Ignoring her voice, I continue to lick her gorgeous breasts.\
-
-`"N…… ah----!"@
-` Her face starts to contort.@
-` Her breast is firm.@ The more I push my face into it, the more it pushes back against me.@
-` Her white breasts turn a light shade of red.@
-` I keep sucking.@
-`"…… Ah…… oh…… ah, n----"@
-` Her heated voice.@
-` Her body glistening with sweat.@
-` Her shaking head, her pained gasps.\
-
-` My tongue plays along her soft breasts.@
-` There's no reason for it.@
-` All that's left inside of me is a desire to lick, moisten, and play with her.@
-br
-` I bury my face in her chest.@
-` Her white mounds glisten with my saliva.\
-
-`"…… Ha…… sto, p…… I…… won't ever…… forgive… you……!"@
-` It sounds like she's gritting her teeth.@
-` I'm annoyed that her voice is still so reasonable.@
-` I bite down on her nipples.@
-`"N, gah-----!!"@
-` Her entire body arches harder than before.@
-` As if pushing her breasts up, she arches back.\
-
-` It's not my intent to give her diligent, caring foreplay.@
-` I just move my face.@
-`"S, stop…… Shiki, pl… ease---"@
-` I move my tongue to the space in between her breasts.@
-`"If you, touch me there, I'll start… to----"@
-` As if to leave a mark that won't go away, I suck on her skin.@
-br
-`"Hwaa----!"@
-br
-` Her arms start to flail.@
-` Holding them down, my tongue continues to crawl along her body.@
-` From her chest to her collarbone.@ From there to her neck.\
-
-
-`"No…… Shiki… you… don't… even… like… me……!"@
-` I don't acknowledge her.@
-` I can't even hear her.\
-
-` Her glistening body destroys any reason I have left.@
-` Her beautiful body looks even better covered with sweat.@
-br
-` ----Thump.@
-br
-` My blood is surging painfully.@
-` I want to take her right now.\
-
-` My panting echoes through the alley.@
-` There's no need to hold back.@
-` If I want to do it, I'll just do it.@
-` I move my mouth away from her neck and bring it down towards her lower half.@
-`"…………!!!"@
-` Arcueid struggles harder than ever.@
-` Like this, she could free herself from my arms.\
-
-` But before that,
-` I move lower, traveling quickly past her navel.@
-` Into the midst of her golden curls,
-` my tongue crawls down to her pink, fleshy creases.@
-br
-` I suck lightly on the protruding nub in between those slick walls.\
-
-`"Ah----N, no-----!"@
-` Arcueid arches her back.@
-` I bite down on the most sensitive spot of the female anatomy.@
-` This sensation of pleasure is far different from when I was licking her whole body.\
-
-` Looking at her,
-` I see sticky fluid building up inside of her.@
-` The smell of warm juices.@
-` I don't care if it's enough lubrication for her.@
-` I'm not thinking at all about her pleasure.@
-br
-` I just----have to have her body.\
-
-`"------Shi… ki."@
-` Her voice is weak, as if realizing what's coming next.@
-` Has she given up?@ She looks at me with dampened eyes.@
-br
-`"------"@
-` Her moist… eyes.@
-` Does that mean…
-` she's crying?\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-bg "image\event\ark_h03.jpg",%type_crossfade_fst
-
-`"Ghaa…………!"@
-` My head is splitting with pain.@
-` My instincts tell me to go on.@
-` That if I stop now I'll die.@
-` My heart beats wildly----Telling me that if I don't do it now, she'll kill me later.\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-bg "image\event\ark_h03.jpg",%type_crossfade_fst
-
-`"------"@
-` She's crying.@
-` Why----is she crying?@
-` If it was me, I would never let her cry.\
-
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-bg "image\event\ark_h03.jpg",%type_crossfade_fst
-
-
-` My headache continues.@
-` Screaming at me to go on.@
-` ----It's strange to be distracted.@
-` There's only one thing that needs to be done.@
-` I----
-br
-
-
+!w3000
 
 
 

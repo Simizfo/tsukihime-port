@@ -1,0 +1,33 @@
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w3000
+
+
+` ………… My body is exhausted.@
+` But, I can't fall into a deep sleep.@
+` The wounds all around my body sting and wake up my mind as it tries to sleep.@
+br
+` I look at the clock as I lie in bed.@
+` It's past three o'clock in the morning----already five hours of unsatisfactory rest.@
+`"……… Damn it, I can't sleep."@
+` Not being able to sleep when I want to… it's like torture.\
+
+` Tick, tick, tick.@ The sound of the clock's second hand gets on my nerves.@
+br
+` Tick, tick, tick, tick, tick, creak, tick, tick, tick, tick----
+br
+`"Eh--?"@
+` I think I heard something mixed in with the ticking.@
+` It sounded like the door opening, but who would be coming at this hour?\
+
+` Tap, tap, tap.@
+br
+` No, there's no mistake.@
+` Someone came into the room and is coming near me.@
+`"----"@
+` Who is it?@ …… If someone was to come this late at night, it would be---
+br
+
+
+
+return

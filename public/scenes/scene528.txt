@@ -1,34 +1,50 @@
 
 
+wave se2
 
-bg "image\bg\bg_06b.jpg",%type_nowaitdisp
-play "track09.ogg"
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "track03.ogg"
 
 
+ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
 
 !w1000
 cl c,%type_lcartain_mid
 
 
-ld c,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
-` You have reached Ciel's True Ending.@ Well done.@
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+` Merci!@
+` And now, time for the fifth period lesson of the second day.@
+` The corner for the sake of the unfortunate Tohno-kun, who has met yet another Bad End,
+` It is time for "Teach me, Ciel-sensei!"\
+
+` Let's see, the mistake this time is-----.@
 br
-` Each heroine (with one exception) has two different kinds of endings.@
-` A True Ending and a Good Ending.@
-` After reaching one of the endings, please go back a little and readvance through the story.@
-` A different event should await you.\
+` …… Oh, no.@ That won't do.@
+` This event Tohno-kun is involved in right now is not something you can solve by yourself.@
+` Don't be so persistent and trust the people around you.@ You should ask for their help.@
+` I don't want to see Tohno-kun become a killer.\
 
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
 
-` Well then, thank you very much for playing up to this point.@
-` Let's meet again somewhere in Tsukihime.\
-
-
-
-
+`"But, in a few years, Shiki will be called Shikiller, and will team up with the Knight of Vengeance to go hunt down the Dead Apostles."@
+br
+` Arc-san, that is just what you hope for, not a fact.@
+` Alright, Tohno-kun.@ Ignore the person who doesn't even get one appearance in this route and enjoy the rest of the main story.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
+
+ld c,":a;image\tachi\ark_t30.jpg",%type_crossfade_mid
+
+`"Awwww.@ I haven't done anything wrong, so why don't I get to appear-nyaa?@ I'm supposed to be the main heroine."\
+
+cl c,%type_crossfade_mid
+
+
 playstop
+
 
 
 

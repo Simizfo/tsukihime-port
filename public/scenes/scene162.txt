@@ -1,376 +1,171 @@
 
-bg "image\bg\bg_40c.jpg",%type_nowaitdisp
+mov $phasebg,"image\bg\bg_36d.jpg"
+mov $phasetitle_a,":a;image\word\PARK_09A.PNG"
+mov $phasetitle_b,":a;image\word\day_09.png"
+gosub *left_phase
 
-` …… I'm happy she's so worried about me.@ But I can't break my promise with Arcueid.@
-` Yesterday, she waited three hours for me.@ That's not the whole reason, but with just my usual anemia, I don't want her to keep on waiting.\
-
-`"…… Alright.@ I'll go to sleep for today."@
-` saying that, I lie down.@
-ld c,":a;image\tachi\aki_t17b.jpg",%type_crossfade_fst
-`"Really……?@ You're not going to sneak out of the room later?"@
-`"…… Hey now.@ Do you think I could sneak out in this shape?"@
-`"----Yes, come to think of it, that is true."@
-` Akiha breathes out and visibly relaxes.\
-
-ld c,":a;image\tachi\aki_t01b.jpg",%type_crossfade_fst
-
-`"Hisui, tell Kohaku that Nii-san is awake.@ Nii-san, what about dinner?"@
-`"…… Oh yeah.@ No, tell Kohaku-san I'm sorry, but I don't think I can eat right now.@ I'm just going to go to sleep."@
-`"…… I understand.@ Then Hisui, tell Kohaku that."@
-` Still looking downcast, Hisui nods and leaves the room.\
-
-ld c,":a;image\tachi\aki_t12b.jpg",%type_crossfade_fst
-`"Then I will go back to my room.@ If anything happens, please call for me.@ No matter what time it is, I'll come right away."@
-cl c,%type_lshutter_mid
-\
-
-bg "image\bg\bg_40d.jpg",%type_lshutter_mid
-` Akiha turns off the lights and leaves the room.@
-`"…… Sorry, Akiha."@
-` Saying that, I lift myself up.@
-wave se0
-
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-bg "image\bg\bg_40d.jpg",%type_crossfade_fst
-
-`"Ggh………"@
-` Just lifting myself up causes my consciousness to swim.@
-` …… This isn't like my normal anemia.@
-` I know that, but I can't keep Arcueid waiting forever.@
-` Knowing her, even if I left her there, she'll wait forever.\
-
-` I wobble to my desk.@
-` I take my knife out of the drawer and put on my jacket.@
-
-wave se0
-
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-bg "image\bg\bg_40d.jpg",%type_crossfade_fst
-
-`"Heh…… dang, like this, I really, won't be able to, sneak out."@
-` …… I have to gather up my strength just a little more until I can at least run comfortably or Hisui will find me and take me back to my room.\
-
-`"…… Sorry Arcueid.@ It looks like I'll be even later than last night."@
-` I sit down on the floor.@
-` One hour.@ If I rest for another hour, I'm sure I can leave----\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-
-playstop
-
-!w2000
-
-bg "image\bg\bg_28b.jpg",%type_lcartain_slw
-
-
-` I make it to the park before midnight.@
-` In the end, even after waiting an hour my body still hadn't recovered, so it took me an hour to get there.\
-
-bg "image\bg\bg_29b.jpg",%type_lcartain_mid
-
-` I pant heavily.@
-` As my chest heaves rapidly, I look around me.@
-` Night hangs over the park.@ Near the place we decided to meet, there's a white figure standing.@
-br
-`"…… I knew she'd be waiting."@
-` I let out a large breath.@
-` It seems like Arcueid notices I'm here.@
-` She walks straight towards me.\
-
-ld c,":a;image\tachi\ark_t16.jpg",%type_lshutter_mid
-
-play "track09.ogg"
-
-`"Hey Shiki, it's already two hours past the agreed time.@ What were----"@
-ld c,":a;image\tachi\ark_t13.jpg",%type_crossfade_fst
-` She cuts off as soon as she sees my face.\
-
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-
-`"Hey, what's wrong, Shiki……?@ Your face is so pale, and I can't even sense life in you.@ This isn't normal."@
-`"Yeah, my anemia acted up again.@ It happens like that every now and then, nothing to be surprised about.@
-` …… more importantly, sorry for making you wait for two hours."@
-ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
-`"Eh----No, I really don't mind, but…… Shiki, for you to come out in your condition is just weird."@
-` Even though she was really angry earlier, now it seems she's really worried.\
-
-`"----I made a promise, didn't I?@ I said I'd help you, so I'm not going to skip out on you."@
-`"…… That makes me happy but…… Shiki, you don't seem to understand your body at all."@
-`"You don't need to tell me that, Arcueid.@ I've been carrying this recurring anemia for eight years now, I'm pretty sure I understand my body."\
-
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-
-`"----No.@ You don't understand how unstable your life is.@ I sensed it earlier, but now I know clearly.@
-` Shiki, you are always standing close to death.@
-` I don't know if it's a reaction to your Mystic Eyes of Death Perception or not, but you are walking on the thin line in between life and death.@ Saying that your anemia this time isn't a big deal because it wasn't a big deal before is a big mistake."@
-` She looks directly into my eyes coldly.\
-
-`"Look, Shiki.@ Your resistance to death by external means is higher than that of most people.@ That is probably because you've already faced death once before.@
-` But on the other hand, you almost have no resistance to death from internal causes.@ That anemia of yours, it wouldn't be strange if you die from it."@
-`"Wha---What are you saying?@ Are you saying I'll get killed by something like a cold?"\
-
-ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
-
-`"Shiki, I'm trying to warn you seriously!@
-` I'm glad you came, but you have to think about your health first!@ So just go back for now and rest!"@
-cl c,%type_lshutter_mid
-` She draws me closer to her.@
-` She really must be worried about me because she's totally defenseless as we get closer.\
-
-
-`"Ah----"@
-` Before I can pull back, her chest touches mine.@
-br
-
-waveloop se1
-
-
-` …… Thump.@
-` My head is assailed with another different kind of dizziness than usual.@
-` All the things I didn't realize before, the softness of her breasts, the whiteness of her skin, her beautiful, golden hair, her womanly charm.\
-
-`"Arcueid----Please, get away."@
-ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
-
-`"What, you're saying you can't trust the word of a vampire like me?"@
-`"Why are you saying that all of a sudden, idiot?@ There's no way I won't trust you."@
-ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
-`"Liar.@ Then why can't you look at me?"@
-`"Could you get away from me because of a personal issue?@ …… I'm a guy, so if you get this close, it's a little, troubling."@
-cl c,%type_crossfade_fst
-` Giving a small voice of surprise, Arcueid steps back.\
 
 wavestop
 
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+
+play "track09.ogg"
+
 br
-` ----Whew.@
+` Tweet, Tweet, Tweet
 br
-` For the time being, the racking dual dizziness brought about by my anemia and Arcueid subsides.\
-
-ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
-` I guess she finally realized our situation, and she looks at me embarrassedly.@
-`"-------Uh."@
-` That idiot.@ Seeing her do that, makes me think she's incredibly cute.@ This is, troubling.\
-
-`"I--said stop."@
-` I mumble that quietly, so not be heard.@
-` Those words are not directed to her, but to me for being excited by her.@
+` …… Is the window open?@
+` I can hear the soft singing of birds from the garden.@
+` A cool breeze blows across my face.@
+` I feel the sunlight hitting my eyelids.@
+` A quiet, gentle atmosphere.@
 br
-` …… There really is something wrong.@
-` No matter how pretty she is, she's a vampire.@
-` Just what am I thinking, forgetting something like that?\
+` A gentle morning.\
 
-`"----Anyways, I'm not that beat to have you start worrying about me.@
-` Besides, if I was attacked like I was last night again, I might really die.@ So I can't take my time doing this."@
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-`"Eh--?@ Shiki, what did you just say?"@
-`"I said if I was attacked like I was last night again, I might really die.@
-` He is trying too, so we have to find him as soon as possible----"@
+` Morning?@
+` I guess I fell asleep last night as Akiha cared for me, and slept till now.@
+` Lying down, my body feels heavy.@
+` But I feel much better than I did yesterday.@
+` I decide to open my eyes and sit up.@
 br
-` Saying that, I suddenly remember.\
+` And----\
 
-`"…… I forgot.@ Last night, I was attacked by one of those Dead."@
-`"Last night?@ After we parted!?"@
-`"Yeah.@ He was entirely wrapped in bandages and was waiting for me by the mansion."@
-ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
-` Arcueid's expression suddenly turns serious.\
+bg "image\bg\ima_11.jpg",%type_lshutter_mid
+bg "image\event\ark_e04.jpg",%type_lshutter_mid
 
-`"…… I can't believe it.@ How could you forget something so important?"@
-`"…… Uh."@
-` I couldn't help it.@ I've been through stranger things today.\
 
-`"…… Oh well.@ More than that, please tell me in detail what happened, Shiki."@
-` With serious eyes, Arcueid interrogates me on what happened.@ "Um, let's see--"@
 br
-` I calm down and I describe as clearly as I can what happened last night.@
 br
-` …… But, I don't tell her that the bandaged man was seeing the "lines of death".@
-` I can't prove it, so maybe it might have been just my mistake.\
+br
+br
+br
+br
+br
+`    "Ah.@ The little rascal finally woke up."@
+!w500
+\
+br
+br
+br
+br
+br
+br
+br
+` …… I see Arcueid's face right in front of mine.\
 
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
+`"………!?"@
+` My brain goes blank and stops working due to this unexpected event.@
+` My mouth opens and closes, but my voice seems to be missing.@
+br
+` ---Seriously, what's going on?\
 
+` Arcueid is in front of me.@
+` This is my room.@
+` It's past nine o'clock in the morning,
+` She's come inside, still wearing her shoes; that's all I know for now.\
+
+`"Y-Y-Y-You!"@
+`"Liar.@ We promised to meet again yesterday."@
+` She must be in a pretty bad mood as her red eyes have lost their usual beauty.@
+br
+` ---No, not lost at all.@
+` Being this close, her beauty is more vivid than usual.\
+
+` Arcueid glares at me as I lay in bed.@
+br
+`"…… W-Wait, Arcueid.@ W-Why are you in my room this morning……!?"@
+` I start to shout, but I stop myself.@
+` If I shouted now, Hisui would come here and it would all be over.@
+br
+` ---Everything is still chaotic, but my brain can grasp that much.\
+
+`"A-Anyway, move……!@ Just going into someone's room, threatening a sleeping person, don't you know how awful that is……!?"@
+`"What's with that attitude?@ I came here because you broke your promise.@ Sleeping while making someone wait, just what in the world were you planning?"@
+` She stares at me ill-temperedly.\
+
+` …… I calm down.@
+br
+` That's right.@ I really did break my promise to meet Arcueid last night.\
+
+`"…… Mmmm."@
+` I finally understand the situation.@
+` I understand why Arcueid's angry.@
+` I understand, but to do this… to come into someone's room still wearing shoes like that, what does she intend to do?@
+` Seeing that the window is open, she probably came in through there.\
+
+`"…… I see, since I broke my promise, I'm at fault here.@ But sneaking in here is going a little far, you know."@
+`"This isn't your house, Shiki."@
+` She gives a quick retort.\
+
+`"You know, I really was angry before.@ I waited for many hours, and as soon as I realized you weren't coming, I got so incredibly angry.@
+` I was thinking I would never let this happen again and I'd rip your throat out."@
+` She speaks, still looking ill-tempered.\
+
+`"Do you get it, Shiki?@ That feeling, I couldn't resist it.@ Even though I know I should calm down, the more I thought about it, the angrier I got."@
+` As if she still felt that way, her red eyes seem to blame me.@
+br
+`"Yeah… I guess you can't help yourself."@
+` Giving thanks to God my neck is still attached, I keep the conversation going.\
+
+`"Isn't it?@ And I snuck in here, but since you were sleeping I decided to wait.@ At least I wanted to hear your excuse.@
+` And, since I didn't have anything to do, I watched your sleeping face.@ …… Yeah, your sleeping face was very quiet, it was almost scary.@
+` Sleeping like you were dead, I started feeling uneasy because I thought that maybe you would never wake up."@
+` I sigh.@
+`"If you were uneasy then you should've woke me.@ I'm uneasy when you're next to me."\
+
+`"But, I thought it would be a waste.@
+` …… I don't know what I look like when I sleep, but I thought it would be real good if I slept like you did.@
+` I wondered why you look so peaceful while I watched you sleep.@
+` While I was doing that, my anger disappeared, and then you woke up."\
+
+`"…… Then you've been here this whole time?@ From last night until now?"@
+`"Yeah.@ People from this house came in a few times, but I hid myself so it was okay.@
+` A girl also came to wake you up, but I didn't like her so I sent her away."@
+` Arcueid laughs brightly.\
+
+`"Wait, you sent her away?@ How?"@
+`"I wasn't rough.@ Didn't I tell you before that vampires have Mystic Eyes of Enchantment?@ I merely used suggestion on her, saying that 'Shiki has already gone to school' and didn't leave any memory of her meeting me."@
+`"No memory?@ You……"@
+` Really are a troublesome person.@
+` …… Well, even if she is troublesome, at least she took care not to be detected.\
+
+` I bring my hands to my head as I sigh.@
+`"Alright.@ Sorry for yesterday, Arcueid.@ I don't know if this is making up for it, but I won't break any more promises.@ Yeah, I promise."@
+` I look her right in the eye as I declare this.\
+
+`"Are you sure?"@
+`"I'm sure.@ Because I now realize your revenge is scary……"@
+` Still lying down, I raise my hands in surrender.@
+br
+` All of a sudden, her bad mood disappears completely.@ Arcueid gives a satisfied nod and says 'alright'.\
 playstop
 
+bg "image\bg\bg_40a.jpg",%type_crossfade_mid
+play "track02.ogg"
 
-bg "image\bg\bg_29b.jpg",%type_lshutter_fst
+` Arcueid finally gets away from the bed.@
+`"…… Geez, sneaking onto someone's bed like that.@ Didn't you think about how hard the sheets would be to clean if you left a mess from your shoes?"@
+` Complaining, I get up from bed.@
+` Arcueid stands in the center of the room watching me as I slowly rouse myself from bed.@
+`"…… Hey, what are you doing?"\
 
-
-`"…… Yeah, that's how it was------"@
-` Finishing my explanation, I read Arcueid's expression.@
-ld c,":a;image\tachi\ark_t05b.jpg",%type_crossfade_fst
-
-` From when I started until now, her eyes remained sharp without any gentleness.\
-
-`"So what is it Arcueid?@ That bandaged man, and that person wearing those robes like some priest, are they enemies of yours?"@
-ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
-
-play "track01.ogg"
-
-`"…… Yes.@ Both of them are 'enemies'.@ I don't know just who or what that bandaged man is, but that woman wearing those Catholic robes, I have an idea about."@
-` She narrows her eyes as if she was in a bad mood.@
-` No, she looks less like she was in a bad mood and more like she's irritated.\
-
-`"I may know the person who helped you, Shiki.@ …… Man.@ If it's really her, she'll probably be able to find the enemy before me."@
-` She bites her lip vexedly.\
-
-`"Wait a minute.@ I didn't say that person was a woman though."@
-`"No, there's no mistake.@ That woman is the only agent given authority to hunt heretics alone and who uses Black Keys that combine the Cremation Rite and the Steel Shell Effect."@
-` Her irritability is almost like hostility.@
-` Even when she spoke about Nrvnqsr, her voice was never saturated with emotion to this extent.\
-
-`"…… Arcueid.@ Um, that person who helped me, is she a vampire……?"@
-`"Of course not.@ She's a member of those who see vampires as their enemy.@
-` It doesn't exist in this country, but there is an organization that considers vampires or beastmen as heretics and goes around killing them.@ The one who helped you was the most troublesome of that kind, Exorcists.\
-
-`"…… But that's strange.@ The Burial Agency wouldn't have sent an agent this soon."@
-` Arcueid speaks softly to herself.@ I can't understand what the hell she's talking about.\
-
-`"Exorcist?@ …… Um, like a priest or something?"@
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-
-`"Eh?@ Hm, it's not wrong, but it's not quite right either.@ Well, it would take a long time to explain, so just know for now that there are those who go around exterminating vampires."@
-`"………………"@
-` Um, she tells me to just understand, but…\
-
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-
-`"More importantly, why did you fight?@ You said you'd team up with me, but you never said you'd fight by yourself."@
-` She glares at me.@
-br
-` …… She seems seriously concerned about my safety----
-ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
-`"That's not fair Shiki!@ Keeping it a secret, having all that fun by yourself!"@
-br
-` ----or not.\
-
-`"…… Now how did you jump to that insane conclusion!?"@
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-`"Huh?@ You weren't trying to hide your monopoly on prey from me?"@
-` She says something so absurd with a straight face.@
-`"Idiot, that's not it at all.@ …… Fighting him was just a turn of events.@ Just a turn of events.@
-` I don't plan to fight with The Dead or vampires without you."\
-
-`"…… Oh?@ What kind of turn of events?"@
-`"My sense of justice as a normal person…… or something like that.@ I kind of regret it now."@
-ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
-
-`"Justice?"@
-` She tilts her head as if to say "What's that?"@
-` …… Yeah, I was painfully shown yesterday it is just a justification.@
-cl c,%type_crossfade_fst
-\
-
-` ----Back then.@
-br
-` When I realized there was a figure in front of me, there was only fear.@
-` That thing----that guy, I knew right away he wasn't normal, but all I could do was tremble.@
-` And then, I brought out my knife to meet him and began a fight to the death.\
-
-` …… You can't kill someone using a cheap notion like justice.@
-` People kill to preserve their own life.@
-` That's the most primitive, simple logic of the beasts.@
-br
-` That logic---at that time, if that person resembling Senpai hadn't come, I probably would have executed that action without hesitating----\
-
-`"…… Arcueid.@ That person who came to help me, can you tell me a little more about her?"@
-ld c,":a;image\tachi\ark_t05b.jpg",%type_crossfade_fst
-
-`"There's nothing more to tell, she's an Inquisitor for The Church.@ What I said earlier, the group that's like a nemesis to all vampires.@ This Burial Agency, not so much exorcists as murderers, no, killing machines, are a specialized group responsible for dealing with heretics----I'm very surprised that their eyes reach even in the Far East."@
-` Arcueid crosses her arms while deep in thought.@
-` She looks devoid of emotion, entirely different from before.\
-
-` ---She's serious.@
-` She might be thinking more seriously about this than the enemy she's after.\
-
-`"…… Arcueid.@ I don't quite understand, but those exorcists hunt vampires, right?@ Then aren't you their target too?"@
-` I ask her that because I'm a little worried.\
-
-ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
-`"Eh---?@ Of course not.@ They are only natural enemies of the Dead Apostles.@ We don't fundamentally mess with each other, so there cannot even be a fight.@
-` But----if she is who I think she is, then she has to be armed with the Seventh Holy Scripture.@ There is the danger of her getting there first."@
-cl c,%type_crossfade_fst
-`"…… Getting there first……?"@
-` I can't quite grasp what she's saying.@
-` I don't get the details, but it seems like Arcueid doesn't appreciate the emergence of this person who resembles Senpai entering the stage.\
-
-`"…… Well, I guess it doesn't concern me.@ Well then, now that we're calmed down, shall we begin?@ I didn't come here for nothing, so maybe we should find at least one of The Dead."@
-ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
-`"Geez, what are you saying with such a pale face?@ We got off topic because you said something weird, but didn't I tell you to pay more attention to your body!?"\
-
-` Arcueid glares at me.@
-` …… I didn't think she was before, but she does seem honestly concerned about me.\
-
-ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
-`"Okay?@ Your body is more unstable than most people's, so if you don't rest at a time like this, you're risking your life.@
-` You pass out a lot, not because of anemia, but because your body understands it's in danger.@
-` Your body senses the danger before you do, so it stops working to prevent your body from getting any worse."\
-
-`"Eh----for real?"@
-`"There's no reason for me to lie, right?@ Anyway, I warned you.@ Whether you believe me or not is up to you, Shiki."@
-cl c,%type_crossfade_fst
-`"…… Up to me?@ Well, I don't think there's any reason for you to lie to me……"\
-
-` As I speak, I sink deep into thought.@
-` I always thought I passed out because my body was weak from anemia, but now she's saying it's because my body is trying to protect me like a safety switch?@ What is this?\
-
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-
-`"Anyway, we won't go investigating tonight.@
-` I don't think the enemy will reappear until his wound is healed, and if he appeared by your house without using The Dead, that means he doesn't have any left."@
-` She says this all severely.@
-br
-` …… If she says so, I can't argue.@ In the first place, it's impossible for me to go look for vampires by myself.\
-
-`"…… Alright.@ If you say so, Arcueid, I'll rest for tonight."@
 ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-`"Yes, please do.@ Not only did you get attacked last night, but your body is so weak now.@
-` It'll be troublesome if you don't sleep tonight and return to your normal self by tomorrow."\
+`"What am I doing?@ I'm just waiting for you to change.@ You're not going to go out in those clothes, right?"@
+`"Well, yeah.@ No one walks around in pajamas… Wait, Arcueid?"@
+`"Yeah, I was thinking we'd spend the day together, Shiki.@ You said you'd make it up for breaking your promise, didn't you?"@
+` Arcueid says this casually, as if it was the most natural thing in the world.\
 
-`"…… I see.@ It's true that I can't really help you in this condition.@
-` Okay, I'll get myself fixed by tomorrow."@
-ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
-`"No, that's not it.@ It's boring talking to you when you're like this, so I just want you to be back to normal, that's all."\
-
-` She almost seems disappointed.@
-` …… I knew it was useless to try and understand her.@
+`"Today, all day… What are you saying?@ I have school…"@
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+`"Hey, you even said you were sure.@ Are you choosing school over me, Shiki?"@
+`"Uh……"@
+` She's got me there.@
+` I…
 cl c,%type_crossfade_fst
-\
 
-`"I'll be heading back to the mansion.@ See you tomorrow, Arcueid."@
-` Raising a hand, I start my walk back.@
-`"Hey, Shiki."@
-` Arcueid stops me.\
-
-`"…… What?@ Is there something else?"@
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-`"Should I escort you home?"@
-` She averts her gaze and speaks hesitantly.@
 br
-` ----In her own way, she really is worried about what happened last night.\
-
-` Thinking that, I guess it's not that bad…@
-`"Oh----"@
-` Before I can say "Yeah", I suddenly stop.\
-
-` Wait.@ Wait.@ Aren't you forgetting your vow you made just now, Shiki?@
-` No matter how pretty she is, Arcueid is a vampire.@ I can't forget that.@
-` If I relate myself to Arcueid more than necessary----I feel I'll cross a line that I should never cross.\
-
-`"Cut it out.@ I don't need to be worried by you.@ Don't do things that don't suit you, stupid."@
-`"Ah----yeah."@
-` Just a little----for just an instant, Arcueid looks down, but then raises her head.@
-ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
-`"Then, see you tomorrow!"@
-` Waving her hand goodbye energetically, the white-clothed vampire walks off into the darkness of the night.@
-cl c,%type_lshutter_mid
-\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
 
 
-playstop
-
-!w3000
 
 
 return

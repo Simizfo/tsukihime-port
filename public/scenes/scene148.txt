@@ -1,35 +1,36 @@
 
 bg "image\bg\bg_34a.jpg",%type_nowaitdisp
 
-` …… I say that, but her pressure is now on a completely different level than before.@
-` If I say anything wrong in the face of this frozen heat, she will give a devastating counter.@
-` I'll show a calm, reflective manner.@
-br
-`"---Good morning, Akiha.@ You're up early as usual."@
-` I say this quietly and as gently as possible.\
+` No matter what, I can't talk myself out of what happened last night.@
+` The only method I have left is to apologize before Akiha can do anything.\
 
-ld c,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
-`"Yes.@ Thanks to what happened last night, I was unable to sleep at all."@
-` She says something so outrageous while still smiling sweetly.@
-br
-` …… This, really isn't good.@
-` She can't be sane, being so angry yet smiling like that.\
 
-`"…… Oh.@ Well, I hope you feel a little better, or something."@
-` I should stay away from danger.@
-` I have to say something and then escape from here.\
-
-`"Um, then I'll be off to have some breakfast in the dining room."@
-` Yup.@ I should retreat to the dining room.@
+`"Akiha, about last night, that---"@
 ld c,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
+`"Nii-san, can I warn you about something?"@
+br
+` ---And then,
+` before I can apologize, Akiha speaks those words in a frightening voice.\
+
+`"You are the eldest son of the Tohno family, so it is better if you do not apologize for wayward actions.@
+` Apologizing is admitting you did something wrong.@ In that situation, the eldest son has to receive a proper punishment, yes?"@
+`"-----Um, Akiha, well…"@
+ld c,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+`"Nii-san, I don't want to have to do that to you.@ So Nii-san, I'm waiting for a wonderful excuse."\
+
+`"------"@
+br
+` …… A devil.@
+` I see a devil.\
+
+`"Akiha, before that, I'd like to eat some breakfast in the dining room.@ Is that okay?"@
+` I retreat to the dining room.@
+br
+ld c,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
+
 `"----Nii-san."@
 ` Her voice stops me dead in my tracks.@
-` …… Well, of course she wouldn't let me go like that.\
-
-`"…… Yes.@ What is it, Akiha-san?"@
-` By the way, adding "san" to her name means waving my white flag.@
-` She doesn't even bat an eyelash.\
-
+` Uh-oh…… whatever happens, it seems like she won't let me get away.\
 
 ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
 `"I have something to discuss with you before breakfast.@ Please, sit there on the sofa."@
@@ -43,7 +44,7 @@ ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
 `"So, what'd you want to talk about, Akiha?"@
 `"That woman last night, just what is she to you?"@
 br
-` ---Guh!@
+` ---Guh!!@
 br
 ` That was close.@
 ` Akiha's normally so roundabout, but this time she asks straight on.@
@@ -118,7 +119,7 @@ br
 ` Besides, whatever I do doesn't concern you.@ You don't have any right to complain about who I date, anyway."@
 ` I point at her directly.@
 cl c,%type_crossfade_fst
-` After giving an angered face---she stands up without a sound.@
+` After giving an angered face----she stands up without a sound.@
 `"----?"@
 ` …… That's odd.@
 ` I thought she would yell back at me, but instead she appears very uncomfortable and looks away.\
@@ -148,8 +149,10 @@ cl c,%type_lshutter_mid
 
 bg "image\bg\ima_10.jpg",%type_crossfade_slw
 !w2000
-
 playstop
+
+
+
 
 
 

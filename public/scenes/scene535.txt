@@ -15,36 +15,69 @@ cl c,%type_lcartain_mid
 ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
 
 ` Merci!@
-` Now, the hint corner for Tohno-kun, who has regrettably ended up in this Dead End,
-` It is time for "Teach me, Ciel-sensei!"@
-br
-` In this third period of the third day, I will teach you about the importance of cooperation.@
-` See, that's no good, Tohno-kun.@
-` This situation you are involved in right now is not something you can solve by yourself.@
-br
-` Let's see, the mistake you made this time-----\
-
-` …… Ah, no good.@
-` This situation you are involved in right now is not something you can solve by yourself.@
-` You have to search weird places around your house,
-` and don't be so persistent; you should trust the people around you and ask for their help.@
-` I don't want to see Tohno-kun become a killer.\
+` We're finally in the fourth period.@
+` The hint corner for Tohno-kun, who has unluckily ended up in this unjust Dead End,
+` It is time for "Teach me, Ciel-sensei!"\
 
 ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
 
-`"But, in a few years, Shiki will be called Shikiller, and will team up with the Knight of Vengeance to go hunt down the Dead Apostles."@
+`"I envy you, Ciel.@ You get a lot of appearances.@ I'm the main heroine, but they still treat me like this scribble."@
 br
-` Arc-san, that is just what you hope for, not a fact.@
-` Alright, Tohno-kun.@ Ignore the person who doesn't even get one appearance in this route and enjoy the rest of the main story.\
+` Hey you, don't say weird things.@
+` That's fine.@ At least you have more dignity than me, the do-it-all character.@
+br
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+`"No!!@ Unsatisfactory!@ I want to dress like you and be called smart!!"\
+
+` …………@
+br
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+` No appearance!@ No appearance!@ No appearance!@
+ld l,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+ld l,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+`"No appearance!@ No appearance!@ No appearance!@ No appearance!@ No appearance!@ Ciel-glasses!@ No appearance!@ No Ciel!@ No appearance!@ Ciel-glasses!@ No appearance!@ Ciel-too plain!@ Ciel-get out!@ Ciel-glasses!@ Fake-Frenchie!@ Gun-fetish!@ Ciel-India!"@
+ld l,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+ld l,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+ld l,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+ld l,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+ld l,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+ld l,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+
+br
+` ………… (Anger)\
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+wave se9
+`"Kyuuuuuuuuu………………"@
+br
+ld r,":a;image\tachi\cel_t20.jpg",%type_lshutter_fst
+
+` ----Well, let's start the lecture.@
+br
+` The cause of death is clear this time.@
+` Your eagerness to try and solve this incident by yourself is splendid, but this is something you cannot solve by yourself.@
+` It's the way of the world to lose something to obtain something.@
+` It's also sad for me, but you should part with Ciel-san just this once.\
+
+
+
+
+
+
+
+
+
+
+
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 
-ld c,":a;image\tachi\ark_t30.jpg",%type_crossfade_mid
-
-`"Awwww.@ I haven't done anything wrong, so why don't I get to appear-nyaa?@ I'm supposed to be the main heroine."\
-
-cl c,%type_crossfade_mid
 
 
 playstop

@@ -1,181 +1,151 @@
 
-mov $phasebg,"image\bg\bg_47.jpg"
-mov $phasetitle_a,":a;image\word\PARK_07A.PNG"
-mov $phasetitle_b,":a;image\word\day_07.png"
-gosub *left_phase
-
-bg "image\bg\cmo_05.jpg",%type_crossfade_mid
-
-` Back then, the whole mansion was like a giant playground.@
-br
-` The garden, a deep forest.@
-` The house, a tall castle.@
-br
-` We played in our own little world, which would take days to explore.\
-
-` Every day was fun.@
-` No one thought about ever growing up,
-` and we believed that days and nights would always be the same.@
-br
-` It was just a childhood spent playing like puppies.@
-` We got along wonderfully, and were the best of playmates.\
-
-` Whenever I turned back, Akiha would be there, waving her hands and hiding shyly.@
-` Yes, always the same.\
-
-` At that time, the mansion was a giant playground.@
-` The garden, a deep forest.@
-` The house, a tall castle.@
-br
-` We played in our own little world, which would take days to explore.\
-
-!w2000
-
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
+bg "image\bg\bg_34a.jpg",%type_nowaitdisp
 
 
-` I slowly awaken and open my eyes.@
-` The morning light wraps around me and my sleepiness starts to lift.@
-br
-` As the last vestiges clear,
-` I sense that I had a very nostalgic dream.\
+` First of all, I have to change the mood.@
+` It seems like I'll lose to her silent pressure if I act normally, so I'll have to switch my approach.\
 
-bg "image\bg\bg_40e.jpg",%type_crossfade_slw
+`"Good morning," I say to her in English.@ "What a great morning, isn't it, Akiha?"@
+` Hahaha.@ I greet her frankly.@
+ld c,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
 
-`"-------"@
-` As soon as I open my eyes, I start to see those terrible things jump into my vision.@
-` My head stabs with pain.@
-`"Gg----"@
-` I scramble for the glasses by my pillow and put them on.\
-
-bg "image\bg\bg_40a.jpg",%type_crossfade_mid
-
-play "track02.ogg"
-
-` I take in some air.@
-` After taking a few deep breaths, I manage to calm down.@
-`"Why did I---so early…"@
-` See those lines so clearly this early in the morning?@
-` It's difficult to see the lines of death in buildings.@
-` It's usually hard to see them, and seeing them so clearly like I just did now is rare.@
-`"…………"@
-` What's more, I even saw those "points".@
-` I think my headache is getting worse too.\
-
-` Sensei said these eyes would attract things that weren't good.@
-` I think Arcueid and these vampires are certainly not good.@
-` So, maybe it's all affecting my eyes and making them stronger.@
-`"----Can't be."@
-` I'm probably just tired.\
-
-wave se3
-
-
-`"Please excuse me."@
-ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_mid
-` Hisui enters, greeting me with a bow.@
-`"Ah, morning Hisui."@
-`"Yes, good morning Shiki-sama."@
-` …… Hisui brings my uniform as usual.@
-br
-` But what is it?@
-` I think she is a bit angry.\
-
-`"Hisui, did something happen this morning?@ You seem, to be in a bad mood."@
-ld c,":a;image\tachi\his_t08.jpg",%type_crossfade_fst
 `"………………"@
-` Hisui looks at me as though she wants to say something, and then walks silently to the door.\
+` I think she's staring at me harder.@
+br
+` …… Ouch.@
+` If I keep receiving her silent pressure, without a doubt she'll bore a hole right through me.\
 
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-`"Then please excuse me.@ I will tell Nee-san to prepare your breakfast, so please hurry to the sitting room."@
-`"Yeah, I planned on doing so……"\
-` I am a bit curious why Hisui is mad.@
-ld c,":a;image\tachi\his_t09.jpg",%type_crossfade_fst
-`" I forgot to say one thing.@ Akiha-sama would like to talk to you about your sneaking out last night.@ So please hurry to the sitting room."@
-cl c,%type_lshutter_mid
-\
-
-` She shuts the door emotionlessly.@
-`"Cr-----"@
-` Crap.@ They know about me sneaking out last night.@
-`"…… Go to the sitting room means Akiha is waiting there……?"@
-` Man…… Why can't bad things be just kept a secret?\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-bg "image\bg\bg_34a.jpg",%type_lcartain_slw
-
-` Akiha is the only one in the sitting room.@
-` Kohaku-san is in the kitchen, humming away.@
+`"…… Um, I'm going to get some breakfast so I'm off to the dining room."@
+` Yup.@ I should retreat to the dining room.@
+br
 ld c,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
-`"………………"@
-` Akiha doesn't say anything when she sees me and sips her tea quietly.\
+`"----Nii-san."@
+` Her voice stops me dead in my tracks.@
+` …… Well, of course she wouldn't let me go like that.@
+`"What?@ Did you need anything from me?"@
+` I try and play dumb.@
+` She doesn't even bat an eyelash.\
 
-`"Hey.@ Good morning, Akiha."@
-` I try to greet her as naturally as I can.@ Akiha's eyebrow twitches as she places her teacup down and slowly looks at me.\
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+`"I have something to discuss with you before breakfast.@ Please, sit there on the sofa."@
+`"…… Got it.@ Please keep it as short as possible."@
+` I plop down on the sofa across from her.@
+` Kohaku-san brings me a teacup.@
+` Her smile seems to say "Hang in there, okay?" and I'm able to gather up at least a little courage.@
+` I drink a mouthful of tea and meet her gaze.\
 
+
+`"So, what'd you want to talk about, Akiha?"@
+`"That woman last night, just what is she to you?"@
+br
+` ---Guh!@
+br
+` That was close.@
+` Akiha's normally so roundabout, but this time she asks straight on.@
+` I'm taken so much by surprise I almost sprayed tea everywhere.\
+
+ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+`"Nii-san, did you hear me?"@
+`"Yeah, I hear you.@ Loud and clear."@
+`"Then please answer.@ That woman from last night, just what is she to you, Nii-san?"@
+`"……… Um, that is a troubling question, um, she's a friend, a person I agreed to help---"\
+
+`"A friend so important you had to leave in the middle of the night?@ Yes, I don't intend to have to approve of all the relationships you have, but you are in school now, correct?@
+ld c,":a;image\tachi\aki_t16a.jpg",%type_crossfade_fst
+` The eldest son of the Tohno-family, going to places with some strange woman in the middle of the night… please stop doing such shameless things."\
+cl c,%type_crossfade_fst
+
+
+` As she speaks, her cheeks flush and she looks away.@
+br
+` ---I see, Akiha thinks my relationship with Arcueid is like that.\
+
+`"Wait, Akiha.@ There's really nothing between us.@ I'm just helping her find something.@ After that, we won't even see each other again."@
 ld c,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
-`"Good morning Nii-san.@ It was quite late when you came home last night, wasn't it?"@
-`"…… No, not really.@ It was at most a little past one o'clock, quite normal for a healthy young man in high school to be up, right?"@
-`"I see.@ My bedtime is also past midnight so I was up at that time.@ But I would come home much earlier than that."\
 
-`"Yeah, even I was home earlier, wasn't I?@ …… I just had something to do, so I was out for a little bit---"@
-ld c,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
-`"Without permission?@ You acted like you were out doing something you felt guilty over."@
-`"Uh……"@
-` Her stare is pure ice.@
-` …… This is the second time, and I'm sure even though Akiha looks calm, she is quite angry.\
+`"Oh really?@ You certainly seem very close.@ That must be my imagination, right Nii-san?"@
+` Her gaze is cold.@
+` …… If I lie with something like "That's not it," things will be much easier, but---more than the fact that I don't want to lie to Akiha, I really don't want to say that we aren't close.\
 
-`"--Nii-san.@
-` I don't know what went on at the Arima house, but here the curfew is eight o'clock.@ It is a rule that must not be broken.@
-` The gate will be locked after that, so please don't climb in like a robber."@
-`"Oh---You knew?"\
-`"…… The surveillance camera showed me quite clearly.@
-` It is a good thing Kohaku-san realized it was you and turned off the alarm system because otherwise you would probably be detained right now, Tohno Shiki."\
+`"----That, may not…… be your imagination, maybe."@
+ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
 
-`"…… Oh.@ I should thank Kohaku-san then.@
-` And, um, Akiha, I'm sorry.@ I shouldn't have kept quiet about it."@
-`"…… If you understand, then it is fine.@ Please make sure you observe your curfew from now on.@ I will overlook it this time."@
-`"…… About that, Akiha."@
-`"What is it?"@
-`"…… This is a little hard to say.@ I… have something to do tonight too.@ I don't know when I will be back, but I'm not going to do anything bad---"\
+`"Right.@ You were panicking like I've never seen you before.@ You were never serious about anything and now you show all this emotion, just what's gotten into you?"@
+`"That's not it.@ I was just totally caught off guard that she'd actually come here."@
+ld c,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
+`"That woman calmly waited for you the whole time, Nii-san."@
+` She casts a sideways glare at me.@
+` She really seems convinced that Arcueid and I are dating.\
 
-`"---------"@
-` Akiha's gaze tightens.@
-`"Kohaku!"@
-` She suddenly stands up.@
-cl c,%type_lshutter_fst
-` Kohaku-san comes in from the kitchen.\
-ld l,":a;image\tachi\koha_t02.jpg",%type_lshutter_mid
-`"Yes, what is it Akiha-sama?"@
-ld r,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
-
-`"I will be going to school, get the preparations ready."@
-`"Huh?@ But I have not yet made Shiki-san's breakfast."@
-ld r,":a;image\tachi\aki_t06.jpg",%type_crossfade_fst
-`"You can leave this person alone.@ It seems he can do everything by himself."@
-cl r,%type_lshutter_mid
-` Akiha strides towards the lobby.\
-
-ld l,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
-` Kohaku-san sighs.@
-`"…… Shiki-san, you should not make Akiha-sama so upset.@ You are her big brother, so please treat her better okay?"@
-` Saying that, she walks after Akiha.@
-cl l,%type_lshutter_mid
+`"Look, Akiha.@ You're getting it completely wrong.@ In the first place, we first met---"@
 br
-` The teacup sits, still steaming.\
+` by me killing her, but I swallow the rest of those words.@
+` …… It'll be too stupid to tell the truth.@
+` But I can't even think of a good excuse, and I can only stammer.\
 
-`"---Well, in short…"@
-` I'm left by myself to calmly consider my situation.@
-`"I guess I'm skipping breakfast today."@
-` Yeah, no doubt.@
-` …… I should stop by a convenience store on the way and buy some bread.\
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
 
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-playstop
+`"If you cannot answer then let's change the question.@ You've been calling that woman "her" this whole time, what is her name?"@
+`"…… Um, Arcueid."@
+`"I see.@ So you did not meet at school.@ There are no foreign exchange students at your high school."@
+`"…… Uh."@
+` Like Akiha says, there's no one from overseas at my school.@
+` It's right, but why does she know that much?\
 
+ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+`"So Nii-san, just where in the world did you meet a person like that?"@
+`"In the city.@ Just, a coincidence."@
+`"Oh, a coincidence?@ Then Arcueid must have talked to you?"@
+`"Ah---No, I was the one, who talked to her……"@
+` Well, not quite talked, but I was the one that initiated our contact.\
+
+`"Why did you talk to her?@ I thought Arcueid-san was nothing to you.@ Or did you only intend it like that from the beginning?"@
+br
+` Her questions are right on the mark.@
+` Step by step, she draws closer to my secret.@
+` Like a snake staring at a frog, she ignores all my excuses and is trying to drive me into a corner.@
+br
+` I can now only use force to end this conversation.\
+
+`"That's enough.@ I said she's nothing to me!@
+` Besides, whatever I do doesn't concern you.@ You don't have any right to complain about who I date, anyway."@
+` I point at her directly.@
+cl c,%type_crossfade_fst
+` After giving an angered face----she stands up without a sound.@
+`"----?"@
+` …… That's odd.@
+` I thought she would yell back at me, but instead she appears very uncomfortable and looks away.\
+
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"…… Even I, didn't want to say this.@ But it's just, I get a bad feeling from her.@
+` If it was anyone else, I would just be resigned to it.@ But, for you to be ensnared by her, doesn't that make me just a big fool?"@
+` …… I don't know why.@
+` But she regretfully bites her lip as she says these words.\
+
+`"That's why I'm saying she's nothing special.@ What's wrong Akiha, you seem a little strange."@
+ld c,":a;image\tachi\aki_t14.jpg",%type_crossfade_fst
+`"That's enough.@ If you want to do as you please, then feel free, Nii-san……!"@
+cl c,%type_lshutter_fst
+` Akiha storms noisily out the lobby.@
+`"………?"@
+` I don't understand anything at all.\
+
+ld c,":a;image\tachi\koha_t01a.jpg",%type_lshutter_fst
+`"Oh, Shiki-san, that was horrible of you."@
+` Kohaku-san gives a disappointed sigh and starts walking after her.@
+`"Poor Akiha-sama.@ If you are going to bring your lover, please bring someone more normal.@ If you did that, Akiha-sama would have understood."@
+cl c,%type_lshutter_mid
+` Kohaku-san disappears towards the lobby after Akiha.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
 !w2000
 
 
+playstop
 
 
 

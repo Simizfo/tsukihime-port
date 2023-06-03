@@ -2,6 +2,8 @@
 
 
 
+
+
 !w3000
 
 bg "image\bg\bg_33d.jpg",%type_crossfade_mid
@@ -20,16 +22,244 @@ waveloop se10
 ` I reach the stairs.@
 ` I don't even care about treating my wounds.@
 ` Right now, I just want to stumble back to my room and sleep like a rock----\
+br
+`"Eh………?@ Nii--san…………?"@
+br
+` --And then.@
+` From the middle of the stairs, I hear Akiha's voice.\
 
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
+`"……………… Akiha?"@
+` I raise my head.@
+` In front of me---I see Akiha who has just now made it to the bottom of the stairway.@
+
+ld c,":a;image\tachi\aki_t23b.jpg",%type_lshutter_fst
+
+`"Ah…………"@
+` …… Akiha is silent.@
+` Something about her appearance is a little strange, but I don't even care right now and continue stumbling up the steps.@
+` Right now I should just go to my room.@
+` So I have to keep going up the stairs.@
+` I dazedly make my way past Akiha's still figure.@ I have to get up the stairs---\
+
+ld c,":a;image\tachi\aki_t17b.jpg",%type_crossfade_fst
+
+`"H…… Hey, please wait, Nii-san!@ Just where did you go this late in the evening?"@
+`"-------"@
+` Who knows?@ Besides, what is Akiha doing standing here at this hour anyway?@
+` Trying to glide down the stairs as quietly as possible, it seems like she was going to go outside just now.\
+
+`"…… It doesn't have anything to do with you, Akiha.@ I'm going to my room, so don't bother me."@
+`"Bother, I---"@
+` Akiha gasps and cuts off mid-sentence.@
+
+ld c,":a;image\tachi\aki_t11b.jpg",%type_crossfade_fst
+
+`"Nii-san, you look---"@
+` Her previously shocked eyes become calm.\
+
+`"Your left arm is injured, right?@ Your clothes are pretty dirty too."@
+`"…… Don't worry about it.@ It doesn't even hurt anymore."@
+
+ld c,":a;image\tachi\aki_t03b.jpg",%type_crossfade_fst
+
+`"It doesn't hurt?@ That can't be true.@ You look like you could collapse at any moment, and there's blood clotted all over your left arm.@ Goodness, just what in the world were you doing, Nii-san?"@
+`"……………"@
+` I can't answer, and only avert my gaze.@
+
+cl c,%type_lshutter_fst
+
+` I couldn't possibly explain everything that happened tonight, and more than that---I don't ever want to talk about Yumizuka to anyone.\
+
+`"…… Nothing much.@ I was just walking around and got sucked into a little drunken brawling."@
+` Answering simply, I climb past her.@
+` But with a pull,
+` Akiha places her hands on my shoulders.@
+
+ld c,":a;image\tachi\aki_t12b.jpg",%type_lshutter_fst
+
+`"Nii-san, I'll get mad."@
+` With a weak voice, Akiha looks directly at me.@
+`"……………"@
+` With her face like that, I become even more unable to tell her what really happened.\
+
+`"-----"@
+`"……………"@
+` Just like that, time passes without either of us speaking.@
+` …… After some minutes pass, Akiha lets out a breath and drops her shoulders in resignation.@
+
+ld c,":a;image\tachi\aki_t03b.jpg",%type_crossfade_fst
+
+`"Fine.@ I will let it go."@
+` Akiha grabs my uninjured right arm and heads towards the sitting room.\
+
+`"…… Hey, Akiha.@ I wanna go back to my room and sleep."@
+`"No.@ I won't ask you any more about it, so you have to let me treat your injuries, okay?@ So come this way.@ I can't help but be worried if you go to sleep looking like that."@
+cl c,%type_lshutter_fst
+
+` Still holding on to my arm, she drags me with her to the lobby.@
+`"…………………"@
+` Oh well.@ This is just how it is.@
+` I resign myself to doing as Akiha says.\
 wavestop
 
-!w4000
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+!w2000
+
+bg "image\bg\bg_34b.jpg",%type_lcartain_mid
+play "track01.ogg"
+
+` ---The treatment was quite simple.@
+br
+` I guess it was really not that bad to begin with.@ After applying some disinfectant and wrapping the wound in gauze, my treatment is over.@
+` After finishing that simple care by herself, Akiha takes a towel soaked in warm water and wipes my face.\
+
+ld c,":a;image\tachi\aki_t04b.jpg",%type_lshutter_fst
+
+`"All finished.@ This uniform is done for, so we will have to get a new one prepared tomorrow."@
+`"………………"@
+` …… My mind is still numb.@
+` Akiha really hasn't asked me any questions about what happened and simply took care of my injury.@
+` I'm a little surprised.@ I thought she would let Kohaku-san or Hisui take care of it, but Akiha did it all with a smile.@
+` …… Her gentleness is completely different from the way she was these past three days and I think back about Akiha from long ago.\
+
+ld c,":a;image\tachi\aki_t21b.jpg",%type_crossfade_fst
+
+`"Nii-san?@ Hey, it's all finished, so please go back to your room.@ Didn't you say you would rather go to sleep than keep me company?"@
+` She may still be resenting my words from earlier because she sounds very dissatisfied.@
+`"……………"@
+` There's still something wrong with my brain, but I do understand how much Akiha worried over me.@
+`"…… Yeah.@ Thanks, Akiha."@
+` Is it because I'm still woozy?@ I let my true feelings show.\
+
+ld c,":a;image\tachi\aki_t24.jpg",%type_crossfade_fst
+
+`"Eh--"@
+` Akiha's face turns red and she shrinks away from me.@
+
+ld c,":a;image\tachi\aki_t16b.jpg",%type_crossfade_fst
+
+`"----Oh?@ I, I don't think it was anything to thank me for.@ You would help me if I was hurt, right Nii-san?"@
+`"That may be true, but it makes me happy."@
+` Stuttering, I finally realize it.@
+` I am quite emotionally detached right now, but I honestly am happy that---rather than Kohaku-san or Hisui, Akiha was the one that treated my wounds.\
+
+ld c,":a;image\tachi\aki_t24.jpg",%type_crossfade_fst
+
+`"D---don't say such stupid things, please hurry back to your room.@ Or are you hurt somewhere else?"@
+` Akiha says so and shifts her gaze.@
+
+cl c,%type_lshutter_mid
+
+`"----?@ Nii-san, your shoulder… there's blood."\
 
 
+` Akiha places her hand on my shoulder.@
+` She peels back my shirt.@
+` My exposed shoulder, and neck.@
+` Yumizuka's bite marks and dried blood are still there.\
+
+`"Nii-san, this--------"@
+` In that instant,
+` the air freezes.\
+
+`"………………"@
+` The fang shaped wounds on my neck.@
+` I don't know how to even begin to explain that and descend into silence.@
+`"-------"@
+` Akiha slowly leans her body towards mine.@
+`"…… Nii-san…… there is still…… blood flowing, here."@
+` Her voice is terribly taut with strain.@
+` The grip of her hand on my shoulder becomes stronger.@
+` Her body stops in a position somewhere between touching mine and not.\
+
+`"…… What should I do…… We should, stop the bleeding, right----"@
+` Her voice sounds delirious.@
+`"----Akiha?"@
+` I call her name while assailed by an unspeakable disquiet.@
+`"Nnn------"@
+` There's no reply.@
+` But instead,
+` I feel a warm sensation along my neck.\
+
+`"Wha…………………"@
+` My voice fades away.@
+` Akiha's face is right next to mine.@
+br
+` …… The sensation of rubbing.@
+` …… A contact.@ Wetness.@
+br
+`"Aki………… ha…… ?"@
+` …… My numbed sense of reason can't grasp what's going on.@
+
+` A hesitatingly touching tongue.@
+` The red tongue that fearfully touches my neck.@
+` Shaking.@ The shaking fingers that embrace me, the warmth of Akiha's body.\
+
+`"Aaaa--------,"@
+` …… Akiha is licking the blood dribbling down my neck.@
+` But, it really isn't anything to be alarmed over.@
+` It's just like what you would do as a kid to stop the bleeding.@
+` But it feels so sweet, I can't say anything.@
+` Akiha must think the same way, as she just---for no reason, brushes her teeth against my wound.\
+
+!w3000
+
+` ----All of a sudden.@
+br
+br
+br
+br
+br
+` A sound comes from the lobby.\
+
+ld c,":a;image\tachi\aki_t24.jpg",%type_lshutter_fst
+
+`"------!"@
+` Akiha pulls back.@
+`"I----I'm so sorry, Nii-san----!"@
+
+cl c,%type_lshutter_fst
+
+` Her face a pure red, Akiha runs away.\
+
+`"Wha------"@
+` Left by myself in the sitting room, I reach my hand up to my neck.@
+` Her warmth is still lingering there faintly.@
+`"…… She didn't have to run away."@
+` I murmur to myself and shake my head.@
+` Licking the wound like that, I did a lot of that as a child.@ I did that to Akiha and Kohaku-san when they got hurt.@
+` …… But, that's just an act from child-like purity, only done as a child.@
+` Both of us grown up like this now and being the opposite gender.@ We can't really use that method anymore.\
+
+`"…… What was she doing?@ …… She was acting pretty strange."@
+` …… Well, I guess I'm also strange right now.@
+` As if in a dream, I can't recall what exactly happened.@
+` Even what Akiha and I just did, I feel like it'll all be a dream tomorrow morning.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+bg "image\bg\bg_40d.jpg",%type_lcartain_mid
 
 
+` …… And I reach my room.@
+` I lurch to my bed and collapse.@
+`"------Nnn."@
+` Tiredness closes in around my brain.@
+` My exhaustion is more in my body than my mind.@
+` My body must be trying to halt everything in order to quickly heal its exertions.@
+` Before that, I take a deep breath and trace my fingers along my neck once more.\
 
+`"…………… Ah."@
+` I'm a little surprised.@
+` The two fang marks.@ The blood really was stopped by Akiha's lips----\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+playstop
+
+!w3000
 
 
 
@@ -112,7 +342,7 @@ ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
 `"…… Um, I did not say anything, but Akiha-sama found out about last night."@
 `"Eh…… about last night…… what?"@
 `"I mean when you left late last night, Shiki-sama."@
-`"Oh----"@
+`"----"@
 ` I unconsciously turn my eyes away from her.@
 ` I thought I'd managed to slip away undetected, but I should have known Hisui would still find out.\
 
@@ -120,7 +350,9 @@ ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
 
 `"Shiki-sama, your return late at night has gained the attention of Akiha-sama, so I believe you will be asked to explain yourself sooner or later.@
 ` She is in the sitting room and may be angry, so please be prepared."@
-`"……… I see.@ Oh well, I can't complain, since it was me that went out past curfew."\
+`"……… I see.@ I got it; I'll be prepared."@
+` …… But, if it's about last night, then Akiha definitely knows about it already.@
+` …… And after that, it was Akiha who took care of me when I was in a complete stupor.\
 
 `"About that, will it be occurring again?@ I cannot stop you, but if you continue doing such things, I must tell Akiha-sama."@
 `"----No, nothing like last night will happen again.@ Everything…… has ended last night…… There won't be any phone calls anymore."\
@@ -171,6 +403,9 @@ cl c,%type_lshutter_mid
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 !w1000
+
+
+
 
 
 

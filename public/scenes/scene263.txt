@@ -1,140 +1,34 @@
 
-bg "image\bg\bg_33a.jpg",%type_nowaitdisp
+bg "image\bg\bg_05a.jpg",%type_nowaitdisp
 
+`"…… Why?@ Why were you doing those things?"@
+`"Why?@ I do it because it's my job."@
+` Saying that, she looks directly at me.\
 
+`"I am here to execute vampires.@
+` So---in the worst case, I cannot leave you like this now, Tohno-kun."@
+`"Wha----"@
+` Being stared at with those emotionless eyes, my heart skips a beat.\
+
+`"Let me ask you, Tohno-kun.@
+` Why you are associated with a vampire like her?@ Depending on your answer, I will---"@
 br
-` ---No, I have to find out about Senpai.@
-` I don't have time to eat this morning.@
+` It feels like the air has literally frozen.@
+` ---I thought I would be asking the questions, but our positions have been reversed.@
 br
+` But I don't know what Senpai will do if I don't answer, and a chill runs through me.\
 
 
-ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
-
-`"---Shiki-sama?"@
-` Hisui comes from the sitting room.@
-` She must have come to check on me since I did not show up after a while.\
-
-`"…… Sorry.@ I'm going to school, please tell Akiha I'm sorry."@
-
-
-ld c,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
-
-
-`"…… Please wait Shiki-sama.@ You do not look well.@ Are you sure you are feeling well……?"@
-`"---I'm fine, just a little headache.@ Well, I'm off…… Sorry, I'm being selfish again."@
-
-cl a,%type_lshutter_fst
-
-
-` …… I say something really selfish and open the door before she can respond.\
-
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-
-
-bg "image\bg\bg_01a.jpg",%type_crossfade_slw
-
-
-` I reach the school gate.@
-` Since I ran from the mansion, it's not even half past seven yet.@
-br
-`"…………"@
-` I stand and wait for Senpai by the gate.@
-` It probably looks a little strange to the other students walking by, but I don't really care.\
-
-!w5000
-
-`"……………"@
-` Senpai doesn't show up.@
-` It's past seven thirty already.\
-
-!w5000
-
-` Ten more minutes pass by.@
-` The school gate is flooded with students as they arrive.\
-
-
-!w5000
-
-` There's only about five minutes before the gate closes.@
-` But Senpai still does not come.\
-
-`"………"@
-` She---might not come today.@
-` Yesterday, I saw all that happened, so she might not come today, or tomorrow, or the day after---
-br
-` ---Thump.@
-br
-`"……… Ah."@
-` Thinking that, I feel a little faint.@
-` I shake my head to clear it of terrible thoughts.\
-
-` …… And then,
-` someone pats me on the shoulder from behind.@
-br
-
-
-ld c,":a;image\tachi\cel_t07a.jpg",%type_lshutter_fst
-
-`"Tohno-kun, what are you doing here?"@
-`"Se, Senpai……!?"@
-`"Yes."@
-` Senpai nods.\
-`"R, really……!?@ But yesterday, you were---"@
-` Mph.@
-` Before I could finish, Senpai puts her hand over my mouth.\
-
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-
-
-` "Tohno-kun, not here.@ Let's go behind the gymnasium."@
-` Senpai gives her usual smile as she keeps her hand over my mouth and pulls my arm.@
-
-
-cl a,%type_lshutter_fst
-
-
-`"…, …!"@
-` I try to tell her to stop, but I can't speak.@
-` She forcefully pulls me away.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_fst
-
-bg "image\bg\bg_05a.jpg",%type_lcartain_fst
-play "track03.ogg"
-
-wave se2
-
-` ----The school bell rings overhead.@
-!w5000
-
-` …… Homeroom has begun.@
-` Furthermore, no one else is around.@
-br
-
-
-ld c,":a;image\tachi\cel_t07a.jpg",%type_lshutter_fst
-
-
-`"Yes, no one can hear us here."@
-` Senpai finally releases me.@
-` Jumping back, I face Senpai directly.\
-
-`"You want to talk about last night, right?@ If there's anything you want to say, please go ahead, Tohno-kun."@
-` Senpai speaks calmly.@
-` As if what happened last night was not a big deal.@
-`"……………!"@
-` But it was a big deal for me.@
-` Her attitude right now makes me mad.\
-
-`"So that really was you last night……!?"@
-`"Yes.@ I did say your name back then too, so it's impossible to hide it any longer."@
+`"Now, tell me.@ Why you---Tohno-kun is with that vampire."@
+`"Ah---no, no Senpai, that's not it.@
+` Certainly I did agree to help her, but that's already over.@
+` But yesterday, I thought Arcueid was the one behind the serial killings, but that couldn't be right, so I went to ask her and---"@
 cl c,%type_crossfade_fst
+\
 
-`" …………!"@
-` I grit my teeth.@
-` …… I didn't expect an apology or anything, but still---\
+` I tell her all about last night.@
+` Senpai listens to it all silently.@
+` How I met her accidentally, how she explained to me about the vampire in this city, how I teamed up with her to save the city, and everything up until now.\
 
 
 

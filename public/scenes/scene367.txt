@@ -1,30 +1,53 @@
 
 
+
+
 monocro #0000ff
 bg "image\bg\bg_33d.jpg",%type_nowaitdisp
 
 
-
-
-` ----The east wing of the first floor, I think.\
+` ----Was it… the west wing on the first floor?\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_fst
-bg "image\bg\bg_34b.jpg",%type_tcartain_fst
+bg "image\bg\bg_39.jpg",%type_lcartain_fst
 
 
-`"……………… Huh?"@
-` ----What am I thinking?@
-` All that's in the east wing of the first floor is the sitting room and the kitchen, not anyone's room.@
-`"----East is east, but her room is on the second floor……!"@
-` Cursing at myself, I dash upstairs.\
+` …… The lights are off and I can't quite make out the details of the room.@
+` But, I can tell right away it isn't Akiha's room.\
+
+`"This is Kohaku-san's room……!"@
+` I kick the ground in the darkness.@
+` Come to think of it, Akiha's room is exactly across from mine.@ In other words, the east wing on the second floor.@
+`"Gah……!"@
+` As I turn around to exit into the hallway, I see something lying on the ground.@
+`"………?"@
+` I squint my eyes in the dark.@
+` I see----Hisui's figure collapsed on the floor.\
+
+`"Hisui----!?"@
+` I call out and run to her.@
+`"…………… Mnh."@
+` Hisui doesn't answer.@
+` She's only peacefully breathing out in her sleep.@
+`"Is she…… asleep?"@
+` I can't believe it, but it seems so.@
+` Hisui doesn't look like in pain.@ She really does seem like she's sleeping.@
+` Just, there's a teacup tipped over on the table with the contents spilled.@
+` The easiest explanation is there was a sleeping drug mixed into her tea and she fell asleep.\
+
+`"----Kohaku-san isn't here?"@
+` The only one collapsed in the room is Hisui.@
+` …… Hisui seems to be just sleeping, so I have to make sure Akiha is safe----\
+
 bg "image\bg\ima_10.jpg",%type_lcartain_fst
+
 
 ` …… I run up the stairs.\
 ` The heated air and sense of foreboding seem to stretch over the dark of night like glass.@
 br
 ` ----*pant*, *pant*, *pant*.@
 br
-` Breathing heavily, I reach the top of the stairs and walk down the hallway.@
+` Breathing heavily, I reach the top of the stairs and walk down the hallway…@
 ` …… My back hurts.@
 ` This terrible feeling in the air gets heavier as I draw near Akiha's room.\
 

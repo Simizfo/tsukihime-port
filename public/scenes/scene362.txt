@@ -1,1697 +1,926 @@
 
 
+bg "image\bg\bg_40c.jpg",%type_nowaitdisp
 
 
 
-
-mov $phasebg,"image\bg\cmo_06.jpg"
-mov $phasetitle_a,":a;image\word\PAKI_08A.PNG"
-mov $phasetitle_b,":a;image\word\day_08.png"
-gosub *left_phase
-
-
-
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-!w1000
-bg "image\bg\ima_11.jpg",%type_nowaitdisp
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\bg_40a.jpg",%type_crossfade_fst
-
-play "track02.ogg"
-
-` I open my eyes to the morning light.@
-` Even though my body still feels heavy, probably because of yesterday's anemia, I feel pretty good.@
-` …… How many days has it been?@
-` How long since I had a morning so free of unease?@
-` And today is my school's Founder's Day.@
-` There's no need to prepare for school like I usually do, so I can enjoy the morning calmly.\
-
-`"Ah---"@
-` Then, I notice.@
-` Though I thought there was no one in the room, someone is asleep by the bed.@
-`"Akiha…?"@
-` As if she has been nursing me all night long, Akiha is sitting on a chair, the top half of her body collapsed on the bed.\
-
-bg "image\event\aki_e09.jpg",%type_tshutter_mid
-
-
-` Asleep, she breathes softly.@
-` Her long black hair spread out on the bed… it looks beautiful.@
-`"Akiha… hey, Akiha…"@
-` After calling her softly, she shows no sign of waking up.@
-` …… Well, if she's sleeping, then there's no point in making her wake up.\
-
-`"…… Mm."@
-` Akiha turns over weakly.@
-` Sleeping, she has none of her usual strength.@
-` Her defenseless sleeping face hasn't changed since she was a child.@ Because of that, I can close my eyes and vividly recall the Akiha from back then.\
-
-bg "image\event\aki_e01b.jpg",%type_crossfade_fst
-
-
-` …… Eight years ago.@
-` Playing together, the black-haired girl who always followed me.@
-` Although she was a quiet girl, Akiha always came with us.@
-` She rarely smiled and even her smiling face seemed somehow sad, transitory.@
+`"--I can't let it remain unanswered."@
+` If that dream is real.@
+` Am I really a bloodsucking, killer?@
+` …… I can't let those questions remain unanswered.@
 br
-` ---When I was a child, and knew nothing.@
+`"I should take it, just in case."@
+` The knife has been in my desk ever since what happened with Satsuki; I slip it into my pocket.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_33c.jpg",%type_lcartain_mid
+play "track09.ogg"
+
+
+` I go down to the lobby quietly, so that Hisui and Kohaku-san won't notice.@
+` I just need to open the door without making a sound---
 br
-` I really wanted to make her laugh with joy, so I dragged her out into the garden with us over and over again.\
-
-bg "image\event\aki_e09.jpg",%type_crossfade_mid
-
-
-`"Nn… Nii… san…"@
-` As Akiha murmurs to herself, I wonder what kind of dream she's having.@
-
-`"------"@
-` For some reason, on impulse, I lift the sleeping Akiha's hair.@
-` While I watch her sleeping face, my heart becomes calm.@
-` …… It makes me want to watch over her forever if I could.\
-
-`"…… Akiha."@
-` …… I remember.@
-` When we were children, I always thought about it.@
-` That day I vowed to hold this girl more precious than anyone else.@
-` The Akiha who would cry as she held me.\
-
-`"…… But it's no good, is it?@ The image from back then is gone.@ She's a proper young lady now."@
-` I murmur, gazing at Akiha's sleeping face.@
-`"----Nn."@
-` I let her long black hair fall.@
-`"…… I'm…… sorry."@
-` Knitting her eyebrows painfully, Akiha whispers in her sleep.@
-`"…… I'm sorry…… I'm sorry, Nii-san……"@
-`"----Akiha?"\
-
-` Akiha's breathing is irregular.@
-` With her long black hair sliding off the bed, Akiha slowly lifts herself up.\
-
-bg "image\bg\bg_40a.jpg",%type_tshutter_mid
-
-
-ld c,":a;image\tachi\aki_t19c.jpg",%type_crossfade_fst
-
-`"Ah---it's Nii-san.@ Nii-san… why are you, here…?"@
-`"…… Well, it's natural.@ This is my room, after all."@
-
-ld c,":a;image\tachi\aki_t24.jpg",%type_crossfade_fst
-
-`"Eh---!?"@
-
-cl a,%type_crossfade_fst
-
-` Akiha leaps upright as if stung, and glances around quickly.\
-
-ld c,":a;image\tachi\aki_t04b.jpg",%type_crossfade_fst
-
-`"Good morning, Nii-san.@ Did you sleep well last night?"@
-` …… As if she hadn't slept here at all, she greets me calmly.@ Just like Akiha.@
-` Her guts, or I should say her response, is not normal.@
-`"Yeah, morning.@ I slept well, thanks to you.@ It's been a long time since I had such a pleasant morning."@
+` but before I can open it, it opens with a creak.\
 
 ld c,":a;image\tachi\aki_t12b.jpg",%type_crossfade_fst
 
-`"Really?@ Is your body completely recovered, then?"@
-`"No, it still feels kind of heavy.@ Today's a holiday, so I'll just rest quietly."\
+`"Nii-san?@ What is it?@ Why are you standing here, frozen?"@
+`"A---Akiha, you…"@
+` Why are you here, I ask wordlessly.@
 
-ld c,":a;image\tachi\aki_t04b.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\aki_t03b.jpg",%type_crossfade_fst
 
-`"Why Nii-san, it's unlike you to say such things.@ Usually you disappear off somewhere before anyone notices."@
-`"Please don't say that.@ I'll be staying at home from now on, so you don't need to worry."@
+`"I was just taking a walk in the garden.@ What about you, Nii-san?@ You look like you're going to go out right now."@
+`"…… Yeah.@ I left something at school, so I was going back for it."@
+` …… I don't want to lie to Akiha.@
+` So, I say as little as possible.\
 
-ld c,":a;image\tachi\aki_t08b.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\aki_t18b.jpg",%type_crossfade_fst
 
-`"Yes, yes, I'll accept half of that statement."@
+`"Hmm, you forgot something?"@
+` Akiha narrows her eyes at me.@
+!w2000
+ld c,":a;image\tachi\aki_t03b.jpg",%type_crossfade_fst
 
-cl a,%type_crossfade_fst
-
-` Smiling happily, Akiha gazes at my face.@
-` …… If our faces stay as close as this, it'll be a problem.@
-` Akiha's features are very beautiful, and if she keeps pointing that cheerful smile at me, I might go crazy.\
+`"Well, alright, it's still eight.@ Make sure you are back by nine, Nii-san."@
+`"Right.@ I'll be back in an hour."@
 
 ld c,":a;image\tachi\aki_t09b.jpg",%type_crossfade_fst
 
-`"Well then, Nii-san, we shall see how you feel at lunch.@ Until then, please don't exert yourself, or go outside."@
-`"I understand… But, it's terrible.@ Since I came back here, you've had to nurse me all the time.@ I'm no older brother."@
-
-ld c,":a;image\tachi\aki_t17b.jpg",%type_crossfade_fst
-
-`"----Nii-san."@
-` Though it was only a casual comment, Akiha's face is clouded.@
-` After hanging her head for a moment, she stands and looks up.\
-
-ld c,":a;image\tachi\aki_t01b.jpg",%type_crossfade_fst
-
-`"---Please don't say stupid things like that.@
-` You're my brother.@ And even if you don't act like a good one, nothing would change."@
-`"…… Well, I suppose, but…?"@
-
-ld c,":a;image\tachi\aki_t12b.jpg",%type_crossfade_fst
-
-`"…… It's nothing.@ But, it's true.@ I don't mind having to nurse you every day, so please, don't worry about it."\
-
-cl a,%type_crossfade_fst
-
-` Akiha walks quickly to the door.@
-
-ld c,":a;image\tachi\aki_t12b.jpg",%type_crossfade_fst
-
-`"Well, excuse me.@ I shall be out during the morning, so if you need anything, please ask Hisui."@
-
-cl a,%type_lshutter_fst
-
-` And with that, Akiha leaves the room.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-!w500
-bg "image\bg\bg_40a.jpg",%type_tshutter_mid
-
-
-
-` Ten o'clock comes around.@
-` Although it's good to rest, lying in bed like this all day is boring.\
-
-`"…… Ahhhh…"@
-` …… But even so, it seems my body hasn't slept enough yet.@
-` My body's still sluggish, and if I walk around and end up like yesterday, Akiha will get angry.@
-`"…… Akiha will be back in two hours.@ And I promised her that I'd take today off, after all."@
-` Telling myself this, I throw the sheets over me.\
-playstop
-
-monocro #fffff0
-bg "image\bg\bg_40a.jpg",%type_crossfade_fst
-
-
-` I get really drowsy, probably because I'm still exhausted.@
-wave se0
-
-
-` …… If I listen, I can hear my own heartbeat.@
-
-wave se0
-
-
-`"Ho… t…"@
-` Come to think of it, I haven't had anything to drink since yesterday.@
-` My throat's dry, and my head feels a little dim.\
-
-wave se0
-
-
-` Just a little.@
-` I guess it's okay to go out to get some water.\
-wave se0
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-
-bg "image\bg\bg_46a.jpg",%type_nowaitdisp
-
-waveloop se1
-
-
-` The corridor is empty.@
-` Long ago.@
-` So long ago I can't remember, or don't need to remember.@ Like ruins in a movie, very quiet.\
-waveloop se1
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\bg_36a.jpg",%type_nowaitdisp
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\bg_39.jpg",%type_nowaitdisp
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\bg_48a.jpg",%type_nowaitdisp
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-
-
-bg "image\bg\bg_42a.jpg",%type_nowaitdisp
-
-
-` Hot.@
-` The sunshine is hot.@
-` Is my body still not recovered yet?@
-` It seems I can't spend too long in the sun.\
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\bg_54a.jpg",%type_nowaitdisp
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\bg_44a.jpg",%type_nowaitdisp
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-monocro off
-
-
-` …… The detached building seems to waver in the sun.@
-` My vision dims completely, like I'm in a hot desert.@ White.@
-br
-` …… There's a clatter.@
-` …… From the detached building.@
-` …… Someone.@
-` …… Is there someone in there?\
-
-bg "image\bg\ima_10.jpg",%type_tshutter_mid
-bg "image\bg\bg_45b.jpg",%type_bshutter_mid
-
-
-` Opening the sliding door very slightly, I peer in from the porch.@
-` Inside, I see the figures of Akiha and Kohaku.@
-` They look a little strange.@
-` I hear the swishing of an obi being removed.@
-br
-` -----What…?@
-br
-` Without a word, Kohaku pulls down her kimono and bares her breasts.\
-
-bg "image\bg\ima_11.jpg",%type_lshutter_mid
-
-bg "image\event\aki_h13.jpg",%type_lshutter_mid
-
-
-` Kohaku stands there with a blushing face, but does not move.@
-` Akiha presses her lips against the bared white chest.@
-br
-` Tension.@
-br
-` Kohaku looks down at her bare chest, and Akiha crouches so that she is burying her face in Kohaku's breasts.@
-` A thin red drop makes a line down her breast.\
-
-` Akiha's throat starts to move, swallowing something.@
-` What---what is she drinking?@ There's no need to ask; I already understand.@
-br
-` Akiha, she's drinking, Kohaku's blood----\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-
-br
-br
-br
-br
-br
-br
-` ----------Dream
-`         Dream------
-br
-` This is a dream.@
-` It's a dream, so I should hurry up and wake up.\
-
-wavestop
-bg "image\bg\bg_40a.jpg",%type_nowaitdisp
-
-play "track01.ogg"
-
-`"----Eh?"@
-` …… My own room.@
-` I'm definitely in… my own room.\
-
-`"Akiha, and Kohaku-san…?"@
-` Akiha.@ Akiha was drinking Kohaku's blood, I definitely saw it.@
-`"Was I just dreaming…?"@
-` …… Perhaps.@
-` No, it must have been a dream.@
-` There's no way that was real.\
-
-`"…… But… it was so real."@
-` It has to be a dream.@
-` The smell of the tatami mats, the two's ragged breathing, the gulping I heard from Akiha's throat.@
-`"--------"@
-` I get out of bed.@
-
-bg "image\bg\ima_11.jpg",%type_nowaitdisp
-bg "image\bg\bg_40a.jpg",%type_nowaitdisp
-
-` …… I feel dizzy.@
-` But I don't care.@
-` The detached building.@
-` If I go out to the detached building, I'll know for sure whether it was a dream or not---\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_fst
-
-!w1500
-
-bg "image\bg\bg_54a.jpg",%type_lcartain_fst
-
-
-`"----!"@
-` Hearing a noise, I hide myself.@
-
-ld c,":a;image\tachi\koha_t09.jpg",%type_lshutter_mid
-
+`"Understood.@ I shall leave the door unlocked; please take care."@
 
 cl a,%type_lshutter_mid
 
-`"Kohaku… san."@
-` Kohaku-san walks from the direction of the detached building, towards the mansion.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_fst
-bg "image\bg\bg_44a.jpg",%type_lcartain_fst
-
-
-` …… The house is as silent as the grave.@
-` I think it's empty.@
-` Akiha isn't here.@
-` Because she said she'd be out during the morning.@
-` Akiha couldn't have been in a place like this with Kohaku-san.@
-br
-`"………"@
-` I swallow hard.@
-` I take a deep breath, and step inside.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_45a.jpg",%type_lcartain_mid
-
-
-ld c,":a;image\tachi\aki_t19.jpg",%type_crossfade_mid
-
-`"…… Nii…… san……?"@
-` Akiha is standing in the Japanese-styled room.@
-` She is looking at me aghast.@
-`"…… Akiha."@
-`"Yes…?@ What is it, Nii-san…?"@
-` Akiha doesn't seem surprised that I'm here.@
-` She merely reacts listlessly.\
-
-`"'What is it'…?@ What are you doing in a place like this?"@
-`"What?@ I just thought I'd come and have one last look around before it's demolished."@
-`"---No, I don't mean that…"@
-
-cl a,%type_crossfade_fst
-
-br
-` I stare at Akiha's body.@
-` Hm?@ ---Come to think of it, Akiha's wearing her uniform.@
-` Wasn't she wearing her normal clothes a while ago…?\
-
-`"Akiha, you changed your clothes?"@
-
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-
-`"Yes, since I went to school during the morning.@ After leaving your room, I changed, and I only just returned."@
-`"…… Really?@ Yeah, of course, you weren't doing those things in here."@
-br
-` --Yes, it was a dream, after all.@
-` …… But, something's odd.@
-` It's odd, but… who's odd?\
-` Is Akiha odd?@ Or am I odd?\
-
-` When I saw that sight, Akiha was wearing her normal clothes.@
-` It would be strange to change clothes after that, and what Akiha just said, there's nothing strange about it at all.@
-br
-` So---that makes me who saw that dream strange.\
-
-ld c,":a;image\tachi\aki_t17a.jpg",%type_crossfade_fst
-
-`"…… Nii-san?@ What is it?@ You seem pale.@ You said you'd rest all morning, so why are you out in a place like this?"@
-`"Ah, I just thought I'd go for a bit of a walk."@
-
-ld c,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
-
-`"…… Really?@ Well, I don't care about that, but I forbade you from coming here.@ It seems you couldn't keep your promise to me, Nii-san."@
-` Akiha glares accusingly at me.@
-` Her gaze seems to see right to the bottom of my heart, which jumps in response.\
-
-`"…… You're right.@ From now on, I'll be careful."@
-
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-
-`"This building is getting very old, so there's a chance it may collapse.@ Please don't come here anymore, Nii-san."@
-br
-` ---Is it just my imagination?@
-` I think there really is something odd about Akiha's attitude.@
-` For one thing, why would Akiha be in such a dangerous place alone……?\
-
-ld c,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
-
-`"Now, please go back, Nii-san.@ You do not look well."@
-
-cl a,%type_crossfade_fst
-
-` Walking past me, Akiha leaves the Japanese-styled room.\
-
-`"Wait a minute, Akiha.@ There's something I forgot to ask yesterday."@
-
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-
-`"Something you forgot to ask?"@
-`"Yeah.@ That clearing where I collapsed.@ Long ago, I used to play with you there, but I feel like there was someone else as well.@ Do you remember?"@
-`"---There was no one else.@ You're mistaken."@
-
-cl a,%type_lshutter_fst
-
-` Answering clearly, Akiha leaves the detached building.\
-
-`"…… But, Akiha, there was a third child.@ A child adopted ten years ago.@ Are you saying you don't know about him?"@
-` Left alone in the Japanese-styled room, I talk out loud.@
-` Is Akiha hiding the truth about that child, or does she really not remember?@
-br
-` ----I can't tell.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-!w1000
-bg "image\bg\bg_40c.jpg",%type_rcartain_mid
-
-` ----Night.@
-` As I returned and sat absent-mindedly in my room, it seems the day ended.@
-` …… Too many things to think about, too many things I have to think about.@
-` Even with Yumizuka gone, the killings still continue.@
-` And I see matching dreams of killing people and sucking their blood.\
-
-
-` Eight years ago.@
-` The near-fatal injury I received in an accident, and the child that had to be here.@
-` The scene I remembered in the courtyard.@ Undoubtedly, it was a memory from eight years ago.@
-` If I've started to see dreams of killing people, there's no question why.@ It seems that same thing happened right before my eyes, a long time ago.\
-`"-----"@
-` …… I haven't seen Akiha since then.@
-` Kohaku-san brought supper to my room, and Akiha has not come to visit.@
-
-`"Well, I guess since I'm feeling better, there's no reason to visit, but…"@
-` …… I still feel awkward when it comes to her.@
-` If day breaks, and morning comes, and we say "good morning" as always, I bet the bad feeling will disappear.@
-`"…… That's right.@ I'll just sleep today."\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-playstop
-
-` With the lights off, I curl up in bed.@
-br
-` But, Akiha is not beside me.@
-` If I sleep like this, then…
-` I might dream about killing people again----\
-
-bg "image\bg\bg_40d.jpg",%type_nowaitdisp
-
-
-`"----Crap."@
-` …… It's no good, I can't sleep at all.@
-` Because Akiha was beside me yesterday, I was able to sleep peacefully.@
-` If I sleep alone, I might have that dream again.@
-` And if I dream of drinking blood, and another victim appears…
-` I wouldn't be able to deny it and would have to conclude that I am the killer.\
-
-`"----Gh."@
-` I get out of bed.@
-` …… I won't sleep.@
-` I won't sleep tonight, I will stay awake.@
-` Moonlight is streaming in through the window, so I can just gaze at the moon for a while---
-br
-`"Huh?@ There's someone in the courtyard."@
-` I look closely.@
-`"Isn't that Akiha?@ What's she doing, standing in the courtyard?"@
-` Akiha is standing quietly under a particularly large tree.\
-
-`"…… Maybe she's taking a walk.@ It's past eleven already; she's so careless."@
-` In fact, the first night I came back to the mansion, Akiha was walking about in the dead of night too.@
-` ……… Well, if I'm not going to sleep anyway…
-` If, like yesterday, I have Akiha beside me, I don't think I'll have nightmares---\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_48d.jpg",%type_lcartain_mid
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-play "track08.ogg"
-
-
-` I walk in the moonlight.@
-` The mansion's trees are painted in splendid autumn colors, and the falling leaves really look illusionary.\
-
-bg "image\bg\bg_54c.jpg",%type_lcartain_fst
-
-
-` Akiha stands in the center of it all.@
-` I gaze at her long black hair, her thin back, and the autumn leaves scattered about her.@
-` Swaying.@
-` Her black hair shakes like the leaves; is that why her body seems so weak?@
-` Akiha's figure seems like a mirage.\
-
-`"…… Akiha?@ What are you doing, at a time like this?"@
-`"What?@ I'm watching the moon.@ Just like you, Nii-san."@
-` Showing no surprise at my appearance, Akiha turns and answers.\
-
-bg "image\event\aki_e03.jpg",%type_lshutter_mid
-
-
-`"Good evening, Nii-san.@ Going out at a time like this even when you're sick; you're such a troublesome patient, aren't you?"@
-`"I guess.@ I could see the moon from my room, but there was a poor little girl outside.@ As a proper brother, I had to come out."@
-`"Huhu.@ Well, I'm sorry about that."\
-
-`"Ah----well, I guess inside the mansion is fine, but it has been unsafe recently.@ You're a girl, so you shouldn't be wandering around outside at night."@
-`"You're right.@ If you say so, I'll go straight to my room."@
-`"Bah, it's fine now.@ …… I, couldn't sleep either, so it'd be nice to spend some time together."@
-`"If you'd like, then certainly, Nii-san."@
-` Closing her eyes, Akiha nods quietly.@
-` …… Akiha's nod seems as if she is praying for something.\
-
-`"…… I'm surprised.@ You're really nice tonight.@ Did something good happen?"@
-`"Nothing wonderful has happened… but, I guess being able to talk to you like this might be something wonderful."@
-` Akiha chuckles with a smile.@
-`"-----"@
-` In response, my chest thumps.\
-
-`"Nii-san?@ What is it?@ Your face is red.@ If you're still feeling ill, shall we move to the terrace?"@
-`"No, I'm fine.@ I'd like to gaze for a little longer, so let's stay here."@
-`"Yes… tonight really is beautiful.@ Of all the scenery around the mansion, this is my favorite."@
-` Akiha smiles faintly.@
-` …… Her behavior really surprises me.@
-` Her atmosphere is terribly calm and gentle.@
-` Amidst the red autumn leaves.@
-` Tohno Akiha seems many times prettier then usual.\
-
-`"Hey, Nii-san?@ Do you remember this place?"@
-`"This place?@ You mean, this big tree?"@
-`"Yes.@ When we were children, this was our meeting place.@
-` When I was inside doing my lessons, I'd hear a stone at the window.@
-` And then I'd slip away from my private teacher, and run out here."\
-
-` ----Yeah, come to think of it, she's right.@
-` Akiha was always doing lessons in the mansion; our old man wouldn't let her go outside.\
-
-`"The people in the mansion were afraid of Father, so they wouldn't even talk to me.@
-` …… But, that was natural.@
-` I thought I wasn't meant to talk to anyone except Father.@
-` There were lots of people, but to me the rules of the Tohno house were more important than any of them.@ So I was fine by myself, and I could bear Father's lessons."\
-
-`"…… Yeah, I remember.@ He didn't care about me, but the old man was really strict with you.@ Shut up in your room all the time, doing lessons all day long.@ I really didn't like that."@
-`"Yes.@ To be honest, I hated it too."@
-` …… I guess she has sorted it out as something in the past.@
-` Akiha laughs nostalgically.\
-
-`"But, Nii-san, you were the one who let me notice.@
-` …… You won't remember this since it was like an everyday thing for you, but one day, while I was waiting for the teacher in the courtyard, you came up, grabbed my hand, and began to run.@
-` I asked what you were doing, and you said you couldn't play tag by yourself, so I should play too.@
-` …… Really… Thinking back, you were a terribly pushy person, weren't you?"@
-` Akiha giggles.\
-
-`"…… Well, that's what children do.@ Please forgive my impoliteness."@
-`"Yes… after that, Father scolded us, so it became harder for us to meet---"@
-`"----Yeah, I became stubborn too.@ I decided I'd play with you once a day, and one way or another, I'd get you outside.@
-` But, in the end, you slipped away yourself.@ But you'd just watch from far away and never come close."\
-
-`"It's fine.@ I was happy just with that.@
-` ---Yes, I really was happy.@
-` You took me out to play, and Father would scold us afterwards.@
-` Father's scolding got worse day by day, right?@ So, I began to think.@ He won't come today.@ He shouldn't come today.@ I don't think he'll come today…
-` But, you always betrayed my expectations.@ Every time we were scolded, and I thought you wouldn't come anymore, you always appeared, smiling.@
-` You always said Father didn't scold you, but it was a pretty bad lie."\
-
-`"…… Really?@ I always thought I'd fooled you completely; but I guess it was easy to tell it was a lie."@
-`"Of course.@ I was sorry you were always scolded on my behalf.@
-` Every day at the same time, I would wait excitedly, wondering, 'Is Nii-san going to come today?'"\
-
-`"…… But, that was the happiest time.@
-` When you went away, life returned to normal again, but I didn't suffer.@
-` But, the memories of you were stronger than anything else, Nii-san.@
-` …… You say you left me alone, but that is wrong.@ I----I was always saved by you.@
-` Because I had memories of you, I was able to remain as Tohno Akiha."@
-br
-` And, like an illusion, Akiha smiles.\
-
-`"---There's something wrong with me.@ If I was always clinging onto you like a child, I could hardly be head of the Tohno House."@
-`"…… Stupid.@ That has nothing to do with it.@ It's okay to depend on someone when you need to.@ We're brother and sister, after all."@
-`"No, that was only when we were children.@ It was decided that I would be the heir of the Tohno House.@ So, I cannot depend on anyone; I must manage on my own."\
-
-`"…… What's with that?@ Just because you became the heir of the Tohno House, does that mean you can't make your own decisions?"@
-`"That's what it means to become the heir of the Tohno House.@ Long ago, that's what I was taught to believe.@
-` ---But, I'm still no good at it.@ After all, I'm showing weakness like this, aren't I?"@
-br
-` As she speaks,
-` Akiha jumps forward with light steps.@
-` As if dancing, she walks amidst the fallen autumn leaves.\
-
-`"Aki---ha."@
-` …… My chest hurts.@
-` I don't know why, but right now, I want to embrace Akiha tightly.@
-` …… Is there some magic in the light of the moon?@
-` Even though she's my sister… no, because she is my sister, I really want to protect this girl.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\event\aki_e03.jpg",%type_crossfade_fst
-
-
-`"It's getting cold.@ Shall we go back, Nii-san?"@
-`"…… Yeah, let's go back.@ We shouldn't stay here forever----"@
-br
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-playstop
-
-bg "image\event\aki_e03.jpg",%type_crossfade_fst
-
-
-`"…… Nii-san?"@
-`"-----"@
-` I can hear Akiha's voice.@
-` But, I can't hear what she's saying.@
-br
-` Really, I don't know what it is.\
-
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-waveloop se1
-
-monocro #ff0000
-bg "image\event\aki_e03.jpg",%type_crossfade_fst
-
-
-` Akiha's hair that should be black,
-` It looks crimson, like blood.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-monocro off
-bg "image\bg\ima_13.jpg",%type_crossfade_fst
-
-
-` -----Unnecessary.\
-` It's unnecessary.\
-
-br
-br
-br
-` ----Unnecessary.@
-` It's something unnecessary.\
-
-br
-br
-br
-br
-` ----Unnecessary.@
-` Red hair.@ The image of blood.@ A demon that drinks blood.\
-
-br
-br
-br
-br
-br
-br
-` ----That is not human, therefore…\
-
-br
-br
-br
-br
-br
-br
-br
-`    It, must be eliminated.\
-
-bg "image\bg\ima_10.jpg",%type_tshutter_fst
-bg "image\bg\bg_54c.jpg",%type_rshutter_fst
-
-
-
-`"---Nii-san?@ Are you alright?@ Nii-san…!?"@
-`"Guh… ahh…!"@
-` My chest tightens.@
-` My heart is racing.@
-` Blood clogs my veins.@
-` Repeating in my head, kill, kill.\
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-
-
-` -----No, I'm not going to kill yet.@
-br
-` I'll enjoy this woman's body first.@
-` Her slender arms.@ Her beautiful hair.@ Her small breasts.@
-` Her body, perfect like a beautiful doll; I'll violate it.@
-
-bg "image\bg\bg_54c.jpg",%type_nowaitdisp
-
-br
-` ---My throat is hot.@
-` It's just like…
-` when I kill people in dreams.@ Hot.\
-
-
-`"Nii-san, please hold on.@ I'll help you, so let's go back to the mansion."@
-` Voice.@ I can only hear Akiha's voice.@ No, I mustn't see her face.@ If I do, I'll…@
-`"---It's okay.@ I… won't touch, your body."@
-` No.@ I can't touch it.@
-` If I touch it---I don't know what I'll do.@
-`"…… I'll go back first.@ Make sure you come in too, Aki, ha…"@
-
-
-` With what little reason I have left, I run from Akiha.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_fst
-wavestop
-
-!w1000
-bg "image\bg\bg_40d.jpg",%type_lcartain_fst
-play "track06.ogg"
-
-` Somehow, I make it back alone.@
-` I breathe desperately.@
-` I collapse onto the bed.@
-`"Damn it………!"@
-` I hate myself.@
-` Not satisfied with mere dreams, I feel these urges in reality, too.@
-` And not strangers; I wanted to do such things to Akiha---\
-
-`"I---I…"@
-` I don't understand myself anymore.@
-` Memories of eight years ago.@
-` Akiha, and a boy covered in blood.@
-` An event I can't dismiss as a dream or as reality.@
-br
-` -----Tohno Shiki, like a killer.\
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-ld c,":a;image\tachi\stk_t02.jpg",%type_nowaitdisp
-
-
-`"--I know.@ Shiki-kun's fragile side."@
-` …… Her.@ Yumizuka spoke those words proudly.@
-br
-`"You're the same as me.@
-` Just like me, you have the same unbearable urge to kill---!"\
-
-bg "image\bg\bg_40d.jpg",%type_crossfade_fst
-
-
-
-`"----"@
-` I can't deny it.@
-` After all, those in the Tohno family have problems.@
-` Death by madness.@ Death by violence.@ Disappearances.@ Psychotic episodes.@
-` Akiha drinking Kohaku's blood.@
-` Me, seeing homicidal dreams.@
-br
-`"-----Guh."@
-` Thinking about it, I have to smile at my foolishness.@
-` Why should Akiha be strange?@
-` Akiha is normal, and that's just what I imagined.\
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\ima_13.jpg",%type_nowaitdisp
-bg "image\bg\bg_40d.jpg",%type_nowaitdisp
-
-` Yes, I'm the only one that's mad.@
-` Only I am---wanting blood tonight as well---\
-playstop
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-!w5000
-wave se0
-!w750
-br
-br
-` -----Hot.\
-wave se0
-!w750
-
-br
-br
-br
-br
-` -----Hot.\
-wave se0
-!w750
-
-br
-br
-br
-br
-br
-br
-` -----Hot.\
-wave se0
-!w750
-
-br
-br
-br
-br
-br
-br
-br
-br
-` -----Once aroused, my body can't be calmed with something like sleep.\
-wave se0
-!w750
-
-br
-br
-br
-br
-br
-br
-br
-` -----So.@
-`     Tonight too, I shall relieve my thirst.\
-
-bg "image\bg\bg_26a.jpg",%type_nowaitdisp
-
-play "track04.ogg"
-
-` It seems I went into town at night again.@
-` It seems my eyes are bloodshot,
-` and I'm waiting for someone to pass by again.\
-
-br
-br
-br
-br
-br
-br
-br
-` ---When did I unknowingly fall asleep?\
-
-` Long hair swaying.@
-` Wandering the town at night.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----I'm having another homicidal dream.\
-
-` It seems I found new prey.@
-` Anyone will do tonight.@
-` Killing a strange man, dragging him into a back alley.\
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\ima_12b.jpg",%type_nowaitdisp
-
-bg "image\bg\bg_31b.jpg",%type_nowaitdisp
-
-
-` The sound of biting the throat.@
-` There's a gurgling sound.@
-` Biting into the throat, and drinking blood to relieve the thirst.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----It's the same again.\
-
-` Then.@
-` An obstruction appears.@
-` I throw the body aside and rise.@
-` Someone.@ Someone is watching me.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----The black figure appears.\
-
-` Shaking my hair loose, I look up at the moon.\
-
-bg "image\bg\ima_10.jpg",%type_tshutter_fst
-bg "image\event\cel_e04.jpg",%type_bshutter_mid
-
-
-br
-br
-br
-br
-br
-br
-br
-` ----The figure is someone I know well.\
-
-` From rooftop to rooftop.@
-` From shadow to shadow.@
-` The figure follows.\
-
-br
-br
-br
-br
-br
-` ----The black figure looks a lot like Ciel-senpai, matching the fiend's unnatural speed perfectly.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-
-
-br
-br
-br
-br
-br
-br
-br
-` ----The movement stops.\
-
-` Since it's excited.@
-` It seems ready to fight.@
-` It seems tired of running.@
-` It probably felt like playing.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----Ciel-senpai is coming.\
-
-monocro #ff0000
-bg "image\bg\ima_18.jpg",%type_lshutter_fst
-
-` …… After that, it was quick.@
-` Ciel-senpai was very strong, but when a passerby happened to appear, that was the end.@
-` When she moved to protect that passerby, she was skewered with something like an iron pipe along with the passerby.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----It's too cruel to watch.\
-
-` Lifting her hands up, they too are skewered with pipes.@
-` Hung like a crucifix, Ciel-senpai is stripped.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----…… I know it's laughing.\
-
-
-` Sliding its tongue over Ciel-senpai's breasts, it laughs.@
-` Ciel-senpai simply glares, doing nothing.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----Blue pupils like flames.@
-`    Looking into my eyes.\
-playstop
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\ima_13.jpg",%type_nowaitdisp
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\ima_18.jpg",%type_nowaitdisp
-
-
-br
-br
-br
-br
-br
-br
-br
-` ----The image stops.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----Organs break.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----Like peeling off a scab,\
-
-br
-br
-br
-br
-br
-br
-br
-`          I wake up.\
-
-monocro off
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-
-
-!w4000
-
-
-
-
-
-
-
-mov $phasebg,"image\bg\bg_11c.jpg"
-mov $phasetitle_a,":a;image\word\PAKI_09A.PNG"
-mov $phasetitle_b,":a;image\word\day_09.png"
-gosub *left_phase
-
-
-
-bg "image\bg\bg_40a.jpg",%type_bshutter_fst
-
-waveloop se10
-
-`"----!"@
-` I jump out of bed.@
-` It's almost six in the morning.@
-`"Even Senpai---why?"@
-` …… No, that woman in priestly robes wasn't necessarily Senpai.\
-
-` Because, there was something different about her.@
-` The me inside the dream was strange, but that Senpai was even stranger.@
-` Leaping from rooftop to rooftop, and throwing swords like bullets.@
-` It almost seemed like Senpai was more of a monster than the killer.@
-br
-` ---So it has to be a dream.@
-` Because when I opened my eyes, I was sleeping in my own bed.\
-
-`"---I can just call it a dream?"@
-` I laugh.@
-` Whether or not it was a dream isn't the problem.@
-` What I remember and how much I didn't want to kill are meaningless.@
-br
-` ---All I know is, my body is still excited.\
-
-` The feel of breaking the man's neck,
-` of skewering Ciel-senpai's arms over her head, and licking her body.@
-` …… I can still feel the heat of her breath.@
-` So, whether it was a dream or reality makes no difference.@
-` I killed someone and tried to rape Senpai in either case.\
-wavestop
-
-wave se3
-
-
-ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
-
-`"Excuse me."@
-` Hisui enters carrying my school uniform.@
-
-waveloop se10
-
-`"Good morning, Shiki-sama."@
-`"…… Yeah, morning, Hisui."@
-` I answer, shaking off the remaining sensation of Senpai's warmth.@
-` …… But, it's no good.@
-` Even though Hisui came to wake me up, I still can't help but feel depressed.\
-
-`"Shiki-sama…?@ You seem pale.@ Are you still ill?"@
-`"…… Nah, it's not that.@ I'm always like this in the morning."@
-` I get out of bed.@
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_40a.jpg",%type_crossfade_fst
-
-` …… My head aches, but I ignore it.\
-
-`"I'll go to the sitting room.@ I bet Akiha's waiting?"@
-
-ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
-
-`"No.@ It seems that Akiha-sama is not feeling well this morning either, so she shall be absent from school today."@
-`"Eh---but, she was fine just last night."@
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"I cannot say.@ Since I heard this only from Nee-san, I do not know the details."@
-`"---I see.@ Another fit, like before, I guess…"@
-`"Nee-san is in the sitting room, so please ask her for the details."@
-
-cl a,%type_lshutter_fst
-
-` With that, Hisui leaves.\
-wavestop
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_34a.jpg",%type_lcartain_mid
-
-play "track02.ogg"
-
-ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
-
-`"Ah, good morning, Shiki-san.@ You're up early today."@
-`"Morning, Kohaku-san… I heard Akiha's condition is bad, what happened?"@
-
-ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
-
-`"Eh--?@ Ah, Hisui-chan told you?@ Akiha-sama has a bit of a fever, so she's taking today off."@
-`"A fever… but, why?"@
-`"Well, she's been really busy since you got back, hasn't she?@ Speaking with relatives, arrangements to change schools.@ She's just tired out."\
-
-`"…… Just tired out?@ Really?"@
-
-ld c,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
-
-`"Of course.@ Oh, Shiki-san, you're panicking.@ She must be really important to you."@
-` Kohaku-san laughs happily.@
-` As she speaks, I realize how tense I was getting.@
-
-`"Ah… nah, I wasn't really worried about Akiha, I was just…"@
-
-ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
-
-`"Just what, Shiki-san?"@
-` Her eyes stare straight at me.@
-` I'm not good at lying, and I don't want to betray my feelings.\
-
-`"---Ah, no, you're right.@ Akiha's important to me, so like you said, I was worried."@
-` …… Though I'm embarrassed, I tell Kohaku-san my true feelings.@
-
-ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
-
-`"Shiki-san, you're very honest today.@ Please, say that when Akiha-sama's here."@
-` With an innocent smile, she says something pretty scary.\
-
-`"… Oh, come on.@ There's no way I could tell Akiha that.@
-` By the way, is she still asleep?"@
-
-ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
-
-`"Yes, she took some medicine and went to sleep a short while ago.@ She said 'there's no need to visit, so Nii-san should just go to school'."@
-`"…… Really.@ Well then, I'm glad."@
-
-cl a,%type_crossfade_fst
-
-` I sit down on a sofa.@
-` …… At least this is one less thing to worry about.\
-
-ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
-
-`"Ah, Shiki-san.@ Last night, were you really talking to Akiha-sama in the garden?"@
-`"That's right.@ I couldn't sleep yesterday, and when I looked out, Akiha was in the garden, so I went out and talked for a bit.@ Why?"@
-
-ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
-
-`"Well, Hisui-chan said so, so I was a bit worried.@
-` But, Shiki-san, you shouldn't be going outside late at night.@ It's very dangerous these days."\
-
-`"…… Because of the killer, right?@ I think I know that better than anyone."@
-
-`"Even so, please take care.@ Apparently a man was killed in town last night."@
-`"-------"@
-br
-playstop
-
-` I jump off the sofa.@
-br
-`"Kohaku-san… is that true?"@
-
-ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
-
-`"Yes, it was on the morning news.@ Since the victims have all been women until now, they seem to be talking about it a lot."\
-
-cl a,%type_crossfade_fst
-
-
-`"-----"@
-` A man.@ A male victim.@
-` The unknown man I killed in the dream.\
-
-`"Shiki-san---?"@
-` …… Kohaku-san is saying something.@
-`"Ah---no, it's… nothing."@
-` That's all I can say as I stand in amazed shock.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-!w1000
-bg "image\bg\bg_01a.jpg",%type_lcartain_mid
-
-
-` ----I arrive at school.@
-br
-` It's seven-fifty.@
-` Even though I left the mansion very early, I still only made it to school at the last minute.@
-` The reason is obvious.@
-` The possibility that I might be a killer slowed me down.\
-
-bg "image\bg\bg_03a.jpg",%type_lshutter_mid
-
-
-` I step through the gate.@
-` There are people like me all around, going to class.@
-`"-------"@
-` …… Every time I see them, I freeze.@
-` They are people who never think of murder.@ And amongst them there are people like me, attending the same lessons.\
-
-`"…… Yumizuka.@ At last, I know how you felt."@
-` No, I can't compare my situation to hers.@ But perhaps now I understand a little of her feelings.@
-br
-` …… The way I am now, I can't be here.@
-` I have killed many people already.@
-` It doesn't matter if it's a dream or not, but with desires like that, I must not be here.\
-
-`"………… Ha."@
-` I smile wryly.@
-` A few days ago, I wouldn't even have imagined something like this.@
-`"Hey, you.@ If you just stand around like that, you'll be late."@
-`"Eh?"@
-` Someone hits me on the shoulder.@
-play "track03.ogg"
-
-ld c,":a;image\tachi\cel_t04.jpg",%type_lshutter_mid
-
-`"Good morning, Tohno-kun.@ We're here today at the same time."\
-
-`"------"@
-` I'm so surprised, I can't speak.@
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-
-`"Hm?@ What's wrong?@ Your face is red, Tohno-kun."@
-`"------"@
-` I forgot.\
-` Thinking only about myself, I forgot about Senpai.\
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-monocro #ffff00
-
-bg "image\event\cel_e04.jpg",%type_crossfade_fst
-
-
-` -----Last night.@
-br
-` The black figure who appeared before me as I killed.@
-` Pursuing the killer, caught by the killer and skewered from behind.@
-br
-` -----And then.@
-` The body, I was about, to rape.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-monocro off
-
-bg "image\bg\bg_03a.jpg",%type_crossfade_fst
-
-
-`"…… Senpai, um---"@
-` I don't know what to say.@
-` I should apologize for last night, but I still don't know myself whether that was a dream or not.@
-` But, more than anything---\
-
-
-ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
-
-`"Yes?@ What is it, Tohno-kun?"@
-`"No, you… you seem the same as ever, Senpai."@
-` ---More than anything, Senpai is the same as ever.@
-` So, either last night's events were just a dream, or the figure in black wasn't Ciel-senpai.@
-` The person who was skewered with an iron pipe last night would not be attending school today… and if Ciel-senpai was the figure from yesterday, she should not be smiling warmly at the killer.\
-
-ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
-
-`"Tohno-kun?@ Is something wrong?@ Your face keeps going red and blue.@ Are you not feeling well?@ An autumn cold, perhaps?"@
-`"No, it's not that, it's just---"@
-` …… The feel of last night's dream is still with me, and I can't look directly at Senpai.@
-` The gleam of naked skin, its soft texture.@
-` My fingers gripping her soft breasts with most of the red blood flowing over her like a tattoo.\
-
-`"-----Uh."@
-` …… This is bad.@ I remember too much, it's too real.@
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-
-`"Tohno-kun?@ You've really been strange for a while.@ Maybe you should get some medicine from the nurse's office before going to class?"@
-` Is she concerned?@ Senpai peers up at me.@
-
-cl a,%type_crossfade_fst
-
-`"Uh---wait, Senpai…"@
-` If she gets close, I'll remember last night's dream.@
-` …… With Ciel-senpai's face appearing before me, I can feel my face going completely red.\
-
-ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
-
-`"Ahh, you seem really ill."@
-` Dropping her shoulders in amazement, Senpai stretches out her hand.@
-
-cl a,%type_crossfade_fst
-
-` Senpai's hand touches my forehead.@
-` Her warmth and gentle touch is too much.\
-
-`"Wait, Senpai… it's nice, but, right now it's a bit---"@
-`"Hmm, it doesn't feel like you have a fever."@
-` Senpai ignores my words, pressing her hand against my forehead.@
-br
-` ----And.@
-br
-` As she takes my temperature, I catch sight of a bandage under the sleeve of Senpai's uniform.@
-`"----Eh?"@
-` …… The bandage goes a little way down from the base of her palm.@
-` There's no mistaking it.@
-` That is where she was skewered last night.\
-playstop
-
-wave se0
-
-
-` My body heat vanishes instantly.@
-` I feel as if reality is collapsing around me.@
-br
-`"…… Senpai.@ That bandage on your arm.@ What happened?"@
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-
-`"Ah, this?@ Well, it's embarrassing, but it was my own negligence.@ It healed already, but I felt like putting a bandage on.@ It's nothing major, so don't worry about it."@
-` Senpai speaks casually.@
-` …… Why?@
-` Because, I know it's a lie.\
-
-`"---No, it is something major.@ Since you were skewered by that iron pipe, I bet it still hurts."@
-
-ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
-
-`"------"@
-` Then, the smile vanishes from Senpai's face.@
-`"Ah---"@
-br
-` ----Thump.@
-br
-` The atmosphere in my dream returns.@
-` For an instant, the air around me freezes.\
-
-ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
-
-`"Tohno-kun, do you have a moment?"@
-` Saying so, Senpai takes my arm.@
-`"-------"@
-` …… I can't find words yet.@
-cl c,%type_lshutter_mid
-
-` Ciel-senpai says nothing, and she pulls me behind the school building.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-wave se2
-
-bg "image\bg\bg_05a.jpg",%type_rshutter_mid
-play "track01.ogg"
-
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-
-`"I guess I made you skip class."@
-` For some reason, Senpai sounds so normal.@
-
-cl a,%type_crossfade_fst
-
-`"……………"@
-` I can say nothing.@
-` I can only hang awkwardly on this ray of hope.\
-` That in a moment, Senpai will say, "What are you talking about?@ Last night, Tohno-kun?"@
-` That dream will be a dream after all, and Senpai will just be Senpai.\
-
-`"…… Senpai, I…"@
-`"Yes, I should show you this first."@
-` Interrupting me, Ciel-senpai rolls up the sleeves of both arms.@
-` …… Both arms weak, wrapped in bandages.\
-
-ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
-
-`"As you say, this happened last night."@
-`"------"@
-` I can't ask who did it.@
-` Because it is my doing.@
-` But, it's clear now.@
-` It's the truth; I am a killer who has killed many people already.\
-
-`"…… Crap.@ It's real… it really happened…"@
-`"------"@
-` Senpai says nothing else, but merely stares at me.@
-` At me.@
-` She knows Tohno Shiki is the killer, then why…\
-
-`"--------Why?"@
-` Why does she…
-`"Why have you said nothing until now, Senpai…!@ You knew I was the killer, right?@ So why didn't you---"@
-` I can't understand why she continued to be my ordinary school senpai.\
-
-`"I've killed people.@ I did that to you last night.@ How can you face me like that, Senpai…!"@
-
-ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
-
-`"It's not unusual.@ I'm your senpai, so why shouldn't I?@ Whatever you say, I haven't seen you out at night."@
-` Straightening, she speaks frankly.@
-`"----What?"@
-` …… She hasn't met me at night----but yesterday we were fighting to the death……?\
-
-`"---What are you talking about, Senpai!@ Twice now, you've interrupted me killing someone…!"@
-`"That's true, but I've never raised a sword against you."@
-`"Wha---that's nonsense, you've thrown loads of them at me!@ I saw it clearly.@ Or are you saying that figure wasn't you?@ Are you pretending not to know!?"\
-
-`"Well, I would like to feign ignorance if I could, but there's no reason to if you've seen that much."@
-` Senpai's attitude is completely unchanged.@
-` Senpai's words just seem not to the point… no, she is purposely doing so.@
-` ----If I calm down…
-` I'm not one to talk, but Senpai isn't exactly normal either.@
-` So is that why she is trying to evade my questions----?\
-
-`"Senpai, please answer me seriously.@ There's too much I don't understand, I'll go crazy.@ Ciel-senpai, why were you doing that?"@
-
-ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
-
-`"Oh… Tohno-kun, you look scary."@
-` …… I don't know how serious she is but Senpai pulls away from me.@
-` Somehow, she dodges the question completely.\
-
-`"…… Senpai, please answer me seriously.@
-` Last night and before that, what were you?@ That was something no ordinary human can do."@
-
-ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
-
-`"Ahh… what do you mean, 'that'?"@
-`"I mean…!@ That ridiculous movement, throwing all those swords…!@ I saw about twenty swords, where were you keeping them all!@ And, last night…"\
-
-`"Yes?@ What about last night?"@
-`"Last night, I… I stabbed you with an iron pipe.@ So how, how can you be walking around so calmly today?@ However you look at it, it's not normal.@ Senpai, are you really human…!?"@
-br
-` For a moment.@
-` Senpai glances down with a terribly sad expression.@
-`"…… I don't know.@ To be honest, I've no idea."@
-
-ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
-
-`"I only have the name Ciel, an exorcist specializing in vampires.@ I know that I'm not an ordinary human like you."\
-
-`"Eh… vampires, Senpai…?"@
-
-ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
-
-`"Don't worry.@ I'm not from around here, so I'm already ready for you to look at me that way."@
-` Looking away, she says something incomprehensible.@
-`"Hold on, Senpai, what do you mean by 'exorcist'!?"@
-
-ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
-
-`"An exorcist is an exorcist.@ A member of a holy order who has learned the rites for banishing demons.@ Don't you know, Tohno-kun?@ It's a common word, so I thought you'd know it."\
-
-ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
-
-`"Well, to be honest, I do more extermination than banishing, so I'm a bit different.@ Would it help if I said it's more like a sorceress?@ It's not exactly right… in fact, it's almost the opposite, but perhaps it'll be easier for you to understand?"\
-
-`"A sorceress?@ But that's---"@
-` I can hardly call it impossible.@
-` After all, I've seen her superhuman powers.@
-` …… But, I can't believe it.@
-` Or maybe I don't want to believe it.@
-` Since she was such a kind senpai, maybe I just want Ciel to stay as Senpai.\
-
-`"---That's a lie…"@
-` …… Without realizing it, those words escape my mouth.@
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-
-`"Yep, you're right, it's a lie.@ It's all nonsense, so please don't believe any of it."@
-br
-` …… She won't say anything.@
-` She's just going to let it disappear as a lie.@
-br
-`"---No.@ This isn't nonsense."@
-` …… I don't want to accept it, but I have to.\
-
-ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
-
-`"……………"@
-` …… Why is it?@
-` Senpai lowers her eyes sadly.@
-`"…… I don't know what's happening either.@
-` But, I have tried to kill people, and you always saved me.@ I don't understand anything, but I do know that."@
-
-ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
-
-`"Wasn't that just a dream?@ You're just an ordinary high school student.@ You have my word."@
-`"Just an ordinary…!@ Even if it is a dream, someone who enjoys murder every night is living with other normal people!@ Even I feel bad about being bad……!"\
-
-` ---Yes, feeling the urge to kill people.@
-br
-` Not merely in dreams, but I have such desires in reality too.@
-` And not strangers; Akiha, the person I know best----\
-
-`"…… A killer, huh.@ Yeah.@ Now that I state it, I understand.@ It's natural for you to come to me every night.@ You can't leave such a dangerous guy alone.@
-` So---so, you were going to kill me, Senpai……!?"@
-
-ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
-
-`"………………"@
-`"Why won't you answer?@ Say something, Senpai!"@
-`"Ah---"\
-
-cl a,%type_crossfade_fst
-
-` I grab Senpai's arm around the bandage, and drag her towards me.@
-` Senpai says nothing, looking down.\
-
-`"…… I don't understand.@ I don't understand anything, Senpai.@
-` I don't understand myself anymore.@ So, please, Senpai.@ If you know anything, please tell me…!"@
-`"…… Tohno-kun.@ Do you really believe you're the killer?"@
-`"I can't think of anything else.@
-` …… So, I just want to rest now.@ Since I don't know myself… I want to hear it clearly from you.@
-` And then---"@
-` Then, even if I have to die, I'll be ready for it.\
-
-`"…… Why…"@
-`"Senpai…?"@
-`"Why…… why can't you just laugh it off as always.@ If you did, maybe we could go on like this…"@
-
-ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
-
-`"But, it's too late for that now.@ The spell has already faded."@
-
-cl a,%type_crossfade_fst
-
-br
-` ---Saying so,
-` Senpai escapes my grasp and leaps away, far away.\
-
-ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
-
-`"Tohno-kun, I'll tell you what I know.@ What kind of person you are… exactly how many people you've killed."@
-`"Ah-----"@
-` For a moment, I feel dizzy.@
-` Even though I said I was ready, hearing the word 'killed' so clearly, my chest hurts.\
-
-`"…… Good.@ Tell me, Senpai."@
-`"No, not here.@ I'll be at the school tonight.@ After that, you decide, Tohno-kun."@
-
-cl a,%type_crossfade_fst
-
-br
-` …… So that means she's leaving the final decision to me.@
-` If I go to school tonight, that's the end.@
-` But if I don't, we can go back to the way we've always been; a final choice---\
-
-`"…………"@
-` I can't say I'll definitely be there, so I say nothing.@
-
-ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
-
-`"Well then, I'll be waiting at school tonight.@
-` But, promise me one thing.@ That you will keep this a secret from your younger sister."@
-`"Eh?@ From Akiha?"@
-` Of course, I wouldn't get Akiha involved in any of this, so there's no need to say that.@
-` There isn't, but…
-` Why is Senpai asking so seriously?@
-` As if saying Akiha was the enemy, not me.\
-
-`"…… Senpai, Akiha has nothing to do with this."@
-`"--Tohno-kun.@ Please be careful around her."@
-
-cl a,%type_lshutter_mid
-
-` Leaving a warning in a frightening voice, Senpai disappears.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-!w2000
-bg "image\bg\bg_06b.jpg",%type_rcartain_mid
-
-
-` ---The lesson finishes, and the students disperse.@
-` …… Even if I'm going to meet Ciel-senpai at school tonight, I should return to the mansion first.@
-` In the end, the conversation only told me the dreams were real.@
-` Nothing is resolved, and I still don't know whether I am the killer or not.@
-br
-` ------*sigh*@
-` After sighing heavily, I leave the classroom.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-!w1000
-bg "image\bg\bg_32b.jpg",%type_lcartain_fst
-
-
-` Hisui is at the mansion gate.@
-`"Huh?@ What are you doing out here, Hisui?"@
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"I am waiting to welcome you home, Shiki-sama."@
-`"Eh?@ Well, I'm glad, but, why?@ You said you wouldn't be able to meet me here anymore."@
-ld c,":a;image\tachi\his_t05.jpg",%type_crossfade_fst
-
-`"That was because you and Akiha-sama were together.@ …… Nee-san… she suggested we should refrain from send-offs and greetings when you were together."@
-`"-------"@
-` I see.@ Certainly, if I were with Akiha, it would be awkward to be met by Hisui.\
-
-`"Another of Kohaku-san's strange ideas.@
-` Well, I'm always glad to be met by you, Hisui.@
-
-ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
-
-` Anyways, I'm home.@ Thanks for coming out."@
-`"Yes.@ Welcome home, Shiki-sama."@
-` Hisui bows.@
-` …… Thinking about it calmly, a maid bowing in front of a mansion is a terribly anachronistic image.\
-
-`"Oh, by the way, is that Akiha doing any better?"@
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"Yes, it seems her condition improved by lunchtime.@ Perhaps you should stop by her room?"@
-`"Maybe, at least once---"@
+` Akiha walks to the sitting room.@
+` …… It's strange.@ Before, I would have been doubted more, but Akiha seems to trust me completely.\
+
+` …… Is it because of what happened in the garden last night?@
+` Being trusted by Akiha, feeling that she trusts me, makes me very happy.@
 br
 ` ---Please be careful around her.@
 br
-`"----No, I shouldn't.@ I… can't see her right now."@
-` …… It's not that I'm not thinking about her.@
-` But, because of what Ciel-senpai said, it's hard to see her right now.\
+`"-----Uh."@
+` Senpai's words return like a curse.@
+`"…… Anyway.@ I'll go to school, and come straight back." And I'll meet with Senpai.@
+` Alright.@ I grasp the door handle.\
 
-`"Shiki-sama.@ Are you not returning to your room?"@
-`"Ah, you're right.@ Well then, shall we go in?"@
-
-
-` Acting cheerful to hide my uneasiness, I pass through the mansion gates.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\ima_10.jpg",%type_tcartain_mid
 !w1000
 playstop
 
-bg "image\bg\bg_40c.jpg",%type_tcartain_mid
+bg "image\bg\bg_01c.jpg",%type_bcartain_fst
 
 
-` …… It's night.@
-` I talked only a little to Akiha at supper, then came straight back to my room.@
-` She seemed no different than usual, so I'm sure Senpai's warning was wrong.\
-
-`"…… If I'm going to go, I should leave pretty soon."@
-` Senpai said we'll talk at the school tonight.@
-` If I go, she won't be my Senpai any longer.@
-` But if I don't go, everything will go back the way it was.@
+` ----The school is wrapped in silence.\
 br
-` Senpai left me with that choice.@
-` I'll---
+` Our school closes at half past six, and no teachers or janitors patrol at night.@
+` At this time, the buildings are completely empty.\
+
+bg "image\bg\bg_03c.jpg",%type_lshutter_mid
+
+
+` …… All around, it's quiet.@
+` The only sound is the beating of my own heart.@
+br
+`"…… Is Senpai inside, I wonder…?"@
+` Although she said she would wait at school, she never said where.@
+` …… No, Senpai probably deliberately didn't tell me.\
+
+`"…… Well, can't be helped.@ I'll cut the lock of a window and go in."@
+` I remove my glasses.@
+
+monocro #0000ff
+bg "image\bg\bg_03c.jpg",%type_crossfade_fst
+
+`"…… Kuh."@
+` Along with a light headache, the "lines" appear before me.@
+` The "lines" along which things easily break.@
+` Things which can be cut just by passing through them.\
+
+`"…… With Yumizuka, it was just desperation…"@
+` Removing my glasses calmly like this, I really feel how strange my eyes are.@
+`"…… Now, where's a window with a line in the lock…"@
+` Although anything can be cut, they can only be cut where the "lines" appear.@
+` If I cut the wall or the window itself, it'll draw attention tomorrow.@ The cut has to be as small as possible.\
+
+`"Ah, perfect.@ Here goes…"@
+` With a click, I cut the lock smoothly, and open the corridor window.\
+
+monocro off
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_10f.jpg",%type_lshutter_fst
+play "track06.ogg"
+
+wave se0
+
+
+` -----Thump.@
+br
+` My chest aches as soon as I climb in the window.@
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_10f.jpg",%type_crossfade_fst
+
+
+`"Uh…"@
+` What is it?@
+` It's horribly…
 br
 
+wave se0
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_10f.jpg",%type_crossfade_fst
+
+
+` ----Thump.@
+br
+` There's a horribly sinister atmosphere.\
+
+wave se0
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_10f.jpg",%type_crossfade_fst
+
+`"…… Senpai… where are… you?"@
+` It's hard even to murmur.@
+` My heart beats.@
+` A resounding pumping, like a drum driving my blood backwards.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_10f.jpg",%type_crossfade_fst
+
+`"…… Huh…?"@
+` It looks like my fingertips are trembling.@
+` I feel sick.@
+` Without my glasses, my headache is getting worse by the second.\
+
+wave se0
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_10f.jpg",%type_crossfade_fst
+
+
+`"What is this… it's… strange…"@
+` I don't understand.@
+` The atmosphere inside the building is so different from outside.@
+` If I have to put it into words, it's without life.@
+` Compared to the fresh air outside, the air in the corridor is so weak that it feels sad.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_10f.jpg",%type_crossfade_fst
+
+
+`"…… But, I know…"@
+` Though I'm breathing this air for the first time, I know it.@
+br
+` Because I've always watched it.@
+` Every night, in my dream.@
+` When I kill people and drink their blood, the atmosphere is always… full of this smell of decay.\
+
+!w3000
+
+wave se4
+
+
+`"Eh----?"@
+` A sound.@ From behind me, the sound of something falling.@
+`"Senpai…?"@
+` I turn.@
+` There,	           there is…
+
+ld c,":a;image\tachi\man_t03.jpg",%type_tshutter_fst
+
+
+br
+` A strange man.\
+
+cl c,%type_crossfade_fst
+
+`"Uh…!"@
+` I clasp my hand over my mouth, about to vomit.@
+` The man… the "lines" run within his body.@
+` They run through his whole body like blood vessels.@
+`"-----Gih."@
+` The man walks toward me, as if in slow motion.\
+
+`"Uh----hello…?"@
+` I make up my mind and talk to him.@
+` …… It's strange, but my eyes are stranger.@
+` It's the first time I've seen "lines" all over a person's body like this, but take them away and you'll have a normal human.@
+`"---Gih---gigih…"@
+` The man is saying something.@
+` But his voice is not even a noise, I can't hear.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_10f.jpg",%type_crossfade_fst
+
+` The man approaches.@
+` Why is it?@ Whenever the man steps closer, a shudder runs through me.@
+` It's---
+br
+`"Gih----"@
+` The man is right in front of me.@
+`"W… wait, who…"@
+
+` …… are you?@ I don't even have time to finish.\
+
+wave se9
+quakex 3,50
+bg "image\bg\ima_10.jpg",%type_tshutter_fst
+
+
+`"Ah----!"@
+` There is a crash.@
+` As he approaches, the man throws me aside with a single hand.@
+`"Ugh---"@
+` My back.@ Thrown aside, my back smashes against the wall.@
+` It's so sudden, the pain makes my eyes dizzy.\
+
+bg "image\bg\bg_10c.jpg",%type_lshutter_fst
+
+
+`"Ow… what are you doing, all of a sudden…!"@
+` I stand and glare at the man.@
+
+ld c,":a;image\tachi\man_t01.jpg",%type_crossfade_fst
+
+wave se0
+
+
+`"------"@
+` My voice dies.@
+` He's… what is he?@
+` What is this thing before me?@
+` Was this a man?@ Is this a living human being?@
+br
+` No, that's not important right now.\
+bg "image\bg\bg_10f.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\man_t03.jpg",%type_crossfade_fst
+
+
+
+` I recover my sight, and look again at the man.@
+` …… Yes, it's back.@
+` Sensei said that my eyes see the "death" within things.@
+` That's exactly right.@
+` Because---\
+
+`"You're---"@
+br
+`"Gi---gigi, gigigih."@
+br
+` The man is saying something.@
+` Of course it doesn't speak words.@ Because half of his throat is missing.@ It was bitten away by something.@ So there's no way for him to speak.\
+
+`"Why---you were killed, yesterday…"@
+`"Gi---gigigigigih…"@
+` His shoulders are shaking; he seems to be laughing.@
+` But there's no mistake.@
+` The corpse before me is definitely the man I killed in the dream yesterday.\
+
+`"Ah---"@
+` The man approaches slowly.@
+`"Ah----"@
+` There's no thought.@ The lump of death approaches.@
+`"Ah----ah."@
+` A shudder of pain.@
+` Then, I notice.@ When the man threw me before, the side of my chest was injured.\
+
+` My body hurts.@ Not just on the level of muscles; my bones themselves are creaking.@
+` Something definitely happened to my ribs.@
+`"Gih----gigigigigigih…!"@
+` The man flings up an arm.@
+` At last, my numb head understands.\
+
+br
+br
+br
+br
+br
+br
+` ---Without a doubt,
+` he intends to kill me.\
+
+cl c,%type_lshutter_fst
+
+`"Hii----!"@
+` I dodge the sweep of the man's arm.@
+` There is an unpleasant crunching sound.@
+` The man's arm is embedded in the wall… it's buried right into the concrete wall.@
+` He did not hold back an inch.@
+` Breaking a concrete wall, and in return, he's breaking his own bones.@
+`"Ah---ahah…"@
+` It's a funny, hard to believe world.@
+` If it's a dream… if it's a dream, I want it to end now.\
+
+`"Gih---"@
+` The man turns towards me.@
+`"Aaa, ah---"@
+` Another crunch.@
+` The man comes toward me, his arm still in the concrete wall.@
+` The arm.@ Stuck in the wall, the arm tears away from his body.@
+`"Gih, gigih, gih."@
+` It's still laughing.@
+`"Ah---aaaahhhh!"@
+` My legs move.@
+` I can't bear to be here any longer.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_07b.jpg",%type_lshutter_fst
+
+
+`"Ahh, ghah, ghah…!"@
+` I collapse to my knees with a thump.@
+` The man… that corpse is not following.@ At that speed, it can't, catch me.\
+
+`"Hagh, ghahh…!"@
+` My chest hurts.@
+` Whenever I breathe, my ribs feel like they're about to break.\
+
+`"Gah… hah… ha… h."@
+` Somehow I catch my breath.@
+` Somehow.@
+` I have to somehow get back to normal.@ I MUST calm down.@
+br
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_07b.jpg",%type_crossfade_fst
+
+` Think.@ Look, and then think.@ I learned that from Sensei.@
+` So I have to think hard.@
+` Even if that's a dead body.@
+` Even if it's someone I killed.\
+
+`"Ha---I can't think about it, that's just…!"@
+br
+` Ignoring the pain in my ribs, I cry out.@
+` I don't understand.@
+` I can't understand.@
+` The one I killed is about to kill me.@
+` The one I have killed has returned to take his revenge.\
+
+` ---That's just a nightmare.@
+` It can't be real, just an insane nightmare.@
+br
+` But what am I saying now?@
+` I've been in a nightmare for a long time already----\
+
+`"Damn it!"@
+` I have to recover my breath and run away.@
+` I have to leave this school, go back to the mansion, tell Akiha I'm home…@
+
+wave se8
+
+`"Eh-----?"@
+` A sound from behind me.@
+`"---It can't be."@
+` It caught up?@ No, that's impossible.@ It moved so slowly it couldn't just catch up like that.\
+
+
+` I look down the stairs.@
+` …… There is no one coming up.@
+` The noise was just my----
+
+ld c,":a;image\tachi\man_t01.jpg",%type_nowaitdisp
+wave se9
+
+quakey 2,100
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+!w1000
+bg "image\bg\bg_10f.jpg",%type_lshutter_fst
+
+
+`"Ahh-----!"@
+` Again, I'm beaten.@
+` When I turned around on the stairs, it seems it was already there.\
+
+`"Have to---get away…"@
+` I drag my aching body up.@
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_10f.jpg",%type_nowaitdisp
+
+
+`"Uhh---!?"@
+` I fall again with a thump.@
+` It seems that when he threw me this time, my leg was damaged.@
+` There's no strength in my right leg at all.@
+` I can't stand, and I can't escape.\
+
+wave se7
+
+playstop
+
+`"Ah----"@
+` Approaching footsteps.@
+br
+wave se0
+
+` ---Thump.@
+br
+` Clank, clank; a dry, emotionless sound.@
+wave se0
+
+br
+` ---Thump.@
+br
+` The putrid smell of a corpse hangs in the air.\
+wave se0
+
+` ---Thump.@
+br
+` My heart beats loudly.@ All rational thought has long departed.@
+br
+wave se0
+
+` ---Thump.@
+br
+` It approaches.\
+` That corpse is coming to kill me.\
+
+ld c,":a;image\tachi\man_t03.jpg",%type_crossfade_mid
+
+
+`"Ah----ah."@
+` I'm just afraid.@
+`"Gih…"@
+` It's coming.@
+` With a body full of holes, it comes to kill me.@
+` One more step.@
+` Then it'll pierce my chest the way it did the wall, and that'll be the end.@
+`"Ah----hah…"@
+` At that moment, I wonder.@
+` What is it that I fear?\
+
+` Am I afraid because the one I killed has returned?@
+` No, that's not it.@
+` Am I afraid because I'm about to be killed?@
+` No, not that either.@
+
+wave se0
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+monocro #ff0000
+bg "image\bg\bg_10f.jpg",%type_crossfade_fst
+
+br
+` I remember only one thing.@
+` In my dreams, how hot it is when I kill people.@
+` …… I'm afraid of my own crime.@
+` I'm afraid of my own crime trying to kill people.\
+
+`"Kuh-----hah, haha…"@
+` Well, if that's so, then there's no problem.@
+` This one's already dead, so there's nothing to fear.@
+` There's nothing wrong with putting the dead to rest.@
+br
+` So.@
+` There's no need to hesitate about killing again, is there…?\
+
+`"Gih…!"@
+` The body flings up an arm.@
+` I take the knife from my pocket.@
+
+monocro off
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+
+br
+` ---What followed was, really, quick.@
+br
+` Was it because I watched all those crimes in my dreams?@ Or maybe because those crimes were committed by my own hands like I suspected.@
+` My arm moved impossibly fast, and struck down the corpse like a true killer.\
+
+bg "image\bg\bg_10f.jpg",%type_lshutter_mid
+
+play "track09.ogg"
+
+` The meat, divided into eight pieces, now just rolls around the corridor.@
+br
+`"Ah---hah."@
+` A shudder.@
+` The feeling of slicing meat.@ The acceptance of taking a life.@
+` There is no flowing blood.@
+` Only my knife drips with blood; I remain spotless.\
+
+`"-----"@
+` Shuddering.@
+` A feeling of pain and coldness crawls on my back.@
+` There is nothing to earn.@
+` Only my knife drips with blood, I haven't gained anything----\
+
+`"----Hah."@
+` I just feel ill.@
+` Maybe I'm going crazy.@
+` Looking at the remains before me, my chest hurts like it was torn open.\
+
+` The school at night.@
+` In the moonlight, it's amusing.\
+
+br
+`"…… Hah,"@
+br
+!w750
+
+`"…… Hahaha…"@
+br
+!w500
+`"…… Ahahahahahahaha!"\
+
+` I laugh without stopping.@
+` It's not funny.@
+` Only regret is felt.@
+` I killed.@ Whatever the reason, I killed someone again.@
+br
+` ----Even though he was blameless.@
+` This person also had a life to protect.\
+
+`"Haha, hahaha, hahahahahahaha…!"@
+` A jarring, laughing voice.@
+` I want to kill my ears for listening, and my throat for laughing.@
+` But I can only laugh.@
+` At least, I have to laugh.@
+` Unless I do a single act resembling human actions, I will break.\
+
+`"Haha, ha, haha, ha-----"@
+` I'm not laughing because something is funny.@
+` I laugh to keep my sanity.@
+` If I can't even ridicule myself, I can't keep my sanity.@
+br
+`"Hah----hahaha, ha… hah."@
+br
+` …… Perhaps I should have cried.@
+` But I won't allow myself such hypocrisy.@
+` What do I mean by… killing the dead… isn't a crime.\
+
+`"Hah---hah-----ahh."@
+` …… it doesn't change.@
+` Whether he was living or dead, it doesn't change the fact that I made the decision to kill him.@
+` Even if he was already a corpse, the feeling of stopping his activity does not dull.@
+`"----Hah."@
+` I can't get mad at myself for my stupidity.@
+` Even if they're dead, killing someone is still a sin.@
+` As long as I, Tohno Shiki, remain a proper human, the burden of this sin will never leave me.\
+
+` …… I remember Yumizuka.@
+` Even if it was the right thing to do, in the end, I know she wanted to live.@
+` Saying death is salvation is only the selfish wish of those still living.@
+` Death…
+` Is just that, and is so painful.\
+
+wave se8
+
+
+` ----Someone is coming.@
+br
+` This time, it has to be Senpai.@
+`"-----Kuh."@
+` Somehow, I stand, holding onto the wall.\
+
+` Thump, Thump.@
+` My heart still beats violently.\
+` Even if my heart is halfway dead, my body tries to live until the very end.@
+br
+` …… Such a worthless life.@
+` Dying like this is painful… I realized that already eight years ago, during my time with Yumizuka, and even this very moment.@
+` Yet, Tohno Shiki's body is still making a great effort to survive.\
+
+`"…… How… ugly---"@
+` But, which is ugly?@
+` The heart that thinks I should die, because I'm a killer?@
+` Or the body, trying to live by killing others?@
+` …… I think it's the heart.@
+` Good or evil, my heart is really fragile after all.\
+
+`"----You're here."@
+` Breathing heavily, I grasp the knife.@
+` My injured right leg hurts faintly.@
+` If I can feel pain, I can still move.@
+` Meaning I can still fight.@
+br
+` And Ciel-senpai appears in the moonlight.\
+playstop
+
+ld c,":a;image\tachi\cel_t15.jpg",%type_crossfade_mid
+
+`"…… I'm surprised.@ In all the dreams you never were dressed like that."@
+`"Yes.@ Because these are the armaments to kill a vampire."@
+br
+` ----A jolt.@
+` I understand the instant I see her eyes and hear her voice.@
+` This person plans to kill me without the slightest hesitation.\
+
+`"…… I see.@ You called me here to kill me, Senpai."@
+`"---------"@
+` Senpai doesn't answer.@
+` …… Clearly, because there's nothing to say.@
+`"That's mean.@ You said I'm not the killer, but you knew in your heart that I was."@
+`"---Yes.@ I knew from the beginning that the vampire haunting this town was Tohno Shiki."\
+
+`"You knew… from the beginning…?"@
+`"Yes.@ So, I came to this school.@ In order to watch you."@
+ld c,":a;image\tachi\cel_t16.jpg",%type_crossfade_mid
+
+` So saying, she draws a dagger.@
+` Twice the length and width of my knife, it is a weapon intended to kill.\
+
+`"---Senpai, I don't know what you are at all.@ Even if I knew, I don't think it would concern me."@
+`"Yes; this is a situation of no concern to you."@
+`"…… Yeah.@ But, I'm afraid I won't be killed.@ Thinking about it, I killed Yumizuka because I didn't want to die.@
+` So---I can't just die here.@ If you say you're going to kill me, I'll…"\
+
+`"That's fine.@ If we agree to kill each other, then there is crime, but no punishment.@ It would be more helpful if you think of it this way."@
+` A noise of movement.@
+` Before I realize it, Senpai's body is right in front of me.@
+br
+`"Well then, Tohno-kun.@ Let us continue last night's fight."\
+play "track04.ogg"
+
+cl a,%type_nowaitdisp
+
+` A moment.@
+` Ciel-senpai moves fast enough to fling up sparks.\
+
+bg "image\bg\ima_14.jpg",%type_lshutter_fst
+wave se11
+
+
+` Her attack is very simple.@
+` Leaping from right in front of me, she slashes a horizontal line with her dagger.@
+`"……!"@
+` I block with my own knife, and am pushed back.@
+`"----!"@
+` My body staggers.@
+` I desperately stop myself from collapsing backwards, and look for…\
+
+bg "image\bg\bg_10f.jpg",%type_rshutter_fst
+
+
+`"Wha-----"@
+` For a moment, my mind freezes.@
+` There's no sign of her in the corridor.@
+` In an instant,
+` as our weapons clashed, Senpai suddenly disappeared----
+br
+`"Eh-----?"@
+br
+` ---I think it was just by chance.@
+` Without reason, just the feel of a breeze beside me, I shift my gaze.\
+
+` In the blue moonlight shining in through the window,
+` I see Senpai's silhouette running up the wall like she was going up a flight of stairs.@
+br
+`"-----Above!?"@
+` Even as I notice, I lower my body.\
+bg "image\bg\ima_14.jpg",%type_tshutter_fst
+
+
+
+`"------!"@
+` Scrambling on all fours like a dog, I escape forward.@
+` Glancing back, I see Senpai fall from the ceiling precisely where I was.@
+` …… After swinging at me, she ran up the wall to try to strike my head from the ceiling?@ Such an absurd, rollercoaster-like movement was charmingly beautiful.@
+` Even though it could have skewered the back of my head.\
+
+bg "image\bg\bg_10f.jpg",%type_lshutter_fst
+
+
+ld c,":a;image\tachi\cel_t16.jpg",%type_crossfade_fst
 
 
 
 
+`"------"@
+` As if her previous flash of movement never happened, Senpai stops moving.@
+` Is she surprised I avoided that blow?@
+` Her blue eyes confirm that Tohno Shiki is still alive.@
+` Her eyes devoid of feeling, like a machine.@
+` There is a tension, as I wait for her to spring into her next action.\
+
+wave se0
+
+`"-------"@
+` I forget even to breathe.@
+` With those eyes upon me, I can't move.@
+` In just a moment more, that dagger will be driven into my chest----\
+
+`"-------Ssst."@
+` The only sound is my heart pounding.@
+` I stand unable to move, and Senpai only stares at me.@
+` …… This is bad.@
+` At this rate, I'll break under this tension, and make a movement.@
+` When that happens, Senpai will certainly strike me down.@
+`"--------"@
+` All I can do is grasp my knife tightly.@
+` At that moment,
+` Senpai suddenly speaks.\
+
+`"----I'm surprised.@
+` You're certainly an excellent killer.@ You are not good at feeling the other's presence, but you are good at feeling your own death.@
+` Even if you don't remember it, perhaps you have been trained for such things."@
+` Senpai speaks without even moving her eyebrows.@
+
+`"Against someone that has a superior self-defense mechanism close to seeing the future, assassination is useless.@
+` Trying to attack you from a blind spot was pointless, Tohno-kun."@
+` Seeming terribly sad, Senpai lets out a sigh.@
+`"------?"\
+
+`"It's a pity.@ If I can't kill your consciousness before you feel pain, all I can do is attack with my full strength.@
+` Even if you can see death coming, your reflexes also make it an almost moot point."@
+br
+wave se0
+
+` Creak.@
+br
+`"----You don't look well, Tohno-kun."@
+br
+` Thump.\
+
+`"You've been feeling that way for a while, haven't you?@ Nausea that feels like your heart is being grabbed."@
+br
+wave se0
+
+` Shudder.@
+br
+`"You're so sensitive.@ That's…"@
+br
+wave se0
+
+` Shudder.@
+br
+`"…… Because of the impulse all living things have that says 'I'm about to be killed'."@
+playstop
 
 
+cl a,%type_nowaitdisp
+wave se0
+
+br
+` Saying that,
+` she strikes from right in front of me.\
+
+bg "image\bg\ima_14.jpg",%type_lshutter_fst
+
+
+`"Kuh…!!"@
+` I block her dagger with mine.@
+` A shock.@
+` Senpai's simple attack feels like she used a giant hammer.@
+` My knife screeches.@
+`"Tttch…!"@
+` My fingertips go numb.@
+` But I don't have time to think about that.@
+` Her foot audibly strikes the ground.\
+quakey 1,50
+wave se9
+
+
+`"Ha, guh………!?"@
+` The air is knocked out of me.@
+` Senpai has stepped into the gap between my legs.@
+` So close that our bodies collide, and with that momentum, Senpai slams her shoulder into my chest.@
+br
+` I stagger.@
+` The strength in my knife weakens.@
+` Without a single pause, her second attack begins.\
+
+wave se11
+quakey 1,100
+
+
+` Her dagger swings upwards from below.@
+` Somehow, I block it with my knife, but I can't kill its momentum.@
+br
+` Slash.@
+` There's a horrible sound.\
+
+bg "image\bg\ima_13b.jpg",%type_tshutter_fst
+
+`"Ah------"@
+` It's hot.@ Somewhere, I'm cut.@ Falling meat, the heat of blood.@
+` There's no time to feel any of that.@
+br
+wave se11
+monocro #ff0000
+bg "image\bg\ima_14.jpg",%type_lshutter_fst
+
+` The third blow comes.\
+
+bg "image\bg\ima_12b.jpg",%type_lshutter_fst
+
+` It was probably aimed at my heart.@
+` Since I immediately twisted my body to avoid it, the knife rips out my rib along with the flesh around it.@
+br
+monocro off
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+
+`"Gah, aaahhhh…!!!!"@
+` I scream.@
+` The coldness of death does not cause me to shudder.@
+` But fear from the pain races through me.@
+br
+` There.@
+` Follows the fourth unforgiving blow.\
+
+bg "image\bg\ima_14.jpg",%type_lshutter_fst
+
+` ----My ribs are damaged.@
+br
+` I can only use the power of my arm to wield my knife.@
+` But with that, it's impossible to block Senpai's dagger.@
+`"Kuh-----!"@
+` Somehow, I jump back on my staggering leg.@
+` I get enough distance.@
+` Senpai turns, showing me her back----
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+br
+` Crash.@
+` She drives a roundhouse kick like a spear into my belly.\
+
+bg "image\bg\bg_10f.jpg",%type_tshutter_fst
+quakey 4,50
+
+
+`"Ha----ahh…!!!!!"@
+` I collapse backwards onto the hallway floor.@
+` I don't have time to feel pain.@
+` If I don't stand up immediately, I'll be killed.@
+` But it's too late.@
+` The moment I get up, Senpai is right in front of me.\
+
+bg "image\bg\ima_14.jpg",%type_lshutter_fst
+
+` The dagger strikes down at my heart.@
+`"------!"@
+` I was just, desperate.@
+` In desperation, I try to match her blow by placing my knife next to Senpai's neck.@
+
+br
+` ---Then.@
+` Senpai's dagger stops short.\
+
+bg "image\event\aki_e05a.jpg",%type_lshutter_mid
+
+waveloop se1
+
+`"Haghh---"@
+` Breathing.@ My breathing is, hard.@
+` *pant*, *pant*, *pant*, *pant*…
+` Her dagger is aimed at my throat.@
+` If Senpai moves her hand even slightly, I'll die instantly.@
+`"Ha… ah…"@
+` That fact.@
+` Just that causes me to go insane.\
+
+`"---It's over.@ Even if you stab that knife through my neck, I won't die."@
+`"Wha---what are…"@
+`"You said before that you saw it.@ Even though my body was pierced by an iron pipe, my body heals the wound instantly.@ …… Certainly if you stab me through the neck I'll be dead for a while, but I'll kill you before that."@
+`"-----Wha."@
+` What she says is true.@
+` …… There's no sense in lying in a situation like this.@
+br
+` In other words.@
+` This situation where both of us hold each other's life in each other's hands is meaningless.\
+
+`"Won't---die…?"@
+` …… Ah, but it could be true.@
+` Even injured like that, Senpai came to school like normal.@
+br
+`"---Kuh."@
+` But, screw all that.@
+` I can see "death" on her body.@
+` Although it's very different from other people's, I can still see her death.@
+` So, killing her is easy.@
+` The "lines" have no exceptions.\
+
+`"If you don't believe me, please, use your knife… In any case, you can't save yourself unless you kill me.@ Shall we test it out?"@
+`"------"@
+` ……She's provoking me.@
+` If I can be killed, kill me, she's saying.@
+` But Senpai, provocation like that is fatal.@
+` I'm not like the others----I can really kill you.\
+
+` ----My heart beats.@
+br
+` If I look down, her dagger is at my chest.@
+` …… I have to kill.@
+` Because I don't want to die.@
+` I found out I shouldn't die that easily, so I can't let myself be killed.@
+br
+` No, it's simpler than that.@
+` I just, don't want to die.\
+
+
+` ----My heart beats.@
+br
+` So there's only one answer.@
+` Kill.@
+` Drive this knife into the "line" I see in Ciel's neck, and kill her.@
+` Kill if you want to live.@
+` Kill.@ Kill.@ Kill.@ Kill.@ Kill.@ Kill---
+
+br
 
 return

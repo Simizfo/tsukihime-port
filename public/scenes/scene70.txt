@@ -1,212 +1,38 @@
 
-mov $phasebg,"image\bg\bg_20a.jpg"
-mov $phasetitle_a,":a;image\word\PARK_03A.PNG"
-mov $phasetitle_b,":a;image\word\day_03.png"
-gosub *right_phase
+bg "image\bg\bg_34a.jpg",%type_nowaitdisp
 
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-!w1000
 
-bg "image\bg\bg_40a.jpg",%type_crossfade_mid
-
-play "track02.ogg"
-
-` ---When I come to, it's morning.@
-` Maybe the rain stopped; I can't hear it anymore.@
-` It seems clouded outside, and the sunlight through the window is dim.@
-br
-`"Ha----ah."@
-br
-` Taking a deep breath, I get out of bed.@
-` …… I didn't sleep well last night.@
-` Over and over, as I was about to fall asleep, that scene would replay in my mind and keep me awake.\
-`"…… A crimson floor and limbs everywhere…"@
-` Reason and memory are liabilities at times like these.@
-` They force me to remember things I only want to forget.\
-
-`"It's just a dream---why am I so bothered by it?"@
-` …… Yes.@ Just a dream.@
-` I should forget it quickly, without a moment's delay.@
-br
-` Knock, knock.@
-br
-` Someone knocks on the door.@
-` It's past six o'clock in the morning.@
-` …… Who could it be this early?\
-
-ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
-`"---Excuse me."@
-ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
-
-`"Shiki---sama, are you awake?"@
-`"Yeah, I've been sleeping since yesterday afternoon, so I'm awake early.@ So, what about you, Hisui?@ What's happening at this time in the morning?"\
-
-ld c,":a;image\tachi\his_t05.jpg",%type_crossfade_fst
-`"…………"@
-` Hisui falls silent.@
-` Actually, now that I look carefully, I notice she has my school uniform in her hands.@
-`"I see.@ You brought me a change of clothes."@
-`"…… Yes.@ I am sorry.@ I have shown you something you do not wish to see."@
-`"?"@
-` Hisui keeps silent.@
-` …… What is it I didn't want to see?@ I don't get it at all.\
-`"…… I don't understand, but thanks anyway.@ Just leave the clothes there.@ I'll get changed soon and go to the sitting room."@
-` Hisui nods in assent.@
-`"Very well, then.@ Please excuse me."@
-cl c,%type_lshutter_mid
-
+`"Ah, Akiha.@ If I remember correctly, you go to Asagami Ladies' Academy, right?"@
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+`"---That's right.@ Asagami Ladies' Academy goes all the way from middle school to university."@
+` Akiha's gaze seems to ask, "What about it?"@
+`"Well, that's a boarding school for ladies, isn't it?@ I'm wondering why you're commuting there from home."@
+`"Dear Mr. Asagami and Father were friends, so he indulges my requests.@ There is a provision to attend school from one's home under certain circumstances."@
+` Akiha gives a concise response.\
+`"No, that's not what I'm asking about.@ You were living in the dormitory up until the old man died, right?@ Why are you only starting to commute there now?"@
+`"Eh----"@
+ld c,":a;image\tachi\aki_t16a.jpg",%type_crossfade_fst
+` She holds back her words and looks away.@
+cl c,%type_crossfade_fst
 \
 
-` Hisui begins walking silently, only to suddenly turn around.@
 ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"Shiki-sama.@ …… Um… if you have the time, I will also prepare a bath for you."@
-`"…… A bath?@ In the morning?"@
-`"Yes.@ You are terribly dirty, Shiki-sama.@ Would it not be best for you to wash before you go to school?"@
-` Hisui asks me with her usual lack of expression in a disinterested voice.\
-` …… Now that she mentions it, I am dirty.@
-` I did collapse from anemia in the park yesterday, after all.@ So, it's not unnatural.@
-br
-`"---Yeah, would you mind doing that for me?@ I'll have time for that before I go to school if it's this early."@
-`"I understand.@ Please come to the bathroom in about twenty minutes."\
-cl c,%type_crossfade_mid
-
-` Hisui sets my uniform down and leaves the room.@
-br
-` It's still six o'clock in the morning.@
-` With nothing to do, I spend the twenty minutes in my room staring at the ceiling.\
-
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-
-
-
-` I enter the bath and pour water over my head, which makes me feel a little refreshed.@ I take a deep breath as the cold water soaks my hair.@
-br
-` …… What a terrible dream.@
-` There's got to be something wrong with me, having a dream where I kill a beautiful woman like that.@
-` If just one day of living in an unfamiliar mansion is enough to give me dreams like that, I hate to think what the days ahead are going to be like.\
-` *sigh*@
-`"I've really got to get it together."@
-` I clear my head with another splash of cold water and wash myself.@
-`"Ow……"@
-` I feel a sting as the towel touches my throat.@
-`"…… What's this?"@
-` I look at my neck in the mirror.@
-` …… How did this happen?@
-` My throat is red and swollen.@
-` It's almost as if I injured it by repeatedly throwing up.\
-
-bg "image\bg\bg_40a.jpg",%type_lcartain_slw
-
-` I return to my room and change into my uniform.@
-` It's barely seven o'clock.@
-` Astounded at how much clearer my head feels after the bath, I pick up my bag and leave the room.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_33a.jpg",%type_lcartain_mid
-
-` Kohaku-san has just come out of the sitting room when I go down the stairs.@
-ld c,":a;image\tachi\koha_t02.jpg",%type_lshutter_fst
-`"Good morning, Shiki-san.@ You sure are early today."@
-` Kohaku-san makes a bow while smiling.@
-`"And you look refreshed, too.@ Have you just had a bath?"@
-`"Yeah, I just took one.@ That's amazing, Kohaku-san.@ Can you tell?"\
-ld c,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
-`"Aha, I can tell just by looking at you because your hair isn't dry, Shiki-san.@ You certainly look cuter after you've had a bath."@
-` I avert my gaze just a little as I am faced with that warm, carefree smile.@
-` It's kind of embarrassing.\
-ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
-`"Please hold on for just a minute.@ I'm going to prepare some breakfast now."@
+`"Shiki-sama, Akiha-sama has traditionally spent half of every week here.@ It is nothing extraordinary for her to commute to the Academy from the mansion."@
+`"Ah, really?@ That sounds tough.@ Asagami Ladies' Academy is in the next prefecture, right?@ Isn't it easier for you to enjoy the dormitory life rather than having to come back to the mansion all the time?"\
 cl c,%type_crossfade_fst
-
-`"Eh---?"@
-` …… Break, fast.@
-` Uh… I guess she means something to eat.@
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-bg "image\bg\bg_33a.jpg",%type_crossfade_fst
-br
-` Such a trivial thing causes me to remember the color of blood.@
-` I don't have much of an appetite at the moment.\
-
-ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
-
-`"Is a western-style breakfast like yesterday fine with you, Shiki-san?"@
-`"---Ah… yeah.@ I really don't mind… So, breakfast, huh?@ That bath felt so good that I almost forgot about it."@
-`"Really?@ You didn't eat last night either, so I was talking to Hisui-chan about how maybe the sound of your stomach might have woken you up."@
-`"Ahaha, no.@ Sadly, that's not the case.@ I've been a light eater since I was little, so I often skip one or two meals at a time."\
-`"I see.@ Now that you mention it, you've got a nice body without any excess meat on you.@ Could it be that you're a vegetarian?"@
-`"Hmm, perhaps.@ Come to think of it, I get the feeling that all I ate at the Arima house were vegetables."@
-` Kohaku-san busily heads back to the sitting room.@
-` ---But I don't feel like eating right now.\
-`"Ah, it's alright, Kohaku-san.@ I'll go to school without eating today.@ Tell Akiha for me."@
-br
-`"Bye." I head towards the doorway.@
-` Suddenly, my arm is tightly grabbed.@
-ld c,":a;image\tachi\koha_t04.jpg",%type_crossfade_fst
-
-`"Shiki-san!"@
-`"---Eh?"@
-` …… I can't believe it.@
-` Kohaku-san is angry.\
-`"What are you saying, Shiki-san!?@ Haven't you looked in the mirror this morning!?"@
-`"…… Ah, well, I took a look in the bathroom mirror…"@
-`"You're lying!@ You wouldn't say something like that if you looked even once!"@
-` Kohaku-san is seriously angry.@
-` …… Come to think of it, when I saw my face in the mirror, I think I saw death warmed over.\
-`"I'll be fine.@ It's just that I don't have a lot of blood in me, so I look worse than normal people."@
-`"This won't do!@ You won't grow without eating breakfast!@ If you don't have an appetite, I'll prepare you something easy to eat.@ So please, go to the dining room."@
-` Holding on to my arm, she drags me towards the sitting room.@
-cl c,%type_rshutter_fst
-br
-` …… I've got no choice.@
-` I really don't feel like going along with this, but I'll have to accept Kohaku-san's good intentions.@
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_34a.jpg",%type_lcartain_mid
-
-ld c,":a;image\tachi\aki_t12a.jpg",%type_lshutter_fst
-
-`"Good morning, Nii-san.@ How do you feel?"@
-` Akiha greets me reservedly.@
-` That firmness about her yesterday is gone.@ I guess it's because she's worried about me.@
-`"Ah, good morning.@ I'm feeling… well… good, in a certain way."@
-cl c,%type_crossfade_fst
-` Returning her greeting, I head towards the dining room.\
-ld c,":a;image\tachi\koha_t02.jpg",%type_nowaitdisp
-`"Ah!@ Please wait here, Shiki-san.@ I'll call you when it's ready."@
-cl c,%type_nowaitdisp
-
-` Kohaku-san disappears into the dining room by herself, leaving me, the downcast-looking Akiha, and Hisui, who stands emotionlessly by the wall.\
-`"…………"@
-` …… This is kind of awkward.@
-`"Nii-san, about last night, is it true that you collapsed in the park?"@
 ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-`"Seems so.@ I don't really remember it myself, but if that's what Kohaku-san and Hisui say, then it must be what happened."\
-ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
-
-`"Oh, stop talking like it's someone else's problem, Nii-san!@ You have a weak body, so if you ever feel bad, please contact the mansion.@ I will send someone to pick you up right away."@
-`"…… Hey, listen, there's no need for that.@ I'm not like a primary school kid, I can make it home by myself no matter how bad I feel."\
-`"Then I guess the fact you could not make it home last night would mean you are a child."@
-`"---Mmn."@
-br
-` It sucks to admit it, but Akiha is right.@
-br
-`"…… Yesterday was different.@ That kind of thing is really rare.@ Look, just because I have chronic anemia doesn't make my body weak.@ There's no reason for you to worry about every little thing, Akiha.@ Yesterday was… you know… just a terminal case of bad timing.@ That's all."@
-`"A terminal case?@ Please do not use such inauspicious words, Nii-san!@ You have only just come back to the mansion!@ What would I do if you died…!"@
-` Akiha is seriously angry.@
-ld c,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
-`"Geez.@ You take things too easily, Nii-san.@ Please, take better care of yourself."@
-`"Even if you tell me that, I don't push myself as it is.@ I'm not in any clubs, and I do everything the doctor says… You'd have to put me in a sanitarium for me to get any better care."\
-ld c,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
-`"Yes, I would love to do that if I could."@
-` Avoiding my gaze, Akiha says something very frightening.@
+`"…… Yes, you may be right.@ But it is what Father wanted, so I spend half the week here."@
+`"Hmm… but the old man isn't here anymore, so you don't have to force yourself, right?@ Dormitory life looks kind of fun, after all."@
+ld c,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
+`"Well, I wouldn't be troubled if it were that easy.@ But if I were to leave you by yourself, there's no telling what might happen to you, is there?@ With things like what happened yesterday, I will still be attending school from the mansion for now.@
+` ---One more thing, Nii-san…"@
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+` She straightens her posture and looks right at me.\
+`"…… Uh… yeah?"@
+`"The lodgings at Asagami Ladies' Academy are not dormitories.@ They are boarding houses.@ Please get it right next time."@
 cl c,%type_crossfade_fst
-br
-` As for Hisui, she's standing by the wall like a statue.\
-`"…………"@
-` I'm at a loss for conversation.@ There's still some time until we eat, so---
-br
+` …… Akiha's words are wrapped in thorns.@
+` Actually, I was pricked plenty of times by them my first day back, but this morning there is something sulky about them.\
 
 
 return

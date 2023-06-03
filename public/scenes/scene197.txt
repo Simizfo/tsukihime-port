@@ -1,13 +1,21 @@
 
 bg "image\bg\bg_08b.jpg",%type_nowaitdisp
 
-` --I'll go back to the mansion.@
+` ----I should find this vampire Roa.@
 br
-` It's not like I've given up on Arcueid, but without any leads, I don't think I could find her.@ Then instead of running around blindly, I should go back to the mansion and think calmly about what I can do.\
+` Arcueid isn't going to come see me, and it's almost impossible for me to find her.@
+` So I'll take the opposite route.@
+` Arcueid said she would defeat Roa no matter what.@ If her purpose is Roa, then I'll look for him too.\
 
-`"…… Is that all I can do?"@
-` I am pained by my lack of ability to do anything.@
-` But right now, it is all I can think of.\
+` Arcueid will come to Roa, so if I could find him before then, that'll be good.@
+br
+` And with that option,
+` I can help Arcueid at the last moment.\
+
+`"----Alright."@
+` My mind is set.@
+` So I can't waste any more time here.@
+` I have to go into town this very minute, and even if it means looking for a needle in a haystack, I have to find this vampire----\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 

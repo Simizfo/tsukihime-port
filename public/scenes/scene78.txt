@@ -2,117 +2,135 @@
 bg "image\bg\bg_31a.jpg",%type_nowaitdisp
 
 
-`"I---"@
-br
-` There's no way I can help her.@
-` I was almost killed by just that black dog.@ If I go with her, I'll die for sure.@
-br
-`"---I can't do something like that.@ It'd be suicide."@
-` I manage to glare at her and reply, trembling.\
+`"…… Kuhh!"@
+` It's impossible.@
+` I was almost killed by just one black dog.@ If I become her lookout, who knows what'll happen next.\
 
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-` She looks at me with displeasure.@
-`"Suicide?@ Why?@ With your killing abilities, I would think you have nothing to fear."@
-`"That was different.@
-` I'm sorry, but I'm just a normal student, not some kind of monster like a vampire.@ A normal student can't cooperate with a person like you."@
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-`"Oh?@ Do normal students usually cut up girls they don't even know?"@
-`"----Ah."@
-` I feel weakened by her comment.\
-`"…… But that was special.@ I've never felt that way before, and I've lived a normal life---"@
-
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"Hey, hurry up and answer.@ I don't think I'm being unreasonable here."@
+`"……"@
+` She doesn't understand.@ It's evident she can't see that she's recklessness incarnate.@
+` …… If I get involved further with her, she'll drag me past the point of no return.\
+` I've got to find a chance to escape.\
 playstop
 
-`"Aahh enough, shut up!"@
-ld c,":a;image\tachi\ark_t23.jpg",%type_lshutter_fst
-wave se0
-`"Eh---"@
-` The pupils in those red eyes open up.@
-` Immediately, the feeling she exudes changes.@
-br
-` The chilling feeling is unbelievable.@
-` I think my heart might stop beating just from her glare alone.\
-
-monocro #ff0000
-
-
-`"Don't get me wrong.@ You killed me.@ I'm saving you and not pulling off your head right now just because you might be useful."\
-br
-wave se0
-` My neck feels numb, like someone is slowly sinking a blade into it.@
-`"-----"@
-wave se0
-` My throat, which had been so hot a moment ago, is rapidly growing colder.\
-` The air I breathe feels heavy.@
-` As if the very air around here is freezing… I feel a cramped sensation that almost makes me collapse.@
-wave se0
-` An oppressive feeling full of despair, like the world itself were glaring at me.@
-br
-wave se0
-` All that feeling of weight condenses and hammers into my brain like a bullet.\
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-wave se0
-`"Ah-----eh?"@
-br
-` Everything goes white.@
-` A disgusting feeling.@ Pain, like someone opened a hole in my skull and is pouring in alcohol.@
-` That is the only way to describe this sensation.\
-
-wave se0
-`"Gah-------"@
-br
-` I can't even cry out.@
-` The sounds leaking from my mouth are no longer human speech.\
-wave se0
-`"A---guhh."@
-br
-` My heart is breaking apart.@
-` My memories are crumbling.@
-` She's only glaring at me, but I feel like she's reaching into my skull and kneading my brain with her bare hands.@
-wave se0
-` If this continues, I'm going to be empty----\
-wave se0
-`"Stop----it."@
-br
-` That's all I can say before I lose my sanity.@
-` Suddenly---the invasive feeling inside my head disappears.@
-
-monocro off
-play "track01.ogg"
-
-bg "image\bg\bg_31a.jpg",%type_crossfade_fst
-
-`"Hha---aghh."@
-` Released from the oppressive aura, I hug myself.@
-br
-` ---I'm still alive.@
-br
-` I'm not dead.@
-` I'm still alive and breathing.@
-br
-` ---I feel like I'm about to cry.@
-` To feel such deep emotion at such a simple thing is something I hadn't experienced up until now---\
+`"…… Alright.@ I'll listen to what you've got to say."@
+` Putting my hand on the wall, I somehow manage to stand up on my own.@
+` …… I've got to pass through that small road if I'm to get to the main street from here.@
+` Fortunately, it's further away for her than it is for me.@
+` If I set off while pretending to talk, I can probably make it to the main street.\
 
 ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+`"Oh yeah.@ We still don't even know each other's names yet.@ I guess it is a bit too fast to ask you to cooperate with me."@
+` She nods in agreement.\
+`"Isn't it?@ If you tell me more details, I might agree to help."@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"Really?@ Then what should I talk about first?@ ---How about the vampire incident that's got this town in an uproar?@ Or maybe I should explain what we'll be doing from now on?"@
+cl c,%type_crossfade_fst
+` She makes a serious face while she thinks.@
+br
+` ----This is my only chance.\
 
-`"How about it?@ Maybe now you understand your position a little better."@
-`"-------"@
-` …… You think I can understand that?@
-` All I can do is look up, tremble, and grit my teeth.\
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+
+` ---I run as fast as I can.@
+` I run to the road that leads to the main road in one breath.@
+br
+`"---Huh?"@
+br
+` I can hear her voice from behind me.@
+` But it's too late.@
+` Now I'll definitely be able to escape---!\
+
+bg "image\bg\bg_31a.jpg",%type_nowaitdisp
+wave se4
+
+quakey 2,100
+
+`"---Huh?"@
+` That's strange.@
+` As I take a few steps forward, I fall down hard on the ground.\
+play "track03.ogg"
+
+ld c,":a;image\tachi\ark_t11.jpg",%type_lshutter_mid
+`"Hey.@ What are you doing?"@
+` She comes over, giving me a look more filled with amazement than concern.@
+`"…… Nothing.@ I just wanted to run for a bit."@
+` …… It seems she hasn't realized I was trying to escape.\
+` I get up.@
+` But.@
+wave se4
+
+quakey 2,100
+
+`"……!"@
+` Ow…!@ I feel an incredible pain in the joints of my foot, I can't get up---!\
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"Ah, I guess I was a bit too hard on you back there, sorry.@ If I had softened the blow a bit when I pushed you, you might not have sprained your foot like that."@
+`"Might not---!?@ Listen, you----"@
+` I wanted to complain about her pushing me, but if she hadn't, the black dog would be chewing on my neck by now and that would have been the end of me.\
+`"…… It's okay.@ I'm grateful."@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+`"Thank you.@ But, why did you want to start running?@ Weren't we having a conversation?"@
+`"No, um, that's---"@
+` I can't exactly say it was a matter of convenience.\
+
 ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-`"There's only two choices.@ You cooperate with me, or you don't.@
-` Simple, isn't it?@ All I'm asking you is whether you want to live or die."@
-`"H------"@
-` My voice doesn't work properly.@
-` Only my basic survival instincts help me to avoid death by nodding in reply.@
+`"………… Hmmmn?"@
+` She stares at me.@
+` …… This is bad.@ You'd have to be a real idiot not to understand what I was doing.\
+
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+
+`"Hey, that was an indication you wanted to cooperate with me back then, right?"@
+`"………"@
+` I can't answer.@
+` I said I would listen to her, but not cooperate.@
+br
+` ---I don't want to lie.@
+br
+` Answering her question requires a definite "no".\
+
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+`"Just so you know, I know what sort of person you are.@ Don't give me a half-hearted response.@
+` If you run away now, I'll just be going to your house next."@
+`"Wh---!?"@
+` That means that she's going to come to the mansion even if I escaped from here!@
+\
+`"……"@
+` She's got me.@
+` If that were to happen, it wouldn't just be my problem.@ Akiha, Hisui, and Kohaku-san might be attacked by this crazy person too.@
+br
+`"Cr…!"@
+` What a mess.@
+` It's like I never had a choice in the first place----\
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"Well, I don't mind either way.@ The vampire's familiar has already seen you, so you'll be surely attacked.@ If you go around by yourself, you might act as a decoy, too."@
+`"Wh… hey, don't tell me that…"@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+`"Yes, that familiar recognized you as being on my side."@
+`"--------"@
+` Then that means I'll be attacked by things like that even if I don't help her.\
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+`"So, what's it gonna be?@ Are you going to keep watch while I sleep, or are you going to drive off those familiars by yourself?"@
+` …… If the results are going to be the same, I can't do anything but nod.@
+br
+`"----You swindler."@
+` Sighing, I nod to indicate that I will help her.\
 
 ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-`"Alright.@ Then our contract is established."@
+`"Okay, our contract is established."@
 ` Where did all that anger from just a moment ago disappear to?@
 ` Speaking in a cheerful tone, she extends her hand to me.\
 `"I guess I can finally introduce myself now.@
+` I'm Arcueid---hmm… my last name is really long, so just Arcueid is fine for now.@ I'm a True Ancestor type vampire.@ How about you?"@
 br
-` I'm Arcueid---hmm…… my last name is really long, so just Arcueid is fine for now.@ I'm a True Ancestor type vampire.@ How about you?"@
 ` I heave a heavy sigh at her unprecedented introduction.@
 ` …… It's a sigh of resignation, evidence I've decided to accept this nonsensical situation.\
 `"I'm Tohno Shiki.@ Sadly, I'm just your everyday student.@ …… I've said it before, but I'm really not going to be much use."@
@@ -122,7 +140,7 @@ ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_fst
 br
 `"Nice to meet you, Shiki.@
 ` I'll have you take responsibility for killing me."@
-` Arcueid grins as she extends her left hand.@
+` Arcueid grins as she extends her left hand.\
 ` …… There are all sorts of responsibilities in this world, but this is probably the first and last time someone takes responsibility by helping someone they've killed.\
 `"…… Damn it!@ Do whatever you want."@
 ` But there's nothing else I can do.@

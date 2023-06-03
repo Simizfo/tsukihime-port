@@ -1,104 +1,125 @@
 
-bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+
+mov $phasebg,"image\bg\bg_22b.jpg"
+mov $phasetitle_a,":a;image\word\PARK_02A.PNG"
+mov $phasetitle_b,":a;image\word\day_02.png"
+gosub *right_phase
 
 
 
-` The howling continues.@
-` There's no way I can sleep like this.@
-` …… I can't sleep, but that's just normal.@
-`"……………… I'm sleepy, so I'll pass."@
-` Pulling the sheets over me, I stretch out on the bed.@
-` I can just think of the howling as the sound of something mundane, like cars driving by on the street.\
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
 
-` *sigh*@
-` Today's been a very long day.@
-` I'm mentally tired from eating dinner in this unfamiliar mansion and my conversations with Akiha and everyone else.@ After all that, the howling is just background noise.@
-` I close my eyes and gently fall asleep.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-!w3000
-
-wave se8
+bg "image\bg\cmo_05.jpg",%type_crossfade_mid
+play "track09.ogg"
 
 
-
-bg "image\bg\bg_40d.jpg",%type_crossfade_fst
-
-`"----Nng."@
-` I think I just heard something.@
-` Half-awake, I look at the clock.@ It's just past two.@
-` …… It's been about two hours since I heard the dogs howling.@
-` The dogs' howling has already stopped.@
-` The mansion is so quiet, I can hear the clock ticking in the silence.\
-
-wave se7
-
-
-`"------?"@
-` I hear it again.@
-` …… Inside the mansion…… from the lobby?@
-`"-----Could it be a burglar?"@
-` It's not impossible.@
-` The mansion's contents are outrageously valuable.@ On top of that, with no one here now except Kohaku-san, Hisui, Akiha and myself, it's very insecure.@
-`"……………"@
-` I get out of bed, and slip out of the room quietly.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-play "track06.ogg"
-
-bg "image\bg\bg_46c.jpg",%type_lcartain_mid
-
-
-` …… If it's a burglar, Akiha and everyone will be in danger, so I can't let this one go.@
-` I'll just look down from the second floor into the lobby; that should be safe enough.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
-bg "image\bg\bg_33d.jpg",%type_lcartain_mid
-
-` There's nothing wrong there.@
-
-wave se7
-
-
-`"……………!"@
-` No, someone's there.@
-` The figure that enters from the entrance and crosses the lobby with wobbling, uncertain steps, is---
+` Back then, the whole mansion was like a giant playground.@
 br
+` The garden, a deep forest.@
+` The house, a tall castle.@
+br
+` We played in our own little world, which would take days to explore.\
+
+` Every day was fun.@
+` No one thought about ever growing up,
+` and we believed that days and nights would always be the same.@
+br
+` It was just a childhood spent playing like puppies.@
+` We got along wonderfully, and were the best of playmates.\
+
+` Whenever I turned back, Akiha would be there, waving her hands and hiding shyly.@
+` Yes, always the same.\
+
+` Back then, the whole mansion was like a giant playground.@
+br
+` The garden, a deep forest.@
+` The house, a tall castle.@
+br
+` We played in our own little world, which would take days to explore.\
+playstop
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+
+`"---Good morning."@
+br
+` …… I hear an unfamiliar voice.@
+` The dream disappears, and all that remains is the feeling of my languid, waking body.@
+br
+`"It is morning.@ Time to wake up, Shiki-sama."@
+br
+` An unfamiliar voice greets me.@
+` …… Stop calling me Shiki-sama already.@
+` I told you yesterday, it sends chills down my back----\
 
 
-ld c,":a;image\tachi\aki_t19b.jpg",%type_crossfade_mid
+play "track02.ogg"
+
+bg "image\bg\bg_40a.jpg",%type_crossfade_mid
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+` ---I wake up.@
+br
+` Hisui stands far from the bed, like a statue.@
+`"……"@
+` Where am I?@
+
+ld c,":a;image\tachi\his_t16.jpg",%type_crossfade_fst
+
+`"Good morning, Shiki-sama."@
+` A girl in a maid uniform bows.@
+`"Ah… yeah, I came home, right…"@
+` I push myself up, and look around the room.\
+
+`"Good morning, Hisui.@ Thanks for coming to wake me."@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"There is no need to thank me.@ It is my duty to come and wake you, Shiki-sama."@
+` Hisui answers indifferently, completely expressionless.@
+`"Ah, really…?@ Okay then…"\
+
+` …… Even in an unfavorable light, I think Hisui's features are beautiful.@
+` It should be wonderful for such a girl to wake me every morning, but as Hisui never smiles, I don't feel that happy about it.@
+` …… What a shame.@
+` If Hisui only had half of Kohaku's brightness, she would be really cute.\
+
+`"---Do you need something?"@
+` Realizing I am looking at her, Hisui stares straight back at me.@
+`"No, nothing at all.@ Waking up with you there makes me feel like I'm really at the Tohno mansion."@
+` Now then.@ Getting off the bed, I stretch out both arms.\
+
+`"Shiki-sama, there is no time.@ From the mansion to your school is a thirty minute trip.@ This leaves only twenty minutes for breakfast."@
+`"Eh?@ …… Ahh!@ It's already seven o'clock!?"@
+` I gasp in amazement after looking at the clock.@
+` …… My repeated awakenings last night must have messed up my sleep pattern.\
+
+`"Your uniform is folded and awaits you over there.@ Please come to the sitting room after you have changed."\
+
+cl a,%type_lshutter_fst
+
+`"Damn it, if you're going to wake me, wake me up earlier…"@
+` Muttering selfishly to myself, I reach for the uniform.@
+` It's folded neatly, and the shirt has even been ironed.@
+` Passing my wrists through the sleeves feels good.@ It's that fresh, brand-new feeling.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_34a.jpg",%type_lcartain_fst
+
+
+
+ld l,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+ld r,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+
+` Akiha and Kohaku-san are relaxing in the sitting room.@
+` Akiha is wearing the uniform of the Asagami Ladies' Academy, a famous school for young girls.@
+` They are drinking tea together gracefully, as if breakfast ended a long time ago.\
 
 cl a,%type_crossfade_mid
 
 
-`"Aki…… ha?"@
-` She's not going to her own room on the second floor, but to the first floor of the west wing.@
-` The only things there are Kohaku-san's room and my old man's room.\
-
-`"…… What's she doing at this time of night……?"@
-` I can murmur all I want, but there won't be any answers forthcoming.@
-` After gazing at the lobby for a while, I decide to return to my room.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
-playstop
-
-bg "image\bg\bg_40d.jpg",%type_lcartain_mid
-
-` ……… Well, she probably had something to do, or went to see Kohaku-san.@
-` I feel bad about sneaking around and watching her, and I don't want to just ask her about everything she does.@
-`"…… Sleep, sleep.@ There's school tomorrow."@
-` I bury myself in bed and close my eyes.@
-br
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-
-` ---As I fall asleep,
-br
-` my thoughts keep returning over and over to Akiha's hollow-eyed figure in the lobby, and how something seemed wrong.\
-
-!w3000
 
 
 

@@ -1,108 +1,101 @@
 
 
 
+
+
 monocro #ff0000
 bg "image\bg\bg_54d.jpg",%type_nowaitdisp
 
 
 
-` ----No time to waste.@
-` I have to kill him before his wounds heal, or he will kill me.@
+`"---------"@
+` I let out a deep breath.@
 br
-` I take a forced breath,
-` and spur my tired body after SHIKI.\
+wavestop
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
 
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
 monocro off
-
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
 bg "image\bg\bg_54d.jpg",%type_crossfade_fst
 
-` Panting-----
-br
-` My breath echoes through the dark forest.@
-` In this darkness, the trail of blood seems to light the way.@
-` There's no way I'll let SHIKI go now.@
-` The question is, can my body survive long enough?\
 
-` Breathing heavily,
-` I run while wobbling side to side.@
-` I feel my knife in my left hand.@
-` The sensation of the knife firmly gripped by my hand is the only thing keeping me from passing out.@
+` Calming down,
+` I manage to restore control over my breathing.@
+` My view painted in red now returns to normal.@
+` One more calming breath.@
+` I won't believe what SHIKI says.@
+` I would never kill Akiha, and there's no way I would kill someone simply because they weren't human.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+monocro #ff0000
+bg "image\event\aki_e03.jpg",%type_crossfade_fst
+monocro off
+bg "image\bg\bg_54d.jpg",%type_crossfade_fst
+
+
+`"……………"@
+` It's different.@
+` It's different from back then.@
+` I'm different from SHIKI.@
+` I can control my actions through my own willpower.@
+` It's just, the smell of blood is so strong.@
+` It makes me remember the past, and that scares me.\
+
+`"Shi------t"@
+` My right hand is still holding the knife.@
+` With my bare left hand, I wipe the blood off my chest.@
 br
-`"Is he…… going to the courtyard?"@
+` ---With that, the smell of the blood goes away a bit.@
 br
-` It looks like the trail of blood leads to the courtyard.@
+`"-----SHIKI"@
+` In the darkness, the trail of blood seems to light the way.@
+` I take another deep breath, then go after SHIKI.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_53b.jpg",%type_lshutter_mid
+
+play "track06.ogg"
+
+` This is the last stop.\
+
+`"--------"@
+` …… Is this just a coincidence or is it on purpose?@
 ` Eight years ago.@
-` The place where Nanaya Shiki was killed by Tohno SHIKI.@
-` …… Come to think of it, there's no better place to finish our match.\
+` We fight to death once more at the place where SHIKI almost killed me.\
 
-`"-----Alright SHIKI, I'll…"@
-` Kill you.@
+`"…… Hmph, you did come after me."@
+` SHIKI is sitting down at the very edge of the clearing.@
+` Even that is the same as back then.@
+`"……………"@
+` I hold onto my knife and walk towards him.@
+` I feel something slimy under my feet.@
+` SHIKI's blood has not stopped; all the flowing blood is from him.@
+` Splash, splash.@
+` His blood makes noise as I step towards him.@
+` …… It's amazing he's alive after losing this much blood.@
+` It's like a giant puddle on the ground.\
 
-wave se6
-quakex 2,200
-bg "image\bg\ima_13b.jpg",%type_lshutter_fst
+wave se0
 
+
+`"Ku……………"@
+` But, I'm also at my limit.@
+` I'll be at a disadvantage if I wait any longer.@
+` This is the only chance to kill him, with him wounded.@
+`"--------!!"@
+` I step forward.@
+`"-----Wait!@ There's something I haven't told you yet.@ Can you wait there a bit, Shiki?"@
+`"-----------"\
+`"Don't look at me like that.@ This should benefit you too.@ Because it's about Akiha.@ There might be a way to turn her back."@
+`"Wha-------"\
+
+` At that moment,
+` my still functioning reason stops my feet.@
+` But, my body is telling me to go on and kill him right now.@
+` I------
 br
-br
-br
-br
-br
-` Everything turns red.\
-
-`"Gu-------ugh."@
-` Blood accompanies my breath out of my body.@
-` Blood spews out of my heart.@
-` I start to pass out and----fall to the ground.@
-`"What----?"@
-` I don't understand.@
-` I just feel pain and burning everywhere.\
-
-`"-----What the…"@
-` I look at my back.@
-` There I see numerous swords stuck like wings.@
-` They stick through me and up towards the sky.@
-` That means…
-` This wound is fatal.@
-`"Why-----?"@
-` I don't understand.@
-` It's not that these swords came flying at me.@
-` They just suddenly seemed to sprout from inside me.\
-
-` The sound of dripping blood.@
-` It drips down the swords on my body.@
-` The blood is not mine---
-br
-`"----Oh, that blood back then."@
-br
-` …… The blood that spilled on me when I cut SHIKI.@
-` That was still on my chest.@
-` …… What a stupid mistake.@
-` I knew that red swords were made from his blood---so having his blood on me is like asking him to stab me to death any time he pleases.\
-
-bg "image\bg\ima_01.jpg",%type_crossfade_slw
-
-`"------Ah."@
-` I start to fade.@
-` I look up at the sky in my own sea of blood.@
-br
-` The far away moon.@
-` Dark night, tall trees.@
-` I am facing the same meaningless death as once before.\
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-!w2000
 
 
 
-
-
-
-cl a,%type_waitdisp
-bg "image\word\end.jpg",%type_crossfade_slw
-
-resettimer
-waittimer 3000
 
 
 

@@ -1,28 +1,84 @@
 
 bg "image\bg\bg_11a.jpg",%type_nowaitdisp
 
-ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
-`"Tohno-kun, did you sleep well last night?"@
-`"Eh?"@
-` She looks directly into my eyes as she asks.@
-cl c,%type_crossfade_fst
+ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
 
 
-` …… Sleep well?@ That goes without saying.@ I couldn't get to sleep easily last night, and also--\
+`"----Ah."@
+` Having her stare right at me like this--makes me remember my dream.@
+`"Tohno-kun?@ What's wrong?@ Your face is turning red."@
+`"I, it's nothing.@ Just, I had a bad dream.@ I don't feel very well."@
+` I think I'm honest as I don't say I don't feel bad at all.\
 
-`"Uh……"@
-` I blush as the memories resurface.@
-` With a piercing gaze, Senpai looks up at me.@
-`"Senpai, um--"@
+`"……… Tohno-kun?"@
+` She looks at me with a very serious expression.@
+`"…… Senpai……?"@
+` I'm perplexed.@ I feel as if Senpai is reading my mind, and I remember more and more of last night's dream.@
+
+
+ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+
+`"Tohno-kun, you said you had a bad dream.@ What does that mean?"@
+`"It doesn't mean anything, and it's none of your business.@ Don't worry about it, and I'm asking you what you're doing."\
+
+
 ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
-`"Tohno-kun, you pervert."@
-`"Huh?"@
+
+
+`"It is my business!@ Tohno-kun, you didn't sleep well last night, did you?"@
+`"----Eh?"@
+` Well--she is right but.@
+`"…… Senpai, how do you know about that?"@
+
+
+ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+
+`"Because your face is all red.@ I don't know if you are sick, but you don't look well, Tohno-kun."@
+`"Oh--I see."@
+` I was surprised for a moment there.@
+` She guessed right about last night, so I thought--\
+
+
+ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+
+
+`"About this dream, Tohno-kun.@ Please tell me what kind of dream it was."@
+` …… Senpai asks me again, as she hasn't given up.@
+`"…… Fine.@ It's not a big deal really.@ Just…… Um, you were in it a little."@
+br
+` I answer reluctantly.@
+br
+` All of a sudden,
+
+ld c,":a;image\tachi\cel_t10d.jpg",%type_crossfade_fst
+
+
+`"I, I was in it!?"@
+` Senpai gets mad.\
+
+`"Um…… Senpai?"@
+
+ld c,":a;image\tachi\cel_t09b.jpg",%type_crossfade_fst
+
+
+`"……………………"@
+` Senpai quickly takes a step away and stares at me.@
+`"…………"@
+
 cl c,%type_lshutter_mid
 
-` With a look indicating she wants to say more, Senpai quickly walks away.\
 
+
+` Senpai looks like she wants to say something more, but she just gives a quick bow and runs away.\
+
+`"………?"@
+` I tilt my head in confusion.@
+` Then, the homeroom bell echoes through the hallway.\
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w1000
+
 
 
 return

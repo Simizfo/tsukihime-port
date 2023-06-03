@@ -3,105 +3,150 @@
 
 
 
-` ---I cannot come up with an answer.@
-` But I do know that I can't leave Akiha alone.@
-`"-------!!"@
-` I kill the flood of emotions.@
-` Without thinking, I go after Akiha.\
-
-!w1000
-bg "image\bg\bg_54a.jpg",%type_lcartain_mid
-
-play "track08.ogg"
 
 
-` --To my surprise, Akiha has not gone beyond the mansion.@
+
+
+
+
+bg "image\bg\ima_01.jpg",%type_crossfade_mid
+play "track07.ogg"
+
+
 br
-` Under the moonlight.@
-` Under the autumn leaved tree we once talked under.@
-` Akiha just stands there.\
+br
+br
+br
+br
+br
+` ----And then,
+` I embrace Akiha's body from the front.\
 
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-bg "image\event\aki_e06.jpg",%type_lshutter_mid
+` ---There's no way I could kill her.@
+br
+`"…… I want you to live."@
+` Akiha tilts her head questioningly.@
+`"No matter what you become---I still want you to live, Akiha."@
+` My tears cannot be stopped.@
+` Akiha hugs back joyfully---and bites on my neck.\
 
+`"-----!!"@
+` It hurts.@
+` But it is not an act to suck my blood.@
+` It is just a primitive act to bite me.\
 
-` She is standing quietly.@
-` Not doing anything.@
-` Like a child, she innocently stares at the falling autumn leaves.\
+`"A-Akiha."@
+` Akiha just frantically bites my neck.@
+` She tears off the meat and my bones are being chipped away.@
+` Akiha has no intelligence.@
+` She does not know who is holding her, or the meaning of an embrace.@
+br
+` Akiha is no different from a beast in human form.@
+` But still----\
 
-`"--------"@
-` What---could I do about it?@
-` No reason, no intelligence, a girl that's just there.@
-` There's no crime.@
-` Akiha is not the one to blame…
+`"---Still…… I want you to live."@
 br
-` -----Please kill me.@
-br
-` I recall those words.\
+` …… Is it wrong to wish such a thing?@
+` Is it a crime to wish for her to stay alive even though she goes around killing people?@
+` Even if Akiha says she cannot endure such a thing, I want her to endure past it.\
 
-` ---Please kill me with your hands.@
-br
-` What a cruel wish.@
-` She could only ask for that---she couldn't even ask for help.@
-` If you asked---I would have been on your side until the very last moment, even if the whole world was against me.@
-br
-` ---Please keep our promise.@
-br
-` …… What severe treatment.@
-` I did leave her for eight years, but I never thought I'd be retaliated against in such a way.\
+` But.@
+` That's---just a selfish wish.\
 
-`"---------"@
-` Akiha said…
-` Not knowing who you are and going around killing people out of instinct is more frightening than death.\
+`"----But, we made a promise."@
+` Akiha does not let go.@
+` Still holding on to her, I place my knife on Akiha's "line".\
 
-` Senpai said…
-` If you become something that just kills because of instinct, sometimes death is the only salvation.\
-
-`"--------"@
-` I grip my knife.@
-` Surprisingly, I feel no sadness.@
-` It's like my mind has gone empty; I don't want to feel any emotions.@
-`"Akiha---"@
-` I step on the dead autumn leaves as I walk towards her.@
-` Akiha notices me and greets me with a smile.\
-
-`"-----At least."@
-` I grip hard onto my knife.@
-` Akiha laughs.@
-` She laughs happily as she greets the person that will kill her.@
-`"-------!!"@
-` My mind weakens.@
-` But I have started walking.\
-
-` ---Death can be salvation.@
 br
-` I walk.@
-` Akiha does not run away, but waits for me happily.@
+` ---If someone is going to kill you eventually, then…
 br
-` ----Please kill me.@
+`"I won't let anyone hurt you."@
 br
-` The autumn leaves fall.@
+` ----The knife, without a sound,
+`   and probably without pain,
 br
-` ---That was your last wish.\
-
-` Akiha is laughing.@
-` There's no more distance to cross.@
-` Now all I have to do is stick out this arm.@
+`"Since I am the only one for you."@
 br
-` ----No matter how painful it is for me,
-br
-`"I have to kill you."@
-playstop
-br
-` Saying that,
-` my eyes suddenly overflow with tears.\
+` ----Gently ends Akiha's life.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_54a.jpg",%type_crossfade_fst
+
+
+` The autumn leaves fall.@
+` Akiha lies on the red ground.@
+` The hair scattered on the ground is black.@ It vividly undulates on the red leaves.@
+` Her face is peaceful, as if happily dreaming.\
+
+`"----------"@
+` One event has ended.@
+` When I was a child.@
+` The happiness when we met here and ran around this courtyard.@
+` The brightness of the stars we watched together.@
+br
+` Just a few days ago.@
+` Everything we talked about here.\
+
+bg "image\event\aki_e03.jpg",%type_crossfade_mid
+
+br
+br
+br
+br
+br
+` ----Nii-san, I am just happy that you have come back.@
+` …… I just want you to keep that in mind.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\ima_01.jpg",%type_crossfade_mid
+
+
+` At some point, I started staring at the moon.@
+` …… My body is cold.@
+` My mind feels dizzy, like I'm about to go to sleep.\
+
+` …… I'm sleepy.@
+` I feel like if I slept right now, I could dream that this was all a dream.@
+br
+` But that's just a dream and someday, I would have to wake up.@
+` It feels like even I am just part of this dream.@
+br
+` Or was everything an ephemeral dream from the start?@
+` If so, please…
+` Let me sleep on and never wake me up.\
+
+`"---------Ha, ha."@
+br
+` In the sky, the blue, blue, glass moon.@
+` The tall curtain of trees and the applause of showering crimson leaves.@
+br
+`"Haha, ha------"@
+br
+` I'm sad, yet all that comes forth is laughter.\
+
+` The night is deep.@
+` There is a serene silence around me, which hits my eardrums like thunderous applause.@
+` My view distorts and narrows.@
+` …… It seems to be time to lower the curtain.@
+` The curtain of trees turns round and round.@
+br
+` As if
+` everything in this circus
+` was artificial.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+playstop
+
+!w2000
 
 
 
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
 
-
+resettimer
+waittimer 3000
 
 
 return

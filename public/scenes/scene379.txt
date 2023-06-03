@@ -3,99 +3,125 @@
 
 
 
-monocro #ff0000
-bg "image\bg\bg_54d.jpg",%type_nowaitdisp
+
+bg "image\bg\bg_53b.jpg",%type_nowaitdisp
 
 
 
-`"---------"@
-` I let out a deep breath.@
+
+`"------------"@
+` I won't fall for that trick.@
+` My body stops working properly when I listen to him.@
+` If there is a way to turn back Akiha, I'll find it myself.@
+` No way---no way will SHIKI, the one who turned Akiha that way, tell me.\
+
+`"----Huh!@ I guess you won't fall for it.@ Alright then.@ It's all about killing each other from now on.@
+` Let's see who's the better killer."@
+` SHIKI laughs, still down on the ground.@
+`"------------"@
+` I don't answer and instead walk straight to him.@
+` About ten more meters to go.@
+` I will be able to jump at him within a few seconds.\
+
+`"…… Heh.@ Don't tell me you think you're good just because you cut one of my arms off, Shiki."@
+`"--------"@
 br
-wavestop
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
+` One meter.\
 
-monocro off
-bg "image\bg\bg_54d.jpg",%type_crossfade_fst
-
-
-` Calming down,
-` I manage to restore control over my breathing.@
-` My view painted in red now returns to normal.@
-` One more calming breath.@
-` I won't believe what SHIKI says.@
-` I would never kill Akiha, and there's no way I would kill someone simply because they weren't human.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-monocro #ff0000
-bg "image\event\aki_e03.jpg",%type_crossfade_fst
-monocro off
-bg "image\bg\bg_54d.jpg",%type_crossfade_fst
-
-
-`"……………"@
-` It's different.@
-` It's different from back then.@
-` I'm different from SHIKI.@
-` I can control my actions through my own willpower.@
-` It's just, the smell of blood is so strong.@
-` It makes me remember the past, and that scares me.\
-
-`"Shi------t"@
-` My right hand is still holding the knife.@
-` With my bare left hand, I wipe the blood off my chest.@
+`"I'll teach you one last thing.@
+` You know everyone in the Tohno family has different powers, right?@ I guess Akiha's good at taking heat from her surroundings.@ Well, it's kind of like that, influencing the outside world, like an interference ability."@
+`"--------"@
 br
-` ---With that, the smell of the blood goes away a bit.@
+` Two meters.\
+
+`"It seems the ability to interfere with the outside world has been scarce even in the Tohno family.@ You can say that Akiha's ability is rare.@ Since she has such large potential, it doesn't wake up easily.@ Any time I try to wake it up, it's like throwing a rock into the ocean.@
+` The best way to use her full ability is to have someone take over her mind and control her."@
+`"--------"@
 br
-`"-----SHIKI"@
-` In the darkness, the trail of blood seems to light the way.@
-` I take another deep breath, then go after SHIKI.\
+` Three meters.\
 
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-bg "image\bg\bg_53b.jpg",%type_lshutter_mid
+`"Well, let's put Akiha off to the side.@ It's more important to talk about me right now."@
+`"--------"@
+br
+` Four meters.\
 
-play "track06.ogg"
+`"Shiki, I'm like the old man; I have no method to interfere with the outside world.@ The vampire ability isn't my original ability.@ This is more like a bonus that I got later.@ My real ability is 'immortality'."@
+`"--------"@
+br
+` Five meters.\
 
-` This is the last stop.\
+`"Well, there are limits to my immortality, since I can't heal my own wounds.@ Isn't it weird that this ability is called immortality?@
+` But it's true that dying is hard for me.@ My body changes its context so that it can survive whatever state it is in at that moment.@
+` Humans die when they lose a large portion of their body, right?@ That's because humans need a 'Human shape' with all the necessary parts to live as a human.@ If they can't find a substitute for their lost part, they die.@ Well, it might be more correct to say they cannot continue to live."@
+`"--------"@
+br
+` Six meters.\
+
+`"But in my case, it's the opposite.@
+` I don't supplement my lost parts.@ Instead, I continue to live even if I lose an arm or all my blood.@ My body changes its internal organs so that I can live without the parts I lost.@
+` See, can't you say that this is 'immortality'?@ I would probably live even if my head only remained.@ …… Well, there's no way I'd want to be like that."\
 
 `"--------"@
-` …… Is this just a coincidence or is it on purpose?@
-` Eight years ago.@
-` We fight to death once more at the place where SHIKI almost killed me.\
-
-`"…… Hmph, you did come after me."@
-` SHIKI is sitting down at the very edge of the clearing.@
-` Even that is the same as back then.@
-`"……………"@
-` I hold onto my knife and walk towards him.@
-` I feel something slimy under my feet.@
-` SHIKI's blood has not stopped; all the flowing blood is from him.@
-` Splash, splash.@
-` His blood makes noise as I step towards him.@
-` …… It's amazing he's alive after losing this much blood.@
-` It's like a giant puddle on the ground.\
-
-wave se0
+` Seven meters.@
+` …… One more step.@
+` Then, I am within reach----\
 
 
-`"Ku……………"@
-` But, I'm also at my limit.@
-` I'll be at a disadvantage if I wait any longer.@
-` This is the only chance to kill him, with him wounded.@
-`"--------!!"@
-` I step forward.@
-`"-----Wait!@ There's something I haven't told you yet.@ Can you wait there a bit, Shiki?"@
-`"-----------"\
-`"Don't look at me like that.@ This should benefit you too.@ Because it's about Akiha.@ There might be a way to turn her back."@
-`"Wha-------"\
-
-` At that moment,
-` my still functioning reason stops my feet.@
-` But, my body is telling me to go on and kill him right now.@
-` I------
+`"…… You're about to kill me, huh?@
+` Well, what I want to say is this.@ I have the ability not to influence the outside world, but rather my inner body.@
+` Do you get it?@ Even if it seems like a useless part of your body to you, for me------"@
+`"--------"@
 br
+` This is it.@
+` Now, I'll-----\
+
+quakey 1,200
+monocro #ff0000
+bg "image\bg\bg_53b.jpg",%type_nowaitdisp
+
+
+br
+br
+br
+br
+br
+` Stab.@
+` Suddenly, from my ankles to my head…
+` I am stabbed by numerous swords that popped out of the ground.\
+
+bg "image\bg\ima_13.jpg",%type_tshutter_fst
+
+`"-----I can change it to an important weapon like this.@
+` You need to pay more attention.@ There's no way I would scatter this much blood for no reason."@
+` …… I… understand.@
+` How stupid of me.@
+` I followed his trail of blood,
+` and walked onto a mountain of needles.\
+
+`"I don't have the ability like you or Akiha to hurt others directly, so I have to rely on little tricks like these.@
+` But if this 'someone' in my head becomes clearer, I might be able to use his ability as a vampire."\
+
+monocro off
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+`"-----I guess you can't keep yourself together anymore.@
+` Then this is it.@ You can leave the rest to me and you can go back to your grave, Shiki-----"\
+br
+` I hear laughter.@
+` It echoes through my head as my mind falls into the darkness-----\
+playstop
+
+!w2000
 
 
 
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
 
 
 

@@ -1,105 +1,147 @@
 
 
 
-bg "image\bg\bg_29b.jpg",%type_lcartain_mid
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+play "track03.ogg"
 
 
-ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
-
-play "track01.ogg"
-
-`"What did you want to talk about, Shiki?"@
-`"About vampires.@ You said it before.@ That the recent serial killings were the work of a vampire."@
-` Arcueid nods.@
-`"Then do you know the morning news said another victim was found?@ She was killed last night and drained of blood."@
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-
-`"-----"@
-` …… Arcueid's eyes narrow.@
-` Something…
-` Something like a freezing tension races down my spine.\
-
-ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
-`"Oh?@ And?"@
-`"And?---you……"@
-` I swallow hard.@
-` She stares right at me.@
-` Almost---a stare which says she will attack me immediately if I move even the slightest bit.\
-
-`"Is---isn't it strange, Arcueid?@
-` Nrvnqsr is dead.@ So why are these incidents still happening?@ Don't tell me, that, you---"\
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-
-`"That's not it at all.@ That's not me, but another vampire."@
-` Arcueid responds immediately, loosening the tension.@
-` But I'm not satisfied.\
-
-`"What do you mean?@ The work of another vampire?@ So they just keep coming?"@
-ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
-
-`"Of course not.@ The serial killings were always the work of just one vampire from the very beginning.@ So no new vampires will come, and Nrvnqsr was unrelated to those incidents."@
+`"Huh?"@
+` What does she mean by last night?@
+` I don't understand what she's talking about.@
+` After all, I'm the idiot who mistook Arcueid's words and made such a stupid mistake, so of course I don't understand what she is saying, and---huh?@
 br
-` ----Eh?@
-` Nrvnqsr was, unrelated……?@
-br
-`"Wha---what do you mean?"@
-`"It's just like I said.@ …… You're normally pretty sharp, but you're lost at some points.@ Think back, Shiki.@ Nrvnqsr was a vampire, but did he ever suck human blood?"\
-cl c,%type_crossfade_fst
+` Did Arcueid ask me who came last night---?\
 
-
-`"Suck blood?@ He ate humans and---oh."\
-br
-` I see.@
-` Why didn't I notice such a simple mistake?@
-` The victims of the serial killings are found with their bodies drained of blood.\
-
-` But Nrvnqsr was different.@
-` He didn't leave any dead bodies behind.@ He not only drank the blood, but also ate the meat, leaving no trace.@
-` To prove it, the people eaten by him in the hotel were treated as missing people, not killed people.@
-br
-` So---that means, it is something completely different.\
-
-`"Wait.@ Then what is the serial killing going on right now?@ Just who is doing it?"@
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-
-`"That's a different vampire than Nrvnqsr.@ To be more specific, that vampire is why I came here, and Nrvnqsr came here following me.@ It's that sort of correlation."@
-`"---Wha… So the one you're after wasn't Nrvnqsr after all……!?"\
-
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"Yes, I didn't ever say he was my initial target.@
-` I was his target, but he was never my target; my target is the one called the 'serial killer' in this city."@
+`"…… Arcueid.@ What do you mean by 'last night'?"@
 ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
 
-`"…… Shiki.@ I don't quite believe it, but don't tell me you made such a simple mistake?"\
+`"Hm?@ That's strange, I know I sent you a dream familiar."@
+`"Wait, what's that dream familiar thing?"@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"Um, it's like a familiar that lets you see a dream about what you desire the most.@ You're a male, so I sent you a succubus.@ Wasn't it a good dream?"@
 cl c,%type_crossfade_fst
 
-
-`"Wha-----"@
-` I gasp in shock.@
-` But---it really is just as she says.@
-` She said her purpose is to kill vampires, so I just thought it was Nrvnqsr she was after----\
+`"I-----"@
 br
-`"…… So what is it?@ Killing Nrvnqsr that night, was pointless………!?"\
+` A good dream?@ That was…\
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
 
-ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+monocro #ffff00
 
-`"It wasn't pointless, you fought in my place.@ Well, if you didn't kill me, you probably wouldn't have had to in the first place."@
+bg "image\event\ark_h02.jpg",%type_crossfade_fst
+
+monocro off
+
+bg "image\bg\bg_29b.jpg",%type_crossfade_fst
+
+` I remember the realistic dream I had and my face turns red.@
+
+`"You, that was your doing---!"@
+` Arcueid grins even more.@
+` ---Crap.@
+` If I stayed quiet this conversation would have been over, but since I reacted so strongly---\
+
+ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
+
+`"Ah, so you did get it.@ So, who came?@ I know, it was your sister, right?"@
+`"N, n, not Akiha----!@ What kind of a guy do you think I am!@ I'm not crazy to do that to a sister!"@
+`"Hmm.@ If it wasn't your sister, then was it the maids at the mansion?"@
+cl c,%type_nowaitdisp
+
+` Arcueid looks up at me full of amusement.\
+
+`"Uh----"@
+` She's acting like the Arcueid from last night's dream.@
 br
-`"------"@
-` I feel a little dizzy.\
+`"It doesn't concern you, so leave me alone."@
+` I look away from her and refuse.@
+` But Arcueid keeps saying "Come on, come on," over and over.\
 
-`"…… In other words, those vampire killings had nothing at all to do with Nrvnqsr and it was the work of another vampire……?"@
+ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
 
-`"Yeah, that's right.@ But, that's my problem so you don't have to worry about it.@ But more than that, hey."\
-playstop
+`"Come on, tell me.@ You can at least tell me who you dreamed about."@
+` She asks like a curious kid.@
+` Every time I turn away she keeps jumping in front of me, saying "Come on, come on."@
+br
+` …… This is pure torture.@
+` She's as mischievous as last night's dream.\
 
+` I bury my face in my hands.@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"Hey Shiki, don't be quiet and tell me."@
+` Arcueid keeps looking at me with those upturned eyes.@
+br
+` ---I can't, God.@
+` This is my limit.@
+br
+`"…… You."@
+` I hesitatingly let it out in a quiet voice.\
+
+
+`"---Eh?@ What about me?"@
+`"Don't make me say it again.@ I'm saying that it was you who came!"@
+` I shout angrily as I look away.@
+` Arcueid's eyes widen in surprise.@
+play "track01.ogg"
+
+ld c,":a;image\tachi\ark_t12.jpg",%type_crossfade_fst
+`"M, me……?"@
+`"Yeah, it's not a joke.@ You came, and----"@
+` There's no way I can finish.\
+
+ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
+
+`"Ah----"@
+` Now Arcueid looks away from me, looking very uncomfortable.@
 cl c,%type_crossfade_fst
-
-` With an extremely happy smile, Arcueid looks up at me as I still stand there in surprise.@
 br
-`"How was last night?@ Who came?"\
+`"………………"@
+`"………………"@
+` Neither of us know what to say.@
+` The uncomfortable silence continues.\
 
+` ……@
+` …………@
+` …………………
+` …………………………@
+` ………………………………… *ahem*@
+` I can't bear the silence any longer and force out that cough.\
+br
+`"…… In the first place, why did you send me that dream familiar thing?@ Are you still angry at me for killing you?"\
+
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+
+`"That's not it at all.@ I sent it as thanks for defeating Nrvnqsr.@ I really am grateful to you, I thought you'd be extremely happy."@
+`"As thanks?---I'll pass on that kind of thanks.@ Having that kind of poor taste, just what are vampires thinking?"@
+` I slump my shoulders.@
+` I don't know what she's mad about, but she looks at me with a dissatisfied expression.@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+`"What's that all about, you meanie?@ I know I'm not human."@
+cl c,%type_lshutter_fst
+
+` She turns away, then starts walking off.@
+\
+
+`"Hey, hold on.@ Where are you going?"@
+`"It has nothing to do with you.@ Don't follow me!"@
+` Is she really that angry?@ Arcueid walks away without even turning around.\
+
+`"…………"@
+` Where does she plan on going anyway?@
+`"…………"@
+` Maybe I did say too much.@
+` No matter what the results were or the methods used, she really thanked me with good intentions.@ I start to feel intense regret and think that maybe I should have just accepted her gift happily.\
+
+`"-----"@
+` Damn it.@ Why is it that I just can't leave Arcueid alone……!?@
+br
+`"Aw---Hey, I said wait!"\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 
 

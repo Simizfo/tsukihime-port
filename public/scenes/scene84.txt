@@ -1,29 +1,89 @@
 
-bg "image\bg\bg_19d.jpg",%type_nowaitdisp
+bg "image\bg\bg_19b.jpg",%type_nowaitdisp
 
-
-` …… It's suspicious.@
-` There's something very suspicious about how she says "I'm not going to break them".\
-
-`"--Not even just to look at.@ I know about your ridiculous powers, after seeing you in that alley.@ What would I do if you crushed them by accident?"@
-ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
-`"Hey!@ What do you mean 'ridiculous powers'?@ Let me tell you, in terms of non-fighting strength, you're stronger than I am.@ I won't break things at random."@
-` Saying that, Arcueid extends her hands as if she is about to take them by force.@
+`"------"@
 br
-` …… Her attitude is becoming more and more suspicious.\
+` I still want to continue living in the proper, respectable world.@
+` …… I do feel responsible for killing Arcueid.@
+` But, I think there's something wrong about being forced to do something I can't do.@
+` …… But again, Arcueid is asleep.\
+` She's trusting me, someone who's killed her once already, and sleeping peacefully.@
+`"……… Damn it………!"@
+` But even so… I can't do it.@
+` I quietly start to walk.@
+` …… Turning my back to Arcueid, sleeping with complete faith in me, I leave the hotel room.\
 
-cl c,%type_lshutter_mid
-` I bounce up off the bed to get away from her.@
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-`"Hey, you're running away."@
-`"Of course.@ I'll tell you now: I'm not handing over these glasses.@ Even if there's only a one in a million chance you'll break them, they're irreplaceable to me.@ After all, you're the one who said I wouldn't be able to stay sane without these glasses.@ Do you want me to go crazy?"\
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_20a.jpg",%type_lcartain_mid
 
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-`"Huh?@ N… no, that's not it at all."@
-` …… Arcueid is obviously trying not to look at me.@
-cl c,%type_crossfade_fst
-`"--Come on, Arcueid.@
-` I don't know what you're planning, but if I lose these glasses, I won't be in any position to help you.@ If I were to see the lines 24 hours a day, I think I'd die from the headache before I'd go mad."\
+` …… The corridor is silent.@
+` We're on the eleventh floor, the top floor in the hotel.@ Since she rented out the whole floor, there are no other guests here.\
+br
+`"-------"@
+` I still feel a tinge of indecisiveness.@
+` But, I shake it off and press the elevator button.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w3000
+play "track01.ogg"
+
+bg "image\bg\bg_25a.jpg",%type_crossfade_mid
+
+
+
+` Taking the train from the hotel, I return to town.@
+br
+` …… It's just past noon.@
+` School is about to finish, so I think it's probably okay for me to head back to the mansion.@
+`"…………"@
+` All the same, I don't feel like going back to the mansion.@
+br
+` I decide to head to the park to cool my head for a bit.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_28a.jpg",%type_lcartain_mid
+
+` *sigh*@
+` Sitting down on the bench, I vacantly stare up into the sky.@
+` The sky is still cloudy, much like the scenery within my own heart.\
+
+bg "image\bg\ima_06.jpg",%type_crossfade_mid
+
+` …… I wonder if she's still sleeping, believing in me?@
+` I've killed her once, and yet she said she would forgive me.@
+` She had forgiven me---and yet… what am I doing here?\
+
+` Last night.@
+` After I killed Arcueid, I swore to myself that I would atone for it no matter what.@
+` Was that an oath I could break when my life is in danger?@ Was that all it was?@
+`"……… Kuh!"@
+` But I do want to live.@
+` That is a problem that I can't ignore as long as I'm alive.@ And it's not something I can easily dismiss as a moment of passion and forget about it.\
+
+br
+br
+br
+br
+br
+br
+` ---That power is yours.@
+` But that is the very reason why you must never forget.\
+
+`"---"@
+` I recall those precious words from long, long ago.@
+` She… Sensei… what did she say to me?@
+`"………"@
+` There's still time.@
+` The sun hasn't set yet.@
+` If I can return to the hotel before the sun sets, I'll probably still make it in time.\
+
+`"Damn it."@
+` I can't throw away my doubts.@
+` In the end, I----
+playstop
+
+br
+
 
 
 return

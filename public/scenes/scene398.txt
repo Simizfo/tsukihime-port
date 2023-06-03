@@ -1,135 +1,129 @@
 
 
+
 bg "image\bg\bg_40d.jpg",%type_nowaitdisp
 
 
 
 
-` ---I'll walk around the night-shrouded town and find the serial killer.@
+
+` ---If I don't sleep tonight, it'll be fine.@
 br
-` Then, I can prove that my dreams were just dreams.@
-` Because if I find the killer…
-` …… Then all the incidents must be the work of that killer.@
+`"…… That's right.@ If I don't sleep, and if--"@
+` If there is another victim tomorrow, then for sure, I won't have had anything to do with it.\
+
+`"----Alright."@
+` I do understand this is a bit off course.@
+` I know it's a bit strange staying here and not sleeping, waiting for someone I do not know to be killed.@
+`"---But, what else can I do?"@
+` Since I---my memory is not to be trusted, there is no other way to do this.@
 br
-`"……… Alright."@
-` For safety's sake, I put my knife in my pocket and start my investigation.\
+` ---Anyway.@
+` There is no other way for me to do this than to stay in my room without dreaming and wait until morning.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+bg "image\bg\bg_40d.jpg",%type_crossfade_mid
+
+
+br
+br
+br
+` -----Time passes.@
+` I still manage to stay awake.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_40d.jpg",%type_crossfade_mid
+
+
+br
+br
+br
+br
+br
+` ----Another hour.@
+` I still manage to stay awake.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_40d.jpg",%type_crossfade_fst
+
+
+
+br
+br
+br
+br
+br
+br
+br
+` -----An hour.@
+` I still, manage… to stay awake.\
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+
+br
+br
+br
+br
+br
+br
+br
+br
+br
+` ----It is now past one o'clock in the morning.@
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+` I… still  manage   to stay    awake.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+` ----In just four hours, it will be morning.\
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+` …… Something is wrong.@
+` I am… still  conscious… but…
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+` …… My field of vision collapses.@
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_40d.jpg",%type_crossfade_mid
+
+br
+` I must stay up.@
+` I am not sleepy yet, but…
+` Why?@
+!w750
+` Why?@
+!w1350
+` Why?@
+!w1750
+` Why does my    body   want   to sleep   this much-----?\
+
+bg "image\bg\ima_10.jpg",%type_tcartain_mid
 !w2000
-bg "image\bg\bg_25b.jpg",%type_lcartain_mid
-play "track06.ogg"
 
 
-` -----I go out into the night-shrouded town.@
-br
-` There isn't exactly a way to search for the serial killer.@
-` The only thing I can do is wander the streets and look for anything suspicious---or I use myself as a decoy to bring out the killer.@
-br
-`"………………"@
-` After what happened with Yumizuka, maybe I've become numb to danger.@
-` Since the serial killer is just a human, I can roam the streets without any nervousness.\
 
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_27b.jpg",%type_lcartain_fst
-
-` I wander around aimlessly.@
-` The time is about eleven at night.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_26a.jpg",%type_lcartain_fst
-
-br
-br
-` …… I don't see anything suspicious.@
-` The clock has by now gone past midnight.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_12b.jpg",%type_lcartain_fst
-
-br
-br
-br
-br
-` …… There's no use coming here.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_24c.jpg",%type_lcartain_fst
-
-br
-br
-br
-br
-br
-` …… Damn it.@ I don't see anyone that looks like a killer.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_25b.jpg",%type_lcartain_fst
-
-
-` *pant*…… *pant*…… *pant*…… *pant*\
-br
-br
-br
-br
-br
-br
-` ------I'm starting to get really annoyed.@
-br
-` Why can't I find anyone like that?\
-
-` That's not the person.@
-` That's not the person.@
-` That's not the person.@
-` Unable to stand it, I put my hand in my pocket, gripping my knife.\
-
-` That's not the person.@
-` That's not the person.@
-` That's not the person.@
-` That's not the person.@
-` That's not the person.@
-` That's not the person.@
-` That's not the person--------
-
-`"-----Eh?"@
-` For a brief instant, I see the face of a man with bloodshot eyes.@
-` …… It's nothing.@
-` It is merely my reflection off of a show window.@
-`"--------"@
-` How-----stupid.@
-` Gripping my knife.@
-` Breathing out of control.@
-` Unconsciously acting exactly like the killer in my dreams.\
-
-`"No------!"@
-` No.@ I didn't want to do these kinds of things.@
-`"Damn it…… What am I doing…………!?"@
-` …… Seriously, what am I doing?@
-` If I didn't recognize my face like that, I would---I would really, take anyone and…
-br
-` Tell myself it is the killer and would have killed anyone.@
-
-bg "image\bg\ima_10.jpg",%type_lcartain_fst
-
-
-`"Tsk---------"@
-` I start to run.@
-` I can't stay here.@
-` I won't find out anything this way.@
-` I---there's something wrong with me---\
-playstop
-
-bg "image\bg\bg_40d.jpg",%type_lshutter_mid
-
-` I breathe heavily.@
-br
-` I reach my room as if running away, and I collapse onto my bed.@
-`"Da……!"@
-` In the end, I didn't solve anything.@
-
-` …… I start to get sleepy.@
-` All I can do is try to sleep deeply so that I won't dream at all.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 
 !w3000
@@ -266,6 +260,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 wavestop
 
 !w3000
+
 
 
 

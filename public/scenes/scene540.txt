@@ -2,7 +2,7 @@
 
 
 bg "image\bg\bg_06b.jpg",%type_nowaitdisp
-play "track09.ogg"
+play "track08.ogg"
 
 
 
@@ -13,29 +13,32 @@ cl c,%type_lcartain_mid
 ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
 
 
+` It is time for the last lesson.@
+` The seventh period is about the end of this one particular person.@
 
-` You have reached Akiha's Normal Ending.@ Well done.@
 br
-` Each heroine (with one exception) has two different kinds of endings.@
-` Usually, they are called "True Ending" and "Good Ending", but Akiha-san's are called "Normal Ending" and "True Ending".@
-br
-` Akiha-san's route is different from everyone else's in that how much Akiha-san likes you does not determine which ending you receive.\
+` …… No one can truly understand the feelings of Tohno-kun, who kept his promise.@
+` There is nothing for me to advise.@
+` But if Tohno-kun wishes for a different outcome, please go back a bit and choose a different course of action.\
 
-` It also differs from all other routes in that it has an extra Normal Ending, which is what you are reading right now.@ While this ending is called Akiha's Normal Ending, it will not register as an ending in the game.@
-ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
-`"Nya?@ What is this?@ You're talking nonsense!@
-br
-` Take it up with the game designers if you must.@
-` Tohno-kun, please proceed to play through Akiha-san's route to reach her real Normal Ending.\
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
 
-` Well then, thank you very much for playing up to this point.@
+`"Uhh, but if Akiha doesn't like you enough, you don't even get a choice."@
 br
-` Let's meet again somewhere in Tsukihime.\
+` ----Ah.@
+` In, in that case, please go back a couple of days and deepen your bond with Akiha-san.@
+` If you do that, a different fate should await you.\
+
+
+
+
 
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 playstop
+
+
 
 
 return

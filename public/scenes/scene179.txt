@@ -1,349 +1,62 @@
 
+bg "image\bg\bg_25b.jpg",%type_nowaitdisp
 
-bg "image\bg\bg_28b.jpg",%type_lshutter_mid
-
-play "track01.ogg"
-
-` The hand of the clock ticks by.@
-` It's been two hours since we came here.@
+` ----I'll go to Arcueid's apartment.@
 br
-`"----Phew."@
-` I've started to settle down and there's nobody around now.@
-` The night starts to deepen.\
+` I don't know what's behind it all, but she was breathing so painfully.@
+` Rather than trying to hunt The Dead, she might have just gone back to her room.\
 
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_12b.jpg",%type_lcartain_mid
+bg "image\bg\bg_13b.jpg",%type_lcartain_mid
 
-`"Arcueid, is it alright now?"@
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-`"Yeah, it's alright."@
-` She agrees with me, but she doesn't really seem enthused yet.@
-`"You've been acting strange since before, Arcueid.@ Is there something wrong?"@
-`"----Not really.@ I was just concerned about that bandaged man you told me about."@
-` Arcueid sighs as she ponders to herself.\
+` …… I press the doorbell.@
+` It doesn't seem like anyone's coming out.@
+`"----Shit, she hasn't come back?"@
+` No matter how many times I push the button, her door doesn't open.\
 
-ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
-
-`"Oh, that's right.@ Shiki, last night someone hit on me here."@
-`"----Huh?"@
-ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
-`"I'm saying, some guy started to talk to me here."@
-`"…… No, I heard you.@ I thought you said you were thinking about that bandaged man though."@
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-
-`"I was, that's why I remembered.@ Just like when you were attacked, someone started to talk to me."\
-
-`"…… I see.@ Well, that's good.@ Just looking from the outside, you are a beautiful person so if you were waiting around by yourself, it is entirely natural for a guy to talk to you."@
-` I give a serious response.@
-` Sometimes, I'm a little too honest.\
-
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"You think so?@ I thought it was an enemy at first, but I remembered you saying something before about how I always stand out.@ So after studying him briefly, I saw he was just a human."@
-`"…… Wait a minute.@ Don't tell me you did something to the guy trying to hit on you?"@
-ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
-`"No, I didn't do anything.@ I just talked with him a little bit and made him forget about it.@ …… But if I didn't remember what you said, I might have."\
-
-`"I see.@ Good job, Arcueid.@ I guess even you can make distinctions."@
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"Of course.@ It would have to take someone like you to make me angry."@
-` She seems to say this with some amusement.@
-` …… Well, it's natural for someone to get mad if they were killed.@
-cl c,%type_crossfade_fst
-
-\
-
-` I sigh as I glance around the park.@
-` …… A month ago.@
-` If those serial murders never started occurring, there would still be young couples around and the figures of students hanging out.@
-` But now, the only ones talking here are me and Arcueid.@
+`"………"@
+` Did she not come back, or is she just not coming out?@
 br
-` I calmly think about my current situation.@
-` Since when did Tohno Shiki step off onto the path of such a world----?\
-playstop
-
-ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
-
-`"Ah.@ Hey, see."@
-` Arcueid suddenly calls out to me.@
-`"What, did something happen?"@
-ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_fst
-
-`"Yeah.@ See?@ Look at the clock.@ It's time."@
-` She points to the park's clock while giving a full smile.@
-` Looking----it's ten o'clock now.@
-cl c,%type_crossfade_fst
-
-\
-
-play "track08.ogg"
-
-` The promised time.@
-` The promise backed only by words, to meet here at ten o'clock at night.@
-
+` ----After hesitating, I decide to go inside.@
 br
-` …… Last night.@
-` The promised time I couldn't keep.\
+` It'd be a simple thing to cut the "lines" on the door.@
+` But, I should just check the knob first.\
+
+`"…… Huh?"@
+` It's not locked.@
+` The door opens simply with a turn.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_15b.jpg",%type_lcartain_mid
 
 
-`"--------"@
-` My words get stuck in my throat.@
-` Why does such a trivial thing suddenly cause my chest to tighten?@
-br
-` Why… does such a trivial thing make her so happy?\
+`"…… Arcueid, are you here?"@
+` …… No response.@
+` Did she not lock it in the first place?@ There's no one around.@
+`"Where does she think she's going in that condition……!?"@
+quakex 1,300
+` I slam my fist against the wall.@
+`"…… Grr."@
+` …… what am I doing?@
+` If I have time to let it out on the wall, I have to go out and look for her----\
 
-` …… I really don't understand.@
-` I spent all day with her today.@
-` But it never felt like she was really a vampire.\
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w2000
 
-`"…… Let me ask you something."@
-br
-` ----Stop it, Shiki.@
-br
-ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_fst
-
-`"Yeah, what is it?"@
-`"…… Are you…"@
-br
-` ----Don't ask her that.@
-br
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"Um, am I what?"@
-`"…… Really a vampire?"@
-br
-` ----What kind of answer are you hoping for?\
-
-ld c,":a;image\tachi\ark_t12.jpg",%type_crossfade_fst
-
-`"A vampire?--what's with that all of a sudden, Shiki?"@
-`"It's not all of a sudden.@ I was just thinking."@
-` I look away.@
-ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
-
-`"Huh?@ I can't tell if you're really stubborn or not.@ I don't really mind, but that's pretty insulting.@ Tell me why you're asking that."@
-cl c,%type_crossfade_fst
-
-` There's no reason.@
-` But----at the same time, there's no real proof she's a vampire either.@
-` So----\
-
-`"…… Well, you said you don't even like to see blood.@ What kind of vampire is that?@ You even said you weren't a full vampire, but a vampire that hasn't sucked blood isn't a vampire, is it?"@
-br
-` ----That's not it.@
-` Isn't it just that Tohno Shiki, deep inside, wishes she wasn't a vampire?\
-
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-
-`"Shiki.@ Stand up."@
-` Arcueid approaches the park bench.@
-` I stand up.@
-br
-`"----"@
-` Our eyes meet.@
-` We're about two meters apart.@
-br
-` Arcueid gives a huge sigh, and suddenly grins.\
-
-ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
-
-`"I guess you're right.@ I even thought about it myself.@ I wondered, is Arcueid Brunestud really a vampire?@
-` Ahaha," she laughs.\
-br
-` …… That's a relief.@
-` I thought this question would insult her----but thankfully, she seems to have taken it as a joke.@
-br
-`"----Yeah.@ You really don't look like a vampire at all."@
-` "Ahaha," Arcueid laughs again.\
-
-`"Then, shall we try?"@
-br
-` She says this, still smiling.@
-`"Try----eh?"@
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"Shall we see if I can really drink blood?@ If I could, can you give me a prize, Shiki?"@
-`"Wha----"@
-` With that smile still on her face, she takes a step closer.@
-cl c,%type_crossfade_fst
-playstop
-
-\
-bg "image\bg\ima_02.jpg",%type_crossfade_fst
-
-` Tap, tap.@
-` Her footsteps echo in the air.@
-br
-` I know she's joking.@
-` Still----I can't move, at all.\
-
-`"Wa----"@
-` --it.@ But I can't even finish.@
-` It's not her power----but me who stops.@
-br
-` Closer.@
-` One step.@ Another step.@
-` Looking down, bit by bit.@
-` I----not even able to lift a single finger, am transfixed by her lips----\
+bg "image\bg\bg_25b.jpg",%type_lcartain_mid
 
 
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
+` …… I can't find her.@
+` Come to think of it, if she really intends not to be found, there's no chance of me finding her at all.\
 
+`"…… She said we'd meet again tomorrow."@
+` All I can do in this situation is to trust her and wait for tomorrow night.@
+`"………………"@
+` With a great uneasiness in my chest, I return to the mansion.\
 
-
-`"Shiki, you said I wasn't a full vampire, but……"@
-br
-` A sweet voice that seems to echo in the back of my head.@
-` Another step, and the footsteps stop.@
-br
-` ---You know, drinking blood is very easy.@
-br
-` I hear that voice right by my ear.\
-
-bg "image\event\ark_e05a.jpg",%type_lshutter_mid
-
-waveloop se1
-
-` Her body weight presses up against me.@
-br
-`"------"@
-br
-` My throat freezes and I can't even speak.@
-` I can only feel her breath on my neck.@
-br
-` ----It's hot like a burning fire.\
-
-`"Ar-----"@
-` I stop calling her name.@
-` With my own will, I stop.@
-` Because I know if I call out her name, she'll pull away.\
-
-`"------"@
-` Her breath is so close.@
-` Her white fingers on my shoulders are trembling.@
-br
-` ----She's, scared.@
-br
-` My mind is blank and I'm not scared at all.@
-` But, Arcueid is the only one shaking.\
-
-` I can't see her face.@
-` Just the swirling of her breath around my neck, and the feel of her trembling body against mine.@
-br
-` It changes from a weak breeze to heavy breathing.\
-
-`"Ar---cueid?"@
-`"It was------supposed to be a joke."@
-` Her voice shakes.@
-` The fingers on my shoulder cease their trembling.@
-br
-` Instead----they dig into my shoulders like a bird's talons.\
-
-`"Gah-----!"@
-` A pained gasp escapes me.@
-` But her claws do not let up.@
-` They sink in as if not allowing me to escape.\
-
-`"Arc----I'm sorry, I guess I joked around too much.@ I'm sorry----so can you, let go?"@
-`"Shi----ki."@
-` Her fingers don't move.@
-br
-` ----This isn't good.@
-` My mind screams in warning and I gather up all my strength.@
-` My arms move to push her away.\
-
-br
-br
-br
-br
-br
-br
-` Before that,
-` Pain shoots through my shoulders.\
-
-
-`"………………!!!"@
-` My arms can't move at all.@
-` Her vice-like grip on my shoulders causes my arms to go numb.@
-`"----,----,--------"@
-` …… I can feel her breath grow even wilder against my neck.@
-` Maddening.@
-` Her teeth almost touch my neck.\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-
-`"N----No……!"@
-br
-` After the grip increases one more time from her white fingers,
-` Arcueid flies back, practically screaming.\
-
-wavestop
-
-bg "image\bg\bg_28b.jpg",%type_nowaitdisp
-
-play "track09.ogg"
-
-` Panting fills the air.@
-br
-` Hard breathing echoes through the park.@
-` My ragged breathing-----Arcueid's trembling breaths.\
-
-`"Shi------ki."@
-` Her entire body shaking, she gasps as if to suck in the entire atmosphere as she stares in disbelief at her two hands.@
-br
-` Her white fingertips are now dripping with my blood.@
-` The redness flows from her fingers to her palms, and then along her arms.\
-
-`"Ah----"@
-` She looks at it, and seems to be on the verge of collapse.@
-`"…… Arcueid, just now, was----"@
-` I call out to her.@
-` Looking up from the blood on her hands, she meets my gaze.\
-
-ld c,":a;image\tachi\ark_t18.jpg",%type_crossfade_fst
-
-`"Shi----ki?"@
-`"…… Yeah, I'm here.@ Just now, was----a joke, but it seems like it went a little far."@
-` I say that, wanting to let this end just as a joke.@
-` But I guess it didn't work out.@
-`"Shiki----I, just----"@
-` Her eyes lose sanity.@
-`"Got----very thirsty----"@
-` Her convulsions become deeper, and even now----she seems like she'll crumble to the ground.\
-
-
-`"Please----go home, Shiki."@
-
-cl c,%type_crossfade_mid
-
-
-`"Hey, Arcueid……!?"@
-` With that, she starts to run.@
-` She disappears fast.@
-` Not like she ran before, where she was taking me into account.@
-` With a speed I couldn't even match if I sprinted with all my strength, she vanishes into the night towards the city.\
-
-`"----Wha…"@
-` She thinks I can just go back after seeing her like that?@
-`"That idiot----where is she going when she's in that much pain……!?"@
-` I can't just go back home.@
-br
-` Even though I don't know where to find her, I start to run after her into town.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_fst
-
-playstop
-
-
-bg "image\bg\bg_25b.jpg",%type_lcartain_fst
-
-` ----I don't see her anywhere.@
-` The city is too big, and it's nearly impossible for a single person to track her down when she leaves no trace behind.@
-` I'd be much more likely to find her if I predict where she's going to go rather than blindly searching.@
-br
-` Then----
-br
-
-
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w2000
 
 
 return

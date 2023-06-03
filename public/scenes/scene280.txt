@@ -1,126 +1,74 @@
 
-bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+bg "image\bg\bg_50.jpg",%type_nowaitdisp
 
-` ---Nothing's going to get done if I just rot here.@
-br
-` Besides, I'm not in the best health right now, so if I don't eat I'll really collapse.@
-`"Guess I'll go to the cafeteria."@
-` Thinking aloud, I get up from my desk.\
+
+`"…… Oh well.@ We're finally friends again, and if I talk to her about Arcueid, she'll probably get angry once more."@
+` For now, I have to maintain this relationship.@ I watch Senpai as she leaves and then dig into my meal.\
+
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_50.jpg",%type_lcartain_mid
+!w1000
 
-` The big rush must be over because there isn't a line.@
-` The tables are mostly full of students already eating.@
-` I glance around the room to see if there are any seats left.@
-br
-` ---And then,
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-cl c,%type_crossfade_fst
+bg "image\bg\bg_06b.jpg",%type_lcartain_mid
 
-br
-` …… I see someone who looks like Senpai.\
 
-`"----Haha."@
-` I laugh loudly.@
-` Mistaking someone for Ciel-senpai because there's a small resemblance… I truly am beat.\
 
-` I know I'm beat, but I can't take my eyes away from this person that looks like her.@
-` This person that looks like her sits at the table slurping up udon.@
-` It's curry udon too.@
-` Even her food resembles what Senpai would eat.@
-br
-`"------Ah."@
-br
-` Actually, it is Senpai.\
+` The end of the day homeroom session is over.@
+` My chattering classmates all get up from their seats.@
+`"----Well then."@
+` I should wait here a bit and see what happens.@
+` Senpai might come here, and even if she doesn't, I can go to the tea ceremony room.\
 
 bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\bg\bg_50.jpg",%type_lshutter_fst
-play "track03.ogg"
+bg "image\bg\bg_06b.jpg",%type_lshutter_fst
 
-ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
-`"----Senpai!"@
-` I dash with all my strength towards Senpai.@
-`"-------"@
-cl c,%type_crossfade_fst
-` Senpai looks up at me, then glances away quickly.@
-` She's clearly avoiding me.@
-` But, that doesn't matter.\
+` It doesn't seem like Senpai is coming.@
+` I guess I just have to go to the tea ceremony room.\
 
-`"Senpai, why are you here……!"@
-` I blurt that out because I can't even think of anything else to say.@
-ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
-`"Why am I here?@ I'm a student here, you know.@ If I don't eat during lunchtime, I'll collapse."@
-`"No, that's not what I mean, but---"@
-cl c,%type_crossfade_fst
-` I don't know what to say.@ My brain just stopped functioning.@
-` She looks away from me as if she wants to complain.\
+bg "image\bg\bg_11b.jpg",%type_lcartain_mid
 
-`"I thought it was strange for you to be here.@ Just yesterday, you said farewell, so I thought I would never see you again---"@
-ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
-`"Yes, because it was getting late.@ Students should go back home at that time, yes?"@
-` Simply.@
-` With a straight face, she says this outrageous punch line.\
-
-`"Wha---"@
-ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
-`"Or, Tohno-kun, are you saying people like me shouldn't come to school?"@
-` Her eyes, that were so devoid of emotion yesterday, look directly into mine.@
+` My legs quickly exit the classroom and head there.@
 br
-` …… A student like me?@ That's what she said.@
-` I don't know if she's really a vampire or not.@
-` But she healed from that fatal wound quickly, so she has to be something more than human, like Arcueid.@
-` You just can't say that's human.\
+` ---Well, meeting Senpai means there are a lot of things we have to talk about.@
+` About the vampire in this town, and about Arcueid.@
+` Even though I know it will be painful to talk about them, I still get excited at the chance to be with Senpai again.\
 
-` But still.@
-` To me, she is a very dear person.@
-` I still don't know exactly what kind of feelings I have for her.@
-` But with just half a day.@ It was only half a day, but just thinking she wasn't in my world anymore made me feel like reality was nothing I should care for.@
-` So---for me, she is someone I can't lose.\
-
-`"…… Senpai, I---"@
-` I'd be lying if I said all of it, but I don't care.@
-` Even if she is the same as Arcueid, Senpai is still Senpai.@ That is an absolute truth I believe in.@
-` Yes, I should say those words I couldn't say last night.@
+` I start to breathe hard----
 br
-` However, before that…\
+` I dash down towards the tea ceremony room.\
 
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_09b.jpg",%type_lcartain_mid
 
-`"Fine.@ I cannot help it if you hate me, Tohno-kun.@ But this is my daily life, so no matter what you say, I decided to do as I please."@
+` There isn't anyone here.@
+` It seems like she hasn't come here yet.@
 br
-` She speaks directly.@
-` "You don't have any complaints, right?" Senpai says and stares at me.\
-
-`"………… Huh?"@
-` Of course, no complaints here.@
-`  I feel like such an idiot worrying about it so much.@ The strength drains from my body.@
-` But more than that, I can't help but feel really happy.@
-`"…… Yeah, of course I don't have any complaints.@ Because up until now, I was ignoring all your warnings and doing as I pleased too, Senpai."\
-
-ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
-`"That is acceptable.@ Then, let's shake hands."@
-` She sticks out her hand.@
-` I don't know what she's thinking, but I take her outstretched hand.@
+` …… *pant*…… *pant*.@
 br
-` Senpai shakes it up and down.\
+` …… I think I got too excited.@
+` Sitting down on the tatami mat, I catch my breath.\
 
-ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
-`"Yes, then this is a sign that we have made peace.@ Let's stay this way, okay Tohno-kun?"@
-` She flashes a full, truly happy smile.@
-cl c,%type_lshutter_slw
-` With that, she stands up, taking her tray as she walks away.@
+` …… *pant*…… *pant*…… *pant*.@
 br
-` …… I don't know where, but she seems to be heading somewhere.\
+` My heated body doesn't cool off that easily.@
+` I painfully gasp for air.@
+` My body is drenched in sweat, and I feel terrible.\
 
-`"Ah----"@
-` After putting her dishes in their place, she exits the cafeteria.@
-` …… That's fine.@
-` I'm happy that she is still here at school, and that we've made up but---can I let things go about Arcueid, and that vampire we're hunting?@
+` My panting fills the air.@
 br
-playstop
+` There's---something weird.@
+` I've been resting for a while, but my breathing is getting worse.@
+` In the first place, why is my body tired after only running this little distance……?\
+
+monocro #ff0000
+quakey 1,100
+play "track04.ogg"
 
 
+`"---Gah!?"@
+br
+` Suddenly,
+` a stabbing pain fills my chest.\
 
 
 return

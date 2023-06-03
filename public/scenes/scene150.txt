@@ -1,70 +1,172 @@
 
 
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
 
-
-
-bg "image\bg\bg_06a.jpg",%type_crossfade_mid
-play "track03.ogg"
-
-` Fourth period class is about modern society.@
-` The mood in the classroom is somewhat lighter than usual before lunch.@
-br
-` Today is Wednesday, so there's one less hour of classes than usual.@
-` After lunch, there's homeroom and an hour of deciding what to do for the Culture Festival.@
-` What's more, tomorrow is a school holiday, so after this fourth period is over, it's practically vacation already.@
-` It's only natural for everyone to be waiting for the end-of-class bell to ring.\
-
-`"----Sleepy."@
-` I give a big yawn.@
-` The class is completely unchanged, the whole day progresses with nothing out of the ordinary.@
-br
-` Come to think of it, I've been through so many strange experiences, I almost feel odd just sitting in class.@
-` And after classes are over and night falls, I'll have to go out once more with Arcueid.@
-` Thinking of that, I really don't have the time to be fooling around here.\
-
-` I look at my reflection in the window glass.@
-` Tohno Shiki's face seems to be happy for some reason.@
-`"----Grr."@
-` I tighten my expression.@
-` It's not like roaming the streets with Arcueid is fun, so why am I acting like this?@
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-bg "image\event\ark_e09.jpg",%type_crossfade_mid
-bg "image\bg\bg_06a.jpg",%type_crossfade_mid
+` ---That's right.@
+` Preventable disasters should be stopped before they happen.@
+` Before she can start any "interesting" trouble, I have to take her off the school grounds.@
+bg "image\bg\bg_06a.jpg",%type_lshutter_mid
 
 br
-`"…… Arcueid……"@
-` There's really, something wrong.@
-` Looking out the window and into the rear courtyard, I can see an illusion of her waving her hand at me and saying "Hey".\
+`"Sensei, I feel my anemia coming, so I need to leave!"@
+br
+` I raise my hand, and after getting permission from the teacher, fly out of the classroom.\
 
-br
-br
-br
-br
-br
-br
-br
-` ----Hey, wait a minute……!\
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_04.jpg",%type_lcartain_mid
 
-bg "image\event\ark_e09.jpg",%type_tshutter_mid
 
-`"Wha, wha, wha----"@
-` I push myself onto the window and look down.@
-` I can only see the very edge of the rear courtyard,
-` but without a doubt,
-` Arcueid, in her usual manner, is at my school.\
+ld c,":a;image\tachi\ark_t08.jpg",%type_lshutter_fst
+`"Ah, you're here.@ That was a pretty fast sprint!@ You're looking pretty lively this morning, Shiki."@
+`"-----"@
+` …… My jaw hangs wide open.@
+` As I sprint into the courtyard, Arcueid greets me with her usual radiance.\
 
-`"!!!!!"@
-` I look around the classroom.@
+`"It's smaller than I expected.@ I thought a 'school' would be much bigger than this----kyaa!"@
+` I grab Arcueid's arm.@
+`"----You, come with me."@
+` Dragging Arcueid behind me, I dash to a place where people won't see us.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_05a.jpg",%type_lcartain_mid
+
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+`"Hey!@ What are you doing, taking me here all of a sudden?@ This place is no fun at all."@
+` Arcueid seems to be disappointed in this place, but it's not like school is a really interesting place to begin with.@
 br
-` ----Fortunately, there's no one who noticed the strange foreigner waving to me.\
+`"---'What are you doing?' That's my line, Arcueid."@
+` I let go of her arm and thrust my index finger towards her face.\
 
-`"What is she thinking……!?"@
-` I moan to myself as I clutch my head.@
-` But, complaining does me no good.@
-` …… There's about twenty minutes till lunch.@
-` What are you going to do Shiki?@ If you leave her alone, who knows what she'll do……!?@
+ld c,":a;image\tachi\ark_t12.jpg",%type_crossfade_fst
+
+`"Eh?@ What do you mean?"@
+`"I'm asking why you're walking around during daytime, and why you came to my school.@ You haven't even healed yet, so why can't you just settle down and rest……!"@
+ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
+
+`"But, since you said you would help me, I thought I would look for clues during the day.@ I didn't want to… make you do any extra work---"\
+
+`"Don't worry about that!@ Since I said I'd help, any extra work we'll do together, so just forget about it.@
+` …… Geez.@ You're weakest during the middle of the day yet you still leave.@ Do you just enjoy making me worry?"@
+`"Ah---I'm, sorry."@
+`"No, as long as you understand, it's okay---uh, Arcueid?"\
+
+ld c,":a;image\tachi\ark_t17.jpg",%type_crossfade_fst
+
+`"I'm sorry, for making you worry."@
+`"No…… actually, thanks."@
 br
+` I think my heart beats loudly.@
+` Arcueid apologizing like this--is a bit out of ordinary, or--I think, terribly cute.\
 
+ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
+
+`"But you're at fault too, Shiki.@ I was watching for the longest time from the courtyard, but you never noticed me.@
+` I didn't know how to get inside, so I was thinking about dashing up to where you were."@
+`"Dash up?@ You mean to my classroom on the third floor?"@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"Yes, footing wouldn't be difficult on the veranda, and it's really easy to jump up there."@
+`"------"@
+cl c,%type_crossfade_fst
+
+
+` I take it all back.@
+` As usual, she completely lacks any common sense.\
+
+`"…… Good.@ That wouldn't have been pretty if you did that."@
+` I breathe a sigh of relief.@
+` I don't think many people noticed her.@
+` In the first place, there's only a few desks that can look out into the courtyard.\
+
+`"---And?@ So why the heck did you come to my school?@ You said you were looking for clues."@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"I just felt something from around here.@ Then I picked up your scent and realized it was your school."@
+`"…… So you weren't thinking and you just came for no reason?"@
+` I give a frown.@ Is she a dog or something?\
+
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+
+`"Well excuse me!@ I came here for a reason.@ There's hardly any traces of The Dead here, so I wanted to see it for myself."@
+`"Really?@ But if there's no traces of The Dead here, then shouldn't this place be unimportant?@ There's no one at school at night, so if The Dead wanted some prey, they would go downtown, not to a school."@
+ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
+`"…… Well, that does make sense."\
+
+`"There's nothing strange here.@ I can't really sense The Dead, but since my eyes see death, I can tell without taking off my glasses."@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+`"I see.@ If you say so, Shiki, then there's nothing strange about this place, perhaps."@
+`"Not 'perhaps', definitely."@
+` Arcueid looks like she doesn't believe me.\
+
+wave se2
+
+` ----And then,
+` the chime rings announcing the end of fourth period.@
+br
+`"---Oh no, is it lunch already?"@
+` Even though most people don't stay by this grove, since it's lunchtime, there'll be lots of people walking by.\
+
+`"Anyway, if we stay here any longer, people will see us.@
+` I'll keep my promise for sure, so just go home and rest.@ We may see the 'enemy' tonight."@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"Oh?@ You sound like you want me out of here, Shiki?"@
+` She starts to look angry again.\
+
+`"Ah, that's just your imagination, so hurry on back.@ Otherwise things might get a little hairy."@
+` Go, go.@ I push her from behind.@
+`"………………"@
+cl c,%type_crossfade_mid
+` Though her eyes indicate she wants to say something, she just leaves silently.\
+
+bg "image\bg\bg_04.jpg",%type_lcartain_mid
+
+` After watching Arcueid leave, I return to the courtyard.@
+`"----Hm?"@
+br
+` What is it?@
+` Someone is looking this way.@
+br
+ld c,":a;image\tachi\cel_t06a.jpg",%type_crossfade_mid
+`"Sen…… pai?"@
+` No mistake, it's Ciel-senpai.@
+` But---why is she making that expression?@
+` She has a fearsome expression that almost makes me doubt it's actually her.@
+cl c,%type_crossfade_mid
+
+\
+
+`"---Senpai!"@
+` I call out to her as I run.@
+` Senpai simply stands there, watching me.@
+`"What are you doing here?"@
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"The same for you, Tohno-kun.@ What were you doing there?@ Lunch has just began, so for you to be back here you must have skipped fourth period class."@
+`"Of course not.@ I just flew out of the classroom, that's all."@
+` "Oh," Senpai answers without any enthusiasm.@
+` It's her normal smile, but it seems like she's glaring at me.\
+
+`"More than that, did you eat lunch yet?@ If not, would you like to eat with me?"@
+` I try and play it all off casually.@
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+`"I'm sorry, I already have someone else.@ Please ask me some other time."@
+
+cl c,%type_crossfade_fst
+
+` For an instant, she looks incredibly down as she says that.\
+
+`"…… Senpai?@ What's wrong?@ You don't look too well."@
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"No, that isn't it.@ It's just that… it's true that fun things end rather quickly, Tohno-kun."@
+cl c,%type_lshutter_mid
+` She gives a brilliant smile in contrast to before.@
+` With that, she walks inside by herself.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
 
 
 

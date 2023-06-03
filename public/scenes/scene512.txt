@@ -15,38 +15,49 @@ cl c,%type_lcartain_mid
 ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
 
 
+
 ` Bonjour!@
-` This corner is for the bad Tohno-kun, who rather easily ended up at a Dead End.@
+` This corner is for the unlucky Tohno-kun, who easily ended up in a Dead End again.@
 ` It is time for "Teach me, Ciel-sensei!"@
-` We'll be seeing a lot of each other from now on, so please give me your best regards.@
 br
-` By the way, my students are the thousands of Tohno-kuns out there all over the country, and…
+` Now, we will start second period.@
+` This time, we will present the first "Shakes 'n Shivers Animal Land" from the series that gives detailed observation of wild animals.@
+\
 
 ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+
+`"Sensei, I have a question before that.@ That name sounds really stupid.@ In Japanese, you can read your name as Chiel."@
 br
-`"What-nya?@ What's with this difference in our treatment?"@
-br
+` Question denied.@
 cl l,%type_lshutter_fst
-` Tsukihime's main heroine, Arcueid-san.@
-` Now, we will start first period!\
 
+` ----Now then, Tohno-kun.@
+` I think it's good to be prudent, but this time, it seems to have backfired.@
+` Basically, you are a hero, so a little recklessness will be forgiven.@
+` It will be forgiven, but in a case with an absurd animal like a shark, I guess you couldn't do much.@
+` You'll just have to abandon Arcueid this time around.\
 
-` Goodness, this won't do at all, Tohno-kun.@
-` This dead end is just too much, right?@
-` I know exactly how you feel when you do not wish to make friends with that suspicious vampire, but you've just got to bear with it here.@
-` In order to live, one must have endurance, and they say that if you can't beat 'em, join 'em.@ Please, just try to demonstrate the Japanese quality of not being able to say no.@
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+
+`"Heeeeyyy!@ I don't want to hear that from Chiel!"@
 br
-` Oh, and since you ended up being dog food without a chance, you'll have to restart from an earlier point and do a make-up.@
-` Also, you have freedom to choose what response you make in the alley, but I think it is not a good idea to run away.\
 
-` Well, that's all for first period.@
-` Second period will be a lecture about wild animals.@
-` It will be called "Shakes 'n Shivers Animal Land".@
-` Well then, goodbye everyone.\
 
+` ---Abandon her!@
+cl l,%type_lshutter_fst
+br
+`"Kyaah!@ No violence!"@
+br
+` Anyhow, please prepare yourself to explore the hotel alone.@
+` Inside, you'll find a whole animal kingdom.@
+` As the representative of primates, let's show the beasts what we've got.\
 
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
 
 
 return

@@ -1,9 +1,9 @@
 
 
 
-
-
 bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+
 
 ` …… no, I'll keep my promise with Akiha.@
 ` Akiha told me not to go there, and I can't break a promise just because of trifling curiosity.@

@@ -1,4 +1,5 @@
 
+
 wave se2
 
 bg "image\bg\bg_06a.jpg",%type_nowaitdisp
@@ -11,70 +12,51 @@ ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
 cl c,%type_lcartain_mid
 
 
-ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
-
-
-
-` Bonjour!@
-` And now the hint corner for the sake of the mischievous Tohno-kun who quickly ended up in a Dead End,
-` It is time for "Teach me, Ciel-sensei!"@
-br
-` Well then, now for the third of the ever-popular series, "Shakes 'n Shivers Animal Land".\
+ld c,":a;image\tachi\his_t16.jpg",%type_tshutter_mid
+`"I am deeply sorry.@ Ciel-sensei is now on her lunch break.@ Please wait until she returns."@
 
 ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
-
-`"Liar!@ I don't see any animals coming out!"@
 br
-` Denied.@
-` No Longer Human (Pet's Name), Go!@
-
-ld c,":a;image\tachi\kemo_t04.jpg",%type_lshutter_fst
+`"She's neglecting her duties and snacking on curry bread!"@
 br
-`"Killing junkie~"@
-cl l,%type_lshutter_fst
 
+ld r,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+
+`"Get over here, stupid Ciel!"@
 br
-`"Kyaaaaaaaaaaaaa………… hunyaa!"@
-cl c,%type_lshutter_fst
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
 
-br
-` Well then, the third in our animal series.@
-` Why did Tohno-kun end up dying?@
-` This time, we have brought a special guest lecturer.@ I have called in this person who was wandering about after finishing his task earlier.@
-` Professor Nrvnqsr, please go ahead.\
+`"I feel the same way, but if she is not here, it cannot be helped.@
+` You cannot do anything about someone not here, and it is just too miserable to just complain about how much Nee-san cannot clean or tidy things up.@
+` Now then, we shall begin the customary correction corner."\
 
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
 
-play "track04.ogg"
+`"…… Shiki-sama,
+` hiding things does not give good results.@
+` If you learned from this experience, please trust Hisui next time.@
 
-ld l,":a;image\tachi\nero_t03.jpg",%type_lshutter_fst
+ld c,":a;image\tachi\his_t01b.jpg",%type_crossfade_fst
 
-`"Nothing."@
-br
-` …… Um.@
-br
-`"Nothing.@ I will only speak when I am victorious."@
-br
-` …… Um, if we're here, it means you have won in a way, Professor Nrvnqsr.@
-ld l,":a;image\tachi\nero_t02c.jpg",%type_crossfade_fst
-br
-`"---I see.@ That is a sound argument.@
-` But there is nothing to be said.@ I do not know of anyone who would miss a once in a lifetime opportunity.@
-` Return to the choice before and correct yourself."\
-cl l,%type_lshutter_mid
-
-
-play "track03.ogg"
-
-` Um…… Yes, thank you very much.@
-` This concludes our fourth period lesson.@
-` Please continue enjoying the main storyline.\
-
-
+` …… That is all.@
+` I will now return to the mansion.@
+` Please continue enjoying the main storyline."\
 
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
+
+ld c,":a;image\tachi\ark_t30.jpg",%type_lscroll_mid
+
+`"Nyaaa…… That woman, I smell another cat-like character……"@
+
+cl c,%type_lscroll_mid
+
+
+
+
 playstop
+
 
 
 return

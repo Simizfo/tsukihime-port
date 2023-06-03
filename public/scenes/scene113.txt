@@ -1,234 +1,29 @@
 
-bg "image\bg\bg_34a.jpg",%type_nowaitdisp
-
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-
-`"I understand.@ Then, I will no longer ask about this.@ But, please refrain from doing anything like this ever again.@ Nii-san, you are the eldest son of the Tohno family; if you do not understand your position better, it will be very troubling."@
-`"--Hey, that has nothing to do with this.@ Besides, you're the successor to the Tohno family, so it doesn't really matter what I do.@ If you're so worried about the future of the Tohno family, you should go find a husband appropriate for the Tohno household."@
-ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
-
-`"-----"@
-` ……?@
-` For some reason, Akiha descends into silence.\
-
-`"What's wrong?@ Are you feeling alright, Akiha?"@
-ld c,":a;image\tachi\aki_t06.jpg",%type_crossfade_fst
-
-`"--It's nothing.@ If you have enough time to worry about me, please pay more attention to yourself.@ You have your chronic anemia to worry about, Nii-san."@
-`"……… Hmph."@
-` …… Well, it is true that I frequently collapse from anemia.\
-
-`"Anyway, please do not leave the mansion by yourself often.@ Even without that, the city is dangerous recently.@
-` Someone like you, who meanders about in a daze is just asking to be attacked by that serial killer."@
-`"Serial killer?--Oh, those serial killings."@
-br
-` Those serial killings where nine victims have been found.@
-` Their bodies were all drained of blood, so they call it the modern day vampire, but--\
-
-`"Oh, that's okay.@ Those incidents, they won't ever happen again."@
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-
-`"----Huh?"@
-`"It means the vampire isn't around anymore.@ That killer--is caught already."@
-`"Is that so……?@ Nii-san, how do you know about that?"@
-`"Well, I just happened to see it, but for sure, such things will not happen again."@
-cl c,%type_crossfade_fst
-
-\
-` …… Yeah, at least there won't be any more people killed by Nrvnqsr.@
-` These past two days spent with Arcueid… so many things happened I really can't say just what is right and what is wrong.@
-` But, the simple truth remains--I can say it was all for the best.\
-
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-
-`"Nii-san----?@ What happened?@ You suddenly seem very happy."@
-` Akiha looks strangely at my face.@
-`"It's nothing.@ I just feel that it's finally, finally over."@
-` A smile unconsciously creeps over my lips as I answer.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-playstop
-
-!w1000
-
-bg "image\bg\bg_33a.jpg",%type_lcartain_mid
-
-
-` It's half past seven.@
-` Akiha left twenty minutes earlier than me, by car!@
-` After eating Kohaku-san's delicious breakfast, I decide to head for school.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_32a.jpg",%type_lcartain_mid
-
-` Hisui walks with me to the gate, carrying my bag.@
-`"Well, I'll be going.@ Thanks for seeing me off, Hisui."@
-` Hisui wordlessly hands me my bag.\
-
-ld c,":a;image\tachi\his_t01.jpg",%type_nowaitdisp
-
-`"Shiki-sama, around what time will you be returning?"@
-`"You don't trust me either?@ It's okay.@ I'll definitely be back in the afternoon."@
-`"--I understand.@ Then please be careful on your way."@
-` Hisui bows deeply.@
-` Feeling a bit embarrassed about it, I leave the mansion's gate.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_fst
-bg "image\bg\bg_24a.jpg",%type_lcartain_fst
-
-
-` At the intersection there are only the figures of my fellow high school students.@
-` No young woman sitting on the guardrail like that one time.\
-
-`"--Well, of course."@
-` I probably won't ever see her again.@
-` First of all, her goal was to execute the vampire, and with Nrvnqsr gone, there's no reason for her to stay around here any longer.@
-br
-` --Just a little bit, in my chest.@
-br
-` Things like regret… and lingering affection.@
-` It is true she only brought trouble, but even still…… it was fun being with her.\
-
-`"…… What, am I stupid?"@
-` I almost got killed… What part of that would make me feel lingering affection?@
-` The wounds from last night still hurt.@
-` …… Remember back to when you almost became Nrvnqsr's food.@ You certainly don't want something like that to ever happen again.@
-
-wave se2
-
-br
-` The school bell rings.@
-`"----Crap, I'll be late."@
-` Shaking off my idle thoughts, I run to the school gate.\
-
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
-play "track03.ogg"
-
-bg "image\bg\bg_06a.jpg",%type_lcartain_mid
-
-
-` I fly into my classroom.@
-` It's still five minutes before class, so it's very noisy inside.@
-br
-`"--Whew."@
-` I take a breath and head to my seat.@
-` With this much time left, I didn't even need to run at all.@
-`"Yo, Duke of Delinquency."@
-`"………"@
-` From behind, I hear the voice I never look forward to.\
-
-ld c,":a;image\tachi\ari_t05.jpg",%type_lshutter_fst
-
-`"What's going on, Tohno?@ I never heard you were skipping class.@ It's a lot of trouble.@ You have to tell me when you skip school and go play!"@
-` Arihiko says those preposterous words with an unbelievably happy expression.\
-
-`"…… Why should I have to tell you when I don't go to school?"@
-
-ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_mid
-`"Isn't it obvious?@ When you don't show, neither does Senpai, so it's bad unless I think of something ahead of time."@
-` …… What's bad for this guy?\
-
-`"But seriously--What happened?@ Since middle school, you've had anemia, but never skipped school.@ Well, you did that cool trick several times, leaving as soon as you arrived."@
-`"It's kind of like that.@ I made it to the intersection and felt bad, so I went back home."@
-`"Hmmm… Both you and Yumizuka seem to be acting like bad students lately."@
-`"--Well, I'm guilty as charged, but…… is something wrong with Yumizuka-san?"\
-
-`"Her?@ She's been absent lately.@ She was always such an honor student, so I think she might have been stressed out.@ But I bet she can't call a raise 'cause she has a bad hand."@
-`"……………"@
-` Arihiko's words are always… very unique.\
-
-wave se2
-
-` The homeroom chime rings out.@
-br
-`"Well, I'm off.@ Since you skipped Saturday, make sure you study hard today."@
-` Arihiko leaves the room quickly.@
-` In other words, he's going to skip class today.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-!w2000
-
-bg "image\bg\bg_06a.jpg",%type_lshutter_mid
-
-
-` Morning classes end.@
-` With the bell announcing lunchtime, half the people in the classroom clear out.@
-`"…… Well then, what should I do?"@
-` Arihiko isn't here, so I should take my time and eat lunch.\
-
-ld c,":a;image\tachi\cel_t12.jpg",%type_lshutter_fst
-
-`"Oh?@ Tohno-kun, you're by yourself?"@
-`"Yeah----Senpai, did you come here to eat?"@
-ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
-
-`"Yes, I thought I would eat with everyone so I hurried over here, but----"@
-` She stares.@
-` Without any warning, she looks at my face intently.@
-cl c,%type_lshutter_mid
-
-
-br
-` I don't know what she's thinking, but she suddenly draws close to me.\
-
-`"Hey--Se, Senpai……?"@
-` She's right next to me.@
-` Almost embracing distance.@
-` Something would be wrong with my heart if it wasn't beating quickly.@
-ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
-
-`"------"@
-` Senpai doesn't say anything.@
-` She only stands right next to me----and sniffs.\
-
-`"----Huh?"@
-` …… What is she doing?@
-` Senpai then gets away.@
-cl c,%type_lshutter_fst
-
-`"…… Um, Senpai?"@
-ld c,":a;image\tachi\cel_t07a.jpg",%type_lshutter_fst
-
-`"Tohno-kun, did something happen?"@
-` She asks me with a serious look.@
-` To be blunt, I don't know what's going on.@
-`"Something…… uh, like what?"@
-ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
-
-`"I don't know.@ I don't know, that's why I'm asking."@
-` She looks up at me as if she was angry.\
-
-`"Nothing--I'm just as always.@ Do… do I seem strange today?"@
-ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
-
-`"Hmmm, I'm not sure either.@ I just thought so, so perhaps I was just imagining things."@
-`"………?"@
-` I tilt my head in confusion.\
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-
-`"Well, shall we get lunch?@ You are eating at the cafeteria today, right Tohno-kun?@ If we don't hurry, the seats will all be taken."@
-`"Ah, yeah.@ You're eating at the cafeteria too, Senpai?"@
-`"Yes, I want to eat something good today."@
-` She grins and pulls me by the hand as she starts walking.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_25a.jpg",%type_lcartain_mid
 
-` In the end, I talk with Senpai about the athletic festival in two weeks and the culture festival shortly thereafter over lunch.@
+` I go out in town aimlessly.@
+` Why the heck am I walking around here for no reason?@
 br
-` …… To tell the truth, Senpai saying, "I want to eat something good," and ordering curry leaves more of an impression in my mind than what we talked about.\
-playstop
+bg "image\bg\bg_25a.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\ark_t22.jpg",%type_crossfade_fst
+bg "image\bg\bg_25a.jpg",%type_crossfade_fst
 
-bg "image\bg\bg_06b.jpg",%type_crossfade_slw
+`"----Ah."@
+` It's just a mistake.@
+` There's no way she'll still be around, and it's not like I have any reason to talk to her.\
 
-
-` Classes end and school is over.@
-` Well, what should I do now?----
+` So why did I think it was her?@
+` Why----am I walking around town pointlessly like this?@
 br
+`"…… I have to go back to the mansion."@
+` I shake my head as if trying to clear my head of drunkenness and turn away from the nonexistent illusion of Arcueid.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 
+!w1000
 
 
 return

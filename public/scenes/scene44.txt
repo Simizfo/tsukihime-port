@@ -1,234 +1,59 @@
 
 
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
-bg "image\bg\bg_34b.jpg",%type_lcartain_mid
-
-play "track02.ogg"
-
-` When I get to the sitting room, Akiha is relaxing there alone.@
-` There's no sign of Kohaku-san or Hisui.@
-` There are two teacups on the table, and Akiha is using one of them.\
-
-ld c,":a;image\tachi\aki_t09b.jpg",%type_lshutter_mid
-`"Oh?@ Do you drink tea after meals, too, Nii-san?"@
-`"Ah, no… nothing like that.@ I just thought I'd come and talk to you."@
-` My expression tells her, "I'll go away if I'm bothering you."@
-ld c,":a;image\tachi\aki_t04b.jpg",%type_crossfade_fst
-`"Then, please, sit down.@ Is tea alright for you?"@
-`"Ah, sure; I'll have anything that's nice."@
-` I actually prefer Japanese tea, but I'll keep that bit of selfishness to myself.@
-` Akiha takes the teapot and pours transparent red tea into another teacup.\
-
-`"Thank you."@
-` I sit on the sofa, and raise the teacup to my mouth.@
-` …… Before my eyes is the cool and collected Akiha, and it makes me a bit uneasy.@
-` I came to talk to her, but to be honest, I really don't know what to say now that she's in front of me.\
-
-ld c,":a;image\tachi\aki_t01b.jpg",%type_crossfade_fst
-
-`"Nii-san?@ You're very quiet.@ Didn't you come to talk to me?"@
-` Akiha stares.@
-` The atmosphere is not so much that of a younger sister, but more like that of an unfamiliar young lady.@ It's not one in which I can speak freely.\
-
-`"Well… I was just wondering, what you have been doing for the past eight years."@
-ld c,":a;image\tachi\aki_t03b.jpg",%type_crossfade_fst
-`"It goes without saying.@ With Nii-san not around, father's attention turned solely to me."@
-` Akiha glares in complaint.@
-` It seems that the last eight years are a taboo subject.\
-
-ld c,":a;image\tachi\aki_t18b.jpg",%type_crossfade_fst
-
-`"And what about you?@ What have you been doing for eight years?@ I sent many letters, but didn't receive a single reply."@
-`"…… Ack."@
-` I choke involuntarily.@
-` Certainly, Akiha sent many letters.@
-` But I never replied.@
-` I was a poor correspondent, but at the bottom of my heart I wanted to sever all links with the Tohno mansion, and that made me reluctant to write to Akiha.\
-
-ld c,":a;image\tachi\aki_t04b.jpg",%type_crossfade_fst
-
-`"Well, don't worry about the letters.@ Even if you had answered, I'm sure father would never have allowed the replies into the house.@
-` More importantly, how do you feel, returning to the mansion for the first time in eight years?@ It has changed very little… though there was some restoration work done."\
-
-`"-----"@
-` In spite of Akiha's words, the mansion still feels completely unknown to me.@
-` Eight years ago, I was just a child.@
-` Even if I remember the mansion a little, I feel like I'm in someone else's house and it's very unsettling.\
-
-ld c,":a;image\tachi\aki_t01b.jpg",%type_crossfade_fst
-`"Nii-san?"@
-`"Ah, no, I was just lost in thought for a moment.@
-` Um, you say this mansion's changed very little, but it's pretty unsettling for me.@ Though this sitting room and the lobby are kind of familiar, I can't really remember the corridor, nor my room."@
-`"Really… I guess eight years is a long time."@
-br
-` I guess that's it.@
-` It's like half my life so far.@ I can't really expect to have clear memories.\
-
-`"Well, it's been eight years so it doesn't feel right, but I think I'll get used to it.@ I'll be thankful if you overlook my poor manners for a while."@
-ld c,":a;image\tachi\aki_t03b.jpg",%type_crossfade_fst
-`"Please, don't be ridiculous.@ I can hardly look any more leniently upon Nii-san's manners than I do already."@
-`"Buh…!"\
-
-` Ugh…… That was close.@ I almost sprayed the tea I was drinking.@
-` At supper, Akiha's look sent me into a cold sweat after all I did was use the wrong knife.\
-
-`"…… I see.@ You were being lenient back then…"@
-ld c,":a;image\tachi\aki_t21b.jpg",%type_crossfade_fst
-`"Yes.@ I am making concessions appropriate to your abilities.@ Nii-san has been brought up by the Arimas, after all.@
-` As Aunt Keiko comes from a branch family, a certain amount of laissez-faire was permitted, and you were spoiled, Nii-san.@ The result is the supper we had a while ago."@
-`"Well, it can't be helped, can it?@ We never really thought I'd be returning here."\
-
-`"…… Is that so?@ You almost sound like you didn't want to return, Nii-san."@
-`"Don't be stupid, it's not like that.@ I may have had my doubts, but I couldn't just leave you alone here, could I?@ What kind of brother would I be then?"@
-cl c,%type_crossfade_fst
-br
-
-` Yes.@ That's the reason I returned.@
-` If it weren't for Akiha, I would never have returned----\
-
-`"Since I heard nothing for almost eight years, I always wondered whether you were alright on your own.@
-` I came back to the mansion because I was worried about you."@
-` Looking a little off to the side, I put my honest feelings into words.\
-
-ld c,":a;image\tachi\aki_t16b.jpg",%type_crossfade_fst
-`"Ah… well, then, thank--"@
-`"But I guess I was just worrying over nothing.@ In the past eight years, you seem to have grown strong.@ I'm relieved, but a little disappointed."@
-br
-` No, a bit is saying too little.@
-` Since I only had the image of the calm Akiha back when she was small, the sharp Akiha right now seems like a different person.\
-
-ld c,":a;image\tachi\aki_t01b.jpg",%type_crossfade_fst
-`"---Really?@ I'm sorry I didn't meet Nii-san's expectations."@
-` Akiha's eyes are scary.@
-` …… Crap, I think I may have said too much again.\
-
-ld c,":a;image\tachi\aki_t03b.jpg",%type_crossfade_fst
-
-`"Well then, Nii-san.@ How was life at the Arima residence?"@
-` Akiha asks, still with the frightening expression.@
-` I feel like I'm under terrible pressure, even though I'm only talking to my younger sister.\
-
-`"Nii-san?@ Did you hear what I said?"@
-`"I heard.@ Life at the Arimas', right?@ It was normal, there were no real problems.@ It seems it was more suited for me living there, too."@
-ld c,":a;image\tachi\aki_t01b.jpg",%type_crossfade_fst
-`"That's not what I meant.@ How was your health?@ I have heard you collapsed a lot from your chronic anemia."\
-
-`"Ah, yeah, I did for about a year after I left the hospital, but I'm okay now.@
-` I only have problems occasionally, about once a month.@ I'm certainly not frail enough to be worried about."@
-` Bluffing, I strike my chest with its scar.@
-` Akiha nods in serious assent.\
 
 
-`"But Nii-san, you've also started wearing glasses.@ After going to the hospital, did your eyesight fail, also?"@
-`"……"@
-` …… I see.@ Akiha doesn't know I wear glasses or why I wear them.@
-` I can't just explain the lines along which things break, or that they don't appear when I wear these glasses.\
+bg "image\bg\bg_40c.jpg",%type_nowaitdisp
 
-`"Well, it's nothing.@ My eyes became a little strange after the accident.@ But it's not like my eyesight's gone bad, so it's not really a serious problem."@
-ld c,":a;image\tachi\aki_t12b.jpg",%type_crossfade_fst
-`"Really… I was… well, I was surprised when I saw you a while ago.@ I didn't know you had started wearing glasses, Nii-san."@
-`"Really?@ You seemed pretty calm back then."@
-ld c,":a;image\tachi\aki_t03b.jpg",%type_crossfade_fst
-`"Of course.@ I was meeting you for the first time in eight years; I couldn't let you see me acting strange."@
-` Akiha's brow creases sullenly.\
-cl c,%type_crossfade_fst
-
-
-wave se3
-
-
-ld l,":a;image\tachi\koha_t03.jpg",%type_lshutter_mid
-`"Akiha-sama?@ The bath is ready; what should I do?"@
-ld r,":a;image\tachi\aki_t04b.jpg",%type_crossfade_fst
-`"Really?@ Thank you, Kohaku.@ I'll go soon, so go ahead."@
-ld l,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
-`"Ah, is that alright?@ After all, you're relaxing with Shiki-sama.@ Shiki-sama might run away, but the bath won't.@ Please relax a little longer."\
-
-`"It's fine.@ We weren't talking about anything important anyways."@
-cl r,%type_lshutter_mid
-` Akiha stands, and walks past Kohaku-san into the lobby.@
-cl l,%type_lshutter_mid
-` Kohaku-san follows Akiha.@
-br
-` Left alone in the sitting room, I finish the tea.@
-` Akiha and Kohaku-san seem to be heading to the bath, so I guess I'll go back to my room.\
-
-`"…… Hang on.@ Akiha and Kohaku-san aren't going to take a bath together, are they…?"@
-` No, I bet they are.@
-` Then maybe Kohaku-san would be washing her back…?@
-` Of course, with another girl, that's no problem, but…\
-
-ld c,":a;image\tachi\aki_t18b.jpg",%type_crossfade_fst
-`"---Well, you are free to imagine whatever you wish, Nii-san, but…"@
-`"----!"@
-` Akiha returns with amazing timing.@
-ld c,":a;image\tachi\aki_t03b.jpg",%type_crossfade_fst
-`"Don't force Hisui to do stupid things.@ Unlike Kohaku, she doesn't really get jokes."@
-br
-` Akiha's looks accusingly as if she sees my thoughts.@
-` I'm surprised…
-` Maybe this mansion has some listening devices.\
-
-`"…… Wait, what are you doing back here?@ Weren't you taking a bath with Kohaku-san?"@
-`"I forgot to tell you something about the bath.@ Nii-san, the large bathroom we used a long time ago isn't used anymore.@ It would be too much for Hisui and Kohaku to take care of, so it has been closed up."@
-`"…… Large bathroom?"@
-` Was there such a place?@
-` I splutter a bit.@
-` Unable to remember, I make a doubtful face.@
-` Akiha's brows knit terribly.\
-
-`"The bath in the courtyard.@ You don't even remember that?"@
-` …… Well, now that she mentions it, I guess there was such a thing.@
-`"…… But, this is a European-style mansion.@ Isn't such a thing a little out of place?"@
-ld c,":a;image\tachi\aki_t01b.jpg",%type_crossfade_fst
-
-`"Father half-liked the Japanese-style of architecture.@ That is why the detached building is Japanese-style as well.\
-
-`"Anyway, if you want to have a bath, please use your own; the second bathroom behind the lobby is yours, Nii-san."@
-` With that, Akiha leaves.@
-cl c,%type_lshutter_fst
-br
-
-`"…… Alright."@
-` With Akiha gone, there's no point in staying in the sitting room.@
-` I'll have a bath, too, and return to my room.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
 
 playstop
 
 
-bg "image\bg\bg_40c.jpg",%type_lcartain_mid
+`"Nnn-----"@
+` Stressed from dinner, I loosen my shoulders.@
+` I stretch out as far as I can, and then collapse onto the bed.@
+`"Man, even dinner is hard work."@
+` Well, it's not like the knife and fork are really heavy.@ It's just that Akiha's gaze is really severe.\
 
-
-`"Ah---"@
-` When I return to my room, my bed has been made… I guess Hisui did it when I was gone.@
-`"I'm glad she did, but it's really more than I deserve."@
-` I scratch my cheek.@
-br
-` -------Then.\
 wave se3
 
 
 `"Are you there, Shiki-sama?"@
 ` I can hear Hisui's voice along with a knock at the door.@
 `"Yeah, I'm here.@ Come in."@
-ld c,":a;image\tachi\his_t16.jpg",%type_crossfade_mid
 `"Excuse me."@
+` Hisui enters with a bow.\
+
 ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
 play "track01.ogg"
-`"Good evening.@ Thanks for making my bed, Hisui."@
-` Hisui quietly nods in acceptance.@
-`"…… Urgh."@
-` Just as I thought, I'm not used to this.@
-`"…… Uh… is there anything else you want to tell me?"@
-`"No, nothing from me, but Akiha-sama has instructed me to answer any questions you may have."\
 
-`"…… I see.@ There are many things I want to ask, but I'll probably get to know them as I continue to live here……"@
-` Yeah.@ What I want to know right now before I sleep is---
-`"Is it true that the curfew here is seven?"@
-`"Yes.@ The main gate is locked at seven, and all the entrances to the mansion are to be locked at eight.@
+`"I have come to make the bed.@ You may not enjoy watching it, so would you mind relaxing in the sitting room for a while?"@
+`"No, I don't mind watching.@ I'll just behave myself in the corner, so just go ahead and do your job without minding me."@
+` Bouncing up from the bed, I move into a corner.@
+`"……"@
+` Hisui looks like she wants to say something, but thinks better of it and silently begins to make the bed.\
+
+`"---Hisui."@
+`"Yes?@ What is it, Shiki-sama?"@
+`"Oh, you can keep making the bed.@ There's no need for you to stand up so straight."@
+`"……"@
+` Hisui doesn't answer.@
+` It seems like she's had a servant's education drummed into her.\
+
+`"Please, just talk to me while you work.@ I'm beginning to feel bad because it seems like I'm interfering with your work."@
+`"If you say so, Shiki-sama, then I will comply."@
+
+cl c,%type_lshutter_fst
+
+
+` Hisui silently returns to making the bed.\
+
+`"Uh… is it true that the curfew here is seven?"@
+
+bg "image\event\his_e08.jpg",%type_lshutter_mid
+
+
+`"Eh---Oh, yes.@
+` The main gate is locked at seven, and all the entrances to the mansion are to be locked at eight.@
 ` It is also a rule that one must try not to go walking around in the mansion after ten."\
 
 `"Not even walking around in the mansion?@ …… Well, I've got no complaint with that, but isn't that kind of harsh?@ Akiha and I aren't children, so I don't think you have to go that far."@
@@ -237,7 +62,15 @@ br
 ` …… Yeah, that vampire thing Arihiko was talking about.@
 ` Well, as long as something like that is happening, I guess it's better to be safe than sorry.\
 
-`"What else… Oh, do you mind if I ask an off-topic question?"@
+bg "image\bg\bg_40c.jpg",%type_lshutter_mid
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Do you have any other questions?@
+` Hisui finishes spreading the sheets, and turns around to face me.@
+`"Eh… Let's see---"@
+` I have all sorts of questions, but I know nothing about Hisui and Kohaku-san.\
+
+`"Do you mind if I ask an off-topic question?"@
 `"Yes, what is it?"@
 `"I'd like to know what kind of work you and Kohaku-san do around here."@
 `"I am here to serve your needs and my sister Kohaku is to serve the Lady Akiha-sama.@
@@ -249,7 +82,7 @@ br
 ` I have no interest in having a girl close to my age serving me, at least for now.\
 
 `"…… By serving me, you mean you're a personal servant?"@
-`"Yes.@ Please do not hesitate to give me any instructions."@
+`"Yes.@ Please do not hesitate to ask anything of me."@
 `"…… Well, I get it.@ Going by how Akiha was talking about you, it doesn't seem like I can dismiss you, so I'll just obediently let you serve me…"@
 `"Is there anything in particular you would like?"@
 `"Nothing in particular, but could you stop calling me 'Shiki-sama'?@ To be honest, I get chills down my back when I hear it."\
@@ -274,7 +107,7 @@ br
 ` She completely failed to understand.@
 br
 `"I will be leaving now.@ Please rest now for tonight."@
-cl c,%type_lshutter_mid
+cl c,%type_lshutter_fst
 ` Bowing, Hisui puts her hand on the doorknob.\
 
 br
@@ -360,6 +193,8 @@ br
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 playstop
 !w1000
+
+
 
 
 

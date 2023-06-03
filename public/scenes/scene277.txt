@@ -1,30 +1,82 @@
 
-bg "image\bg\bg_01a.jpg",%type_nowaitdisp
 
-`"………"@
-` No, I have a feeling that I won't see Senpai if I wait here.@
-` If Senpai doesn't feel like seeing me, she'll leave as soon as she sees me.@
-` …… If that's the case, she won't come to school through the front gate.@
+bg "image\bg\bg_06a.jpg",%type_lcartain_mid
+
+` Homeroom is about to start, but it is still very rowdy in the classroom.@
+` I take my seat by the window and set down my bag.\
+
+ld c,":a;image\tachi\ari_t01.jpg",%type_lshutter_fst
+`"Hey, mornin'.@ You're looking pretty bad today."@
+`"…… Sheesh.@ Everyone looks at me and says the same thing.@ Do I look that sick?"@
+`"Eh---?@ …… Yeah, come to think of it, you look normal.@ I don't know, but you look really down, Tohno."@
+`"………… Down, huh?@ …"@
+
+` Certainly my spirits are low.@
+` Ever since Senpai said farewell, my body has been heavy and both my mind and body are knocked out.\
+
+`"---Arihiko.@ Did you see Senpai today?"@
+ld c,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+`"Huh?@ Senpai?@ Which Senpai?"@
+`"Which?@ …… the only Senpai we both know is Ciel-senpai."@
+`"Shiel-Senpai?@ …… Who's that?@ Are there any foreign students at our school?"@
 br
-`"…… If she even comes, it'll be through the back gate."@
-` I rush to the back of the school with this thought in mind.\
+` ----My mouth hangs open in amazement.@
+br
+`"…… Arihiko, you……"@
+` I manage to stammer this out in my confusion.@
+` But, nothing else comes out.\
 
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_05a.jpg",%type_lcartain_mid
+ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+`"You okay Tohno?@ Just spit it out.@ As long as it's not asking for money, I'll help you out."@
+br
+` Arihiko is acting like he always does.@
+` Just like always, he completely does not remember Senpai.@
+br
+`"…… Nah, it's nothing.@ Sit down, class'll start."@
+`"Oh, it's that time.@ Well, later."@
+cl c,%type_lshutter_mid
+` Arihiko goes back to his own seat and the teacher arrives.\
 
-` ----*sigh*@
-` No one is here.@
-` Not even students coming to school through the back gate.@
-` …… But, I still wait for Senpai who for sure isn't coming.\
+` Homeroom starts, followed by physics, the first period class.@
+br
+` ---I watch it like a movie on a screen.\
 
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-bg "image\bg\bg_05a.jpg",%type_lshutter_mid
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\ima_03.jpg",%type_lshutter_fst
 
-` The chime sounds once, telling me that the gate is closing.@
-` …… Senpai didn't come.@
-` I should go back before homeroom starts.\
 
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+` Senpai… really disappeared.@
+` Not just from my sight, but the person known as Ciel-senpai is gone completely without a trace.@
+` Arihiko doesn't remember her.@ …… I'm sure no one else does either.@
+` That farewell, this is what it meant.\
+
+`"--------"@
+` The movie in front of me continues playing, showing a teacher using white chalk on a blackboard.@
+` Nothing seems real anymore.@
+` Once classes are over and break time begins, that person will never come again, ever.@
+` During lunch, we will never sit in the tea ceremony room and spend the time aimlessly over lunch.\
+
+` …… Somewhere.@ I had a thread of hope, but that is gone as well.@
+br
+` I've lost Ciel completely.@
+` I still haven't---haven't done anything.@ Haven't told her anything.@
+` We spent time eating lunch together on a nice day such as today.@
+br
+` That was, a distant, precious dream----\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+!w1000
+
+bg "image\bg\bg_06a.jpg",%type_crossfade_fst
+
+` I realize the number of my classmates in the room is dwindling.@
+br
+` ---It seems it's now lunch time.@
+`"………………"@
+` I don't feel like doing anything.@
+` I feel sluggish, so I'll just---
+br
 
 
 

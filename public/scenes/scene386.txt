@@ -2,523 +2,80 @@
 
 
 
-
-bg "image\bg\bg_54a.jpg",%type_nowaitdisp
-
-
-br
-` ---I don't think death can be a way to save anyone.@
-br
-` It is an answer I've carried with me since my life was saved eight years ago.@
-` No matter how painful or hard it is, I feel happy just being alive.\
-
-` So if I live up to my belief, I cannot kill myself.@
-` It's not like Akiha has died either.@
-` If she's alive, she might get well again one day if I take care of her.@
-` I know that to give away your life that easily means you have an illusion that death is honorable.\
-
-`"------But still."@
-br
-` Still, I want Akiha to be happy.@
-` I just want Akiha to be much happier than I am.@
-` Besides,
-` I was dead eight years ago and Akiha has given me this dream this whole time.@
-br
-` So this is just about giving back what used to be hers.@
-` There's nothing to be sad about and there's nothing to lose.@
-` It's an end where everything goes back to where it came from.\
-
-bg "image\bg\bg_54a.jpg",%type_crossfade_mid
-
-
-` The autumn leaves fall.@
-` Akiha lies on the red ground.@
-` Her hair on the ground is red.@ It flows through the red leaves as if melting in them.@
-` Her face looks peaceful, as if she's having a happy dream.\
-
-`"…… Geez, don't catch a cold sleeping in a place like this."@
-` I mutter as normally as I can and look down at my body.@
-` The "lines" are throughout my body.@
-` I look to see which one would kill me the easiest.\
-
-`"…… I have to return what I have borrowed for so long.@ I've borrowed it for too long, but I can still give it back to you in time.@ Right, Akiha?"@
-` …… If this body is being kept alive by Akiha,
-` then if I am eliminated, the life should go back to its original owner.\
-
-` I place the knife on my body.@
-` My heart screams loudly.@
-` I am still scared.@
-` Since I'm scared, I look at Akiha's sleeping face so that I can go away calmly.\
-
-`"Damn---I just keep on breaking my promises with Akiha."@
-` The familiar feeling of death.@
-` My knife cuts through the "line" that will kill me the easiest.@
-` At that moment,
-` as if the thing that controlled my body malfunctioned, my whole body stops working.@
-br
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-!w500
-bg "image\bg\bg_54a.jpg",%type_nowaitdisp
-
-
-` I fall onto Akiha.\
-
-` As I start to pass out, I watch the falling autumn leaves.@
-br
-` They lay thick like snow.@
-` It might be because it is so beautiful.@
-br
-` My mind goes blank as if I am going to sleep.\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-
-
-br
-br
-` Distant moon.@
-` White, summer sun.@
-br
-` And the sound.@
 !w1000
-` The sound of cicadas.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-playstop
-
-!w4000
+bg "image\bg\bg_06a.jpg",%type_lcartain_mid
 
 
-
-
-
-
-mov $phasebg,"image\bg\cmo_05b.jpg"
-mov $phasetitle_a,":a;image\word\PAKI_13A.PNG"
-mov $phasetitle_b,":a;image\word\epi.jpg"
-gosub *left_phase
-
-
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-play "track02.ogg"
-
-
-` -----Warm sunlight.@
+` I get to the classroom, and the class starts uneventfully, as always.@
 br
-` I feel the bright sunlight coming in from the window, and I open my eyes slowly.\
+` …… There's no one at Yumizuka's desk.@
+` Even though a classmate is gone forever, class life remains unchanged.@
+br
+`"………"@
+` I become a little uneasy.@
+` Because of Hisui, I had forgotten all about that.@
+` Perhaps because of that incident?@
+` With that uneasiness, my thoughts drift towards the sky.\
 
-bg "image\bg\bg_40a.jpg",%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_06b.jpg",%type_crossfade_mid
 
 
-`"………… Hmm."@
-` I start to wake up.@
-` The sky outside the window is a clear blue, and it tells me that today is going to be a beautiful day.@
-`"Hwaa------ah."@
-` …… It might be because I slept in an unfamiliar bed, but my body feels a bit heavy.@
-` I stretch out a bit and get up.\
+` Before I realized it, the school day was over.@
+` I let out a sigh.@
+` I don't really feel like seeing Arihiko or Senpai.@
+` Right now, it seems I'm just more at ease in the Tohno mansion than in school.\
 
-wave se3
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_32b.jpg",%type_lcartain_mid
+bg "image\bg\bg_33b.jpg",%type_lshutter_mid
 
-` I hear a knock on the door.@
+play "track01.ogg"
+
+` I enter the lobby and immediately encounter Hisui.@
 
 ld c,":a;image\tachi\his_t16.jpg",%type_lshutter_mid
 
-`"Excuse me."@
-` Hisui comes in with a bow.@
-` Hisui shuts the door as if she had a lot of experience doing it.@
+`"Welcome back, Shiki-sama."@
+`"I'm home, Hisui.@ Are Kohaku-san and Akiha here?"@
 
-cl a,%type_crossfade_fst
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_mid
 
-`"Ah----------"@
-` …… A quiet morning.@
-` Looking at her acting like it was natural for her to come into this room---I feel for a while that this is my own room.\
+`"Akiha-sama has not returned yet.@ Nee-san will most likely be in the rear courtyard sweeping."@
+`"As usual.@ Well, I'll be in my room; please continue whatever you were doing."@
+`"Yes.@ Please excuse me."\
 
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-
-`"Good morning, Akiha-sama.@ Did you sleep well last night?"@
-`"Yes, I did.@ I'm sorry for saying such selfish things as me wanting to sleep in Nii-san's room."@
-
-ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
-
-`"…… No, it is no problem.@ I think… Shiki-sama is also happy for you to use this room."@
-` Hisui says this haltingly.@
-`"I see.@ You don't give up easily, Hisui.@ Nii-san should be happy that you think of him that much."\
-
-ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
-
-`"A------Akiha-sama……!!"@
-`"It is true, right?@ I'm going to get changed and go to the sitting room.@ Can you go tell that to Kohaku?"@
-`"……………… Yes.@ Excuse me, Akiha-sama."@
-cl a,%type_lshutter_fst
+cl c,%type_lshutter_mid
 
 
-` Hisui exits the room quietly.@
-` The room suddenly feels lonely.@
-` …… Nii-san did not bring any of his belongings here; there is only a bed and a desk.\
+` I head up the stairs to the second floor.@
+`"Ah, Shiki-sama?"@
+`"Hm?"@
 
-`"………… Really, how could you sleep in such an empty room, Nii-san?"@
-` I am surprised.@
-` I would have obtained for him anything he wanted, but Nii-san did not ask for anything.@
-` …… I guess he was reserving himself a bit, but he was basically a person with no desires for things.@
-` He was like that from the time we were small.@
-` He said with a smile that he did not want anything and he was happy if we were with him.\
+ld c,":a;image\tachi\his_t23.jpg",%type_lshutter_fst
 
-` But that made me uneasy.@
-` He did not leave anything and he was not restricted by anything.@
-` And he let me know as a child that to be free is to be lonely.@
-br
-`"----------Hm?"@
-br
-` I look out the window.@
-` The view Nii-san was always watching.@
-` The forest is illuminated under the blue sky.\
+`"I will be in Makihisa-sama's room sorting things out.@ If you need me, please call for me."@
 
-bg "image\bg\ima_10.jpg",%type_tshutter_mid
+cl c,%type_lshutter_mid
+
+` Hisui disappears towards the east end of the mansion.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_40b.jpg",%type_lshutter_fst
 playstop
 
-bg "image\bg\ima_03.jpg",%type_bshutter_mid
-play "track09.ogg"
 
-
-
-br
-` ----After that, I slowly woke.@
-br
-` In the garden filled with dead leaves.@
-` I slowly moved my collapsed body.@
-` …… I was still alive.@ My hair was returned to black, and I did not feel the rage in my blood.@
-` I was feeling rather well and that load I had always had in my body was lifted, I could almost say it disappeared.\
-
-` Yes, since I was a child.@
-` That load that was there since I wished to save my brother, was gone, as if it never existed.@
-` …… That load was painful for me, but it was also a load that relieved me.@
-` I always had only half of my energy and I always felt a load, but I was happy.@
-` Because that load was Nii-san, and I could feel Nii-san as long as I felt the load.\
-
-` But that started to feel really light.@
-` I looked around the garden.@
-` I could not see Tohno Shiki anywhere in that night of falling leaves.@
-` Then, I understood.@
-` Why I was able to live.@
-` Why Tohno Akiha returned to the original Tohno Akiha.\
-
-bg "image\bg\ima_10.jpg",%type_tshutter_mid
-playstop
-
-bg "image\bg\bg_40a.jpg",%type_bshutter_mid
-
-
-`"……………………"@
-` It is really nice outside and I can't stay like this forever.@
-` I have to change and eat breakfast so I can get to school on time.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-bg "image\bg\bg_34a.jpg",%type_lcartain_mid
-play "track02.ogg"
-
-
-` I come down to the dining room and finish my breakfast.@
-` It is only a little past six.@ I should be able to relax for a few more minutes.\
-ld c,":a;image\tachi\his_t18.jpg",%type_lshutter_fst
-`"Akiha-sama."@
-`"Hmm?@ What is it, Hisui?@ Would you like to relax too?"@
-`"………………"@
-` Hisui looks at me with an angry expression…… no, it's more like she's staring at me.@
-` It is a bit unusual for that calm Hisui.@
-`"…… It does… not seem like you would like to join me for some morning tea.@ Is there something you would like to say?"@
-`"…… Yes.@ Please forgive my rudeness, but why did you transfer schools again, Akiha-sama?"\
-
-` -----I see.@ It's about that.@
-` The fact that I have transferred back to my original school must mean something to Hisui since she does not believe Nii-san has died.\
-
-`"Why do you ask?@ I transferred to that school since Nii-san was there.@ Now since that reason is gone, it is only natural for me to go back."@
-ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
-
-`"…………………………"@
-` It does not look like Hisui is convinced.@
-`"Or what is it?@ Are you saying I should have stayed at that school even though Nii-san isn't there?"@
-`"………… Yes.@ it is not like Shiki-sama has died.@ If such a thing is done, Shiki-sama will feel sad."\
-
-`"Impossible.@ How can someone who's not here anymore feel sad, Hisui?"@
-cl c,%type_crossfade_fst
-
-` I get up from the sofa.@
-` …… It's still a bit early but I should leave.\
-
-`"Hisui, can you tell Kohaku to get ready?@
-` Oh, and I will probably live in the dormitory from now on, so I will leave you two in charge of the mansion.@
-` I will make it official within this week, so I will give you the details when I come home."@
-`"-----------Akiha-sama!"@
-`"Yes?@ What else do you have to say, Hisui?"@
-ld c,":a;image\tachi\his_t21b.jpg",%type_crossfade_fst
-`"…… Akiha-sama…… are you going to forget about Shiki-sama?"@
-`"No, but it's a waste of time thinking about someone who is not here anymore."\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-
-
-` I leave the room.@
-` I walk to the lobby, feeling Hisui's eyes on my back.\
-
-bg "image\bg\bg_32a.jpg",%type_lcartain_mid
-ld c,":a;image\tachi\koha_t03b.jpg",%type_lshutter_mid
-
-
-`"Please take care on your way, Akiha-sama."@
-` Kohaku walks me to the gate and bows.@
-`"I'm going.@ I will be back this afternoon, so we can talk then."@
-ld c,":a;image\tachi\koha_t12.jpg",%type_crossfade_fst
-
-
-`"Yes, but it's a bit regrettable since I will no longer be able to see you off anymore like this."@
-`"…… Geez.@ Even you say that.@
-` This is just like before Nii-san came.@ I only came back on the weekends back then."@
-`"That's true, but now that Makihisa-sama is dead, there's no reason for you to come back here, Akiha-sama.@
-` You will only come back during long vacations, right?"\
-
-`"-------Yes, I would think so."@
-` I nod and feel that I can not hide anything from Kohaku.@
-` The only reason I came back to the mansion was because my father wanted me to.@
-` Now that Father is dead and I do not have responsibility as the successor until I graduate, there is no reason for me to come back to this mansion.@
-` Because when I graduate, I will live in this mansion for the rest of my life.@
-` It's stupid to let go the last free time of my life.\
-
-`"But I won't hire anyone else.@ Please keep up your good work, Kohaku."@
-ld c,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
-
-`"Yes, please come back here at least once a month, Akiha-sama."@
-`"----Okay, I'll try."@
-` It's time.@
-` My driver knocks on the door to tell me it is time to leave.\
-
-`"…… Akiha-sama?@ Is it really alright?"@
-`"What are you talking about?@ Are you going to say what Hisui has said to me too, Kohaku?"@
-`"---No, it's alright then.@ Take care, Akiha-sama."@
-cl c,%type_crossfade_fst
-
-` Kohaku bows.@
-
-` Leaving her in front of the gate, the car starts to drive down the hill.\
-playstop
-
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-bg "image\bg\ima_03.jpg",%type_crossfade_mid
-play "track07.ogg"
-
-
-` ----I look at the flowing scenery.@
-br
-` Are you going to forget everything, Akiha-sama?@
-br
-` I did not say anything when Hisui asked me that question.@
-` Because it's each person's choice.@
-` It doesn't matter to me if Hisui does or does not believe in Nii-san's death.@
-` Hisui wishes that Nii-san is alive… it's like wishing for a full count, game winning grand slam.@
-` …… Seeing that my thoughts are meaningless, I laugh at myself.@
-` Because, that is also my wish.\
+` Putting down my bag, I take off my jacket.@
+`"…… Well, then."@
+` There's still time until evening, so what should I do?@
 
 br
-` ---Are you going to forget about Shiki-sama?@
-br
-` Should I have answered that it will never happen?@
-` I know it is impossible for Nii-san to be alive.@
-` Because the only way for me to turn back is for Nii-san to give back his life.@
-` I know that fact more than anybody----but still, I am believing in him just like Hisui.\
-
-`"…… Because it's still there."@
-` I look up at the sky.@
-` …… The heartbeat that was there since I gave Nii-san half of my life.@
-` The load that felt like I had another heart in me.@
-` The beating is still there.@
-` …… It is really weak and faint, but it is still there.@
-` It does not beat and it feels like a rock, but I am certain it is still there.\
-
-` So while I am disagreeing, I believe more than Kohaku or Hisui or anyone else in the world that Nii-san is still alive.@
-br
-` He is going to come back one day.@
-` I should go back to my normal life since there are no problems-----\
-
-playstop
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-!w4000
-
-bg "image\bg\bg_48b.jpg",%type_lcartain_mid
 
 
-` -----I come back to the mansion.@
-br
-` I believe there will only be a few more times that I will be coming home like this.@
-`"…… I got here earlier than I thought."@
-` I think aloud and allow myself some sentimentality.\
-bg "image\bg\bg_42b.jpg",%type_lcartain_mid
-bg "image\bg\bg_54b.jpg",%type_lcartain_mid
-
-play "track08.ogg"
-
-` I am in the forest.@
-` I have not set foot in this place since that night.@
-br
-` …… There are too many memories here.@
-` The garden me and Nii-san played around as children.@
-` The night when we snuck out of the mansion to watch the stars.@
-` The enclosure of the trees when I talked with Nii-san when he came back.@
-br
-` ---And the forest where I woke up in after that incident.\
-
-`"…… He really is an idiot.@ I told him so much to kill me, and still----"@
-br
-` Nii-san chose to sacrifice himself.@
-` I knew he would have chosen to do that.@
-` That is why I made him promise, but Nii-san did not listen to a word of what I said.\
-
-`"Yeah, he was like that since he was a kid.@ Nii-san only did what he believed was right.@ …… He always sacrificed himself for others."@
-br
-` -----Yes.@
-` Whenever Hisui or I were scolded by Father, Nii-san took our blame.@
-` When I was about to be killed by SHIKI, he saved me.@
-playstop
-
-br
-` And when I could not turn back.@
-` I didn't even ask him to, but----\
-
-bg "image\event\aki_f01.jpg",%type_crossfade_fst
 
 
-`"………………!!"@
-` I stop the tears that were about to come out.@
-` I am not sad.@
-` Rather, I am mad.@
-` I am really mad this time.@
-` He only thinks about himself and does not take into account how I feel.\
-
-`"…… I really won't forgive him this time."@
-` But when the person to say that to is not here…
-` To where should I release my emotions?@
-` Nii-san is not here.@
-` There is no feeling that he is going to come back.@
-` The warmth in my heart is gone, and only the weight of what seems to be dead remains---
-br
-`"-----That's the only certain thing in me."@
-br
-` I feel uneasy when I think about it.@
-` I feel like giving up thinking that it might be useless no matter how much I try.\
-
-` ---I believe that Nii-san is alive somewhere.@
-br
-` The load inside me is really faint now, but it is still there.@
-` So I want to believe he is alive.@
-` I want to believe, but---\
-
-`"---But Nii-san, if it's this quiet, I feel like I might forget someday, and I---"@
-br
-` …… I am waiting for Nii-san.@
-` But it is hard to keep my belief in him.@
-` The load still in my chest.@
-` While it might be a proof that Nii-san is alive, I am scared that it might be a proof that Nii-san is dead.\
-
-`"…… Geez, I can't let anyone see me like this."@
-` I let out a breath and decide to head back to the mansion.@
-br
-` ---And then,
-br
-` I hit something with my feet.\
-
-`"…………… Huh?"@
-` I could not see it under the leaves, but something is there.@
-`"………………… Hey."@
-` Some metal blade that shines in the setting sun.@
-` …… Is it a hand sickle or something?@
-` It's dangerous for Kohaku to leave tools lying about---
-`"-----------"@
-` No, it's not.@
-` As I notice, I forget to breathe as I pick it up.\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-
-wave se0
-bg "image\bg\bg_54b.jpg",%type_crossfade_fst
 
 
-br
-br
-br
-br
-br
-br
-br
-` ----------Thump.\
-br
-br
-br
-br
-br
-br
-` Yes, only once.@
-` When I grabbed the knife, what was dead inside me came alive.\
-
-` …… I do not know what kind of connection it was.@
-` Was there a special connection between him and the knife?@
-` But still, for a moment.@
-` I could feel his heartbeat inside me as I used to.@ No, stronger than ever before.\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-play "track07.ogg"
-
-bg "image\event\aki_f02.jpg",%type_crossfade_mid
-
-`"------------Ah."@
-` Something warm flows down my cheeks.@
-` Even after noticing it is my tears, I still do not wipe them away.@
-br
-` ---------He's alive.@
-br
-` With just that fact, I cannot think.@
-` I don't know where he is.@
-` He doesn't tell me how he is doing.@
-` But I know.@
-` Nii-san is alive.@ It was only once, but I certainly felt Nii-san's warmth and I was able to embrace it.\
-
-` I take a deep breath and swallow my words.@
-` …… I can believe.@
-` That heartbeat is enough.@
-` No matter what happens in the future, I feel like I can believe in Nii-san and wait for his return.@
-br
-` ----That makes me real happy.@
-br
-`"…… Yes, I will hold on to it for you, Nii-san."@
-` I put away the knife that said "Nanatsu Yoru", and turn my back to the forest of memories.\
-
-` The forest is tinted red.@
-` I say goodbye to the forest which carries so many memories.@
-` Because I can make new memories, and there are things I must do.@
-` I won't be indulging in sentimentality anymore.\
-
-br
-br
-br
-br
-br
-` -------Now then.@
-` I go back to the normal life I am having as myself.@
-` And, no matter how long it may take,
-` I am going to believe that he will come back some day, and keep waiting for him until he does-------\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_slw
-playstop
-
-!w3000
-
-cl a,%type_waitdisp
-bg "image\word\fin.jpg",%type_crossfade_slw
-
-resettimer
-waittimer 3000
-
-mov %rockending, 0
-
-gosub *ending
 
 
 return

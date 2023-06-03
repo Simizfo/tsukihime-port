@@ -1,222 +1,148 @@
 
 
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
 
 
-bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
 
-` I start to breathe heavily.@
-` …… I won't move.@
-` Right now, if anything…
-` If anything moves right now---I'd be admitting I'm insane, and it's scaring me.@
-` My brain might have gone numb.@
-` If I stay like this---I am thinking stupidly that the storm will be over----
-
-wave se0
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-
-` My whole world starts to flicker.@
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-
-` Just like a police car's siren, everything revolves, red and black.@
-wave se0
+` ---I'll walk around the night-shrouded town and find the serial killer.@
+br
+` Then, I can prove that my dreams were just dreams.@
+` Because if I find the killer…
+` …… Then all the incidents must be the work of that killer.@
+br
+`"……… Alright."@
+` For safety's sake, I put my knife in my pocket and start my investigation.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
-
-`"Ah-------"@
-` My    head    hurts.@
-bg "image\bg\ima_11b.jpg",%type_crossfade_mid
-
-`"I'm tired---I'm just tired, that's all."@
-` I say    so    to myself.@
-wave se0
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-
-` I collapse    onto the bed.\
-
 !w2000
-bg "image\bg\bg_40c.jpg",%type_crossfade_fst
-
-!w3000
-wave se3
-
-
-`"Shiki-sama, have you returned?"@
-` …… A voice like Hisui's wakes me up.@
-`"Shiki-sama, please excuse me."@
-` …… Someone enters my room.@
-` But, it hurts so much.@
-wave se0
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_40c.jpg",%type_crossfade_fst
-
-` I can't make out who it is.\
-
-`"Please forgive me.@ I did not realize that you had returned, so I was unable to greet you at the door."@
-
-`"…… No, that's, fine---leave me alone, please."@
-
-`"Shiki-sama, are you feeling sick?"@
-`"---Ah.@ I don't really…"@
-` …… know.@ I can't finish my sentence.@
-`"…… Sorry.@ I feel----bad.@ I want, to, sleep, is there, any, medicine?"@
-`"Yes, I will go get some."\
-
-!w2000
-ld c,":a;image\tachi\his_t18.jpg",%type_crossfade_fst
-
-`"Thank you for waiting.@ Please drink this."@
-`"Thank you, as always, and sorry."@
-` With eyes that can't quite see too well, I take the water and the powdered medicine Hisui brought me.@
-` For some reason, there are two kinds of medicine.@
-` …… I don't care, so I put both of them in my mouth and drink the water.@
-ld c,":a;image\tachi\his_t29.jpg",%type_crossfade_fst
-
-` Apparently, it works fast; I start to feel sleepy already.\
-
-`"…… I'm going to sleep.@ Until tomorrow----"@
-`"Don't worry, no one's going to bother you, Shiki-sama."@
-` Hisui giggles and I sense her walking away.@
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-
-` My consciousness starts to swim.@
-br
-` ---I'll go to sleep.@
-` My head hurts so much right now---I don't even care if I see those bad dreams or not.\
-!w4000
-
-
-
-mov $phasebg,"image\bg\cmo_14.jpg"
-mov $phasetitle_a,":a;image\word\PHIS_07B.PNG"
-mov $phasetitle_b,":a;image\word\day_07.png"
-gosub *left_phase
-
-
-
-!w1000
-bg "image\bg\bg_25b.jpg",%type_tshutter_mid
+bg "image\bg\bg_25b.jpg",%type_lcartain_mid
 play "track06.ogg"
 
 
-` ---I am in the night-shrouded town.@
+` -----I go out into the night-shrouded town.@
 br
-` I got here somehow.@
-` Is this a dream?@ If so, why am I here?@
-`"-------"@
-` No, the reason is clear.@
-` I'm out on the streets in the middle of the night because of the killer---in order to look for the killer and find the killer.\
+` There isn't exactly a way to search for the serial killer.@
+` The only thing I can do is wander the streets and look for anything suspicious---or I use myself as a decoy to bring out the killer.@
+br
+`"………………"@
+` After what happened with Yumizuka, maybe I've become numb to danger.@
+` Since the serial killer is just a human, I can roam the streets without any nervousness.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_27b.jpg",%type_crossfade_fst
-
+bg "image\bg\bg_27b.jpg",%type_lcartain_fst
 
 ` I wander around aimlessly.@
-` I wonder how late it is?@
-br
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_26a.jpg",%type_crossfade_fst
-
-` …… I don't see anyone suspicious.\
-br
-bg "image\bg\bg_12b.jpg",%type_crossfade_fst
-
-` …… There's no point in coming here.@
-br
-bg "image\bg\bg_24c.jpg",%type_crossfade_fst
-
-` …… I don't see any sign of the killer.\
-
-bg "image\bg\bg_25b.jpg",%type_crossfade_fst
-
-`"---------"@
-` …… My legs become heavy.@
-` Somehow, everything feels unreal.@
-` The atmosphere is getting weaker.@
-` Time is degrading.@
-` My sense of people around me becomes dreadfully surreal.@
-br
-bg "image\bg\bg_30b.jpg",%type_crossfade_fst
-
-` …… But the sense of smell feels real.@
-` The odor that tugs at my nostrils.@
-` It's floating from over there.\
+` The time is about eleven at night.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
-monocro #ff0000
-bg "image\bg\bg_31b.jpg",%type_nowaitdisp
+bg "image\bg\bg_26a.jpg",%type_lcartain_fst
 
 br
-` ----That was the final stop.@
 br
-` Just like my dream from last night, a dead body of someone I don't know is there in the back alley.\
+` …… I don't see anything suspicious.@
+` The clock has by now gone past midnight.\
 
-` It's a woman.@ Her face is scraped from her chin to her nose, and I can't tell now if she is beautiful or not.@
-` The flowing blood is incredibly sticky, and it reminds me more of red jelly than liquid.@
-` From her body, her internal organs bloom out like the legs of an octopus.@ The pink mass of dead organs shines and looks warm.@
-br
-` In front of that corpse,
-` a black, truly black figure is crouched and seems to be crying.\
-
-`""-------Who are you!?""@
-` Our voices overlap each other.@
-` I ask him who he is, and he asks me who I am and turns.@
-`""I am----""@
-`"A killer." …… But which one of us said that?@
-br
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_12b.jpg",%type_lcartain_fst
+
+br
+br
+br
+br
+` …… There's no use coming here.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_24c.jpg",%type_lcartain_fst
+
+br
+br
+br
+br
+br
+` …… Damn it.@ I don't see anyone that looks like a killer.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_25b.jpg",%type_lcartain_fst
 
 
-` Well, after all, this is a dream.@
-` So I play around a bit, and with a small amount of hope, I say that I am the killer.\
+` *pant*…… *pant*…… *pant*…… *pant*\
+br
+br
+br
+br
+br
+br
+` ------I'm starting to get really annoyed.@
+br
+` Why can't I find anyone like that?\
+
+` That's not the person.@
+` That's not the person.@
+` That's not the person.@
+` Unable to stand it, I put my hand in my pocket, gripping my knife.\
+
+` That's not the person.@
+` That's not the person.@
+` That's not the person.@
+` That's not the person.@
+` That's not the person.@
+` That's not the person.@
+` That's not the person--------
+
+`"-----Eh?"@
+` For a brief instant, I see the face of a man with bloodshot eyes.@
+` …… It's nothing.@
+` It is merely my reflection off of a show window.@
+`"--------"@
+` How-----stupid.@
+` Gripping my knife.@
+` Breathing out of control.@
+` Unconsciously acting exactly like the killer in my dreams.\
+
+`"No------!"@
+` No.@ I didn't want to do these kinds of things.@
+`"Damn it…… What am I doing…………!?"@
+` …… Seriously, what am I doing?@
+` If I didn't recognize my face like that, I would---I would really, take anyone and…
+br
+` Tell myself it is the killer and would have killed anyone.@
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+
+
+`"Tsk---------"@
+` I start to run.@
+` I can't stay here.@
+` I won't find out anything this way.@
+` I---there's something wrong with me---\
 playstop
 
-bg "image\bg\bg_31b.jpg",%type_crossfade_fst
-waveloop se1
+bg "image\bg\bg_40d.jpg",%type_lshutter_mid
 
-
-`"Eh---------?"@
-` The dark figure tilts his head, puzzled.@
-` The man crouching in front of the dead body looks at me, as if trying to compare the two of us.@
-` During that moment,
-` in that emptiness, I get certain.@
-`"--------Heh."@
-` A laugh escapes my throat.@
-` This man is a fake.@
-` The puzzled figure in front of the corpse, and myself not feeling anything.@
-` If you ask which one of us is more like a killer, the answer is simple.\
-
-`"…… Is it you?"@
-` The man says with trembling voice.@
-` I stifle my laugh and naturally, as if I'm shaking his hand, stick my knife into his chest.@
+` I breathe heavily.@
 br
-` ---------Eh?@
-br
-` A voice shows his surprise.@
-` Even though he's about to get killed, he is sluggish enough not to move.@ It makes me sick that this guy was calling himself a killer like that.\
+` I reach my room as if running away, and I collapse onto my bed.@
+`"Da……!"@
+` In the end, I didn't solve anything.@
 
-bg "image\bg\ima_12.jpg",%type_lshutter_fst
+` …… I start to get sleepy.@
+` All I can do is try to sleep deeply so that I won't dream at all.\
 
-
-` I vomit as I slice him.@
-` Like a paper doll, he crumbles to pieces.\
-` Like a pouring bucket full of water, his blood paints my body crimson from head to toe.@
-br
-` Drip drip, drip drip.@
-br
-` His blood drips from my hair.\
-
-bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 
-` I let out a deep breath.@
-br
-` Before my eyes is yet another dead body.@
-` In my hands is my steaming knife.@
-` The killer is dead, and the town is now safe like before.\
+!w3000
+waveloop se10
+
+bg "image\bg\bg_26a.jpg",%type_nowaitdisp
+
+
+` *pant*---*pant*----*pant*\
+
+` I feel like I am being watched.@
+` I.@
+` With bloodshot eyes, I look at the people walking down the streets.\
 
 br
 br
@@ -224,30 +150,117 @@ br
 br
 br
 br
-` ---But that still leaves me.\
+` ---Maybe it's because of the time?@
+`   Compared to last night, there's hardly anyone around.\
 
-` Even if the town returns to normal, I still remain affected.@
-br
-` The killer still exists.@
-br
-`"………… Let's go home."@
-` Yes, I should go home.@
-` Affected as I am, I should go back to the mansion.@
-` Nothing has changed.@
-` I'll live normally as Tohno Shiki, and continue the nightmare at night.\
+` …… Someone is watching me.@
+` I can't find what I'm looking for.@
+` Again.@ Tonight, I can't find the person I'm looking for.@
 
 br
-` ---Really, nothing at all.@
 br
-` It's just a matter that instead of dream becoming a reality, it's just that I won't wake up from my dream anymore.@
+br
+br
+#ff0000
+`      I'm starting to get annoyed.\
+#ffffff
 
-monocro off
-bg "image\bg\ima_18.jpg",%type_crossfade_fst
+` I pant heavily.\
+
+` I should change my spot.@
+` I'm going to stop looking in town.\
+
+bg "image\bg\bg_24c.jpg",%type_crossfade_fst
+
+
+` I go from roof to roof and end up somewhere crowded.@
+` …… Looking from the roof of the highest house, I scan the streets.\
 
 br
-` I think I heard the faint chuckle of a small girl.@
-` That's just a trivial matter, though.@
-` I have to go to sleep, and wait for my dream to continue again tomorrow night----\
+br
+br
+br
+br
+br
+br
+#ff0000
+`             Don't look!\
+#ffffff
+
+
+`"----There."@
+` I see a person walking alone.@
+` A woman.@
+` This time, there can be no mistake…
+` It'll be great if it's Akiha.\
+
+#ff0000
+
+br
+br
+br
+br
+br
+br
+br
+`        Don't look at me.\
+#ffffff
+
+` No, it really doesn't matter.@
+` Once more.@
+` Once more, I want to taste that wonderful sensation----\
+
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+wave se12
+
+
+bg "image\bg\ima_12b.jpg",%type_lshutter_fst
+
+
+` I kill her from behind, taking care not to damage her body.@
+` Holding her long hair, I drag Akiha's body.@
+
+bg "image\bg\bg_22c.jpg",%type_lshutter_mid
+
+
+` *pant*----*pant*----*pant*
+` Biting into Akiha's neck, I suck her blood.@
+
+br
+` ---Boring.@
+` This is nowhere near as exciting as last night.@
+` If her hair is this short, it's not Akiha at all.\
+
+`"…… Boring……!"@
+` I start to get pissed off.\
+` Even though I slice the body into pieces, I'm still mad.@
+` Impostor.@
+` This impostor pisses me off.\
+
+#ff0000
+
+br
+br
+br
+br
+br
+br
+br
+`         Stop watching me!\
+#ffffff
+
+` *pant*----*pant*----*pant*----
+br
+` I've used up extra energy.@
+` Soon, dawn will arrive.@
+` Once it becomes morning, Shiki will awaken.@
+br
+`"I'm tired tonight.@ I'll start again, tomorrow."@
+` Yeah, that'll do.@ That's what I'll do.\
+
+` Now then.@
+` Before the morning comes, before any one realizes, I must go back to school----\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 wavestop
@@ -258,10 +271,5 @@ wavestop
 
 
 
-cl a,%type_waitdisp
-bg "image\word\end.jpg",%type_crossfade_slw
-
-resettimer
-waittimer 3000
 
 return

@@ -1,131 +1,48 @@
 
-mov $phasebg,"image\bg\ima_09.jpg"
-mov $phasetitle_a,":a;image\word\PCEL_05A.PNG"
-mov $phasetitle_b,":a;image\word\day_05.png"
-gosub *right_phase
 
-bg "image\bg\ima_11.jpg",%type_crossfade_slw
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
-
-` I feel the morning sunlight.@
-` I keep my eyes closed as I try to fall asleep again, but the gentle sunlight keeps urging me to open my eyes.@
-br
-` ---Slowly, I start to awaken.\
-br
-
-bg "image\bg\ima_05.jpg",%type_crossfade_fst
-
-` A quiet atmosphere.@
-` The air is comfortably cold, and the sunlight is warm enough.@
-` I guess the weather will be great today.\
-
-br
-` ---Then, I should get up and go to school.@
-br
-` That's right, I have to go to school.@
-` The past three days, my life was chaos and it made me forget I was a student.\
+bg "image\bg\bg_22b.jpg",%type_lcartain_mid
+play "track01.ogg"
 
 
-bg "image\bg\bg_40a.jpg",%type_crossfade_slw
+` I walk along a different path than the one I usually take.@
+` Passing through unfamiliar streets, I slowly approach the Tohno mansion.@
+` The surroundings are not completely unfamiliar.@
+` After all, I had lived here until I was nine years old---eight years ago.@ This is not the first time I have taken this path back to the mansion.\
 
-play "track02.ogg"
+` My feelings are a little complex.@
+` The path home is nostalgic, yet fresh.@
+` Up until just now, I had not looked forward to returning to the Tohno household.@ Now, it doesn't seem so bad.\
 
-`"…………"@
-` I wake up.@
-` I'm lying on my bed, and my glasses are on the bedside.@
-` I automatically put them on and look around.@
-` The sunlight streams so strongly in through the window, I almost expect to hear it pouring through.@
-`"----"@
-` I take a quiet breath.@
-` I fill my lungs with fresh air, and it feels like my chest is purified.\
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
 
-` I hear the clock ticking.@
-` Small birds chirp in the woods outside.@
-` I stay on my warm bed, aimlessly feeling the relaxed passage of time.@
-br
-` -----This is, of course, another peaceful day.@
-br
-`"……………"@
-` But, I feel a bit unsatisfied.\
-` Although I'm back in this calm morning, I---feel that there is something that seems out of place.\
+bg "image\bg\ima_17.jpg",%type_crossfade_mid
 
-` Even though I killed that vampire with the black coat and everything is back the way it was---I'm feeling that something is missing.@
-`"…… That's ridiculous."@
-` I shake my head, and shake off that unimportant thought.@
-br
-` ---And then.@
+` …… The house I lived in until I was nine years old.@
+` Right now, my sister Akiha is in that utterly un-Japanese, western-style mansion.@
+` Tohno Makihisa---My old man who hated me, and the master of the Tohno household, died a few days ago.\
+
+` My mother died from illness after Akiha was born, so the Tohnos had dwindled down to me and my sister.@
+` Being the eldest son, you would think I would stand to become the Tohno heir, but I have no such privilege.\
+
+` To become the Tohno heir means being bound by a strict upbringing.@
+` I have lost count of the number of times my father had scolded me over my dislike of not being able to live freely.@
+` That was when I got involved in that accident, and my body became weakened… My father saw it as a good opportunity to get rid of me.@
+` His reasoning was something along the lines of "someone who could die any moment can't become the heir, even if he is the eldest son".@
+` Sadly for my father, I betrayed his expectations by making a recovery, but my sister Akiha was already deemed to be the heir to the Tohno household.\
+
+` And so I've heard that Akiha, who was already being raised harshly in order to become a proper daughter of the Tohno household, received an even harsher upbringing since then.@
+` That was a long time ago---I played together with Akiha in the mansion back before the accident.@ After that, I never saw her again.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+bg "image\bg\bg_22b.jpg",%type_lcartain_mid
+
+` …… The life in the mansion I abandoned eight years ago.@
+` Those eight years were long, and my memories of that time have largely faded.@
+` But in spite of that, there is one thing that even now continues to burn strongly within my heart, and that is-----
 br
 
-
-ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
-
-
-` "Good morning, Shiki-sama."\
-
-`"Uwaaaa!"@
-` I jump up in my bed.@
-` Now that I look, Hisui is standing quietly at the side of my bed.@
-`"Hi-HiHi-Hisui---"@
-`"…… Please excuse me, Shiki-sama, but since you did not notice, I spoke."@
-`"Ah---well, I mean, I'm sorry, too."@
-` Hisui respectfully bows to me.@
-br
-` ---Sh-she surprised me.@
-` My heart is still pounding rapidly.\
-
-`"---Huh?@ But it's still before seven o'clock, Hisui."@
-`"Yes.@ It is a bit earlier than your usual waking time, Shiki-sama."@
-`"Well, yes---then why are you here, Hisui?"@
-`"I came to wake you up.@ Akiha-sama wants to know what have you been doing these last two days so she wanted me to bring you no matter what."@
-`"-----Ah."\
-
-` …… I forgot.@
-` Come to think of it, I skipped school last Saturday and was with Arcueid through all of Sunday.@
-` What's more, I came back late last night, snuck in like a burglar, and then went to sleep.\
-
-`"…… Don't tell me, Akiha's angry……?"@
-`"I do not know.@ Please confirm for yourself, Shiki-sama."@
-br
-` ---Hisui's voice sounds very cold.@
-br
-`"…… Hisui, you knew I came back?"@
-`"Yes.@ I noticed when you returned early this morning around two o'clock.@ We saw you on the security camera when you were climbing the gate, Shiki-sama."\
-
-`"---Um, does Akiha know this?"@
-`"No, only Nee-san and I know this."@
-`"That's---good."@
-` …… Anyway, I think I avoided the worst possible situation.@
-` However, it's still pretty bad.@
-` Not informing her what I've been doing these last two days and returning in the middle of the night, it's pretty bad.\
-
-`"---Alright.@ I'll head down immediately.@ Umm…… and, if possible, I'd be happy if you tried to calm her down as much as possible."@
-`"Akiha-sama already appears calm.@ I think it will be difficult for my words to calm her even more."@
-`"---"@
-` Ugh, one problem after another?@
-` I just got done with Nrvnqsr, so I never thought I would face another life and death battle without even a rest break.\
-
-` Well, time to get up.@
-` I can't do anything staying in bed.@
-`"I'll go after I change, so please go ahead, Hisui.@ …… It's alright, I won't run."@
-`"---Well then, we will be waiting for you."@
-
-
-cl a,%type_lshutter_mid
-
-
-br
-` …… *sigh*@
-` Well then, I should change quickly so Mistress Akiha may pass judgment on me.\
-
-
-bg "image\bg\bg_33a.jpg",%type_lcartain_mid
-
-
-` ---Alright, I'm here.@
-` Now only a door separates me from the sitting room where Akiha awaits.@
-` No matter what the circumstance was, there's no excuse for skipping school and not coming home for two days.@
-` Now---
-br
 
 
 return

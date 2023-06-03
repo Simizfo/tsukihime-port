@@ -1,13 +1,19 @@
-playstop
 
-+
-bg "image\bg\bg_06b.jpg",%type_crossfade_slw
+bg "image\bg\bg_06b.jpg",%type_nowaitdisp
 
+` I have nothing in particular to do, so I decide to just head straight back to the mansion.@
 
-` Classes end again with plenty of time to spare.@
-br
-` Well---
-br
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w1000
+bg "image\bg\bg_32b.jpg",%type_lcartain_slw
+
+` Climbing the hill, I return to the mansion.@
+` It's not even five o'clock yet.@
+` There's still two hours until dinner, so I'll kill some time in my room---\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w1000
+
 
 
 return

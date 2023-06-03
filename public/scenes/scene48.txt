@@ -1,204 +1,105 @@
 
-` Even Akiha and the others wouldn't be able to sleep with a racket like this.@
-` Since I'm the only man in the house, I guess I've got no choice but to go investigate.\
-`"…… I think it's coming from the right side of the mansion."@
-` I open the curtains and check what's happening outside.@
-br
-` ---And,
-br
-` outside my room is a large tree.@
-` On one of the branches is perched a blue crow.\
-wavestop
+
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+` The howling continues.@
+` There's no way I can sleep like this.@
+` …… I can't sleep, but that's just normal.@
+`"…… I'm sleepy, so I'll pass."@
+` Pulling the sheets over me, I stretch out on the bed.@
+` I can just think of the howling as the sound of something mundane as cars driving by on the street.\
+
+` *sigh*@
+` Today's been a very long day.@
+` I'm mentally tired from eating dinner in this unfamiliar mansion and my conversations with Akiha and everyone else.@ After all that, the howling is just background noise.@
+` I close my eyes and gently fall asleep.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w3000
+
+wave se8
 
 
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\bg\cmo_16.jpg",%type_rshutter_fst
+
+bg "image\bg\bg_40d.jpg",%type_crossfade_fst
+
+`"---Nng."@
+` I think I just heard something.@
+` Half-awake, I look at the clock.@ It's just past two.@
+` …… It's been about two hours since I heard the dogs howling.@
+` The dogs' howling has already stopped.@
+` The mansion is so quiet, I can hear the clock ticking in the silence.\
+
+wave se7
 
 
-` In the dark night,
-` I can see nothing but black, and yet it's quite clear to me that the crow is blue.@
-`"…………"@
-` I've never seen or even heard of a blue crow before.@
-br
-` It glares at me.@
-br
-` It feels like the eyes of the crow are staring at me, like soulless, mechanical lenses.\
-!w1000
-br
-` Kwaaw!@
-br
-` After a yawn-like cry, it noiselessly flies off.@
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\bg\bg_40d.jpg",%type_rshutter_fst
-
-`"…… What was that?"@
-` …… I can feel a faint chill on my back.@
-` The howling of the dogs grows louder.\
-
-` Awoooooooo.@
-`            Awoooooooo.@
-`                       Awoooooooo.@
-br
-`"…………"@
-` It's really starting to get on my nerves.@
-` Not only is it noisy, but hearing it causes my heart to start pounding.@ I have an almost instinctual distaste for it.@
-br
-`"Shut---up!"@
-` I change out of my pajamas into my uniform, and leave the room.\
+`"------?"@
+` I hear it again.@
+` …… Inside the mansion… from the lobby?@
+`"-----Could it be a burglar?"@
+` It's not impossible.@
+` The mansion's contents are outrageously valuable.@ On top of that, with no one here now except Kohaku-san, Hisui, Akiha and myself, it's very insecure.@
+`"……"@
+` Getting out of bed, I slip out of the room quietly.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
 play "track06.ogg"
 
+bg "image\bg\bg_46c.jpg",%type_lcartain_mid
 
-!w500
 
-bg "image\bg\bg_32d.jpg",%type_lcartain_mid
-
-br
-` Awoooooooo.@
-br
-` The howling echoes through the night.@
-` That sound is definitely coming from the right-hand side of the mansion.\
-
-`"…………"@
-` For some reason, my throat feels dry.@
-` The high walls stretch their way around the mansion.@
-` Clearing my throat, I head towards where the dogs must be gathered.\
+` If it's a burglar, Akiha and everyone will be in danger, so I can't let this one go.@
+` I'll just look down from the second floor into the lobby; that should be safe enough.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
-bg "image\bg\bg_47.jpg",%type_lcartain_mid
+bg "image\bg\bg_33d.jpg",%type_lcartain_mid
+
+` There's nothing wrong there.@
+
+wave se7
 
 
-` I arrive at where the howling originates.@
-`"…… Huh?"@
+`"…… !"@
+` No, someone's there.@
+` The figure that enters from the entrance and crosses the lobby with wobbling, uncertain steps, is---
 br
-` Awoooooooo.@
-br
-` The howling doesn't stop.@
-` But there are no signs of any dogs.@
-` All there is---is a person.@
-` Under the light from the streetlight that carves apart the darkness stands a man in a dark coat.@
-br
-` The howling is coming from right beside him.@
-` ------But there are no dogs to be seen anywhere.\
-
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-bg "image\bg\bg_47.jpg",%type_crossfade_fst
 
 
-` The man in the coat is pretty tall.@
-` He has a strongly built body, and his back is facing me.@
-`"---------"@
-br
-` My throat… so dry.@
-` Awoooooooo.@ The voice of the dog resounds in my ears.@
-` The night air coils itself around my skin.@
-br
-` For no apparent reason, I have difficulty breathing and moving, as if I'm at the bottom of the sea---\
+ld c,":a;image\tachi\aki_t19b.jpg",%type_crossfade_mid
 
-` Kwaah!@
-br
-` A cry overhead.@
-` With a loud flapping of its wings, the blue crow lands onto the man's shoulder.@
-br
-` ---Then,
-br
-` suddenly, the crow vanishes.\
-
-`"…… Eh?"@
-` Can it be an illusion?@
-` It looked like the crow disappeared into his black coat.@
-br
-`"------"@
-br
-` The man in the black coat turns around.@
-ld c,":a;image\tachi\nero_t03.jpg",%type_crossfade_fst
-` Under the white streetlight, he is just like a shadow.\
-
-` A black lump.@
-` In the middle of that lump, only the weapon-like eyes shine out, burning with a fiery intelligence.@
-br
-`"…… Ah."@
-br
-` I can't breathe.@
-` But fortunately, those eyes seem like they're not even looking at me.\
-br
-br
-br
-br
-br
-br
-br
-`"Not here after all."\
-br
-cl c,%type_crossfade_mid
-
-` The man in the black coat leaves.\
-
-` When I can no longer see him, I am finally able to breathe properly again.@
-`"Hhahh---haah, ah."@
-` I manage to take a few breaths.@
-br
-` I realize the dogs' howling has ceased.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-bg "image\bg\bg_40c.jpg",%type_lcartain_slw
-
-` I return to my room.@
-` There is no sign of Akiha or the others being awake.@ I guess I'm the only one who couldn't stand the dogs' howling.\
-br
-`"------Guh!"@
-br
-` What's happening?@
-` My head still hurts.\
-
-`"Huh… ?@ Why am I trembling?"@
-` Looking down, my fingers are trembling.@
-` My entire body is shaking, and my back feels very cold.@
-br
-` It's almost like… yes.@
-br
-` It's like someone ripped out my spine and replaced it with ice.\
+cl a,%type_crossfade_mid
 
 
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+`"Aki… ha?"@
+` She's not going to her own room on the second floor, but to the first floor of the west wing.@
+` The only things there are Kohaku-san's room and my old man's room.\
 
-`"------"@
-` I feel dizzy.@
-` …… Is it just the usual anemia?@
-` I get the feeling of falling towards the floor.@
-br
-` On the way, I see something unpleasant.\
+`"…… What's she doing at this time of night?"@
+` I can murmur all I want, but I won't be getting any answers.@
+` After gazing at the lobby for a while, I decide to return to my room.\
 
-bg "image\bg\bg_40f.jpg",%type_lshutter_mid
-
-`"Wha---!?"@
-` Even though I'm wearing my glasses, I can still see the "lines".@
-`"Uuh……!"@
-` I hadn't seen them at all for a long time, so my reaction is magnified.@
-` I feel sick.@
-` With the dizziness from my anemia, I feel like I'm about to throw up the contents of my stomach.\
-
-`"…… What's, going on?"@
-` I don't understand.@
-` Only that as long as my eyes are open, scribbles fly everywhere across my vision.\
-br
-` ---It's a bad… dream.@
-br
-` Somehow, I manage to collapse into bed.@
-` …… Yes.@ I should sleep.@ That's the easiest way to deny what I'm seeing.\
-
-` My body doesn't move as I want it to.@
-` All I should do is lie here and fall fast asleep, like a corpse---\
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 playstop
 
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_40d.jpg",%type_lcartain_mid
+
+` …… Well, she probably had something to do, or went to see Kohaku-san.@
+` I feel bad about sneaking around and watching her, and I don't want to just ask her about everything she does.@
+`"…… Sleep, sleep.@ There's school tomorrow."@
+` I bury myself in bed and close my eyes.@
+br
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+` ---As I fall asleep,
+br
+` my thoughts keep returning over and over to Akiha's hollow-eyed figure in the lobby… and how something seemed wrong.\
 
 !w3000
+
+
+
 
 return

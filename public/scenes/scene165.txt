@@ -1,15 +1,34 @@
 
 bg "image\bg\bg_32a.jpg",%type_nowaitdisp
 
+`"…… Let's see, isn't it because you hate me?@ I haven't been able to meet you on time, and I've done a lot of horrible things to you."@
+br
+` …… Leaving my feelings about Arcueid aside, I calmly analyze the situation.\
 
-`"Aren't you just easily angered?@ You're a pretty selfish person at heart, after all."@
-` I clearly voice my thoughts on the matter.@
-ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
-`"Really?@ Now that you mention it, you could be right.@ It seems like I've become really emotional since you killed me."@
-` Arcueid nods in a satisfied manner.@
+ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
+`"----Is that so?@ This is the first time I've ever felt emotion towards someone, so I don't really understand it myself……"@
+cl c,%type_crossfade_mid
+
+` After being quiet for a few moments, she raises her head.@
+ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
+
+`"…… Um, Shiki, do you hate me……?"@
+br
+` And asks me such a question.\
+
+`"M, me……?@ I, um----"@
+`"………………"@
+` Arcueid stares at me silently.@
+`"I----I don't hate you, that's why I'm helping you."@
+` …… For now, that's the honest truth.\
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"…… I see.@ Then maybe I feel the same way too."@
+` Arcueid gives an ambiguous nod.@ I'm not sure if she understands.@
 cl c,%type_crossfade_fst
+\
 
-` …… Well, whether that was the truth or not, the problem is resolved as long as Arcueid is convinced.\
 
 
 

@@ -1,49 +1,53 @@
 
 
-bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+
+bg "image\bg\bg_33b.jpg",%type_lcartain_mid
+
+
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Welcome home, Shiki-sama."@
+`"I'm back… Hisui, where's Akiha?"@
+`"Akiha-sama has remained at school for certain formalities.@ Since she shall be late, we are to have supper first."@
+`"…?"@
+` Certain formalities, huh.@
+` Akiha's school probably has lots of formalities as it is a top tier school for young ladies.\
+
+`"I'll go wait in my room till suppertime and I'll head down when it's ready."@
+`"Yes.@ Please rest until I call you."@
+
+cl a,%type_crossfade_fst
+
+` I turn my back to the bowing Hisui and walk toward my room.\
+
+bg "image\bg\ima_10.jpg",%type_tshutter_mid
+!w2000
+bg "image\bg\bg_40c.jpg",%type_rshutter_mid
 
 br
-` ---I have no idea where she could be.@
-` But let's search around the area where there are lots of houses and apartments.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_24b.jpg",%type_lcartain_mid
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_23b.jpg",%type_lcartain_mid
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-!w500
-bg "image\bg\bg_22b.jpg",%type_lcartain_slw
-
-
-` The sun sets.@
-` Even after running everywhere in town, there's no sign of Yumizuka Satsuki anywhere.@
+` ---After supper, I sit down on my bed.@
 br
-`"………… Gah."@
-` I bite my lip angrily.@
-` …… But it's not anger over not finding her.\
-` Two days ago.@
-` I'm mad at myself for promising such a thing in the first place.\
+` The clock's hands show nine o'clock.@
+` Since leaving the mansion after eight is forbidden, I cannot go outside any longer.@
+`"…………"@
+` But, that's merely a rule.@
+` If I feel like it, I can easily go outside.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\event\stk_e03.jpg",%type_crossfade_fst
+
+
 
 br
-` ---Help me when I'm in a pinch, okay?@
+` ---Bye-bye.@ See you at school tomorrow, Tohno-kun.\
 br
-` Yumizuka said that, and I answered lightheartedly.@
-` I would help, as much as I could.@
-` …… Such an irresponsible answer.@
-` There's really nothing I can do.@
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+
+` I---
 br
-` She said it hurt.@
-` I can't even find Yumizuka, painfully suffering in the cold darkness.\
 
-`"---"@
-` The sun is setting.@
-` …… I don't want to admit it, but maybe I can only find Yumizuka after nightfall.@
 
-`"…… I told Hisui I'd be back in the evening."@
-` Perhaps it's too early.@
-` I'll go back to the mansion and calmly think this through.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-!w1000
 return

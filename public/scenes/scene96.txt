@@ -1,42 +1,50 @@
 
-
 bg "image\bg\bg_15c.jpg",%type_nowaitdisp
 
+br
 ` ----I refuse.@
-` I know I have to refuse.@
-` No matter how much I think about it, I can't do anything.@
-br
-`"----Arcueid.@ Sorry, but I----"@
-br
-` Am I going to abandon her?@
-` It's my fault.@ Because of Tohno Shiki, she can't move as she needs to.\
+` I can't stand up to that monster.@
+` She told me to be her shield and watch over her while she sleeps, but I couldn't even do that well.@
+` Even if I were to fight with her, I would probably just get in the way.\
 
-`"----I----"@
-br
-` Am I running away?\
-` From that----monster who mercilessly, cruelly, one-sidedly slaughtered all those people?@
-br
-` Run away and pretend like I never saw it?@
-` After being the only one to survive, I'm just going to run away without any pangs of guilt?\
+`"Arcueid.@ Sorry, but I can't.@ He's too different.@ Even if I fought him, I wouldn't even be able to scratch him."@
+ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
+`"What?@ Really…?"@
+` …… I'm not sure where she gets that from, but she tilts her head as if doubting me.\
 
-`"--------"@
-br
-` The lines of death only I can see.@
-` Didn't that important person once tell me that I have this power because there would be a time when I would need it----?\
+`"…… I'm glad you think so highly of me, but I can't do it.@ Our promise was just for me to watch over you for one night.@ I don't want to have anything more to do with that monster."@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+`"Hmm, it may be too late.@ Nrvnqsr met you.@ Even if you were no longer with me, I don't think he would leave you alone."@
+` She speaks lightly as if discussing some third party.\
 
-ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
-`"----Shiki?"@
-`"…… Yeah, I know.@ I can't run away by myself."@
+`"Wha------"@
+` I blurt out, and then I understand.@
+` That vampire Nrvnqsr is the one killing people in this town.@ There's no reason for him to leave me alone once I saw his face.\
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"But I am faster than Nrvnqsr.@ He cannot move during the day, and you're right in front of me, so it's overwhelmingly in my favor."@
+`"…… What do you mean?"@
+ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_fst
+`"Oh, nothing.@ I was just thinking if you are going to run away, I would just kill you here."@
+` Arcueid smiles as she jokes around, but she also seems serious.\
+
+`"U…………, gh."@
+` Her smile doesn't fade.@
+` …… She really seems intent on coercing me.@
 cl c,%type_crossfade_fst
+\
 
-br
+`"………… You devil."@
+` …… I'm trapped.@
+` If I'm going to be attacked either way, then there's no other choice but to help Arcueid.@
 ` I look up at the ceiling and take a deep breath.@
-` Fortunately, that prepares me just a bit for what is to come.@
-br
-`"Alright----I'll help you, Arcueid.@ I think it's my duty to do so as the only one who survived in that hotel."\
+` Fortunately, that prepares me just a bit for what is to come.\
+
+`"Okay, I'm ready.@ …… Come to think of it, there was no running away from the time I met you.@ Coming this far, I guess I have no choice but go all the way."\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
-!w1000
+
+
 
 
 return

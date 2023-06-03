@@ -1,16 +1,18 @@
 
 
+
+
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 bg "image\bg\bg_22b.jpg",%type_lcartain_mid
-
 play "track01.ogg"
 
 
 ` I walk along a different path than the one I usually take.@
 ` Passing through unfamiliar streets, I slowly approach the Tohno mansion.@
 ` The surroundings are not completely unfamiliar.@
-` After all, I had lived here until I was nine years old---eight years ago.@ This is not the first time I have taken this path back to the mansion.@
+` After all, I had lived here until I was nine years old---eight years ago.@ This is not the first time I have taken this path back to the mansion.\
+
 ` …… My feelings are a little complex.@
 ` The path home is nostalgic, yet fresh.@
 ` Up until just now, I had not looked forward to returning to the Tohno household.@ Now, it doesn't seem so bad.\
@@ -36,6 +38,14 @@ bg "image\bg\ima_17.jpg",%type_crossfade_mid
 ` That was a long time ago--I played together with Akiha in the mansion back before the accident.@ After that, I never saw her again.\
 
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
+bg "image\bg\bg_22b.jpg",%type_lcartain_mid
+
+` …… The life in the mansion I abandoned eight years ago.@
+` Those eight years were long, and my memories of that time have largely faded.@
+` But in spite of that, there is one thing that even now continues to burn strongly within my heart, and that is---
+br
+
+
 
 
 return

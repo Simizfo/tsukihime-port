@@ -5,20 +5,10 @@
 
 
 
-
-
-
-
 bg "image\bg\ima_01.jpg",%type_crossfade_mid
+
 play "track07.ogg"
 
-
-br
-br
-br
-br
-br
-br
 ` ----And then,
 ` I embrace Akiha's body from the front.\
 
@@ -27,6 +17,7 @@ br
 `"…… I want you to live."@
 ` Akiha tilts her head questioningly.@
 `"No matter what you become---I still want you to live, Akiha."@
+br
 ` My tears cannot be stopped.@
 ` Akiha hugs back joyfully---and bites on my neck.\
 
@@ -34,7 +25,6 @@ br
 ` It hurts.@
 ` But it is not an act to suck my blood.@
 ` It is just a primitive act to bite me.\
-
 `"A-Akiha."@
 ` Akiha just frantically bites my neck.@
 ` She tears off the meat and my bones are being chipped away.@
@@ -45,108 +35,57 @@ br
 ` But still----\
 
 `"---Still…… I want you to live."@
-br
 ` …… Is it wrong to wish such a thing?@
 ` Is it a crime to wish for her to stay alive even though she goes around killing people?@
 ` Even if Akiha says she cannot endure such a thing, I want her to endure past it.\
-
-` But.@
-` That's---just a selfish wish.\
-
-`"----But, we made a promise."@
-` Akiha does not let go.@
-` Still holding on to her, I place my knife on Akiha's "line".\
-
 br
-` ---If someone is going to kill you eventually, then…
+` ----Even if.@
+` To think that the crime is borne by me is selfish thinking.\
+
+`"…… I'll save you."@
+` Hard.@
+` With all my might, I embrace Akiha.@
+`"Uh, uhhh, uhh!!"@
+` I embrace the wildly moving Akiha.@
+` Crunch.@
+` She breaks my shoulder bone by biting through it.\
+
+`"------A, Akiha-------"@
+` Even though one of my shoulder's bones is broken, I embrace Akiha with one arm.@
+`"Ugh!!@ Uhnn………!!"@
+` Akiha rages wildly.@
+` I embrace her for a long time.@
+` …… Is it because this might be our last embrace?@
+` I have never held someone so dearly, trying to remember everything… their heartbeat, their warmth…\
+
+`"Uh…… Mm……"@
+` …… Maybe since she found out I am not going to do anything, Akiha stops fighting.@
 br
-`"I won't let anyone hurt you."@
+` I don't know how long we were like this in the falling autumn leaves.@
+` But Akiha has fallen asleep in my arms.\
+
+bg "image\bg\bg_54a.jpg",%type_crossfade_mid
+
+
+`"………………"@
+` I rest Akiha's body on the ground as gently as I can.@
+` Akiha's hair is still red.@
+` If SHIKI's words are true, then…
+` There is no way for it to return it to black except for that one method.\
+
+`"………………"@
+` I swore I would save her, no matter what happened.@
+` It's really easy to save her.@
+` The reason why Akiha is living as one of the Tohno Blood.@
+` If the human she is sharing her life with disappears, she can go back to the original "Tohno Akiha".@
+` But that means---the death of Tohno Shiki.\
+
+` I don't know what leads to happiness or what can save us.@
+` I don't know if death can be the way to save her.@
+` But right now, I can't tell what is the right thing to do.@
 br
-` ----The knife, without a sound,
-`   and probably without pain,
+` I------
 br
-`"Since I am the only one for you."@
-br
-` ----Gently ends Akiha's life.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_54a.jpg",%type_crossfade_fst
-
-
-` The autumn leaves fall.@
-` Akiha lies on the red ground.@
-` The hair scattered on the ground is black.@ It vividly undulates on the red leaves.@
-` Her face is peaceful, as if happily dreaming.\
-
-`"----------"@
-` One event has ended.@
-` When I was a child.@
-` The happiness when we met here and ran around this courtyard.@
-` The brightness of the stars we watched together.@
-br
-` Just a few days ago.@
-` Everything we talked about here.\
-
-bg "image\event\aki_e03.jpg",%type_crossfade_mid
-
-br
-br
-br
-br
-br
-` ----Nii-san, I am just happy that you have come back.@
-` …… I just want you to keep that in mind.\
-
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-bg "image\bg\ima_01.jpg",%type_crossfade_mid
-
-
-` At some point, I started staring at the moon.@
-` …… My body is cold.@
-` My mind feels dizzy, like I'm about to go to sleep.\
-
-` …… I'm sleepy.@
-` I feel like if I slept right now, I could dream that this was all a dream.@
-br
-` But that's just a dream and someday, I would have to wake up.@
-` It feels like even I am just part of this dream.@
-br
-` Or was everything an ephemeral dream from the start?@
-` If so, please…
-` Let me sleep on and never wake me up.\
-
-`"---------Ha, ha."@
-br
-` In the sky, the blue, blue, glass moon.@
-` The tall curtain of trees and the applause of showering crimson leaves.@
-br
-`"Haha, ha------"@
-br
-` I'm sad, yet all that comes forth is laughter.\
-
-` The night is deep.@
-` There is a serene silence around me, which hits my eardrums like thunderous applause.@
-` My view distorts and narrows.@
-` …… It seems to be time to lower the curtain.@
-` The curtain of trees turns round and round.@
-br
-` As if
-` everything in this circus
-` was artificial.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-playstop
-
-!w2000
-
-
-
-cl a,%type_waitdisp
-bg "image\word\end.jpg",%type_crossfade_slw
-
-resettimer
-waittimer 3000
 
 
 return

@@ -1,16 +1,167 @@
 
 
 
-bg "image\bg\bg_40b.jpg",%type_nowaitdisp
 
-` Well, I don't exactly have anything in particular to do, so I'll just take it easy in my room.\
+play "track01.ogg"
 
-bg "image\bg\ima_10.jpg",%type_tcartain_mid
+` Dinner, as usual, is a quiet affair with just me and Akiha.@
+` Kohaku-san stands behind Akiha, and Hisui stands behind me during our wordless dinner.\
 
-playstop
+`"…………"@
+` The only thing different is the way Akiha is acting.@
+` Until now, whenever my tableware would make noise, Akiha would look up with a scowl.@ Today, however, Akiha makes quite a lot of clattering herself.@
+` In the end,
+`"---I am going back to my room.@ Please clean up my dinner."@
+` Saying so, she leaves the dining room behind.\
 
+bg "image\bg\bg_34b.jpg",%type_lshutter_mid
+
+`"…… What's with her?@ She wasn't like that when we were walking back together…"@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"…………"@
+` Hisui says nothing.@
+` Kohaku-san collects the tableware, smiling as ever.@
+br
+` ----And then.@
+
+wave se4
+
+br
+` From the lobby, I hear the sound of someone falling.@
+`"---Akiha!?"@
+` Fearing the worst, I race towards the lobby.\
+
+bg "image\bg\bg_33c.jpg",%type_lshutter_mid
+
+
+ld c,":a;image\tachi\aki_t20b.jpg",%type_crossfade_fst
+
+
+`"-----!"@
+` There, I see Akiha leaning on the stairs.@
+` Her breathing is irregular, and I can hear her wheezing from here.@
+` Her face is pale, and there are beads of sweat on her skin.@
+br
+` …… I can see with a single glance that she is not okay.\
+
+`"Hey, Akiha!"@
+`"Don't come near me…!"@
+`"…!"@
+` I stop.@
+` Leaning on the stairs, Akiha refuses me violently.\
+
+`"Wha---don't come near you…?@ What are you talking about!?@ I don't know what happened, but I can't just leave you like that!"@
+`"---I'm fine, just… don't come any closer… Nii-san."@
+` Akiha breathes heavily.@
+wave se0
+
+`"Hey----"@
+` My heart pounds.@
+` Akiha just breathes painfully.@
+` …… There's something wrong with me.@
+` For a moment, I feel it resembles the figure of Yumizuka Satsuki.\
+
+`"Aki… ha---"@
+`"I'm fine, so please, don't come near me.@ If you come near me, there's no way I'll be able to… so don't come any closer.@ As long as you are not around, I'll be fine, so…"@
+
+cl a,%type_tshutter_mid
+
+` With an audible sound,
+` Akiha collapses once more.\
+
+ld c,":a;image\tachi\koha_t02.jpg",%type_lshutter_fst
+`"Akiha-sama?"@
+` Kohaku-san passes me, running toward Akiha.@
+
+cl a,%type_crossfade_fst
+
+` She whispers something to Akiha, and helps her up.@
+` With Kohaku-san's help, Akiha returns to her room.\
+
+`"Wha----what was that about?"@
+` I really don't understand.@
+` Akiha's tormented condition, telling me not to come near her, yet she lets Kohaku-san help her.@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_mid
+`"---Shiki-sama."@
+`"Hisui… what was that?@ Why was Akiha like that?"\
+
+`"At times, Akiha-sama lapses into sudden dyspnea.@ Just as with your anemia, Akiha-sama too is a member of the Tohno family."@
+`"Ah----"@
+br
+` ---Members of the Tohno family do have such conditions.@
+br
+` Akiha said that during lunch.\
+
+`"It can't be… Akiha always seems so healthy."@
+`"Akiha-sama tried her best to keep it a secret from you.@ We were also ordered not to speak to Shiki-sama about it."@
+`"--------"@
+` There's nothing to be said.@
+` I can only look aghast up the stairs Akiha just ascended.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w2000
 
+
+
+
+bg "image\bg\bg_40c.jpg",%type_tshutter_fst
+
+
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Well then, good night.@ Please leave Akiha-sama's condition to Nee-san.@
+` As Makihisa-sama was under her care for many years, she has medical experience."@
+`"I guess so.@ If we leave Akiha to Kohaku-san, I'm sure she'll be fine."@
+` …… Since there doesn't seem to be anything else I can do, it seems I'll have to just leave her to Kohaku-san.\
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"Shiki-sama, it is rare for Akiha-sama to be like that.@ Since it can be easily relieved with medication, I do not think that you need to worry.@
+` …… Rather than being concerned with her treatable condition, Akiha-sama is concerned more about your health, Shiki-sama."@
+`"---I know.@ Damn it, I'm a crappy older brother.@ I guess I really didn't realize anything at all."\
+
+ld c,":a;image\tachi\his_t21b.jpg",%type_crossfade_fst
+
+`"You---do not know anything?"@
+` Hisui murmurs to herself, looking down.@
+`"Hisui?@ What is it?@ Don't say that even you feel bad."@
+`"---No, it is just… Shiki-sama, do you really remember nothing about the detached building?"@
+`"-----Eh?"@
+br
+` …… Remember… what?@
+br
+`"…… Hisui, that's…"@
+`"---You really became Tohno Shiki, did you not, Shiki-sama?"\
+
+`"Hisui?"@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"…… That detached building fell into disuse right after you left for the Arima family.@ Makihisa-sama decided to demolish it, but as Akiha-sama objected strongly, it remains standing today.@
+
+ld c,":a;image\tachi\his_t09.jpg",%type_crossfade_fst
+
+` ---So, Shiki-sama, if you think anything at all of Akiha-sama, please do not approach that detached building."@
+
+cl a,%type_lshutter_fst
+
+` Saying so, Hisui leaves the room as if she were running.\
+
+bg "image\bg\ima_10.jpg",%type_bshutter_fst
+!w2000
+bg "image\bg\bg_40d.jpg",%type_crossfade_fst
+
+
+` It's ten o'clock, and all the mansions lights go off.@
+`"…………"@
+` I can't sleep.@
+` Akiha.@
+` The detached building she wants to keep a secret from me.@
+br
 
 
 return

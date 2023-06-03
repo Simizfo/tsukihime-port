@@ -14,23 +14,55 @@ cl c,%type_lcartain_mid
 
 ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
 
-` This is the last lesson for the day, but let's all have high spirits.@
-` Yes, since it is a long story, you might get sleepy, or hungry, or your fingers might get tired, but please plan accordingly so your schedule and energy levels allow you to keep on playing.@
+` Merci!@
+` Now for the hint corner for the poor Tohno-kun who reached a Dead End in midst of the climax,
+` It is time for "Teach me, Ciel-sensei!"@
+` It would have been better to quit, but this corner is already into the second day.@
+` At this rate, we might go on until the third day, which makes me feel a little sick.@
 br
-` Now, it is after school.@
-` The reason is obvious, right?@
-` It irritates me to defend her, but if you've come this far, you have to keep going until the very end!\
+` Then, let's begin the first period lesson.\
 
-` …… Saying that, maybe such an end is happiness for Tohno-kun though.@
-` Maybe the title "Cream" defines everything.@
-` It really does tug at the heart strings.@
+
+` Oh geez.@
+` That's why I told you, Tohno-kun.@
+` You shouldn't trust Arcueid.@
+
 br
-` This concludes the day's lessons.@
-` Let's meet again on the second day of lessons!\
+ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+
+`"No.@ That's not my fault."@
+br
+` It's your fault no matter how you look at it.@
+br
+`"Unyaa!"\
+cl l,%type_lshutter_fst
+
+` ----Well then.@
+br
+` To the Tohno-kun who came here.@
+` It's hard to say, but you have to resubmit from quite a while back.@
+` The feelings for you that were born inside of Arcueid were unfortunately weaker than her urges as a vampire.@
+` Please go back one or two days and try strengthening the bond with her.@
+br
+` Oh yes, and one more thing.@
+` Tohno-kun, even though you were enchanted, I don't think it's good to easily go crazy.\
 
 
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+ld c,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+`"It's nyaat my fault……"@
+
+ld c,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+ld c,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+`"Shiki, you idiot!@ Blockhead!@ Insensitive oaf!"\
+
+
+cl c,%type_crossfade_mid
+
 
 playstop
 

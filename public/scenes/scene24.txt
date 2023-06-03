@@ -7,8 +7,4 @@ bg "image\bg\bg_06a.jpg",%type_lshutter_mid
 br
 
 
-
-
-
-
 return

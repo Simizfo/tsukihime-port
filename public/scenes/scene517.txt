@@ -1,8 +1,4 @@
 
-
-
-
-
 wave se2
 
 bg "image\bg\bg_06a.jpg",%type_nowaitdisp
@@ -16,63 +12,43 @@ cl c,%type_lcartain_mid
 
 
 ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
-
-` Hello!@
-` The hint corner for the poor lost Tohno-kun who ended up in a Dead End without knowing his left from his right,
-` It is time for "Teach me, Ciel-sensei!"@
+` Hello.@ I am the teacher of this classroom, Ciel.@
+` For the sixth period class, let's think about the basics of finding people.@
 br
-` …… I see.@
-` You have come to the fifth period.@
-` I think there are lots of Tohno-kuns who fall into this end.@
-` Well, it is your divine punishment.@
-` Regret your own unluckiness for associating with such a woman.\
+` To be straightforward, Tohno-kun does not know how to find people.@
+` Please consider the reason why she ran away; why, where, and to do what.@ If you piece these together, you will find an answer.@
+br
+` In other words, she got hungry, so she went into the alley to do some sucking.\
 
 ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
 ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
 
-`"Why?@ You're not one to talk, Ciel.@ After all, your goal from the beginning was always **----"\
-bg "image\bg\ima_14.jpg",%type_lshutter_fst
-wave se11
-bg "image\bg\bg_06a.jpg",%type_lshutter_fst
 
-ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_fst
-
-` ----Now then.@
+`"Nonsense!@ Violent Ciel!@ Glasses!@ Indian!"@
 br
-` Normally there would be no chance of salvation, but some of you came here in spite of rejecting that sunny vampire.@
-br
-` (Sunny even though she's a vampire, I'm picking a fight)
-br
-` So I'll throw out a lifeboat.\
-
-` There are about three reasons you came to this Dead End, but to avoid it,
-br
-` You have to reassure your sister sometimes,
-` you have to indulge a stupid woman's selfishness sometimes, and to find a dirty vampire, try going to a very dirty place.@
-br
-` That's about it.\
-
-
-ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
-
-`"Hey Ciel.@ I don't get this."@
-br
-` ---Question denied.@
-` …… Or so I'd like to say, but there seemed to be many questions on this, so I will answer it.@
-` DNM is…
-` D is for "dizzy", N for "not healthy", M for "moon".@
-` It has the same initials as "Dark Night Moon", it's a small play on words.\
-
-br
-`"I see, that's weird."@
-cl l,%type_lshutter_fst
-br
-` (…… Why, that little……)
-` Well, this ends the lesson this time.@
-` Everyone, please remember to use proper Japanese!\
+` ………………@
+` This session is finished.@
+` Please continue enjoying the main storyline.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
-playstop
 
+ld c,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+`"Nya?@ What is it, Ciel?@ Why are you pulling out something like a shotgun, and a machine gun, and a vulcan cannon?"@
+br
+wave se6
+
+
+` Arc!@ India has nothing to do with it.@ Nothing!@
+br
+`"Oh my, Glasses got pissed off-nyaa!@ Whoosh (sound effect)"\
+
+cl c,%type_bscroll_mid
+
+
+
+
+
+
+playstop
 
 return

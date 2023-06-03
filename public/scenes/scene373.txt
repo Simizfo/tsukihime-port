@@ -5,39 +5,685 @@
 
 
 
-` ----I should worry about Akiha's safety most of all.@
+
+
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+!w1500
+playstop
+
+bg "image\bg\bg_33d.jpg",%type_lshutter_fst
+
+waveloop se1
+
+` *pant*---*pant*---*pant*----
+` Sweat drips down to the ground.@
+` His knife swings at every part of my body, but I have fortunately not received any fatal wounds.@
+` I am breathing hard because I move my body past its limits.\
+
+ld c,":a;image\tachi\hal_t02.jpg",%type_lshutter_mid
+`"I don't understand----"@
+` …… The enemy in front of me breathes out in annoyance.@
+
+
+`"Why---why can't I kill just an ordinary human being?@ Why is your killing ability so high, Shiki!?"@
+` There is anger in his eyes.@
+` He's probably irritated from all this unexpected resistance by something that should be easy prey.\
+
+cl a,%type_crossfade_fst
+
+` My heavy breathing fills the air.@
+` My chest hurts.@
+` Even though I have seen his killings already in my dreams, our abilities are naturally different.@
+` It's already hard enough to block his attacks, and it's almost impossible to attack his "lines".@
 br
-` It's too dangerous to fight near Akiha.@ I need to move to somewhere bigger, like the lobby---
-`"Ku……………!"@
-` Still holding my knife, I jump back without looking.\
+` ---But.@
+` If I didn't care to avoid mutual death, I could easily kill him.\
 
+`"---Alright.@ Enough playing around.@ I tried to finish you off with the same weapon you had, but I shouldn't have used something I'm not used to using."@
+` The enemy throws down his knife.@
+` Slash.@
+` The sharp, animal-like nails shine in the night.\
 
-bg "image\bg\ima_14.jpg",%type_lshutter_fst
-wave se11
+ld c,":a;image\tachi\hal_t01.jpg",%type_crossfade_fst
 
-
-`"………!!"@
-` SHIKI's knife slashes in front of my face.@
-` Fortunately, I did not get cut.@
-` But, he hits my glasses off----
+`"So it's this after all.@ It's really dull to use the same thing as eight years ago."@
+` The enemy smiles and frees his stance.@
 br
+` ----Thump.@ My heart beats.@
+br
+` My body knows I won't be able to keep up with him once he gets serious.@
+` I probably won't be even able to see him attacking me.@
+` The first thing I will realize, is that my body has a hole in it.\
+
+` ----Thump.@
+br
+` The presence of death increases.@
+` The sense of impending death is upon me.@
+` But, I have no fear.@
+` The cracking inside my body grows proportionally with the sense of crisis.\
+
+` Panting.@
+br
+` Burning pain.@
+` Just like a bow pulled to the limit.@
+` A homicidal impulse that I cannot control.@
+` Most likely---it will be released in a moment and kill SHIKI for sure.\
+
+ld c,":a;image\tachi\hal_t03.jpg",%type_crossfade_fst
+
+`"So long, Shiki.@ Akiha is mine.@ This time, you go to hell---!"@
+
+cl a,%type_lcartain_fst
+
+` The enemy's body disappears.@
+` The strained bow is released.@
+br
+` ---But before that,
+` someone comes in between me and SHIKI.\
+wavestop
+
+ld c,":a;image\tachi\aki_t11c.jpg",%type_crossfade_fst
+play "track09.ogg"
+
+`"-------"@
+` …… It was Akiha, with her flowing red hair.@
+` Akiha stands in front of SHIKI as if to protect me.\
+
+ld c,":a;image\tachi\hal_t02.jpg",%type_crossfade_fst
+
+`"…… Akiha, what are you doing?"@
+` Akiha does not answer.@
+wave se0
+br
+` ----Her back.@
+` With Akiha's red hair in front of me, I start feeling excited.\
+br
+`"…… Move, Akiha.@ I am your real brother.@ You don't have to worry about this impostor."@
+` Akiha does not answer.@
+wave se0
+br
+` ----Her back.@
+` With Akiha's red hair in front of me, I start feeling excited.\
+
+`"…… Akiha, don't make me sad.@ You are the only important person for me."@
+
+ld c,":a;image\tachi\aki_t11c.jpg",%type_crossfade_fst
+
+`"…… No.@ I won't move."@
+` Akiha shakes her head and clearly rejects SHIKI.@
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\hal_t02.jpg",%type_crossfade_fst
+
+`"…… Akiha!"@
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\aki_t11c.jpg",%type_crossfade_fst
+
+`"Move back.@ If you say you are going to kill Nii-san, I will kill you first.@
+` The role of the head of the Tohno family is to eliminate people like you."\
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\hal_t05.jpg",%type_crossfade_fst
+
+`"What---what are you saying, Akiha!@
+` You were waiting for me for so long.@ I was always, always watching.@ I came back because you were waiting for your brother.@
+` I killed that old man and became free just for you.@
+` But why are you protecting that impostor!?"\
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\aki_t11c.jpg",%type_crossfade_fst
+
+`"…… Indeed, I was waiting for Nii-san.@ But that is not you.@ You lost against the Tohno blood and became just a killer.@ You should have died on that day eight years ago."@
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\hal_t05.jpg",%type_crossfade_fst
+
+`"A---Akiha, you're telling your own brother to die?@ No, that's not right.@ I am your only brother.@ Listen to me, that guy is just a---"\
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\aki_t11c.jpg",%type_crossfade_fst
+
+`"Silence……!@ I will not allow any more insults against Nii-san.@ I---I am not going to let you kill Nii-san again……!"@
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\hal_t05.jpg",%type_crossfade_fst
+
+`"Aki---ha."@
+` SHIKI staggers.\
+
+`"Stop---He's just an impostor.@ Don't betray me for such a guy, Akiha."@
+`"------"@
+` Akiha doesn't answer.@
+` She just confronts SHIKI with fierce aggression.\
+
+`"Akiha---are you going to betray me too, Akiha---"@
+` SHIKI takes a step.@
+` SHIKI looks at me---and Akiha with bloodshot eyes.\
+
+`"…… This is the last warning.@ Move, Akiha.@ Can't you follow your brother's orders?"@
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\aki_t29.jpg",%type_crossfade_fst
+
+`"---I will not move.@ You are not my Nii-san……!"@
+
+cl a,%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+
+br
+` AHHHHHHH
+br
+` SHIKI screams as he jumps.@
+` Not toward Akiha, but toward me.\
+
+`"-----"@
+` But, I was expecting that already.@
+` I raise my knife and face my enemy.@
+` But, SHIKI's nails are faster.@
+br
+` The result will still be mutual death.@
+` If that's the case, I can surely cut his "line" and slice him into pieces---\
+playstop
+
 bg "image\bg\ima_11b.jpg",%type_nowaitdisp
-bg "image\bg\ima_14.jpg",%type_nowaitdisp
 
+bg "image\bg\ima_12b.jpg",%type_nowaitdisp
 
-`"Y----ou bastard………!!"@
-` My heart pounds loudly.@
-` "Death" covers my view.@
-` Hatred takes over my mind.\
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
 
-` I gasp for air.@
-` My breathing goes wild.@
-` SHIKI attacks.@
-` In that case, there's nothing to be afraid of now.@
+wave se4
+
+!w2000
+
+` ---SHIKI's nails never reach.@
 br
-` ----Not a problem.@
-` Fortunately, this is my third time fighting in a life-or-death situation.@
-` By now, I know more than enough about how exactly I should be moving---.\
+`"A---"@
+` SHIKI's soulless voice gasps.@
+`"Aki, ha---"@
+` SHIKI's nails slashed across Akiha's back.@
+br
+` It's not that SHIKI aimed for her.@
+` It's just that Akiha crashed into me.\
+
+`"-----"@
+` But, I felt nothing.@
+` My mind has frozen.@
+` Without feeling anything, my homicidal impulse drives me.\
+
+` Akiha's body falls to the ground.@
+` In that instant.@
+` The instant SHIKI stops moving, I slash through his "line".\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_mid
+bg "image\bg\bg_33d.jpg",%type_crossfade_fst
+
+
+` …… Smell of blood.@
+` It angers me that scent is the only thing I do sense.@
+` The rest of my senses are paralyzed with exhaustion after all my extreme movement.@
+br
+` Right now, I feel nothing.\
+` There is Akiha covered with blood in front of me, and SHIKI's dead body is there right beside her.@
+` I feel nothing, and simply stand here.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+!w3000
+bg "image\bg\bg_33c.jpg",%type_bshutter_mid
+
+` The lights come on.@
+` It hurts my eyes as it returns me to my senses.@
+`"------"@
+` I look around.@
+` On the floor in front of me is a path of red blood.@
+` Akiha's body is not there, nor is SHIKI's.\
+
+`"What----"@
+` The knife is still in my hands.@
+` I'm sure that wasn't a dream.@
+` As proof, the floor is covered with blood.@
+`"Akiha---you protected me."@
+` I remember, and at the same same time, I feel sick.@
+` I didn't want her to do that.@
+` All I wanted to do was protect Akiha.@ Why did it turn out this way---\
+
+`"Shiki-sama."@
+` Someone calls from behind.@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+play "track01.ogg"
+
+`"I have turned on the emergency power.@ Akiha-sama's wounds are pretty shallow, so please do not worry."@
+`"Hisui---where were you?"@
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"I previously stated this.@ When Nee-san and I arrived to help, you and Akiha-sama were on the ground.@
+` …… We tried to talk to you several times, but you were in no condition to talk."@
+` …… So, I just stood here while Akiha was lying injured on the ground?\
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Akiha-sama needed treatment immediately, so Nee-san and I treated Akiha-sama and then put the power back on---should we have waited for your orders?"@
+`"---No.@ You guys did the right thing.@ I was just standing there, right?"@
+`"Yes.@ It has been about an hour since we came, but you have only been standing there."@
+`"…… I… see."@
+` Not doing anything while Akiha was on the ground wounded is the worst thing I could have done.@
+` Not only did I not protect her, but you could say I was actually hurting her.\
+
+`"Hisui, is Akiha alright?"@
+`"Yes, it is not that deep of a wound …… But since it is not a wound that will heal any time soon, we have her resting in her room now."\
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"---Shiki-sama, what happened?@ When we regained consciousness, all the lights in the mansion were turned off and I had apparently been unconscious in Nee-san's room.@
+` It seems Nee-san and I were drugged.@ When we came out to the lobby, you and Akiha-sama were there.@
+` Nee-san said that cut on Akiha-sama is from a big animal, but that is--"\
+
+`"What--?"@
+` There's something wrong.@ This doesn't add up.@
+`"Hisui, SHIKI was not there!?"@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Shiki-sama, you were standing in front of Akiha-sama."@
+`"No, not me, but---"@
+` I stop myself.@
+` Hisui doesn't know about SHIKI.@
+` She doesn't know why Akiha was hurt nor does she know I was almost killed.\
+
+`"…… Hisui, there was only me and Akiha in the lobby……?"@
+` She nods.@
+`"---That guy---!"@
+` He's still alive.@
+` I did cut him from his shoulders along his "line", but it didn't kill him?@
+` Or are vampires harder to kill than humans?@
+` Either way, he's alive right now and has run away.\
+
+`"…… No, I don't care about that right now.@ But Akiha---"@
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"Please wait, Shiki-sama.@ Are you going to Akiha-sama's bedroom?"@
+`"Of course.@ I have to apologize to Akiha and talk to her--"@
+`"…… Nee-san is currently treating her wounds.@ I do not think Akiha-sama would be pleased to see you right now."@
+`"T…… that might be true but…"\
+
+ld c,":a;image\tachi\his_t09.jpg",%type_crossfade_fst
+
+`"Please go back to your room, Shiki-sama.@ When we finish treating her and Akiha-sama asks for you, I will come and get you."@
+
+cl a,%type_crossfade_fst
+
+` With that, Hisui starts to walk up the stairs.@
+` She probably went up to Akiha's bedroom to help Kohaku-san.\
+
+`"…………"@
+` Being a guy, I can't help them.@
+` All I can do for now is wait for Hisui in my room.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w2000
+bg "image\bg\bg_40c.jpg",%type_lcartain_mid
+
+
+` ----I go back to my room and try to calm down.@
+br
+` I have to calm down and think about many things.@
+` About Akiha.@
+` About myself.@
+` About that guy SHIKI.\
+
+` …… SHIKI told me that I was adopted and treated as Tohno Shiki in his place.@
+` I have no intention of denying it.@ Rather, it's very convincing.@
+` Why I didn't recognize this mansion that well, why my room didn't feel like a room I knew…@
+` …… The fact that I was living in with the Arimas, and why no one came to see me while I was in the hospital eight years ago.\
+
+` …… When I was adopted ten years ago, and the two years until I got into that accident.@
+` Me, Akiha, and SHIKI were raised as brothers and sister.@
+` SHIKI sounded as if he knew I was adopted all along.@
+` But what about Akiha?@
+br
+`"You are not my Nii-san-----"@
+br
+` Akiha said that to SHIKI and injured herself while protecting me.\
+
+` …… Akiha might not know that I was adopted.@
+` That's why she protected me.@
+` You can't do that unless it's your real brother.@
+` So-----Akiha must believe I am her true brother.\
+
+wave se3
+!w1000
+
+ld c,":a;image\tachi\koha_t03.jpg",%type_lshutter_mid
+
+`"Shiki-san, can I come in?"@
+`"Kohaku-san.@ Is Akiha alright now?"@
+
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+
+`"Yes, we are done treating her wounds.@ She won't be able to walk at all for a few weeks, but there's no danger to her life."@
+`"I see-------thank goodness."@
+` I let out a sigh of relief.@
+` If the wound she received from protecting me was worse, I don't know how I could ever talk to Akiha again.\
+
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+
+`"Shiki-san, Hisui-chan told me you wanted to talk to Akiha-sama?"@
+`"…… Yeah, I'd prefer not to if Akiha's not feeling well, but I would really like to talk to her if I can."@
+
+
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+
+`"If that's the case, please go ahead.@ But please do not have a complicated conversation.@ Akiha-sama is pushing herself and I do not want her to be mentally tired."\
+
+`"…… I know.@ I just want to see Akiha and thank her."@
+
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+
+`"Alright.@ That should be fine.@ Then, I'll rest for a bit.@ Can you take care of Akiha-sama for a while?"@
+
+cl a,%type_lshutter_mid
+
+` Kohaku-san walks out of the room, wobbling.@ She must be tired from taking care of Akiha.\
+
+`"………………"@
+` …… Alright.@ I have to go check on Akiha.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+playstop
+
+bg "image\bg\bg_46c.jpg",%type_lcartain_fst
+
+` I knock on the door.@
+`"Akiha.@ It's me.@ Can I come in?"@
+` After a moment of silence.@
+`"…… Yes, please come in, Nii-san."@
+` I hear her weak whisper.\
+
+bg "image\bg\bg_37.jpg",%type_lshutter_mid
+
+play "track09.ogg"
+
+` I go into Akiha's bedroom.@
+` As she was sleeping on the bed until now, she raises herself slowly.\
+
+`"-------"@
+` …… Crap.@
+` Seeing her like this causes my mind to empty.@
+` There's already tension enough coming into Akiha's bedroom, and she's acting so weak that I regret it.@
+br
+`"-------"@
+` We end up just staring at each other in silence.\
+
+` ……@
+` …………@
+` …………………@
+` ……………………………… All of a sudden,@
+br
+`"Aren't you going to sit down, Nii-san?"@
+`"Oh------yeah.@ I should sit down, huh?"@
+` I take a seat in a chair.@
+` Now I'm at the same height as Akiha, and my head goes even more blank.\
+
+bg "image\event\aki_e04b.jpg",%type_lshutter_mid
+
+
+`"…… You never ask about anything, do you, Nii-san?@ Even though I am like this, I was ready for anything."@
+` Akiha says in a soft voice.@
+`"…… You're right.@ There's a lot of things I want to ask about.@ But I'll ask all that after you get better.@ Right now, I'm here to see how you're doing."@
+`"I see.@ But there's something I want to ask you, Nii-san.@ I get mad easily when I don't understand something.@ So, I can't sleep peacefully unless I hear it from you."@
+`"…… Go ahead.@ You're hurt right now, I'll answer anything."\
+
+`"I'm sorry.@ I'm hiding a lot of things from you, but I don't want you to hide anything from me.@
+` …… I'm really selfish, aren't I?"@
+`"…… Don't worry.@ I like that part of you, too.@ I'll let it go.@ So, what do you want to ask about, Akiha?"@
+br
+` Akiha is probably making me match her pace.@
+` Surprising even myself, I speak kindly to her.\
+
+`"…… Then I'll ask.@
+` Nii-san, you used the word 'vampire'.@ Is that something Ciel taught you, or is that something you concluded yourself?"@
+`"…… I think it's both.@ I don't know why, but I've been having this dream where I killed people and sucked their blood."@
+` So I thought I was the killer.@ However, Ciel-senpai proved me wrong.@
+
+`"…… I see.@ You were in tune with SHIKI's mind.@ That's why-----you asked me that at school."\
+`"What-----Akiha, you can tell that I am in tune with his mind……?"@
+`"No, I'm just saying the possibility existed.@ Nii-san, you might not remember, but that SHIKI is our……"@
+`"Yeah, you wanna say he's our brother, right?@ I forgot about it until just now.@ But I remember faintly.@ Whenever we played in the garden, you always followed us.@ "Us" means that there's more than one, right?"\
+br
+` Yes, when I recall my childhood, there is that contradiction.@
+` I didn't recognize it, probably because the old man hypnotized me.\
+
+`"………………"@
+` Akiha does not say anything.@
+` …… It really seems like she doesn't know I'm adopted.@
+` In that case, I do not want to say it right now and mentally attack her.@
+` If I can lie to her right now, I should.\
+
+`"…… Nii-san, you were almost killed by SHIKI eight years ago.@ SHIKI did not have that much Tohno blood in him, but it suddenly awakened.@
+` The blood of Tohno is a blood from ancient times, and it makes you give priority to your instincts rather than your reason.@ SHIKI had that blood throughout him and attacked you, as you happened to be there."@
+
+` …… I heard that from SHIKI.@
+` That this scar on my chest is not from an accident, but from SHIKI.\
+
+`"Everyone in the Tohno family has different abilities.@ There's some people who eat other people like SHIKI and there's people whose abnormality is only in their brain like Father.@
+` …… SHIKI attacked you and took away your blood and life.@ SHIKI was punished by Father but he survived by taking your life."\
+
+`"…… I don't get it.@ What do you mean by him taking away my life……?"@
+`"I should say your soul in this case.@ I don't know how it works since I'm not SHIKI.@
+` But SHIKI lived by feeding off your life.@ I think you and SHIKI are like different people running off of one heart.@
+` That's why you tune into each other easily.@ …… If that's the reasoning, I think you can tune into me too, but I think it's because you two were really good friends."\
+
+`"Stop it, with that guy------with a guy that hurts you?@ Don't make me friends with him."@
+`"………………"@
+` Akiha looks at me with a painful expression.@
+` …… Her thin body.@
+` Her white skin.@
+` Her flowing black hair is tinged slightly red and looks very weak-------\
+
+`"Oh yeah.@ Akiha, what happened to your hair?@ It was red back then, and now it's back to black.@ What's going on?"@
+`"…… I told you.@ This is due to the Tohno blood.@ My body does not change like SHIKI, but when my blood gets excited, my hair turns back into its original color.@
+` Now that I am calm, it returned to being black."@
+
+`"…… That's good.@ I think you look better with black hair.@ I think it'll be bad if your hair stayed red."@
+` ……… I don't want her to be stained with something like the Tohno blood.\
+
+`"…… Yes, I also dislike the color red.@ I know it's just the color of my hair, but it means my body's state has changed, and I do not want to be like SHIKI-----"@
+br
+bg "image\bg\bg_37.jpg",%type_lshutter_fst
+wave se4
+
+
+` Akiha falls back in bed.@
+`"Akiha------!?"@
+` I support her body.\
+
+`"Ugh-----ah… Ohh………!!"@
+` She's shaking.@
+` Her breathing is difficult, as if her heart was gone.@
+` She clenches her teeth in pain.@
+` She sweats as if trying to expel the pain from her body.@
+
+`"Akiha……!@ What's wrong?@ Do your wounds hurt!?"@
+`"Ah------ah, Nii-sa-------"@
+` Akiha grips the bed sheets.@
+`"Sh……!@ Hold on, I'll go get Kohaku-san……!"\
+`"N,no------no one can help… me anyways……!"\
+
+` Akiha grabs onto my arm, still breathing hard.@
+` Her slender fingers.@
+` Her soft hands grip my hands strongly.@
+br
+`"Alright----I'll stay right here, Akiha."@
+`"-------"@
+` I can't hear her; her voice is too choppy.\
+
+` Akiha rages around on the bed,
+` and I realize her hair is red again.@
+`"Akiha, your hair------"@
+`"It's-----all, right-----This won't-------last-------long---"@
+` Akiha is in serious pain.@
+` Time passes by, and all I can do is hold onto her hands.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_37.jpg",%type_lshutter_mid
+
+
+` …… After an interminable amount of time, it finally ends.@
+` I'm sure it was only a few minutes, but it felt like a few hours.@
+`"----"@
+` She breathes normally now.@
+` Her hair is still red, but it looks fainter than before.\
+
+bg "image\event\aki_e04.jpg",%type_lshutter_mid
+
+
+`"---I'm sorry I made you watch such unpleasant things."@
+` Akiha sits up.@ …… I can easily tell she is pushing herself.@
+`"…… You don't have to sit up.@ It still hurts, right?@ Don't try to push yourself."\
+
+`"No, I'm alright.@ My back has nothing to do with this.@ This spasm is like an everyday thing."@
+br
+` ---Her back has nothing to do with this?@
+br
+`"…… What do you mean, everyday thing?@ This is normal for you?"@
+`"………………"@
+` She doesn't answer.@
+` That means yes.@
+` …… I can't believe it.@ She suffers through this kind of pain all the time----?\
+
+`"…… Why?@ That's not right.@ That, that's not----nor… mal…"@
+` Akiha still doesn't answer.@
+` She just nods silently.\
+
+`"…… Like you say, I'm not normal.@ This spasm is not like your anemia.@ This is a pain all people of the Tohno blood go through.@ When you cannot stand this pain, you become like SHIKI."@
+`"------What?"@
+`"I told you, people of the Tohno line are abnormal.@ The Tohno blood in me is strong.@ As I grew up, it became worse and worse each day.@
+` …… Now it's getting to a point where I can't help it.@ I am like this every night."@
+` Akiha just talks without holding any grudge against her blood.\
+
+` I------understood what Akiha is saying, but at the same time, I don't want to accept it.\
+
+`"…… What do you mean?@ I don't get what you're saying."@
+`"…… Geez.@ Nii-san, you really are stupid."@
+` Akiha laughs.@
+` She smiles, looking a bit troubled.\
+
+`"My body uses more heat than the average person.@
+` So I cannot get enough energy using normal methods and I end up having to get heat directly from someone.@
+` …… Like you say, I act like a vampire trying to contain myself.@ But the more I rely on it, the more abnormal I am.@ I'm acting more like a Tohno.@ But without it, I have no way to control myself."\
+
+`"Akiha------------"@
+`"Do you understand?@ I have to take away heat from something alive.@ I am an incomplete creature.@ That's Tohno Akiha for you, Nii-san."@
+br
+` ------I cannot say anything.@
+` But, I still manage to find something to say.@
+` To not say anything right now only hurts Akiha even more.\
+
+`"…… That's why you were sucking Kohaku-san's blood…"@
+`"You knew, Nii-san…?@ That I got blood from Kohaku?"@
+`"Yeah.@ Sorry for not telling you."@
+` Akiha blushes and looks down.\
+
+
+`"That's a last resort.@ It doesn't have to be blood I take in.@ It can be body heat, it can be mental heat… anything with heat gives me power.@ Blood just happens to be the most efficient method."@
+`"…… So you're different from SHIKI; you're not a real vampire like him."@
+`"…… Yes, I'm not like SHIKI as I can't make people like me.@ I can only take from other people."@
+` Akiha looks away from me.@
+` But, that's good for me.@
+` Because---it's just a matter of the difference in the kind of food you take in.\
+
+`"…… I feel relieved.@ You kept on telling me you're abnormal, but you're normal.@ Unlike SHIKI, you're a normal human being.@
+` That spasm you had, it won't happen if you get some blood, right?@ Then------"@
+`"…… It is true that it would not occur if I take in some blood.@
+` But, I can't stand getting blood just because I want to.@ If I get used to that, I will just be like SHIKI."\
+
+`"…… No matter how painful it is, if it is just physical pain, I can stand it.@
+` The Tohno blood awakens more at night, but it dies down in the morning.@
+` So this is normal for me.@ You don't have to look at me that way."@
+`"…… You're stupid.@ If you were in that much pain, I'll be glad to give you as much blood as you want."@
+` I'm being honest.@
+` If I knew Akiha was in this much pain every night, I would have given her blood every time.\
+
+`"No, I do not want to drink anyone's blood.@ I really do not want to drink Kohaku's blood either."\
+`"Why……?@ If your spasms go away, then it should be fine."@
+`"That…… is true but,"@
+` Akiha grows quiet and continues with an embarrassed tone.@
+`"But I do not want to be called a vampire by you.@ I want to stay as a human being, just like you."\
+
+`"------------Ah."@
+` I really hate how stupid I am.@
+` …… I never thought about how Akiha felt.@
+` About how ominous she feels about the Tohno blood.@ About how much she thinks about me.\
+
+`"…… Is there anything I can do for you, Akiha?"@
+`"Let's see, please go rest in your room.@ You must be tired too."@
+`"………… Idiot."@
+br
+` …… That's all I can say in response.@
+br
+`"Don't worry.@ Just lay down.@ I'll stay here until you go to sleep."@
+`"…… Alright.@ If you say so, I will, Nii-san."\
+
+bg "image\bg\ima_10.jpg",%type_tcartain_mid
+
+bg "image\bg\bg_37.jpg",%type_tcartain_mid
+
+
+` …… She says this as she lies back down.@
+` After time passes quietly by,
+` she falls into a gentle slumber.@
+` Akiha's face looks very peaceful.@
+` I stay and continue to watch her.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+!w3000
+wave se3
+
+bg "image\bg\bg_37.jpg",%type_crossfade_mid
+
+
+
+`"Shiki-san, are you awake?"@
+` …… I can hear Kohaku-san's voice.@
+` I look at the clock to find out it's three o'clock already.\
+
+`"I'm awake.@ Are you here to look after Akiha, Kohaku-san?"@
+`"Yes, I wanted to take her temperature.@ I'm sorry Shiki-san, but……"@
+`"Oh, sorry, I'll leave right away."@
+` I get up from the chair.@
+` As I leave the room, I look at Akiha one more time.@
+`"…… Thank you… and sorry, Akiha."@
+` I whisper this softly as I leave her room.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+playstop
+
+
+` …… I let Kohaku-san take care of Akiha and I walk down the hallway.@
+` Things should be fine for now, but I still feel uncomfortable.\
+
+` I don't care that SHIKI is still alive.@
+` There's only one thing that worries me.@
+` …… I was watching Akiha's face while she was sleeping,
+` but her hair did not turn back to its original black no matter how long I waited.\
+
+!w3000
+
+
+
 
 
 

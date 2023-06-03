@@ -1,284 +1,57 @@
 
 
+bg "image\bg\bg_01a.jpg",%type_lcartain_mid
+
+` ----I arrive thirty minutes earlier than usual.@
+` The figures of students around the school gate are sparse.@ It seems I'm the only one who's arrived at this odd time.\
+
+bg "image\bg\bg_03a.jpg",%type_lcartain_mid
 
 
-if %flgE>=1 skip 7
-mov $phasebg,"image\bg\bg_06g.jpg"
-mov $phasetitle_a,":a;image\word\PARK_06A.PNG"
-mov $phasetitle_b,":a;image\word\day_06.png"
-gosub *left_phase
-
-skip 5
-mov $phasebg,"image\bg\bg_27b.jpg"
-mov $phasetitle_a,":a;image\word\PCEL_06A.PNG"
-mov $phasetitle_b,":a;image\word\day_06.png"
-gosub *left_phase
-
-
-
-bg "image\bg\ima_11.jpg",%type_crossfade_slw
-
-bg "image\bg\bg_40a.jpg",%type_lcartain_fst
-
-play "track02.ogg"
-
-
-` ………, ………………, ……………………@
+` On the school grounds, the athletic clubs are holding their practices.@
+` …… I'm not in any clubs right now, but truthfully, I like to move around a lot.@
+` I know that I have some athletic ability, at least enough to be proud of.@
 br
-`"--Mor--ning?"@
-br
-` I dazedly open my eyes.@
-` Sunshine pours in from the window, enveloping the room with a warm atmosphere.\
-`"………………"@
-` I stare down at my hands.@
-` They are a little sweaty.@ My body is drenched in sweat as well, as if last night was incredibly hot.@
-` What's more, I'm panting heavily.\
+` But, I can't join any clubs.@
+` My body always has this recurring anemia so I would just be a bother----and my doctor has told me that I should not exercise frequently.\
 
-`"Ah--------"@
-` I shake both my hands.@
-`"…… I can… move……"@
-` There isn't any mark left on my wrist from the ropes.@
-` The bed is clean, and neither the chair Akiha was sitting on nor Kohaku-san are anywhere to be seen.\
+` Since middle school, I've been asked more than a few times to join a club.@
+` But I always have to say "it's not my thing" and refuse.@
+` Every time I refused----I felt a sense of separation.@
+` That might have been…
+` a subconscious wall that told me I will never be able to mix in with the people on the other side.\
 
-`"H------uh?"@
-br
-` Akiha, and Kohaku-san……?@
-br
-`"A----Akiha!"@
-` I jump out of bed.@
-` I wildly look around the room.@
-` I see--
-br
-`"……… There's… no one………"@
-br
-` Right, no one's here.@
-` The bed doesn't look rumpled--and that cold Akiha isn't there either.\
-
-`"A----dream?"@
-` As soon as I realize it, I heave a sigh of relief.@ I shut my eyes and catch my breath.@
-` This is my room.@
-` It is before seven in the morning.@
-` I am the only one here, and of course Kohaku-san and Akiha are nowhere to be seen.@
-`"Ha……………… a."@
-` Yeah, I knew.@
-` I know it was a dream.@ Now that I'm calm, I know she wouldn't ever do anything like that.@
-` In that instance, what happened last night was not real.\
-
-`"Ha--ah."@
-` I let out a deep breath.@
-` …… All the same, I definitely still remember what happened last night.@
-` I know it was a dream--but it felt too real; it makes me think it was real.\
-` …… But, it was without a doubt a dream.@
-` That has to be true.\
-
-`"--Why--"@
-` Why did I see that dream?@
-` …… Well, certainly Akiha is strict, and she is the head of the Tohno household, so it makes her the most powerful person here.@
-` But she wouldn't do that.@
-` She is my dear sister, but seeing that dream--Does that mean I'm seeing her as a woman?@
-`"------Uh."@
-` I remember her cold stare, like ice.@
-` I hug myself to make sure this is real.\
-
-`"Damn--what the hell am I thinking?"@
-` Lusting after my sister, there really is something wrong.@ …… Well, she is different after eight years, like a completely different person.@ She seems more like a refined young lady I've never met.@ But still--
-`"…… But…… she was… really cute."@
-br
-` --I blush furiously as I remember.@
-br
-` Maybe it was only a dream within a dream, but I remember Akiha feeling herself while wildly calling my name.@
-` I know it truly is forbidden, but I recall the dream and just sit there thinking about it.\
-
-` And then,
-
-ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
-
-`"Shiki-sama."@
-`"Uwaaaaaa!"@
-quakey 2,100
-
-` I flail around off my bed as if trying to escape.@
-` No--in fact I was trying to escape, but it just ended up with me landing on the floor with the sheets.\
-
-`"Hi, Hihi, Hisui…… !?@ H, how long have you been there!?"@
-`"Since before you awoke, Shiki-sama."@
-` She speaks with her usual lack of expression.@
-` Still lying on the floor tangled in the sheets and unable to stand, I look up at Hisui's face.\
-
-`"…… Before I… woke up……"@
-br
-` --Then, that means…
-` Hisui saw my face when I was having that dream?@
-br
-` My face turns deep red.\
-` Hisui just stands there, expressionless as usual, and makes no attempt to speak.\
-
-`"Um…… did I look… strange……?"@
-
-ld c,":a;image\tachi\his_t01b.jpg",%type_crossfade_fst
-
-`"I do not wish to describe it."@
-`"Ah--h"@
-` …… I knew it.@ I must've looked really weird.@
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"But, if you insist, Shiki-sama, I can describe as accurately as I can."@
-`"…… No, you don't have to do that……"@
-` My face still flushed, I speak in a fading voice.\
-
-`"Um, Hisui-san?"@
-` I give a cough to clear the silence.@
-` …… Adding "san" to her name is a clear sign of my vulnerability.\
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-
-`"What is it, Shiki-sama?"@
-`"Um…… I'm going to change, so would you mind waiting outside?"@
-` --Or rather, I'm so embarrassed I just want her to leave.@
-` But Hisui doesn't obey today of all days.\
-
-`"Once I can confirm you are awake, I will leave the room, Shiki-sama."@
-`"……!"@
-` Huh?@ Is, is is is she joking!?@
-` Why does she think I'm covering myself up in these sheets!?@
-` It's to hide something that's still standing!\
-
-`"I, I'm fine, so please leave.@ I can get up, and I won't go back to sleep.@ I'll change and go to the sitting room as soon as you leave."@
-`"Shiki-sama--Are you hurt and unable to stand……?"@
-
-cl c,%type_crossfade_mid
-
-
-` Hisui approaches me out of worry.@
-`"No, that's not it.@ I'm standing----I mean I can stand, so don't worry about it."@
-` I crawl pulling my sheets like a slug, and gain some distance from her.@
-` Using the bed as a barrier, I get far enough away.\
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"…… Then, please excuse me.@ I will prepare your breakfast, so please come after you change."@
-
-cl c,%type_lshutter_mid
-
-` She has got to be suspicious, but she bows and leaves the room.\
-br
-` *sigh*@
-` I was so surprised.@
-` The contents of my dream were surprising enough, but knowing Hisui saw me while I was dreaming is very troubling.@
-` …… Or is it my own fault for having that kind of dream about Akiha?\
-
-`"…… I guess it is my fault.@ Having a dream like that about my own sister."@
-` I give a sigh of self-loathing.@
-` For my sake and for Akiha's reputation, I should just forget about it as soon as possible.\
+`"…………"@
+` Ah, that's enough.@ This really isn't my thing.@ I'll stop thinking such thoughts and hurry on to the classroom.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_34a.jpg",%type_lcartain_mid
+bg "image\bg\bg_06a.jpg",%type_lcartain_mid
+play "track03.ogg"
 
+`"Huh----?"@
+` I thought I was the first one, but it seems like some of my classmates are already here.\
 
-` After calming down enough, I head to the sitting room.@
-` As usual, Akiha is sitting on the sofa, elegantly sipping tea.@
-
-ld c,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
-
-`"Oh?@ Good morning Nii-san.@ You're up early today."@
-` She must be happy I woke up because she greets me with a smile.@
-`"Yeah, good morning.@ There were, well, a lot of things going on this morning."@
-` As soon as I say that--I remember that cold stare from last night.@
-
-cl c,%type_crossfade_fst
-
-`"Uh--"@
-` This isn't good.@ I can tell my face is blushing beyond my control.@
-` …… Myself being made a complete fool.@
-` And Akiha, who was always watching.\
-
-`"Nii-san--?"@
-` A brief clamor.@
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-
-`"What's wrong?@ Your face is red, do you have a fever?"@
-`"-----!"@
-` Rushing over to me, she looks up at me from below.@
-` But, if she looks at me that seriously, I----\
-ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
-
-
-` Akiha sighs.@
-`"You do seem to have a fever.@ Kohaku, come quickly.@ Nii-san doesn't seem to be well."@
-` Akiha calls out to the dining room.@
-` Kohaku-san has to be preparing my breakfast in the kitchen.\
-
-`"I'm fine--!@ It's just a minor cold, so don't worry!"@
-
-ld c,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
-
-`"If it is a cold, then I can't let it go by.@ For you, a trivial illness is a big deal.@ The strength of your immune system is much lower than most people's."@
-cl c,%type_crossfade_fst
-
-` Akiha seems to be fed up and puts her hand on my forehead.\
+`"Yo, you're early Tohno."@
+`"Morning.@ This class seems to have a lot of people with spare time."@
+`"Nah.@ Our practice just got over with.@ Those that come here this early who aren't in clubs are usually only those with daily duties."@
 br
-` The sensation of her cool, delicate hand.@
-` White, slender fingers.@
-` So different from those of a man.@ Delicate, beautiful, white fingers------\
+` I see.@ That does makes sense, now that he mentions it.@
+` Greeting those around me, I take my seat.@
+` It's half an hour before homeroom.@
+` It's not a bad idea to just watch my classmates arrive.\
 
-`"!!!!!"@
-` This isn't good.@
-` This isn't good at all, so I break loose and run out to the lobby.\
-
-
-bg "image\bg\bg_33a.jpg",%type_lcartain_mid
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_06a.jpg",%type_lshutter_mid
 
 
+` The classroom starts to get busy around seven fifty.@
+`"----Huh?"@
+` I think I saw Senpai in the hallway.\
+
+`"She's down at the first year hallway again----what is she doing?"@
+` Maybe she came to see me?@
+` Then----
 br
-` Footsteps echo as I dash off.@
-br
-
-
-bg "image\bg\bg_40a.jpg",%type_lcartain_mid
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"Shiki-sama?@ Have you finished your breakfast already?"@
-`"No, that's not it, but--Um, where's my bag?"@
-`"I have your bag here.@ Are you already going to school?"@
-` Nodding, I snatch my bag from Hisui.@
-`"I'm going.@ Don't worry about seeing me off!"\
-
-bg "image\bg\bg_33a.jpg",%type_lcartain_mid
-
-ld c,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
-
-`"Nii-san, you've been acting strange.@ What are you doing with that fever?"@
-`"Geez, I told you it's nothing!@ Since it's nothing, I'm going to school!@ I'll have breakfast later, so leave me alone!"@
-`"Leave you alone--hey, Nii-san!?"@
-br
-` The sound of my fleeing footsteps is my only response.\
-
-bg "image\bg\bg_32a.jpg",%type_lcartain_mid
-
-`"Sigh----"@
-` Even if it is Akiha, she wouldn't chase me this far.\
-` Since we're not kids anymore, she won't stop me from going to school.\
-
-`"----Whew."@
-`  I take a deep breath and am finally able to calm down.@
-`"……… What am I running away for?"@
-` Once I calm down, I can think clearly.@
-` I didn't do anything wrong, so there was no need for me to run away like that.\
-
-`"--I don't believe it.@ I look like a complete idiot."@
-` But, to go back to the mansion to eat breakfast sounds more dumb.@
-`"--To school, then?"@
-` Letting out a sigh, I go downhill along the residential street.\
-
-playstop
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-!w1000
-
-
-
 
 
 

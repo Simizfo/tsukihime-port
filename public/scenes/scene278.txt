@@ -1,83 +1,104 @@
 
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
 
-bg "image\bg\bg_06a.jpg",%type_lcartain_mid
-
-` Homeroom is about to start, but it is still very rowdy in the classroom.@
-` I take my seat by the window and set down my bag.\
-
-ld c,":a;image\tachi\ari_t01.jpg",%type_lshutter_fst
-`"Hey, mornin'.@ You're looking pretty bad today."@
-`"…… Sheesh.@ Everyone looks at me and says the same thing.@ Do I look that sick?"@
-`"Eh---?@ …… Yeah, come to think of it, you look normal.@ I don't know, but you look really down, Tohno."@
-`"………… Down, huh?@ …"@
-
-` Certainly my spirits are low.@
-` Ever since Senpai said farewell, my body has been heavy and both my mind and body are knocked out.\
-
-`"---Arihiko.@ Did you see Senpai today?"@
-ld c,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
-`"Huh?@ Senpai?@ Which Senpai?"@
-`"Which?@ …… the only Senpai we both know is Ciel-senpai."@
-`"Shiel-Senpai?@ …… Who's that?@ Are there any foreign students at our school?"@
+` ---I'll just stay in the classroom.@
 br
-` ----My mouth hangs open in amazement.@
+` Senpai isn't there no matter where I go.@ No matter what I do, she won't come back---\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_slw
+bg "image\bg\bg_06b.jpg",%type_lshutter_slw
+
+` The end of the day homeroom session is over.@
+` My chatting classmates get out of their seats.@
+` After staring at them blankly, I get out of my seat to go back to the mansion.\
+
+` ---Back to the mansion.@
+` But it's not like there's anything if I go back.@
 br
-`"…… Arihiko, you……"@
-` I manage to stammer this out in my confusion.@
-` But, nothing else comes out.\
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+monocro #ffff00
 
-ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
-`"You okay Tohno?@ Just spit it out.@ As long as it's not asking for money, I'll help you out."@
+bg "image\event\cel_e05a.jpg",%type_crossfade_fst
+
+monocro off
+
+bg "image\bg\bg_06b.jpg",%type_crossfade_fst
+
+`"…………"@
+` I know I can never reach her, but I can't give up.@
+`"Damn it---what the hell should I do……!"@
 br
-` Arihiko is acting like he always does.@
-` Just like always, he completely does not remember Senpai.@
-br
-`"…… Nah, it's nothing.@ Sit down, class'll start."@
-`"Oh, it's that time.@ Well, later."@
-cl c,%type_lshutter_mid
-` Arihiko goes back to his own seat and the teacher arrives.\
-
-` Homeroom starts, followed by physics, the first period class.@
-br
-` ---I watch it like a movie on a screen.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\bg\ima_03.jpg",%type_lshutter_fst
+` Voicing my thoughts angrily, I leave the classroom.\
 
 
+bg "image\bg\bg_11b.jpg",%type_lcartain_mid
 
-` Senpai… really disappeared.@
-` Not just from my sight, but the person known as Ciel-senpai is gone completely without a trace.@
-` Arihiko doesn't remember her.@ …… I'm sure no one else does either.@
-` That farewell, this is what it meant.\
+` …… I look up and find myself in front of the tea ceremony room.@
+` Even though she won't be here, my legs walk in on their own.\
 
-`"--------"@
-` The movie in front of me continues playing, showing a teacher using white chalk on a blackboard.@
-` Nothing seems real anymore.@
-` Once classes are over and break time begins, that person will never come again, ever.@
-` During lunch, we will never sit in the tea ceremony room and spend the time aimlessly over lunch.\
+bg "image\bg\bg_09b.jpg",%type_lcartain_mid
 
-` …… Somewhere.@ I had a thread of hope, but that is gone as well.@
-br
-` I've lost Ciel completely.@
-` I still haven't---haven't done anything.@ Haven't told her anything.@
-` We spent time eating lunch together on a nice day such as today.@
-br
-` That was, a distant, precious dream----\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-!w1000
-
-bg "image\bg\bg_06a.jpg",%type_crossfade_fst
-
-` I realize the number of my classmates in the room is dwindling.@
-br
-` ---It seems it's now lunch time.@
-`"………………"@
-` I don't feel like doing anything.@
-` I feel sluggish, so I'll just---
+`"-------Ha."@
+` Of course, no one is here.@
+` I wasn't expecting anything, but when I'm hit hard like this, my vision seems to waver.@
 br
 
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\bg_09b.jpg",%type_crossfade_fst
+
+
+` The world starts to spin around me.\
+play "track04.ogg"
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+
+br
+br
+br
+br
+br
+br
+br
+`     Instantly, it happens.\
+
+bg "image\bg\bg_09b.jpg",%type_nowaitdisp
+
+quakey 1,100
+
+
+` The ground shakes.@
+` I think to myself it's a large earthquake---but I realize it's not the ground shaking, but the impact of my body hitting the floor that I felt.\
+
+`"Ah----eh?"@
+` I can't speak well.@
+br
+` Panting.@
+
+` The gasping breaths can be no one else's but mine.@
+` But I don't feel bad.@
+` It's more like I don't feel anything, like I have no sense of feeling at all.\
+
+` The sound of frantic breathing.@
+br
+` Even though I'm not exhausted, my throat painfully gasps for air.@
+` I don't feel anything.@
+` I feel like the collapsed body here isn't mine.\
+
+` The sound of gasping.@
+br
+` Something's---weird.@
+` As I lie breathing wildly on the floor, blood spreads out on the tatami mats----\
+
+monocro #ff0000
+
+quakey 1,100
+
+`"----Gah."@
+br
+` Suddenly,
+` a stabbing pain fills my chest.\
+
+monocro off
 
 
 return

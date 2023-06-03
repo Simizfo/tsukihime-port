@@ -1,151 +1,233 @@
 
 
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-
-bg "image\bg\bg_27a.jpg",%type_lcartain_mid
+bg "image\bg\bg_56.jpg",%type_lcartain_slw
 play "track03.ogg"
 
-` The weather's great so I decide to go to the park.@
-` We can relax there and then go somewhere else more appropriate later.\
-
-bg "image\bg\bg_28a.jpg",%type_lcartain_mid
-
-` We enter the park.@
-` It's still midmorning but there's a bunch of people my age here.\
-
-ld c,":a;image\tachi\ark_t01a.jpg",%type_lshutter_mid
-`"Hm, there's a lot of people here during the day.@ I've met you here a lot, but it seems like a totally different place."@
-` Arcueid seems to be in a good mood.@
-` I just planned to walk around the park, but she doesn't seem discontent at all.\
-
-`"Oh, there's a store in a place like this.@ Shiki, what does that sell?"@
-` Arcueid points excitedly at a vendor's stand.@
-` The path from the fountain leads to a wheeled ice cream stand.\
-
-`"That's an ice cream seller out of season.@ Cold things aren't good for the body, so we should just pass it up for now." I stop Arcueid's question before she asks.@
-ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
-` No matter how unhappy a face she makes, I don't think eating ice cream in the fall would be good at all.\
-
-` ----But, what is this strange feeling?@
-` I feel weird just walking, I feel everyone's watching us……\
-
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-
-`"Hey Shiki, do you know all these people?"@
-`"No, there's only one person I know who'd skip school to hang around like that.@ Why?"@
-`"Hm, a lot of people seem to be looking at us, so I thought maybe you knew them."@
-`"…… I see.@ So that's what felt strange."\
-
-` I get it now.@
-` I was just walking around to find a good spot on the grass to sit down on, but everyone is stealing glances at us.@
-` It doesn't need to be said, but they're looking at Arcueid, not me.\
-
-` I've been doing my best not to be conscious of it, but Arcueid is just unbelievably beautiful.@ And walking in the park is just asking for stares.@
+` It's now past two, so to ease my hunger I take us to a fast food restaurant.@
 br
-` The guys killing time in the park all start to look at her.@
-` …… For some reason, I feel angry.\
+` …… I don't even know if she eats this kind of food, but after Arcueid stares long and hard at the menu, she ends up ordering the same thing I did.\
 
-`"Arcueid, let's go somewhere else."@
-` Grabbing her hand, I pull her as I walk towards the back of the park.@
+`"…………"@
+` I sit down across from her.@
+` After Arcueid looks around quickly, she pops a french fry in her mouth like she's done it before many times.\
 
-bg "image\bg\bg_29a.jpg",%type_lcartain_mid
+`"…… Wow, you seem pretty used to it.@ I thought maybe it was your first time."@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
 
-` The place we usually meet has much less people than right in front of the fountain.@
-` …… This should be little better than before, at least.\
+`"Yeah, this is the first time I've done it.@ I've known about places like these, but it was only from information sources."@
+`"Just information…… I see, you watch the news so I guess you read magazines too."\
 
-`"We'll kill time here a little bit.@ I'm going to get something to drink, you have any requests?"@
-` I let go of her hand and turn towards her.\
-
-ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
-`"U…… um, is water okay?"@
-`"Sure.@ Go ahead and sit on that bench…… if some guy starts to talk to you, just don't listen to him."@
-` Saying that, I run to a nearby vending machine.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\bg\bg_29a.jpg",%type_lshutter_fst
-
-` Even though it's now past noon, we don't leave the park.@
-` …… I'm not sure why, but Arcueid's been quiet since we came here.@
-` She hasn't even drank the water I got for her, and she just looks around the park doing nothing.\
-
-` We watch the flocks of pigeons around the park and the happily running figures of children accompanied by their mothers.\
-
-ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
-
-`"Hey, Shiki."@
-`"Hm?@ Are you bored just spacing out?@ We can go somewhere and get something to eat if you want."@
-`"No, that isn't it…… I was just wondering about what happened before."@
+`"Hm, not quite like that, I need knowledge to fit in with the times, right?@ So when I wake up, I study the information of that time and then go into action.@
+` Well, it's usually over in a few days so it usually ends up being useless."@
 `"……?"@
-` Before?@ …… What is she talking about?\
-
-`"I don't get it.@ What do you mean?"@
-`"I'm talking about when you grabbed my hand earlier.@ We've come into contact before, but there was always a reason.@ But just now, there wasn't a reason, so I was wondering just what it was."@
-`"What it was?----There really wasn't a reason or anything."\
-
-` Saying that, I also get confused.@
-` …… Come to think of it, I pulled her along naturally for no reason.@
-` That being said, I don't even understand why.\
-
-`"It doesn't really matter.@ It's not that big of a deal.@ Something sudden like that, is just human."@
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-`"I see.@ Having lots of things done for no reason… you've done a lot of useless things."@
-` Arcueid replies, amazed.\
+` She says things that are hard to understand like this from time to time.@
+`"Hmm…… why does it end up useless?"\
 
 ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
-`"Hey Shiki.@ It's kind of off topic, but did you ever have a time like that?"@
-` She really is asking about random things.@
-` She's looking at the playing children, so she's probably asking about that.\
+`"Because I go to sleep right away.@ I don't know how many years later I wake up the next time, so I can't use much of what I remember.@ After it is over, all I do is sleep.@
+` …… Hm, but maybe I've been missing out.@
+` I only knew the world through those sources.@ I knew about how people would gather like this, but I never experienced it."\
 
-`"…… Hmm, Maybe.@ I played around a lot as a kid, but that was only inside the mansion.@ I rarely ever played in a park like this."@
-br
-` …… That's right.@ My only playmates were Akiha and the others.@ I never played with people I didn't know like these kids.@
-br
-` I might have been more like…
-` A kid who led an insulated life.\
+`"I see…… But isn't knowing just enough?@ Just now, you ordered some food like it was perfectly natural."@
+ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
 
-`"What about you, Arcueid?@ …… Um, you don't have to talk about it if you don't want to."@
-` …… Um, if vampires didn't have a childhood, asking her would be rude.\
+`"Of course.@ I studied, so I can act that way.@
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+
+` But, that's all.@ Experience is far greater than theory.@ Even if I know about zillions of things, it's useless if I've never done them."@
+` Arcueid sighs.\
+
+`"Is that so…… I think some people say theory makes up for a lack of experience."@
+`"That's something those who only know theories say.@ …… I used to think that way until just recently."@
+` Arcueid's expression starts to cloud.@
+` For some unknown reason, I don't like seeing her face like that.\
+
+`"Is that so?@ I think there's just those for whom theory can make up for lack of experience and those for whom experience trumps theory.@ There's a lot of people out there in the world, so not everyone is the same."@
+ld c,":a;image\tachi\ark_t12.jpg",%type_crossfade_fst
+`"Wow, you got really deep and serious, Shiki."@
+`"Hey now, Arcueid-san.@ You're the one who started being all serious, I was just going along.@ Don't kill the conversation like that."@
+br
+` Um, since you're telling me all that stuff about yourself.\
+
+ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
+
+`"Yeah, I know.@ You always listen to me when I want to talk.@ You always yell at me, but you listen to me when it's serious."@
+` "Ahaha," Arcueid laughs brightly.@
+` …… Hmph.@
+` That's what she thinks, anyway.@
+` But, I think such a genuine smile suits her best.\
 
 ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
 
-`"Yeah.@ Like you're thinking, I never had a childhood.@ While I was weak as an individual, I slept through it, and I was active only when my existence was at its peak.@
-` That's why I thought it was strange.@ Infancy and old age are such useless times, why do people manage to live through it?"@
-` She seems to be almost asking herself, not me.\
+`"I was thinking about what you said earlier.@ I really am narrow-minded.@ I can't really see anything else after I make up my mind.@
+` Not needing anyone but myself.@
+` I'm the only one who is right.@ I can only think in those terms.@
+` ----That's right.@ There are a lot of hearts out there, so there's a lot of people that can do easily what I can't."@
+` She somehow seems very gentle as she contemplates.\
 
-`"…… Arcueid?"@
-`"It's nothing.@ This is the first time I ever spent time doing nothing, so my thoughts seem to be malfunctioning."@
+ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
+
+`"Ah, but, even if I contemplate it, my personality won't change.@
+` I like this me the best, and I believe it is the correct way."@
 cl c,%type_crossfade_fst
-` Saying that, Arcueid stands up from the bench.@
-` I stand up with her.@
-` …… Well, we've already been in the sun for about two hours, so we should probably head into the city.\
 
-`"----Oh, if it was dull you should've told me so."@
+
+` She smiles as she says those courageous words.@ Then she looks around like before and takes a bite of her hamburger.\
+br
+` Chomp.@ Chomp.@
+br
+` As if to erase any image of her being a vampire, Arcueid chows down on her junk food.@
+`"…………"@
+` How come?@
+` It seems impossible to look elegant while eating a hamburger, but Arcueid makes it look beautiful.\
+
+ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
+`"What……?@ Staring at me like that.@ Ah, is this not how you eat it……!?"@
+` Arcueid hurriedly puts her hamburger back on her tray.@
+` She then wipes her mouth with a paper napkin.@ But even that simple action seems so elegant.\
+
+`"…… No, it's right.@ It's right, but it's strange.@ In your case, it doesn't suit you, so don't do it."@
+` I don't even know why I say that as I chomp on my hamburger like a hamburger should be eaten.@
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+
+`"What do you mean it doesn't suit me?"\
+
+`"It's an image problem.@ That small mouth of yours isn't fit to eat fast food.@ Fries aren't a problem, so you can have my share."@
+` I put my french fries on her tray.@
+br
+` …… I really don't know what I'm doing at all.\
+
+`"I don't want them.@ I don't feel like eating just those."@
+` After saying that, she brings the hamburger to her mouth once more.@
+cl c,%type_crossfade_fst
+
+\
+` …… She might be worried about my stare, as she eats it more normally.@ Well, I can live with that.@
+` …… But a hamburger-eating vampire?@
+` All living things need nutrition to live, so they eat.@
+` Before, Arcueid declared she doesn't drink blood.@
+` So, in order to gain that nutrition, does she eat food just like us normal humans……?\
+
+`"…… Hey, Arcueid."@
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+`"What, you meanie?"@
+`"No, I wasn't going to criticize you.@ I just had a question, if that's okay."@
 ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-`"Hm, maybe it is dull, but it wasn't boring.@
-` I was even thinking I'd like to spend more time if it's this kind of dull, but you didn't like it?"@
-`"Eh……?"\
+`"Sure----what is it?"@
+`"Um, you're a vampire, right?@ Then I was wondering maybe if food for you… was only blood."@
+ld c,":a;image\tachi\ark_t13.jpg",%type_crossfade_fst
 
-` …… That's right, even if it was uneventful, it wasn't boring.@
-` Come to think of it, spending time sunbathing with Arcueid is something pretty rare.\
+` Her eyes widen.@
+` …… I knew it.@ It was a rude question.@
+` See, even Arcueid's facial expression is getting angry…… or not.\
 
-`"----That's right, it wasn't bad at all.@ But, let's get something to eat.@ I haven't had anything since this morning, so I'm pretty hungry."@
-` Saying that, we start to walk from the park.\
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
 
-`"Hm------"@
-` For a brief moment, I think about holding her hand but I stop right away.@
-` There wasn't any reason for it before, so it felt natural to do so.@
-` But now that I have a reason to do so, to hold her hand seems very senseless.\
+`"Hey Shiki, normally, I don't eat food.@
+` Certainly eating like this allows me to move on my own, but it's more of a mental thing.@
+` For me to eat, in other words,taking in nutrition, is a different process than the one you have.@
+` I do have an appetite, but maybe it's more akin to lust.@
+` If I don't eat, I get irritated, but since I don't put much priority on it, inversion impulses rarely happen."@
+cl c,%type_crossfade_fst
+\
+` She easily denies the blood as food theory.@
+` Yeah, that's what it is.@
+` She really seems to be okay with not drinking blood.\
 
-` …… To be senseless means that taking notice is the result of less-than-pure thoughts.@
+`"I see----"@
+` That's good.@ Arcueid isn't someone that kills humans to feed.@ It really is a good thing.@
+` …… Geez.@ If Arcueid just said from the beginning "I'm a vampire that doesn't suck human blood", then I would have agreed to help her from the…… start……
 br
-`"I'm full of theories today."@
-br
-` Geez.@ Just like Arcueid says, I guess I do a lot of useless things.\
+`"…… Hey, wait a minute!@ You don't call that a vampire!"\
 
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+
+`"You do.@ Even you can't resist eating for one day, right?@
+` For those vampires who are True Ancestors--like me, the highest class of food, the thing that can satisfy our desires the most is blood.@
+` So in order to "live" and "fulfill our desires", we can substitute blood with other things."@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+`"But when it comes to the Dead Apostles--vampires that were originally human, it is a different matter.@ In order to maintain their existence, they need the blood of others."\
+
+`"……?@ Um, in other words the best way to satisfy your hunger is blood?@
+` …… But you said you hated drinking blood.@
+` So just like people who don't like certain food, you hate the taste of blood?"@
+` I take a guess at a satisfactory simplification for the long explanation she gave.@
+br
+` However.@
+` It seems like I was a little off.\
 playstop
 
-!w1000
+ld c,":a;image\tachi\ark_t17.jpg",%type_crossfade_fst
+
+`"…… I don't know.@ I don't know what blood tastes like."@
+`"----Huh?"@
+ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
+
+`"I told you I'm not a full vampire.@ Not knowing the taste of blood.@ I still don't know that.@
+` All I know----is to drink human blood is to refuse to recognize them as people."@
+` She looks away, not even trying to look at me.\
+
+play "track09.ogg"
+
+`"Hey Shiki.@ What if?@ What if birds or fish had the same amount of intelligence and life span as you did?@ Could you eat them?@ Could you justify it to yourself by saying no matter how much intelligence they have, they are still food?@ And then eat them?"@
+
+`"------No, that's…"@
+` Could I----eat them?@
+` I don't know.@ I don't know, but first off, I'd try and eat other food, things that didn't have intelligence.\
+
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+
+`"See?@ Just like that.@ That's why I hate the thought of drinking blood.@ …… Well, maybe there are likes and dislikes as you said too.@
+` If I could, I like to avoid the sight of blood.@
+` But----Yes, but if… if humans didn't have the same worth, intelligence, or values than I did, then maybe I would drink blood.@
+` Isn't providence of nature taking the lives of other things to protect your own?"@
+` Right?@ Arcueid asks me for agreement.@
+` But that--even if Arcueid says it, I can only deny it.@
+` …… I don't want to agree to that.\
+
+`"Certainly that may be true, but in the first place, humans are like you.@ …… So let's just cut short this kind of conversation.@ I don't like talking about 'what ifs'."@
+ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
+
+`"Really?@ I like 'What ifs'.@ Not knowing how things will turn out, yet still having hope at least for that moment."@
+cl c,%type_crossfade_fst
+br
+` If…… what if.@
+` Then, what if----she drank blood like other vampires, would we be talking like this?\
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"What's wrong, Shiki?@ Your face got dark all of a sudden.@ Ah, do you have to go to the bathroom?"@
+`"…… Hey.@ You come up with that when someone is thinking seriously?"@
+` I sigh.@
+` Even though I'm seriously thinking about it, Arcueid doesn't seem to think much about drinking blood.\
+
+`"Yeah----it doesn't concern me."@
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+`"Geez, just mumbling to yourself like that.@ Trying to hide something isn't manly, Shiki!"@
+` Arcueid looks like an angry cat again.\
+
+`"I'm not really hiding anything.@ Besides, you're the one with all the secrets.@ You're just having fun saying things I can't understand."@
+ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
+
+`"Having fun--I'm not trying to do that."@
+` I don't know where her bad mood went, but she suddenly calms down.@
+` She looks like she's uneasy with me nailing it on the head.\
+
+`"…… Really?@ You really were having fun seeing me stumped like earlier?@ Do you like teasing, or is it secrecy?@
+` Well, we are two different kinds of life forms, so I don't care."@
+`"Th, that's not it……!@ I was just trying to answer you.@ It probably looks like I'm hiding a lot of things because you never ask……"@
+`"Hmm----so whatever I ask, you'll tell me?"@
+ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_fst
+
+`"Yes.@ We are a team after all."\
+cl c,%type_crossfade_fst
+
+` Alright.@
+` Then as she wishes, I shall ask questions to clear things up.@
+br
+playstop
+
+
 
 
 

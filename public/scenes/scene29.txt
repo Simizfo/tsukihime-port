@@ -1,20 +1,11 @@
 
 
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
 
 play "track03.ogg"
 
-bg "image\bg\bg_11a.jpg",%type_lcartain_mid
-
-` The hall during lunchtime is packed.@
-` Students head to the cafeteria or to their favorite places, lunches in hand.@
-` Caught in the flow of people, I contemplate whether I should go to the cafeteria or the store.@
-`"……"@
-` I'm taken aback by my own leisure.@
-` If I have time to waste here, it'd be better if I go to the cafeteria where Arihiko is.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_50.jpg",%type_lcartain_mid
+
 
 ` Almost all the seats in the cafeteria are taken.@
 ` Because I spaced out in the hallway, empty seats are pretty much non-existent at this point.@
@@ -22,12 +13,13 @@ br
 `"---Aren't there any empty seats?"@
 ` I cast my gaze over the crowded cafeteria.@
 ` There shouldn't be any spare seats this late, but I decide to check the tables out anyway.\
-
 `"…… Ah."@
 ` I'm surprised…… no, I'm astounded.@
 ` There, plain as day, is a table with not two, not even three, but four unoccupied seats.@
-` There are two students sitting at the table, and it seems like one of them noticed me during my efforts to locate a seat.@
-ld c,":a;image\tachi\ari_t05.jpg",%type_lshutter_fst
+` There are two students sitting at the table, and it seems like one of them noticed me during my efforts to locate a seat.\
+
+ld c,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
+
 `"Yo, Tohno!"@
 ` The student vigorously waving his hand is my dear classmate with the dyed orange hair.@
 cl c,%type_crossfade_fst
@@ -45,6 +37,7 @@ ld l,":a;image\tachi\cel_t01a.jpg",%type_lshutter_fst
 ` We point at each other simultaneously.\
 
 ld r,":a;image\tachi\ari_t01.jpg",%type_lshutter_fst
+
 `"Yo, Tohno---hey wait…… Senpai, do you know Tohno?"@
 ld l,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
 `"Yes, I've met him once today already.@ We bumped into each other with a bang today, didn't we, Tohno-kun?"@
@@ -81,6 +74,7 @@ ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
 ld l,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
 `"Yes, I bumped into Tohno-kun between classes.@ I wasn't hurt, but Tohno-kun bumped his head."@
 `"Hmm…… I wouldn't have thought Tohno would do something as clumsy as that.@ This guy may look spaced out, but he's actually an unbelievably sharp guy.@ He doesn't like to depend on others, and he hates causing trouble for others……"\
+
 ld l,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
 
 `"Ah, I also got that impression.@ He was only concerned about me when we ran into each other, and he apologized to me just now, too."@
@@ -94,8 +88,7 @@ ld r,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
 ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
 `"Really?@ Well, I thought you became careless because you're depressed over the move."@
 ` Arihiko folds his arms and nods to himself in agreement.\
-
-
+br
 ` ----And then,
 br
 ld l,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
@@ -124,16 +117,15 @@ ld r,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
 `"Hmph.@ Listen, you, I'm not impressed with how you come to stay at my house every time something bad happens.@ I like your personality trait of not standing out, but I've hated how you're always too reserved for a long time now!"@
 ` Arihiko strikes the table with a bang again.@
 `"……"@
-` Well, everything Arihiko said is true, so there's no way to fight back.@
+` Well, everything Arihiko said is true, so there's no way to fight back.\
 
 
 ld l,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
 `"Inui-kun, does Tohno-kun really stay at your house that often?"\
 ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
-
 `"Yeah, he does.@ That damn Tohno is too reserved toward his parents and he would come to my place every long vacation.@ He's reserved towards them cause they're taking care of him.@
 ` That's why he comes over to my place, where we conveniently have an empty room.@ Since he looks pretty decent, my sister took a liking to him, and he shamelessly comes to stay with us without paying a cent!"@
-` Arihiko's fist trembles, as if to say 'unforgivable!'@
+` Arihiko's fist trembles, as if to say 'unforgivable!'\
 
 ld l,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
 
@@ -151,16 +143,12 @@ ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
 ` His overwhelming optimism is something I am truly envious of.\
 
 ld l,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
-
 `"Tohno-kun, um…… did you not get along with your previous family?"@
-
 ld r,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
 `"No, that's not it.@ This guy had no problem with the Arimas.@ Oh, the Arimas were the family who took care of him.@ They're really nice people, and from what I could see, they're a happy family.@
 ` Even so, he refused to be their adopted child, and he escaped to my place every vacation.@ Sheesh…… just what were you not satisfied with, anyway?"@
-`"There's nothing I wasn't satisfied about.@ It's just that I've received so much from them already, I didn't want to be a further burden on them."\
-
+`"There's nothing I wasn't satisfied with.@ It's just that I've received so much from them already, I didn't want to be a further burden on them."\
 cl a,%type_crossfade_fst
-
 ` …… Senpai drops her shoulders and falls silent.@
 ` It looks like she's sorry for asking about my family situation.@
 `"It's okay, Senpai.@ Sorry for making you listen to something so boring."@
@@ -185,10 +173,9 @@ ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
 ` Arihiko slurps away at his udon.@
 ` It looks like it's gotten cold while we were talking.@
 `"Well, that was convenient for us, anyway.@ I've got something to talk to you about in private, so it was lucky that Senpai left first."\
-
 `"What's wrong?@ Getting all serious all of a sudden.@ I'll tell you now, I don't have any money.@ From today onwards, I'm going to be living life as a penniless youth."@
 `"It's not that, damn it.@ What I want to know is this; what's really going on with you, Tohno?"@
-`"What do you mean?"@
+`"What do you mean?"\
 ld c,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
 `"You've been at the Arimas' since primary school, right?@ I don't know why, but it's been eight years already.@ Your dad has basically disinherited you.@ Why is he calling you back all of a sudden?"@
 ` …… I see.@
@@ -213,8 +200,8 @@ cl c,%type_crossfade_fst
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
-
 playstop
+
 
 
 

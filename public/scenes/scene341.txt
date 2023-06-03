@@ -1,124 +1,22 @@
 
 
 
+
+
 bg "image\bg\bg_40d.jpg",%type_nowaitdisp
 
-
-`"…… Shall I take a look?"@
-` Getting out of bed, I leave my room silently.\
-playstop
-waveloop se10
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_33d.jpg",%type_lcartain_mid
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_42c.jpg",%type_lcartain_mid
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
-bg "image\bg\bg_54c.jpg",%type_lcartain_mid
-
-
-
-` ----Even the moonlight does not penetrate the woods of the garden.@
+` …… no, I'll keep my promise with Akiha.@
+` Akiha told me not to go there, and I can't break a promise just because of trifling curiosity.@
 br
-` I walk through the woods which seem more like a forest.@
-` …… I didn't remember quite where it was, but as I enter the forest, my feet automatically head toward the detached building.@
-br
-` Even if I forgot where it was, I guess my body remembers how to get there.@
-` At any rate, I am able to get to the detached building without getting lost.\
+`"…… Nn."@
+` A calm drowsiness permeates my body.@
+` I'll keep quiet tonight and sleep.\
 
-bg "image\bg\ima_10.jpg",%type_tcartain_mid
-bg "image\bg\bg_44b.jpg",%type_bcartain_mid
-
-
-`"-------"@
-` It must have been many years since this building was put out of use, as many parts are deteriorated.@
-` As I put my hand on the door, I notice that it is unlocked.@
-br
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
-
-` It is dark inside, as expected.@
-` I smell the tatami mats and the shoji, and somehow feel comfortable even though I can't see anything.\
-
-bg "image\bg\bg_45c.jpg",%type_lshutter_mid
-
-
-`"-----Ah."@
-` As I enter the Japanese-style room, a chill runs through my spine.\
-
-`"----------I know this place."@
-` I guess I came here as a kid since this Japanese-style room was interesting.@
-`"------------"@
-` But it's weird.@
-` I feel the same sense of incompatibility I had when I was first shown my room after I came back to this mansion.\
-
-`"…… Maybe because the Arimas' house was Japanese-style."@
-` I feel like I've lived here all my life.@
-` Or maybe-----\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_45c.jpg",%type_crossfade_fst
-
-
-br
-br
-br
-br
-` If I recall, in the past…\
-
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-bg "image\bg\bg_45c.jpg",%type_crossfade_fst
-
-
-br
-br
-br
-br
-br
-br
-` When we were playing in the yard,\
-
-bg "image\bg\cmo_05.jpg",%type_nowaitdisp
-bg "image\bg\bg_45c.jpg",%type_nowaitdisp
-
-
-br
-br
-br
-br
-br
-br
-br
-br
-` maybe it wasn't just me and Akiha…\
-
-bg "image\bg\ima_11b.jpg",%type_nowaitdisp
-bg "image\bg\bg_45c.jpg",%type_nowaitdisp
-
-
-`"Ouch------"@
-` I feel a pain in my neck.@
-` It might be my anemia, but my body feels like lead.@
-`"…… This is bad…… I have to go back to my room."@
-` I shake my head lightly, and I decide to go back to my room before I really faint.@
-
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w1000
-bg "image\bg\bg_40d.jpg",%type_rcartain_mid
 
-
-` I take a deep breath.@
-` Somehow, I made it back to my room.@
-` No matter what, if I collapsed in the off-limits building, Akiha's wrath would pour down on me.@
-`"------Mn."@
-` I feel a little dizzy.@
-` I fall onto my bed without even changing.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
+playstop
 monocro #ff0000
-wavestop
 
 
 
@@ -300,6 +198,9 @@ monocro off
 playstop
 
 !w3000
+
+
+
 
 
 

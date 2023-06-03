@@ -1,79 +1,552 @@
 
 
 
-
-!w2000
-bg "image\bg\bg_06b.jpg",%type_tshutter_mid
-
-play "track01.ogg"
-
-` School ends.@
-` Let's go meet Akiha at the first year classrooms.@
-br
-bg "image\bg\bg_10b.jpg",%type_lcartain_fst
+bg "image\bg\bg_40b.jpg",%type_nowaitdisp
 
 
-` …… But just as I leave the classroom, I run into her.\
-
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-
-`"Ah, Nii-san.@ Are you going somewhere?"@
-`"No, I was just on my way to get you.@ What about you?@ Are you on your way anywhere?"@
-
-ld c,":a;image\tachi\aki_t16a.jpg",%type_crossfade_fst
-
-`"No.@ I just thought I might go home with you, Nii-san, so I came here…"@
-`"I see.@ It's lucky we didn't miss each other.@ Well then, let's go.@ Kohaku-san and Hisui are waiting."@
-
-ld c,":a;image\tachi\aki_t09.jpg",%type_crossfade_fst
-
-`"You're right.@ Let's go home, Nii-san."\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_23b.jpg",%type_lcartain_mid
 
 
-`"Oh, that's right, there's a question I've been wanting to ask you, Akiha."@
+` ----That's right.@
+` Since I'm always in her debt, I'll go and help Hisui out.\
 
-ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+play "track03.ogg"
 
-`"A question for me…?"@
-`"Yeah.@ Why did you have that dislike for Senpai?@ Did you know her already, by any chance?"@
+bg "image\bg\bg_33b.jpg",%type_lcartain_fst
 
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
 
-`"No, I met her for the first time yesterday.@ My dislike for her is simply psychological, so you don't need to worry about it."@
-`"Psychological?@ What do you mean?"@
+`"I'm home, Hisui, You look busy; what are you doing?"@
 
-ld c,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
 
-`"I mean, I can't control how I feel.@ It's the same as how you felt about father, so please don't worry about it."\
+`"Ah---welcome home, Shiki-sama.@ I am going to take these to Makihisa-sama's room."@
+` Hisui is surrounded by dozens of books.@
+` Though each of them is light, a dozen of them is pretty heavy.@
+` There must be at least fifty books around her.@
+` It's not too much, but I don't think Hisui's slender arms are up to the task.\
 
-`"---Hold on, Akiha.@ I just disliked the old man, I didn't hate him."@
+`"The old man's room, huh… that's on the west wing of the first floor, isn't it?"@
+` Saying so, I pick up a pile of books.@
 
-ld c,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
 
-`"I don't hate her, either.@ …… I suppose I exaggerated things today.@ I'll reflect on it, so please look leniently upon the affair at lunchtime."@
-`"…… Right.@ I guess that's okay, then."\
+`"You must not, Shiki-sama.@ I will take care of this, so you should go and rest in your room."@
+`"It's fine, it's fine.@ If I just lay around in my room my body'll go dull, so I thought I'd repay you by helping out a bit."@
+`"However----"\
+`"…… But these are heavy, aren't they?@ What's Akiha thinking, making you do this kind of heavy labor?"@
+
+ld c,":a;image\tachi\his_t05.jpg",%type_crossfade_fst
+
+`"Ah----"\
+
+`"You go on to the old man's room; I'll bring the books, you can sort them out once they're there.@ Everyone should work where they'll be the most use, right?"@
+
+ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+
+`"…… Yes.@ Well then, please do, Shiki-sama."@
 
 cl a,%type_crossfade_fst
 
-` …… Well, I guess it might not be a problem.@
-` Ciel-senpai often comes by at lunch, so if relations between Akiha and her are bad, it'd be a problem.@
-` At this rate, with Akiha saying things like this, me and Arihiko might not end up on pins and needles on the sidelines----\
+` Apologizing, Hisui goes up the stairs.@
+` ---Alright.@
+` Now I've just got to get this mountain of books up to the second floor.\
 
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-!w1000
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_41.jpg",%type_rshutter_mid
+
+
+`"Ohh… this is the old man's room, huh?@ Hisui, is it okay if I take a look at some of the books?"@
+
+ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+
+`"Yes.@ I think it is alright if they are not locked up."@
+
+cl a,%type_crossfade_fst
+
+` Hisui is placing the books onto a bookshelf.@
+` She's busily going back and forth, arranging the books by genre.\
+
+`"…… What does she mean by locked up?@ Maybe there's a lock on the desk drawer or something."@
+` I take the handle of the drawer on the old man's desk.@
+` As I pull, I feel a click.@
+`"She's right, it is locked."@
+` The old man's already dead, so what is it protecting?\
+
+`"-----"@
+` Hisui isn't looking.@
+` There's a letter opener on his desk.@
+` It's the perfect opportunity.@
+`"…………"@
+` I lower my glasses a little, and look at the desk.@
+`"-----There."@
+` Silently, I cut the lock.\
+
+`"---What, only papers?"@
+` There's only a bundle of old papers in the drawer.@
+` I take out a sheet and look at it.@
+br
+`"Huh?@ This is… our family tree."@
+br
+` There's no mistake.@
+` After Tohno MAKIHISA, the names Tohno SHIKI and Tohno AKIHA are written.@
+` But there's---\
+
+`"…… No way.@ That old man adopted a son ten years ago… ah, but he passed away shortly thereafter."@
+` Ten years ago, that would mean I was just in elementary school.@
+` That long ago, it's only natural that I wouldn't remember.@
+`"But, the heads of the household have had pretty short lifespans.@ My old man died before he was fifty, and before that, before thirty in an accident… Wow, before that, eighteen years of age, suicide…!?"@
+playstop
+play "track06.ogg"
+
+br
+` ----No, wait a second.@
+` No matter how you look at it, this is strange.\
+
+wave se0
+
+
+` Looking through the family tree, all members of the Tohno household have died strangely.@
+` Madness.@ Accidents.@ Murder.@ Disappearances.@ Still birth.@
+` …… Not one of them lived a long life or died peacefully.\
+
+wave se0
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_41.jpg",%type_crossfade_fst
+
+
+`"Wha…………"@
+` This entire document is filled with horrible fates.@
+` Even worse, most of the deaths are death by madness.@ Taking one's own life.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_41.jpg",%type_crossfade_mid
+waveloop se1
+
+
+`"Ah----"@
+` The light seems to fade.@
+` I feel as if blood is collecting in the back of my head.@
+` My limbs feel weak, and breathing becomes impossible.@
+
+ld c,":a;image\tachi\his_t08.jpg",%type_lshutter_fst
+
+`"Shiki-sama…!"@
+` Hisui… Hisui runs toward me.@
+` ---Somehow I hold myself up, grabbing onto a bookshelf.\
+
+ld c,":a;image\tachi\his_t25.jpg",%type_crossfade_fst
 playstop
 
-bg "image\bg\bg_40b.jpg",%type_rcartain_mid
+`"Shiki-sama!@ Hold on, Shiki-sama…!"@
+` Hisui's worrying voice.@
+` But her hands never touch my body.@
+`"It's alright… I just, felt a little sick for a moment, so…"@
 
+ld c,":a;image\tachi\his_t12.jpg",%type_crossfade_fst
 
-`"----Ahh."@
-` I toss my bag on the desk, and sit down on the bed.@
-` Well, what should I do?@
-` It seems Akiha has lessons, and as soon as we got back, she went somewhere by car.@
-` …… That's right, Hisui and Kohaku-san were busily walking about too.@
+`"Shiki-sama, please do not push yourself…!@ Please, sit down.@ As pale as your face is, you should not be trying to stand…!"@
+` …… That's, new.@
+` Hisui is becoming frantic, calling out to me.\
+
+`"Yeah… I'm okay… so…"@
+` I try to regain my senses.@
+` But the dizziness doesn't fade.@
 br
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_41.jpg",%type_crossfade_fst
+
+` My vision flickers red and black.@
+` White.@
+` I gaze at the nape of Hisui's neck, a terribly warm white.\
+
+`"-----Ah."@
+` It's captivating.@
+` If my body could move properly, I would seize Hisui's body and----\
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+
+` The black vision from my anemia all of sudden turns deep red.@
+` Hisui's, white neck.@
+` Last night's crimson dream.@
+br
+` ---From the night of killing.@
+` Painful pleasure, as if my heart would rip itself out.\
+
+bg "image\bg\bg_41.jpg",%type_nowaitdisp
+
+wavestop
+
+`"Kuhh…!"@
+` Unable to bear it, I pull back from Hisui.@
+
+ld c,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
+
+`"Shiki-sama…?"@
+`"No… it's alright… I'm alright, so, just leave me alone."@
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"I refuse.@ You do not seem to realize the state of your body, Shiki-sama.@ With… with your body like this, I cannot leave you alone."@
+` And Hisui approaches.\
+
+cl a,%type_crossfade_fst
+
+` ---Bad.@
+`  This is, bad.@
+` If she comes within reach of my hands, I'm afraid I don't know what I'll do.\
+
+`"I'm fine, so go, Hisui…!"@
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"I cannot listen to you.@ Shiki-sama, please, calm down."@
+br
+
+waveloop se1
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_41.jpg",%type_crossfade_fst
+
+` …… So, stop.@
+` It's dangerous if you come near me.@
+` I told you not to come near me.@
+` Why.@
+` Why won't this woman listen to me?@
+br
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+` ---Why does she get in my way.@
+`  Why does it never go the way I want…!\
+
+bg "image\bg\bg_41.jpg",%type_crossfade_fst
+
+
+`"Shut up…!@ Don't you understand I'm telling you to get away, Hisui!"@
+
+wave se4
+quakex 2,100
+
+`"Ah---"@
+br
+` A dull, thumping sound.@
+` Hisui is thrown against the bookshelves, her face distorted in pain.@
+br
+`"Ah---"@
+` …… Her expression causes my sanity to return.@
+` The dizziness fades quickly.@
+` After just a moment, all dizziness disappears, leaving only a feeling of guilt.\
+
+`"--I'm sorry.@ What was… I…"@
+
+ld c,":a;image\tachi\his_t21.jpg",%type_crossfade_fst
+
+`"-------------"@
+` Hisui looks down, not meeting my gaze.@
+`"---Hisui, I'm---I'm sorry, I don't know why I did such a thing…"@
+
+ld c,":a;image\tachi\his_t26.jpg",%type_crossfade_fst
+
+`"I apologize.@ I disobeyed your orders, and caused you discomfort."@
+`"…… No, I'm the one who should apologize.@ I did something horrible to you…"\
+
+ld c,":a;image\tachi\his_t21.jpg",%type_crossfade_fst
+
+`"Shiki-sama, please return to your room.@ You are tired; if you rest, I believe you will recover immediately."@
+`"-----"@
+` Hisui will not show me her face.@
+`"…… I understand; I'll go back to my room.@ I'm sorry, Hisui."@
+` There's no answer.@
+` I leave the room behind, being crushed by self-loathing.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+!w2000
+bg "image\bg\bg_40c.jpg",%type_lcartain_mid
+
+play "track01.ogg"
+
+` ---After dinner, I return to my room.@
+br
+` I fall on the bed, and remember Hisui's face.@
+`"----"@
+` I don't understand.@
+` Why I felt that way, and why I did that.\
+
+` Back then…
+` Looking at Hisui's neck, I was lusting.@
+` Just like in last night's dream, I wanted to bite into her neck.@
+` But, I can't even think about that right now.@
+br
+` Last night's dream, and myself a while ago.@
+` I feel like there's someone inside me that isn't me.\
+
+`"----"@
+` I touch my neck.@
+` Those who are bitten by a vampire become vampires in turn, they say.@
+`"…… That's stupid.@ I'm walking around in the daytime, after all."@
+` …… Yes, it's impossible.@
+` It was just dizziness and my fading consciousness contributing to the imagination.@
+` What happened with Yumizuka is burnt into my mind, so I think I just remember it when I suffer from anemia.\
+
+`"Like Hisui said, maybe I'm just tired."@
+` …… Perhaps.@
+` I should hurry up and get to sleep, and rest my tired body.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+playstop
+
+
+!w2000
+wave se0
+
+!w750
+br
+` ----Hot.\
+
+wave se0
+!w750
+
+br
+br
+br
+` ----Hot.\
+wave se0
+!w750
+
+br
+br
+br
+br
+br
+` ----Hot.\
+wave se0
+!w750
+
+br
+br
+br
+br
+br
+br
+br
+` ----My body, once aroused,
+`     can't be calmed with something like sleep.\
+wave se0
+!w750
+
+br
+br
+br
+br
+br
+br
+br
+` ----So.@
+`    Tonight too, I shall relieve my thirst.\
+
+monocro #ff0000
+bg "image\bg\bg_47.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_24c.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_26a.jpg",%type_crossfade_mid
+
+` It seems I went into town at night.@
+` It seems like I'm waiting with bloodshot eyes for someone to pass by.\
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ----Again.\
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` Suddenly, I see a face reflected in the window.@
+` The eyes are bloodshot, and the face looks quite insane.\
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ----This dream, again.\
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` It seems I found my prey.@
+` I bring it down without a chance to scream, without it even realizing it has died.\
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+` ----I'm seeing this nightmare again.\
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+
+bg "image\bg\ima_12b.jpg",%type_nowaitdisp
+bg "image\bg\bg_31b.jpg",%type_nowaitdisp
+
+
+` Taking the dead body, and the sound of biting into the throat.@
+` A gurgling sound.@
+` Drinking the blood flowing out of the rended neck, my thirst is quenched.\
+
+br
+br
+br
+br
+br
+br
+br
+` ----The same scene as last night.\
+
+` Getting bored with just blood, I take the hand of the dead body and bite off the fingers one by one.\
+
+br
+br
+br
+br
+br
+br
+br
+` ----The same scene as last night.\
+
+` Getting bored with just the fingers, I take the limbs of the dead body, and bite them off one by one.\
+
+br
+br
+br
+br
+br
+br
+br
+` ----The same scene as last night.\
+
+` Then,
+` an obstruction appears.@
+` I throw the dead body aside and jump.@
+` Someone.@ Someone is watching me.\
+
+br
+br
+br
+br
+br
+br
+br
+` ----Is it different from last night…?\
+
+bg "image\bg\ima_02.jpg",%type_tshutter_fst
+
+` Something like a vast nail is flying through the air.@
+` To dodge it, I leap aside.@
+` I run up the side of a building, and jump from rooftop to rooftop.\
+
+br
+br
+br
+br
+br
+br
+br
+` ----The figure in black chases the vampire.\
+
+` From rooftop to rooftop.@
+` From shadow to shadow.@
+` The figure follows.\
+
+br
+br
+br
+br
+br
+br
+br
+` ----It can't be helped.\
+
+` It can't be helped, it murmurs.@
+` And tonight's meal ended.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+monocro off
+
+
+!w3000
+
+
+
+mov $phasebg,"image\bg\ima_19.jpg"
+mov $phasetitle_a,":a;image\word\PAKI_07A.PNG"
+mov $phasetitle_b,":a;image\word\day_07.png"
+gosub *left_phase
+
+
+waveloop se1
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+!w750
+
+`"Shiki-sama----?"@
+br
+` ----A voice.@
+br
+`"Please get a hold of yourself, I will bring you a drink right away…!"@
+br
+` ----The sound of running footsteps.\
+
+bg "image\bg\bg_40a.jpg",%type_crossfade_mid
+
+
+`"Ah----"@
+` I awaken from the nightmare.@
+`"…… My own room."@
+` I am definitely in my own room.@
+` Just lying in bed, and morning has come.@
+` …… I saw that dream again.@
+` The dream of sucking someone's blood.@
+` Though I know it's just a dream, it still feels terribly real.@
+` My hands retain the feel of ripping meat; my nose, the smell of fresh blood…\
+
+`"---What's happening to me?"@
+` I touch my neck gently.@
+` …… Yumizuka's bite marks are long gone.@
+` I'm still a normal human being.@
+` I don't want to drink people's blood, and I don't have a problem with the sun.@
+`"----Ah."@
+` No.@ Yesterday, I…@
+` What did I think when I saw Hisui's neck?@
+` ---Her white neck.@
+` From the bottom of my heart, I wanted to drink the blood flowing in there----\
+
+
+
+
 
 return

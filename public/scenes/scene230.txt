@@ -1,25 +1,75 @@
 
+play "track03.ogg"
 
-bg "image\bg\bg_01b.jpg",%type_lcartain_mid
+bg "image\bg\bg_11b.jpg",%type_crossfade_slw
 
-` We walk out the gate.@
-` From here, we have to go our separate ways.@
+
+` I walk through the hallway bathed in sunset with Senpai.@
+` While talking about pointless things, we walk as slowly as possible.@
 br
-ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_mid
-`"Well then, this is goodbye for now.@ We got here pretty quickly."@
-` …… I feel the same way.@ I was really thinking it would be better if the school were a bit bigger.\
+` There's such a wonderful atmosphere here.@
+` ---Thinking back, I spent the night in Senpai's room.@
+` Back then, my mind was filled with the fact that I killed someone, and after that, I forgot about it when I was with Arcueid.\
 
-`"Well then, Senpai, see you tomorrow."@
-ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+` …… If it wasn't for that one night, I don't think I would be here today as I am now.@
+` She doesn't bring it up, but I wonder what she thinks about that night.@
+` …… Did it feel like she was just lending a hand to a depressed lowerclassman?@
+` Like picking up an abandoned puppy cast out in the rain?\
 
-`"Yes, let's meet at school tomorrow."@
-cl c,%type_lshutter_mid
+`"…… Senpai, um--"@
 
-` Smiling as she responds, Senpai disappears in the opposite direction.@
-` After watching her go, I head down the street towards my house.\
 
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
 
+
+`"Yes?"@
+` Senpai looks over to me.@
+` …… Right when I was going to ask about that night,
+br
+` Guruuuuuu.@
+br
+` My stomach interrupts, growling audibly.@
+` No, not 'growling'… it's more like a roar.\
+
+`"……………… Uhhh."@
+
+
+ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+
+`"………………"@
+` The silence is a little uncomfortable.@
+`"…… Tohno-kun, it seems you're hungry."@
+`"---I guess so.@ Geez, do I get hungry even when I don't have an appetite?"@
+` I let out a sigh.@
+` Looking at me, Senpai smiles.\
+
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+
+`"Of course.@ Being human means you have to eat to live."@
+`"No doubt.@ …… Come to think of it, I'm really starving."@
+` …… I hadn't realized it, but skipping breakfast and lunch really did take quite a bit out of me.@
+` I don't think I can last until dinner, so I should buy some bread on the way back-----\
+
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+
+`"Tohno-kun, here."@
+` Senpai presents me a pouch of cloth she is holding.@
+` I think it's her lunch.@
+
+
+ld c,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
+
+`"It's partly eaten, but is that okay?"@
+` Blushing a bit, Senpai says this embarrassedly.@
+` …… That's right, Senpai only ate half of her lunch today.@
+` Finishing someone else's half-eaten lunch is a little embarrassing.@
+` I----
+br
 
 
 return

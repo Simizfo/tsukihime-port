@@ -3,229 +3,117 @@
 
 
 
-mov $phasebg,"image\bg\bg_47.jpg"
-mov $phasetitle_a,":a;image\word\PHIS_06A.PNG"
-mov $phasetitle_b,":a;image\word\day_06.png"
-gosub *left_phase
+bg "image\bg\bg_34a.jpg",%type_nowaitdisp
 
 
+` I decide that it's better to do it than not.@
+` Besides, I keep on thinking for the worst since I'm keeping this to myself.\
 
+`"…… Well, then let me ask you a question.@ If someone does things they know they shouldn't do, would that be a result of stress?"@
 
+ld c,":a;image\tachi\aki_t01a.jpg",%type_lshutter_fst
 
-bg "image\bg\bg_40a.jpg",%type_tshutter_fst
-waveloop se1
+`"Doing something they know they shouldn't do?@ Is it a recurring problem or just an accident?"@
+`"…… Well, it's more like an accident.@ It seems that the person really isn't that conscious."\
 
-quakey 2,10
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
 
-`"Ah-------!"@
-br
-` Ah-------.@
-br
-` I gasp for air.@
-` It's---morning… now.@
-` This is my room.@
-` Up until now, I've been here,
-` just like this,
-` and I should have been sleeping---------\
+`"So you mean they're doing things while unconscious, so they can't stop themselves from doing it?"@
+`"---That's right, they can't stop.@ They can't even get themselves to think about stopping."@
 
-bg "image\bg\ima_11b.jpg",%type_nowaitdisp
-bg "image\bg\bg_31b.jpg",%type_nowaitdisp
+ld c,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
 
-bg "image\bg\bg_40a.jpg",%type_nowaitdisp
+`"In that case, it sounds like a personality inversion."@
+`"…… Personality inversion…… you mean their personality gets reversed?"@
+`"Yes.@ For whatever reason, something triggers a change in the person and their entire moral spectrum, their whole attitude gets reversed."\
 
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
 
-`"Ahh……"@
-` My forehead is hurting.@
-`"Dre…… am."@
-` I had a terrible dream.@
-` A dream where I killed someone.@
-` A dream where I ejaculated over and over as I killed.\
-
-bg "image\bg\ima_11b.jpg",%type_nowaitdisp
-bg "image\bg\bg_40a.jpg",%type_nowaitdisp
-
-
-`"Ho…… t…"@
-` My throat is burning.@
-` My body feels like lead, and my hands…
-` The feeling of breaking someone's neck still lingers on my hands.\
-
-`"That… can't be."@
-` That can't be.@
-` That was a dream.@ Unmistakably a dream.@
-` But are dreams really that vivid?@
-` I remember it so vividly.@
-` The street in the dead of night,
-` the feeling of snapping someone's neck,
-` the stickiness of blood gurgling down my throat,
-` the face of the woman so cruelly killed-----\
-
-bg "image\bg\ima_11b.jpg",%type_nowaitdisp
-bg "image\bg\bg_40a.jpg",%type_nowaitdisp
-
-
-` But it's merely a dream.@ Since I'm here, it had to have been a dream.@
-` But the problem is…
-` I am dreaming that I am having fun killing people.\
-
-bg "image\bg\ima_08.jpg",%type_crossfade_fst
-
-
-br
-` ---You and I are the same, Shiki-kun.@
-!w1000
-bg "image\bg\bg_25b.jpg",%type_crossfade_fst
-
-
-br
-` Before my eyes, the world starts spinning.@
-bg "image\bg\ima_13b.jpg",%type_crossfade_fst
-
-
-br
-` ---Someone who can't resist the pleasure from killing.@
-!w1000
-bg "image\bg\bg_31b.jpg",%type_crossfade_fst
-
-
-br
-` And that crazy speed.\
-
-bg "image\bg\bg_40a.jpg",%type_nowaitdisp
-
-!w1000
-wavestop
-play "track02.ogg"
-
-` "Excuse me," Hisui says as she enters the room.@
-
-ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
-
-`"Good morning.@ It seems that you have already awakened, Shiki-sama."@
-`"……… Ah.@ Morning, Hisui."@
-` The world stops spinning.@
-` As soon as Hisui spoke, the whirlpool I was trapped in disappeared like an illusion.\
-
-!w2000
-ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
-
-`"…… Shiki-sama?"@
-`"Eh-----what is it, Hisui?"@
-`"How are you feeling this morning?@ You are not saying anything."\
-`"…… Ah, sorry, I was just staring at you.@ I understand; I have to go to school.@ I'll go to the sitting room right away, so wait for me there."@
-
-ld c,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
-
-`"Shiki-sama.@ If you are not feeling well, please do not push yourself.@ Your health is more important than school."\
-
-`"Haha, no way, Hisui.@ I can't skip school.@ It's nothing---really.@ So don't spoil me like that."@
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"No, please rest.@ I will tell Akiha-sama so please rest."@
-` Hisui is unusually persistent.@
-` …… Does my face look that haggard?@
-`"Hisui, you worry too much.@ It really is nothing at all, so don't worry about it… I'll just wash my face, so please wait for me in the sitting room."\
+`"It may be termed a disease of the mind.@
+` Don't you remember, Nii-san?@ Father was usually a very kind person, but sometimes he would just turn cold as ice."@
+`"The old man was---?"@
 
 cl c,%type_lshutter_fst
-
-` Getting out of bed, I walk past Hisui, who seems like she wants to say more.@
-
-ld c,":a;image\tachi\his_t07.jpg",%type_lshutter_fst
-
-` Leaving the room,
-` it is a little painful seeing Hisui watch me with such uneasiness in her eyes.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-
-
-` I look in the mirror in the bathroom.@
-`"…… I don't look like I'm sick.@ Why is Hisui worrying so much?"@
-` I splash cold water onto my face.@
 br
-` ---Just thinking about the dream I had last night makes me want to puke and not go to school.@
+` …… Come to think of it…… Tohno Makihisa was extremely kind one day and extremely strict the next.\
+
+`"…… I don't remember that well.@ Do you remember, Hisui?"@
+` I look at Hisui, who is standing by the wall.@
 br
-` But if I stay home from school because of that, that will just be like confirming something, which makes me feel uneasy.\
+` ---And.@
 
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-bg "image\bg\bg_34a.jpg",%type_lcartain_mid
+ld l,":a;image\tachi\his_t17.jpg",%type_lshutter_fst
 
-` Akiha and Kohaku-san are in the sitting room, and Hisui is standing nearby.@
-` As usual, I'm the last one to enter the room.\
+` It looks like Hisui is trying to contain herself and can't hear my voice.\
 
-ld l,":a;image\tachi\koha_t01a.jpg",%type_lshutter_fst
+cl l,%type_lshutter_fst
 
-`"Ah, good morning, Shiki-san."@
+ld l,":a;image\tachi\koha_t02.jpg",%type_lshutter_fst
 
-ld r,":a;image\tachi\aki_t15a.jpg",%type_lshutter_fst
+`"Akiha-sama, please don't talk about any of that.@ Makihisa-sama was just a little manic-depressive, that's all."@
+` Kohaku-san says this as she brings a silver tray with a glass on it.\
 
-`"No way!?@ It isn't even six-thirty yet!"@
-` Kohaku-san looks towards me with a soft smile while Akiha gets up from the sofa and gapes at me in surprise.\
+`"You shouldn't say bad things about those who have departed.@ And besides, Makihisa-sama is your father, too."@
 
-`"Good morning, Kohaku-san, oh, and Akiha too."@
+ld r,":a;image\tachi\aki_t06.jpg",%type_lshutter_fst
 
-ld r,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
-
-`"Wha… What do you mean, 'Akiha too?'"@
-`"Well, 'Akiha too' means 'Akiha too'.@ That should be enough for someone who's so surprised to see me get up early when you tell me to get up early every day."@
-
-ld r,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
-
-`"----I see.@ Nii-san, you wake up early for once and now you triumphantly walk around with your head held high."@
-`"Head held high, Akiha---"\
-
-br
-br
-br
-br
-` Head.@ Neck.@
-` Neck……?@
-` I remember the sensations from my dream and feel like vomiting.\
-
-`"…… Sorry, Kohaku-san.@ I don't mean to be a bother, but could you get me something cold to drink before I eat?"@
-ld l,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
-
-`"Not at all.@ Would you like soda or fruit juice?"@
-`"Ummm, I'll have a soda please."@
-`"Coming right up."@
-
-cl l,%type_lshutter_mid
-
-` Kohaku-san disappears towards the kitchen.\
-
-ld r,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-
-`"…… Nii-san?@ You're not arguing back.@ Are you feeling alright?"@
-`"…… Geez.@ You and even Hisui, what do you think I am?@ I just woke up early and my throat is dry, there isn't anything wrong with me…!"@
-` Trying to resist the urge to vomit, I shout back.\
-
-ld r,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
-
-`"…… I'm sorry, Nii-san.@ But there is obviously something wrong, and I want to help."@
-`"Ah---no, that's not it.@ The fact that you're worried about me makes me really happy.@ I just had a really bad nightmare last night and my mind is elsewhere, that's all.@
-` …… I'm sorry, Akiha.@ I'm the one who should apologize."@
+`"I, I know……!@ I don't need you to tell me that……!"@
 
 cl r,%type_lshutter_fst
 
-` I sit down on the sofa.@
-` I know that something's wrong with me, but I can't do anything about it.\
+` Akiha joins Hisui in silence.\
 
-ld c,":a;image\tachi\aki_t12a.jpg",%type_lshutter_fst
+ld l,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
 
+`"Here you go, Shiki-san.@ Thanks for waiting."@
+` Kohaku-san puts the glass of Lemon Squash onto the table.@
+`"Thanks."@
+` Using a straw, I let the cool drink fill my body.@
 
-`"Nii-san, is there something bothering you?@ If it's something to do with this mansion, please tell me, and I'm sure I can be of help…"@
-`"No, it isn't that I'm not used to living here---"@
-
-cl c,%type_lshutter_mid
-
-` …… That's right.@
-` Maybe if I ask her indirectly, it might help me feel better.@
-br
-` I decide to---
+cl l,%type_lshutter_mid
 
 
+` …… The rest of the time, Akiha and Hisui never open their mouths.@
+` The only cheerful one in the sitting room is Kohaku-san.@
+` …… I don't understand why everyone became so depressed, but the old man is definitely connected to it.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_32a.jpg",%type_lcartain_mid
 
 
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_mid
+
+`"Please be careful on your way, Shiki-sama."@
+`"Ah, I'll be going…… Hisui?"@
+`"…… Yes, what is it, Shiki-sama?"@
+`"When we were talking earlier, about my old man.@ You were deathly quiet.@ Not just you, but Akiha as well."@
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+
+`"Did something happen to that old man in the eight years I was gone?@ You and Akiha were both acting strange earlier."@
+`"……………………"@
+` Hisui doesn't answer.\
+
+`"…… I see.@ Well, I won't force you to answer.@ If you ever feel like it, we can talk about it."@
+
+ld c,":a;image\tachi\his_t08.jpg",%type_crossfade_fst
+
+
+`"---No.@ This is not something that concerns you, Shiki-sama.@
+
+ld c,":a;image\tachi\his_t09.jpg",%type_crossfade_fst
+
+
+`"Shiki-sama, if you are going to live in this mansion, please do not ever mention Makihisa-sama again."@
+
+cl c,%type_lshutter_fst
+
+` After Hisui's eyes flash for a brief instant, she heads back to the mansion.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+playstop
+!w1000
 
 
 

@@ -1,558 +1,130 @@
 
+bg "image\bg\bg_28b.jpg",%type_nowaitdisp
 
-bg "image\bg\bg_24b.jpg",%type_lcartain_mid
 
-` After eating, we do some window shopping on the main street and end up heading towards my school for some reason.@
-` The sun starts to set.@
-` Actually, it's because Arcueid suddenly exclaims 'Let's go to the school you're attending', and I couldn't tell her no.\
+` Time is the only thing which passes by.@
+` A quiet night.@
+` It's completely different from two nights ago and there isn't a single cloud in the sky.@
+` The bright, pure moonlight illuminates the park and Arcueid.\
 
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
-bg "image\bg\bg_01b.jpg",%type_lcartain_mid
-
-play "track03.ogg"
-
-`"I've told you before, but we can't go inside.@ I've skipped school today after all, and you're an outsider."@
-ld c,":a;image\tachi\ark_t01a.jpg",%type_lshutter_fst
-`"I know.@ I won't cause you any trouble, so just relax."@
-` Arcueid peers at the school from the gate.@
-ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
-
-`"Huh………?"@
-` Arcueid tilts her head.@
-cl c,%type_crossfade_fst
-`"What's wrong?@ Did something happen?"@
-` I look at the school grounds from behind her.\
-
-`"H…… uh?"@
-` This time I'm the one tilting my head.@
-` There's no sign of anyone on the school grounds.@
-` It's not even quite six o'clock yet.@
-` At this time, there should be a lot of athletic clubs still practicing----\
-
-ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
-
-`"Shiki, it seems there's no one here."@
-` Hmm, I'm not sure why, but there really is no one here.@
-` I don't see anyone in the building either.@
-ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
-
-`"Shiki, there's no one inside you know."@
-` Arcueid stares upward at me.@
+`"…… Moonlight……"@
+` If it was as bright as this back then, maybe I could have seen the bandaged man's face…… wait a minute…
 br
-` …… Somehow, I'm pretty sure I know what she's trying to say.\
-
-`"No way."@
-` I refuse her bluntly.@
-` But, she doesn't listen to me.@
-ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
-
-`"If there's no one there, then I can't get in trouble for going in.@ We came at a great time, didn't we?"@
-`"I told you, I don't want to."@
-cl c,%type_lshutter_fst
-`"Wow, it's bigger than I thought inside.@ The school building is also really huge, it seems well-suited for its task."@
+`"Ah----------!"@
 br
-` …… That's strange.@
-` Arcueid's voice isn't coming from right near me, but from inside the school grounds.\
+` I jump up from the bench.\
 
-`"Shiki, this door won't open, so is it okay if I break it down?"@
-` What blurring speed!@
-` Arcueid is already right next to a glass door with her arm cocked to break it.@
-br
-`"Y…… you, why won't you listen to what people are saying--!?"@
-` With all my strength, I dash towards the glass to prevent it from being broken by a big idiot.\
+ld c,":a;image\tachi\ark_t12.jpg",%type_lshutter_fst
+`"Shiki!?@ What's wrong, did you see The Dead?"@
+` Arcueid rushes towards me.@
+`"No, that's not it---I forgot something really important."@
+` It really was careless of me.@
+` I was attacked yet I completely forgot about it until now.\
 
-bg "image\bg\bg_03b.jpg",%type_lcartain_mid
-
-ld c,":a;image\tachi\ark_t08.jpg",%type_nowaitdisp
-
-`"Ah, you came over."@
-` She gives a smile as if she was enjoying this.\
-`"…… Is going to my high school this much fun?@ There's a lot of other better places I can take you, so let's just get out of here."@
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"I don't think so.@ The place you always come to, it seems pretty fun."@
-` Arcueid gives a mischievous laugh and smiles devilishly.@
-`"Shiki, I want to go inside here.@ Can you kill the lock on this?"@
-`"K, kill it?@ You----"\
-
-`"Wouldn't it be less messy than if I did it?@ The way you slice something apart doesn't leave any cross-sections that look like the action of a blade.@ If someone finds it later on, it'll just look like it fell apart on its own.@ C'mon, c'mon."@
-` She points to the glass window by the hallway.@
+`"Arcueid.@ I was attacked two nights ago by a strange person."@
+ld c,":a;image\tachi\ark_t13.jpg",%type_crossfade_fst
+`"Eh?@ A strange person?@ What kind?"@
+`"Well, that is----"@
 cl c,%type_crossfade_fst
 
 
-`"…… Sheesh, you're acting like a kid."@
-` I half-lower my glasses.\
-
-monocro #ff00ff
-bg "image\bg\bg_03b.jpg",%type_lcartain_fst
-
-
-` …… Now then, a window with a "line" at the crescent lock would be…
 br
-`"…… Crap, there conveniently is one."@
-` Taking my knife out of my pocket, I cut down the lock.@
-` …… No, not cut down.@ More like 'killing' it.\
-
-monocro off
-bg "image\bg\bg_03b.jpg",%type_lcartain_fst
-
-`"All set.@ Let's go in here."@
-` Lifting open the glass window, we enter the school building.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-bg "image\bg\bg_06f.jpg",%type_crossfade_mid
-
-` …………………… *sigh*@
-br
-` I knew it.@
-` Arcueid declares she wants me to guide her to my classroom first.\
-
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"Hey, Shiki.@ What do you study here?"@
-`"What?----Normal school stuff.@ History, and a lot of deep studies into the culture of my country.@ And to know about how things work, we study physics and math.@ And we might go overseas one day, so we study English too."@
-`"Oh really?@ Taking you into account, I thought you were studying things like the best way to slice up people or how to use various blades."@
-` She says something pretty funny.\
-
-`"Arcueid, you're saying that even though you already know what kind of place this is, right?"@
-ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
-
-`"Ahaha, Good Job!"@
-` She starts to clap.@
-cl c,%type_crossfade_fst
-
+` I calm down and I describe as clearly as I can what happened last night.\
 playstop
-
-` …… It's always hard to understand what she's thinking, but today takes the cake.@
-` Dragging me here, just what the heck is she planning?\
-
-ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
-
-play "track07.ogg"
-
-`"Shiki."@
-`"What is it?@ Suddenly looking serious like that.@ You really did have a reason for bringing me here, didn't you?"@
-`"No, there wasn't any reason.@ I just wanted to hear about this kind of place."@
-`"…… This kind of place?@ About school?"@
-`"Yeah, you spend about half your day here, right?@ Is there a use for all the knowledge and experiences you gain here?@ Are you just wasting your time learning things unnecessary for you?"@
-`"Huh----?"@
-` Her question is the least understandable so far.\
-
-ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
-
-`"For example, there's some skills you learn here that will never be used.@ Isn't that a waste?"@
-`"…… Well, maybe it is a waste.@ I learn math, but we only use the simplest of math in our daily lives.@ I learn about this country's history and English, but I don't know if I'll ever use it."@
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-
-`"Oh, so you realize it then.@ But…… then, why do you do such pointless things?@ Your time is so short, you don't have time to waste."\
-
-`"No time to waste?@ Well, we don't have a specific goal, so we live pointlessly like this until we do."@
-ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
-
-`"I can't believe it.@ Even though you know it's pointless, you make it something you live for.@
-` …… Yeah, I really can't believe it."@
-` Her voice is terribly hushed.@
-` I don't know why, of course.\
-
-`"…… Something to live for, huh?@ That may be true.@ But are useless things that bad?"@
-ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
-`"----Eh?"@
-`"Isn't it alright to do extra things?@
-` Even if I use what I learn only here, it still becomes a reminder of my days here.@
-` Some years later, there'll be a time when I'll just think.@ And I'll remember back and say 'yeah, that's how it was back then' and give a bitter smile.@ So there's meaning in it."\
-
-ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
-
-`"…… I don't get it.@ Those memories themselves are pointless, but you're saying there's fun in remembering them, Shiki?"@
-`"Yeah, that's okay.@ People are designed not to remember painful things.@
-` But in the first place, the lives of humans are full of pointless things.@ To think of it, isn't life itself pointless?@
-` So I don't think about it too deeply.@ I think it's best to just fool yourself and live like you don't realize there's no meaning to life."\
-
-ld c,":a;image\tachi\ark_t17.jpg",%type_crossfade_fst
-
-`"You know it's pointless yet you do it.@ …… I really don't get it.@ I can't do anything pointless.@ Even now, I haven't done anything that I didn't need to do."@
-`"What are you saying?@ Wasn't this whole day full of pointlessness?@ Isn't your purpose hunting vampires?@ Then there's really no need for you to go walking around with me."\
-
-ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
-
-`"…… That's true.@ I don't understand that either.@ I wanted to ask you because you don't seem to do anything but pointless things, but now I'm totally confused."@
-br
-` ----Hey.@
-br
-`"Yes, yes.@ I'm sorry, I'm only a completely pointless person."@
-ld c,":a;image\tachi\ark_t13.jpg",%type_crossfade_fst
-
-`"………… Ah----yeah."\
-
-ld c,":a;image\tachi\ark_t17.jpg",%type_crossfade_fst
-
-`"I'm sorry.@ I understand what you're trying to say, Shiki.@
-` Humans are a collective, so their worth isn't determined by the individual but by the whole group.@ Even if an individual is mistaken, if the group is correct then it is forgiven.@
-` But as for us, we are solitary creatures so we can't allow ourselves to be mistaken.@ We can't allow our wills to be influenced by anyone else.@
-` So----that's why I was always taught never to do extra things."@
-br
-` …… Quietly.@
-` She talks as if she was in a confessional.\
-
-ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
-
-`"----But now, I don't know anymore.@ For just a brief time… really, only seven days.@
-` …… I started to wonder if I really was right?@
-` Because it was so fun.@ Doing this, living like this, I never thought until now how happy it could make me."\
-
-`"Ar…… cueid?"@
-ld c,":a;image\tachi\ark_t17.jpg",%type_crossfade_fst
-
-`"Maybe I… broke down.@
-` I've never been awake for this long until now----Maybe I'm already fast asleep dreaming about all this."@
-` …… With empty eyes, Arcueid whispers these words.\
-
-`"Wha----"@
-` I can't speak.@
-` Her image flutters like a projected hologram.\
-
-`"…… Broken?@ What do you mean?@ You look pretty normal to me."@
-`"Maybe on the outside, but I'm different on the inside.@ …… Happiness and pain, all of these extra feelings are becoming greater.@ I can't ignore things that I used to be able to in the past.@ So I'm broken, right?@
-ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_mid
-
-` And also, I'm not normal.@ I'm different from you, Shiki.@ I'm a vampire."@
-cl c,%type_crossfade_fst
-
-\
-
-` Saying that, she seems to laugh.@
-` Really faintly, as if hiding in the red of the setting sun.@
-br
-`"--------Tha-"@
-` That's… strange.@
-` It's just… weird.@
-br
-` The dusk classroom.@
-` Bathed in the red sun, a vulnerable looking girl.@
-` This scene, it's…\
-
-`"That's--not like you at all."@
-br
-` Yeah, it's not like her at all.@
-` You're a vampire----so don't look so vulnerable, like you were some ordinary girl.\
-
-`"Things you can't ignore, having to do pointless things, if it's not causing trouble to anyone----isn't it alright just to let it all go?@
-` I said not to think about yourself too seriously.@
-` I don't know what you're thinking about, but I don't see a problem.@
-` You're not----causing trouble to anyone."\
-
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-
-`"Really?@ But you always yell at me, is that different?"@
-`"----I'm an exception.@ I have the sin of killing you, so dealing with you is just karma.@
-` It's okay, I'm doing it because I want to.@ So please don't think about the trouble you're causing me."\
-
-ld c,":a;image\tachi\ark_t17.jpg",%type_crossfade_fst
-
-`"…………"@
-` Arcueid's expression clouds over.@
-` …… If she makes that kind of a face, it's a little troubling.@
-` She looks so weak, I want to embrace her.\
-
-`"…… Please Arcueid, get it straight now.@
-` It's true that you're selfish, you don't listen to other people, and you're full of problems.@
-` But, other than that, you're pretty normal.@ You're not broken, you're just like a normal girl.@
-` ----So smile.@ If you keep making that expression, it'll make me feel bad."\
-
-ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
-
-`"…… That's pretty mean.@ Am I really that selfish?"@
-` Arcueid looks at me suddenly as if studying my expression.@
-
-cl c,%type_crossfade_fst
-
-
-br
-` I'm taken aback a little.@
-` It seems this princess didn't realize she was selfish.\
-
-`"----Hahahahaha!@ What are you saying?@ If you take every bit of selfishness out of you, there'd be nothing left but bones!@ Just bones!"@
-` What I'm saying doesn't quite make sense, but it seemed very funny.@
-br
-` --Because even in my wildest dreams, I never imagined I would see Arcueid embarrassed over herself.@
-ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
-`"……………………!!"@
-br
-` Oh, she got mad.\
-
-`"Shiki you jerk!@ I was seriously discussing matters and you act so heartlessly!!"@
-`"Like I said, didn't I say I was nice to everyone but you?@ So being mean to you now isn't anything new."@
-` Stifling my laughter, I look back at her.@
-` The cloud hanging over her head has dispersed and she has a genuine expression on her face, which is much more like her.\
-
-`"But you know, I guess it's better for you to be lively.@ I'm a little relieved."@
-ld c,":a;image\tachi\ark_t13.jpg",%type_crossfade_fst
-
-`"Eh……?@ Wh, why are you relieved?@ Aren't you supposed to be heartless towards me?"@
-`"Ah----yeah, that's right."@
-` I tilt my head questioningly.@
-
-cl c,%type_crossfade_fst
-
-
-` …… That's strange, I don't even know why myself.\
-
-` …… Before, I just didn't want to see her looking depressed, and I wanted to protect her----
-br
-`"…………"@
-br
-` That's ridiculous.@
-` Without a doubt, she is pretty, and I know she's a good person.@ Also, it isn't boring to be with her.@
-` …… But no way can such a ridiculous thing be happening.@
-` Get a hold of yourself, Shiki.@ She's a vampire.\
-
-ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
-
-`"That's pretty vague.@ Are you saying you don't understand yourself?"@
-`"…… Be quiet, it's alright if I don't understand myself.@ I've always been aware of how strange I am from the beginning.@ That's why my memories are always vague."@
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-`"Oh, I see.@ That's why you're always spaced out, Shiki."@
-` Arcueid nods to herself as if deeply understanding the matter.@
-cl c,%type_crossfade_fst
-`"…………"@
-` Having her take my excuse so seriously makes me wonder if maybe it really is true.\
-
-!w1000
-
-
-`"----Well then."@
-` We can't stay in this classroom forever.@
-` We should hurry up and leave before we're found by teachers left in school.\
-
-`"Come on, let's head out.@ There's nothing else to do here, right?"@
-ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
-
-`"Yeah, nothing else, but…… Shiki?"@
-` I throw her a questioning glance.@
-` She seems to be pondering her words, and then asks me a strange question.\
-
-`"Shiki, do you enjoy things?"@
-`"…… Are you sick today or something?"@
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-
-`"Don't make fun of me.@ I know a little bit about your body.@ Even you know it, right?@
-` That it isn't strange for you to die at any moment."@
-`"Wha-------"\
-
-br
-br
-br
-br
-br
-br
-` ----Thump.@
-` The scar on my chest almost feels like it's squirming.@
-!w1000
-\
-
-`"You----well, humans die eventually."@
-ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
-`"But in your case, death will come quicker than for other people."@
-` …… Her eyes are serious.@
-` But, everyone has lines of death on them, so there are many places where they can die easily.@
-br
-` It's not like----I'm the only one who's very close to death.\
-
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-
-`"Answer me.@ Do you ever have moments where you enjoy yourself even though you have such an unstable hold on life?"@
-`"------You really are stupid.@
-` There's no way I can know that."@
-cl c,%type_crossfade_fst
-\
-
-bg "image\bg\ima_08.jpg",%type_crossfade_fst
-
-` …… But, there's one thing clear to me.@
-` I almost died eight years ago, and for a short while,
-` probably when I was getting surgery at the hospital, I felt like I was in a dark place.@
-br
-` Maybe it was a dream.@
-` Just, at that time, I truly felt like I died, like that place was truly "death".@
-` I was extremely happy after my miraculous recovery.@ Then, I met Sensei and was able to return to a normal life.\
-
-` I never realized it until I died once.@
-` But the world is so peaceful and such a fun place to be.@
-` They say pleasure can't be found in this life, but I think for humans, just living is good enough.@
-br
-` That's why----I can continue living like this even knowing that it's all pointless.\
-
-` …… That's why.@
-` If someone asks me if I'm enjoying life, unless it's something really unforgivable, I can't help but answer that I am.@
-` No matter how much despair it is, I'm satisfied with just existing.@
-` That's something more certain than the nothingness of death.@
-` No one had to teach me that, but I still know that.@
-` Just being allowed to be here really is a wonderful thing----\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-
-bg "image\bg\bg_06f.jpg",%type_nowaitdisp
-
-
-`"----It's just… isn't living enjoyable enough?@ Everything up until now was fun, so I can feel like living.@
-` …… Well, I guess this is how I can answer your question."@
-br
-` I can't really say anything too profound.@ I've only been alive for seventeen years.\
-
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"I see, so that is how your heart is.@ …… Just doing that is fun enough?@ That's true, even though you know it's something extra, you can't give it up because you enjoy it.@
-ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
-` …… I was scared of that and asked, but perhaps that might be a good answer."@
-`"----What, are you still thinking about that thing from before?"\
-
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"Yes, but for now the hard feelings have faded.@ I can't stray off course until this vampire is defeated.@ Until then, we will fight together."@
-cl c,%type_crossfade_fst
-
-playstop
-
-` "Right?" She says, smiling.@
-br
-`"----"@
-` Until this vampire is defeated, huh?@
-`"…… That's right.@ That was the relationship between us."@
-` Because today was just so normal,
-` I completely forgot about that most important fundamental fact.\
-
-`"----Hey, Arcueid."@
-br
-` Just, without thinking…
-br
-`"When this is all over----when we're done defeating this vampire… Before we part, can't we do something like this just once more?"@
-` Those words really come out of my mouth naturally.\
-
-ld c,":a;image\tachi\ark_t13.jpg",%type_crossfade_fst
-
-`"Eh----?@ What do you mean?"@
-`"I'm saying after your task is finished, let's do these pointless things one more time.@
-` In the end, we're here together because we agreed to help each other.@
-` So----I really was wondering, what would happen if we were to meet again without any responsibilities… if we just met for no particular reason."\
-
-cl c,%type_crossfade_fst
-!w500
-
-
-br
-br
-br
-br
-` ----That's not true.@
-` Just as friends, and not thinking about her being a vampire at all.@
-` I just thought it would make Arcueid happy if we created some normal memories like that.\
-
-`"----If you're too busy, then it's okay.@ I only thought of it just now, anyway."@
-` But that's really the opposite of how I feel.@
-br
-` After her eyes widen in surprise, she nods.\
-
-ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_fst
-
-`"Okay----!@ When everything's over, let's come here again, Shiki!@ It won't have any meaning, but I'm sure it will be really, really fun!"@
-` In the classroom bathed by the sunset,
-` Arcueid smiles and makes a promise with me.\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_slw
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-!w1000
-
-bg "image\bg\bg_24c.jpg",%type_crossfade_mid
-
-
-` …… In the end, when we go outside, the sun has already set.@
-` It's just past seven-thirty.@
-` A little early, but since we don't have anything else to do, we should start searching for the vampire.@
-br
-`"Well then, shall we begin, Arcueid?"@
-` I turn around to face Arcueid who was walking behind me.\
-
-ld c,":a;image\tachi\ark_t11.jpg",%type_lshutter_fst
-`"What, already?@ Didn't the sun just set?"@
-`"Yeah, but it wouldn't hurt to start earlier.@ We've played around long enough today, so we should be serious at night, right?@
-` Arcueid, let's stick to our decisions."\
-
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-`"Shiki, you're strangely serious.@ If you're this serious, then why did you break our promise yesterday?"@
-`"Hey, I couldn't help that; I couldn't even move.@ I really did intend to go before."@
-` Yeah, if Akiha didn't stop me, I probably would've gone ahead to the park in my condition.\
-
-`"Hmmm, I see.@ Then, let's do that."@
-` With a slightly empty expression, Arcueid says something I don't understand.@
-`"Do what?"@
-`"You intended to go to the park, right Shiki?@ We still have time, so if you couldn't get it done yesterday, then isn't it okay if we do it now?"@
-cl c,%type_lshutter_fst
-\
-` She starts to run lightly.@
-` She really seems to be serious about going to the park.@
-`"--Hey, wait.@ Hey……!"@
-` I run with all my strength so I don't lose sight of her.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-!w1000
-
-bg "image\bg\bg_28b.jpg",%type_lcartain_mid
-
-
-ld c,":a;image\tachi\ark_t08.jpg",%type_nowaitdisp
-
-play "track01.ogg"
-
-`"See, even though you were complaining, you still kept up, Shiki.@ Ahaha~"@
-` Arcueid laughs.@
-`"…… Idiot… if I… left you alone… you'd… bother… someone else…"@
-` I desperately try to catch my breath after running the whole way.\
-
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"I knew there would be a lot of people here now.@ It's a bit unsettling since I can feel their presence everywhere."@
-`"…… Like I said, why… won't you… ever… listen… to what I… have to say…?"@
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-
-`"Hm?@ I hear your voice all the time."@
-`"…… Oh.@ Then… you hear me… but you just ignore me, that's… worse…"\
-
-ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
-
-`"I don't ignore you.@ If I answer whenever you scold me, you'd just call me an idiot so I stay quiet."@
-`"…… Oh.@ Then maybe… I have a problem… too?"@
-` I still try to catch my breath.@
-cl c,%type_crossfade_fst
-
-
-\
-
-` From my school to this park is roughly six kilometers.@
-` Even if it was a little jog, going that far is too much for a heart like mine.@
-` …… It's not that she was running all that quickly.@ Actually, she seemed to be running slowly.@
-` But probably because of the effects of my anemia, I don't feel too well.\
-
-ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
-`"Are you okay Shiki?@ You don't have to force yourself.@ Shouldn't you rest on that bench?"@
-`"…… I'll do that.@ Once I'm rested up, we'll go to the city again, Arcueid."@
-ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
-`"Sheesh.@ I'm happy you're motivated, but it's still too early.@
-` Nrvnqsr was like that too, but vampires don't move around unless it's their time.@
-` Since they won't move around until they sense deep night, it's okay to kill a little time here."@
-br
-`"----"@
-` If that's how it was, then she could've told me earlier.@
 
 bg "image\bg\ima_10.jpg",%type_lshutter_fst
 bg "image\bg\bg_28b.jpg",%type_lshutter_fst
 
+
+`"…… Yeah, that's how it was------"@
+` Finishing my explanation, I read Arcueid's expression.@
+ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
+` From when I started until now, her eyes remained sharp without any gentleness.\
+
+`"So what is it Arcueid?@ That bandaged man, and that person wearing those robes like some priest, are they enemies of yours?"@
+`"…… Yes.@ Both of them are 'enemies'.@ I don't know just who or what that bandaged man is, but that woman wearing those Catholic robes, I have an idea about."@
+` She narrows her eyes as if she was in a bad mood.@
+` No, she looks less like she was in a bad mood and more like she's irritated.\
+
+play "track09.ogg"
+
+
+`"I may know the person who helped you, Shiki.@ …… Man.@ If it's really her, she'll probably be able to find the enemy before me."@
+` She bites her lip vexedly.@
+`"Wait a minute.@ I didn't say that person was a woman though."\
+
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+`"No, there's no mistake.@ That woman is the only agent given authority to hunt heretics alone and who uses Black Keys that combine the Cremation Rite and the Steel Shell Effect."@
+` Her irritability is almost like hostility.@
+` Even when she spoke about Nrvnqsr, her voice was never saturated with emotion to this extent.\
+
+`"…… Arcueid.@ Um, that person who helped me, is she a vampire……?"@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+`"No, that's not it----that's right, I have yet to tell you about something else that's very important."\
+
+ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
+`"I think I explained it before, but vampires like the one making his lair in this town turn humans into their minions and expand their territory.@ At the same time, they try their utmost to conceal their existence.@
+` Even though victims appear, they use various magical techniques to make things appear not out of the ordinary.@
+` You know why?"\
+
+`"…… Well, it's because humans aren't stupid.@ If they find out monsters like that exist where they live, they'd attack them.@ Even though humans are weak, they do have things like police, so they might be able to do something."@
+`"---Well, I guess that's true, but police are only a law-enforcement group against humans.@ We don't consider them at all.@
+` But, it's correct to say that vampires hide their presence for the sake of self-preservation."\
+
+`"Shiki, there is a natural enemy of the vampires.@ A group of something like professional killers that now have the power balance in their favor.@
+` …… It's true for other transcendent species, but especially for vampires, it is fatal for them to reveal themselves.@
+` Even if a vampire made a secret kingdom in a village somewhere in the mountains away from all civilization, this natural enemy would definitely notice if victims keep increasing.\
+
+` Vampires exploit the humans in secret, for no reason other than self-preservation.@
+` The vampires hide their dead victim's bodies, not out of fear of human society finding out, but in fear of these natural enemies discovering them."@
+`"…… Huh?@ The natural enemy of vampires?@ Yet another group of monsters I don't know about."@
 br
-` ----Sitting on the bench, I stare at the clock aimlessly.@
+` For a normal guy like me, I just want all these unnatural things to stop appearing.\
+
+ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
+`"What are you saying?@ Their natural enemy is without a doubt you humans."@
+`"-----?@ Natural enemies, us?"@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+`"Yeah.@ Starting from a long time ago, humans used many kinds of magic, the occult, magical ceremonies to create an organization and started to eliminate primates other than humans.@
+` The greatest of these is Christianity---the pride of the Vatican, the Exorcists.@ The Catholic Church always viewed "nonhumans" as impurities, but vampires are considered the most dangerous."@
+
+` "There are many religious groups in the world, but the Catholic Church looks at vampires with more hostility than the rest.@
+` You know, it's almost an obsession.@ They are so insane, I don't even want to mess with them."@
+` Arcueid lets out a sigh.\
+
+ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
+
+`"The one who helped you was a member of an elite organization that hunts heretics.@
+` This group, the Burial Agency, is part of The Church.@ They use their own strength rather than law to deal with contradictions to Christianity.@ These hidden exorcists are more like professional killers."@
+`"…………"@
+` Priests that go around exterminating vampires, huh?@
+` It's so fitting, I'm not really sure what to say.\
+
+`"Then aren't they like us?@ If this Burial Agency is a group whose purpose is to hunt vampires too, can't we search together?"@
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+`"----That won't work.@ For them, it's enough that someone is a vampire.@ To them, non-human primates are just "Evil".@ It doesn't matter if they suck blood or not.@
+` This exorcist may have even just came here to seal me rather than fight the vampire who lives in this city."\
+cl c,%type_lshutter_fst
+playstop
+
+` Sounding irritated, Arcueid starts to pace back and forth again.\
+
+`"………………"@
+` Things have gotten quite complicated.@
+` Arcueid's enemy is sought after by both a vampire, and a group that hunts vampires.\
+
+`"…… What is this?@ Then doesn't that mean she's all by herself?"@
+` Thinking aloud, I watch Arcueid as she paces back and forth.@
 br
-` It's just past nine o'clock.@
-` The people all around have gone away and the night deepens quickly.@
-` For some reason Arcueid doesn't sit down, but paces back and forth as if she was bored.\
+` Under the white moonlight,
+` Arcueid appears to be dancing a solitary waltz.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+
+playstop
+
+
+
 
 
 

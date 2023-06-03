@@ -1,84 +1,69 @@
 
 
+
+
+
+
 bg "image\bg\bg_25b.jpg",%type_nowaitdisp
+
+
 
 ` ----I can't ignore my feelings.@
 br
 ` With a killer skulking around town at night looking for victims, I shouldn't be investigating suspicious sounds in alleyways.@
 ` But… I still remember Yumizuka's smiling face from yesterday.\
-
 ` There's no reason for Yumizuka to be there.@ But if she is, she might need my help.@
 ` …… I'll never forgive myself if I just ignore this.\
 
 `"----Alright."@
-` Putting my hand in my pocket, there is the cold touch of iron.@
-` Even though I don't intend to use it, it's comforting to know that I'm not unarmed.@
-` …… And if it comes to it, I have my "eyes" too.@
+` Taking a deep breath, I steel my spirit.@
+` Besides, if it comes to it, I have my "eyes" too.@
 ` Sensei said not to use them recklessly, but she'll find it acceptable if I use it against a killer.@
 `"…… The sound… it came from here…"@
 ` Preparing myself, I step into the alley.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
-bg "image\bg\bg_30b.jpg",%type_crossfade_mid
+bg "image\bg\bg_30b.jpg",%type_nowaitdisp
+
 wave se0
 
-br
-` ---Thump.\
 
+br
+` ---Thump.@
+br
 ` My heart pounds.@
 ` The back alley is quiet.@
 ` …… The noise came from the open area at the far end.\
 
 br
-br
-br
 wave se0
 
-` ---Thump.\
-
+` ---Thump.@
+br
 ` The back of my head, hurts.@
 ` As if convulsing under the utmost strain, my wracked spine hurts as if it's about to rip itself out of my body.\
 
 br
-br
-br
-br
-br
 wave se0
 
-` ---Thump.\
-
+` ---Thump.@
+br
 ` Why is it?@
 ` I can't think, yet my instincts shout at me.\
 
 br
-br
-br
-br
-br
-br
-br
 wave se0
 
-` ---Thu-mp.\
-
+` ---Thu-mp.@
+br
 ` Don't go.@
 ` Don't go any further.@
 ` If you do, you won't be able to come back.\
 
 br
-br
-br
-br
-br
-br
-br
-br
-br
 wave se0
-
-` ---Thu-mp.\
-
+` ---Thu-mp.@
+br
 ` But it's already too late.@
 ` I step out of the back alley, and into the open space.\
 
@@ -88,16 +73,18 @@ monocro #ff0000
 play "track04.ogg"
 
 
-
 `"----Eh?"@
-` That weak voice is all that I can get out.\
-
+` That weak voice is all that I can get out.@
 bg "image\bg\ima_13.jpg",%type_crossfade_fst
 
-` The back alley is a single sheet of crimson.@
-` Limbs are strewn amongst the garbage and rubble.@
+br
+` ---The back alley is a single sheet of crimson.@
+br
+` In it, limbs are strewn amongst the garbage and rubble.@
 ` Not the limbs of dogs, or cats, or the like.@
 ` They are human limbs, blood dripping from fresh meat and bone.\
+
+bg "image\bg\bg_31b.jpg",%type_crossfade_fst
 
 ` The ground and the walls are painted with red blood.@
 ` A heavy scent fills my nostrils.@
@@ -107,38 +94,43 @@ bg "image\bg\ima_13.jpg",%type_crossfade_fst
 ` A face.@ A face.@ A face.@
 ` A face on a severed head, rolling around with an expression of agony.@
 ` A face shriveled up like a mummy, split in halves.@
-` A face with both eyes gouged out, so distorted I can't even tell if it used to be a man or a woman.\
-
+` A face with both eyes gouged out, so distorted I can't even tell if it used to be a man or a woman.@
 `"-----"@
 ` Unable to make a sound, I merely gaze speechless at the corpses.@
-` No, they can't even be called human bodies any more.@
-` Even a badly made sculpture looks better than this.@
-br
+` No, they can't even be called human bodies anymore.@ Even a badly made sculpture looks better than this.\
+
 ` There are four bodies.@
-` They roll around like scraps of leftover food.\
-
-bg "image\bg\ima_13b.jpg",%type_crossfade_fst
-monocro off
-
+` They roll around like scraps of leftover food.@
+br
 `"Ah----ah."@
+br
+wave se0
+
 ` I gape in shock at the sea of bodies.@
-` The back of my head throbs, my throat is parched, and my breath burns like fire.@
-` My fingertips quiver, and my mouth distorts.@
+` The back of my head throbs,
+` my throat is parched, and my breath burns like fire.@
+` My fingertips quiver, and my mouth distorts.\
+
 ` What---is this?@
 ` What is this world before my eyes?@
 `"----Red."@
-br
 ` Yes.@
-` Before my eyes, everything is that terrible color---\
+` Before my eyes, everything is that terrible color---
+br
+wave se0
 
 ` But I merely stand.@
-` No screaming, no fear.@
-` Like the scene of an accident in a movie, I only stare at the back alley.@
-` Undoubtedly,
-` this is how my mind is protecting myself.@ Otherwise I would have gone mad.\
+` I think I may be going crazy.@
+br
+wave se0
+
+` Thump.@ Thump.@ Thump.@
+br
+` While being faced with a totally bizarre, alien landscape like this,
+` my heart screams shrilly in anticipation.\
 
 bg "image\bg\bg_31b.jpg",%type_tshutter_mid
-
+monocro off
 
 ` A corpse against the wall moves.@
 ` No, that's wrong.@
@@ -146,7 +138,7 @@ bg "image\bg\bg_31b.jpg",%type_tshutter_mid
 ` It's not like the scrapped hands and feet.@
 ` It's a living human being, with limbs attached.\
 
-`"Ah………"@
+`"Ah…"@
 ` I see something out of place.@
 ` In this ghoulish spectacle, the response to seeing someone alive is more of astonishment than happiness.@
 br
@@ -154,80 +146,56 @@ br
 ` If he's alive, I have to help him.\
 
 `"Uh---hello?"@
-` With my mind still paralyzed, I step towards the living figure.@
+` In my rush of emotion, I step towards the living figure.@
 br
 `"---Gih."@
 br
 ` Pulling itself up from the sea, it raises its face toward me.@
 ` A face like a dried out skull.\
-
 bg "image\bg\ima_10.jpg",%type_nowaitdisp
 
-`"Hii----!"@
-br
-` I leap back reflexively.@
-` But, the skull moves faster than I do.@
-` With a voice crying out "hyuuu!@ hyuuu!" he jumps at me.\
 
+
+`"Hii----!"@
+` I leap back reflexively.@
+` But the skull moves faster than I do.@
+` With a voice like "hyuuhyuu!", he jumps on me.@
+br
 ` ----Hyuu!@ Hyuu!@
 br
-` A hideous voice, right next to me.\
-` Looking down---there is a large hole in the skull's throat, preventing him from speaking correctly.\
+` A hideous voice, right next to me.@
+` Looking down---there is a large hole in the skull's throat, preventing him from speaking right.\
 
 `"----Ah!"@
 ` The dried up face, the dried up arm reaching for me.@
 ` In the throat of this bag of bones, vocal chords vibrate in accord with the ghastly voice.@
 `"Uwaaaahhhhh!"@
-` Desperately, I try to tear him off me.@
-` But he merely raises that ghastly voice, and will not get off.\
-
-
-bg "image\bg\ima_11.jpg",%type_nowaitdisp
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-
-br
-br
-br
-br
-br
-br
-` Rip.@
-` Its fingers pierce my shoulder.\
-
-`"…… Chhh!"@
-` My body arcs from pain.@
-` The fingers were like a sharp needle.@
-` It shreds my skin mercilessly, scooping out nerves and flesh as it goes---
-br
-`"Ah, aahhh----!"@
-br
-` The pain is so great that I can say nothing else.@
-` Though I try to tear him off me screaming, he is too strong.@ Whatever I do, he does not move.\
+` Desperately, I try to tear him off me.@ But he merely raises that ghastly voice, and will not get off.\
 
 ` With a creak, the skull's jaw opens.@
 ` The mouth opens wide enough to rip off my shoulder with a single bite, and he approaches my face as if saying, "I don't want to die, somebody save me".@
-br
-`"St---"@
-br
+`"St----"@
 ` I can't even say "stop".@
-` The guy made only of skin and bones, tries to bite my head----and suddenly, he collapses.\
+` The guy made only of skin and bones, tries to bite my head---and suddenly, he collapses.\
+
+
 playstop
 
 bg "image\bg\bg_31b.jpg",%type_bshutter_mid
 
-
-`"Eh…?"@
+`"Eh……?"@
 ` The awesome power vanishes.@
 ` The bag of bones in a person's form crumples to the ground and disappears.@
-br
 ` Softly,
 ` like a bad dream, it turns to ash and blows away.\
 
 `"…… What the hell is this?"@
-` Pain runs through my shoulder.@
+` A pain runs through my shoulder.@
 `"Ach…"@
-` My own blood flows down my back.@
+` My shoulders begin to turn red and swell where he has grasped me.@
+br
 ` The pain is real.@ So this must be real.@
+br
 ` A terrible nightmare.@
 ` But---it can't be a nightmare, because it's not a dream.\
 
@@ -236,15 +204,16 @@ play "track01.ogg"
 `"Tohno-kun.@ It'll be dangerous if you stay there."@
 `"----!"@
 ` I turn towards the voice behind me.@
-` At the mouth of the alley where I came from, I see Yumizuka Satsuki.\
+` At the mouth of the alley where I came from, I see Yumizuka Satsuki.@
 
-ld c,":a;image\tachi\stk_t03.jpg",%type_lshutter_mid
+ld c,":a;image\tachi\stk_t03.jpg",%type_lshutter_fst
 
-`"Yumi… zuka---?"@
+`"Yumizuka… san---?"@
 `"Good evening.@ Fancy meeting you in a place like this, huh?"@
 ` As if we had merely bumped into each other in the mall, Yumizuka greets me lightheartedly.\
 
-`"Yumizuka, you… What are you doing, out at a time like this?"@
+
+`"Yumizuka-san, what about you… what are you doing, out at a time like this?"@
 `"Oh, just going for a walk.@ But what's Tohno-kun doing?@ Killing so many people like this is bad, right?"@
 ` Yumizuka says, with a light smile.\
 
@@ -263,17 +232,17 @@ ld c,":a;image\tachi\stk_t03.jpg",%type_lshutter_mid
 
 `"Ah----"@
 ` I swallow my breath.@
+` Yumizuka is chuckling.\
 
-` Yumizuka is chuckling.@
 `"It's not… this wasn't… wasn't me…"@
-` My head is paralyzed, and can only manage broken language.\
-
+` My head is paralyzed, and can only manage broken language.@
 ` …… I understand.@
-` I can think clearly, but I can't put my thoughts into words.@
+` I can think clearly, but I can't put my thought into words.@
 br
-` For example, why is Yumizuka at a place like this after running away from home?@
+` For example, why is Yumizuka at a place like this?@
 br
 ` For example, why is Yumizuka laughing in the face of this tragic scene?\
+
 
 `"Yumizuka-san, I---"@
 `"Yeah, I know.@ You just interrupted someone's meal.@ I'm sorry for sounding mean.@ I always act against my feelings, so I'm always acting like this to you."@
@@ -281,6 +250,7 @@ br
 ` …… It's so inappropriate for this scene, I feel a chill.\
 
 playstop
+
 
 ` Yumizuka doesn't move from the entrance of the alley.@
 ` Her arms are positioned strangely, as if she's hiding something behind her back.@
@@ -293,14 +263,12 @@ br
 ` She laughs again.@
 `"------"@
 ` …… No.@
-` Somehow, this girl cannot be Yumizuka Satsuki.\
-
-`"Yumizuka… why are you hiding your hands like that?"@
-`"Ah, have I been found out?@ I guess you're too observant to miss that, huh.@ I've always liked that about you, Shiki-kun."@
-br
-` After emphasizing the "Shiki-kun",
+` Somehow, this girl cannot be Yumizuka Satsuki.@
+`"Yumizuka---why are you hiding your hands like that?"@
+`"Ah, have I been found out?@ I guess you're too observant to miss that, huh.@
+` I've always liked that about you, Shiki-kun."@
+` After emphasizing my name,
 ` she brings her hands out.\
-
 
 ld c,":a;image\tachi\stk_t06.jpg",%type_crossfade_fst
 play "track06.ogg"
@@ -310,69 +278,88 @@ play "track06.ogg"
 ` And, proudly,
 ` Yumizuka Satsuki is smiling.\
 
+wave se0
+
+
 `"Yumizuka, your hands---"@
+br
 `"Yeah.@ I killed those people."@
+br
 `"Wha---"@
 `"Oh, but, it's okay.@ I didn't kill them because I hated them.@ I just needed their blood to live, so I had to kill them."@
-br
-` …… What… is this?@
-` I… don't really understand what Yumizuka is saying.\
+` She says it as if it was normal.@
+` Of course I can't understand it.@
+` All I do understand is---my blood is pulsing wildly throughout my whole body.\
+
+` Thump.@ Thump.@ Thump.@
+` *pant*.@ *pant*.@ *pant*.@
+` Like I've fallen in love at first sight with that bloody Yumizuka, I am excited---\
 
 `"You… really killed them, Yumizuka?"@
+
+ld c,":a;image\tachi\stk_t03.jpg",%type_crossfade_fst
+
 `"You wouldn't believe me even if I told you it's a lie, right?@ Or do you think it's impossible for a girl like me to do such a thing?"@
 ` Her voice laughs softly.@
 br
 ` ---I don't believe her.@
-br
 ` I don't believe her, but she is definitely not telling a lie.@
 ` This tragic scene.@
-` It's all Yumizuka's doing.\
+` It's all Yumizuka's doing.@
 
 `"Why… such a terrible thing…?"@
+
+ld c,":a;image\tachi\stk_t10.jpg",%type_crossfade_fst
+
 `"It's not terrible.@ Like I said, I didn't kill them because I hated them.@ There's nothing wrong with killing others in order to live, is there, Shiki-kun?"@
 `"What…!@ That's absurd!@ Killing is wrong!"@
 `"No, it's not.@ But, I did do one bad thing.@ Since today was my first time drinking blood, I let a little of my blood get back into them.@ Because of that, you got attacked, Shiki-kun.\
 
 `"I'm sorry for getting you involved.@ But we're lucky; it died without being able to finish changing."@
-
-`"What… what are you talking about, Yumizuka?"@
-
-`"It's okay if you don't understand right now.@ I don't really understand myself yet, so I can't explain it very well."\
-
-` But, I think after a few days I can become like Shiki-kun.@
+`"What---what are you talking about, Yumizuka?"@
+`"It's okay if you don't understand right now.@ I don't really understand myself yet, so I can't explain it very well.@
+`"But, I think after a few days I can become like Shiki-kun.@
 ` Like Shiki-kun, become a great---"@
-ld c,":a;image\tachi\stk_t04.jpg",%type_lshutter_fst
 
-` As she says so, her face distorts in pain.\
+cl c,%type_lshutter_mid
 
+` As she said so, her face distorts in pain.@
+
+ld c,":a;image\tachi\stk_t04.jpg",%type_tshutter_mid
 
 `"Ha---… aaau!!!"@
 ` Rasps of agony echo from her throat.@
 ` Yumizuka chokes up blood.\
 
-`"It----hurts.@ I guess, even if I'm hungry, I shouldn't just drink blood at random.@ If it's not good quality, beautiful blood, it won't agree with me…"@
+`"It---hurts.@ I guess, even if I'm hungry, I shouldn't just drink blood at random.@ If it's not good quality, beautiful blood, it won't agree with me…"@
 ` She breaks out in a fit of coughing.@
-` She chokes out blood with every cough.@
+` She chokes out blood with every cough.\
+
 `"Nn---kuh, nnaaah…!!!"@
 ` Yumizuka's body convulses.@
 ` …… I don't really understand.@
-` All I know is, Yumizuka's in terrible pain.@ That's all I can clearly understand.\
+` All I know is, Yumizuka's in terrible pain.@ That's all I can clearly understand.@
+`"Are you okay, Yumizuka…!?"@
+` Without thinking, I run towards her to take her hand.@
 
-`"Hey… are you okay, Yumizuka…!?"@
-` I run towards her to take her hand.@
+ld c,":a;image\tachi\stk_t12.jpg",%type_tshutter_fst
 `"----No!@ Don't come any closer, Shiki-kun!"@
-` But, Yumizuka's voice stops me.@
+` But, Yumizuka's voice stops me.\
+
+ld c,":a;image\tachi\stk_t04.jpg",%type_crossfade_mid
+
 `"…… You mustn't.@ I'm not… entirely okay, Shiki-kun."@
 ` She speaks painfully, still vomiting red blood.\
 
-`"Yumi… zuka, you…"@
+`"Yumi… zuka, you---"@
 ` I don't understand.@
-` Why Yumizuka's in pain, or why she's like this.@
-`"What the hell is going on?@ You said you killed those people, but it's a lie, right, Yumizuka…?@ If you're in that much pain, shouldn't you be in a hospital?"@
-` …… I'm fooling myself.@
-` Even though I understand Yumizuka brought about this tragic scene, I still lie to myself.\
+` Why Yumizuka's in pain, or why she's like this.\
 
-`"Yumizuka… I'm coming over there, okay?"@
+`"What the hell is going on?@ You said you killed those people, but that's a lie, right, Yumizuka…?@ If you're in that much pain, shouldn't you be in a hospital?"@
+` …… I know.@
+` Even though I understand Yumizuka brought about this tragic scene, I still lie to myself.@
+
+`"Hey, Yumizuka---I'm coming over there, okay?"@
 ` I speak gently.@
 ` But Yumizuka shakes her head in violent refusal.\
 
@@ -382,11 +369,9 @@ ld c,":a;image\tachi\stk_t04.jpg",%type_lshutter_fst
 `"Ah… yeah, you did, didn't you.@ But you're still here…"@
 ` Yumizuka begins to pull away.\
 
-cl c,%type_lshutter_mid
-
 `"…… It hurts, Shiki-kun."@
 ` She breathes raggedly, coughing up red blood.@
-`"It hurts, it's cold, and I'm scared.@
+`"…… It hurts, it's cold, and I'm scared.@
 ` I really want your help right now, Shiki-kun."@
 br
 ` ---But it's too early.@
@@ -394,308 +379,449 @@ br
 ` Saying that,
 ` Yumizuka straightens up again.\
 
-ld c,":a;image\tachi\stk_t08.jpg",%type_crossfade_fst
+cl c,%type_lshutter_mid
 
-`"Wait for me, okay?@ I'll go become a great vampire, then I'll come back and see you!"@
 
-cl a,%type_lcartain_mid
+`"Wait for me, okay?@ I'll go become a great vampire, then I'll come back to see you again!"@
 
-`"Ah… wait, Yumizuka!"\
-
-playstop
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\bg\bg_30b.jpg",%type_lshutter_fst
+`"Wha---wait up, Yumizuka!"@
+br
+bg "image\bg\bg_30b.jpg",%type_lshutter_mid
 
 
 `"------"@
 ` Yumizuka is gone.@
 ` Even as I start to run, Yumizuka is long gone.@
-` …… Her speed is inhuman, like that of a wild beast.@
-`"---Yumizuka, you---"@
-` What happened to you, really………!?\
+` …… Her speed is not that of a human's, but of a wild beast.\
 
+`"---Yumizuka, you---"@
+` What happened to you, really…?@
+
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_30b.jpg",%type_nowaitdisp
+
+br
 `"Gah---!"@
+` My shoulders throb in pain where he grabbed earlier.@
+` When I look back, the open space where all the limbs were scattered only left red blood.@
+` The faces, the organs, the hands and feet.@
+` They all turned to ash, like the skull did before.\
+wave se0
 
 bg "image\bg\ima_11b.jpg",%type_nowaitdisp
 bg "image\bg\bg_30b.jpg",%type_nowaitdisp
 
 
-` My injured shoulder throbs.@
-` When I look back, the open space where all the limbs were scattered only left red blood.@
-` The faces, the organs, the hands and feet.@
-` They all turned to ashes, like the skull did before.\
 
-`"Sh… it…"@
-` Angrily, I strike the wall.@
-`"What the hell is going on!!!"@
-` I bellow pointlessly, and the alley echoes my voice.\
+`"------Ah."@
+` Thump.@
+` I feel sick as if I'm going to cough up blood.@
+wave se0
+br
+`"This can't, be----"@
+` Thump.@
+` This excitement, is so intense, I almost ejaculate.@
+wave se0
+br
+`"This---"@
+` For a while,
+` the crimson color of blood burns in my eyes.@
+wave se0
+br
+`"This can't be real----!"@
+` My world swims before me.@
+` My eyes see nothing but a distorted world.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
-
-
-!w2000
-
-bg "image\bg\bg_32d.jpg",%type_lcartain_mid
-
-
-`"----"@
-` The next thing I know, I'm at the gates of the mansion.@
-` The wound on my shoulder aches.@
-` The lights of the mansion are dark.@
-` Somehow, I hadn't realized I would be coming back so late.@
-` Akiha--Akiha will surely be angry with me, I think as I put my hand on the heavy doors.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-bg "image\bg\bg_33d.jpg",%type_lshutter_mid
-
-
-` …… The lobby is empty.@
-` So, what should I do?@
-` Even though my wound needs treating, Kohaku-san is probably asleep--
-br
-`"…… Nii-san?"@
-`"Eh?----Akiha?"@
-` I look up in the direction of the voice.@
-` …… Akiha is standing on the stairs.\
-
-play "track01.ogg"
-
-ld c,":a;image\tachi\aki_t03b.jpg",%type_crossfade_mid
-
-`"It is you.@ Coming back so late at night, just what do you think---"@
-` Akiha reaches the bottom of the stairs, and her rebuke stops.\
-
-ld c,":a;image\tachi\aki_t15b.jpg",%type_crossfade_fst
-
-ld c,":a;image\tachi\aki_t10b.jpg",%type_crossfade_fst
-
-`"Nii-san… where did you hurt your shoulder?"@
-`"Ah---"@
-` Damn it.@ I had wanted to hide the wound, but it's too late now.@
-`"Ah, no, this is…"@
-
-ld c,":a;image\tachi\aki_t11b.jpg",%type_crossfade_fst
-
-`"Never mind.@ Hold still.@ Is it only your shoulder…?"@
-`"Ah--yes, but, how do you know…"@
-`"I can tell with all that blood on your clothes.@ I'll hear about it later, but right now, we'll treat it.@
-` Please, forgive me, Nii-san."\
-
-cl a,%type_crossfade_fst
-
-` Saying so, Akiha touches my shoulder.@
-`"---Tch!"@
-` My body jumps at only the slight touch of Akiha's finger.@
-` …… It appears that the wound is deeper than I thought.\
-
-ld c,":a;image\tachi\aki_t23b.jpg",%type_crossfade_fst
-
-`"Ah… I'm sorry, did it hurt, Nii-san?"@
-`"…… No, I'm… I'd like to say I'm okay, but I guess I'm not.@ Even a touch is really painful."@
-
-ld c,":a;image\tachi\aki_t01b.jpg",%type_crossfade_fst
-
-`"I see… if it's this deep, I think it is too much for Kohaku.@ I'll treat it, so please go into the sitting room."@
-
-cl a,%type_lcartain_mid
-
-` Akiha walks upstairs.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_34b.jpg",%type_lcartain_mid
-
-
-`"………… Phew."@
-` I turn on the sitting room lights, and sit on the sofa.@
-` The wound on my shoulder hurts, and begins to become unbearable.@
-
-ld c,":a;image\tachi\aki_t01b.jpg",%type_lcartain_mid
-`"Sorry for making you wait.@ I'll treat the wound, so please relax."@
-` Akiha comes in holding a first aid kit.@
-` …… I don't think that would really help on this wound, but I guess I should at least get it disinfected.\
-
-cl a,%type_crossfade_fst
-
-` Akiha moves behind me, and begins to treat the wound.@
-` The uniform, damp with blood, is cut away with scissors, and the wound is exposed and disinfected.\
-
-`"---Guuuh!"@
-` I clench my fists as the pain flashes through my body.@
-` …… But after that, the ache of the wound begins to fade.@
-` Akiha must be skilled at medical care, or perhaps the wound wasn't so bad to begin with.@
-` After a few minutes, the pain completely goes away.\
-
-ld c,":a;image\tachi\aki_t04b.jpg",%type_crossfade_fst
-
-`"Alright, we're done.@ I expect a wound like that should be healed by the morning."@
-` Akiha packs away the first aid kit.@
-` …… Somehow, I'm surprised.@
-` I would have expected Akiha to ask where I got injured, and to rebuke me for playing outside so late.\
-
-`"…… You haven't asked, Akiha."@
-
-ld c,":a;image\tachi\aki_t01b.jpg",%type_crossfade_fst
-
-`"I haven't asked… about what?"@
-`"Well… you know.@ Why I'm back so late.@ Why I'm hurt."@
-` I blurt it out like a complaint.@
-` After what happened with Yumizuka, I'm exhausted.@
-` And because I'm tired, I said such a thing.\
-
-ld c,":a;image\tachi\aki_t12b.jpg",%type_crossfade_fst
-
-`"Nii-san.@ I… think I know the right order for things.@ Right now, the priority is to tend to your injury."@
-`"…… I see.@ Of course, I see…"@
-
-ld c,":a;image\tachi\aki_t06b.jpg",%type_crossfade_fst
-
-`"Ohh!@ What kind of person did you think I was, Nii-san!@ I'm not about to yell at someone who's hurt."@
-`"…… You're right.@ I'm sorry; thank you for everything.@ But, even though you treated it--"\
-
-ld c,":a;image\tachi\aki_t18b.jpg",%type_crossfade_fst
-
-`"You're going to say you can't explain the situation, right?@ I don't want to listen to your excuses, but today is special.@ If you do not wish to talk about it, I won't inquire either."@
-`"Eh?@ Is that, okay?@ I came back so late at night…"@
-
-ld c,":a;image\tachi\aki_t16b.jpg",%type_crossfade_fst
-
-`"…… Certainly, I am curious about what might have happened to you.@ But, I trust you and I have enough trust to believe you weren't doing something too dangerous.@ And… I can't force someone to talk when they look like that."@
-` Akiha looks away shyly.\
-
-`"……"@
-` Look like that---is my expression that bad right now?@
-
-ld c,":a;image\tachi\aki_t03b.jpg",%type_crossfade_fst
-
-`"I'll listen when you have recovered, Nii-san.@ If you rest overnight, your health should improve."@
-
-cl a,%type_crossfade_fst
-
-`"------"@
-` Feeling awkward, I look away from Akiha.@
-` …… I'm glad she won't listen to me until I'm better, but I feel like I won't be able to talk about it even in the morning.@
-br
-` In the end, I can't tell Akiha anything.@
-` I feel too guilty to even look at her face.\
-
-`"…… Akiha, I---"@
-
-ld c,":a;image\tachi\aki_t06b.jpg",%type_crossfade_fst
-
-`"Ohh, please don't keep making that face!@ I told you, I'll make an exception today, so go back to your room and rest, alright?@ I bet it's something you can't talk to me about anyway!"@
-
-cl a,%type_lcartain_mid
-
-` Having read my expression perfectly, Akiha turns and goes out to the lobby.\
-
-` I can only sit on the sofa and watch her leave.@
-br
-` Suddenly, I wonder.@
-` Was Akiha waiting for my return?@ Is that how she appeared in the lobby so quickly?\
-
-`"---Akiha."@
-
-ld c,":a;image\tachi\aki_t01b.jpg",%type_lcartain_mid
-`"What is it, Nii-san?"@
-`"…… Thank you for treating me.@ I'm sorry for making you worry."@
-
-ld c,":a;image\tachi\aki_t19b.jpg",%type_crossfade_fst
-
-`"Eh----"@
-` Suddenly, Akiha stops walking.@
-br
-` ---And then she turns away.@
-br
-
-ld c,":a;image\tachi\aki_t05b.jpg",%type_crossfade_fst
-
-`"I… I wasn't worried about you, Nii-san.@ If you've that much energy for flattery, you should concentrate on taking care of yourself!"@
-
-cl a,%type_lshutter_fst
-
-` With a crash, she slams the door behind her.\
-`"---I really don't understand her."@
-` But, I do understand that she was worried about me.@
-
-`"…… Seems like I wasn't doing something too dangerous, huh?"@
-` Akiha seems to believe me since she said that.@
-` But really, it was a frighteningly dangerous scene.\
-` The bodies scattered in the back alley.@
-` The figure of Yumizuka, her hands stained red with blood.@
-br
-`"---Guh."@
-br
-` A chill runs through me just at the memory.@
-` I stand up, taking care of my wound, and return to my room.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
 playstop
 
-bg "image\bg\bg_40d.jpg",%type_lcartain_mid
+!w2000
+bg "image\bg\bg_48d.jpg",%type_crossfade_mid
 
 
-` I change clothes, and fall onto the bed.@
-` But if I close my eyes, I'll see the scene in the back alley.\
+` ---Before I realize it, I'm back at the mansion.@
 br
-br
-br
-br
-br
-br
-` ---I killed all those people.\
-
-` Yumizuka said so, as if it was nothing.\
-br
-br
-br
-br
-br
-br
-` ---I needed their blood.\
-
-` So, she killed them.@
-` Just like a vampire.@ Like… a bad joke.\
-br
-br
-br
-br
-br
-br
-` ---Wait, okay?@ I'll go become a great vampire---\
-
-` …… I don't remember.@
-` What did Yumizuka say at the end.@
-br
-`"Huh…"@
-` Sleepiness fills my body.@
-` With Yumizuka's face still etched in my mind, I close my eyes slowly.\
+` Just like a pet somehow finding its way home, I guess.@
+` I'm on the verge of collapsing from dizziness; I didn't think I would make it back this far.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
+bg "image\bg\bg_33d.jpg",%type_crossfade_mid
 
-` …… Only one thing is clear.@
-` That Yumizuka told the truth, and she really did slaughter all those people.@
-br
-` But even then.@
-` Instead of fearing everything that happened, I'm more concerned about the one thing she said.\
+waveloop se10
 
+`"……… Ggh."@
+` Vomit.@ I'm going to vomit.@
+`"Ah---gha, ah---"@
+` My heart is exploding, I can hardly breathe.@
+`"…… I have to…… hurry and rest……"@
+` Since I've collapsed so many times before from my anemia, I know I'm about to faint.\
+
+` ---If I rest.@
+` If I just rest my body in bed, this nausea, my exploding heart, will all go back to normal.@
 br
-br
-br
-br
-br
-br
-br
-` ---It hurts.@ It really hurts, Tohno-kun---\
+` I---I can forget all about that, as if nothing happened, and wake up to a normal day.\
+
+ld c,":a;image\tachi\koha_t03b.jpg",%type_lshutter_mid
+
+`"Shiki-san?@ You have returned?"@
+`"Ah…… Kohaku--san."@
+` Kohaku-san emerges from the west hallway.@
+` …… That's right, Kohaku-san's room is in the west hallway on the first floor.\
+
+ld c,":a;image\tachi\koha_t02b.jpg",%type_crossfade_fst
 
 
-` …… There's something wrong with me.@
-` Yumizuka is really a murderer, but those words will not leave my mind---\
+`"Welcome back, Shiki-san.@ Did you get to meet your friend?"@
+`"Uh---ah, yes, I met her."@
+` I remember as soon as I answer.@
+` The scattered limbs.@
+` Face.@ Face.@ Face.@ Face.@
+` The blood-stained alley.@
+` Yumizuka's laughing face and her bloody hands----\
 
+`"…… Sorry.@ I'm going back to my room, so please go back as well, Kohaku-san."@
+` I don't feel like talking with anyone right now.@
+` I leave Kohaku-san behind and go up the stairs.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_40d.jpg",%type_crossfade_mid
+
+
+` I collapse on my bed.@
+`"Ah----ah."@
+` My chest rises and falls as I take deep breaths.@
+`"-------"@
+` My mind feels faint.@
+` Dizziness overwhelms me.@
+` Even if it means passing out, I just want to go to sleep right now.\
+!w5000
+
+` ---So why can't I sleep?@
+br
+` I'm so dizzy right now, but why don't I pass out like always?@
+` If I close my eyes, the vision of that scene in the alley shows up under my eyelids.@
+` My heart throbs violently.@
+` It isn't terror, rather---it's closer to sexual excitement.@
+br
+`"Why----"@
+` I don't understand it at all.@
+wavestop
+
+` Is there this thin of a line between terror and lust?\
+
+wave se3
+
+
+`"Eh…………?"@
+` Who can it be at this hour?@
+`"Shiki-sama, are you awake……?"@
+` That whisper is Hisui.@
+` Thump.@
+` Just imagining her form, my heart calms down a bit.\
+
+`"…… Yeah, I'm awake.@ Please come in."@
+`"---Please excuse me."@
+
+
+ld c,":a;image\tachi\his_t23.jpg",%type_lshutter_mid
+play "track01.ogg"
+
+` …… What's this?@
+` Hisui enters carrying a tray and something that looks like medicine wrapped in paper.\
+
+`"…… Hisui.@ What are you doing at this hour?"@
+`"Shiki-sama, you seemed to have trouble sleeping so I brought you some medicine."@
+`"Eh………?@ Uh, that's right.@ …… But how did you know, Hisui?"@
+`"I heard it from my sister.@ She told me that you were very tired, so I should give extra care."@
+` …… I see, it was Kohaku-san.@
+` She must have seen how bad my face looked when we met in the lobby.\
+
+`"…… And, this medicine is?"@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"It is a sleep-inducing medicine.@ Your personal physician gave his approval that it could be used for you."@
+`"Approval…… at this hour!?"@
+`"No, my sister asked your personal physician as soon as she found out you were coming here to live in this mansion."@
+`"Wow--Kohaku-san is pretty amazing.@ She's pretty thoughtful."@
+` Anyway, I'm very thankful right now.@
+` Taking the water from Hisui, I drink the medicine.\
+
+ld c,":a;image\tachi\his_t19.jpg",%type_crossfade_mid
+
+`"Nn----ah."@
+` I start to feel very sleepy after a while.@
+`"…… Thanks, Hisui.@ Please give Kohaku-san my thanks as well."@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_mid
+
+`"As you wish.@ Well then, please rest well, Shiki-sama."@
+
+cl c,%type_lshutter_mid
+
+` …… I can hear Hisui's footsteps.@
+` It feels like all the power is draining from my body.@
+`"Mm---feels, good---"@
+` I space out.@
+` As if I was passing out, I quickly fall asleep---\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+playstop
 
 !w3000
+
+
+
+
+waveloop se1
+
+monocro #ff0000
+bg "image\bg\bg_31b.jpg",%type_crossfade_mid
+
+
+br
+br
+br
+br
+br
+br
+br
+` ---Is this a dream?\
+
+` A red alley.@
+` The same back alley that I was in before.@
+br
+` Where Yumizuka Satsuki is killing.@
+` Luring appropriate passers-by into that back alley.@
+br
+` Mercilessly killing them from behind by twisting their necks like a damp cloth, then plunging her teeth into them.@
+br
+` One person.@
+` Two people.@
+` Three people.@
+` Four people.\
+
+br
+br
+br
+br
+br
+br
+br
+#0000ff
+`  How dare she--do those things without me!\
+#ffffff
+` As if in a dream, indulging herself in drinking the blood, Yumizuka tears apart the four dead bodies and continues licking the blood.@
+br
+` A crimson world.@
+` But, I don't feel it is sick, or detest it at all.\
+
+br
+br
+br
+br
+br
+br
+br
+#0000ff
+
+`   Pathetic.@ Pathetic, pathetic.@
+#ffffff
+
+` A knife in my hand.@
+` *pant* *pant* My breathing is out of control.@
+` My heart is pounding like a piston, urging me to do something.\
+
+br
+br
+br
+br
+br
+br
+br
+#0000ff
+
+`    If it were me, I'd do a much better job.\
+#ffffff
+
+` *pant*, *pant*, *pant*.@
+` I breathe hard.@
+` Is it because I'm holding back my impulse of wanting to do the same things Yumizuka Satsuki is doing?@
+br
+` I'm going out of control.@
+` Because I don't---want to see such a thing.\
+
+br
+br
+br
+br
+br
+br
+br
+#0000ff
+
+`       Why are you hesitating?\
+#ffffff
+
+` There's no--hesitation.\
+
+br
+br
+br
+br
+br
+br
+br
+#0000ff
+
+`       Why are you holding back?\
+#ffffff
+
+` There's no--holding back.\
+
+br
+br
+br
+br
+br
+br
+br
+#0000ff
+
+`      There's no point resisting it.\
+#ffffff
+
+` Someone's… irritating voice.\
+
+br
+br
+br
+br
+br
+br
+br
+#0000ff
+
+`  I   I want to do   what I want to do.\
+#ffffff
+
+` That voice.@ It is, my own.@
+br
+` …… Yumizuka is crying.@
+` Is she crying because she's not good at killing?@ Or is it because she's in pain?@ I don't know.\
+
+br
+br
+br
+br
+br
+br
+br
+#0000ff
+
+`          Worthless.\
+#ffffff
+
+` Is it alright to think so?\
+
+br
+br
+br
+br
+br
+br
+br
+#0000ff
+
+`       That woman is worthless.\
+#ffffff
+
+` …… But, am I the one who is worthless?\
+
+br
+br
+br
+br
+br
+br
+br
+#0000ff
+
+`      WORTHLESS ones should just be killed.\
+#ffffff
+
+` …… Is it alright to kill the worthless?\
+
+br
+br
+br
+br
+br
+br
+br
+#0000ff
+
+`           Kill.\
+#ffffff
+
+` ………………\
+#0000ff
+
+br
+br
+br
+br
+br
+br
+br
+
+#0000ff
+
+`       Kill.\
+#ffffff
+
+` ……………\
+#0000ff
+
+br
+br
+br
+br
+br
+br
+br
+
+`   Kill.\
+#ffffff
+
+` ……\
+#0000ff
+
+br
+br
+br
+br
+br
+br
+br
+
+`  Kill.\
+
+` KillKillKillKillKillKillKillKillKillKillKillKillKillKillKillKillKillKKillKillKillKillKillKillKillKillKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILL.@
+bg "image\bg\ima_13b.jpg",%type_crossfade_fst
+
+` KILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILL.@
+#ffffff
+` KILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILLKILL.\
+
+monocro off
+bg "image\bg\ima_11b.jpg",%type_crossfade_mid
+wavestop
+
+!w3000
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
 
 
 

@@ -1,39 +1,174 @@
 
+
 bg "image\bg\bg_34a.jpg",%type_nowaitdisp
 
-` …… Yeah.@
-` I've decided not to have any regrets, and I don't want Kohaku-san to worry about me.@
-`"I'm in favor.@ I'm not about to turn down my own welcome party, am I?"\
 
-ld l,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
+` To be honest, Kohaku-san has the hardest job because she has to prepare the feast for the four of us.@
+` I don't think I can be that much help in cooking, but I'll go see Kohaku-san.@
+br
 
-`"It's decided!@ Well, then, I'll prepare the food.@ Hisui-chan---can you take care of my work for today?"@
-
-ld r,":a;image\tachi\his_t02.jpg",%type_crossfade_fst
-
-`"That will be fine.@ Sweeping the lobby and the east building?"@
-
-ld r,":a;image\tachi\aki_t04b.jpg",%type_crossfade_fst
-
-`"Well then, I shall… what should I do, Kohaku?"@
-
-ld l,":a;image\tachi\koha_t05b.jpg",%type_crossfade_fst
-
-`"Akiha-sama and Shiki-san should rest in their rooms.@ I'll prepare dinner early to make time for the party, so if you have anything you need to do, please try and be done by then, okay?"\
-
-cl a,%type_lshutter_mid
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_35.jpg",%type_lshutter_fst
 
 
-` Kohaku-san goes into the kitchen, Hisui out to the courtyard.@
+` The kitchen has already become a battlefield.@
+` On each counter there is a mountain of ingredients, and I get the urge to turn around and go back as soon as I enter.\
 
-ld c,":a;image\tachi\aki_t08b.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\koha_t02.jpg",%type_lshutter_fst
 
-`"Well then, I'll go to my room."@
+`"Shiki-san, is there anything I can do for you?"@
+` Kohaku-san peeks her head through.@
+`"…… No, I was thinking maybe I could help or something----"@
+` But, it seems like I've entered a world where I shouldn't be.@
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
 
-cl a,%type_lshutter_mid
+`"Ah, that really helps.@ To tell the truth, I was thinking of going to ask you for some help."@
+`"R, really……?@ But, I don't really have any cooking skills, so I'm unsure if I can even help, Kohaku-san."\
+
+ld c,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
+
+`"Not at all, it is something anyone can do.@ Come on, please lend me a hand."@
+cl c,%type_lshutter_mid
+` Kohaku-san takes my hand and pulls me with her.@
+`"…………"@
+` Not really understanding what's going on, I end up helping Kohaku-san.\
+
+bg "image\bg\ima_10.jpg",%type_rshutter_fst
+bg "image\bg\bg_35.jpg",%type_rshutter_fst
+
+
+` …… After calming down a bit, I realize that the kitchen is actually pretty small for a mansion so large.@
+` They probably had a much bigger galley when there were many people living in the mansion, but with just Akiha, Hisui, Kohaku-san and I, they had this smaller kitchen prepared.@
+br
+ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+`"Here, please wash your hands and use this apron."@
+` I don't know whose tastes this is a reflection of, but she hands me an apron that says "Quiet Unsociable Person" on it.\
+
+`"I'll start you off with a simple task, Shiki-san.@ When it's all done, I have another task just for you."@
+cl c,%type_lshutter_fst
+` Kohaku-san is in a good mood.@
+` ----First, I have to take the shells off all these shrimp.\
+
+` Whick, whick, whick.@
+` The sound of a knife lightly hitting the cutting board.@
+` Nnnnn~.@
+` Kohaku-san's humming fills the kitchen.\
+
+` ……@
+` …………@
+` ………………@
+` She must be immersed in cooking because she doesn't say much.@
+` As for me, I actually enjoy peeling the shrimp, and keep on peeling the skin.@
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\event\his_e01.jpg",%type_crossfade_fst
+
+`"------"@
+` …… You know, this really brings back memories.@
+` Before the incident and before I left the mansion, I played like this several times with Kohaku-san and Akiha.\
+
+` We were young then, and we didn't even think about how we were of the opposite gender.\
+` We were just in this spacious mansion, and all we knew was the continuous fun of every day.@
+` We played around so much, we forgot about all the things that bothered us before.@
+` …… Or maybe.@
+` Maybe, in order to forget the bothersome past, we tried to pass our days with as much fun as possible.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+bg "image\bg\bg_35.jpg",%type_crossfade_fst
+
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+
+`"Shiki-san, you really have taken a liking to peeling those shrimp, haven't you?"@
+`"Eh?@ No, not really, why do you ask?"@
+ld c,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
+
+`"Because you look like you're having so much fun.@ You know Hisui-chan, her eyebrows would always be so scrunched up by the time she gets done."@
+`"Really?@ I'm surprised.@ She looks like the type that would do it without complaint."@
+ld c,":a;image\tachi\koha_t18.jpg",%type_crossfade_fst
+
+`"Yeah, for some reason, Hisui-chan is poor at cooking.@ But she is really great at cleaning and arranging things."@
+`"Is that so?@ I always felt that both you and Hisui could do anything."\
+
+ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+`"If that was true I would be very happy.@ But both Hisui-chan and I are merely normal, so we have our faults too.@
+` Hisui-chan's sense of taste is a little strange, so even when she makes things that she thinks are delicious, for Akiha-sama or I, it tastes really strange."@
+` I see, so that's why Hisui doesn't cook.@
+` Hisui's sense of taste is a little odd; Kohaku-san…… what's her fault, I wonder?\
+
+`"…… Well, come to think of it, you and Hisui are different in your own ways.@
+` Kohaku-san, you were always cheerful, while Hisui stayed in the mansion back then."@
+`"Oh, did I look that cheerful?@ I thought I was always watching you all though."@
+`"Yeah, I remember.@ You would always run around with us, but you would tell us to stop doing dangerous things and look out for us."\
+
+play "track09.ogg"
+
+` …… Ah, I really do remember.@
+` Playing tag in the courtyard of the mansion.\
+` Trying as hard as we could to catch my old man's carp in the pond.\
+
+`"Hey, remember that time, the time where we left the mansion from the gate, right?@
+` We didn't know the way to get back, and you ended up calling the mansion and one of the mansion's servants had to come pick us up."@
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+
+`"Yes, and after that Makihisa-sama really did yell at you.@ Everyone was playing with you, but somehow you ended up being the only one.@ We did so many things, but in the end, you always saved Akiha-sama and me from getting in trouble."@
+br
+` She giggles as she speaks aloud nostalgically.\
+
+`"…… What's this?@ Talking about old times, I really feel like I have returned now."@
+` That's right.@
+` I really don't have too many memories of this mansion, but talking about old times honestly makes me feel nostalgic.@
+` But, my memories aren't just happy ones.\
+
+`"…… But, I did treat Hisui poorly."@
+` …… That girl who was always in the corner of my heart.@
+` In the end, I was never able to have a true conversation with that girl by the window.@
+`"…… That girl, she was always watching us from the window.@ Always, it struck me.@ That lonely face looking down, I always thought it would be great if she could come and play."@
+` But still, before I left the mansion, she gave me that one parting gift.\
+
+`"That's right.@ She was always shy even then, so I never knew what she was thinking.@ I always thought if Hisui-chan was happy, it wouldn't matter what happened to me."@
+`"Oh?@ Kohaku-san, you really are a good older sister."@
+` I'm feeling happy, so I give an answer like that.@
+br
+`"Ah."@
+br
+` All of a sudden,
+` with a short sound, Kohaku-san lifts her hand.@
+` I can see she cut her finger with the kitchen knife.\
+
 playstop
 
-br
-` So.@ What should I do?@
+`"Ko, Kohaku-san, your finger……!"@
+`"Eh?"@
+` After I say that, she seems to have realized she cut her finger.@
+ld c,":a;image\tachi\koha_t07.jpg",%type_crossfade_fst
+
+`"Ah, that's true."@
+`"'That's true'?@ Hey, Kohaku-san!?"@
+` I don't believe this.@
+` Even I could see that the cut is really deep, but Kohaku-san is still slow-paced.\
+
+`"How embarrassing.@ I am supposed to be such a good chef.@ Ahaha!"@
+` Kohaku-san gives her normal laugh.@
+`"This is no laughing matter.@ We have to take care of it right away……!"@
+`"It's fine.@ It isn't life threatening or anything."@
+`"But doesn't it hurt?@ It's cut pretty bad!"\
+
+`"No, not at all.@ If I think it doesn't hurt, then it won't hurt.@ If I think this isn't my finger, and that it's just a finger of some doll, then I won't feel pain, right?"@
+`"Wha----"@
+` With a smile, Kohaku-san says something pretty outlandish.@
+` Well I'm sure if you think that way, it won't hurt as much, but you can't get rid of it all.\
+
+`"Look, let's just get it taken care of!@ I'm a little weak when it comes to blood, so if I have an anemic fit right here, it'll be your fault, Kohaku-san……!"@
+`"I see, then I should take care of it right away.@ Well then, Shiki-san, excuse me for a moment."@
+cl c,%type_lshutter_mid
+` The whole time her smile never cracks, and giving me a bow with her head, she leaves the kitchen.\
+
+bg "image\bg\ima_10.jpg",%type_tcartain_mid
+!w2000
+
+
 
 return

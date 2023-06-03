@@ -1,30 +1,32 @@
 
 
+wave se2
 
 bg "image\bg\bg_06b.jpg",%type_nowaitdisp
-play "track09.ogg"
+play "track03.ogg"
 
 
+ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
 
 !w1000
 cl c,%type_lcartain_mid
 
 
-ld c,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+` Thanks for waiting!@
+` Time for Ciel-sensei's What & Why corner.@
+` Due to popular demand, here is a supplementary lesson (number one)!\
+
+` Oh my, Tohno-kun has gotten really serious.@
+` That's a no-no.@ Even though Akiha-san has turned on her invincible mode, you shouldn't try to kill her.@
+` When it comes to killing, you are by far the expert.@
+` You have some leeway, so you should just observe Akiha-san for now.\
+
+` Well, we'll end this lesson now.@
+` The conclusion of Tsukihime is near.@ Do your best so you don't have to receive any more supplementary lessons.\
 
 
-
-` You have reached Akiha's Normal Ending.@ Well done.@
-br
-` Each heroine (with one exception) has two different kinds of endings.@
-` Usually, they are called "True Ending" and "Good Ending", but Akiha-san's are called "Normal Ending" and "True Ending".@
-br
-` Akiha-san's route is different from everyone else's in that how much Akiha-san likes you does not determine which ending you receive.\
-
-
-` Well then, thank you very much for playing up to this point.@
-br
-` Let's meet again somewhere in Tsukihime.\
 
 
 

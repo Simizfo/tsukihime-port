@@ -1,101 +1,139 @@
 
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
 
-bg "image\bg\bg_03a.jpg",%type_nowaitdisp
+` --Even still, I need to get at least some nutrition.@
+br
+` I'm already prone to passing out as it is; and if I don't push myself to eat, I'll probably just pass out.\
 
-wave se2
-
-` The ten minute bell rings.@
-`"--Uh-oh, we'll be late.@ Well, bye Senpai, see you later!"@
-
-
-ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
-
-
-`"Yes, I'll come see you during lunchtime."\
-
+`"Sorry, go ahead and eat.@ I gotta go buy food."@
+`"Oh yeah?@ Guess I'll start eating without you."@
+cl c,%type_crossfade_fst
+` I leave Arihiko happily unsealing his sandwich behind me as I exit the classroom.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
+!w1000
 
 bg "image\bg\bg_06a.jpg",%type_lcartain_mid
 
-play "track03.ogg"
+` I buy some bread and some milk, and then go back.@
+` Arihiko and Ciel-senpai are already over at my desk by the window.@
 
-` I fly into my classroom.@
-` It's still five minutes before class, so it's very noisy inside.@
+ld l,":a;image\tachi\cel_t03.jpg",%type_lshutter_mid
+`"Oh, Tohno-kun.@ I'm joining you guys."@
+ld r,":a;image\tachi\ari_t02.jpg",%type_lshutter_mid
+`"Ah, no, no.@ You don't have to mind much.@ We're pretty happy when you can join us.@ Isn't that right, Tohno?"@
+` Is Arihiko that pleased just to be with Senpai?@ He happily asks me for agreement.@
+` Well, for once we do seem to be in agreement.\
+
+
+`"That's right.@ You really helped me out by coming, Senpai.@ I don't know what I would've done if I had to eat while staring at this guy's face."@
+` I answer lightheartedly and take my seat.@
+cl a,%type_crossfade_mid
+` Senpai's eating from a large lunchbox and Arihiko is long since finished with his sandwich.\
+
+
+`"……… Alright."@
+` I take a bite from my bread.@
+` I still have no appetite, so I forcefully wash it down with some milk.@
 br
-`"--Whew."@
-` I take a breath and head to my seat.@
-` With this much time left, I didn't even need to run at all.@
-`"Yo, Duke of Delinquency."@
-`"………"@
-` From behind, I hear the voice I never look forward to.\
+` Arihiko holds a lively conversation with Senpai since they are both done with lunch.@
+` They talk about the strange events like serial murders and whatnot, which really does not help my appetite.\
+
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+`"Really?@ They haven't found all those missing people yet?"@
+ld l,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+`"It seems that way.@ There was even another new report this morning.@ Inui-kun, didn't you see the news this morning?"@
+`"Nah, I don't have time to do anything in the morning so I didn't watch it."@
+`"That's no good you know, staying up late at night.@ You shouldn't walk around at night, there's some scary people out there."\
+
+ld r,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
+`"That's no problem.@ I'm a scary person myself."@
+ld l,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+`"Well, you might be right.@ Inui-kun, you do seem like a shady character."@
+` "Ahahaha." The two of them laugh.@
+br
+` …… Hm, Ciel-senpai might be serious, but Arihiko probably said that as a joke.@
+` "Hahaha." Arihiko's eyes twitch as he smiles.\
 
 
-ld c,":a;image\tachi\ari_t01.jpg",%type_lshutter_fst
+` Anyway, I can't exactly ignore their conversation.\
 
+`"---Senpai.@ You mentioned a new report--what is it……?"@
+ld l,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
 
-`"What's going on, Tohno?@ I never heard you were skipping class.@ It's a lot of trouble.@ You have to tell me when you skip school and go play!"@
-` Arihiko says those preposterous words with an unbelievably happy expression.\
-`"…… Why should I have to tell you when I don't go to school?"@
-`"Isn't it obvious?@ When you don't show, neither does Senpai, so it's bad unless I think of something ahead of time."@
-` …… What's bad for this guy?\
+`"In the news this morning, a young woman who went shopping last night--about our age--and she went missing.@ Her house is close to the park, I heard."@
+`"…… Oh, close to the park."@
+br
+` As soon as I say that, the contents of my stomach threaten to rise up.\
 
-`"But seriously--What happened?@ Since middle school, you've had anemia, but never skipped school.@ Well, you did a cool trick several times, leaving as soon as you arrived."@
-`"It's kind of like that.@ I made it to the intersection and felt bad, so I went back home."@
+` --Last night.@
+br
+` That unknown girl who just by chance was by the park, was destroyed by that irrational violence.@
+` Missing might be a better description, since she was devoured without even so much as a hair left behind.\
 
+ld r,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+`"That makes her the ninth victim, no, the tenth?@ Damn, what an amazing pace, all in a single month."@
+ld l,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
 
-ld c,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
+`"Yes, but I hear last night's disappearance was a little different from the other ones.@
+` The families of all the other girls who disappeared noticed it a short time later."\
 
+ld l,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
 
-`"Hmmm… Both you and Yumizuka seem to be acting like bad students lately."@
-`"--Well, I'm guilty as charged, but …… is something wrong with Yumizuka-san?"\
+`"By the way, you didn't watch the morning news either Tohno-kun?@ Don't tell me you're not a morning person either?"@
+`"…… Hmm.@ I wouldn't say I'm a morning person, but I'm not terrible in the morning either.@ But, leaving that matter aside, I still won't be able to watch it for a while.@ At my house, there's no TV."@
 
+cl a,%type_nowaitdisp
 
-ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+` Senpai and Arihiko stare blankly.\
 
+ld l,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
 
-`"Her?@ She's been absent lately.@ She was always such an honor student, so I think she might have been stressed out.@ But I bet she can't call a raise 'cause she has a bad hand."@
+`"No TV--Your house is… that big mansion, right?"@
+ld r,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+`"Heh, there's no way you don't have a TV in that mansion.@ I won't let you say you don't have one in your room, being a student and all."\
+
+`"No, there really isn't one.@ My old man always said there was no need for such brainwashing machines.@
+` There's a small one in Kohaku-san's room, but I'm not about to barge into a girl's room in the morning."@
+` If I want to get the news, I just have to rely on a newspaper.\
+
+ld l,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+
+`"Tohno-kun, what do you mean by a girl?"@
+
+ld r,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
+
+`"You can't just say that and get away with it, Tohno."@
+` They're both glaring at me.@
+` I slap my hand over my mouth, but it's far too late.\
+
+`"Uh, um--simply put, just that there's a servant at my house named Kohaku-san."@
+ld l,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+`"Huh, a servant?@ You're really lucky to have a girl around you at all times to take care of your every need."@
+`"That's not it!@ There isn't anyone to take care of the mansion, so we have to hire people to do it.@
+` Whether she's male or female is entirely irrelevant."\
+
+`"Oh reeeeallly?@ Hey Inui-kun, doesn't Tohno-kun sound real intimate with this Kohaku-san?@
+`"Yeah yeah, he looked so happy when he said her name.@ I wanted to ask before, but just what kind of a life does Tohno lead right now?"@
+cl a,%type_crossfade_fst
+` They trade glances.\
+
+`"……… Ugh."@
+` I choke on the bread I'm eating.@
+` Arihiko, even Ciel-senpai with her cool glance, interrogates me with bizarre intensity.@
+
+ld l,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"Tohno-kun, there is still plenty of time left.@ Please tell us all about your life at the mansion."@
+` She approaches with a smile that won't seem to let me get away.@
 `"……………"@
-` Arihiko's words are always… very unique.\
-
-wave se2
-
-
-` --While we are talking, the homeroom chime rings.@
 br
-`"Well, I'm off.@ Since you skipped Saturday, make sure you study hard today."@
+` Just thinking about the twenty minutes or so I have left to live through this makes my head spin.\
 
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w1000
 
-cl c,%type_lshutter_fst
-
-
-` Arihiko goes back to his seat.\
-
-
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-
-
-bg "image\bg\bg_06a.jpg",%type_lshutter_mid
-
-wave se2
-
-
-` Fourth period ends and the class erupts into pandemonium all over again.@
-` The guys dash off to the cafeteria, the girls eat their lunches at their desks, and Inui Arihiko's carrying a sandwich and coming over to me.@
-br
-
-
-ld c,":a;image\tachi\ari_t02.jpg",%type_lshutter_fst
-
-
-`"Yo Tohno!@ Lunch, lunch."@
-`"---"\
-
-` …… What should I do?@
-` Since morning, I haven't really had an appetite.@ I don't feel hungry, so maybe I don't have to force myself to eat.@
-` …… If I eat, I might throw it up again and cause trouble.@ I should---.@
-br
 
 
 return

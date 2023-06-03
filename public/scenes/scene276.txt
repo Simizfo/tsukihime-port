@@ -1,13 +1,31 @@
 
 bg "image\bg\bg_01a.jpg",%type_nowaitdisp
 
-
-`"……"@
-` No, I get the feeling that I won't be able to see Senpai by waiting here.@
+`"………"@
+` No, I have a feeling that I won't see Senpai if I wait here.@
 ` If Senpai doesn't feel like seeing me, she'll leave as soon as she sees me.@
-` I should go to the classroom first and think about what to do.\
+` …… If that's the case, she won't come to school through the front gate.@
+br
+`"…… If she even comes, it'll be through the back gate."@
+` I rush to the back of the school with this thought in mind.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_05a.jpg",%type_lcartain_mid
+
+` ----*sigh*@
+` No one is here.@
+` Not even students coming to school through the back gate.@
+` …… But, I still wait for Senpai who for sure isn't coming.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_05a.jpg",%type_lshutter_mid
+
+` The chime sounds once, telling me that the gate is closing.@
+` …… Senpai didn't come.@
+` I should go back before homeroom starts.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
 
 
 return

@@ -1,97 +1,105 @@
 
 
-bg "image\bg\bg_25b.jpg",%type_nowaitdisp
 
-` ----The night has just begun.@
-` No, to be more exact, if Arcueid would be walking around, it would most likely be during the night rather than during the day.@
-br
-`"…… I guess it would be more efficient to search around town."@
-` …… I don't want to think about it, but most of the victims are usually found in alleys.@
-` If I want to find Arcueid----if I want to find the vampire killer who's continuing to murder, then I have to stick to searching the streets.\
-
-`"----Damn it.@ What am I doing!?"@
-` Not understanding my own feelings, I curse and start to run around aimlessly.\
+bg "image\bg\bg_29b.jpg",%type_lcartain_mid
 
 
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-bg "image\bg\bg_26a.jpg",%type_lcartain_mid
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
 
-` ------*sigh*@
-` I sit down on the guard rail.@
-` It's been several hours already.@
-` I looked around aimlessly, and I didn't even catch a single glimpse of Arcueid.\
+play "track01.ogg"
 
-`"………… Damn it."@
-` It's so, frustrating.@
-` Of course, I knew it isn't easy to just randomly find someone in town, but I still felt optimistic I would find her.@
-br
-`"Where did she go……?"@
-` …… Why?@
-` I just wanted to ask her about the serial killings, but once I find out I can't see her, I----\
-
-`"Ah, stop.@ Stop.@ I should just stop."@
-` I stand up from the guardrail and start walking.@
-` It'll be midnight soon.@ Searching for Arcueid any longer really is just useless.@
-`"…………"@
-` But, if I've gone this far, I can do just a little more.@
-` There's one last place I need to check.@ If she's not there, then I'll go back to the mansion.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_27b.jpg",%type_lcartain_mid
-
-` …… The deserted park.@
-` I arrive at the place where I cooperated with Arcueid and defeated Nrvnqsr.@
-` Having only looked in town, I've yet to search here.@
-`"…… Well, not that I'll find anything……"@
-` Grumbling to myself, I enter the park.\
-
-bg "image\bg\bg_28b.jpg",%type_lcartain_mid
-
-` Midnight.@
-` As expected, there's no one here this late at night.@ With this much silence, it rather feels refreshing.\
-
-`"…… That's right.@ It's not like I can conveniently find her."@
-` I breathe out a sigh and slump my shoulders.@
-`"…… How stupid.@ Why am I so disappointed?"@
-` I don't understand it myself.@
-` Just, once more----I think maybe I wanted to see her smile.\
-
-ld c,":a;image\tachi\ark_t08.jpg",%type_lshutter_fst
-`"Ah, there you are.@ Good evening, Shiki."@
-br
-` …… Yeah, just like this.@ Her face that's so cheerful and carefree you can't believe it belongs to a vampire----
-br
-`"A,      Arcueid----!?"@
-` Without even thinking, I grab both of her shoulders.@
-ld c,":a;image\tachi\ark_t12.jpg",%type_crossfade_fst
-`"Eh----?"@
-` Arcueid flinches in surprise.\
-` Arcueid's shoulders are indeed real, and I quickly pull my arms back.@
-cl c,%type_crossfade_fst
-\
-
-`"Y, you, why----"@
-` Even though the one I've been searching for so long is right before me, I can't do anything but stumble over my words.@
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-`"Why?@ That's odd.@ I was looking for you, so I don't think it's coincidence we met here."@
-`"Eh----You, were looking for me?@ Why?"@
+`"What did you want to talk about, Shiki?"@
+`"About vampires.@ You said it before.@ That the recent serial killings were the work of a vampire."@
+` Arcueid nods.@
+`"Then do you know the morning news said another victim was found?@ She was killed last night and drained of blood."@
 ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-`"Why?@ ----Oh, no reason."@
-` She says straight out that she has no reason to be looking for me.\
 
-`"………………"@
-` …… I forgot.@ She really is kind of like a cat this way.@
-`"…… Well, I guess it works out.@ To be honest, I wanted to see you too.@ So meeting here, um----"@
-` I was about to say it makes me really happy, but I frantically choke those words off.\
+`"-----"@
+` …… Arcueid's eyes narrow.@
+` Something…
+` Something like a freezing tension races down my spine.\
 
-`"----Anyway, I want to have a serious talk.@ I want to talk about it somewhere else since I feel uneasy here, so is that okay?"@
-`"Sure----but talk about what?"@
-`"You'll see.@ …… Let's go more to the back of the park."@
-` Telling her to come on, I start walking.@
-cl c,%type_lshutter_mid
-` Tilting her head in curiosity, she follows me obediently.\
+ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
+`"Oh?@ And?"@
+`"And?---you……"@
+` I swallow hard.@
+` She stares right at me.@
+` Almost---a stare which says she will attack me immediately if I move even the slightest bit.\
 
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
+`"Is---isn't it strange, Arcueid?@
+` Nrvnqsr is dead.@ So why are these incidents still happening?@ Don't tell me, that, you---"\
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"That's not it at all.@ That's not me, but another vampire."@
+` Arcueid responds immediately, loosening the tension.@
+` But I'm not satisfied.\
+
+`"What do you mean?@ The work of another vampire?@ So they just keep coming?"@
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+
+`"Of course not.@ The serial killings were always the work of just one vampire from the very beginning.@ So no new vampires will come, and Nrvnqsr was unrelated to those incidents."@
+br
+` ----Eh?@
+` Nrvnqsr was, unrelated……?@
+br
+`"Wha---what do you mean?"@
+`"It's just like I said.@ …… You're normally pretty sharp, but you're lost at some points.@ Think back, Shiki.@ Nrvnqsr was a vampire, but did he ever suck human blood?"\
+cl c,%type_crossfade_fst
+
+
+`"Suck blood?@ He ate humans and---oh."\
+br
+` I see.@
+` Why didn't I notice such a simple mistake?@
+` The victims of the serial killings are found with their bodies drained of blood.\
+
+` But Nrvnqsr was different.@
+` He didn't leave any dead bodies behind.@ He not only drank the blood, but also ate the meat, leaving no trace.@
+` To prove it, the people eaten by him in the hotel were treated as missing people, not killed people.@
+br
+` So---that means, it is something completely different.\
+
+`"Wait.@ Then what is the serial killing going on right now?@ Just who is doing it?"@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"That's a different vampire than Nrvnqsr.@ To be more specific, that vampire is why I came here, and Nrvnqsr came here following me.@ It's that sort of correlation."@
+`"---Wha… So the one you're after wasn't Nrvnqsr after all……!?"\
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"Yes, I didn't ever say he was my initial target.@
+` I was his target, but he was never my target; my target is the one called the 'serial killer' in this city."@
+ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
+
+`"…… Shiki.@ I don't quite believe it, but don't tell me you made such a simple mistake?"\
+cl c,%type_crossfade_fst
+
+
+`"Wha-----"@
+` I gasp in shock.@
+` But---it really is just as she says.@
+` She said her purpose is to kill vampires, so I just thought it was Nrvnqsr she was after----\
+br
+`"…… So what is it?@ Killing Nrvnqsr that night, was pointless………!?"\
+
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+
+`"It wasn't pointless, you fought in my place.@ Well, if you didn't kill me, you probably wouldn't have had to in the first place."@
+br
+`"------"@
+` I feel a little dizzy.\
+
+`"…… In other words, those vampire killings had nothing at all to do with Nrvnqsr and it was the work of another vampire……?"@
+
+`"Yeah, that's right.@ But, that's my problem so you don't have to worry about it.@ But more than that, hey."\
+playstop
+
+cl c,%type_crossfade_fst
+
+` With an extremely happy smile, Arcueid looks up at me as I still stand there in surprise.@
+br
+`"How was last night?@ Who came?"\
+
 
 
 

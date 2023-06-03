@@ -1,31 +1,67 @@
 
+play "track03.ogg"
 
+bg "image\bg\bg_19b.jpg",%type_lcartain_mid
 
-bg "image\bg\bg_25a.jpg",%type_lcartain_mid
-
+ld c,":a;image\tachi\ark_t01a.jpg",%type_lshutter_mid
+`"This is a pretty nice room.@ I'd have no problems spending the night here."@
+` Arcueid looks around the hotel room.@
+`"-----"@
+` I've got nothing to say for now.\
+`"My room has probably already been discovered, so let's hide out here for the night.@ Oh, you don't have to worry about money.@ I'm rich, so I'll treat you."@
+` Speaking cheerfully, Arcueid closes the curtains.@
+` She also turns off the lights and the room becomes as dark as night.\
+` I sigh.@
+`"…… What are you thinking, Arcueid?"@
 ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
 
-
-`"…… Hmmm?"@
-` As we walk out of the back alley, she--Arcueid--knits her eyebrows and gives me a suspicious look.@
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-
-`"Hey, Shiki.@ Are you a Christian, by any chance?"@
+`"I'm thinking about all sorts of stuff."@
+`"No, that's not what I mean---"@
 br
-` …… I have no idea what she's talking about.@
-`"Chris-chan…?@ What's with that question, all of a sudden?@ I don't know any girl who's got a name like that."\
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-`"I see.@ Then I must have misunderstood."@
-` After seeming to have made a decision, she turns towards the office district.@
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-`"Okay, let's go.@ We've got to find a safe place for now."@
-` Arcueid begins walking.@
-` "----Okay."@
+` I'm asking why you've rented a high-class hotel, not a cheap one--and why you rented out the whole top floor.\
+`"………"@
+` I try to say this, but I stop.@
+` Right now, my job is to guard this so-called vampire and nothing more.@ I'm not going to ask any useless questions.@
+`"---No, forget it.@ Do whatever you like."@
+ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
+
+`"You're weird, Shiki, suddenly getting mad and going silent like that.@ I just don't get you."@
+` Arcueid lies on the bed, smiling like she's having fun.@
+\
+`"I'm going to sleep until the sun sets.@ You'd better rest while you have the chance.@
+` Vampires don't move about in the daytime, so you'll be on guard for real during the night."@
+`"…… Do you realize you've just said something that completely contradicts your existence?"@
+`"Oh, it's alright for me---oh, I guess it's almost my limit.@ Good night, Shiki.@ Wake me up when the sun sets."@
+cl c,%type_lshutter_mid
+
+`"H--hey!"@
+`"-------"@
+` Like a machine whose power is cut off, Arcueid suddenly falls asleep.\
+`"Ha-----"@
+` She's so… defenseless.@
+`"…… Right now, I could run away if I wanted to."@
+` She did force me to come with her, after all.@ I could easily run away now.@
+` …… And I don't have that impulse anymore, but…
 br
-` There's no way I can back out now.@
-` Sighing, I follow after her.\
+`"I even killed you once, yet…"@
+br
+` How is she able to suddenly fall asleep despite that?@
+`"………"@
+` I look at Arcueid's face as she sleeps on the bed.@
+` …… Her plump chest rises and falls.@ It looks like she's breathing.@
+` But her body isn't moving at all.@
+` It's like the air around her has stopped.@ It's so tranquil even I might stop moving.@
+br
+` ----What a peaceful slumber.@
+br
+` A kind of defenselessness as if she had absolute trust in me, even though we've only just met.\
+`"---She's so stupid."@
+` …… She is so stupidly honest I might start to worry.@
+` But aside from that, this is a turning point.@
+` This may very well be the point of no return for Tohno Shiki.@
+` I----
+br
 
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
+playstop
 
 return

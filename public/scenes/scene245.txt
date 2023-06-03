@@ -1,49 +1,41 @@
 
-play "track03.ogg"
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
 
-bg "image\bg\bg_06a.jpg",%type_crossfade_mid
+` Senpai can't be mad at anything else other than the incident this morning.@
+` …… Senpai didn't seem angry this morning, but if she is angry, then I probably shouldn't go meet her.\
 
-wave se2
+`"…… Yeah, maybe I should just go to the cafeteria today."@
+`"Yeah, do that.@ C'mon, hurry up.@ There's only enough space for half the people using the cafeteria."@
+` Arihiko takes me by the arm and pulls me off.\
 
-` At lunch break, that guy who didn't even show up for a single class arrives.@
-ld c,":a;image\tachi\ari_t05.jpg",%type_lshutter_fst
-`"Yo Tohno!@ Food, let's get some food!"@
-` He's happy about something, being even more energetic than usual.\
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_50.jpg",%type_lcartain_mid
 
-`"Of course, food.@ But you seem to be in a great mood.@ Did something happen, Arihiko?"@
-`"Yup.@ I just asked Senpai if she wanted to eat lunch together, and she refused."@
-`"………………"@
-` That's odd.@
-` "Senpai" must be referring to Ciel-senpai, but this guy seems to get happy when his offer is refused.\
+` I sit next to Arihiko and eat my lunch.@
+` My school's cafeteria has a television, and for better or worse for our education, they play back the morning news they recorded this morning.@
+` At any rate, the news they are playing back is talking about a drunk customer stabbing to death a convenience store employee, something that makes me not want to go to a convenience store for at least a few days.\
 
-`"Hey, Arihiko, you have that sort of taste?"@
-ld c,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
-`"No, no, I'm not finished.@ So I asked Senpai why not, and she said 'If Tohno-kun is there, then I don't want to come'!!@ Uwahahahahahahahaha!@ Isn't that great, Tohno!?"@
-`"……………"@
-` That's odd.@
-` Why have I been friends with this guy since middle school?\
+ld c,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
+`"What a dangerous world we live in.@ Indiscriminate serial killers, drunken people stabbing people.@ A man can't even feel safe playing around at night anymore."@
+` Arihiko seems like he is seriously watching the news.\
 
-`"Oh man, she really hates you Tohno!@ A rival's loss is my gain, so I'll treat you to lunch today!"@
-` Arihiko happily slaps my back.@
-`"…… Well, I'm happy you're treating me, but Senpai was angry at me?"@
-ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
-
-`"N?@ …… well, after she asked 'will Tohno-kun be with us?' and I nodded, her face turned all red.@ As soon as she heard your name, her face probably burned with anger."@
-`"…… Probably?@ Isn't that a little different, Arihiko?"@
-`"Maybe.@ Maybe not."@
-cl c,%type_crossfade_mid
-\
-
-` …… Arihiko's story can't be trusted.@
-` Certainly Senpai did seem angry this morning, but I don't know why she would be.@
-`"…… No way, she couldn't have realized what kind of dream I had."@
-` If she could figure that out from that one conversation, she'd make a great detective.\
-
-ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
-`"Hey, stop whining and let's go, Tohno.@ There's only seats enough for half the people using the cafeteria."@
-`"Ah---no, I---"@
+`"…… Well, certainly it is dangerous.@ But at least those serial killings won't happen anymore, so things should be like usual."@
+`"Oh really?@ Did they catch the serial killer?"@
+`"No, they haven't caught him…"@
 br
-cl c,%type_crossfade_mid
+` ---But Nrvnqsr is no longer in this world.@
+br
+` So the stupid title of the modern day vampire killings shouldn't be showing up in the news anymore and there will be no more of those meaningless killings.\
+
+`"Anyway, those terrible incidents won't happen anymore; There won't be any more victims, and the streets will be back to normal."@
+`"Hmmmh, I didn't know.@ I guess I should watch the news more often."@
+` Making a strained face, Arihiko earnestly stares at the news.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+playstop
+
+!w1000
 
 
 return

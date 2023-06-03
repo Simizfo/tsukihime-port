@@ -15,24 +15,61 @@ ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
 
 
 
-` ………… *sigh*@
-` What on Earth were you doing, Tohno-kun?@
-` I never thought you would come to the rare third period lesson, the second "Shakes 'n Shivers Animal Land".@
+` Bonjour!@
+` And now the hint corner for the sake of the mischievous Tohno-kun who quickly ended up in a Dead End,
+` It is time for "Teach me, Ciel-sensei!"@
 br
-` ----Well, Tohno-kun.@
-` Unfortunately, I'll have to ask for a make-up.@
-` It seems you have just drifted through every day without paying any particular attention to Arcueid, Ciel-san, or Akiha-san.\
+` Well then, now for the third of the ever-popular series, "Shakes 'n Shivers Animal Land".\
 
-` To tell you the truth, this is the most important part of Ciel-san's route.@
-` But the fact that you still died means you have not received a charm from a certain person.@
-` The moral of this story is you should pay more attention towards your Senpai at school!@
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+`"Liar!@ I don't see any animals coming out!"@
 br
-` First, go to the tea ceremony room after class.@
-` Second, you should honestly recognize the mistakes you have made.@
+` Denied.@
+` No Longer Human (Pet's Name), Go!@
+
+ld c,":a;image\tachi\kemo_t04.jpg",%type_lshutter_fst
 br
-` If you keep the above in mind, you should have no problems with the exam.@
-` That's all for the third period lesson.@
-` Please try hard so you won't end up here again next time.\
+`"Killing junkie~"@
+cl l,%type_lshutter_fst
+
+br
+`"Kyaaaaaaaaaaaaa………… hunyaa!"@
+cl c,%type_lshutter_fst
+
+br
+` Well then, the third in our animal series.@
+` Why did Tohno-kun end up dying?@
+` This time, we have brought a special guest lecturer.@ I have called in this person who was wandering about after finishing his task earlier.@
+` Professor Nrvnqsr, please go ahead.\
+
+
+play "track04.ogg"
+
+ld l,":a;image\tachi\nero_t03.jpg",%type_lshutter_fst
+
+`"Nothing."@
+br
+` …… Um.@
+br
+`"Nothing.@ I will only speak when I am victorious."@
+br
+` …… Um, if we're here, it means you have won in a way, Professor Nrvnqsr.@
+ld l,":a;image\tachi\nero_t02c.jpg",%type_crossfade_fst
+br
+`"---I see.@ That is a sound argument.@
+` But there is nothing to be said.@ I do not know of anyone who would miss a once in a lifetime opportunity.@
+` Return to the choice before and correct yourself."\
+cl l,%type_lshutter_mid
+
+
+play "track03.ogg"
+
+` Um…… Yes, thank you very much.@
+` This concludes our fourth period lesson.@
+` Please continue enjoying the main storyline.\
+
+
 
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid

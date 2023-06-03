@@ -1,65 +1,204 @@
 
+` Even Akiha and the others wouldn't be able to sleep with a racket like this.@
+` Since I'm the only man in the house, I guess I've got no choice but to go investigate.\
+`"…… I think it's coming from the right side of the mansion."@
+` I open the curtains and check what's happening outside.@
+br
+` ---And,
+br
+` outside my room is a large tree.@
+` On one of the branches is perched a blue crow.\
+wavestop
 
 
-bg "image\bg\bg_40c.jpg",%type_crossfade_mid
-waveloop se10
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\cmo_16.jpg",%type_rshutter_fst
 
-` Left by myself, I lie on my bed.@
-` This house from eight years ago…
-` My blood relative from eight years ago…
-` It feels a little like they belong to someone else.@
-` *sigh*@
-`"…… I wonder what's going to happen to me now?"@
-` Grumbling to no one in particular, I fall asleep.\
+
+` In the dark night,
+` I can see nothing but black, and yet it's quite clear to me that the crow is blue.@
+`"…………"@
+` I've never seen or even heard of a blue crow before.@
+br
+` It glares at me.@
+br
+` It feels like the eyes of the crow are staring at me, like soulless, mechanical lenses.\
+!w1000
+br
+` Kwaaw!@
+br
+` After a yawn-like cry, it noiselessly flies off.@
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_40d.jpg",%type_rshutter_fst
+
+`"…… What was that?"@
+` …… I can feel a faint chill on my back.@
+` The howling of the dogs grows louder.\
+
+` Awoooooooo.@
+`            Awoooooooo.@
+`                       Awoooooooo.@
+br
+`"…………"@
+` It's really starting to get on my nerves.@
+` Not only is it noisy, but hearing it causes my heart to start pounding.@ I have an almost instinctual distaste for it.@
+br
+`"Shut---up!"@
+` I change out of my pajamas into my uniform, and leave the room.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+play "track06.ogg"
+
+
+!w500
+
+bg "image\bg\bg_32d.jpg",%type_lcartain_mid
+
+br
+` Awoooooooo.@
+br
+` The howling echoes through the night.@
+` That sound is definitely coming from the right-hand side of the mansion.\
+
+`"…………"@
+` For some reason, my throat feels dry.@
+` The high walls stretch their way around the mansion.@
+` Clearing my throat, I head towards where the dogs must be gathered.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_47.jpg",%type_lcartain_mid
+
+
+` I arrive at where the howling originates.@
+`"…… Huh?"@
+br
+` Awoooooooo.@
+br
+` The howling doesn't stop.@
+` But there are no signs of any dogs.@
+` All there is---is a person.@
+` Under the light from the streetlight that carves apart the darkness stands a man in a dark coat.@
+br
+` The howling is coming from right beside him.@
+` ------But there are no dogs to be seen anywhere.\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_47.jpg",%type_crossfade_fst
+
+
+` The man in the coat is pretty tall.@
+` He has a strongly built body, and his back is facing me.@
+`"---------"@
+br
+` My throat… so dry.@
+` Awoooooooo.@ The voice of the dog resounds in my ears.@
+` The night air coils itself around my skin.@
+br
+` For no apparent reason, I have difficulty breathing and moving, as if I'm at the bottom of the sea---\
+
+` Kwaah!@
+br
+` A cry overhead.@
+` With a loud flapping of its wings, the blue crow lands onto the man's shoulder.@
+br
+` ---Then,
+br
+` suddenly, the crow vanishes.\
+
+`"…… Eh?"@
+` Can it be an illusion?@
+` It looked like the crow disappeared into his black coat.@
+br
+`"------"@
+br
+` The man in the black coat turns around.@
+ld c,":a;image\tachi\nero_t03.jpg",%type_crossfade_fst
+` Under the white streetlight, he is just like a shadow.\
+
+` A black lump.@
+` In the middle of that lump, only the weapon-like eyes shine out, burning with a fiery intelligence.@
+br
+`"…… Ah."@
+br
+` I can't breathe.@
+` But fortunately, those eyes seem like they're not even looking at me.\
+br
+br
+br
+br
+br
+br
+br
+`"Not here after all."\
+br
+cl c,%type_crossfade_mid
+
+` The man in the black coat leaves.\
+
+` When I can no longer see him, I am finally able to breathe properly again.@
+`"Hhahh---haah, ah."@
+` I manage to take a few breaths.@
+br
+` I realize the dogs' howling has ceased.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_40c.jpg",%type_lcartain_slw
+
+` I return to my room.@
+` There is no sign of Akiha or the others being awake.@ I guess I'm the only one who couldn't stand the dogs' howling.\
+br
+`"------Guh!"@
+br
+` What's happening?@
+` My head still hurts.\
+
+`"Huh… ?@ Why am I trembling?"@
+` Looking down, my fingers are trembling.@
+` My entire body is shaking, and my back feels very cold.@
+br
+` It's almost like… yes.@
+br
+` It's like someone ripped out my spine and replaced it with ice.\
+
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+`"------"@
+` I feel dizzy.@
+` …… Is it just the usual anemia?@
+` I get the feeling of falling towards the floor.@
+br
+` On the way, I see something unpleasant.\
+
+bg "image\bg\bg_40f.jpg",%type_lshutter_mid
+
+`"Wha---!?"@
+` Even though I'm wearing my glasses, I can still see the "lines".@
+`"Uuh……!"@
+` I hadn't seen them at all for a long time, so my reaction is magnified.@
+` I feel sick.@
+` With the dizziness from my anemia, I feel like I'm about to throw up the contents of my stomach.\
+
+`"…… What's, going on?"@
+` I don't understand.@
+` Only that as long as my eyes are open, scribbles fly everywhere across my vision.\
+br
+` ---It's a bad… dream.@
+br
+` Somehow, I manage to collapse into bed.@
+` …… Yes.@ I should sleep.@ That's the easiest way to deny what I'm seeing.\
+
+` My body doesn't move as I want it to.@
+` All I should do is lie here and fall fast asleep, like a corpse---\
+
+playstop
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
 !w3000
-
-
-br
-` Awooooo.@
-br
-` ---I hear the wave-like sound of something's voice.\
-br
-` Awooooo.@
-br
-` ---Something is howling.@ It's too sharp and high-pitched to be a stray dog.\
-
-br
-` Awooooo.@
-br
-` ---It echoes in my eardrums.@ Is it howling at the moon?\
-
-br
-` Awooooo.@
-br
-` ---This doesn't feel right.@ The beastly howling is beginning to give me a headache.\
-
-br
-` Awooooo.@
-br
-` ---It doesn't stop.\
-
-br
-` Awooooo.@
-br
-` Awooooo.@
-br
-` Awooooooooooooooo---\
-
-bg "image\bg\bg_40d.jpg",%type_crossfade_fst
-
-`"…… Argh, just shut up already!"@
-br
-` I wake up.@
-` I can hear the sound of a dog barking outside the window.@
-` The clock indicates it is just past eleven.@
-` This is more than just a neighborhood nuisance.\
-
-`"Damn, I can't sleep like this!"@
-` The dog's howling comes from somewhere near the mansion's fence.@
-br
-` …… It doesn't seem like I can go back to sleep at this rate.\
-
 
 return

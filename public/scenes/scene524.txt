@@ -1,9 +1,13 @@
 
 
-bg "image\bg\bg_06c.jpg",%type_nowaitdisp
-play "track07.ogg"
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "track03.ogg"
 
 
+ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
 
 !w1000
 cl c,%type_lcartain_mid
@@ -12,29 +16,48 @@ cl c,%type_lcartain_mid
 ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
 
 
-` …… The third period class was a sad story.@
-` You really were splendid in trying to resolve everything by yourself, but it seems to have backfired this time.@
-` Consult your reliable Senpai, and please make your way through this trouble.\
+` Merci!@ Time for the fourth period lesson.@
+` …… Oh, too bad.@
+` Showing your back like that in a fight, you're still no good, Tohno-kun.@
+` There's too much difference in experience between an expert fighter like Ciel-san and Tohno-kun.@
+` You should have acted in a way Ciel-san would not expect.\
 
-` ----And!@
-` For you Tohno-kuns who came here for some other reason.@
-` Unfortunately, even though you were so close to the climax, your bond with Ciel-san was not deep enough.@
-` I have to ask you to resubmit.@
-` Please go back a long time, and make good friends with Ciel-san.@
-` There are a lot of places you can do this, but the most important one is what happens on the sixth night.\
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
 
-` Tohno-kun, when it came time to choose between Ciel-san or Arcueid, did you choose that idio**c woman?@
+`"Hmph, attacking someone from behind like that, it really shows your character, Ciel.@ Are you showing your true self nyaa?"@
 br
-` This is the result.@
-` If you have learned your lesson, please go back to the night of day six and think again about who you should choose.@
+` …………@
+
+bg "image\bg\ima_14.jpg",%type_lshutter_fst
+wave se11
 br
+`"Unyaa!@ You stabbed me, you just stabbed me when the camera couldn't see us, nyaaa!"@
 br
+` ……………………@
+bg "image\bg\ima_13.jpg",%type_nowaitdisp
 br
-br
-` ……………… Okay!?\
+`"Unyaaaaaaaaaaaaaaaaa!"\
+
+bg "image\bg\bg_06a.jpg",%type_lshutter_mid
+ld r,":a;image\tachi\cel_t20.jpg",%type_lshutter_fst
+
+` Extermination of the noisy cat has been completed.@
+` Goodness, a vampire like you who takes away someone's lover has no right to say anything.@
+` Now then everyone, please enjoy the rest of the main story!\
 
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+ld c,":a;image\tachi\ark_t30.jpg",%type_lscroll_mid
+
+`"Nyaa, what is this?@ I haven't done that yet."@
+
+br
+` "Yet" means you're going to do so in the future?@
+br
+`"Ehehe.@ I'll leave the answer to that for later."\
+cl c,%type_lscroll_mid
+
 
 playstop
 

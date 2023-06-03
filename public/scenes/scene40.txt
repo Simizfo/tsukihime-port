@@ -1,108 +1,408 @@
 
-bg "image\bg\bg_22b.jpg",%type_nowaitdisp
 
+bg "image\bg\bg_22b.jpg",%type_lcartain_mid
+
+` Apparently, Akiha tried to visit me a few times when I first was entrusted to the Arimas.@
+` Unfortunately, we were never able to meet because I had to go to the hospital every day.@ We completely lost contact after Akiha went to a boarding school.@
+` Unlike Akiha, I am isolated from the main family.@
+` That's why I can live freely like this.@ My high school is just an average high school and our chance of contact was pretty much zero.\
+
+` My old man died and I received word telling me to come back.@
+` To be blunt, I had no intention whatsoever of returning to the Tohno house.@
+` But Akiha is at that house.\
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+bg "image\event\aki_e01.jpg",%type_crossfade_mid
+` When we were children…
+` Akiha was an obedient child, always looking frightened, as if she were constantly enduring something.@ She would always follow close behind, her footsteps pattering behind me.@
+` She was frail, and her long black hair and fancy western clothes made her resemble a French doll.\
+
+` I am worried about her living all alone in that big mansion, with the old man gone.@ But more than anything----I feel guilty, after pushing all the Tohno family responsibilities on her and selfishly living a free life by myself.\
+
+` Perhaps my acceptance to return to the mansion is like my apology to Akiha.@
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
 playstop
+bg "image\bg\bg_32b.jpg",%type_crossfade_mid
+` The Tohno mansion is unnecessarily big.@
+` Surrounded by iron railings, you could say the entire lot is abnormally expansive, being so large that a whole elementary school could fit inside.\
 
-` …… Akiha isn't the only person I haven't seen since then.@
-` I can't remember all the details because it's been eight years, but there were other children at the mansion around the same age as me.\
+` The garden, surrounded by trees, is more like a forest.@ The mansion is at the heart of that forest, and there are a few other buildings separated from it.@
+` I didn't think anything of it when I was a child, but now that I have lived in an ordinary household for eight years, the excessive size feels almost criminal.\
 
-` I don't remember their names, but there were two girls who were twins.@
-` Father has once said that they didn't have any relatives, so he took them to work as servants.@
-`"…… That's weird.@ We played together so often when we were small, but I can't remember their names."@
-` I close my eyes and cast my mind back.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-play "track09.ogg"
-
-bg "image\event\his_e01.jpg",%type_crossfade_mid
-
-
-` I should be able to remember.@
-` She was a girl who was always cheerful… so cheerful that you would become cheerful just by looking at her.@
-` A girl with a carefree personality who was loved by everyone at the mansion.@
-` Because she was close to my age, I got along very well with her, and it seemed like every day we would run around the garden together.@
-`"Let's play together, Shiki-chan."@
-` She would say, and I could remember her taking me out of my room after I secluded myself inside.\
-
-` She would often laugh and take shy Akiha's hand, trying to make her play with us.@
-` Maybe she was older than the both of us.@
-` She would guide me and Akiha to play together, but once we started playing, she would just watch over us.@
-` Even Akiha's tutor, the harsh butler, would say "I don't mind, as long as ****** is with you guys", and let Akiha out to play, as if there was no helping it.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-
-` In contrast to that girl was the other one.\
-
-bg "image\event\his_e02.jpg",%type_crossfade_mid
-
-` On the second floor.@
-` While we played in the garden, there was always a girl looking down at us every time I turned to look at the mansion.\
-
-` She was the twin of that cheerful girl, but she would always gaze at us expressionlessly.@
-` That girl would never try to leave the house.@
-` All she would do was watch us with those cold eyes.\
-
-br
-br
-br
-br
-br
-` ---Well, in the end, I only ended up talking a little with her.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_22b.jpg",%type_crossfade_fst
-
-
-`"I wonder if those girls are still at the mansion…"@
-` While I think about that, I take a white ribbon out of my bag.@
-` An old white ribbon that the girls gave me at the very end.\
-
-
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-
-bg "image\bg\cmo_20.jpg",%type_crossfade_mid
-
-
-` ---Eight years ago.@
-` After I was involved in the accident.@
-` The day I was entrusted to the Arima family.@
-br
-` Right before I was to leave the mansion, the girl gave me this for some reason.@
-br
-` …… I'm just lending it to you, so be sure to return it.@
-` Saying something along those lines, she ran off.\
-
-` Afterwards, I was quickly found by one of the servants and taken to the front entrance.@
-` With no one to see me off, I walked out of the gates of that giant mansion while the Arima lady held my hand.@
-br
-` It was my last memory of when I left the Tohno mansion, eight years ago.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_22b.jpg",%type_crossfade_fst
-
-
-
-` *sigh*@
-` I put the ribbon back in my bag.@
-`"But it's been eight years, after all…"@
-` Not only do I not know if they are still at the mansion, I can't even remember their names.@
-` To make things worse, I can't even remember which girl gave me the ribbon.\
-
-`"…… Still, it's not like it was some important promise or anything."@
-` But I want to keep the promise, as long as I still remember it.@
-` I agreed to return to the mansion because Akiha is now there all by herself.@
-` I left her there for eight years, pushing all responsibility onto her while I selfishly lived freely.@
-br
-` I am going back because I feel guilty for what I did to her.@
-` …… I didn't exactly plan to use this as an opportunity to do so, but if that girl is still at the mansion, I want to properly fulfill the promise from eight years ago.\
+` The gates aren't locked.@
+` I push them open, and head towards the mansion doors.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
+bg "image\bg\bg_48b.jpg",%type_lcartain_mid
+
+
+` They tower oppressively, bearing down on any visitors.@
+` Beside the iron double doors is an unmatching doorbell.\
+`"…… Alright."@
+` Shaking off my nervousness, I press it.@
+br
+` There isn't any affectionate "Ding-dong" chime from the doorbell.@
+br
+` The oppressive silence continues for a few seconds.@
+` Then, the sound of pattering footsteps behind the door indicates someone's presence.\
+play "track03.ogg"
+
+`"We have been waiting for you."@
+` The door opens with a creak.@
+` Inside lay the lobby I remembered, and a young girl in an apron.\
+
+bg "image\bg\bg_33b.jpg",%type_lcartain_mid
+ld c,":a;image\tachi\koha_t03.jpg",%type_lshutter_mid
+
+`"Thank goodness.@ You're so late I was beginning to worry that you had gotten lost.@ I was thinking about going out to meet you if you hadn't arrived by sunset."@
+` The girl in the anachronistic apron smiles warmly.\
+
+`"Ah, no--that's… uh…"@
+` I am so taken aback by her outdated mode of dress that I can't even form a proper sentence.@
+` Perhaps attributing my hesitance to distrust, the girl tilts her head a little.\
+
+`"You're Shiki-sama, aren't you?"@
+`"Eh--Yeah, but you don't have to call me '-sama'."@
+`"You are, right?@ Oh, please don't scare me like that!@ I was beginning to think I had made another mistake back there."@
+` The girl's mannerisms are like those of a mother scolding her child.@
+` But in spite of that, there's a smile on her face, and it doesn't break the warm feeling about her.\
+
+` …… She wears an apron over a kimono;
+` she comes out to greet guests and addresses someone like me with '-sama'.@
+` This must mean that she's…\
+
+`"Um, uh… are you one of the maids here, by any chance?"@
+` The girl answers my question with nothing but a smile.@
+`"Come; you must be tired.@ Please do come in.@ Akiha-sama is waiting for you in the sitting room."@
+cl c,%type_lshutter_fst
+` The girl quickly crosses the lobby and heads towards the sitting room.@
+` Turning back as if she just remembered something, she makes a bow, a full smile on her face.\
+
+ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+`"Welcome home, Shiki-sama."@
+` Her greeting is accompanied by her flower-like smile.@
+` I can't think of any reply, so I just follow her hesitatingly.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
 playstop
 
+!w1000
+
+bg "image\bg\bg_34c.jpg",%type_lcartain_mid
+
+play "track01.ogg"
+
+` Guided by the girl, I head to the sitting room.@
+br
+` ---It's as if I'm seeing it for the first time.@
+br
+` I don't know if I've forgotten about it in the last eight years or they had it refurbished since then.@
+` Either way, it feels like someone else's house now, and it's unsettling.@
+` As I'm looking around the sitting room, the maid in the apron lowers her head in a quick bow.\
+
+`"I've brought Shiki-sama with me."@
+`"Well done.@ You may return to the kitchen, Kohaku."@
+`"Thank you."@
+` It seems that maid's name is Kohaku.@
+` Kohaku-san gives a small bow, as if to say farewell, and leaves the sitting room.@
+` This leaves me, and--two girls I don't recognize.\
+
+ld l,":a;image\tachi\aki_t01a.jpg",%type_lshutter_fst
+ld r,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
+!w1000
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"It has been a long time, Nii-san,"@
+` says the girl with the long black hair and sharp eyes.\
+` …… All my thought processes stop at once.@
+` My mind goes blank, and I can't think of any words of greeting.@ All I can do is nod with a "Yeah."@
+br
+` …… I don't think it can be helped.@
+` This Akiha that I had not seen in eight years is not the Akiha I remember.@ She's completely transformed into a proper young lady of a noble family.\
+
+`"Nii-san?"@
+` The black-haired girl tilts her head slightly.@
+`"Ah… um."@
+` Pathetically, all I can say are dumb-sounding things.@
+` My mind is turning in somersaults as I try to recognize the girl before me as Akiha, but it seems like Akiha already recognizes me as her brother.\
+
+`"You do not look well.@ Would you like to rest before we talk?"@
+` Akiha throws a sharp glance in my direction.@
+` …… Is it just my imagination that she looks like she's in a bad mood?\
+
+`"…… No, I'm alright.@ I was just surprised at how much you've changed, Akiha."@
+`"People do change over the course of eight years, Nii-san.@ We are at an age of change--or did you think we would remain as we were forever?"@
+br
+` …… What is this?@ …… I can feel the thorns in Akiha's words.\
+
+`"No, you've definitely changed, Akiha.@ You've become more beautiful than before."@
+` That isn't flattery.@ It's how I really feel.@
+br
+` ---And.@
+`"Indeed.@ But you, on the other hand, have not changed much at all."@
+` Akiha answers coldly, her eyes closed.\
+`"……"@
+` …… Well, I came prepared for something like this.@
+` It is as I had thought.@ It seems Akiha does not think well of me.\
+
+`"If you are feeling well, let us finish our conversation.@ You have yet to hear the details about why you were called back here, Nii-san?"@
+`"I've heard nothing more than a sudden 'Come back to the mansion', though I found out the old man passed away in the papers."\
+
+` …… If the head of a major company dies, it definitely makes it in the financial papers.@
+` Word of Tohno Makihisa's death reached his son, Tohno Shiki, via the newspaper after the funeral.@
+` Even though his relatives hadn't told him, this disinherited son could pick up news of his father's death merely by buying a one hundred yen newspaper.@
+` It might be cynical of me to say so, but the world has certainly become a convenient place.\
+
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"…… I am sorry.@ It was my fault that you did not get the news about Father."@
+` Akiha quietly lowers her head.@
+`"It's alright.@ Either way, it's not like he would come back from the dead if I went.@ It's not something you should be worried about."@
+`"…… I am sorry.@ It is somewhat comforting to hear you say that."\
+` Akiha's face is serious, but this is not a topic I care much about.@
+` A funeral is a ceremony for those who cannot let go of their feelings for the deceased to achieve such detachment.@ For someone like me, who cut off such feelings a long time ago, there is no need.\
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+`"Calling you back here was my idea.@ It would be odd for the eldest son of the Tohnos to be entrusted to the Arimas forever.@
+ld c,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+` Now that Father has passed away, the only Tohnos by blood are you and I, Nii-san.@ I don't know what Father was thinking when he entrusted you to the Arimas, but he's no longer with us, so there's no longer any need for you to live with them.@ That is why I had you come back here."\
+
+`"…… That's all well and good, but I'm quite surprised you were able to get our relatives to agree to this.@ Wasn't it they who came up with the idea of leaving me with the Arimas in the first place?"\
+`"That may be so, but now I am the head of the Tohno family.@ I declined every one of the proposals from our relatives.@
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+` I would like you to continue living here, Nii-san, but this is a place with rules.@ You will avoid living the overly casual lifestyle you've been leading up until now."\
+
+`"Haha.@ I'm afraid that isn't going to happen, Akiha.@ There's no way I can go back to being some well-mannered gentleman now.@ Not that I want to."@
+ld c,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
+`"I will not ask more of you but do try to--or are you saying you are unable to do what I already have?"@
+` Akiha shoots me a cold look.@
+` It feels like she's hitting me with her grudge against me for leaving her here for the last eight years.\
+
+`"…… Alright.@ I get it.@ I'll try my best."@
+` Akiha just stares at me, as if she doesn't quite believe me.\
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"You do not need to try, as long as you get the results."@
+` Her pose is dignified, her words merciless.\
+
+`"Let's get back to the topic.@ Right now, you and I are the only ones living here.@ I do not care for having too many people around, so I cleared everyone out."@
+`"Eh?@ Hold on a second, Akiha.@ You 'cleared everyone out'?"@
+`"You wouldn't want to run into one of our relatives in the mansion, would you, Nii-san?@ I have put off most of the servants, but there are enough for you and I, so there are no problems."\
+
+`"Wait, 'no problems'?@ You're going to get attacked at our family meeting if you do something like that!"@
+ld c,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
+`"Oh, please be quiet.@ Rather than have the mansion overflowing with people, wouldn't you feel more relaxed with just the two of us here?"@
+` …… Urgh.@
+` Well, it's true that I would feel relaxed, but…\
+
+`"But you've only just become head of the family, Akiha.@ If you go around abusing your powers like some kind of dictator, our relatives are not going to keep quiet.@ Even the old man didn't go against their opinions."@
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+`"Indeed.@ That's why father entrusted you to the Arimas.@ I, on the other hand, have despised them ever since I was a child.@ I am not going to put up with their whining any longer."@
+`"'Not going to put up with'… look, Akiha---"\
+
+ld c,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
+
+`"Ahh, enough!@ Just listen!@ You don't have to worry about me!@ Please, just worry about your own life from now on, Nii-san.@ I can see it's going to be difficult for you in many ways."@
+` Akiha says sullenly, looking away a little.\
+
+`"Now then, if there's anything you don't understand, ask her--Hisui."@
+cl c,%type_crossfade_fst
+ld r,":a;image\tachi\his_t01.jpg",%type_lshutter_mid
+` She looks at the girl standing by her side.@
+` The girl called Hisui bows expressionlessly.@
+ld l,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+`"This is Hisui.@ She will be your personal maid from now on.@ Is that acceptable?"@
+br
+` --------Eh?@
+br
+`"Hold on… personal maid?@ You mean…?"@
+`"In other words, she's your servant."@
+` Akiha declares, as if it were obvious.\
+
+` …… I can't believe it.@
+` Fitting with the western style of the house, the girl in the maid outfit stands there, as if it is natural to do so.@
+`"--Hold on.@ I'm not a kid, you know.@ I don't need a servant.@ I can take care of myself."@
+`"Would that include the cooking and the laundry?"@
+` Urgh.@
+` Akiha is pretty sharp at pointing these things out.\
+
+ld l,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"At any rate, now that you've returned to this house, you will obey my directions.@ I don't know how you lived at the Arima house, but you're living at the Tohno house now.@ Please accept everything given to you."@
+`"Urgh…"@
+` I can't say anything, and I my eyes drift towards Hisui.@
+` As expected, she simply looks back at me expressionlessly like a doll.\
+
+`"Well then, Hisui.@ Please show Nii-san to his room."@
+cl a,%type_crossfade_fst
+`"Yes, my lady."@
+` Hisui approaches me with a shadow-like lack of presence.\
+
+`"I will guide you to your room, Shiki-sama."@
+` Hisui heads towards the lobby.@
+` Sighing, I head off towards the lobby as well.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_33c.jpg",%type_lcartain_mid
 
 
+` We enter the lobby.@
+` This mansion is split into east and west wings, with the lobby in the middle.@
+` The lobby is like the body of a bird whose wings are the halls extending diagonally to the east and west.@ Each wing is about the size of a small hospital.@
+` I remember the house is constructed symmetrically, so both the east and west wings have the same floor plan.\
 
+`"Your room is this way, Shiki-sama."@
+` Hisui climbs up a flight of stairs.@
+` It seems like my room is on the second floor.@
+br
+` …… Come to think of it, the servants' rooms should be on the first floor of the west wing, so that's probably where Hisui and Kohaku-san's rooms are.\
+
+bg "image\bg\bg_46c.jpg",%type_lcartain_mid
+
+
+` Outside, the sun has already set.@
+` The girl in the maid uniform walks down the long, dimly lit hallway without a word.@
+`"…… It kind of feels like a wonderland."@
+` Without thinking, I let my thoughts slip out.@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Did you say something, Shiki-sama?"@
+` Hisui stops and looks back at me.\
+
+`"No, I'm just talking to myself.@ Don't worry about it."@
+`"………"@
+` After staring at me, Hisui bows and starts walking again.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_40c.jpg",%type_lcartain_mid
+
+
+`"……"@
+` I guess this is what they call being 'at a loss for words'.@
+` The room Hisui led me to is not one made for a mere high school student to live in.\
+
+`"…… Is this my room?"@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Yes.@ If you are displeased with it, I can arrange a different one for you."@
+`"No, there's no way I could be displeased with it.@ It's--"@
+br
+` It's just a little--no, really too fancy for me.@
+br
+`"Shiki-sama?"@
+`"---It's fine.@ I'll gladly use this room."\
+
+`"Yes.@ This room has not been touched since eight years ago, so I do not believe you will find anything unsatisfactory with it."@
+`"--?"@
+br
+` There's something a little odd about the way Hisui said that.@
+` It's as if she was implying this was once my room.@
+`"…… Hey.@ Is this by any chance my old room?"@
+ld c,":a;image\tachi\his_t08.jpg",%type_crossfade_fst
+`"That is what I have been told.@ Am I mistaken?"@
+` Hisui inclines her head to the side slightly.@
+cl c,%type_crossfade_fst
+` …… I feel relieved.@
+` It seems this girl can express emotion after all.\
+
+`"…… Well, it might be, now that you mention it.@ I do remember it faintly, so it must be so."@
+br
+` I can't feel any sense of familiarity about this place at all, but I guess that's what it's like after you leave a place for eight years.@
+br
+`"I can't get settled here, though.@ I was living in a six-and-a-half-mat sized room until this morning.@ It's like I'm staying in some high class hotel."@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"I understand how you feel, but please try to get used to it.@ From today onwards, you are the eldest son of the Tohno house, Shiki-sama."\
+
+`"You're right.@ I've got to do my best so I at least look like it on the outside."@
+` With a thump, I drop my bag on the table and stretch my back.@
+br
+` ---I've been feeling a little stressed out with everything that's happened so far, but I guess I've got no choice but to adjust from today onwards.\
+
+`"Shiki-sama, all of your luggage has been brought here.@ Is there anything more you require?"@
+`"---No, not really.@ Why do you ask?"@
+`"…… There was very little delivered.@ If there is anything you need, I can have it prepared, so please do not hesitate to ask."\
+
+`"…… I see.@ No, I don't need anything more for now.@ I didn't have much luggage to begin with.@ My luggage is just this bag, these glasses, and…"@
+br
+` The textbooks in my bag, and that white ribbon with an unidentified owner.@ That's all----\
+
+`"Anyways, you don't have to worry about the luggage.@ This fancy room is more than enough for me."@
+`"…… I understand.@ Well then, I shall come to call you in an hour's time."@
+`"An hour?@ For dinner, you mean?"@
+`"Yes.@ Please relax until then."@
+br
+` As expected, Hisui says everything with an expressionless face.@
+` …… But even if she tells me to relax, just how am I supposed to do that here?\
+
+` The clock says it's six o'clock.@
+` Usually, I'd be watching TV in the sitting room around this time, but I'm having serious doubts as to whether there's any such thing in this mansion.\
+
+`"Hisui.@ I know it's kind of a trivial thing to ask about, but is there a television in this mansion?"@
+`"A television…?"@
+` Hisui's eyes narrow slightly.@
+` …… I know I'm the one who asked, but it really is a stupid question.@
+` I feel there's something wrong with asking about the presence of a TV in a luxurious mansion like this.\
+
+` Hisui makes a rare troubled face, and stares off into space.@
+ld c,":a;image\tachi\his_t08.jpg",%type_crossfade_fst
+`"…… There is no television in the sitting room.@ Some of the visitors did make use of one, but when they departed, they packed it up with their luggage and took it back with them, so I do not believe there are any remaining."\
+
+`"Hold on.@ Visitors?@ Like who?@ For how long?"@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Relatives.@ The eldest son of Kugamine-sama from a branch of the family, Touzaki-sama's third daughter and her fiance, and Kishima-sama's eldest son came to stay for close to three years."@
+`"…… Three years, huh?@ Hisui, that's what you'd call freeloaders, not visitors."@
+` Hisui does not reply.@
+` No matter what kind of people these freeloaders were, it seems that servants can't say anything bad about them.\
+
+` Well, at any rate, it seems like those relatives had brought, and taken back, their own luggage with them.@
+` My old man hated the products of modern culture, thinking them all vulgar.@ There was no way he would ever watch a TV.@ Akiha, who had been educated by him for the last eight years, would probably be the same.\
+
+`"--Well, it's not like I'll die without one."@
+` Hisui is silent.@
+` …… Like a perfect example for servants, Hisui says nothing unless she is being asked a direct question.@
+` This is, of course, kind of depressing for me.@
+` I want to make that expressionless face break into a smile somehow, but that seems impossible with just any old half-hearted effort.\
+
+`"Oh, there was a library on the first floor of the west wing, wasn't there?@ Maybe I'll go find something to read when I have some free time."@
+` Hisui does not reply.@
+` She just stands there in the doorway.@ I can't even tell where she's looking.\
+
+`"---Hisui?"@
+` Hisui doesn't say a word.@
+` Suddenly, she looks straight at me.@
+br
+`"I believe there is one in Nee-san's room."@
+br
+`"Huh?"@
+` I have no idea what she's talking about.@
+`"…… Uh… there's one of what?"@
+`"A television.@ I remember seeing one in Nee-san's room."@
+` Hisui says, as if remembering something from many years ago.\
+
+`"Hold on.@ Nee-san?@ Don't tell me you're talking about Kohaku-san?"@
+`"Yes.@ Right now, the only people working at this mansion are Nee-san and I."@
+` Now that she mentions it, they do look alike.@ I just couldn't connect them as sisters because Kohaku-san is always smiling so warmly, and Hisui is always expressionless.@
+`"I see.@ Kohaku-san does look like the type of person who'd watch those variety shows."@
+` But I balk at going to Kohaku-san's room to tell her, "Let me watch your TV."\
+
+`"Sorry, just forget I ever asked.@ After all, I'll be living here from now on, so I've got to follow the rules of the mansion."@
+` God knows what sort of cynical comment I'd be in for from Akiha if I started watching television.@
+` It seems I'll be leading a scholarly student life fit for a member of the Tohno family from now on.\
+
+`"Alright.@ I'll be in my room until dinner, so just come and call me when it's time.@ You've got other things to do, don't you, Hisui?"@
+` Hisui nods in assent, and turns around.@
+cl c,%type_lshutter_mid
+` Silently opening the door, she leaves the room.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+!w1000
 
 
 

@@ -1,91 +1,80 @@
 
 
-monocro off
-bg "image\bg\bg_29b.jpg",%type_crossfade_mid
-play "track01.ogg"
-
-`"Ah---the lamp posts are turning back on."@
-` The previously dark lamp posts spring back to life.@
-` The park lit only by the moonlight gradually becomes brighter.\
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
 
 
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+` ---How do I feel?@
+` Certainly Senpai is dear to me.@ No matter who she is, the time we spent at school together is precious to me.@
+br
+` But, even still------to me, Senpai is Senpai.@
+` Friend or foe, man or woman, before all of that, I only feel that she is my dependable Senpai.\
 
-
-`"It seems that woman lifted her barrier.@ It was supposed to prevent anyone from entering the park, but it seems like you could pass right through."@
-`"Hm?@ You mean that power outage was Senpai's doing?"@
-
-
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-
-
-`"Yeah, it's one of their specialties, letting people stay away.@ It really has nothing to do with us."@
-
-
+`"………………"@
 ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
 
-
-`"By the way Shiki.@ I wanna ask, but what do you think of Ciel?"@
-` With a cold voice, Arcueid suddenly asks that.\
-
-`"…… About Senpai?@ …… Why do you ask about that, Arcueid?"@
-`"Oh nothing.@ I just hate that woman.@ We were supposed to meet and exchange information, but I got irritated during the conversation and we ended up trying to kill each other."@
-`"K-kill each other---why did you end up doing that!?@ In the first place, Senpai isn't a vampire.@ Why did you try to kill Senpai?"\
+`"Come on!@ You can't fool me by being quiet, you know."@
+` Arcueid continues glaring at me.@
+` …… Come to think of it, no matter what kind of person Senpai is, this person is much, much scarier.@
+` I've been forgetting, but she is a vampire, and she seems to lack knowledge of moral concepts.\
 
 
-ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
-
-
-`"That's my line.@ She was the one who struck first!"@
-`"----Eh?"@
+` ----But, I am still attracted to her.@
 br
-` …… The one who struck first, was Senpai……?@
-br
+` Even tonight, I was simply looking for her, but I was getting so frustrated when I couldn't find her.@
+` It was, something like feeling worried about a loved one.\
 
+`"Shiki, I'll ask you one more time.@ Whose side are you on, mine or that woman's?"@
+` Arcueid glares at me in irritation.\
+`"…… Hey now, isn't that already decided?@ I'm still here.@ If I was on Senpai's side, I would have gone after her."@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"Um, in other words---what do you mean?"@
+` Arcueid tilts her head to the side questioningly.\
+
+`"What do I mean?"@
+br
+` ---Why doesn't she just understand simple conversations?@
+` If she's like this, unless I don't just say it directly, she'll never understand.\
+
+`"You're pretty dense.@ Saying I'm still here means that----"@
+br
+` Means what?@
+` The fact that I'm attracted to her is an undoubtable truth.@
+` But I know that is something I must not say.@
+` No matter how beautiful she is, it still doesn't change the fact that she's a vampire.\
 
 ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
 
+`"You're going silent again, what are you trying to say?@ If you want to choose Ciel, then just say so!"@
+`"I, I said that's not it!@ I keep saying it, but why don't you understand……!?"@
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+`"How can I know!"@
+` Being screamed at irrationally, she screams back at me irrationally.\
 
-`"That's right.@ She said 'I knew it was pointless, I just can't allow your existence', and then she attacked me.@ She may look very calm, but all the members of the Burial Agency enjoy fighting.@ You can't let her fool you too, Shiki."@
+`"Fine!@ Then I don't know you at all, Shiki!"@
+cl c,%type_lshutter_fst
+`"Hey, hold on.@ Where are you going?"@
+`"It has nothing to do with you.@ Don't follow me!"@
+` Is she really that angry?@ Arcueid walks away without even turning around.\
+
 `"Wha-----"@
+` I stand in shock by myself in the park.@
+` …… Arcueid got mad and went somewhere by herself, and I asked her what I wanted, so I know I should go back to the mansion.@
 br
-` Enjoy fighting?@ Does Senpai really---\
+` …… But, my feet don't even move one step back.\
+` My logic tells me where I should go, but my heart doesn't listen.\
 
+` ---It's been said a million times, but.@
+` The feelings of love and hate, they have nothing to do with logic.\
 
-ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
-
-
-`"---Shiki.@ You were fooled by her up to now, right?@ So why are you saying things to help her out?@
-` You know, she was tricking you, since you didn't know anything, and pretended to be a normal person.@ Don't you feel a little angry at being used?"@
-` Arcueid glares at me.@
-`"……………"@
-` That is,
-` certainly I'm shocked that Senpai is different from normal people, kind of like Arcueid.@
-` But, I don't feel like I've been tricked.@ On the contrary, Senpai has helped me so many times.\
-
-`"I----"@
-` …… Even though I know about Senpai's identity now, I still think of her as Senpai.@
-` Eating lunch with her, talking about stupid things with her and Arihiko, walking with her to the school gate, all of it is so much fun.@
-` So---if I could.@
-` It would have been better if I didn't find out about her.\
-
-
-ld c,":a;image\tachi\ark_t05b.jpg",%type_crossfade_fst
-
-
-`"Shiki.@ Whose side are you on, mine or that woman's?"@
-` I feel pressure.@
-` Her eyes are the source.@
-` Now she isn't like a human, but more like an animal hunting its prey.@
-` It seems Ciel-senpai is an unforgivable enemy for Arcueid.@
-` That's why she glares at me with such fierce, hostile eyes.@
-` As if saying, if I am her enemy's friend, I will be Arcueid's enemy as well.\
-
-`"…… Arcueid……"@
-` I have trouble answering.@
-` I---
+`"-----Man, geez!"@
 br
+` Damn it.@ Why is it that I just can't leave Arcueid alone……!?@
+br
+`"Arcueid!@ I said wait!"@
+` Raising my voice, I chase after Arcueid who keeps on walking.\
+playstop
 
-cl c,%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
 
 return

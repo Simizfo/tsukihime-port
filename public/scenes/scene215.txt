@@ -1,127 +1,17 @@
 
 
-
 bg "image\bg\bg_40b.jpg",%type_nowaitdisp
 
 
 
-` …… That's right.@ She's been taking care of me since yesterday, so if I have time to fool around, I ought to go help Hisui.\
+` …… No, I would feel bad about moving around and interfering with Hisui and Kohaku-san's work.@
+` It's still only been two days since I came back to the mansion.@
+` Perhaps it's because I'm not used to it yet, but for some reason, I feel tired.@ I should relax and rest until dinner.\
 
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\bg\bg_46b.jpg",%type_lshutter_mid
-play "track01.ogg"
-
-` ---Well then.@
-` Hisui said she'd be cleaning the mansion, but where could she be?@
-br
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-
-bg "image\bg\bg_33b.jpg",%type_lshutter_fst
-
-` I go down to the lobby.@
-` She wasn't in the hallway on the second floor, so maybe she's in the sitting room?@
-br
-
-bg "image\bg\bg_34c.jpg",%type_lshutter_mid
-
-` …… Not here.\
-br
-bg "image\bg\bg_35.jpg",%type_lshutter_mid
-
-` ………… Not here.@
-br
-bg "image\bg\bg_46b.jpg",%type_lshutter_mid
-
-` ……………… Not here.@
-br
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-` …………………… Not here.\
-
-bg "image\bg\bg_33b.jpg",%type_lshutter_mid
-
-
-` She's not anywhere on the first floor.@
-` The only place I haven't been are the locked recreation rooms, the guest rooms, and the salon where Akiha is right now.@
-`"…… I guess she's on the second floor then."@
-` It is a big mansion, so there's probably a bunch of places I haven't looked.@
-` Psyching myself up, I start up the stairs.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_46b.jpg",%type_lcartain_mid
-playstop
-
-` I go up the stairs and glance down the hallway.@
-` And then,
-` I see Hisui's silhouette standing by the window in the east hall of the mansion.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
-bg "image\event\his_e04.jpg",%type_crossfade_mid
-play "track09.ogg"
-
-
-`"Hisu--"@
-` My voice dies in my throat.@
-` In the middle of the hallway.@
-` In the twilight, between light and shadow, Hisui stands motionless.\
-
-`"------"@
-` …… I can't… speak.@
-` Something about her seems… dangerous.@
-br
-` Hisui lingering in the gloom of this western-style mansion.@
-` She seems so incredibly beautiful; but at the same time, a chill runs through me, as if I were looking at a ghost.@
-br
-` She doesn't even move a finger.@ She simply stares out the window.@
-`"------"@
-` That window.@
-` Is that the same one she watched us from back then?\
-
-`"Hisu----i"@
-` I can't do anything but stare in fascination.@
-` I'm so dumbstruck I can't speak, or even blink.@ I can only watch her.@
-br
-` ----And then.@
-` Her eyes, still like that of a doll's, suddenly turn towards me.\
-
-`"Shiki-sama, is something wrong?"@
-`"Ah---no, nothing, I just, um……"@
-`"?"@
-` Hisui tilts her head in curiosity.@
-` That seems to break the mysterious spell I was under.\
-
-`"I was looking for you because I had some free time and thought I'd give you a hand.@ For some reason, I couldn't find you, but I made it."@
-`" …… I see.@ But Shiki-sama, there is no need for you to do that.@ Please return to your room."@
-`"Hmmm………"@
-` I thought it would turn out like this, Hisui doesn't want me to do any work.\
-
-`"But Hisui, I don't have anything else to do.@ I don't like just doing nothing, so I thought I ought to pitch in."@
-`"Shiki-sama, you may say that, but there is no longer any work that you might assist me with.@ The only thing that remains is to arrange Akiha's bedroom.@
-` No males are allowed to enter Akiha's bedroom.@ Not even you, Shiki-sama."@
-`"Hmmmm…………"@
-` Well, that's definitely true.@
-` …… But, it is a little cruel.@ She didn't have to emphasize that last part.\
-
-`"Please excuse me, I have to finish my duties."@
-
-bg "image\bg\bg_46b.jpg",%type_crossfade_mid
-
-
-` Her footsteps echo in the air and she goes into Akiha's bedroom.@
-`"…………… Sheesh."@
-` I can't just go into a girl's bedroom because I have free time.@
-`"…… Oh well, I guess I'll go back to my room."@
-` I turn on my heels.@
-` Before doing so, I get curious about the window Hisui was staring out of.@
-`"Huh---isn't that Kohaku-san in the courtyard?"@
-` You can see the whole courtyard from this window.@
-` Was Hisui looking out into the courtyard from this window just as she did when she was a child……?\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-playstop
-
+bg "image\bg\ima_10.jpg",%type_tcartain_mid
 !w2000
+
+
 
 
 

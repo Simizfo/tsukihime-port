@@ -1,465 +1,316 @@
 
 
-bg "image\bg\bg_06a.jpg",%type_crossfade_mid
-
-` Fifth period.@
-` Feeling sleepy at the classics lecture, my gaze drifts outside the window.@
-br
-` ----And,
-br
-` a crow is perched on the classroom veranda.\
-`"-----"@
-` Not the blue crow from last night, but just an ordinary black one.@
-` With its black eyes, the crow stares inside the classroom through the glass window.@
-` It's true that it's unusual for a bird to perch there, but it's not like it's some major event.\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-bg "image\bg\bg_06a.jpg",%type_crossfade_mid
-
-wave se0
-
-`"Ah----"@
-` Suddenly, it comes at me.@
-` My vision gradually goes white as my sense of balance goes crazy.\
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-bg "image\bg\bg_06a.jpg",%type_crossfade_mid
-`"---"@
-` My field of vision sways.@
-` It feels like something is building up in the back of my head, and my brain feels heavy.\
-`"…… Crap."@
-` I know this feeling.@ It's the precursor to an anemia attack.@
-` The blood that's been building up inside the blood vessels in my brain forms black clots and slushes around inside my head, causing my vision to go black.@
-br
-` If I had to describe it, I would say it feels like darkness is pushing from my brain outwards towards my eyes.\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-bg "image\bg\bg_06a.jpg",%type_crossfade_mid
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-
-
-` ---This is bad… I don't usually collapse in the middle of class, but…\
-br
-` Fumbling in a world of darkness, I blindly use my desk for support.@
-br
-` Even that becomes useless…
-` I can't put any strength into my fingers.@
-` All I can do now is fall towards the floor---\
-!w1000
-bg "image\bg\bg_06a.jpg",%type_nowaitdisp
-play "track03.ogg"
-`"Excuse me, Sensei."@
-br
-` ---And,
-br
-` something hits me roughly on the back.\
-ld r,":a;image\tachi\ari_t04.jpg",%type_nowaitdisp
-
-`"Tohno's looking pretty bad, so I'd like to take him to the infirmary."@
-`"----Arihiko."@
-br
-` At some point, Arihiko had come up to me.@
-br
-`"Are you really feeling bad, Tohno?"@
-` I can hear the teacher's voice from his lectern.\
-`"No, I think I'll be fi---"@
-ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
-`"Man, he's totally out of it.@ Wouldn't it be better for him to leave early?"@
-br
-` …… Arihiko makes this outrageous proclamation loudly.\
-`"I see.@ If you say so, Inui, then there's no mistake about it.@ I've already heard about Tohno's health from Kunifuji-sensei.@ Tohno, if you're not well, you may go rest in the infirmary or leave early."@
-` …… Sheesh.@ I don't know what's with him.@
-br
-` It seems the classics teacher has complete trust in what Arihiko says.\
-
-ld r,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
-
-`"C'mon, you can go now.@ Your face is pale and all, but no one's going to know you're feeling bad until you tell them, you know."@
-` Arihiko hits me in the back grumpily.@
-`"…… I'll be leaving early then, Sensei."@
-` The classics teacher nods solemnly.\
-`"…… Sorry about making you worry needlessly, Arihiko."@
-ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
-`"Don't worry about it.@ We've been inseparable since middle school; I can tell when you're about to collapse from anemia."@
-cl r,%type_crossfade_fst
-` Arihiko heads back towards his own seat.@
-` Expressing my thanks with a look, I drag my leaden body out of class.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-bg "image\bg\bg_01a.jpg",%type_lcartain_slw
-
-` ---I leave school.@
-` It would have been better to go lie down in the infirmary, but at this hour, it'd be after school by the time I wake up.@
-` That being the case, I decide that I'd better go lie down back at the mansion, even if it means pushing myself.\
-`"…… Phew.@ I think I'm feeling a little better."@
-` I breathe in the outside air and feel a little rejuvenated.@
-br
-` …… Sheesh.@ I'm surprised at my own body.\
-` Eight years ago.@
-` The price of recovering from that near-fatal injury was becoming prone to sudden anemia.@
-br
-` When I first left the hospital, it would happen at least once a day.@ Collapsing from dizziness became a daily routine for me.@
-` After some time, probably because my body had grown, the spontaneous dizziness and anemia became rarer.@
-` But from time to time, things still trigger dizzy fits, and I still lose consciousness.@
-` Today I was lucky that Arihiko caught me.@ Usually, I wind up passed out on the floor.@
-` *sigh*@
-` Taking a slow and deep breath, I draw fresh air into my lungs.@
-` I can feel the blood pooled around the center of my head begin to swirl around again, so I head away from the school.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_25a.jpg",%type_lcartain_mid
-
-
-` I veer onto the main street.@
-` Once I get through here and leave the residential district, it's a direct path to the Tohno mansion.@
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-bg "image\bg\bg_25a.jpg",%type_crossfade_mid
-br
-`"--Agh."@
-` …… Crap.@
-` It looks like I haven't fully recovered yet.@
-` Putting my hand to my forehead, I realize it's hotter than usual.\
-`"……"@
-` I'm not going to do myself any good by pushing myself here until I collapse along the side of the road.@
-`"---I guess there's no helping it."@
-` Disgusted with myself, I lean on the guardrail.@
-` I'll rest for a bit until I manage to calm down.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-bg "image\bg\bg_25a.jpg",%type_lshutter_mid
-
-playstop
-
-` …… I don't have much to do, so I just stare idly around the street.@
-br
-` It's just past noon on a weekday, but the street is filled with passers-by.@
-` Crowds of walking people.@
-` Nameless people without personalities walk straight ahead, without even casting a glance at the people walking beside them.@
-` Even though there are so many people here together in this crowd, in this same space, they see only one thing.\
-` Everyone is their own main character, so they only live the day from that perspective.@
-` And so, without really interacting with anyone else, they each end the day by themselves.\
-br
-` ---In a way, you could say it's a very lonely thing.@
-`"……"@
-br
-` I begin to think melancholy thoughts, perhaps a result of my fever.@
-`"---Guess I'll go home now."@
-` I feel calmer, and all I'm doing here is wasting my time with pointless thoughts.@
-` Getting up from the guardrail, I resume heading home to the mansion so I can rest.@
-br
-br
-br
-!w1000
-` ---That is, until I see her.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-bg "image\event\ark_e01.jpg",%type_crossfade_mid
-
-wave se0
-
-` Casually.@
-` All I did was casually cast my gaze into the crowd, but my vision freezes.\
-br
-` ---Thump.@
-br
-` Golden hair and red eyes.@
-` Her clothes are white, as if they are a symbol of herself.@
-wave se0
-br
-` ---Thump.@
-br
-` My pulse races.@
-` My veins and arteries spring into action.@
-` My nerves split, one after the other.@ My spinal cord goes berserk, as if it is about to leap out of my back.\
-wave se0
-br
-` ---Thump.@
-br
-` The girl walking in the crowd is just… beautiful.@
-`"------"@
-` The distant dizziness comes back to me.@
-` My consciousness swims, falling.\
-
-wave se0
-
-br
-` ----Thump.@
-br
-` I-I can't breathe.@
-` My fingertips tremble.@ The blood isn't reaching them.@
-` My whole body feels cold, like I'm freezing to death.\
-wave se0
-br
-` ----THUMP.@
-br
-` My heart beats in a rush, urging me to hurry up.@
-`"Ah--ah!"@
-` I can stand it no longer and unintelligible words escape my mouth.\
-wave se0
-` -----I can't think.@
-` My brain tells me only one word.@
-br
-` ----TH-U-MP.@
-br
-` Just one word repeating in my brain.@
-` Her.@
-` That girl.@
-` I'm going to----\
-
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-bg "image\bg\bg_25a.jpg",%type_crossfade_fst
-
-
-` *wheeze* *wheeze* *wheeze*@
-br
-` I feel sick.@
-` I can't breathe.@
-` It hurts to breathe.@
-` For some reason, I can't remember how to breathe properly.\
-wave se0
-` *wheeze* *wheeze* *wheeze*@
-br
-` My throat is burning.@
-` My eyes are about to burst.@
-` My palms are soaked.@
-` I feel so cold--but I'm drenched in sweat.\
-
-wave se0
-
-` *pant* *pant* *pant*@
-` …… I have to follow her.@
-` I have to follow that girl.@
-` Chase her, chase after her, and talk to her.@
-` My frozen feet begin to move.@
-br
-` My breathing is ragged, like that of a beast.@
-br
-` I chase after the girl in white.\
-
-wave se0
-
-bg "image\bg\bg_27a.jpg",%type_crossfade_mid
-ld c,":a;image\tachi\ark_t22.jpg",%type_crossfade_fst
-
-
-` *pant* *pant* *pant*@
-br
-` The girl walks slowly.@
-` She doesn't realize I'm following her.@
-br
-`"Ha----ah."@
-br
-` If I run after her now, I can talk to her.@
-` Talk to her, and ask her name…\
-
-`"Ha----ahah, ha."@
-br
-` ---Ask her name?@
-` Who am I kidding?@
-` I know very well that that's not what I want to do.@
-` …… I know, but I don't know.@
-` It looks like I want to do something else.@
-` But I can't precisely put "what I want to do" in words.@
-br
-` The inside of my head is misted over, like a rain cloud.\
-
-bg "image\bg\bg_23a.jpg",%type_crossfade_mid
-ld c,":a;image\tachi\ark_t22.jpg",%type_crossfade_fst
-
-
-`"-------"@
-br
-` My throat is… hot.@
-` I can't breathe.@
-` But so what?@
-` It's only natural, right?@ I've just seen that great woman… it would be impolite not to get excited, wouldn't it?@
-` Stop her and ask her name?@
-` Hah!@ Give me a break.@ I'm not a kid, after all.@
-` I don't fully understand it, but there is only one thing I must do.\
-` I walk with my hands in my pockets.@
-` My fingers feel steel.@
-br
-`"Ku----huhh.@ Hehe."@
-` How fortunate.@
-` The tools are all here.\
-` …… She walks.@
-` I leave plenty of room between us.@
-` So she won't notice.@ So the other people around us won't suspect.@
-` She and I are complete strangers.@
-` That's why I have to do my best to make following her look natural.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_12a.jpg",%type_crossfade_fst
-
-` …… She walks into an apartment building.@
-` I don't go in yet, but instead watch from outside.@
-` She takes the elevator up.@
-` The elevator stops at the sixth floor.@
-br
-` I check the common mailbox on the first floor.@
-` There are five mailboxes for the sixth floor.@ I touch one of them and feel a sharp sensation.@
-` I smell it.@
-` There's no mistake.@
-` Her room is the third one on the sixth floor.\
-br
-br
-` I enter the elevator and press six.\
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-` I'm excited.@
-` I grip the knife in my pocket tightly while in the small elevator.@
-` She's very close by.@
-` Just a little more, and I can      her.@
-` Ah, just thinking about it makes me feel ecstatic--
-` My whole body feels like a sexual organ just before climax.\
-` I get off the elevator.@
-` The sixth floor corridor is empty.@
-` This is good.@
-` Quickly----quickly!@ I want to do it.\
-
-bg "image\bg\bg_13a.jpg",%type_crossfade_mid
-
-br
-br
-` ----I arrive in front of Room Three.\
-` I am about to press the doorbell when I stop.@
-` These glasses are in my way.@
-` I can't do what I've come to do with them on.@
-br
-` ---It's a promise, Shiki.@
-` You should never cut those lines thoughtlessly---
-br
-`"……"@
-` Long ago, a woman once told me such a thing.@
-` But right now, neither her name nor her face comes to mind.@
-` Slowly, I remove my glasses.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-
-
-waveloop se1
-
-br
-` I can see the black lines.@
-` And not just them.@
-` Has something happened to my eyes?@
-` Apart from those abominable lines, I can see 'points', like black holes.@ Countless numbers of them.@
-br
-` I don't know myself.@
-` What I'm trying to do.@
-` Why I'm trying to do this.@
-br
-` What does Tohno Shiki-----want to do with that girl?\
-br
-` I don't know.@
-` Still not knowing, I push the doorbell.\
+monocro off
 
 bg "image\bg\bg_14d.jpg",%type_crossfade_fst
 
-`"Yes---?"@
-` I hear the voice behind the door, and the door opens a crack.@
-` In that instant------I slip through it.\
-`"Eh----"@
-` The girl says.@
-` No, she tries to say.@
-` She will never get to finish what she tried to say.@
-` Because I cut her apart before she could.\
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\ima_14.jpg",%type_crossfade_fst
-
-` In that instant, I slip through the door.@
-` Not taking even a second, I draw the knife across the lines running throughout the girl's body.@
-` Stabbing.@
-!w500
-` Slashing.@
-!w500
-` Piercing.@
-!w500
-` Driving.@
-!w500
-` Splitting into pieces.@
+` …… This is just a bad dream.@
+` But somehow, this stench of blood smells so horribly real.\
+`"…… Wro… ng…"@
+` Yes.@
+` Wrong wrong wrong wrong.@
+` Wrong wrong wrong wrong.@
+` But.@
+` I killed her.@ Is that fact wrong?\
+` I didn't kill her.@ Is that fact wrong?\
 br
-` Completely and utterly, I 'kill' her.\
-
-` The black lines that divide her into seventeen pieces.@
-` Through the neck, back of the head, from the right eye to the lips, upper right arm, lower right arm, right ring finger, left elbow, left thumb, left middle finger, left breast, from the rib to the heart, from the stomach to the abdomen in two places, left groin, left thigh, left leg, left toe, all of them.@
-` As I pass by her,
-` not even taking a second.@
+` Yes, I---
 br
-` Truly, in an instant, entirely.@
+`    Tohno Shiki    wanted to kill    that girl.@
 br
-` I "dismantle" her into seventeen pieces of meat.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-
-wavestop
-
-bg "image\bg\ima_13.jpg",%type_crossfade_mid
-
-play "track04.ogg"
-
-`"---Eh?"@
-` I can hear an incredibly dumb-sounding voice.@
-` It doesn't feel like the voice is coming from my own throat.@
+` That's what I wanted to do back then.@
+` Just that, it was all so muddy inside my head, I didn't put it into words.\
+`"Wro----ng!"@
 br
-` Dizziness.@
+` I feel like throwing up from the smell of blood.@
 br
-` The minced pieces of the girl lie before my eyes.@
-` Red blood all over the wooden floor, like an overturned bucket of water.\
+`"Ah---guh!"@
 br
-` There is the choking scent of blood.@
-` The cuts are very clean, so her insides don't spill out.@
-` Only the color of red goes across the ground.@
-` Strange.@
-` There is nothing in the room.@ Nothing but the girl's scattered limbs and me, standing there dumbfounded.\
-
-`"---What---"@
+` The contents of my stomach rise in my throat.@
 br
-` A sea of red blood is spreading over the floor.@
-` In my hands, I grip my knife, the murder weapon.@
-br
-`"She's----dead."@
-br
-` Of course she is.@
-` She wouldn't be human if she was alive.\
-`"Wh----y?"@
-br
-` There's nothing to ask.@
-` I just did it with my own hands.@
-` With my own hands, cleanly and instantly, I cut apart this girl I don't even know.\
-br
-`"I----killed her?"@
-br
-` Yes, there's no mistaking it.@
-` Or am I mistaken?@
-br
-` There's no reason for me to do such a thing.@
-` That's why it's a mistake.@ It has to be a mistake.\
-` But I had no reason from the start.@
-` That's why it's a mistake.@ It has to be a mistake.\
-
 monocro #ff0000
+
+`"Ah---ah!"@
+br
+` The crimson is soaking into my eyeballs.@
+br
+` I feel dizzy.@
+` I fall down on my knees into the red sea of blood.\
+`"Ah---Guh……!"@
+` My gastric juices come up.@
+` I throw everything back up.@
+` My food, my gastric juices, everything, while I cry.@
+` There is nothing left in my stomach.@
+` But my body continues to force me to throw up, as if trying to undo what had occurred and return me to a normal life.@
+br
+` Guuh----burgh!@
+br
+` Pain.@
+` It hurts, like my insides are burning.\
+` The tears won't stop, and my body collapses to the floor like a pile of garbage.@
+` My knees sink into the red puddle spread all over the floor.@
+` Red starts to stain my body.@
+` It's so painful and red; it's like I'm dreaming.\
+`"Ah-----Aaah……!"@
+` I keep crying.@
+` The fact that I killed someone is making me sad.@
+` …… No.@ That's not right.@
+` I am sad because I killed her without reason, like breaking apart a doll.@
+br
+` ---I don't understand.@
+br
+` Why I feel like this,
+` Why I killed her without reason.@
+` I can't find the reason.\
+
+br
+br
+br
+br
+br
+br
+br
+`"--------It's a lie."@
+` It doesn't feel real.@
+` So this is just one of those dreams I have when I faint.\
+
+br
+br
+br
+br
+br
+br
+br
+`"------It's a lie."@
+` Besides, how can someone cut apart someone like that with just a knife.@
+` I read it in a book once.@
+` It takes a whole day of strenuous labor to cut someone up, even when using a saw.@
+` That's why there's no way I could have possibly done such a thing with just a knife.@
+` These "lines" never existed in the first place.@ Everything was just a delusion I had fallen for--\
+
+br
+br
+br
+br
+br
+br
+br
+`"------It's a lie."\
+
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\ima_13.jpg",%type_crossfade_mid
+
+playstop
+
+bg "image\bg\bg_14d.jpg",%type_crossfade_fst
+
+` Guh---ffpt.@
+br
+` Gastric juice drips over my lips.@
+` Passing out of my mouth, dripping down my jaw.@
+` Mixed with the juices is something red.@
+` My throat is probably bleeding because my stomach keeps trying to throw up even when there's nothing left in there.@
+br
+`"O…… u----"@
+br
+` It hurts.@
+` That's why this…
+` This isn't a dream, and I'm just lying to myself.\
+
+br
+br
+br
+br
+br
+br
+br
+`"---It's all lies."@
+` Yes, actually, I understand everything.@
+` I lusted after her.@ Just looking at her aroused me.@
+` When I cut her apart, it was so thrilling I almost ejaculated.\
+` These eyes, too.@
+` If I knew these "lines" could cut things apart like paper being shredded…
+` I should have understood that even a person could easily be cut apart like I just did to her.@
+` I had lived a normal life without even thinking about something like that.@
+br
+` ---If I really am the sort of dangerous person who could easily kill just about anything…
+` Then I should have put out these eyes or lived a life without seeing anyone.\
+`"…… I'm sorry, Sensei."@
+br
+` ---I'm so sorry.@
+br
+` Not even such a simple promise.@
+` Was I able to keep----\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+monocro off
+
+bg "image\bg\bg_14d.jpg",%type_crossfade_mid
 
 
+`"Have I----gone insane?"@
 br
-` ---The red blood flows all over the floor.@
+` I don't know.@
+` There isn't even a trace of that impulse left.@
+` The thought of holding back never crossed my mind.@
+` I didn't even consider trying to stop myself.@
+`"Kill this girl."@
+` It had seemed like the obvious thing to do, and I went through with it.\
+` Then the answer is simple.@
+` I must be insane.@
 br
-` Slowly, the dark red stain creeps around my feet.\
-`"……… Ah!"@
-` Surprised, I lift my shoe, but I'm too late.@
+` I've probably been mad since eight years ago, when I miraculously came back to life from a fatal accident-------
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+bg "image\bg\bg_12a.jpg",%type_crossfade_slw
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_25a.jpg",%type_crossfade_slw
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_24b.jpg",%type_crossfade_slw
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_22b.jpg",%type_crossfade_slw
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_33b.jpg",%type_crossfade_slw
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+!w4000
+
+
+` …… I can hear the sound of rain coming from somewhere.@
 br
-` Like coal tar, her blood makes a thread connecting the pool on the floor and my foot.@
-`"---------"@
-` It's… red… blood…
-` The color I hate, still flowing even now.@ All because I cut her apart.\
-`"---It wasn't me."@
-` Yes.@ It has to be a mistake.@
+` It's raining.\
 br
-` A mistake.@ A mistake.@ Probably a mistake, definitely a mistake.@
-` This is.@
-` This is, This is, This is, This is, This is This is This is This is This is This is----
+`"-----"@
+` I'm in a daze.@
+` My throat hurts when I try to breathe.@
+`"Ou… ch."@
+` I can speak.@
 br
+`"----Shiki-sama?"@
+` Then, I become aware of someone's presence near me--
+
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+`"My---room."@
+` Somehow, I'm in my own room.@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Good morning, Shiki-sama."@
+`"Hisui…?"@
+`"Yes.@ How are you feeling?"@
+`"……?"@
+` Hisui asks me an odd question.@
+` There's not a single thing wrong with my body, but---
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\event\ark_e01.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+\
+
+`"Wh---y?"@
+` Yes, why?@
+` Why am I asleep in a place like this--
+`"Even though I---kil--"@
+` I was about to say "killed someone", but I stop myself.@
+` My brain tells me I shouldn't say those words.\
+`"What am I---doing here, Hisui?"@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"…… Do you not remember?@ Your school called to say you left early.@ However, you did not come back even after dusk, so when my sister went to look for you, she found you resting in the park."\
+`"---Park?---You mean the park near here?"@
+`"Yes, when she found you, you were resting on the park bench.@ Then you returned to the mansion on your own feet."@
+`"…… You have got to be kidding.@ I don't remember any of that."@
+`"I do not believe it is such an odd thing that your memory is unstable, Shiki-sama.@ It is difficult for me to say this, but when my sister brought you back, you were in a daze."@
+`"…………"@
+` …… I don't remember any of this.@
+` But I have no reason to doubt what Hisui says.\
+`"…… Yeah, it's already nine o'clock… I don't remember anything."@
+`"Yes.@ When you returned to the mansion, you said you 'wanted to sleep'.@ My sister suggested we call a doctor, but you said 'it happens all the time'."\
+`"---I see.@ I guess I do collapse from anemia all the time, but---"@
+br
+` …… This time, it's different.@
+` Because I had killed someone---huh?@
+br
+`"What did I look like, Hisui?"@
+`"---Huh?"@
+`"My clothing, I mean.@ Was my uniform… uh, with the blood---"@
+` It was stained with blood.\
+`"Your uniform was dirty, so I am washing it."@
+`"Washing--you mean those blood-stained clothes…!?"@
+ld c,":a;image\tachi\his_t08.jpg",%type_crossfade_fst
+`"…… There was certainly mud on it, but nothing like blood."@
+`"Eh…?@ But it was so---"@
+` Even though I was on my knees in a sea of blood, and both my arms and legs had been completely soaked red…?\
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Have you had a nightmare of some sort, Shiki-sama?@ You looked like you were having a bad dream until now, and you do not look fine."@
+` Hisui stares at my face.@
+cl c,%type_crossfade_fst
+`"A dream?@ ----That, a dream?"@
+` Was it a dream?@
+` That feeling.@
+` That smell of blood.@
+` That hideously beautiful white girl.\
+`"No---maybe you're right.@ That's just a bad dream."@
+br
+` Phew.@ I breathe out slowly.@
+br
+` ----That's right.@
+` That's got to be a bad dream.@
+` There's no way I would break my childhood promise to Sensei needlessly and for no reason.\
+`"Ah---I'm finally awake."@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Yes.@ If you are feeling better, I will go prepare dinner now."@
+`"Dinner, huh?"@
+` …… I know it's just a dream, but the color and smell of blood still lingers in my mind.\
+`"---No, it's fine.@ I'm just going to sleep like this tonight.@ More importantly, Hisui…"@
+`"Yes, what is it, Shiki-sama?"@
+`"Um… well.@ It seems like I came back after dusk, did Akiha say anything?"@
+`"Akiha-sama was not home yet at the time.@ She came back about two hours ago, and was informed of your condition through my sister."@
+` Hisui seems to silently ask "What about it?"\
+`"Oh, it's nothing.@ I was just wondering if she was disgusted with me for causing her trouble on just the second day after I've come back."@
+`"…… It did seem like Akiha-sama was distressed, but I would not say she was disgusted."@
+` Saying that, Hisui takes a step away from me.\
+`"Well, I will be leaving now.@ Please call for me if you need anything."@
+`"Yeah, thanks.@ --Oh, one more thing I forgot to ask."@
+`"Yes, what is it, Shiki-sama?"@
+`"It's raining outside.@ When did it start?"@
+`"Before you came back, Shiki-sama.@ When my sister found you, you were drenched."\
+
+`"…………"@
+` I see.@ I can't even remember that.@ It seems like it was a pretty serious case of anemia.@
+` …… If that's the case, I shouldn't have pushed myself and should have just rested at school.@
+`"Good night.@ I'm really sorry about today.@ Please express my gratitude to Kohaku-san, too."@
+`"I understand.@ --Good night."@
+cl c,%type_crossfade_mid
+\
+
+`"----A dream, huh."@
+` It's like I don't even know what I felt.@
+` But if I can't understand what happened or how I feel about it,
+` how do I know it was a dream?@
+br
+` I can hear the sound of the rain outside.@
+` My mind still feels a little heavy.@
+` I glance down at my chest.@
+` …… The old wound from eight years ago is still distinctly there, like a burn scar.@
+br
+`"Ah---"@
+` On top of my desk lies the knife my father left me.@
+` That old blade which had cut that white girl into seventeen pieces.\
+`" ----"@
+` …… That was a dream.@
+` Nothing more.@
+` I repeat this over and over again, trying to placate myself until I sleep.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+br
+br
+br
+br
+br
+` …… But when I was a child,
+` I think someone once told me, "Don't tell lies that can't even fool yourself."\
+
+!w3000
+
 
 
 

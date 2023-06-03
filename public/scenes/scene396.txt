@@ -2,311 +2,266 @@
 
 
 
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
 
-
-
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_41.jpg",%type_lcartain_mid
-
-
-` My old man's room is just like it always was.@
-` Nearly all of the rows of books are educational reports, and nothing catches my attention.@
-` What I want right now is my old man's journal or notes.@
-` The old man was extremely methodical.@ There certainly has to be something like that lying around here somewhere---
-`"…… Of course, they're not just lying about where anyone can see them."@
-` Maybe they're locked away somewhere.@
-` I should probably look in these desk drawers first.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\bg\bg_41.jpg",%type_lshutter_fst
-
-
-` Using a letter opener lying on the desk, I cut the "line" of the drawer lock.@
-` Inside, there appears to be some old documents bundled together and what seems to be a journal.\
-
-` First, I'll look at the old documents.@
-`"…… This is… my family tree?"@
-` Definitely.@
-` Right after Tohno MAKIHISA is written Tohno SHIKI and Tohno AKIHA.@
-br
-`"Huh…… my old man, he adopted a son ten years ago?@ …… Ah, but he passed away shortly thereafter."@
-` Ten years ago; that would be when I was just in elementary school.@
-` That long ago, it's only natural I wouldn't remember.\
-
-`"But, the heads of the household have had pretty short lifespans.@ My old man died before he was fifty, and before that, before thirty in an accident…… Wow, before that, eighteen years of age, suicide…!?"@
-br
-` ----No, wait a second.@
-` No matter how you look at it, this is strange.@
-br
-play "track04.ogg"
+` I start to breathe heavily.@
+` …… I won't move.@
+` Right now, if anything…
+` If anything moves right now---I'd be admitting I'm insane, and it's scaring me.@
+` My brain might have gone numb.@
+` If I stay like this---I am thinking stupidly that the storm will be over----
 
 wave se0
 
-
-` Looking through the family tree, all members of the Tohno household have died strangely.@
-` Madness.@ Accidents.@ Murder.@ Disappearances.@ Stillbirth.@
-` …… Not one of them lived a long life or even died peacefully.\
-
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
 
-bg "image\bg\bg_41.jpg",%type_crossfade_fst
-
-wave se0
-
-
-`"Wha…………"@
-` This entire document is filled with horrible fates.@
-` Even worse, most of the causes of death are madness.@
-` Most of them ended up taking their own lives.@
-`"That's strange---it's just strange."@
-` But I can't exactly tell what's strange about it.\
-
-`"…… Next is…… my old man's journal."@
-` I pick up the journal, which has a relatively new binding.@
-br
-` ----Thump.@
-br
-` My heart starts to pound.@
-` My heart seems to understand that I shouldn't be opening this.@
-` But I can't turn back now.@
-` Swallowing hard, I open my old man's journal.\
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-monocro #0000ff
-
-
-bg "image\bg\bg_41.jpg",%type_crossfade_fst
-
-br
-br
-br
-br
-br
-br
-br
-` ------There is a demon lurking inside the Tohno bloodline.\
-
-` The opening statement is in those lines.@
-br
-` And that isn't just a simple metaphor.@
-` The ancestors of the Tohno were a mixed breed of "something nonhuman" and human.@ We, being their descendants, also have this element of "something nonhuman" in our blood.\
-
-` In regards to our blood…
-` There are those with strong and those with weak nonhuman blood.@
-` Those with weak nonhuman blood can live their lives as ordinary people, but those with strong nonhuman blood can never live a normal life.@
-br
-` Those with strong Tohno blood are born with special powers.@
-` It could be a body that is resistant to death,
-` it could be an ability to move things without touching them,
-` or it could be fangs used to take bodily fluids from other people.\
-
-` This blood.@
-` When this blood becomes too strong, the members of the Tohno House start to gradually lose their sanity.@
-` And the majority of the members of the Tohno House that lose their sanity become demons that feed on human flesh.@
-` So, the head of the Tohno household carries the responsibility of punishing those who have turned into such monsters.\
-
-monocro off
-
-`"--------Ha."@
-` …… It's messed up.@
-` My old man, what was he trying to say?@
-` Writing so seriously about something that's more like a fairy tale.@
-br
-` The journal turns more into the old man's rant.@
-br
-` The date is roughly nine years ago.@
-` The handwriting starts to get erratic.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-monocro #0000ff
-
-bg "image\bg\cmo_10.jpg",%type_crossfade_fst
-
-
-` …… I am no longer able to suppress my raging blood.@
-` I was able to obtain an orphan from a family of Synchronizers, so this should help me strengthen my mind.@ However, it really is only a matter of time before I go insane.\
-
-` …… It is terrifying.@
-` When I come to, I find that I can't even remember half of the day.@
-` During that time, I'm forcing my inversion impulse on that child.@
-` If this keeps up,
-` it is only a matter of time before I completely lose my sanity and turn into a beast.@
-` I don't even know how much time I have left to remain as myself.\
-
-` No.@ If that child is here, then I can probably last for a few more years.@
-` But that child will not be able to bear that.@ After that child breaks, I will have to take my own life.@
-br
-` But until then---I must protect my children.@
-` Akiha's blood is weak.@ Unless she wishes it herself, she does not have to suffer the same fate.\
-
-` The real problem is SHIKI.@
-` That child is incredibly close to me.@
-` More than anything, I do not want that child to suffer my fate.@
-` …… If the Tohno blood is unnatural, I need to distance him as much as possible from the Tohno name and see how he will fare-----\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-monocro off
-
-bg "image\bg\bg_41.jpg",%type_crossfade_fst
-
-
-`"---------"@
-` I finish reading in a state of horror and amazement.@
-` The contents of my old man's journal are so far away from reality that it's outright bizarre.@
-br
-` My old man didn't just have manic-depression.@
-` Rather, he just became violent without his knowing.@
-` Just like Tohno Shiki right now.\
-
-`"…… No."@
-` That's wrong.@
-` That old man isn't like me.@
-` I'm like him.\
-
-` Fearing that, he sent me from the mansion.@
-` But now I've returned, and my sleeping blood has awoken.@
-`"Heh…… nonsense, all of this."@
-` I try to laugh but find myself unable to laugh it off.@
-` The Tohno blood is mixed with the blood of something nonhuman.@
-` Those of the Tohno blood have special powers.@
-` …… I can't laugh it off.@
-` Supernatural power.@ I've been carrying that for eight years.@
-` Being able to perceive the death of things, my unnatural eyes.\
-wave se0
-
+` My whole world starts to flicker.@
 bg "image\bg\ima_11b.jpg",%type_crossfade_fst
 
-bg "image\bg\bg_41.jpg",%type_crossfade_fst
-
-`"G………………………"@
-br
-` ------I feel like vomiting.@
-br
-` I can't stay standing up.@
-` Hurry.@
-` I must hurry back to my room and sleep; it feels like there is something wrong with my head.\
-
+` Just like a police car's siren, everything revolves, red and black.@
+wave se0
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
-playstop
 
-bg "image\bg\bg_40b.jpg",%type_crossfade_fst
+`"Ah-------"@
+` My    head    hurts.@
+bg "image\bg\ima_11b.jpg",%type_crossfade_mid
 
-!w3000
+`"I'm tired---I'm just tired, that's all."@
+` I say    so    to myself.@
+wave se0
 
-wave se3
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
 
-`"Shiki-sama, you have returned already?"@
-br
-` …… I can hear a voice that sounds like Hisui.@
-br
-`"Shiki-sama, please excuse me."@
-br
-ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_mid
-play "track01.ogg"
-
-` …… Hisui enters my room.\
-
-`"Please forgive me.@ I did not realize that you had returned, so I was unable to greet you at the door."@
-`"…… Don't worry about it.@ I came early on my own.@ Hisui, can you leave me alone?@ I just don't feel like talking to anyone."@
-
-ld c,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
-
-`"Shiki-sama, are you feeling sick…?"@
-`"---I don't know.@ I don't understand it myself."\
-
-`"…………………"@
-` Hisui looks at me with worried eyes.@
-` …… Damn it, what am I doing?@
-` Hisui is worrying about me; there's no reason to take it out on her……!\
-
-`"…… Sorry, I just feel a bit bad.@ I want to sleep until dinner; is there some medicine I can take?@ Headache medicine would be the best."@
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"Yes, I will go get some."\
-
-cl c,%type_lshutter_mid
+` I collapse    onto the bed.\
 
 !w2000
-ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_mid
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+!w3000
+wave se3
+
+
+`"Shiki-sama, have you returned?"@
+` …… A voice like Hisui's wakes me up.@
+`"Shiki-sama, please excuse me."@
+` …… Someone enters my room.@
+` But, it hurts so much.@
+wave se0
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+` I can't make out who it is.\
+
+`"Please forgive me.@ I did not realize that you had returned, so I was unable to greet you at the door."@
+
+`"…… No, that's, fine---leave me alone, please."@
+
+`"Shiki-sama, are you feeling sick?"@
+`"---Ah.@ I don't really…"@
+` …… know.@ I can't finish my sentence.@
+`"…… Sorry.@ I feel----bad.@ I want, to, sleep, is there, any, medicine?"@
+`"Yes, I will go get some."\
+
+!w2000
+ld c,":a;image\tachi\his_t18.jpg",%type_crossfade_fst
 
 `"Thank you for waiting.@ Please drink this."@
 `"Thank you, as always, and sorry."@
-` I take the water and the powdered medicine that Hisui brought me.@
+` With eyes that can't quite see too well, I take the water and the powdered medicine Hisui brought me.@
 ` For some reason, there are two kinds of medicine.@
-`"Huh?@ Two?@ What are they?"@
-`"Yes, I told my sister that you were not feeling well, and she gave me some medicine she had prescribed from your doctor.@
-` This one is to help you sleep.@ This contains benzodiazepine, which is known for being able to produce a relaxed sleep."\
+` …… I don't care, so I put both of them in my mouth and drink the water.@
+ld c,":a;image\tachi\his_t29.jpg",%type_crossfade_fst
 
-`"…………?"@
-` I trust Kohaku-san, but she doesn't have to tell Hisui all this in-depth knowledge…
-ld c,":a;image\tachi\his_t23.jpg",%type_crossfade_fst
+` Apparently, it works fast; I start to feel sleepy already.\
 
-`"…… Wow, does Kohaku-san plan on becoming a licensed pharmacist?"@
-` Saying that, I drink the medicine.@
+`"…… I'm going to sleep.@ Until tomorrow----"@
+`"Don't worry, no one's going to bother you, Shiki-sama."@
+` Hisui giggles and I sense her walking away.@
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
 
-ld c,":a;image\tachi\his_t19.jpg",%type_crossfade_fst
-
-` I drink the water to gulp down my medicine.@
-` Apparently, it works fast; I feel sleepy already.\
-
-`"…… I'm going to sleep.@ Please wake me when it's dinner time."@
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"I understand.@ Well then, excuse me."@
-
-cl c,%type_lshutter_mid
-
-` Hisui leaves.@
-` My consciousness starts to fade.@
+` My consciousness starts to swim.@
 br
-` …… I'll sleep just a little bit.@
-` It's still bright outside.@
-` Because it's during the day, I shouldn't see any of those horrible dreams---\
+` ---I'll go to sleep.@
+` My head hurts so much right now---I don't even care if I see those bad dreams or not.\
+!w4000
 
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+
+mov $phasebg,"image\bg\cmo_14.jpg"
+mov $phasetitle_a,":a;image\word\PHIS_07B.PNG"
+mov $phasetitle_b,":a;image\word\day_07.png"
+gosub *left_phase
+
+
+
+!w1000
+bg "image\bg\bg_25b.jpg",%type_tshutter_mid
+play "track06.ogg"
+
+
+` ---I am in the night-shrouded town.@
+br
+` I got here somehow.@
+` Is this a dream?@ If so, why am I here?@
+`"-------"@
+` No, the reason is clear.@
+` I'm out on the streets in the middle of the night because of the killer---in order to look for the killer and find the killer.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_27b.jpg",%type_crossfade_fst
+
+
+` I wander around aimlessly.@
+` I wonder how late it is?@
+br
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_26a.jpg",%type_crossfade_fst
+
+` …… I don't see anyone suspicious.\
+br
+bg "image\bg\bg_12b.jpg",%type_crossfade_fst
+
+` …… There's no point in coming here.@
+br
+bg "image\bg\bg_24c.jpg",%type_crossfade_fst
+
+` …… I don't see any sign of the killer.\
+
+bg "image\bg\bg_25b.jpg",%type_crossfade_fst
+
+`"---------"@
+` …… My legs become heavy.@
+` Somehow, everything feels unreal.@
+` The atmosphere is getting weaker.@
+` Time is degrading.@
+` My sense of people around me becomes dreadfully surreal.@
+br
+bg "image\bg\bg_30b.jpg",%type_crossfade_fst
+
+` …… But the sense of smell feels real.@
+` The odor that tugs at my nostrils.@
+` It's floating from over there.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+monocro #ff0000
+bg "image\bg\bg_31b.jpg",%type_nowaitdisp
+
+br
+` ----That was the final stop.@
+br
+` Just like my dream from last night, a dead body of someone I don't know is there in the back alley.\
+
+` It's a woman.@ Her face is scraped from her chin to her nose, and I can't tell now if she is beautiful or not.@
+` The flowing blood is incredibly sticky, and it reminds me more of red jelly than liquid.@
+` From her body, her internal organs bloom out like the legs of an octopus.@ The pink mass of dead organs shines and looks warm.@
+br
+` In front of that corpse,
+` a black, truly black figure is crouched and seems to be crying.\
+
+`""-------Who are you!?""@
+` Our voices overlap each other.@
+` I ask him who he is, and he asks me who I am and turns.@
+`""I am----""@
+`"A killer." …… But which one of us said that?@
+br
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+
+` Well, after all, this is a dream.@
+` So I play around a bit, and with a small amount of hope, I say that I am the killer.\
 playstop
 
-!w2000
-bg "image\bg\bg_40c.jpg",%type_crossfade_mid
+bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+waveloop se1
 
 
-ld c,":a;image\tachi\his_t16.jpg",%type_lshutter_fst
+`"Eh---------?"@
+` The dark figure tilts his head, puzzled.@
+` The man crouching in front of the dead body looks at me, as if trying to compare the two of us.@
+` During that moment,
+` in that emptiness, I get certain.@
+`"--------Heh."@
+` A laugh escapes my throat.@
+` This man is a fake.@
+` The puzzled figure in front of the corpse, and myself not feeling anything.@
+` If you ask which one of us is more like a killer, the answer is simple.\
 
-`"Please excuse me.@ Good night, Shiki-sama."@
-
-cl c,%type_lshutter_fst
-
-` With a bow, Hisui exits the room.\
-
-` I yawn heavily.@
-` …… I'm still just a little sleepy.@
-` Kohaku-san's medicine was pretty strong, so I spent most of dinner in a daze.@
+`"…… Is it you?"@
+` The man says with trembling voice.@
+` I stifle my laugh and naturally, as if I'm shaking his hand, stick my knife into his chest.@
 br
-` It's only about nine o'clock.@
-` I took a nap already, so it's a little early to be sleeping.\
-
-bg "image\bg\bg_40d.jpg",%type_nowaitdisp
-
-
-` At ten o'clock, the lights in the mansion are turned off.@
-`"…… Well then, what should I do?"@
-` I say this calmly, but I really have no idea what I should do.@
+` ---------Eh?@
 br
-` …… Just what are the dreams that I keep seeing?@
-` Am I just like my father, who does things unconsciously, and did I really kill anyone?\
+` A voice shows his surprise.@
+` Even though he's about to get killed, he is sluggish enough not to move.@ It makes me sick that this guy was calling himself a killer like that.\
 
-` …… No, there's something not right about this interpretation.@
-` If I left the mansion and walked the streets, Kohaku-san and Hisui would definitely notice something.@
-` I can't explain the fact that I wake up in my bed clean when there's so much blood splattered on me.\
+bg "image\bg\ima_12.jpg",%type_lshutter_fst
 
-`"……… There's only one way to know for sure."@
+
+` I vomit as I slice him.@
+` Like a paper doll, he crumbles to pieces.\
+` Like a pouring bucket full of water, his blood paints my body crimson from head to toe.@
 br
-` Yes, if I want to prove everything---
+` Drip drip, drip drip.@
 br
+` His blood drips from my hair.\
 
+bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+
+
+` I let out a deep breath.@
+br
+` Before my eyes is yet another dead body.@
+` In my hands is my steaming knife.@
+` The killer is dead, and the town is now safe like before.\
+
+br
+br
+br
+br
+br
+br
+` ---But that still leaves me.\
+
+` Even if the town returns to normal, I still remain affected.@
+br
+` The killer still exists.@
+br
+`"………… Let's go home."@
+` Yes, I should go home.@
+` Affected as I am, I should go back to the mansion.@
+` Nothing has changed.@
+` I'll live normally as Tohno Shiki, and continue the nightmare at night.\
+
+br
+` ---Really, nothing at all.@
+br
+` It's just a matter that instead of dream becoming a reality, it's just that I won't wake up from my dream anymore.@
+
+monocro off
+bg "image\bg\ima_18.jpg",%type_crossfade_fst
+
+br
+` I think I heard the faint chuckle of a small girl.@
+` That's just a trivial matter, though.@
+` I have to go to sleep, and wait for my dream to continue again tomorrow night----\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+wavestop
+
+!w3000
+
+
+
+
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
 
 return

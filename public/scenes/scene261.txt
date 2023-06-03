@@ -1,290 +1,179 @@
 
-mov $phasebg,"image\bg\bg_29b.jpg"
-mov $phasetitle_a,":a;image\word\PCEL_07A.PNG"
-mov $phasetitle_b,":a;image\word\day_07.png"
-gosub *left_phase
+bg "image\bg\bg_33a.jpg",%type_nowaitdisp
 
-bg "image\bg\ima_11.jpg",%type_crossfade_slw
+` ---But still, I can't ignore Akiha and go right to school.@
+` …… I want to find out about Senpai right away, but first I should explain to Akiha about last night.\
 
+bg "image\bg\bg_34a.jpg",%type_lcartain_mid
 
-br
-` I'm watching a dream.@
-` A vague dream without any particular significance.@
-br
 
+` Akiha is the only one in the sitting room.@
+` Kohaku-san is in the kitchen, humming away.@
 
-bg "image\event\ark_e01.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
+`"……………"@
+` Akiha doesn't say anything when she sees me and sips her tea quietly.\
 
+`"Good morning, Akiha."@
+` Resisting the urge to go to school, I greet her as naturally as possible.@
+` Akiha's eyebrow twitches as she places her teacup down and slowly looks at me.\
 
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
 
+`"Good morning Nii-san.@ It was quite late when you came home last night, wasn't it?"@
+`"…… No, not really.@
+` It was at most a little past one o'clock, quite normal for a healthy young man in high school to be up, right?"@
+`"I see.@ My bedtime is also past midnight so I was up at that time.@ But I would come home much earlier than that."\
 
-` Do I like her?@
-br
+`"Yeah, even I was home earlier, wasn't I?@ …… I just had something to do, so I was out for a little bit---"@
+ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+`"Without permission?@ You acted like you were out doing something you felt guilty over."@
+`"Uh……"@
+` Her stare is pure ice.@
+` …… This is the second time, and I'm sure even though Akiha looks calm, she is quite angry.\
 
+`"--Nii-san.@
+` I don't know what went on at the Arima house, but here the curfew is eight o'clock.@ It is a rule that must not be broken.@
+` The gate will be locked after that, so please don't climb in like a robber."@
+`"Oh----you knew?"\
 
-bg "image\event\ark_e02.jpg",%type_crossfade_fst
+`"…… The surveillance camera showed me quite clearly.@
+` It is a good thing Kohaku-san realized it was you and turned off the alarm system because otherwise you would probably be detained right now, Tohno Shiki."\
+`"…… Oh.@ I should thank Kohaku-san then.@
+` And, um, Akiha, I'm sorry.@ I shouldn't have kept quiet about it."\
 
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+`"…… If you understand, then it is fine.@ Please make sure you observe your curfew from now on.@ I will overlook it this time."@
+`"…… About that, Akiha."@
+`"What is it?"@
+`"…… This is a little hard to say.@ I… have something to do tonight too.@ I don't know when I will be back, but I'm not going to do anything bad---"\
 
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
+`"----------"@
+` Her gaze sharpens.@
+`"Kohaku!"@
+` She suddenly stands up.@
+cl c,%type_lshutter_mid
+` Kohaku-san comes in from the kitchen.\
 
+ld r,":a;image\tachi\koha_t03.jpg",%type_lshutter_mid
+`"Yes, what is it, My Lady?"@
+ld l,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
 
-` I don't know my true feelings, but I can't deny the reality that I'm always concerned about her.\
+`"I will be going to school, get the preparations ready."@
+`"Huh?@ But I have not yet made Shiki-san's breakfast."@
+ld l,":a;image\tachi\aki_t06.jpg",%type_crossfade_fst
 
+`"You can leave this person alone.@ It seems he can do everything by himself."@
+cl l,%type_lshutter_fst
 
-bg "image\event\cel_e02a.jpg",%type_crossfade_fst
+` Akiha strides towards the lobby.\
 
 
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
+` Kohaku-san sighs.@
+`"…… Shiki-san, you should not make Akiha-sama so upset.@ You are her big brother, so please treat her better, okay?"@
+` Saying that, she walks after Akiha.@
+cl r,%type_lshutter_mid
+` The teacup sits, still steaming.\
 
+` ……………… *sigh*@
+` I know it's my own fault, but I won't have any breakfast today.@
+` But, it is convenient in a way.@
+` It is now just seven o'clock.@
+` If I run to school now, I should be able to get there around half past seven----\
 
-br
-` Do I like her?@
-br
-
-
-bg "image\event\cel_e03a.jpg",%type_crossfade_fst
-
-
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-
-
-` …… I don't know.@ It's just that when I was completely lost within myself, she helped me.@
-br
-` If she wasn't there,
-` I may have just died under the pouring rain.\
-
-
-bg "image\event\cel_e04.jpg",%type_crossfade_fst
-
-
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-
-
-br
-` ----I don't know.@
-` That's why I have to ask.@
-` Why she is doing this.@
-` Why her eyes are so devoid of any emotion----\
-
-
-`"---Shiki-sama."@
-` …… I can hear Hisui's voice mingling with the morning light.@
-`"---Shiki-sama, it is time.@ Please wake up."@
-` Her inflectionless voice awakens me.\
-
-
-bg "image\bg\bg_40e.jpg",%type_crossfade_slw
-
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_mid
-
-
-`"------"@
-br
-` As soon as I wake up, terrible things enter my vision.@
-` I get a headache like I was just shot in the head.@
-`"Ah----"@
-` I almost lose my just awakened consciousness.@
-` Before I fade away completely, I quickly grab my glasses.\
-
-
-bg "image\bg\bg_40a.jpg",%type_crossfade_slw
-
-play "track02.ogg"
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-
-`"Shiki-sama……?@ Are you not feeling well?"@
-`"…… No, that's not it.@ It's just my anemia acting up."@
-` Lightly shaking my head, I clear my head of what I was seeing.@
-`"More than that, good morning Hisui.@ Thanks for waking me up."@
-` Sitting up in bed, I do my best to smile naturally.\
-
-
-
-`"No, this is my duty.@ There is no need for you to thank me, Shiki-sama."@
-`"Maybe, but I am grateful.@ You are infinitely better than an alarm clock."@
-br
-` I stand up.@
-` It's not yet seven o'clock---about ten minutes earlier than I usually get up.@
-br
-`"…… Hmm, breakfast?@ I'll be there soon, so please go ahead of me."\
-
-
-ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
-
-
-
-`"Shiki-sama, about that, um---Akiha-sama is waiting for you in the sitting room.@ It seems she has some questions for you."@
-` Hisui says this with some difficulty.@
-`"…… Some things she needs to ask?@ …… Is she in a bad mood……?"@
-`"…… Yes.@ Akiha-sama seems to have realized that you left late last night, Shiki-sama."@
-`"…… Ah."@
-` I blurt that out without thinking.@
-` Last night, I went to look for Arcueid and came home late.\
-
-`"…… Uh-oh…… I thought no one noticed."@
-
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-
-`"Yes, I also thought that I was the only one who noticed."@
-` Hisui answers solemnly.@
-`"……?@ Hisui, you realized I left……?"@
-
-
-ld c,":a;image\tachi\his_t05.jpg",%type_crossfade_fst
-
-
-`"Oh……"@
-` Hisui looks very apologetic.\
-
-`"I see, you knew.@ No wonder the mansion's entrance was open."@
-`"……………… Yes."@
-` Hisui answers reluctantly.@
-`"Thanks, it was a big help.@ And, thanks for going out of your way to do that."@
-`"But Nee-san realized too because of that.@ Nee-san and I have two-hour shifts watching the mansion.@
-` And she found out about me unlocking the entrance---"\
-
-` …… I see now.@
-` Kohaku-san is Akiha's servant, so she would have leaked it to Akiha about last night.@
-`"Hisui, there is no need to apologize.@ It was my fault that I was walking around at night, so I should take the blame.@
-` I'm still very happy that you left the door unlocked."@
-
-
-ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
-
-
-`"-----"@
-` Hisui just looks at me.\
-
-`"…… Hm?"@
-
-
-ld c,":a;image\tachi\his_t05.jpg",%type_crossfade_fst
-
-
-`"…… It is nothing.@ As soon as you change, please go to the sitting room."@
-
-
-cl a,%type_lshutter_fst
-
-
-` Still looking like she wants to say something, Hisui exits into the hallway.@
-`"…… Dang, I'm going to get scolded by Akiha again."@
-` I mutter to myself as I change.@
-` If I have time for that---there's still something important I have to do instead.\
-
-playstop
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-
-
-bg "image\event\cel_e04.jpg",%type_crossfade_mid
-
-
-bg "image\bg\bg_40a.jpg",%type_crossfade_fst
-
-
-`"…… That's right, I have to talk to Senpai---"@
-br
-
-wave se0
-
-bg "image\bg\ima_11b.jpg",%type_nowaitdisp
-bg "image\bg\bg_40a.jpg",%type_nowaitdisp
-
-`"-----"@
-` I get the headache again.@
-` It faded when I was talking to Hisui, but as soon as she left, it started hurting again.@
-br
-`"Gh…… crap, this--doesn't look, like it will end, soon……"@
-` I bear the pain as I collapse on the bed.\
-
-wave se0
-
-bg "image\bg\ima_11b.jpg",%type_nowaitdisp
-bg "image\bg\bg_40a.jpg",%type_nowaitdisp
-
-` …… It doesn't ease up.@
-` Throb, throb.@ A pain like I'm being stabbed in the head.@
-br
-` …… It makes me completely forget what I was thinking about earlier.@
-br
-` Come to think of it, in the eight years since that accident, I've always had to deal with my broken body.@
-` Dizziness, headaches, and anemia occurring unexpectedly.@
-` I can't count how many things I had to give up because of that.\
-
-` The doctor said it was a miracle just surviving it.@
-` Just being able to live is a miracle, so putting up with various pains is perhaps necessary.@
-` …… These broken eyes.@ Sensei, who was able to alleviate these eyes, told me to treat that miracle very importantly.\
-
-wave se0
-
-bg "image\bg\ima_11b.jpg",%type_nowaitdisp
-bg "image\bg\bg_40a.jpg",%type_nowaitdisp
-
-
-` …… Those words.@
-` Did she mean that human life is not so much precious as it is not returnable, so I should treat it carefully?@
-br
-` These past few days, I've seen the deaths of many people.@
-` Too easily.@ Lives ending so easily, it's almost comical.@
-` If it is something that ends so easily, doesn't it mean that it was only worth that much from the beginning?@
-` If that's the case, it is meaningless to view life as precious.\
-
-wave se0
-
-bg "image\bg\ima_11b.jpg",%type_nowaitdisp
-bg "image\bg\bg_40a.jpg",%type_nowaitdisp
-
-br
-` ………… H, uh?@
-br
-` Why,          Since when,
-wave se0
-
-!w1000
-wave se0
-
-` am I,         did you start,
-wave se0
-!w1000
-wave se0
-
-br
-`    thinking like that?\
-
-wave se0
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-bg "image\bg\bg_40a.jpg",%type_crossfade_mid
-
-` …… *sigh*@
-` The headache finally stops.@
-`"…… Maybe I saw too much blood.@ What a horrible thought."@
-` I take a deep breath.@
-` Filling my lungs with fresh air, I clear away the unpleasantness.@
-`"---I should hurry up and go to school."@
-` I should go and see Ciel-senpai.@
-` Enduring the slight pain lingering in my head, I leave my room.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_01a.jpg",%type_lcartain_slw
 
-
-bg "image\bg\bg_33a.jpg",%type_lcartain_mid
-
-
-` I go down the stairs and into the lobby.@
-` Next to me is the hallway that goes down towards the sitting room.@
-` In front of me is the front door that leads outside.@
-`"………………"@
-` What should I do?@
-` Akiha is waiting in the sitting room, but I want to hurry up and see Senpai.@
+` I make it to the gate.@
+` It's about half past seven.@
 br
+`"…………"@
+` I stand and wait for Senpai by the gate.@
+` It probably looks a little strange to the other students walking by, but I don't really care.\
+
+!w7000
+
+`"……………"@
+` Senpai doesn't show up.@
+` The school gate is flooded with students as they arrive.\
+
+!w5000
+
+` There's only about five minutes before the gate closes.@
+` But Senpai still does not come.\
+
+`"………"@
+` She---might not come today.@
+` Yesterday, I saw all that happened, so she might not come today, or tomorrow, or the day after---
+br
+` ---Thump.@
+br
+`"……… Ah."@
+` Thinking that, I feel a little faint.@
+` I shake my head to clear it of terrible thoughts.\
+
+` …… And then,
+` someone pats me on the shoulder from behind.@
+br
+ld c,":a;image\tachi\cel_t07a.jpg",%type_lshutter_fst
+`"Tohno-kun, what are you doing here?"@
+`"Se, Senpai……!?"@
+`"Yes."@
+` Senpai nods.\
+
+`"R, really……!?@ But yesterday, you were---"@
+` Mph.@
+` Before I can finish, Senpai puts her hand over my mouth.\
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"Tohno-kun, not here.@ Let's go behind the gymnasium."@
+` Senpai gives her usual smile as she keeps her hand over my mouth and pulls my arm.@
+cl c,%type_lshutter_fst
+
+`"…, …!"@
+` I try to tell her to stop, but I can't speak.@
+` She forcefully pulls me away.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_05a.jpg",%type_lcartain_mid
+
+play "track03.ogg"
+
+wave se2
+
+
+` ----The school bell rings overhead.@
+
+!w5000
+
+` …… Homeroom has begun.@
+` Furthermore, no one else is around.@
+br
+ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+
+`"Yes, no one can hear us here."@
+` Senpai finally releases me.@
+` Jumping back, I face Senpai directly.\
+
+`"You want to talk about last night, right?@ If there's anything you want to say, please go ahead, Tohno-kun."@
+` Senpai speaks calmly.@
+` As if what happened last night was not a big deal.@
+`"……………!"@
+` But it was a big deal for me.@
+` Her attitude right now makes me mad.\
+
+`"So that really was you last night……!?"@
+`"Yes.@ I did say your name back then too, so it's impossible to hide it any longer."@
+cl c,%type_crossfade_fst
+
+`"…………!"@
+` I grit my teeth.@
+` …… I didn't expect an apology or anything, but still---\
+
+
 
 
 

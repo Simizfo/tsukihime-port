@@ -1,253 +1,181 @@
 
-
-bg "image\bg\bg_31b.jpg",%type_crossfade_fst
-
-` ----I just want her.@
-` There's no mistaking that.\
-
-`"Shi…… ki……?"@
-` She still sounds like she has some reason left.@
-br
-` ----I don't like that.@
-` I've long since gone insane thanks to Arcueid.@
-` But for her to stay sane like that, I can't let it go.\
-
-` *pant* *pant* *pant*@
-` I release her.@
-` Her arms fall to the ground.\
-
-`"Shiki----are you sane again……?"@
-` She sounds relieved.@
-` Without answering----I grab her skirt and tear it from her body.\
-
-bg "image\event\ark_h03.jpg",%type_lshutter_fst
-
-`"----!@ No, stop it Shiki!"@
-` Her hips rise up.@
-` Her hands move to push me away.\
-
-` I don't care.@
-` I push my groin against her waist.@
-`"I said stop……!@ Snap out of it.@ Snap out of it Shiki----!"@
-` She tries to move back, but it's too late now.@
-` Freeing my imprisoned member from my pants, I forcefully enter her.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-
-bg "image\event\ark_h04.jpg",%type_crossfade_fst
-
-`"H----!"@
-` There are no wet sounds.@
-` Her dry, unprepared inner walls resist my entrance.@
-` They resist, but they can't stop me.@
-` Ignoring the tightness around me, I slide deeper.\
-
-`"Sto----ow, it hurts----Shiki………!"@
-` She pushes up against my body in an attempt to stop me.@
-` But there's no power in her arms.@
-` Is it because of the pain?@ Is it that she doesn't have any power left?@
-` Either way, I don't intend to stop.@
-` My throbbing tool burns inside of her.\
-
-` Since it's dry, it's even painful for me.@
-` This pain, and the intense pressure around me, assails my senses.\
-
-` Pain and pleasure are so close they're nearly indistinguishable.@
-` My shaft seems perfectly eager to seek either one.@
-` As I continue to slide inwards,
-` the pain and the feeling of her walls encircling me burn into my brain.\
-
-`"Nh----!"@
-` Twitch.@
-` Her hips rise upwards.@
-` Slide.@
-` After a feeling of breaking through an unseen barrier, my shaft is coated with something wet.@
-`"Hwa, ah----ah, n---!!!"@
-` A pained gasp.@
-` Arcueid's body twists and tries to escape.@
-` …… From deep inside of her comes a mixture of clear liquid and red blood.@
-` No wonder she was tight.@
-` If it's her first time----pain should be overwhelming pleasure.\
-
-`"Ha----haha, ha."@
-` Then I just have to go farther.@
-` Fortunately, she's moist with blood inside.@
-` I pull back, and plunge in once more.\
-
-`"Nhaa……!"@
-` Sticky, sexual sounds rise between us.@
-` As I enter, her body shakes.@
-` Over and over.@
-` Almost smashing myself against her,
-` faster than my mind can process, the sensations inside her body assail me,
-` I pound her again and again, like a boxer slamming a punching bag.\
-
-` More panting fills the air.@
-` Her breathing is totally wild.@
-` So she cannot think, I pound into her as hard as I can.@
-` Appropriately, she grows even hotter inside.\
-
-`"Haa, ah, hwa, ah, oh----!"@
-`"Ggah………!"@
-` I let out a groan.@
-` She's so hot----It feels like I'll melt.@
-` Just pushing myself into her causes intense waves of pleasure to swell up inside of me.@
-` Not just around my shaft, but my whole body feels like it's being sucked up.@
-` As if----I was trying to push my entire being inside of her.\
-
-`"Ga-----"@
-` I try to keep myself from exploding.@
-` I can't stop.@
-` The only sound filling the air is the lustful noises of flesh and fluids.@
-` ----I don't understand.@
-` Maybe I just didn't realize it, but I feel like I've exploded numerous times already.@
-`"N----, ngah, n, ah, n……!"@
-` Her fingers match my rhythm as she scratches my arms.@
-` Red claw marks.@
-` The sight of my blood only seems to encourage her.\
-
-`"Tsah---!"@
-` A primitive copulation where I only move my hips.@
-` In the midst of the pleasure, I'm losing my strength.@
-` At first, it was only me.@
-` But it's different now.@
-` We move like beasts, demanding more.\
-
-`"Shi…… ki……!"@
-` A jolt runs through me as I hear my name being called.@
-` I've forgotten until this moment.@
-` That I was a human called by that name.@
-`"Gah----!"@
-` With all my strength, I plunge deeper, as if trying to reach her very core.@
-` The feeling of release.@
-` The burning inside of me bursts forth.\
-
-` Thump.@ Thump.@
-` I can't stop the convulsions.@
-` Even after I climax, she still continues to stimulate me.@
-`"Kka-----!"@
-` I try and pull back, but she wraps herself around me, draws me in, and does not let me escape.\
-
-`"Ah----gh…………!"@
-` I can't get away.@
-` I've already gone past my limit, yet she continues to drain me.@
-` Thum… p.@
-` Thump.@ Thump.@ Thumpthumpthumpthump……!!\
-
-`"Ah----ha, ah------"@
-` My tongue hangs from my mouth.@
-` Saliva drizzles forth in my ecstasy, and my mind clears.@
-` I'm going to die.@
-` A destructive wave of pleasure building to a climax powerful enough to bring death.@
-` It courses through my entire body.\
+mov $phasebg,"image\bg\bg_31b.jpg"
+mov $phasetitle_a,":a;image\word\PARK_10A.PNG"
+mov $phasetitle_b,":a;image\word\day_10.png"
+gosub *left_phase
 
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
-
-wavestop
-
-bg "image\bg\bg_31b.jpg",%type_crossfade_mid
+bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 
 play "track09.ogg"
 
-` I breathe harder.@
-` The strength drains from my body.@
-` I collapse onto Arcueid as I try in vain to catch my breath.\
-
-` Her white skin is now tinged red.@
-` Her normally cool body burns with heat.@
-` Pricking my ears,
-` I can hear her breathing, still faintly accented with lingering pleasure.\
-
-` Panting, and gasping for air.@
-` Completely weak, and numbed by what I've just done, I can't think.\
-
-` We remain like this for some time.@
-` Residual waves of pleasure still crash upon my brain, and all I can do is look at Arcueid as she lies there----.@
-
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-bg "image\bg\bg_30b.jpg",%type_crossfade_mid
-
-` …… I don't know how long it's been.@
-` It felt like many hours, but maybe it was only a matter of minutes.@
-`"------"@
-` I pull back from her body and scratch my chest.@
-` My headache is gone and my heart has returned to normal.@
-` The urges rampaging in my heart have also disappeared and I finally start to comprehend what I just did.\
-
-`"----What----have I…"@
-` I can't believe it.@
-` But the memory is all too clear.@
-` How I pushed her down.@
-` How I choked her and held my knife over her.@
-` …… and the disgraceful things I did afterwards.\
-
-`"------"@
-` I don't know what to say.@
-` Arcueid adjusts her clothes and stands up.@
-` I----don't know how to apologize.@
-` Just saying sorry… how can that make it up?@
-`"----Arcueid, I----"@
-ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
-
-`"Don't worry about it…… I'm the one who should apologize."@
-` She looks away uncomfortably.\
-
-`"Wha--what are you saying?@ I was the one who did something wrong.@ If only----I had been stronger, that never would have happened."@
-ld c,":a;image\tachi\ark_t17.jpg",%type_crossfade_fst
-
-`"No.@ I don't think it was something you could have resisted because you saw my 'Mystic Eyes'."@
-`"Eh----?@ Mystic Eyes?@ Like, Nrvnqsr's eyes……?"\
-
-ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
-
-`"…… Exactly.@ I wasn't sane earlier.@ I was so thirsty, I couldn't control myself.@
-` That's why----I found some of The Dead, and tried to replace that urge with the urge to destroy to stave it off.@
-` Back then, I was unable to hold myself back----so that's why you saw my Mystic Eyes when you came."@
-`"…… Certainly I felt odd from the time I saw your golden eyes----but that's just that.@ I, with my own will--"\
-
-`"No, that's wrong.@
-` Shiki, my Mystic Eyes of Enchantment completely captivate whoever looks upon them.@ …… I think that's why you started to feel all those sexual desires."@
-`"--That----can't be right."@
-` Because even if she wasn't controlling me.@
-` I, I might, still like her.\
-
-`"Anyway, this was all because of my carelessness.@ …… I'm sorry, Shiki.@ I manipulated your body without any regards to your feelings."@
-cl c,%type_crossfade_fst
-` Her gaze shift away as she says this.@
-` …… Being apologized to like this hurts my heart.@
-` Because I didn't feel like I was manipulated at all.@
-` Rather----it seems like I used it to obey my own lust.\
-
-`"Arcueid, I----"@
-ld c,":a;image\tachi\ark_t17.jpg",%type_crossfade_fst
-`"Don't apologize.@ …… Shiki, this was all an accident.@ I'll forget about it, so please forget about it too.@ I think it's better for the both of us that way."@
-cl c,%type_lshutter_mid
-
-` Saying that, she starts to walk quietly.\
-
-`"…… Arcueid……?"@
-ld c,":a;image\tachi\ark_t22.jpg",%type_crossfade_fst
-
-`"----I think this is enough for tonight.@ I killed all these Dead tonight, so it's probably useless to search any further."@
-`"…… That's fine, but what do we do with that mountain of dead bodies?@ If someone finds it, there'll be trouble."@
-`"There's no need to worry.@ Once something becomes a vampire and dies, it won't leave a trace.@ Those who refused to return to the Earth become ash to be scattered in the wind once they die.@ They will return and disperse on their own in a while."\
-cl c,%type_lshutter_mid
-
-
-` Without turning around, she disappears from the alley with weak steps.@
+` ----It's morning.@
+` I open my eyes and put on the glasses near my bed.@
+` Looking out the window, I see a cloudless blue sky.@
+br
 `"………………"@
-` I can't stop her now.@
-` I still feel the sensation of Arcueid on both my hands.\
+` Even though a flawless morning greets me, I can't help but feel down.@
+` There's no need to wonder why.@
+` What happened with Arcueid last night sticks in the back of my mind, and the accompanying guilt troubles me.\
 
-`"----Idiot.@ What a stupid idiot I am."@
-` I groan to myself.@
-` In the alley which became a stage of tragedy, I look up at the moon in remorse.\
+`"…… She said we should just forget it----but I can't forget such a thing."@
+` I look at both my hands.@
+` Those fingers still remember how Arcueid felt.@
+` Even now I remember the texture of her skin and her cool, gliding body temperature.@
+` I wasn't thinking at all back then, but I understand it all now.\
 
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
+` After doing such a thing.@
+` Arcueid said to forget and pretend like it never happened.@ But while I regret it totally, I can't even forget one little bit of it.@
+` What I regret is not being able to control myself back then.@
+br
+` If I didn't touch her like some animal, if I touched her more like a human, how would things have----\
+
+br
+` ----I knew it.@
+br
+` I didn't lose myself by looking into her golden eyes.@
+` I didn't realize it, but I was caught up in her a long time ago.@
+br
+` To realize such a simple thing just now----\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_34a.jpg",%type_lcartain_slw
+
+` The morning in the Tohno mansion is the same as always.@
+` Hisui comes to wake me.@ Akiha and Kohaku-san are in the sitting room, and we greet each other briefly before we go to school.@
+br
+` The same as always.@
+` Yet I feel so empty, I can't even respond properly when people talk to me, and I leave the mansion vacantly.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w1000
+
+bg "image\bg\bg_01a.jpg",%type_lcartain_slw
+
+
+` The students streaming through the gate are all bright and cheerful.@
+br
+`"Oh yeah.@ Today is Saturday."@
+` My sense of time has totally disappeared since Arcueid came into my life.@
+` The first time I met her was on a Friday.@
+` A week ago in the morning, she was waiting for me at the intersection in front of school.\
+
+`"…… She was smiling, I think."@
+` Come to think of it, she was smiling.@
+` Even though she was waiting for the one who killed her, she was waiting for the killer Tohno Shiki with excitement in her eyes.@
+br
+`"…… I wonder why?@ If she comes tonight, maybe I'll ask her."@
+` After thinking aloud, my spirits sink further.@
+` She probably won't come to the park.@
+` The feeling that last night was our final meeting turns over in my mind.\
+
+` My heart is heavy and everything else simply feels empty.@
+` I may not ever see her again.@ The regret hangs around me like a leaden chain----\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_06a.jpg",%type_lcartain_slw
+
+` I sit at my desk.@
+` It's about five minutes until homeroom starts.@
+` I stare outside blankly, not wanting to do anything.@
+ld c,":a;image\tachi\ari_t01.jpg",%type_lshutter_fst
+`"Yo, delinquent.@ You skipped class yesterday.@ What the heck were you doing, Tohno-kun?"@
+`"…………"@
+` I let out a heavy sigh.@
+` Usually I would, but today I don't feel like talking with Arihiko at all.\
+
+ld c,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+`"…… What's with you?@ You don't look happy at all.@ You didn't come to school yesterday and now you come back an empty shell.@ If you're like that, school's no fun."@
+` Arihiko slumps his shoulders exaggeratedly.@
+br
+`"-----Arihiko.@ Sorry, but can you leave me alone today?@ If I'm not here, you can always talk with Senpai.@ Actually, isn't that better for you?"@
+`"Huh----?@ Senpai?@ I don't know any third year students."\
+
+`"…… What are you saying?@ Ciel-senpai's in third year, not second.@ …… Well, sometimes you think she's younger, but Senpai is a senpai after all."@
+`"Shiel-Senpai?@ …… Who's that?@ Are there any foreign students at our school?"@
+` He seriously tilts his head in thought.\
+
+`"What are you saying, Senpai is Japanese……"@
+br
+` No, wait.@
+` No one ever said she was Japanese.@
+br
+`"…… Well, no one said she was, but everyone called her Ciel-senpai."\
+
+`"That's what I'm saying, who is this senpai?@ What's wrong Tohno, are you sick or something?"@
+` I can't hear his banter.@
+cl c,%type_crossfade_fst
+
+
+\
+
+`"Wha………………"@
+` That's right.@ Why didn't I realize such an obvious inconsistency?@
+` Ciel isn't a Japanese name at all.@
+` Even though I know her, I don't even know her full name.@ I don't even know what class she's in.@
+br
+` To begin with,
+` when I first met her, why did I feel like I knew her for a long time……?\
+
+`"------!"@
+` My chair clatters as I quickly stand up.@
+ld c,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+
+`"?@ What's wrong, Tohno?@ You've been acting too funny."@
+`"I'm going to the office.@ Sorry, but please say that I'm here during attendance."@
+cl c,%type_crossfade_fst
+
+` Turning away from Arihiko whose head is tilted in confusion, I dash out of the classroom.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w1000
+
+
+` I investigate the third year roster for the name Ciel, but as expected, it isn't anywhere to be seen.\
+` To be sure, I ask the teachers in the office, but none of them remember Ciel-senpai.\
+
+!w1000
+
+bg "image\bg\bg_06a.jpg",%type_crossfade_mid
+
+` The end of classes.@
+` Being a Saturday, right after homeroom all my classmates scatter and run out of the room.@
+br
+`"----"@
+` Saturday is finally here, but I don't feel like doing anything.@
+` Feeling like The Dead, I walk home by myself.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w1000
+
+bg "image\bg\bg_33b.jpg",%type_lcartain_slw
+
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
+`"Welcome back, Shiki-sama."@
+` Hisui greets me as I return.@
+` Even though she's waited all this time, I can't even return a greeting and I go to my room.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w1000
+
+bg "image\bg\bg_40c.jpg",%type_crossfade_mid
+
+` ----After dinner, I return to my room.@
+` It's close to the promised time with Arcueid.@
+`"…… Shall I be going?"@
+` I don't even know if she's coming.@
+` But still, I swore never to break a promise again, so I have to go.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_29b.jpg",%type_lcartain_slw
+
 
 playstop
 
-!w4000
+` I arrive at the park shortly before ten.@
+` There's absolutely no one here.@
+` Sitting on the bench, I stare at the clock and wait for Arcueid to come.@
+br
 
 
 

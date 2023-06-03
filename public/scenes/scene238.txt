@@ -1,38 +1,42 @@
 
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+
+br
+` ---I'll search at school.@
+br
+` I know she's absent, but… right now, this school is the only connection I have to her.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_11b.jpg",%type_lshutter_mid
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
 
 
+bg "image\bg\bg_06f.jpg",%type_lshutter_mid
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_10b.jpg",%type_lshutter_mid
 
-
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_24a.jpg",%type_lcartain_mid
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_25a.jpg",%type_lcartain_mid
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_27a.jpg",%type_lcartain_mid
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_29a.jpg",%type_lcartain_mid
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-bg "image\bg\bg_23b.jpg",%type_lcartain_slw
-
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_03b.jpg",%type_lshutter_mid
+bg "image\bg\ima_10.jpg",%type_tshutter_slw
+bg "image\bg\bg_01b.jpg",%type_bshutter_slw
 
 
 ` The sun sets.@
-` Even after running everywhere in town, there's no sign of Yumizuka Satsuki anywhere.@
+` Even after looking everywhere at school, there's no sign of Yumizuka Satsuki anywhere.@
 br
 `"………… Gah."@
 ` I bite my lip angrily.@
 ` …… But it's not anger over not finding her.\
+` Two days ago, I'm mad at myself for promising such a thing in the first place.\
 
-` Two days ago.@
-` I'm mad at myself for promising such a thing in the first place.@
 br
-` --Help me when I'm in a pinch, okay?@
+` ---Help me when I'm in a pinch, okay?@
 br
 ` Yumizuka said that, and I answered lightheartedly.@
 ` I would help, as much as I could.@
 ` …… Such an irresponsible answer.@
 ` There's really nothing I can do.@
+br
 ` She said it hurt.@
 ` I can't even find Yumizuka, painfully suffering in the cold darkness.\
 
@@ -44,5 +48,6 @@ br
 ` I'll go back to the mansion and calmly think this through.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-!w500
+!w1000
+
 return

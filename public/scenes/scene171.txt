@@ -2,106 +2,150 @@
 
 bg "image\bg\ima_10.jpg",%type_lcartain_slw
 
-bg "image\bg\bg_25a.jpg",%type_lcartain_mid
+bg "image\bg\bg_27a.jpg",%type_lcartain_mid
 play "track03.ogg"
 
-` For the time being, we go into town.@
-` All that's left is to branch off the main street and go to the empty alley----\
+` The weather's great so I decide to go to the park.@
+` We can relax there and then go somewhere else more appropriate later.\
+
+bg "image\bg\bg_28a.jpg",%type_lcartain_mid
+
+` We enter the park.@
+` It's still midmorning but there's a bunch of people my age here.\
 
 ld c,":a;image\tachi\ark_t01a.jpg",%type_lshutter_mid
-`"Huh?@ What is it, Shiki?"@
-`"Nothing.@ It's different that normal, so I was just a little confused."@
-`"?"@
-cl c,%type_crossfade_mid
-` Arcueid perplexedly cocks her head to the side.@
-` …… It seems like she doesn't notice at all.\
+`"Hm, there's a lot of people here during the day.@ I've met you here a lot, but it seems like a totally different place."@
+` Arcueid seems to be in a good mood.@
+` I just planned to walk around the park, but she doesn't seem discontent at all.\
 
-` I can feel the weight of stares all around me.@
-` Just walking down the street causes people all around to cast glances at us.@
-` …… It doesn't need to be said, but it's probably because Arcueid really stands out.\
+`"Oh, there's a store in a place like this.@ Shiki, what does that sell?"@
+` Arcueid points excitedly at a vendor's stand.@
+` The path from the fountain leads to a wheeled ice cream stand.\
 
-` I'm a little aware of it, but everyone else's reactions make me even more conscious of it, and it's a bit troubling.@
-` Arcueid acts just like she normally does, but since I can't help but be overwhelmed by her femininity, I can't seem to make any meaningful conversation.\
+`"That's an ice cream seller out of season.@ Cold things aren't good for the body, so we should just pass it up for now." I stop Arcueid's question before she asks.@
+ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
+` No matter how unhappy a face she makes, I don't think eating ice cream in the fall would be good at all.\
 
-ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+` ----But, what is this strange feeling?@
+` I feel weird just walking, I feel everyone's watching us……\
 
-`"Hey, do you hear me Shiki?@ I'm asking you where we're going."@
-`"We're almost there so hold on.@ We're going somewhere you can relax."\
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"Hey Shiki, do you know all these people?"@
+`"No, there's only one person I know who'd skip school to hang around like that.@ Why?"@
+`"Hm, a lot of people seem to be looking at us, so I thought maybe you knew them."@
+`"…… I see.@ So that's what felt strange."\
+
+` I get it now.@
+` I was just walking around to find a good spot on the grass to sit down on, but everyone is stealing glances at us.@
+` It doesn't need to be said, but they're looking at Arcueid, not me.\
+
+` I've been doing my best not to be conscious of it, but Arcueid is just unbelievably beautiful.@ And walking in the park is just asking for stares.@
+br
+` The guys killing time in the park all start to look at her.@
+` …… For some reason, I feel angry.\
+
+`"Arcueid, let's go somewhere else."@
+` Grabbing her hand, I pull her as I walk towards the back of the park.@
+
+bg "image\bg\bg_29a.jpg",%type_lcartain_mid
+
+` The place we usually meet has much less people than right in front of the fountain.@
+` …… This should be little better than before, at least.\
+
+`"We'll kill time here a little bit.@ I'm going to get something to drink, you have any requests?"@
+` I let go of her hand and turn towards her.\
+
+ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
+`"U…… um, is water okay?"@
+`"Sure.@ Go ahead and sit on that bench…… if some guy starts to talk to you, just don't listen to him."@
+` Saying that, I run to a nearby vending machine.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_29a.jpg",%type_lshutter_fst
+
+` Even though it's now past noon, we don't leave the park.@
+` …… I'm not sure why, but Arcueid's been quiet since we came here.@
+` She hasn't even drank the water I got for her, and she just looks around the park doing nothing.\
+
+` We watch the flocks of pigeons around the park and the happily running figures of children accompanied by their mothers.\
+
+ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
+
+`"Hey, Shiki."@
+`"Hm?@ Are you bored just spacing out?@ We can go somewhere and get something to eat if you want."@
+`"No, that isn't it…… I was just wondering about what happened before."@
+`"……?"@
+` Before?@ …… What is she talking about?\
+
+`"I don't get it.@ What do you mean?"@
+`"I'm talking about when you grabbed my hand earlier.@ We've come into contact before, but there was always a reason.@ But just now, there wasn't a reason, so I was wondering just what it was."@
+`"What it was?----There really wasn't a reason or anything."\
+
+` Saying that, I also get confused.@
+` …… Come to think of it, I pulled her along naturally for no reason.@
+` That being said, I don't even understand why.\
+
+`"It doesn't really matter.@ It's not that big of a deal.@ Something sudden like that, is just human."@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"I see.@ Having lots of things done for no reason… you've done a lot of useless things."@
+` Arcueid replies, amazed.\
+
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+`"Hey Shiki.@ It's kind of off topic, but did you ever have a time like that?"@
+` She really is asking about random things.@
+` She's looking at the playing children, so she's probably asking about that.\
+
+`"…… Hmm, Maybe.@ I played around a lot as a kid, but that was only inside the mansion.@ I rarely ever played in a park like this."@
+br
+` …… That's right.@ My only playmates were Akiha and the others.@ I never played with people I didn't know like these kids.@
+br
+` I might have been more like…
+` A kid who led an insulated life.\
+
+`"What about you, Arcueid?@ …… Um, you don't have to talk about it if you don't want to."@
+` …… Um, if vampires didn't have a childhood, asking her would be rude.\
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"Yeah.@ Like you're thinking, I never had a childhood.@ While I was weak as an individual, I slept through it, and I was active only when my existence was at its peak.@
+` That's why I thought it was strange.@ Infancy and old age are such useless times, why do people manage to live through it?"@
+` She seems to be almost asking herself, not me.\
+
+`"…… Arcueid?"@
+`"It's nothing.@ This is the first time I ever spent time doing nothing, so my thoughts seem to be malfunctioning."@
+cl c,%type_crossfade_fst
+` Saying that, Arcueid stands up from the bench.@
+` I stand up with her.@
+` …… Well, we've already been in the sun for about two hours, so we should probably head into the city.\
+
+`"----Oh, if it was dull you should've told me so."@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"Hm, maybe it is dull, but it wasn't boring.@
+` I was even thinking I'd like to spend more time if it's this kind of dull, but you didn't like it?"@
+`"Eh……?"\
+
+` …… That's right, even if it was uneventful, it wasn't boring.@
+` Come to think of it, spending time sunbathing with Arcueid is something pretty rare.\
+
+`"----That's right, it wasn't bad at all.@ But, let's get something to eat.@ I haven't had anything since this morning, so I'm pretty hungry."@
+` Saying that, we start to walk from the park.\
+
+`"Hm------"@
+` For a brief moment, I think about holding her hand but I stop right away.@
+` There wasn't any reason for it before, so it felt natural to do so.@
+` But now that I have a reason to do so, to hold her hand seems very senseless.\
+
+` …… To be senseless means that taking notice is the result of less-than-pure thoughts.@
+br
+`"I'm full of theories today."@
+br
+` Geez.@ Just like Arcueid says, I guess I do a lot of useless things.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_slw
-bg "image\bg\bg_31a.jpg",%type_lcartain_slw
-
-
-br
-` ----And we arrive at the alley.\
-
-`"Here we are.@ People don't normally come by here, so you can relax here----"@
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-
-`"……………………"@
-` Huh----?@
-` Her gaze suddenly turns heartless, almost deadly.\
-
-`"Arcueid……?@ Don't tell me, you're not happy with this place……?"@
-`"……………………"@
-` …… She seems so angry she can't even speak.\
-
-`"That's odd…… You're a vampire, so I thought you would like a place like this better than somewhere crowded----"@
-ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
-
-`"----------!"@
-` The light in her eyes sharpens.@
-` …… This isn't good.@ This might be the first time I've seen her this angry.@
-cl c,%type_crossfade_mid
-\
-
-` Giving a deep sigh, Arcueid looks up again.@
-ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_fst
-
-`"Hey, Shiki.@ What kind of a joke is this?"@
-`"Ah----uh."@
-` Frightening.@ Her smiling face is really frightening.\
-
-`"No, um…… I'm really sorry.@ I really messed up."@
-` I bring my hands together and implore forgiveness.@
-` She keeps smiling.\
-ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
-
-`"That's right, there's really nothing to do here.@ The only thing we could do here is to replay the time we first met."@
-br
-` When we first met!?@ That means----
-br
-`"Yeah, the results may turn out a little different from back then, but that might be fun too, right Shiki?"\
-
-br
-br
-` ----This is a threat.@
-` She counterattacks with a smile.\
-
-`"…… I said I'm sorry.@ I'll make it up to you, so please stop smiling like that.@ I'll take you somewhere better."@
-ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
-
-`"Really?@ I was getting in the mood for it too."@
-` She looks disappointed.\
-
-` …… I really must contemplate my actions.@
-` Even though Arcueid is a vampire, I must have been really stupid to take her to an alley for a date……\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-!w1000
-
-bg "image\bg\bg_25a.jpg",%type_lcartain_mid
-
-` For four hours…
-` Appropriate for the ball of curiosity that is Arcueid, we end up going to the department store in front of the station.\
-
-` It seems like Arcueid made me take her there just to trouble me, but somewhere along the way, I guess it started to be pretty fun for her and she became happy again.@ It was a little tiring, but I think it was a good time.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
 playstop
 
 !w1000
-
 
 
 

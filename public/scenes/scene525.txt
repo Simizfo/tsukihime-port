@@ -4,7 +4,7 @@
 wave se2
 
 bg "image\bg\bg_06a.jpg",%type_nowaitdisp
-play "track03.ogg"
+play "track04.ogg"
 
 
 ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
@@ -13,50 +13,59 @@ ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
 cl c,%type_lcartain_mid
 
 
-ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
 
+ld r,":a;image\tachi\nero_t02a.jpg",%type_tshutter_mid
 
-` Merci!@ Time for the fourth period lesson.@
-` …… Oh, too bad.@
-` Showing your back like that in a fight, you're still no good, Tohno-kun.@
-` There's too much difference in experience between an expert fighter like Ciel-san and Tohno-kun.@
-` You should have acted in a way Ciel-san would not expect.\
+`"Young one, do you have a question?"@
+br
 
 ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
 
-`"Hmph, attacking someone from behind like that, it really shows your character, Ciel.@ Are you showing your true self nyaa?"@
+`"Hey, that's dirty.@ You're trying to stand out by coming out here too, Nrvnqsr."@
 br
-` …………@
 
-bg "image\bg\ima_14.jpg",%type_lshutter_fst
-wave se11
-br
-`"Unyaa!@ You stabbed me, you just stabbed me when the camera couldn't see us, nyaaa!"@
-br
-` ……………………@
-bg "image\bg\ima_13.jpg",%type_nowaitdisp
-br
-`"Unyaaaaaaaaaaaaaaaaa!"\
+ld r,":a;image\tachi\nero_t03.jpg",%type_crossfade_fst
 
-bg "image\bg\bg_06a.jpg",%type_lshutter_mid
-ld r,":a;image\tachi\cel_t20.jpg",%type_lshutter_fst
 
-` Extermination of the noisy cat has been completed.@
-` Goodness, a vampire like you who takes away someone's lover has no right to say anything.@
-` Now then everyone, please enjoy the rest of the main story!\
+`"Don't be ridiculous.@ Ciel-kun went to the curry shop.@ I am the substitute."@
+br
+`"Alright.@ Then give us a hint."@
+br
+cl r,%type_crossfade_fst
+ld r,":a;image\tachi\nero_t04.jpg",%type_crossfade_fst
+
+`"Fighting punishes both parties.@ Do not kill needlessly."\
+
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+
+`"I'm not convinced.@ Even if you don't want to fight Ciel, there's some people who unconditionally took off their glasses.@
+` What is up with that?"@
+
+ld r,":a;image\tachi\nero_t02a.jpg",%type_crossfade_fst
+
+br
+`"Thou shalt not steal, rape, or deceive others.@ It might sound familiar for some of you.@ If so, then go on a journey through time to this morning.@
+` Yes.@ Come to think of it, the princess might have an idea of that, no?"\
+
+
+ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+
+`"Nya, w-what?@ I don't understand what you're talking about."@
+br
+ld r,":a;image\tachi\nero_t02c.jpg",%type_crossfade_fst
+
+`"…… Well, what happens to others is just a trivial matter for me.@
+` Then, I shall watch how the end plays out for all of you from here-----"\
+
+
+
 
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
-ld c,":a;image\tachi\ark_t30.jpg",%type_lscroll_mid
-
-`"Nyaa, what is this?@ I haven't done that yet."@
-
-br
-` "Yet" means you're going to do so in the future?@
-br
-`"Ehehe.@ I'll leave the answer to that for later."\
-cl c,%type_lscroll_mid
 
 
 playstop

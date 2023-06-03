@@ -1,82 +1,86 @@
 
+
 bg "image\bg\bg_56.jpg",%type_nowaitdisp
-play "track01.ogg"
 
-` …… That's right.@
-` I've been helping Arcueid look for this "enemy", but I don't even know what kind of guy he is yet.@
+play "track03.ogg"
+
+
+` ----Hmm.@
 br
-`"Then I'll ask.@ Arcueid, your 'enemy', what kind of vampire is he?@ You've been chasing him this long, so you know what he looks like, right?"@
-ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
+` I probably won't ever get a chance to talk with Arcueid in a fast food restaurant in the middle of the day like this again, so I'll ask not about vampires, but something more ordinary.\
 
-`"Well----I----"@
-` Arcueid looks away.\
+`"Then I'll ask you.@ Arcueid, could you tell me a little about your interests, your past, and your three sizes?"@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"You want to know about that?@ You sure ask strange things, Shiki."@
+`"It's not strange.@ I don't know anything about you, so it's natural to want to know about you."\
 
-`"What is it?@ Didn't you just say you wouldn't hide anything from me?"@
-ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
 
-`"Yes, but please listen without getting angry.@
-` I only knew just recently that the vampire in this city was here.@ I came here as soon as I knew the 'enemy' was in this city in this country, but I have never met him.@
-` So to be honest, I don't know anything about the 'enemy' this time."@
-`"You don't know?----Didn't you recognize Nrvnqsr on sight?"\
+`"Ah, I feel the same way, perhaps----in that case, I don't mind."@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
 
-`"Nrvnqsr was famous, and he never changed his appearance.@
-` While the "enemy" I'm pursuing isn't as strong of a vampire, his traits fall within a broad range and I have no idea of his specialties or features this time.@
-` I'm really sorry Shiki---but I really can only tell you this much."@
-br
-` …… I know she's not lying.@ I know, but still, I feel like she's hiding something.@
-` Like----\
+`"But, interests and a past… I don't have any of those.@ I've also never measured myself so I can't tell you my three sizes.@ I never recorded my age or my height like you guys do."@
+`"What do you mean?@ You've never even wondered about yourself?"\
 
-`"That's okay.@ You can't help it if you don't know.@
-` But----at least you know the name of this 'enemy', right?"@
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+
+`"No, it's not like that, but it wasn't anything I ever had as a priority.@ All I need is the ability to hunt Dead Apostles…… vampires."@
+`"But still, there were things that happened before you came to this city, right?@ I want to hear about those kinds of things."\
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"Before I came here…… hmm, that would probably be about eight years ago then.@
+` At that time, I wasn't in this country, but in some other country hunting a vampire.@
+` A vampire made its lair in a small, French countryside village that became a ghost town.@ After two days, I found the 'enemy' and dealt with the female Dead Apostle controlling the town----"@
 cl c,%type_crossfade_fst
+` As if remembering something horrible, Arcueid closes her eyes and cuts off.\
 
+`"Eight years ago?@ Then up until now, what were you doing, Arcueid?"@
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
 
-`"N----name?"@
-`"Yeah, his name."@
-` She gets downcast, descending into silence.@
-` She cannot tell me his name for some reason, and she is troubled.@
-br
-` Well, that's what I thought, anyway.\
+`"What was I doing?@ I just went back to my castle and slept.@ My duty is to hunt Dead Apostles.@ I have no other meaning for existence, so until another Dead Apostle stands out, there's nothing to do but continue sleeping, right?"@
+`"Wha------"@
+` Continue sleeping?@ Does she mean literally?@
+` No, in the first place----\
 
-ld c,":a;image\tachi\ark_t05c.jpg",%type_crossfade_fst
+`"…… Wait a minute.@ A castle, you mean that castle?@ I'd have trouble believing it, but don't tell me your place is like that Cinderella's castle…!?"@
+ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
+`"Cinderella's castle?"@
+` Arcueid tilts her head like she doesn't get it.\
 
-`"----His name."@
-` Coldness.@
-` Rapidly, I feel a chill so great it seems like it could freeze the entire room.@
-br
-`"Shiki, his name is……"@
-` Arcueid isn't having any trouble saying it.@
-br
-`"…… His name is Michael.@ Michael Roa Valdamjong.@
-` Called Uroboros, a Dead Apostle who used to be human."@
-` She speaks while still looking down.@
-` Pure enmity, as if she was spitting forth blood.@
+`"Uh----no, that's not a really appropriate expression.@ Um, I mean, you're a, um…… princess?"@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"Yes, it seems that way.@ A long time ago I was told not to cut my hair and scolded to act more like royalty."@
+`"--------"@
+` …… I'm speechless.@
+` Come to think of it, that Nrvnqsr guy always called her "princess."@
+` But still----\
+
+`"A royal princess?"@
+` I steal a glance at Arcueid.@
+` She's beautiful enough to take your breath away, but such a rambunctious person a princess?@ She's not quite what comes to mind when I think of a princess.\
+
+`"…… Well, at least you are as selfish as a princess."@
+` I give a deep sigh.@
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+
+`"Hey now!@ I only said it because you asked, so don't respond like that!"@
+` Her Royal Highness glares at me.@
 cl c,%type_crossfade_fst
+` …… Arcueid doesn't seem to think of herself as a princess either, so I think it's just best to forget about this.\
 
-\
-
-`"Arcueid, you----"@
-`"------"@
-` Her shoulders are shaking.@
-` It looks like she's trying to hold herself back from going on a rampage.@
-`"…… Sorry.@ I shouldn't have asked.@ It's okay, just forget about it."@
-` Arcueid shakes her head slightly.@
-` As if trying to say she could never forget.@
-br
-` A period of silence ensues between us.\
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_56.jpg",%type_lshutter_mid
 
 
-`"------I'm sorry."@
-` Arcueid says this, still looking down.@
-`"----Mm."@
-` I give a noncommittal response.@ Both of us rise automatically from our seats and leave the restaurant.\
+` Still angry, Arcueid resumes eating her hamburger.@
+` After she's finished and calmed down, we decide to go somewhere else.\
 
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w1000
+
 playstop
-
-!w2000
-
 
 
 return

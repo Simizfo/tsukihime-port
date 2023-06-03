@@ -1,599 +1,151 @@
 
 
 
-bg "image\bg\bg_40b.jpg",%type_nowaitdisp
-
-` ----Alright.@
-` I'm always in her debt, so I'll go help Kohaku-san.@
-br
-bg "image\bg\ima_10.jpg",%type_lcartain_fst
-bg "image\bg\bg_42b.jpg",%type_lcartain_fst
-
-
-`"Huh……?"@
-` I don't see her anywhere in the courtyard.@
-` I glance around.@
-` For just an instant, I see the color of her kimono in the forest.@
-`"Is that where the detached building is?"@
-` …… After a little internal debate, I follow after Kohaku-san.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_44a.jpg",%type_lcartain_mid
-
-
-` Kohaku-san continues and enters inside.@
-` I would be pretty stupid if I came all the way here only to go back, so I force myself to go inside.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-bg "image\bg\bg_45b.jpg",%type_lshutter_mid
-
-play "track01.ogg"
-
-ld c,":a;image\tachi\koha_t09.jpg",%type_lshutter_mid
-
-`"Shiki-san?@ Why did you come here?"@
-`"Um, well----I was thinking maybe I should give you a hand.@ Am I in the way?"@
-ld c,":a;image\tachi\koha_t18.jpg",%type_crossfade_fst
-
-`"Shiki-san, I am happy you feel that way, but I didn't come here to work.@ I only came here to check the electricity according to Akiha-sama's orders."@
-`"Eh?@ Electricity?@ This place is still used?"\
-
-ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
-
-`"Yes, this is the only room with electricity.@ This building is still maintained at a level for people to live in.@ The bath is still able to be used and there are futons ready."@
-`"Really?@ But this place hasn't been used for a while, right?@ Why is it maintained like that?"@
-ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
-
-`"Let's see, maybe Akiha-sama is just fond of this place.@ A long time ago, this was where Makihisa-sama's adopted child used to live."@
-br
-` ----Huh?@
-` Makihisa…… my old man, adopted a child… a long time ago?\
-
-`"…… Wait a sec, Kohaku-san.@ My old man adopted a child?"\
-ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
-
-`"Oh, you don't remember?@ About ten years ago, he brought a child here.@ His parents both died in an accident, so he adopted the child."@
-`"That---happened?"@
-`"Yes.@ But two years later, the child passed away.@ It was a trivial accident, but a lot of the servants began to say that the Tohno family was cursed."\
-playstop
-
-wave se0
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_45b.jpg",%type_crossfade_fst
-
-
-` -----Wait a minute.@
-br
-` Something about her words seems scary.@
-` Just hearing them, my vision starts to warp.@
-` It's like the whole room is made entirely of dissolving sugar.\
-
-`"Ko, Kohaku, san."@
-` A child adopted ten years ago.@ Two years later, the child died.@
-` In other words, eight years ago… That's when I had my accident and was sent to the hospital.\
-
-play "track06.ogg"
-
-
-bg "image\bg\cmo_05.jpg",%type_nowaitdisp
-br
-br
-br
-` ---Accident.@
-br
-` What kind of accident was it?@
-` An accident that seriously wounded me.@
-` An accident, that the adopted child was killed in?\
-
-br
-` A hot summer day.@
-br
-` ---I can't remember.@
-br
-` All I know is at that time, my arms seemed to be soaked in blood----\
-
-bg "image\bg\bg_45b.jpg",%type_crossfade_fst
-
-
-`"Kohaku, san.@ You said 'cursed'?"@
-ld c,":a;image\tachi\koha_t18.jpg",%type_crossfade_fst
-
-`"No, it isn't anything important.@ It is just that a lot of the members of the Tohno family have died young.@
-` Such as in accidents, or suicide, or illness; a curse that does not allow them a natural death.@ Well, that was the rumor, anyway."\
-
-`"----Suicide…… what?"@
-ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
-
-`"Yes.@ Whatever the case, the members of the Tohno family…… mostly male, carried some mental illness and committed suicide when they became adults.@
-` These are just stubborn rumors, but it is said some of them were murderers before the war."\
-
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_45b.jpg",%type_crossfade_fst
-
-
-
-` …… Mental illness?@
-` …… Murderers?@
-` …… Such as, seeing dreams of killing people every night?@
-` …… Such as, feeling a sense of longing as I see dreams of killing people every night?\
-
-`"Kohaku-san, that---"@
-ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
-
-`"Oh, I'm very sorry.@ Those are just dark rumors about the Tohno family."@
-`"No, that's fine.@ It's okay…… could you tell me in more detail, Kohaku-san?"@
-`"…… I do not mind, but I do not necessarily know all the details.@ Just that, well…… Makihisa-sama did have that kind of air about him."@
-`"My old man----my old man did?"@
-wave se0
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-
-` Blurring.@
-` My vision whirls around.\
-
-bg "image\bg\bg_45b.jpg",%type_crossfade_fst
-
-ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
-
-`"Yes.@ I took care of Makihisa-sama's condition two years before he passed away.@
-` …… While you were living with the Arima family, Makihisa-sama would become very depressed and I would have to prepare his medicine to calm him."\
-`"Medicine to calm him----was my old man that bad, Kohaku-san?"@
-`"…… Yes.@ It would not be uncommon for him to walk into the garden at night and kill the pet dogs and cats, or to hurt his own body."\
-
-wave se0
-
-` ----Wha-
-` What is this?@
-` That's pretty much crazy.@
-` As crazy as I am in my dreams.@
-wave se0
-
-br
-` …… No, that is backwards.@
-` Am I crazy just like my old man?\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-!w500
-playstop
-
-bg "image\bg\bg_45b.jpg",%type_crossfade_mid
-quakey 1,200
-wave se4
-
-waveloop se1
-
-ld c,":a;image\tachi\koha_t09.jpg",%type_lshutter_fst
-`"Shiki-san……!?@
-` …… I hear Kohaku-san's voice.@
-` I---don't know when it happened, but I'm on my knees on the tatami floor.@
-`"Shiki-san, you look terrible.@ If you are feeling poorly, you should rest in your room……!"@
-` Kohaku-san says this as she grabs my shoulder.@
-` With her help, I can stand.\
-
-`"…… Yeah…… I'm fine, so---"@
-` I am somehow able to focus again.@
-` But I am still dizzy.\
-
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-bg "image\bg\bg_45b.jpg",%type_crossfade_fst
-
-br
-` In the red and white swirl of my vision,
-` white.@
-` Kohaku… san's… terribly warm… looking neck.@
-br
-
-`"------Ah."@
-` How captivating.@
-` If my body could move properly, I would seize Kohaku's body and----\
-
 bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
-
-` The black vision from my anemia all of sudden turns deep red…@
-` Kohaku's white neck.@
-` Last night's crimson dream.@
-br
-` ------The nighttime killings.@
-` Painful pleasure, as if my heart would rip itself out.\
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\bg_31b.jpg",%type_nowaitdisp
-bg "image\bg\ima_13.jpg",%type_nowaitdisp
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\bg_45b.jpg",%type_crossfade_fst
-
-
-`"Gg------!"@
-` Unable to bear it, I pull away from Kohaku-san.\
-
-wavestop
-
-ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
-
-`"Shiki-san……?"@
-`"No----I'm fine----I'm fine, so leave me alone."@
-ld c,":a;image\tachi\koha_t04.jpg",%type_crossfade_fst
-
-`"That won't do.@ If you collapse here, Akiha-sama will get very angry.@ In the first place, you look like you are in a lot of pain."@
-cl c,%type_crossfade_fst
-
-` Kohaku-san says this and draws closer.\
-
-br
-` ------This isn't good.@
-br
-` It's scary.@
-` If she comes within reach of my hands, I'm afraid I don't know what I'll do.\
-
-`"----I'm fine, just leave me alone, Kohaku… san…"@
-ld c,":a;image\tachi\koha_t04.jpg",%type_crossfade_fst
-
-`"I can't.@ Shiki-san, please calm down."@
-
-wave se0
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_45b.jpg",%type_crossfade_fst
-
-waveloop se1
-
-` …… Please, stop.@
-` It's dangerous if you come near me.@
-` I told you not to come near me.@
-` Why?@
-` Why won't this woman listen to me?\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-
-wave se0
-
-br
-br
-br
-br
-br
-br
-` ----Why?@
-br
-`   Why are you getting in my way?@
-wave se0
-
-
-`   Why are you like this,
-`   Not doing what I want you to……!?\
-wave se0
-
-bg "image\bg\bg_45b.jpg",%type_nowaitdisp
-
-
-`"Shut up……!@ Don't you understand I'm telling you to get away, Kohaku!"@
-wave se9
-quakex 2,100
-
-`"Kyaa----!"@
-` Thud, a thick sound.@
-` Kohaku-san slams into the wall, her face distorting in pain.@
-br
-`"Ah-------"@
-br
-` …… Her expression causes my sanity to return.@
-` The dizziness fades quickly.@
-` After just a moment, all dizziness disappears, leaving only a feeling of guilt.\
-
-`"--Sorry.@ What was… I…"@
-ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_mid
-
-`"It is okay, please do not worry about it.@ I only provoked you when you were in a bad mood."@
-br
-` She gives her usual smile.@
-br
-`"You are no longer pale and seem to have recovered.@ Shall we continue our conversation?"@ "No--that's enough for today.@ Sorry Kohaku-san.@ There's, something wrong with me."\
-
-`"Oh?@ You are a man, so I don't think it is unnatural to be a little rough.@ In fact, I think you are usually too calm, Shiki-san."@
-` She says that, smiling.@
-`"………………"@
-` Seeing that smile makes my chest hurt.@
-` …… Kohaku-san trusts me.@
-` But what was I about to do to her just earlier----?\
-
-`"…… Like you say, Kohaku-san, I will go back to my room.@ I really am sorry about earlier."@
-` I say this and run away.@
-` I leave the detached building behind, being crushed by self-loathing.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-!w2000
 play "track01.ogg"
 
-bg "image\bg\bg_40c.jpg",%type_lcartain_mid
-
-` ---After dinner, I return to my room.@
-` I collapse on my bed and remember Kohaku-san's face.@
+`"---What am I thinking?"@
+` No, I'm just tired.@
+` I still haven't forgotten what happened with Yumizuka.@
+` I'm not a vampire.@ I'm still a normal human being.@
 br
-`"----"@
-` I don't understand.@
-` Why I felt that way, and why I did that.\
+bg "image\bg\ima_13b.jpg",%type_nowaitdisp
+bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
-` Back then…
-` Looking at Kohaku-san's neck, I was lusting.@
-` Just like in last night's dream, I wanted to bite into her neck.@
-` But, I can't even think about that right now.@
+` But, there's a part of me that wanders in search of blood every night.@
 br
-` Last night's dream, and myself a while ago.@
-` I feel like there's someone inside me that isn't me.\
+` So, maybe…
+` It's that I don't notice, but I'm already at a point where I can't go back----\
 
-`"----"@
-` I touch my neck.@
-` Those who are bitten by a vampire become vampires in turn, they say.@
-`"…… That's stupid.@ I'm walking around in the daytime, after all."@
-` …… Yes, it's impossible.@
-` It was just dizziness and my fading consciousness contributing to the imagination.@
-` What happened with Yumizuka is burnt into my mind, so I think I just remember it when I suffer from anemia.\
+wave se3
 
-`"Like Kohaku-san said, maybe I'm just tired."@
-` …… Perhaps.@
-` I should hurry up and get to sleep, and rest my tired body.\
+
+ld c,":a;image\tachi\his_t12.jpg",%type_lshutter_fst
+
+`"Hisui---?"@
+` Hisui enters with an urgent expression.@
+
+ld c,":a;image\tachi\his_t16b.jpg",%type_crossfade_fst
+
+`"…… Excuse me.@ You are awake, are you not, Shiki-sama?"@
+` Hisui bows quietly.@
+
+cl a,%type_crossfade_fst
+
+` …… Her pure figure is so much the opposite of my earlier dream, it makes the uneasiness in my chest go away.\
+
+`"No, don't worry, I was up already.@ …… Morning, Hisui.@ Thanks for coming to wake me up again today."@
+
+ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+
+`"…… Yes.@ Good morning."@
+` Bowing again, Hisui approaches the bed.@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"I have brought you a drink.@ If you are feeling poorly, please take it."@
+` Hisui presents a drink on a silver tray.@ The tray also has some kind of medicine on it.\
+
+`"……?@ What is it, Hisui?@ You've never come with medicine before."@
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"…… Shiki-sama, are you feeling alright?@ As you seemed to be caught up in a terrible nightmare and your face appeared pale, I brought you some medicine."@
+`"----I seemed to be having a nightmare?"@
+
+ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+
+`"Yes.@ It also seemed that your body was very hot, so I had Nee-san prescribe something for a fever.@ Perhaps there was no need?"@
+`"Of course not, thank you for worrying."\
+
+cl a,%type_crossfade_fst
+
+
+` I swallow the medicine and water she offers.@
+` Ignoring the medicine, I'm grateful for the water.@
+` As Hisui says, my body is very hot, and my throat is terribly dry.@
+` Even though it's only pure water, it tastes great.\
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"If you are feeling better, please go to the dining room.@ If you are not, please take today off."@
+`"No, I won't skip school.@ I can't take a day off just because of this."@
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"…… But, your face still appears pale, Shiki-sama."@
+`"I'll be fine.@ Anyway, our school has tomorrow off.@ Since I'll have tomorrow off, I can push it a little today, can't I?"@
+
+ld c,":a;image\tachi\his_t05.jpg",%type_crossfade_fst
+
+`"…………"@
+` Hisui glances down, looking like she wants to say something.@
+` Do I really look that bad today?\
+
+`"Hisui, just one question.@ Was I really having a nightmare?"@
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"---Yes.@ I do not know when you returned, but you were terribly tired and went straight to sleep.@
+` When I came to wake you in the morning and opened the curtains, you seemed to be in pain, and your breathing was rough."@
+` …… I see.@ A dream like that would cause me to be in pain… eh?@ Just hang on a second.\
+
+`"---Hisui.@ What did you just say?"@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"That you were in poor condition since this morning."@
+`"No, before that!@ I came back?@ Where from!?"@
+`"---I do not know.@ Nee-san told me she saw you leave while she was patrolling the mansion."@
+`"…… I, left…?"@
+`"Yes.@ Nee-san and I patrol the mansion every three hours.@ While Nee-san was doing the rounds at midnight last night, she saw you leaving the mansion."\
+
+`"Wha…"@
+`"Since it seems you were able to return before morning, Nee-san has not told Akiha-sama of this.@
+` …… As Nee-san is indulgent of you, Shiki-sama, it will surely remain that way."@
+
+cl a,%type_crossfade_fst
+
+`"-------"@
+` Wha---what is, this?@
+` I went outside?@
+` That can't be.@ I was sound asleep this whole time, having a dream.@
+` Having such a… lively… drea… m.\
+
+`"Ah----"@
+` But, this is weird.@
+` Dreams are forgotten the moment you wake up, so why do I still remember all the details of the dream so perfectly…\
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Shiki-sama…?@ Your face still appears pale.@ How are you feeling?"@
+`"Ah, yeah, I'm fine.@ I'm fine, so go ahead, Hisui… It's okay, I'll go right away."@
+
+ld c,":a;image\tachi\his_t16.jpg",%type_crossfade_fst
+
+`"I understand.@ I shall wait for you in the dining room."@
+
+cl a,%type_crossfade_fst
+
+` Closing the door behind her, Hisui leaves the room.@
+br
+`"…… Yeah, I'm fine.@ No problems at all.@ I'm just, fine…"@
+` I say it over and over again, trying to persuade myself.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w2000
+bg "image\bg\bg_33a.jpg",%type_lcartain_mid
+
 
 playstop
 
-
-!w2000
-wave se0
-
-!w750
+` To get to the dining room, I have to pass through the sitting room.@
+` …… It's depressing.@ To be honest, I don't want to see anyone right now.@
+` Hisui and Kohaku-san, and… and Akiha.@ I'm not sure I can act normally.@
 br
-` ----Hot.\
-
-wave se0
-!w750
-
+` I'll----
 br
-br
-br
-` ----Hot.\
-wave se0
-!w750
-
-br
-br
-br
-br
-br
-` ----Hot.\
-wave se0
-!w750
-
-br
-br
-br
-br
-br
-br
-br
-` ----My body, once aroused,
-`     can't be calmed with something like sleep.\
-wave se0
-!w750
-
-br
-br
-br
-br
-br
-br
-br
-` ----So.@
-`    Tonight too, I shall relieve my thirst.\
-
-monocro #ff0000
-bg "image\bg\bg_47.jpg",%type_nowaitdisp
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\bg_24c.jpg",%type_nowaitdisp
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\bg_26a.jpg",%type_crossfade_mid
-
-` It seems I went into town at night.@
-` It seems like I'm waiting with bloodshot eyes for someone to pass by.\
-wave se0
-
-br
-br
-br
-br
-br
-br
-br
-` ----Again.\
-wave se0
-
-br
-br
-br
-br
-br
-br
-br
-` Suddenly, I see a face reflected in the window.@
-` The eyes are bloodshot, and the face looks quite insane.\
-wave se0
-
-br
-br
-br
-br
-br
-br
-br
-` ----This dream, again.\
-wave se0
-
-br
-br
-br
-br
-br
-br
-br
-` It seems I found my prey.@
-` I bring it down without a chance to scream, without it even realizing it has died.\
-wave se0
-
-br
-br
-br
-br
-br
-br
-br
-` ----I'm seeing this nightmare again.\
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-
-bg "image\bg\ima_12b.jpg",%type_nowaitdisp
-bg "image\bg\bg_31b.jpg",%type_nowaitdisp
-
-
-` Taking the dead body, and the sound of biting into the throat.@
-` A gurgling sound.@
-` Drinking the blood flowing out of the rended neck, my thirst is quenched.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----The same scene as last night.\
-
-` Getting bored with just blood, I take the hand of the dead body and bite off the fingers one by one.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----The same scene as last night.\
-
-` Getting bored with just the fingers, I take the limbs of the dead body, and bite them off one by one.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----The same scene as last night.\
-
-` Then,
-` an obstruction appears.@
-` I throw the dead body aside and jump.@
-` Someone.@ Someone is watching me.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----Is it different from last night…?\
-
-bg "image\bg\ima_02.jpg",%type_tshutter_fst
-
-` Something like a vast nail is flying through the air.@
-` To dodge it, I leap aside.@
-` I run up the side of a building, and jump from rooftop to rooftop.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----The figure in black chases the vampire.\
-
-` From rooftop to rooftop.@
-` From shadow to shadow.@
-` The figure follows.\
-
-br
-br
-br
-br
-br
-br
-br
-` ----It can't be helped.\
-
-` It can't be helped, it murmurs.@
-` And tonight's meal ended.\
-
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-monocro off
-
-
-!w3000
-
-
-
-mov $phasebg,"image\bg\ima_19.jpg"
-mov $phasetitle_a,":a;image\word\PAKI_07A.PNG"
-mov $phasetitle_b,":a;image\word\day_07.png"
-gosub *left_phase
-
-
-waveloop se1
-
-
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-
-
-`"Shiki-sama----?"@
-br
-` ----A voice.@
-br
-`"Please get a hold of yourself, I will bring you a drink right away…!"@
-br
-` ----The sound of running footsteps.\
-bg "image\bg\bg_40a.jpg",%type_crossfade_mid
-
-br
-`"Ah----"@
-` I awaken from the nightmare.\
-
-`"…… My own room."@
-` I am definitely in my own room.@
-` Just lying in bed, and morning has come.@
-` …… I saw that dream again.@
-` The dream of sucking someone's blood.@
-` Though I know it's just a dream, it still feels terribly real.@
-` My hands retain the feel of ripping meat; my nose, the smell of fresh blood…\
-
-`"---What's happening to me?"@
-` I touch my neck gently.@
-` …… Yumizuka's bite marks are long gone.@
-` I'm still a normal human being.@
-` I don't want to drink people's blood, and I don't have a problem with the sun.@
-`"----Ah."@
-` No.@ Yesterday, I@
-` What did I think when I saw Kohaku-san's neck?@
-br
-` ---Her white neck.@
-` From the bottom of my heart, I wanted to drink the blood flowing in there----\
-
-
-
-
-
-
 
 return

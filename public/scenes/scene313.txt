@@ -1,364 +1,616 @@
 
-` ----With this, it is over.@
+
+
+
+
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+
+
+ld c,":a;image\tachi\stk_t04.jpg",%type_crossfade_fst
+
+`"Ah---"@
+` Yumizuka's body trembles.@
+` Breathing painfully, she falls to her knees.\
+
+cl c,%type_lshutter_fst
+
+play "track06.ogg"
+
+` A choking sound.@
+` Squatting on the ground, Yumizuka coughs heavily, and she spits out a lump of blood.@
+`"---Yumizuka!?"\
+
+
+` This time, I do rush near her.@
+`"Yumizuka, are you okay?@ Yumizuka…!"@
+` I put my hand on her heaving shoulder.@
+`"Ah---"@
+` I feel a chill.@
+` Even through her clothes, I can feel the coldness of her body.\
+
+`"Stupid, you're freezing!@ What are you doing out in the open on a night like this!"@
+`"---Shiki, kun…"@
+` Her voice is hollow as she says my name.@
+` Yumizuka collapses against me.@
 br
-` Tohno Shiki will soon disappear, and everything will end.@
-play "track07.ogg"
+` As she pants, her warm breath brushes my skin.\
 
-bg "image\event\aki_e01.jpg",%type_crossfade_mid
-bg "image\event\stk_e01a.jpg",%type_crossfade_mid
-
+`"Yumi… zuka?"@
+`"It's okay if you don't like me, Shiki-kun.@ Because, I really didn't understand you at all until now, either."@
 br
-`"--------Ah."@
-` End…… end… is that, okay?\
+` Yumizuka speaks as she coughs.\
 
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-ld c,":a;image\tachi\aki_t17b.jpg",%type_crossfade_fst
-bg "image\event\stk_e02.jpg",%type_crossfade_fst
-
+`"It's alright, don't talk…!@ I'll take you to a hospital…!"@
+`"But, I understand now.@ Who you are, and what you want to do.@ I really understand now.@
+` Because---"@
+`"Eh---?"@
+` Yumizuka's arm tenses.@
+` With amazing strength, she digs into my shoulder.@
+`"Because, I became like you, Shiki-kun---!"@
 br
-` …… You will come back, right……?@
+` Saying that, Yumizuka sinks her teeth into my neck.\
+
+
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_slw
+
+
+`"Ah----"@
+` Fading.@ My consciousness is fading.@
+` Yumizuka's fangs dig into my neck.\
+
+`"---"@
+` I'm being drained.@
+` As if all the life in my body is liquified and sucked out.@
+` Without strength, there are no thoughts.@
+` So, my consciousness is not fading.@
+` It is simply being destroyed.@
 br
-` Akiha said that.@
-` My sister I left alone for eight years.@
-` The black-haired girl I have done nothing for as a brother.@
-br
-` ----Always,
-`   Tohno Akiha was alone in that mansion.\
+`"-------Ah."@
+` There are no thoughts.@
+` I know I'll die if I stay like this, but I can't even----\
+wave se0
 
-`"--------"@
-` Before, I faced Yumizuka with my knife to bring her salvation from death.@
-` And now, I am giving up my life to save her with my life.@
-br
-` But, that…
-` Doing that, who would be saved?@
-` At least for Tohno Shiki, it's not helping someone he cares the most about----\
-
-`"Aki----ha."@
-br
-` …… I can't die.\
-` Even if I'm wrong, I can't die now.\
-
-`"Yumi, zuka----"@
-` My knife moves.@
-` …… The "line" on her chest.@
-` The line on the heart of the girl who believed in herself, hoping for some last salvation----\
-br
-br
-br
-br
-br
-br
-` …… I plunge my knife deeply into it.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-
-bg "image\event\stk_e01b.jpg",%type_lshutter_fst
-
-
-`"----Shiki, kun?"@
-` Satsuki's lips pull back.@
-` The power there turns to nothing.@
-br
-`"----Sorry.@ I couldn't help you, Yumizuka."@
-br
-` This is the only way I can.@
-` If she can't escape from the pain,
-` then at least----I can let her have a painless death.\
-
-bg "image\event\stk_e01c.jpg",%type_crossfade_mid
-
-`"I see----I knew it… you couldn't be with me, right Tohno-kun?"@
-` Her voice is terribly peaceful.@
-` Just like the way home in the sunset two days ago.@
-`"But, I'm still happy.@ Even if it was just a brief moment, you chose me, Tohno-kun…… Yeah, in that case, maybe dying like this isn't so bad.@
-` All the pain is gone, and the scary emotions have disappeared like magic----"@
-` I feel something blowing at my feet.@
-` Looking there,
-` I see Yumizuka's legs have turned to ash from the knees down.\
-
-`"----And, it's a little warm right now.@
-` Ehehe, this must be your warmth, Tohno-kun."@
-` She speaks happily.@
-br
-br
-br
-br
-` ------This pure regret,
-`     it's so much, I want to die.\
-
-` ----I prepared myself.@
-br
-` I prepared myself when I betrayed her, for whatever hateful words she might say.@
-br
-` ----So why?@
-br
-` Why this peaceful, happy voice?@
-` She doesn't even blame me at all.\
-
-`"----Sorry.@ I----was powerless.@ I'm the lowest."@
-` My eyes are burning.@
-` Inside my brain, my vision wavers.@
-
-`"Aha.@ Tohno-kun, you are crying.@
-` …… You really are kind.@ After I did these horrible things, you still cry for me.@
-` …… Yeah, that's what I liked the most about you.@
-` I watched you since middle school, Tohno-kun----so I always knew about that side of you no one else did."\
-
-` Her proud voice, and the sensation of something drifting away on the wind.@
-` Her lower body doesn't exist anymore.\
-
-`"…… I, wanted to talk more with you, Tohno-kun.@ Normally, just as classmates, to talk more.@ That's why I really don't want to die now."@
-`"------"@
-` I can't say anything.@
-` I don't have any words for her.\
-
-br
-br
-br
-br
-br
-br
-` ----At the very end, she leans her head against my forehead.\
-
-bg "image\event\stk_e01d.jpg",%type_crossfade_fst
-
-`"But, this is for sure the best way.@
-` ---So, don't cry, Tohno-kun.@ You did the right thing."@
-` The sensation of the knife gets lighter.@
-` Satsuki's body doesn't have a heart anymore.\
-
-`"Ah, it seems like I won't be able to talk anymore.@
-` Well, my house is this way.@ So this is goodbye then."@
-`"Yumi----zuka……!"@
-`"Yeah, bye bye, Tohno-kun.@ Thank you---and, sorry."@
-br
-bg "image\bg\ima_10.jpg",%type_tshutter_mid
-
-` Whoosh.@
-br
-` Like ash scattered by the wind,
-` Yumizuka Satsuki completely disappears before my eyes.\
-
-bg "image\bg\bg_31b.jpg",%type_bshutter_mid
-
-
-` …… Her figure disappeared like it was just a mirage.@
-`"------"@
-` All that remains is this dizziness.\
-
-` I killed her.@
-` I wanted to save her----I even said I would save her---but in the end, I killed her to save myself.@
-br
-`"A----a."@
-` But still.@
-` But still, it would have been okay for her to call me a liar at the very end.@
-` If she did that, I really could have turned into a bad person, so why----\
-
-` Thank you.@ Sorry.@
-` She didn't have to thank me.@ There was no reason to apologize.@
-`"I--killed you."@
-` …… But still, she thanked me.@
-` That's why.@
-` I really did want to save her.\
-
-`"------"@
-` My numb body stands up on its own.@
-` I can't think of anything right now.@
-` Are my mind and body separate things?@
-` Mindlessly dragging my body, I exit the alley----\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-playstop
-
-!w2000
-
-
-
-
-
-bg "image\bg\bg_33d.jpg",%type_lcartain_mid
-
-
-` The door opens with a creak.@
-` Covered in wounds, I finally make it back to the mansion.@
-
-ld c,":a;image\tachi\aki_t19c.jpg",%type_crossfade_mid
-
-`"------Ah."@
-` Akiha is in the lobby.@
-` Was she waiting for me this whole time?@
-` …… Right now, I can't understand anything.\
-
-ld c,":a;image\tachi\aki_t23b.jpg",%type_crossfade_fst
-
-`"Nii-san, what were you doing this whole time?@ What time do you think----"@
-
-ld c,":a;image\tachi\aki_t15b.jpg",%type_crossfade_fst
-
-`"N, Nii-san, you look----"@
-` …… Akiha is shocked.@
-` Why?@
-` I can't even bring myself to want to think about what's so shocking for her.\
-
-ld c,":a;image\tachi\aki_t17b.jpg",%type_crossfade_fst
-
-`"Nii-san, hang in there……!@ What in the world happened?@ You have all these wounds, and…… you look terrible."@
-`"………………"@
-` I don't say anything.@ No, I can't say anything.@
-` I don't even know what Akiha is saying.@
-
-ld c,":a;image\tachi\aki_t23b.jpg",%type_crossfade_fst
-
-`"------"@
-` Akiha gasps silently and then walks towards me.\
-`"Anyway, I will have to treat you.@ Nii-san, can you walk?"@
-`"………………"@
-` Yeah.@ I'm alive, so I can walk.@
-`"I will treat your wounds, so please come to the sitting room.@ Ah, and take a bath--that will be impossible, so I'll have to wipe you with warm water."@
-
-cl a,%type_lshutter_mid
-
-
-` Akiha disappears with quick footsteps.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-!w2000
-bg "image\bg\bg_40d.jpg",%type_lcartain_mid
-
-
-` ----Akiha takes care of me by herself.@
-` She wipes off my dirty body with a towel, goes so far as to make me food, and accompanies me to my room.@
-` During that time… I couldn't… even say a single word.\
-
-ld c,":a;image\tachi\aki_t12b.jpg",%type_crossfade_fst
-
-`"…… Then I will go back to my room.@ Please rest well tonight, Nii-san."@
-` Without even asking anything.@
-` In the end, she doesn't ask anything and quietly walks away.@
-br
-` Disappearing.@
-` Just like… the girl… I killed.@
-br
-` ----As I think that, I grab Akiha's arm.\
-
-play "track09.ogg"
-
-bg "image\event\aki_e02.jpg",%type_crossfade_mid
-
-`"Nii-san--!?"@
-` Then, I embrace Akiha…
-` …… Strongly.@
-` Unable to be alone, I wanted to feel someone's body warmth.\
-
-`"Aki----ha."@
-` I embrace her without thinking.@
-` …… Akiha doesn't say anything.@
-` Even though she definitely should pull away, she doesn't resist my trembling body.@
-` Like this----all I wanted was to stay like this.\
-
-`"I, am the worst."@
-` I confess.@
-` From my sin, and I escape to Akiha.@
-`"…… I wanted to save her…… I wanted to save her…… but I couldn't do anything."@
-` As if seeking salvation, I squeeze Akiha tighter.@
-!w3000
-` There's no response from Akiha.@
-` As if repelled by my weakness, Akiha pulls away.\
-
-bg "image\bg\ima_10.jpg",%type_tshutter_fst
-
-bg "image\bg\bg_40d.jpg",%type_tshutter_fst
-
-ld c,":a;image\tachi\aki_t11b.jpg",%type_crossfade_mid
-
-`"…… Nii-san.@ I do not know what happened to you.@ I think it is something I shouldn't ask about, either."@
-`"----"@
-`"I cannot give you any answers.@ You have to solve your own problems.@
-` So----please do not run to me for something like this."\
-
-` …… Her words are really right on target.@
-` Her rebuke is so correct, I finally return to myself.\
-
-
-ld c,":a;image\tachi\aki_t01b.jpg",%type_crossfade_fst
-
-`"…… Sorry.@ Just forget about it, please."@
-`"…………"@
-
-cl a,%type_lshutter_mid
-
-` Akiha walks to the door without answering.@
-` She tried to leave, but she suddenly stops.\
-
-`"----I will not ask what happened.@
-
-ld c,":a;image\tachi\aki_t12b.jpg",%type_lshutter_fst
-
-` But when you left, I was very frightened.@ I felt like you would not return.@ Like eight years ago, I had the same premonition."\
-`"-------"@
-
-ld c,":a;image\tachi\aki_t25.jpg",%type_crossfade_fst
-
-`"But, you did come back, Nii-san.@
-` …… You said you were unable to save someone.@ But at least, you were able to save me from that premonition."\
-
-
-`"----So, welcome back, Nii-san.@
-` Just your return has made me so happy…… So please keep that in mind."@
-ld c,":a;image\tachi\aki_t09b.jpg",%type_crossfade_fst
-
-` Saying that embarrassedly, she gives a quick bow.\
-
-`"Akiha------"@
-
-`"That is all I have to say.@
-
-ld c,":a;image\tachi\aki_t16b.jpg",%type_crossfade_fst
-
-` …… I will be very clear so my slow Nii-san can understand.@ I'm saying please don't leave your cute little sister alone again."@
-`"Ha, haha----I see, I get it.@ But cute?@ It's not right to say such things about yourself, Akiha."@
-` I finally manage a response.@
-` But with just that, Akiha gives a boastful smile.\
-
-ld c,":a;image\tachi\aki_t04b.jpg",%type_crossfade_fst
-
-`"Yes.@ Then I will see you tomorrow.@ Sweet dreams, tomorrow will be a new day.@
-` I won't allow you to be looking like that tomorrow."@
-
-cl a,%type_lshutter_mid
-
-` Akiha leaves.@
-` I----looking at my body covered in wounds, fall to my bed.\
-
-`"Ha-----ah."@
-` Deep.@
-` As if I'm saying goodbye to something, I let out a deep sigh.\
-
-`"…… Sorry, Yumizuka.@ I decided----I shouldn't be full of regret after all."@
-` …… Everything about what happened with her will be an indelible scar.@
-` But, I should believe it was the right thing to do.@
-` I know it is a sin, and I will have to accept my punishment someday.@
-` But, I can't have regret for being alive right now.\
-
-`"…… I'm back, Akiha."@
-` I mumble aloud my heartfelt thanks.@
-br
-` …… My mind starts to drift.@
-` My exhausted mind and body swiftly approach sleep.@
-br
-` In that instant, I thought…
-br
-` It's good for me to be alive.@
-` At the very least, I have a home to return to.@
-` And waiting for me there is my priceless family----\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
+
+br
+br
+br
+br
+br
+br
+br
+#ff0000
+
+`      Kill  this woman.\
+#ffffff
+wave se0
+
+` All the same.@
+` From somewhere beyond my mind, my blood begins to boil.@
+br
+`"Yumizuka----!"@
+` Both my arms push her back out of pure reflex.\
+
+
+
+bg "image\event\stk_e02.jpg",%type_lshutter_fst
+
+
+` She falls right on her behind.@
+`"What are…----"@
+` I stand up.@
+` But, I can't.@
+` I'm so exhausted I can barely even lift an arm.@
+br
+` Yumizuka sits, as if in a drunken stupor.\
+
+`"Ah------"@
+` I can't see her face clearly.@
+` Everything dims as my consciousness fades.@
+` I can't control my body either.@
+` All that exists is the pain in my neck.@
+br
+` Blood gurgles forth.@
+` Yumizuka's teeth marks remain in my neck.@
+` And through those two deep holes, something black is being poured into my body---\
+
+
+wave se0
+
+`"Ah---guhhhh!"@
+` A pain, a pain as if my spine is about to be ripped out.@
+wave se0
+
+`"Haa---arghhh!"@
+` In pain, I claw at the ground.@
+` But there is no relief.@
+` I cannot move since Yumizuka has drained everything out of me, and the pain pours into me like a black snake.@
+` I cannot move, so the black thing crawls and twists as it pleases inside me.\
+br
+`"Haa---ah, ah---"@
+br
+` I clutch at the ground.@
+` With glazed eyes, Yumizuka… looks at… me.\
+
+`"Yumi… zuka… what have you…!"@
+`"It's okay, it only hurts at first.@ First it hurts, but when the blood mixes, it should die down."\
+`"Don't worry, I won't kill you.@ I poured my blood in properly, so you won't collapse and crumble away like those failures last night.@ You will only look at me from now on."@
+` Yumizuka whispers joyfully.\
+
+`"What are---you talking about… Yumizu… ka---"@
+`"I'm saying that I'm making both of us the same, Shiki-kun.@ Sucking people's blood instead of eating normal food, nocturnal, unable to walk under the sun.@ You're going to be a different creature."@
+br
+` …… What is, that.@
+` Ridiculous, that's just like--\
+
+`"Yeah, like a vampire.@ I didn't really understand how I became this way either.@
+` Two nights ago, I went out to check the rumor that you were walking around in the shopping district every night, and then when I came to I was lying down in that back alley.@
+` Back then, I thought it was just cold, dark, and painful."\
+
+`"But it's strange, after a while, after my body has changed completely, I understood a lot of things.@
+` My body hurts because it's being destroyed very fast, and the sunlight acts like a catalyst for that.@ And if I want to stop the destruction, I need the genetic information of the same type of living organism as myself."\
+
+`"Yeah, I didn't understand the logic that well, but it was plain enough what I had to do.@
+` I was cold, and it was lonely by myself.@ I didn't want to disappear, so I just grabbed a random person and sucked his blood.@
+` And you know what?@ It was really delicious!@ The pain went away and I thought I could do anything.\
+
+`"But, it was so nice that before I realized it, it was all gone.@
+` The man was all shriveled up, like a mummy, and I felt really bad.@ I thought to myself that I was turning into a monster, both in mind and body.@
+` ---But, I had to do it in order to live.@
+` Like I said, I didn't kill them because I hated them.@ I suck blood the same way you people eat animals.@ So I decided not to think about it too deeply."\
+
+`"Wha---"@
+` What… is this?@
+` Is it okay to kill other people in order to live?@
+` That… I…\
+
+`"But, it seems I've become a proper vampire.@
+` Tonight's meal was quite fun.@ Until now, I've been sucking blood since I was cold and in pain, but now that I'm getting the hang of sucking blood, it's becoming more interesting.@
+` You understand, don't you Shiki-kun?@ You are a much better killer than I am."@
+`"Wha---"@
+` What…
+` What are you talking about, Yumizuka.\
+
+`"Didn't I say it before?@ I was always watching you, so I know your gentle side and your scary side.@
+` I never talked to you because I didn't understand your scary side."\
+
+`"But I understand now.@ You're the same as me.@
+` Hey Shiki-kun.@ Even you were thinking you wanted to kill someone, without love or hate having anything to do with it."@
+`"Don't---be ridiculous."@
+` I've never even once thought that.\
+
+`"I'm not being ridiculous!@ I never understood the fragile air about you, but now my body has changed, and I can understand……!@
+` Shiki-kun, just you being there is flirting with death.@ That's the kind of person you are.@ Like me, someone who has to kill people.@
+` Your need to kill others is the same as the need to breathe, right?"\
+
+`"You know, I was really happy yesterday.@ It was the first time I was happy after becoming this way.@ Because I finally understood you, Shiki-kun.@ I never really knew you before.@
+` Shiki-kun, you're the same, right?@ You see someone, and for no reason, your heart throbs, and your throat goes dry.@
+` Seeing red blood, you enter a stupor like you were drunk from alcohol, right?@
+` Stealing the life of others, extinguishing the life of others, isn't it so exciting?@ So fun!"@
+`"That's--a lie, that feeling----I've never."\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+monocro #ff0000
+bg "image\bg\bg_31b.jpg",%type_crossfade_fst
+
+
+`"----Ah."@
+` That was, something only in a dream though.@
+` But I can't say… I never had it.@
+br
+`"See?@ A pure homicidal impulse, without the influence of emotion.@ Your fragile side, which I always wanted to understand."\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+monocro off
+
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+
+ld c,":a;image\tachi\stk_t10.jpg",%type_crossfade_fst
+
+`"I forgot to say one more thing.@ A vampire is someone whose blood has been sucked by a vampire, right?@
+` That's true, you know.@
+
+ld c,":a;image\tachi\stk_t03.jpg",%type_crossfade_fst
+
+` To be precise, the person whose blood has just been sucked dies.@
+` Vampires pour their own blood into their victim as they drink to turn them into their own.@ So what's in you right now is my blood."@
+` Standing up, Yumizuka speaks with satisfaction.\
+
+cl c,%type_lshutter_mid
+
+`"…… I see.@ This is, Yumizuka-san's--blood, then."@
+` …… The black thing that still defiles my body.@
+` It's not even a mouthful, but it still causes unbelievable pain, enough to drive me to madness.\
+
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+
+#ff0000
+br
+br
+br
+br
+br
+br
+br
+`         If that's the case,\
+#ffffff
+` This blood.@
+` This foreign pollutant swimming in my body.@
+` I can't see it.@
+` But, with my "eyes", that would--\
+
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+#ff0000
+
+br
+br
+br
+br
+br
+br
+br
+`          First,\
+#ffffff
+
+` Because of my crawling on the ground, my glasses have fallen off.@
+` The lines.@ I can see the point of that… foreign substance.\
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_29c.jpg",%type_nowaitdisp
+
+#ff0000
+
+br
+br
+br
+br
+br
+br
+br
+`       Then  kill,\
+#ffffff
 playstop
 
+` I stab the point with my knife.@
+` I thrust the knife into my body.@ But it doesn't cut any of my flesh.@
+` What is killed is not me but this foreign object.\
+
+ld c,":a;image\tachi\stk_t10.jpg",%type_crossfade_fst
+
+`"Now, it's been long enough.@ Stand up, Shiki-kun."@
+` …… I hear Yumizuka's command.@
+` The pain fades.@
+` I can control my arms and legs again, and I can finally stand up.\
+
+ld c,":a;image\tachi\stk_t07.jpg",%type_crossfade_fst
+
+`"---Good.@ From now on, we'll always be together, Shiki-kun."@
+`"………………"@
+ld c,":a;image\tachi\stk_t10.jpg",%type_crossfade_fst
+
+`"Now, come here.@ Come by my side, hold my hand, and make me feel better."@
+` She holds out her hand.@
+br
+` ----Thump.@
+br
+` My heart pounds, and my legs begin to move.@
+` But they don't move forward.@ They move backward.\
+
+ld c,":a;image\tachi\stk_t09.jpg",%type_crossfade_fst
+
+`"Shiki…… kun?"@
+
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_29c.jpg",%type_nowaitdisp
+play "track04.ogg"
+
+#ff0000
+br
+br
+`         Kill.\
+#ffffff
+br
+br
+` Yumizuka's bewildered voice.@
+br
+` ----Thump.@
+br
+` My heart begins to scream.@
+` My throat becomes dry.@
+` Every nerve in my body recognizes the person in front of me as an enemy.\
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_29c.jpg",%type_nowaitdisp
+
+#ff0000
+br
+br
+br
+br
+br
+br
+br
+`         Kill.\
+#ffffff
+
+` *pant*…… *pant*…… *pant*
+` This feeling.@
+` It's as if my thoughts belong to a completely different person.@
+` I can't resist the impulse flowing out within me.\
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_29c.jpg",%type_crossfade_fst
+
+br
+br
+br
+br
+br
+br
+br
+` ------My mind/is growing/hazy.\
+
+
+`"Why……?@ Hey, why aren't you doing what I tell you to……?"@
+br
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_29c.jpg",%type_nowaitdisp
+#ff0000
+`         Kill.@
+#ffffff
+br
+` Thump, Thump.@ My heart beats loudly,
+` as if repeatedly ordering me to kill… to kill.\
+
+`"Shiki-kun, you--"@
+`"…… No, Yumizuka----"@
+` She looks at me as I breathe painfully.@
+
+ld c,":a;image\tachi\stk_t11.jpg",%type_crossfade_fst
+
+`"Why--!?@ Why didn't my blood work……!?"@
+`"…… I killed your blood.@ So, I will not become--your partner."@
+
+ld c,":a;image\tachi\stk_t09.jpg",%type_crossfade_fst
+
+`"Wha--"@
+` The eyes staring at me are filled with surprise.\
+wave se0
+
+#ff0000
+br
+br
+br
+br
+br
+br
+br
+`         Kill.\
+#ffffff
+`"…… Please disappear, Yumizuka…… I don't understand why, but…… if you remain here, I--"@
+br
+wave se0
+
+#ff0000
+`         Kill.@
+#ffffff
+br
+`"I----"\
+br
+wave se0
+
+#ff0000
+`         Kill.@
+#ffffff
+br
+`"I don't--want to kill anyone----"\
+
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_29c.jpg",%type_crossfade_fst
+
+
+
+br
+br
+br
+br
+br
+br
+br
+` --------My mind/is/inverting.\
+playstop
+
+bg "image\bg\bg_29c.jpg",%type_crossfade_fst
+
+ld c,":a;image\tachi\stk_t02.jpg",%type_crossfade_fst
+
+` Yumizuka's eyes burn black.@
+` Like a needle, the sharp intent to kill.@
+` Tohno Shiki's body--separates itself from the mind and will of Tohno Shiki.@ I lick my lips as I pick up my knife.\
+
+`"Oh, you're serious now, Shiki-kun."@
+`"-----------"@
+` I can't speak.@
+` Nothing.@ The thought of responding doesn't even occur.@
+` My field of vision shrinks to nothing.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+
+
+`"Liar.@ You said… you'd help me."@
+wave se0
+
+#ff0000
+br
+`     I don't know   anything about that.@
+#ffffff
+br
+`"…… Fine.@ If you won't cooperate, I'll kill you first.@ There'll be plenty of time to give you my blood after that……!"@
+wave se0
+
+#ff0000
+br
+`     Well said,   for a miserable failure.\
+#ffffff
+` …… I can only hear the voice.@
+` There are no thoughts.@
+` My body kills the body of Yumizuka in return, who is trying to kill my body.\
+
 !w3000
+wave se5
+
+bg "image\bg\ima_14.jpg",%type_crossfade_fst
+!w1000
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
 
 
+` A sensation of spurting.@
+` My right arm holding my knife is heavy and my left arm is burning.@
+` The burning on my left arm is from the flowing blood.@
+` Yumizuka's nails tore through my clothes and made the blood flow.@
+` Maybe thanks to the bleeding, my burning blood cools down.@
+` My ferociously pounding heart starts to calm.@
+` But, I start to realize,
+` I pierced Yumizuka's heart with my knife, and am now holding her as if I am embracing her.\
+
+bg "image\bg\bg_29c.jpg",%type_crossfade_fst
+
+play "track08.ogg"
+
+`"Wha------"@
+` This is, a continuation of my nightmare.@
+` Without knowing it,
+` I killed Yumizuka Satsuki.@
+br
+`"Wh…… y"@
+` Yumizuka's body up against mine is frigid.@
+` There was never, never any warmth to begin with.@
+` Her body is like pure ice, and isn't doing anything but embracing mine.\
+
+`"……… Yumi… zuka."@
+` My fingers holding the knife shake uncontrollably.@
+` Shallow breathing fills the air.@
+` Mine, and hers.@
+br
+`"What------have I done?"@
+` I didn't want to kill her.@
+` I didn't even have a single thought of hurting her, so why----!?\
+
+`"Shiki…… kun."@
+` I hear Yumizuka's voice right next to my ear.@
+` She's probably going to voice her grudge.@
+` She asked me to help her.@ But all I did in response was to kill her without even thinking.@
+br
+`"………… I'm… so happy."@
+br
+` But,
+` Yumizuka, with a gentleness like she were having a dream, said those words.\
+
+`"Wh, y?"@
+`"…… Because… this was the first time you ever seriously looked at me.@ That's why I'm so happy.@ That makes me… your first time, Shiki-kun."@
+br
+` -------Thump.@
+br
+`"…… I'm so sorry.@ They say only death can cure a fool; but in my case, it seems even death couldn't cure me---"@
+br
+` ------Thump.@
+br
+`"…… Yumi…… zuka?"\
+
+` -------Thump.@
+br
+` There's no reply.@
+` With a dry sound,
+` her body crumbles to ashes as if it was never there to begin with.\
+
+bg "image\bg\bg_29b.jpg",%type_crossfade_fst
+playstop
+
+br
+` -----What happened?@
+br
+#ff0000
+`        That's right.@
+#ffffff
+br
+` -----I could not, understand.@
+br
+#ff0000
+`       That's fine.\
+#ffffff
+`"Ha------ah."@
+` …… I breathe harder.@
+` Knife still in hand, the contents of my stomach rise to my throat.@
+`"Ah----ghaa--aah--"@
+` …… How come?@
+` There is regret over killing her.@ There's also guilt.@
+` But, above all else---I can't rid myself of this feeling.\
+
+`"Aah--ghaa--gah--"@
+` What a shock.@
+` If you call this pain pleasure, then this has to be the greatest pleasure in the world.@
+` That's what I think as I feel this blood pulsing throughout my body.\
+
+br
+` …… That's the kind of person you are.@ Like me, someone who has to kill people to live.@
+br
+` -----She…
+br
+` …… Your need to kill others is the same as your need to breathe.@
+br
+` -----She said killing others was fun, she proudly said that to me.\
+
+`"---No."@
+` No, that's wrong.@
+` I cannot accept that.@
+` If I accept that, I could never live as myself again.@
+
+`"----I'm different.@ I'm different from you, Yumizuka."@
+` There's no power in my denial.@
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_29b.jpg",%type_crossfade_fst
+
+br
+` My whole vision wavers.@
+` Here---if I stay here any longer, I'll go crazy.@
+br
+` …… I have to go back.@
+` Back to my world.@ I need to hurry back to the normal life of Tohno Shiki, or else I'll be engulfed by this poison.\
+
+
+br
+br
+br
+br
+br
+br
+`"------Gaaah."@
+` Trying to stifle the sharp pain in my head, I start to walk away.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+!w3000
 
 
 

@@ -2,46 +2,27 @@
 
 bg "image\bg\bg_04.jpg",%type_nowaitdisp
 
-`"What is he to me?----Arihiko is just a classmate.@ What else does he look like?"@
-ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
 
-`"Oh, so you refer to 'just' your friend by his first name, Nii-san?"@
-` Akiha looks at me unhappily.@
-`"Look, does it matter if I refer to him by his last name or his first name?@ Why are you hung up on that all of a sudden?"\
+`"He's a friend of mine from middle school--Akiha?"@
+`"Yes?@ What is it, Nii-san?"@
+`"You seem to have calmed down a whole lot.@ All your confusion earlier in the cafeteria seems like it never happened."@
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"----What are you trying to say, Nii-san?"@
+`"No, I was just thinking… maybe you were pretending to be naive earlier?"@
+` There is a strong possibility that is the case.@
+` Come to think of it, there was no reason for Akiha to just stand there stupidly in the middle of the crowd like that.\
 
 ld c,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
 
-`"My, you have no awareness, Nii-san.@ Maybe for women, but it is not normal for two boys to refer to each other like that.@ Unless they were brothers or relatives…"@
-`"Eh----well, maybe you're right."@
-` …… Even I tilt my head to the side as I think about it.@
-` But since the very beginning, I've always called him "Arihiko".@ Besides, we've known each other so long it isn't that odd.\
-
-`"Well, there is another case.@ Don't tell me you have that sort of relationship with him, Nii-san?"@
-`"……?@ That sort of relationship?@ What do you mean?"@
-cl c,%type_crossfade_fst
-
-` I respond seriously, not understanding, but Akiha shifts her gaze.@
-ld c,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
-
-`"…… It's nothing.@ I was being sarcastic but you don't seem to get it, Nii-san."@
-` Akiha slumps her shoulders.@
-` …… I start to get more and more confused.\
-
-
-`"----Akiha.@ I've known him since middle school and he has always helped me out.@ …… He might not look like it, but he is a good person.@ I don't know what you don't like about him, but don't think bad of him."@
+`"Oh?@ Nii-san, is that what you think of me?"@
+` Akiha looks me over from head to toe.@
+` …… I knew it.@ She was just putting on an act to fool me.@
 ld c,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
 
-
-`"…………"@
-` Is she not satisfied about something?@ Akiha starts to sulk.\
-
-`"Akiha, are you listening?"@
-`"Yes, I hear you!@ This is the first time I have ever heard you defend someone so eagerly.@ He really must be special to you, this school friend of yours!"@
+`"Yes, please go ahead and imagine what you like.@ It isn't like I wanted you to be worried."@
+` She puffs out her chest and pouts.\
 cl c,%type_crossfade_fst
-
-` She puffs out her chest and turns her head away.@
-` …… Geez.@ I don't know why she decided to transfer here all of a sudden.@ Now I don't even know what's with her.\
-
 
 
 return

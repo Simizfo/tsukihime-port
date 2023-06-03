@@ -1,59 +1,39 @@
+playstop
+
+bg "image\bg\bg_25b.jpg",%type_lcartain_mid
 
 
+` …… There is no one around.@
+` The shopping district still had some people, but the way back to the mansion should be completely empty.@
+`"………"@
+` The words "serial killer" run through my mind.@
+` Midnight.@ Walking through town alone.@ I might be an easy prey for such an attacker.\
 
-bg "image\bg\bg_06a.jpg",%type_crossfade_mid
-
-play "track01.ogg"
-
-` --Even after second period, Yumizuka still didn't show up.@
-` With no way to find out, my bad feeling about this grows.\
-
-bg "image\bg\ima_10.jpg",%type_tshutter_mid
-bg "image\bg\bg_06a.jpg",%type_bshutter_mid
+wave se9
 
 
-` It's lunchtime.@
-` In spite of the morning's excitement, the classroom has returned to its everyday cheerfulness.@
-` It seems that no one in class is really taking Yumizuka Satsuki's running away from home seriously.@
+`"----!?"@
+` A sound.@
+` Somewhere behind a building, there is a sound.@
+` I think it is the sound of someone falling?@
+`"…… The back alley……?"@
+` The noise came only once.@
+` An eerie silence surrounds me.\
 
-ld c,":a;image\tachi\ari_t01.jpg",%type_lshutter_fst
+wave se9
 
-`"Tohno, let's get lunch."@
-`"That's okay.@ I don't really feel like it."@
-`"Huh, I guess it can't be helped.@ Don't be troubled with other people's problems too much."\
-
-cl c,%type_lshutter_fst
-
-`"……"@
-` Other people's problems, huh?@
-` Arihiko's words are too close to the truth.@
-`"Huh?@ You're not with Inui-kun today?"@
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_lshutter_fst
-
-`"…… Senpai?@ What are you doing in our classroom?"@
-`"Well, I thought I'd have lunch with you guys… Tohno-kun, aren't you going to eat something?"@
-` Senpai sits down on the desk, looking at me anxiously.\
-
-`"Nah, I just don't seem to have any appetite today."@
-`"Ahh… Are you not feeling well?"@
-`"…… Something like that.@ Don't worry about me, you go on to the dining hall.@ Arihiko's probably already there."@
-
-ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
-
-`"Oh, you're not energetic at all!@ I don't know what happened, but if you don't eat lunch, you'll just feel even worse."@
-`"That's… true, but…"\
-
-cl c,%type_crossfade_fst
-
-` But since I'm not hungry, there's not a lot I can do.@
+` …… I have a bad feeling about this.@
+` Did someone collapse in the back alley?@
+` Did the wind just knock something over?@
+` …… Whatever it was, I probably shouldn't get involved.@
 br
-` I----
+` -----But.@
+` Is it because I was looking for Yumizuka a while ago?@ I feel like she's there for some reason.\
 
-
-
-
-
-
-
+`"…… What… should I do……?"@
+` There's no one around.@
+` The only help I can rely on is this knife Kohaku-san handed me this morning.@
+br
+` I-------
+br
 return

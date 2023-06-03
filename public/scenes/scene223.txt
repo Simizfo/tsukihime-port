@@ -1,205 +1,38 @@
 
+bg "image\bg\bg_03a.jpg",%type_nowaitdisp
 
-bg "image\bg\bg_34a.jpg",%type_nowaitdisp
+` …… Wait a minute.@
+` All of that happened, and Senpai still greeted me with her usual smile.@
+` Last night----if she saw me fighting Nrvnqsr, then she definitely can't just greet me like this.\
 
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
 
-ld c,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
+`"Tohno-kun?@ Did you want to say something?"@
+`"Um, hold on."@
+` …… If I think back, that person who helped me last night may not have looked like Ciel-senpai at all.@
+` I couldn't get a good look at her face because it was dark, and her atmosphere was completely different.\
 
-
-`"I understand.@ Then I will no longer ask about this.@ But, please refrain from doing anything like this ever again.@ Nii-san, you are the eldest son of the Tohno family; if you do not understand your position better, it will be very troubling."@
-`"--Hey, that has nothing to do with this.@ Besides, you are now the successor to the Tohno family, so it doesn't really matter what I do.@ If you're so worried about the future of the Tohno family, you should go find a husband appropriate for the Tohno household."@
-
-
-ld c,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
-
-
-`"-----"@
-` ……?@
-` For some reason, Akiha descends into silence.\
-
-`"What's wrong?@ Are you feeling alright, Akiha?"@
-`"--It's nothing.@ If you have enough time to worry about me, please pay more attention to yourself.@ You have your chronic anemia to worry about, Nii-san."@
-`"……… Hmph."@
-` …… Well, it is true that I frequently collapse from anemia.\
-
-
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-
-
-`"Anyway, please do not leave the mansion by yourself often.@ Even without that, the city is dangerous recently.@
-` Someone like you, who meanders about in a daze is just asking to be attacked by that serial killer."@
-`"Serial killer?--Oh, those serial killings."\
-
-` Those serial killings where nine victims have been found.@
-` Their bodies were all drained of blood, so they call it the modern day vampire, but--\
-`"Oh, that's okay.@ Those incidents, they won't ever happen again."@
-`"----Huh?"@
-`"It means the vampire isn't around anymore.@ That killer--is caught already."@
-`"Is that so……?@ Nii-san, how do you know about that?"@
-`"Well, I just happened to see it, but for sure, such things will not happen again."@
-
-
-cl c,%type_crossfade_fst
-
-
-` …… Yeah, at least there won't be any more people killed by Nrvnqsr.@
-` These past two days spent with Arcueid… so many things happened I really can't say just what is right and what is wrong.@
-` But, the simple truth remains--I can say it was all for the best.\
-
-
-ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
-
-
-`"Nii-san----?@ What happened?@ You suddenly seem very happy."@
-` Akiha looks strangely at my face.@
-`"It's nothing.@ I just feel that it is finally, finally over."@
-` A smile unconsciously creeps over my lips as I answer.\
-
-
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-
-
-bg "image\bg\bg_34a.jpg",%type_lshutter_mid
-
-
-` It's half past seven.@
-`"Shiki-san, breakfast is ready!"@
-` Kohaku-san's cheerful voice rings out from the dining room.@
-`"Well, I'll go eat breakfast.@ Isn't it almost time, Akiha?@ Don't mind me and go ahead."@
-
-
-ld c,":a;image\tachi\aki_t09.jpg",%type_crossfade_fst
-
-
-`"Yes, I know, Nii-san."@
-` Maybe it's because of our conversation, but Akiha is in a good mood.@
-
-
-cl a,%type_crossfade_fst
-
-
-` Rising from my seat, I head to the dining room.\
-
-playstop
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-
-
-` I really don't have an appetite.@
-` How come?@ Well, having white rice with something blood-red all over it would make anyone lose their appetite.@
-`"-----"@
-` I shake my head.@
-` It's certainly just an illusion, and Kohaku-san's cooking looks excellent as always.@
-` Getting a hold of myself, I take a bite of the breakfast.@
+`"Senpai, could I get a good look at your face?"@
+`"Uh, yes?"@
+` She curiously tilts her head and looks up at me.@
 br
-` ----I instantly spit it out.\
+` …… Of course.@
+` Once I think it through calmly, that person didn't resemble Senpai at all.\
+
+`"…… Sorry, it's just a mistake.@ It's nothing, so please forget about it."@
+`"A mistake?@ I'm a little interested--Mistake about what?"@
+` She still stares up into my face.@
+`"Uh…… It's, ummm."@
+` Looking away, I try to hide my blushing face.@
+` …… Having her so close to me at the school gate is embarrassing.\
+
+`"N, nothing.@ I just thought I saw someone that looked like you last night, but it must have been a mistake."@
+`"…… Hmm, a person that looked like me?"@
+` Senpai gives a very interested nod.@
+` It seems she isn't going to just forget about it.\
 
 
-bg "image\bg\bg_34a.jpg",%type_lcartain_mid
 
-
-ld l,":a;image\tachi\aki_t01a.jpg",%type_lshutter_fst
-
-play "track03.ogg"
-
-` Akiha looks at me questioningly as I came out of the dining room so soon after I went in.@
-`"Nii-san, did you forget something?"@
-`"No, it's nothing.@ It's just something really trivial."@
-
-
-ld r,":a;image\tachi\koha_t01a.jpg",%type_lshutter_fst
-
-
-`"Shiki-san doesn't seem to have an appetite this morning.@ He just throws anything he eats back up, so I got him to take some medicine."@
-
-
-ld l,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
-
-
-`"Eh-----?"@
-`"She said medicine, but it's really just some vitamins… I had a bad dream last night.@ I should settle down in a bit so I'll eat at school."@
-` I didn't say this to Kohaku-san, but to Akiha's eyes telling me she wants to say something.\
-
-`"So I'll head out soon.@ My head should clear up once I start walking to school."@
-
-
-ld l,":a;image\tachi\aki_t17a.jpg",%type_crossfade_fst
-
-
-`"Wait, Nii-san---"@
-` Akiha's voice comes from behind me.@
-`"I'm going.@ I'll be back early today, so you can scold me then."@
-` Ignoring Akiha's worried voice, I exit the mansion.\
-
-
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-
-bg "image\bg\bg_32a.jpg",%type_lcartain_mid
-
-
-` Hisui walks with me to the gate, carrying my bag.@
-`"Well, I'll be going.@ Thanks for seeing me off, Hisui."@
-` Hisui wordlessly hands me my bag.\
-
-
-ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
-
-
-`"Shiki-sama, around what time will you be returning?"@
-`"You don't trust me either?@ It's okay.@ I'll definitely be back in the afternoon."@
-`"--I understand.@ Then please be careful on your way."@
-` Hisui bows deeply.@
-` Feeling a bit embarrassed about it, I leave the mansion's gate.\
-
-
-bg "image\bg\ima_10.jpg",%type_lshutter_slw
-
-bg "image\bg\bg_24a.jpg",%type_lcartain_slw
-
-
-` At the intersection there are only the figures of my fellow high school students.@
-` No young woman sitting on the guardrail like that one time.\
-`"--Well, of course."@
-` I probably won't ever see her again.@
-` First of all, her goal was to execute the vampire, and with Nrvnqsr gone, there's no reason for her to stay around here any longer.@
-br
-` --Just a little bit, in my chest.@
-` Things like regret… and lingering affection.@
-` It is true she only brought trouble, but even still…… it was fun being with her.\
-
-`"………"@
-` I think there must be something wrong with me.@
-` Even though I was in such danger the whole time, there's still a part of me that unconsciously tries to remember her.@
-` …… It's almost like I'm in love with her.@
-` Even though I would never want to be exposed to that kind of danger again.\
-
-
-bg "image\bg\bg_01a.jpg",%type_lcartain_slw
-
-
-` Because I skipped breakfast, I arrive at the front gate ten minutes before it closes.@
-` Everyone who doesn't have club activities before school arrives at this time.@
-` The only clubs that meet in the morning are the sports clubs.@
-` So naturally, the entrance gets crowded with students.@
-`"----Ah."@
-` By the gate I see a familiar figure.@
-` Not even knowing what I plan on doing, I chase after her.\
-
-
-bg "image\bg\bg_03a.jpg",%type_lcartain_fst
-
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_lshutter_fst
-
-
-`"Ah, good morning Tohno-kun.@ It's strange to meet you out here."@
-`"…… Yeah, I saw you from behind, so I ran after you.@ Um…… there was something I wanted to ask."@
-` I sneak a look at her face.\
-`"Yes, what is it?"@
-` She faces me with her usual, gentle smile.@
-` I---
-br
-cl c,%type_crossfade_fst
 
 
 return

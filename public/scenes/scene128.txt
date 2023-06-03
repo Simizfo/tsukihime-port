@@ -1,6 +1,7 @@
 
 
 
+
 if %flgE>=1 skip 7
 mov $phasebg,"image\bg\bg_06g.jpg"
 mov $phasetitle_a,":a;image\word\PARK_06A.PNG"
@@ -14,6 +15,7 @@ mov $phasetitle_b,":a;image\word\day_06.png"
 gosub *left_phase
 
 
+
 bg "image\bg\ima_11.jpg",%type_crossfade_slw
 
 bg "image\bg\bg_40a.jpg",%type_lcartain_fst
@@ -24,11 +26,10 @@ play "track02.ogg"
 ` ………, ………………, ……………………@
 br
 `"--Mor--ning?"@
+br
 ` I dazedly open my eyes.@
 ` Sunshine pours in from the window, enveloping the room with a warm atmosphere.\
-br
-`"--------"@
-br
+`"………………"@
 ` I stare down at my hands.@
 ` They are a little sweaty.@ My body is drenched in sweat as well, as if last night was incredibly hot.@
 ` What's more, I'm panting heavily.\
@@ -43,12 +44,15 @@ br
 br
 ` Akiha, and Kohaku-san……?@
 br
-`"Ko----Kohaku-san?"@
-` I look around wildly.@
+`"A----Akiha!"@
+` I jump out of bed.@
+` I wildly look around the room.@
 ` I see--
+br
 `"……… There's… no one………"@
+br
 ` Right, no one's here.@
-` The bed doesn't look rumpled--and Kohaku-san who was acting like a mischievous devil isn't here.\
+` The bed doesn't look rumpled--and that cold Akiha isn't there either.\
 
 `"A----dream?"@
 ` As soon as I realize it, I heave a sigh of relief.@ I shut my eyes and catch my breath.@
@@ -56,7 +60,7 @@ br
 ` It is before seven in the morning.@
 ` I am the only one here, and of course Kohaku-san and Akiha are nowhere to be seen.@
 `"Ha……………… a."@
-` Yeah, I know.@
+` Yeah, I knew.@
 ` I know it was a dream.@ Now that I'm calm, I know she wouldn't ever do anything like that.@
 ` In that instance, what happened last night was not real.\
 
@@ -64,27 +68,35 @@ br
 ` I let out a deep breath.@
 ` …… All the same, I definitely still remember what happened last night.@
 ` I know it was a dream--but it felt too real; it makes me think it was real.\
-` …… All the same, it has got to be a dream.@
-` But I guess that is good in a way.\
+` …… But, it was without a doubt a dream.@
+` That has to be true.\
 
-`"But, why--"@
+`"--Why--"@
 ` Why did I see that dream?@
-` …… Well, I really do think Kohaku-san is cute.@
-` She seems to be the most free one here, and for some reason, whenever I see her, I feel more lively.@
-` But, that's different.@
-` I think of her as my family, certainly--not as a woman.\
-
+` …… Well, certainly Akiha is strict, and she is the head of the Tohno household, so it makes her the most powerful person here.@
+` But she wouldn't do that.@
+` She is my dear sister, but seeing that dream--Does that mean I'm seeing her as a woman?@
 `"------Uh."@
-` All the same, I keep remembering her mischievous eyes.@
+` I remember her cold stare, like ice.@
+` I hug myself to make sure this is real.\
+
 `"Damn--what the hell am I thinking?"@
-` I shake my head to clear out the remnants of the dream.@
-` But then,\
+` Lusting after my sister, there really is something wrong.@ …… Well, she is different after eight years, like a completely different person.@ She seems more like a refined young lady I've never met.@ But still--
+`"…… But…… she was… really cute."@
+br
+` --I blush furiously as I remember.@
+br
+` Maybe it was only a dream within a dream, but I remember Akiha feeling herself while wildly calling my name.@
+` I know it truly is forbidden, but I recall the dream and just sit there thinking about it.\
+
+` And then,
 
 ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
 
-
 `"Shiki-sama."@
 `"Uwaaaaaa!"@
+quakey 2,100
+
 ` I flail around off my bed as if trying to escape.@
 ` No--in fact I was trying to escape, but it just ended up with me landing on the floor with the sheets.\
 
@@ -105,7 +117,6 @@ br
 
 ld c,":a;image\tachi\his_t01b.jpg",%type_crossfade_fst
 
-
 `"I do not wish to describe it."@
 `"Ah--h"@
 ` …… I knew it.@ I must've looked really weird.@
@@ -119,11 +130,11 @@ ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
 ` I give a cough to clear the silence.@
 ` …… Adding "san" to her name is a clear sign of my vulnerability.\
 
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
 
 
 `"What is it, Shiki-sama?"@
 `"Um…… I'm going to change, so would you mind waiting outside?"@
-br
 ` --Or rather, I'm so embarrassed I just want her to leave.@
 ` But Hisui doesn't obey today of all days.\
 
@@ -138,6 +149,7 @@ br
 
 cl c,%type_crossfade_mid
 
+
 ` Hisui approaches me out of worry.@
 `"No, that's not it.@ I'm standing----I mean I can stand, so don't worry about it."@
 ` I crawl pulling my sheets like a slug, and gain some distance from her.@
@@ -150,14 +162,15 @@ ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
 cl c,%type_lshutter_mid
 
 ` She has got to be suspicious, but she bows and leaves the room.\
-
+br
 ` *sigh*@
 ` I was so surprised.@
 ` The contents of my dream were surprising enough, but knowing Hisui saw me while I was dreaming is very troubling.@
-` …… Or is it my own fault for having that kind of dream about Kohaku-san?\
-`"…… I guess it is my fault.@ Just what was I thinking?@ Having that kind of dream about Kohaku-san…?"@
+` …… Or is it my own fault for having that kind of dream about Akiha?\
+
+`"…… I guess it is my fault.@ Having a dream like that about my own sister."@
 ` I give a sigh of self-loathing.@
-` To feel relaxed around Kohaku-san again, I should just forget about this dream as soon as possible.\
+` For my sake and for Akiha's reputation, I should just forget about it as soon as possible.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_34a.jpg",%type_lcartain_mid
@@ -168,17 +181,17 @@ bg "image\bg\bg_34a.jpg",%type_lcartain_mid
 
 ld c,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
 
-`"Good morning, Nii-san.@ You are certainly up early this morning."@
+`"Oh?@ Good morning Nii-san.@ You're up early today."@
 ` She must be happy I woke up because she greets me with a smile.@
+`"Yeah, good morning.@ There were, well, a lot of things going on this morning."@
+` As soon as I say that--I remember that cold stare from last night.@
 
 cl c,%type_crossfade_fst
 
-`"Yeah, good morning.@ There were, well, a lot of things going on this morning."@
-` As soon as I say that--I remember that cold stare from last night.@
 `"Uh--"@
 ` This isn't good.@ I can tell my face is blushing beyond my control.@
-` …… I acted foolishly in front of Akiha.@
-` Akiha, watching it all.\
+` …… Myself being made a complete fool.@
+` And Akiha, who was always watching.\
 
 `"Nii-san--?"@
 ` A brief clamor.@
@@ -187,15 +200,16 @@ ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
 `"What's wrong?@ Your face is red, do you have a fever?"@
 `"-----!"@
 ` Rushing over to me, she looks up at me from below.@
-` So, if you stare at me that seriously, I---\
-
+` But, if she looks at me that seriously, I----\
 ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
 
-` Akiha sighs.@ "You do seem to have a fever.@ Kohaku, come quickly.@ Nii-san doesn't seem to be well."@
+
+` Akiha sighs.@
+`"You do seem to have a fever.@ Kohaku, come quickly.@ Nii-san doesn't seem to be well."@
 ` Akiha calls out to the dining room.@
-`"Ko---Kohaku-san?@ That's bad."@
-` If I see Kohaku-san now, I might faint from being too embarrassed.@
-`"I-I'm fine--!@ It's just a minor cold, so don't worry!"@
+` Kohaku-san has to be preparing my breakfast in the kitchen.\
+
+`"I'm fine--!@ It's just a minor cold, so don't worry!"@
 
 ld c,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
 
@@ -203,12 +217,12 @@ ld c,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
 cl c,%type_crossfade_fst
 
 ` Akiha seems to be fed up and puts her hand on my forehead.\
-
+br
 ` The sensation of her cool, delicate hand.@
 ` White, slender fingers.@
-` White, beautiful, fine fingers that men's fingers don't even come close to-----\
+` So different from those of a man.@ Delicate, beautiful, white fingers------\
 
-`"!!!!!!!!"@
+`"!!!!!"@
 ` This isn't good.@
 ` This isn't good at all, so I break loose and run out to the lobby.\
 
@@ -262,7 +276,6 @@ playstop
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 !w1000
-
 
 
 

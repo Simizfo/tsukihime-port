@@ -1,37 +1,79 @@
 
 
-bg "image\bg\bg_04.jpg",%type_nowaitdisp
 
 
-`"I think our school's uniform would match her well.@ See, Akiha already looks mature enough, so you don't have to force her to wear such a prim and proper----"@
-ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+!w2000
+bg "image\bg\bg_06b.jpg",%type_tshutter_mid
+
+play "track01.ogg"
+
+` School ends.@
+` Let's go meet Akiha at the first year classrooms.@
 br
-`"----Uh, well, maybe sweeping away the old image and a fresh change might be nice."@
-cl c,%type_crossfade_fst
+bg "image\bg\bg_10b.jpg",%type_lcartain_fst
 
-` …… Danger!@ Danger!@
-` It would be better if I just don't force myself to say things too much.\
 
-ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+` …… But just as I leave the classroom, I run into her.\
 
-`"Hm?@ Is that how it is?@ Well, Akiha-chan is a beauty, so I think even in a blazer she would look good."@
-ld l,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
 
-`"That's surprising.@ Do you not like our school uniform, Inui-kun?"@
-`"Hm, it's not that I don't like it, it just isn't sexy enough, or at least it's kind of bland.@ When you get girls at the level they are in our school all in the same uniform, everyone will start to look the same and iiiooooooowww!?"\
-quakex 3,100
+`"Ah, Nii-san.@ Are you going somewhere?"@
+`"No, I was just on my way to get you.@ What about you?@ Are you on your way anywhere?"@
 
-ld l,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\aki_t16a.jpg",%type_crossfade_fst
 
-`"Oh, I'm sorry Inui-kun.@ My hand slipped."@
-` Ciel-senpai laughs gently as she drives her elbow into Arihiko's side at a sharp angle.@
-br
-` ………… This is depressing.@
-` I have to live through this stressful situation for almost ten more minutes…………\
+`"No.@ I just thought I might go home with you, Nii-san, so I came here…"@
+`"I see.@ It's lucky we didn't miss each other.@ Well then, let's go.@ Kohaku-san and Hisui are waiting."@
+
+ld c,":a;image\tachi\aki_t09.jpg",%type_crossfade_fst
+
+`"You're right.@ Let's go home, Nii-san."\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_23b.jpg",%type_lcartain_mid
+
+
+`"Oh, that's right, there's a question I've been wanting to ask you, Akiha."@
+
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+`"A question for me…?"@
+`"Yeah.@ Why did you have that dislike for Senpai?@ Did you know her already, by any chance?"@
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+`"No, I met her for the first time yesterday.@ My dislike for her is simply psychological, so you don't need to worry about it."@
+`"Psychological?@ What do you mean?"@
+
+ld c,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
+
+`"I mean, I can't control how I feel.@ It's the same as how you felt about father, so please don't worry about it."\
+
+`"---Hold on, Akiha.@ I just disliked the old man, I didn't hate him."@
+
+ld c,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
+
+`"I don't hate her, either.@ …… I suppose I exaggerated things today.@ I'll reflect on it, so please look leniently upon the affair at lunchtime."@
+`"…… Right.@ I guess that's okay, then."\
+
+cl a,%type_crossfade_fst
+
+` …… Well, I guess it might not be a problem.@
+` Ciel-senpai often comes by at lunch, so if relations between Akiha and her are bad, it'd be a problem.@
+` At this rate, with Akiha saying things like this, me and Arihiko might not end up on pins and needles on the sidelines----\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w1000
 playstop
 
-bg "image\bg\ima_10.jpg",%type_tshutter_mid
+bg "image\bg\bg_40b.jpg",%type_rcartain_mid
 
 
+`"----Ahh."@
+` I toss my bag on the desk, and sit down on the bed.@
+` Well, what should I do?@
+` It seems Akiha has lessons, and as soon as we got back, she went somewhere by car.@
+` …… That's right, Hisui and Kohaku-san were busily walking about too.@
+br
 
 return

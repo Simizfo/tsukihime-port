@@ -1,96 +1,504 @@
 
-bg "image\bg\ima_06.jpg",%type_nowaitdisp
+
+bg "image\bg\bg_28a.jpg",%type_crossfade_mid
 
 br
-` ----I value my life.\
+` ---I can't throw away my doubts.@
+br
+` Sensei said,
+` …… I won't ask you to become a saint.@ All you have to do is become an adult and do what you think is right.\
 
-` I recall the scene yesterday when I killed Arcueid.@
-` The stench of death and blood.@ ---I never want to experience something like that again.@
-` If I were to remain with Arcueid, there'd be no question that I would be subjected to that scene again.@ If I don't want that, I'll have to go back to the mansion.\
+` I know I'm not thinking straight at the moment, but I can't betray her trust.@
+` Even if Arcueid isn't human, she believes in me.@
+br
+` She has forgiven my unforgivable sin with a smile.\
 
+`"……… Alright!"@
+` I leap up from the bench and begin running without turning back.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w2000
+
+bg "image\bg\bg_19c.jpg",%type_lcartain_mid
+
+` …… I return to the hotel at around the same time the sun goes down.@
+br
+`"………"@
+` Quietly, I sneak back inside.@
+` If Arcueid is still asleep, then there… should… be… no… problem……\
+play "track03.ogg"
+
+ld c,":a;image\tachi\ark_t16.jpg",%type_lshutter_fst
+`"---Shiki!"@
+`"……… Ah."@
+` She's awake, and pretty angry.@
+`"Oh, where'd you go to!?@ You should tell me before you go outside!"@
+` Arcueid is angry.@
+` But it doesn't seem like she thinks I betrayed her.\
+
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+
+`"Geez, when I woke up at sunset, you weren't there!@
+` I thought you went to the bathroom, but you wouldn't come out.@
+` Then I thought you went to get some food from the lobby, but you weren't there when I checked.@
+` Just where did you go?"@
+ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
+`"Ah---just outside the hotel for a bit."@
+`"Are you serious…?@ The familiars have found you, so I won't say you're safe.@
+` What were you going to do if one of those black dogs attacked you after you went outside so recklessly?"@
+`"……… Ah."\
+
+` ---Suddenly, I realize it.@
+` The reason Arcueid is angry isn't because I wasn't here.@
+` She hasn't thought, even for a moment, that I would betray her and run out on her.@
+` It seems Arcueid is only angry because she's worried about how I went outside and could've ended up in a dangerous situation.@
+br
+playstop
 `"------"@
-` …… I get the feeling that there's some major flaw in my decision.@
-` But right now, everything is a mess in my head and my sense of logic refuses to function properly.@
-` Anyhow, for now, I'll return to my own room for some rest.@ I'm sure I'll calm down and think clearer then.\
+` …… I'm ashamed.@
+` I was---only a little ways away from treading all over her good intentions.\
 
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-bg "image\bg\bg_22c.jpg",%type_lcartain_slw
+play "track01.ogg"
 
-` The sun has gone down, and my surroundings have been cast into darkness.@
-` It's probably past seven now.@
-` The curfew for the mansion is eight, so I'd better hurry back if I don't want to be scolded by Akiha.\
+`"Hey, Shiki, are you listening to me?"@
+`"…… Yeah, I'm listening.@ You're right, it's my fault.@ I'm sorry for going out on my own like that."@
+` I lower my head obediently.@
+br
+` And---
+br
+ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
+`"Eh!?@ ---H-hey, you don't have to apologize so seriously---
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+` A… anyhow, you're far too vulnerable.@ The enemy is a vampire, so you've got to be more careful."@
+`"You were just as vulnerable yourself.@
+` I killed you once before, remember?@ You can't guarantee I won't do it again, can you?"\
 
-bg "image\bg\ima_10.jpg",%type_lcartain_slw
-bg "image\bg\bg_47.jpg",%type_lcartain_slw
 
-` The streets around the mansion are deserted like always.@
-` The sun's only just gone down, but the silence is like that of midnight.\
-
-`"Come to think of it, this place is…"@
-` Where I've gone to check out that noisy stray dog the night I first returned to the mansion.@
-wave se0
-`"Huh……?"@
-` I'm beset by a terrible premonition of misfortune.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_47.jpg",%type_crossfade_fst
-
-bg "image\bg\ima_10.jpg",%type_tcartain_fst
-
-br
-br
-br
-br
-br
-br
-` ----Strange.@
-` Suddenly, my surroundings became completely black.\
-
-` I hear a dripping sound.@
-` …… Where's that sound coming from?@
-` It's coming from nearby.@
-` My body is starting to cool.@
-` It's coming from nearby.@
-` Alarms are going off somewhere in my head.\
-
-br
-br
-br
-br
-br
-br
-br
-` Drip, drip.@ Drip, drip.\
-
-br
-br
-br
-br
-br
-br
-br
-` The sound…
-` I think it's coming from right behind my neck.\
+ld c,":a;image\tachi\ark_t12.jpg",%type_crossfade_fst
 
 `"Ah----"@
-wave se4
-` I collapse onto the asphalt.@
-` My limbs won't move, and my consciousness dims.\
+` Arcueid gives a surprised look, as if she only just realized it.\
 
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-ld c,":a;image\tachi\nero_t01a.jpg",%type_crossfade_fst
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
 
-` At the bottom of my thinning consciousness…
-!w500
-` all I find out…
-!w500
-` is a few black dogs are feeding on my arms and legs.\
+`"Now that you mention it, you're right.@ ---I wonder why I did that.@ I guess I just had complete confidence in you since we spoke in the alley."@
+`"………"@
+` …… Well, saying that doesn't make me feel bad for her…
+`"Okay.@ Since you trust me so much, I'll try my best.@ So, should I just keep watch from now on?"@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+`"Yeah, until sunrise tomorrow.@ I can't leave the room, so be on guard if someone comes up to this floor."@
+` …… Be on guard, huh.@ Being on guard is going to do me no good if one of those black dogs from this morning comes for us.\
 
-cl a,%type_waitdisp
-bg "image\word\end.jpg",%type_crossfade_slw
+` *sigh*@
+` I let out a sigh.@ As expected, this is too heavy a role for me.@
+`"…… Let me ask you something.@ Was the black dog that attacked us this morning something your enemy sent out?"@
+`"I don't think so, it was probably for surveillance.@ His patrol route happened to pass through where you and I were talking, and it seems my presence was revealed as a result."\
 
-resettimer
-waittimer 3000
+`"Revealed?@ To your enemy?"@
+`"That's right.@ If I had been in perfect condition, it would actually save me some time.@ But right now, it's the opposite.@ If I were attacked now, I'd be the one annihilated.@ That's why I have to hide out like this for now until my power returns."\
+
+` …… Arcueid's enemy.@ In other words, the serial killer who's been causing the stir in this town--a vampire.@
+br
+`"…… Arcueid.@ I want to ask you something.@ Will you answer my question?"@
+`"I don't mind talking.@ But why are you being so formal all of a sudden?"@
+`"--Yeah, I haven't asked you the most important thing yet… So, what's your ultimate objective here?"\
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"Me?@ I'm here to hunt down the vampire.@ Killing vampires is my duty."@
+`"Yeah, I do remember you saying something like that before.@ But Arcueid, you're a vampire, right?"@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+`"What?@ You still don't believe me?"\
+
+`"Oh, don't worry, I believe you so much it hurts.@ I'm asking why would you, a vampire, claim to be doing something as odd as killing other vampires?"@
+`"Oh?@ You don't like the idea of beings from the same species killing each other?"@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+br
+` …… The act of killing doesn't exactly make my list of favorite things, but she is right.@ I'm not comfortable with the idea of vampires killing vampires.\
+
+`"No, it's just that I can't really imagine something like that happening.@ Vampires drain the blood of humans, right?@ So they should be killing humans, not other vampires."@
+ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
+`"Drinking blood and killing are different things.@
+` Well… Even so, I know what you're trying to say.@ You think beings from the same species should help each other out, right?@
+` But vampires can be of the same species and still be different life forms.@ That's why they don't really have what you humans call 'camaraderie'."\
+
+`"……?@ Then you're saying something makes you different from the vampire you're hunting?"@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"That's right.@ The one I'm after is a human vampire, just like the stereotypical vampire from you humans' folklore.@
+` He kills humans by draining their blood, turning them into The Dead, then uses them to increase his power and influence--that's the sort of vampire I hunt.@
+` The one lurking in this town is that sort of old-style vampire."@
+br
+` ---"That sort" of vampire?@ It seems like there are different types.\
+
+`"…… Don't tell me you want me to be your shield so you can get this guy."@
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"--Yeah, that was my original intent.@ But after talking to you, I've changed my mind.@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+` You see, at first, I thought you were someone from The Church.@
+` So I thought you might have information about the location of the enemy, but you turned out to be a perfectly ordinary person.@
+` You didn't even know about vampires, let alone the location of the enemy's coffin."\
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"…… Yeah, come to think of it, there's no way they'd send an exorcist to a Far East secular country like this one--I guess I didn't put enough thought into this."@
+` Arcueid thinks aloud.@
+` Her conversation derails, and I'm feeling a little left out.\
+
+`"I don't follow you at all, Arcueid."@
+`"Ah, hold on for a moment… let's see… How should I explain this…?"@
+` With that, Arcueid's gaze begins drifting.@
+` …… She doesn't seem used to holding a conversation.\
+
+`"Don't worry about it and just explain everything about the current situation.@ I don't understand any of this, but I might be able to see the general gist of things."@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+`"Really?@ Thanks, Shiki."@
+`"You don't have to thank me.@ Just keep talking."@
+` Arcueid nods obediently.\
+
+`"Basically, the vampire currently in this town is an old-style vampire.@ He himself reigns as the lord and releases The Dead he made into the city.@ By doing so, he increases his power bit by bit.@
+` He's a typical vampire in that he drains the blood of humans, and those humans become vampires themselves.\
+` He's not very powerful right now as he doesn't have many Dead serving him, but as the victims increase, so does his power.@
+` It would be best to destroy the main body before that happens, but I haven't found where he sleeps yet.@
+` He's hidden so well right now I can't even feel his presence."\
+
+ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
+
+`"Even so, it's easy to take care of things once I find him.@ But I don't have any clues whatsoever, so I had no choice but to walk around town during the day to investigate.@
+` But then I suddenly got attacked by a passing killer, and now, I'm temporarily weaker than the enemy vampire."@
+br
+` Arcueid shoots me a cold look.@ I guess she wants to say something to the "passing killer".\
+
+`"…… I see.@ I kind of understand the situation now.@ So in other words, some evil monsters are based in this town, and you're here to eliminate them.@
+` Since you didn't know where they were, you went looking for them, and that's when I, uh--killed you.@ So now you're weakened and hiding out while you recover… Is that about right?"@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+`"To put it simply, I think so."\
+
+`"--Then next is the main topic.@
+` You casually call yourself a vampire, but I still don't really understand that term.@
+` …… It's obvious you're not a human, that much I can see, but I don't get the feeling that you're a vampire, either."\
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"That's true.@ I'm a little different from the type of vampire you know about."@
+`"Indeed.@ I hadn't considered that vampires even existed at all, let alone a vampire like you.@
+` So, what makes you different?"@
+` Arcueid thinks.@
+`"Yes… I suppose it might be helpful to teach you a bit about us."\
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"Alright.@ Then the first period's lesson will be Vampires 101."@
+`"…… Okay, but… What's with 'Vampires 101'?"@
+`"You're an amateur at this, so we've got to start with the basics, right?@ That's why I'm going to start teaching from the very beginning."@
+`"--Okay, whatever.@ Just keep it short."\
+
+ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
+`"Um… I'll try my best."@
+br
+` …… It really does seem like she's not used to talking.@
+` Well, we've got lots of time, so for now I guess I'll listen to Arcueid without complaint.\
+
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+playstop
+
+bg "image\bg\bg_19d.jpg",%type_lshutter_fst
+
+play "track09.ogg"
+
+ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
+`"Although we're typically called simply 'vampires', we're divided into two main categories.@
+` Those who were vampires from the start, and those who become vampires.@
+` The former are called True Ancestors, and the latter are called the Dead Apostles.@
+` The ones you call vampires are the Dead Apostles.@ They drain the blood of humans and turn them into their slaves.@ They're weak against sunlight, and you can vanquish them with a baptism ritual.@
+` Our enemy is one of these Dead Apostles."\
+cl c,%type_crossfade_fst
+
+
+` It's gone from "my enemy" to "our enemy".@
+` …… Well, I don't mind.@ She's not wrong, considering the situation I'm in now.@
+br
+`"…… Hmmm.@ So you're saying these Dead Apostles aren't vampires from the start?@ What do you mean by that?"\
+
+ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
+
+`"Dead Apostles were once humans.@ They've attained immortality through magic, or had their blood sucked by one of the True Ancestors.@
+` Either way, the ones that become vampires become immortal, even though it's imperfect immortality."@
+`"……"@
+cl c,%type_crossfade_fst
+br
+` Those who were vampires from the beginning, and humans who became vampires.@
+` …… What is this?@
+` I get the feeling that there's some kind of huge contradiction to all of this.@ It feels like some important fundamental is missing somewhere in this theory.\
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+`"Hey--Shiki.@ How much do you know about vampire folklore?"@
+`"Let's see… Just the usual stuff.@ They suck the blood of virgins, they can bind people just by looking at them, they can turn into mist and wolves… just the usual stuff you hear about."@
+`"Yeah, that's pretty much all true.@
+` They drain the blood of virgins because one's blood cells are more pure before one has exchanged bodily fluids with others.@ That makes virgins most suitable for repairing the vampire's own degenerating genes.\
+
+ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
+
+` The Dead Apostles--the ones that become vampires have imperfect immortality.@
+` Since they became immortal, they won't die from old age.@ However, they need to replenish their energy frequently, or they'll disappear.@ All living creatures need nutrients to be able to move, right?@ It's the same thing.@
+` It's just that vampires don't die from age as long as they take in the nutrients."\
+
+`"The Dead Apostles suck blood because they need it to stay alive.@
+` Immortality is a strain on their originally-human bodies.@
+` The genes that compose their bodies are different… when they become vampires, they begin to degenerate at an incredible rate.@
+` To make up for that, they must drain the blood of others in order to absorb genetic information and stabilize their own bodies.@ To a vampire, drinking blood is not like eating, but it's the minimum requirement for them to continue to exist."\
+
+`"………"@
+` This sounds complex.@ And long.@
+` I can't follow the logic, but Arcueid nonetheless continues speaking.\
+
+`"So, moving on.@
+` The ability to bind someone with just a look is a type of Mystic Eyes.@ Eyes and words are both common types of magic circuits, so there are many vampires who have Mystic Eyes.@
+` We usually possess the Mystic Eyes of Enchantment.@
+` We don't enchant people by looking at them, rather, we enchant those who look into our eyes.@ A powerful vampire using Mystic Eyes can impose his own will into the brain of another and completely dominate their thoughts, but the Mystic Eyes of a Dead Apostle don't have that much power."\
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"What you call 'turning into mist' is really just making a spare body and controlling it via the will.@ Once the part serves its purpose, you cut the flow of magical energy to the offshoot and naturally, it returns to dust."\
+
+` Wolves--and other animal transformations--are a byproduct of a vampire repairing its damaged body using its familiars.@
+` For the long life of vampires, stabilizing their bodies with normal lives is not sufficient.@
+` Humans are not fundamentally powerful animals, so it's more effective to repair one's body by absorbing beasts, as they surpass the human species in this respect.@
+` Vampires who repair their own bodies with beasts can return those beasts to their previous forms and use them as familiars when they need to."\
+
+`"Hmm… from what I've heard, there's even a thousand-year old vampire whose body is made up entirely of familiars.@ They say he contains 666 beasts within his body, or something like that, anyway."@
+cl c,%type_crossfade_fst
+`"-----"@
+` I think Arcueid's getting a little too wrapped up in her own speech.@
+` To be honest, I'm not finding this world easy to understand.\
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"Yeah, that's about it.@ It's just an explanation of the very basics, but now do you know what a vampire is?"@
+`"Well… I suppose."@
+` The reality of Arcueid being a vampire begins to feel harder and harder to accept.\
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+`"Now, it's my turn.@ Actually, there's something important I've forgotten to ask you too."@
+`"What?@ You're not going to learn anything from me.@ I'm not a vampire or anything, just an ordinary student."@
+ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
+`"Hmmm.@ Then let me ask you this, Shiki.@ How exactly did you kill me?"@
+`"Huh?"\
+
+`"I'm asking about the method you used.@ I'm resistant against stuff like Runes and Kabbalah, so those don't work on me.@ The only thing I'm not resistant against is magic I've yet to experience, which is probably limited to the ancient Shinto in this country and the treasures in South America."\
+
+ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
+
+`"No, not even those could 'kill' me that much.@
+` Answer me, Shiki.@ What kind of occult artifact did you use to incapacitate me to that degree?"@
+`"Occult artifact…?@ What's that?"@
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+`"A catalyst which stores ideas and history!@ Geez--You've got sacred treasures in this country too, don't you?@ They're usually something like staffs and swords, jewels and masks; Conceptual Weapons that can be used against nature itself--Come on, Shiki!@ Are you sure you're not someone from one of those fields?"\
+
+`"What field?@ I told you, I'm just a student.@ I don't know anything."@
+`"That's a lie!@ There's no way a human who's not even a magus can hurt me.@ …… Are you hiding something from me, Shiki?"@
+` Arcueid gives me an angry, cat-like stare.@ …… But even if she looks at me like that, I'm not hiding anyth--Oh, wait.\
+
+`"Actually, there is one thing… I'm not sure whether it's relevant, but…"@
+` Arcueid is still staring at me.@
+` …… It doesn't seem like I'll be able to keep quiet about it.\
+
+`"Alright, I'll tell you, but… how should I put this?@ I… can see these lines that can be used to cut things."@
+ld c,":a;image\tachi\ark_t13.jpg",%type_crossfade_fst
+`"Eh?"@
+` Oh.@ She's stunned.@
+` She should be.@ Normally, I don't think anyone would believe a story like this.\
+
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+`"…… What do you mean?"@
+` Arcueid asks in a serious tone.@
+` She's not exactly normal… I should have known she would defy my expectations in a good way.\
+
+`"I mean, I see these lines where things can be cut.@
+` Living things, the ground, anything touchable.@
+` It's like a black line, and I can cut things clean when I let anything sharp through it… does that mean anything to you?@
+` It's convenient to be able to cut steel with a knife and all, but it's not like I can cut it anywhere I like.@
+` I can only cut things where I can see the lines, and when I cut you--well, you can cut a girl's skin with just a knife, right?"\
+
+ld c,":a;image\tachi\ark_t05b.jpg",%type_crossfade_fst
+
+`"------"@
+` Arcueid's eyes are serious as she glances at me--those wild eyes that I've seen only once before.@
+` A gaze that could stop my breathing.\
+
+`"------I see.@ I thought the Mystic Eyes of Death Perception only existed in fairy tales.@ But, I guess there is someone who can use them, a mutated monster like you."@
+`"W--what!?@ I don't think a vampire can call me a monster!"@
+`"A monster is a monster.@ There isn't anyone, even amongst us, with Mystic Eyes that can 'see the death of things'."@
+`"…?@ See the death of things…?"@
+` Arcueid nods in affirmation with an inimical gaze.\
+
+`"A circuit must have opened in your eyes, Shiki.@ Were you born with eyes like that?"@
+`"No.@ They became like this a long time ago, but I wasn't born with them."@
+`"…… Hmm.@ Then you must have had at least one near-death experience at some point, right?"@
+`"Wha----"@
+` It's true.@ Eight years ago, I got in an accident where I almost died.\
+
+`"Just as I suspected.@ You had the latent ability, but that must have been the trigger… The Mystic Eyes of Death Perception, huh?@ Yes, with those, you could definitely kill even me."@
+cl c,%type_crossfade_fst
+` With a small sigh, Arcueid's eyes return to normal.\
+
+`"Arcueid… Do you know something about these lines?"@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+`"Not to the extent you would, but I do have some information.@ What you see is the end of all things; the point where things die easily.@ To put it simply, the time of death for everything in existence… that is, Death itself."@
+`"----"\
+
+` …… I remember now.@
+` That time.@
+` When Sensei gave me these glasses, she had told me something similar to what Arcueid said.@
+` But there's a subtle difference to what Sensei said and what Arcueid said.@
+` What I'm seeing are only lines, and not something as disturbing as death.\
+
+`"What are you saying?@ What I see are just the lines where things can be cut."@
+`"I'm telling you, those lines are the 'death' of the object.@
+` Listen, Shiki.@ Everything in existence has an end.@ There are differences to when, but it's an end nonetheless.@
+` Death does not 'arrive'.@ It is already contained within the object at its creation, and it's bound to happen someday.@
+` This is what is called the principle of causality.@ You've heard of that before, right?\
+
+` As long as something has an origin, it must have an end.@ When it will end is determined from its beginning.@ That's its so-called 'time of death'.@
+` So, as it already exists from the beginning, it's not impossible for one to see it with their eyes, given that they can comprehend the concept of a 'time of death' and they have the appropriate circuit in their brain and eyes.\
+
+` That's the truth behind those 'lines' you see.@
+` This is nothing more than the general concept, but if I were to theorize, I would say that they are the weakest parts of the joints between the molecules in something, or perhaps a pre-designated switch within the genetic makeup that activates the death of that object."@
+ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
+`"Ah, but that doesn't really make sense.@ …… Hmm.@ I can't see them, so I can't say for sure, but the lines aren't all you can see, are they?@ I would think there would be 'points' more than 'lines'."\
+
+`"--Ah."@
+` That's right.@
+` When I first saw Arcueid.@
+` When I wasn't myself.@
+` When I took off my glasses, I could see the usual scribbles--and black points, where the scribbles seemed to flow from.\
+
+`"…… There were.@ It only happened that one time, but--definitely.@ I saw black points.@ There were several on your body, and the black lines flowed between them, joining them up."@
+` If I had to make an analogy, I would say they were like blood vessels.@
+ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
+`"…… I see.@ 'The lines where things die easily', and 'death itself', huh?@ I'm surprised you've stayed alive up until now like this.@ You must have a very tranquil heart, Shiki."@
+` Arcueid says this philosophically.@
+` In my own way, I understand what she is saying, but I don't want to believe any of it.\
+
+`"--What?@ There's no way that sort of thing exists, let alone me being able to see it…!"@
+`"Well, you are seeing it.@
+` Usually, when you cut a living being's neck, they die.@ This means it stops because you've cut it.@
+` Conversely, you can say that if you can't cut something's neck, it won't die.@ Ah--This is about me, so just consider it an exception."\
+
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+`"But in your case, you can ignore the cause.@ Even against that which is immune to all external effects, you kill first.@ What is killed then becomes 'dead'.@
+` It's not that it stopped because you cut it, but in your case, you stop the object, and as a result, it is cut.\
+
+ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
+
+`"See?@ What else can I call you but a monster?@
+` You may just call them lines along which something can be cut, but those eyes are more special than those possessed by any other user of supernatural power in history.@
+` You, Shiki, have the eyes that can kill anything, just like death itself."@
+`"--------"@
+cl c,%type_crossfade_fst
+\
+` I'm… at a loss for words.@
+` If that really is what I see, just like Arcueid is saying…
+` Those black lines really are the 'time of death' for all things.\
+br
+` …… Then everything around me…
+` …… is filled with death.@
+`"…… So, what?@ If it's all as you say, I should be able to kill even you."@
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+`"…… Really?@ Then let's try it."@
+` Arcueid opens the curtains.@
+bg "image\bg\ima_18.jpg",%type_crossfade_fst
+` The lights are off.@
+` The only illumination is the faint moonlight coming in through the window.\
+
+`"Come on, it's alright.@ Try it, seriously.@ Ah, wait, could it be you can't see them with those glasses on?"@
+`"----Are you sure about this?"@
+` I take my glasses off.@ Only to see the lines, of course.@
+` At the same time, the room begins to writhe with the black lines.\
+
+monocro #0000ff
+
+` Outside the window, the moon is white.@
+` They're difficult to see in the daytime due to the strong sunlight, but under the faint moonlight, I can even see the glow coming from the 'lines'.@
+br
+` Amidst them--
+` The lines on Arcueid's body are very thin.@ If I don't concentrate, I lose sight of them of them altogether.\
+
+`"Ah---"@
+`"…… If I hadn't been killed by you, I don't think you'd be able to see any at all, but right now you can probably see them.@
+` You see, although I have no 'times of death' during the night, some do appear during the day.@
+` You could kill me because it was during daytime, but you can see my 'time of death' during nighttime now since I've used up a lot of energy to regenerate myself.@
+` ---In other words, I've lost my immortality.@ So, can you cut the lines on my body, Shiki?"\
+
+`"-----"@
+` …… Let's see.@
+` I think I probably could, since the lines are there, but I don't think I could do it so briskly and without hesitation like that time before.\
+
+`"…… I think it'd be hard.@ The lines keep fading in and out, so I probably couldn't do it unless you're sleeping."@
+`"You can't, right?@ That's your biggest weak point.@ No matter how many 'deaths' you can see, you need to trace the line with your own hands.@
+` No matter how weak I am right now, my athletic ability isn't so low that I'd be caught by you."\
+
+` …… I see.@
+` Come to think of it, I can't catch agile animals.@
+` That means I can't touch their bodies.@
+` In other words, even if I can see its lines, I can't kill anything that moves.\
+
+`"---Ow!"@
+` I feel a stab of pain run through my head.@
+` Looking at the lines gives me a headache, just like it did when I was a child.@
+` I put on my glasses, and the world returns to normal.\
+
+monocro off
+
+bg "image\bg\bg_19d.jpg",%type_crossfade_mid
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+`"………"@
+` Arcueid is staring intently at me.@
+`"…… What?@ Is there something else?"@
+`"No, that's not it.@ You can't see the lines if you put those glasses on?"@
+`"Yeah.@ I got them from someone a long time ago, when my eyes first became like this.@ I'm only using the lenses now, but thanks to them, I can lead a normal life."\
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+`"Yes, I see.@ No matter how strong a mind you may have, your only choices when faced with death all the time would be to put out your eyes or go mad."@
+` Saying that, Arcueid comes closer.\
+
+`"Hey.@ Can I take a look at them?"@
+`"---No.@ These are important to me.@ I'm not handing them over to you."@
+`"Come on, I'm not going to break them.@ I'm just going to look at them."@
+cl c,%type_crossfade_mid
+` Arcueid creeps closer.@ I get the feeling she wouldn't be adverse to getting them by force.@
+br
+` …… It's suspicious.@
+` There's something very suspicious about how she says "I'm not going to break them".\
+
+`"---Not even just to look at.@ I know about your ridiculous powers, after seeing you in that alley.@ What would I do if you crushed them by accident?"@
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+`"Hey!@ What do you mean 'ridiculous powers'?@ Let me tell you, in terms of non-fighting strength, you're stronger than I am.@ I won't break things at random."@
+` Saying that, Arcueid extends her hands as if she is about to take them by force.@
+br
+` …… Her attitude is becoming more and more suspicious.\
+
+cl c,%type_lshutter_mid
+` I bounce up off the bed to get away from her.@
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+`"Hey, you're running away."@
+`"Of course.@ I'll tell you now; I'm not handing over these glasses.@ Even if there's only a one in a million chance you'll break them, they're irreplaceable to me.@ After all, you're the one who said I wouldn't be able to stay sane without these glasses.@ Do you want me to go crazy?"\
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+`"Huh?@ N… no, that's not it at all."@
+` …… Arcueid is obviously trying not to look at me.@
+cl c,%type_crossfade_mid
+`"---Come on, Arcueid.@
+` I don't know what you're planning, but if I lose these glasses, I won't be in any position to help you.@ If I were to see the lines 24 hours a day, I think I'd die from the headache before I'd go mad."\
+
+
+
+
+
+
 
 return

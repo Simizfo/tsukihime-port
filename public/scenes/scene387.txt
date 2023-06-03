@@ -2,75 +2,74 @@
 
 
 
-!w1000
-bg "image\bg\bg_06a.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_40b.jpg",%type_nowaitdisp
 
 
-` I get to the classroom, and the class starts uneventfully, as always.@
+
+` ---I'll go see Hisui.@
 br
-` …… There's no one at Yumizuka's desk.@
-` Even though a classmate is gone forever, class life remains unchanged.@
+`"…… But Hisui doesn't let me help her, and I don't want to get in her way……"@
+` …… What should I do?@
+` I don't want to be a burden.@
+` But for some reason, I want to see her.\
+
+`"…… Ah."@
+` That reminds me.@ I still need to give her back the ribbon.@
+` Hisui said she'd forgotten about it, but the ribbon is hers.@ There's really no point in me holding on to it, so I should give it back.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_41.jpg",%type_lshutter_mid
+
+play "track08.ogg"
+
+` In the old man's old room, Hisui is arranging books.@
+` Even though it is no longer being used, his room is still being cleaned like before.\
+
+`"Hisui, can I have a minute?"@
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
+
+`"Ah---Shiki-sama.@ Yes, what is it?"@
+`"I know we talked about this earlier, but I thought I should give this back."@
 br
-`"………"@
-` I become a little uneasy.@
-` Because of Hisui, I had forgotten all about that.@
-` Perhaps because of that incident?@
-` With that uneasiness, my thoughts drift towards the sky.\
+` I pull out the ribbon Hisui gave me eight years ago.@
+br
+ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+
+`"………………"@
+`"Hisui?@ So, you honestly don't want it……?"@
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+`"……No, I will take it.@ It is important to me, after all."@
+` Taking the ribbon, Hisui becomes silent.\
+
+`"…………"@
+` I can't talk to her.@
+` The Hisui in front of me right now looks very much like the Hisui from eight years ago, distant from the ones around her.@
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+`"Shiki-sama, is this all you came to do?"@
+` I can't seem to speak, so I just nod.@
+`"In that case, please return to your room.@ I still have some work remaining."@
+
+cl c,%type_lshutter_fst
+
+` Hisui walks towards the center of the room.\
+
+`"…… Hisui."@
+` Did that ribbon have any special meaning?@
+` This eight year period.@ I think I may have finally fulfilled my promise, even if it was too late.@
+br
+`"…… Then, I'll go to my room.@ See you later, Hisui."@
+br
+` With that, I leave the room.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
-bg "image\bg\bg_06b.jpg",%type_crossfade_mid
-
-
-` Before I realized it, the school day was over.@
-` I let out a sigh.@
-` I don't really feel like seeing Arihiko or Senpai.@
-` Right now, it seems I'm just more at ease in the Tohno mansion than in school.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_32b.jpg",%type_lcartain_mid
-bg "image\bg\bg_33b.jpg",%type_lshutter_mid
-
-play "track01.ogg"
-
-` I enter the lobby and immediately encounter Hisui.@
-
-ld c,":a;image\tachi\his_t16.jpg",%type_lshutter_mid
-
-`"Welcome back, Shiki-sama."@
-`"I'm home, Hisui.@ Are Kohaku-san and Akiha here?"@
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_mid
-
-`"Akiha-sama has not returned yet.@ Nee-san will most likely be in the rear courtyard sweeping."@
-`"As usual.@ Well, I'll be in my room; please continue whatever you were doing."@
-`"Yes.@ Please excuse me."\
-
-cl c,%type_lshutter_mid
-
-
-` I head up the stairs to the second floor.@
-`"Ah, Shiki-sama?"@
-`"Hm?"@
-
-ld c,":a;image\tachi\his_t23.jpg",%type_lshutter_fst
-
-`"I will be in Makihisa-sama's room sorting things out.@ If you need me, please call for me."@
-
-cl c,%type_lshutter_mid
-
-` Hisui disappears towards the east end of the mansion.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\bg\bg_40b.jpg",%type_lshutter_fst
 playstop
 
-
-` Putting down my bag, I take off my jacket.@
-`"…… Well, then."@
-` There's still time until evening, so what should I do?@
-
-br
-
+!w1500
 
 
 

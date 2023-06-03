@@ -1,63 +1,101 @@
 
+
 bg "image\bg\bg_03a.jpg",%type_nowaitdisp
 
-` ---I gather up my courage and ask her about last night.@
+wave se2
+
+` The ten minute bell rings.@
+`"--Uh-oh, we'll be late.@ Well, bye Senpai, see you later!"@
+
+
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+
+`"Yes, I'll come see you during lunchtime."\
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+bg "image\bg\bg_06a.jpg",%type_lcartain_mid
+
+play "track03.ogg"
+
+` I fly into my classroom.@
+` It's still five minutes before class, so it's very noisy inside.@
 br
-`"…… Uh--Senpai.@ Last night, were you in the park?@ I thought I saw you wearing something like a black coat, with your skirt flowing in the wind."@
+`"--Whew."@
+` I take a breath and head to my seat.@
+` With this much time left, I didn't even need to run at all.@
+`"Yo, Duke of Delinquency."@
+`"………"@
+` From behind, I hear the voice I never look forward to.\
 
 
-ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\ari_t01.jpg",%type_lshutter_fst
 
 
-`"…… What is that?"@
-`"Um……!@ well--yeah, the high-laced boots suited you.@ I was kind of fascinated, you looked… really cool."\
+`"What's going on, Tohno?@ I never heard you were skipping class.@ It's a lot of trouble.@ You have to tell me when you skip school and go play!"@
+` Arihiko says those preposterous words with an unbelievably happy expression.\
+`"…… Why should I have to tell you when I don't go to school?"@
+`"Isn't it obvious?@ When you don't show, neither does Senpai, so it's bad unless I think of something ahead of time."@
+` …… What's bad for this guy?\
+
+`"But seriously--What happened?@ Since middle school, you've had anemia, but never skipped school.@ Well, you did a cool trick several times, leaving as soon as you arrived."@
+`"It's kind of like that.@ I made it to the intersection and felt bad, so I went back home."@
 
 
-ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\ari_t04.jpg",%type_crossfade_fst
 
 
-` ……"Huh?" Senpai tilts her head.@
-` She frowns like she doesn't understand my words completely, and then denies it.\
+`"Hmmm… Both you and Yumizuka seem to be acting like bad students lately."@
+`"--Well, I'm guilty as charged, but …… is something wrong with Yumizuka-san?"\
 
 
-`"Um, I don't quite understand, but you're saying that I was near your house two nights ago, looking like that?"@
-`"Yeah.@ Senpai, that was you, right?"@
+ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
 
 
-ld c,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
+`"Her?@ She's been absent lately.@ She was always such an honor student, so I think she might have been stressed out.@ But I bet she can't call a raise 'cause she has a bad hand."@
+`"……………"@
+` Arihiko's words are always… very unique.\
+
+wave se2
 
 
-`"No way.@ Tohno-kun, are you saying I look like I really have that much free time?"@
-` ---Senpai is really angry.@
-` She can't be playing ignorant or lying.\
-
-`"Ah----No, that's not it, but I just…… saw someone that looked like you in park last night, so---"@
-` Senpai gives a sigh.@
+` --While we are talking, the homeroom chime rings.@
+br
+`"Well, I'm off.@ Since you skipped Saturday, make sure you study hard today."@
 
 
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+cl c,%type_lshutter_fst
 
 
-`"Tohno-kun, that wasn't me.@ I don't have that kind of hobby."@
-`"Ah---Yeah, I know.@ I just wanted to ask."\
-
-` Certainly after having her say that, she is right.@
-` Ciel-senpai and the person that night aren't related at all.@
-` In the first place, Senpai's just a normal person, and if she was actually there---she had to have seen me kill that vampire with my knife.@
-` If she saw such a gruesome scene, there'd be no way she could talk with me normally like this.\
-
-`"…… Sorry, please forget about it.@ I guess it was just someone else."@
+` Arihiko goes back to his seat.\
 
 
-ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
 
 
-`"That's fine, but…… did that person really look like me?@ That weird person?"@
-`"Well, I'm not too sure.@ It was dark, and far away………… huh?"@
-` Yeah, it was far and I couldn't make out her face.@
-` So why did I think it looked like Senpai……?@
-`"…… Hmm… Maybe there is something wrong with me."@
-` I cross my arms and think.\
+bg "image\bg\bg_06a.jpg",%type_lshutter_mid
+
+wave se2
+
+
+` Fourth period ends and the class erupts into pandemonium all over again.@
+` The guys dash off to the cafeteria, the girls eat their lunches at their desks, and Inui Arihiko's carrying a sandwich and coming over to me.@
+br
+
+
+ld c,":a;image\tachi\ari_t02.jpg",%type_lshutter_fst
+
+
+`"Yo Tohno!@ Lunch, lunch."@
+`"---"\
+
+` …… What should I do?@
+` Since morning, I haven't really had an appetite.@ I don't feel hungry, so maybe I don't have to force myself to eat.@
+` …… If I eat, I might throw it up again and cause trouble.@ I should---.@
+br
 
 
 return

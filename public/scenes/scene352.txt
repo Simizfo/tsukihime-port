@@ -3,277 +3,320 @@
 
 bg "image\bg\bg_40b.jpg",%type_nowaitdisp
 
-
-
-
-` ----That's right.@
-` Since I'm always in her debt, I'll go and help Hisui out.\
-
+` ----Alright.@
+` I'm always in her debt, so I'll go help Kohaku-san.@
+br
 bg "image\bg\ima_10.jpg",%type_lcartain_fst
-play "track03.ogg"
-
-bg "image\bg\bg_33b.jpg",%type_lcartain_fst
+bg "image\bg\bg_42b.jpg",%type_lcartain_fst
 
 
-`"I'm home, Hisui, You look busy; what are you doing?"@
+`"Huh……?"@
+` I don't see her anywhere in the courtyard.@
+` I glance around.@
+` For just an instant, I see the color of her kimono in the forest.@
+`"Is that where the detached building is?"@
+` …… After a little internal debate, I follow after Kohaku-san.\
 
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_44a.jpg",%type_lcartain_mid
 
-`"Ah---welcome home, Shiki-sama.@ I am going to take these to Makihisa-sama's room."@
-` Hisui is surrounded by dozens of books.@
-` Though each of them is light, a dozen of them is pretty heavy.@
-` There must be at least fifty books around her.@
-` It's not too much, but I don't think Hisui's slender arms are up to the task.\
 
-`"The old man's room, huh… that's on the west wing of the first floor, isn't it?"@
-` Saying so, I pick up a pile of books.@
-
-ld c,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
-
-`"You must not, Shiki-sama.@ I will take care of this, so you should go and rest in your room."@
-`"It's fine, it's fine.@ If I just lay around in my room my body'll go dull, so I thought I'd repay you by helping out a bit."@
-`"However----"\
-`"…… But these are heavy, aren't they?@ What's Akiha thinking, making you do this kind of heavy labor?"@
-
-ld c,":a;image\tachi\his_t05.jpg",%type_crossfade_fst
-
-`"Ah----"\
-
-`"You go on to the old man's room; I'll bring the books, you can sort them out once they're there.@ Everyone should work where they'll be the most use, right?"@
-
-ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
-
-`"…… Yes.@ Well then, please do, Shiki-sama."@
-
-cl a,%type_crossfade_fst
-
-` Apologizing, Hisui goes up the stairs.@
-` ---Alright.@
-` Now I've just got to get this mountain of books up to the second floor.\
+` Kohaku-san continues and enters inside.@
+` I would be pretty stupid if I came all the way here only to go back, so I force myself to go inside.\
 
 bg "image\bg\ima_10.jpg",%type_lshutter_mid
-bg "image\bg\bg_41.jpg",%type_rshutter_mid
+bg "image\bg\bg_45b.jpg",%type_lshutter_mid
 
+play "track01.ogg"
 
-`"Ohh… this is the old man's room, huh?@ Hisui, is it okay if I take a look at some of the books?"@
+ld c,":a;image\tachi\koha_t09.jpg",%type_lshutter_mid
 
-ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+`"Shiki-san?@ Why did you come here?"@
+`"Um, well----I was thinking maybe I should give you a hand.@ Am I in the way?"@
+ld c,":a;image\tachi\koha_t18.jpg",%type_crossfade_fst
 
-`"Yes.@ I think it is alright if they are not locked up."@
+`"Shiki-san, I am happy you feel that way, but I didn't come here to work.@ I only came here to check the electricity according to Akiha-sama's orders."@
+`"Eh?@ Electricity?@ This place is still used?"\
 
-cl a,%type_crossfade_fst
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
 
-` Hisui is placing the books onto a bookshelf.@
-` She's busily going back and forth, arranging the books by genre.\
+`"Yes, this is the only room with electricity.@ This building is still maintained at a level for people to live in.@ The bath is still able to be used and there are futons ready."@
+`"Really?@ But this place hasn't been used for a while, right?@ Why is it maintained like that?"@
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
 
-`"…… What does she mean by locked up?@ Maybe there's a lock on the desk drawer or something."@
-` I take the handle of the drawer on the old man's desk.@
-` As I pull, I feel a click.@
-`"She's right, it is locked."@
-` The old man's already dead, so what is it protecting?\
-
-`"-----"@
-` Hisui isn't looking.@
-` There's a letter opener on his desk.@
-` It's the perfect opportunity.@
-`"…………"@
-` I lower my glasses a little, and look at the desk.@
-`"-----There."@
-` Silently, I cut the lock.\
-
-`"---What, only papers?"@
-` There's only a bundle of old papers in the drawer.@
-` I take out a sheet and look at it.@
+`"Let's see, maybe Akiha-sama is just fond of this place.@ A long time ago, this was where Makihisa-sama's adopted child used to live."@
 br
-`"Huh?@ This is… our family tree."@
-br
-` There's no mistake.@
-` After Tohno MAKIHISA, the names Tohno SHIKI and Tohno AKIHA are written.@
-` But there's---\
+` ----Huh?@
+` Makihisa…… my old man, adopted a child… a long time ago?\
 
-`"…… No way.@ That old man adopted a son ten years ago… ah, but he passed away shortly thereafter."@
-` Ten years ago, that would mean I was just in elementary school.@
-` That long ago, it's only natural that I wouldn't remember.@
-`"But, the heads of the household have had pretty short lifespans.@ My old man died before he was fifty, and before that, before thirty in an accident… Wow, before that, eighteen years of age, suicide…!?"@
+`"…… Wait a sec, Kohaku-san.@ My old man adopted a child?"\
+ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+`"Oh, you don't remember?@ About ten years ago, he brought a child here.@ His parents both died in an accident, so he adopted the child."@
+`"That---happened?"@
+`"Yes.@ But two years later, the child passed away.@ It was a trivial accident, but a lot of the servants began to say that the Tohno family was cursed."\
 playstop
+
+wave se0
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_45b.jpg",%type_crossfade_fst
+
+
+` -----Wait a minute.@
+br
+` Something about her words seems scary.@
+` Just hearing them, my vision starts to warp.@
+` It's like the whole room is made entirely of dissolving sugar.\
+
+`"Ko, Kohaku, san."@
+` A child adopted ten years ago.@ Two years later, the child died.@
+` In other words, eight years ago… That's when I had my accident and was sent to the hospital.\
+
 play "track06.ogg"
 
+
+bg "image\bg\cmo_05.jpg",%type_nowaitdisp
 br
-` ----No, wait a second.@
-` No matter how you look at it, this is strange.\
+br
+br
+` ---Accident.@
+br
+` What kind of accident was it?@
+` An accident that seriously wounded me.@
+` An accident, that the adopted child was killed in?\
 
-wave se0
+br
+` A hot summer day.@
+br
+` ---I can't remember.@
+br
+` All I know is at that time, my arms seemed to be soaked in blood----\
+
+bg "image\bg\bg_45b.jpg",%type_crossfade_fst
 
 
-` Looking through the family tree, all members of the Tohno household have died strangely.@
-` Madness.@ Accidents.@ Murder.@ Disappearances.@ Still birth.@
-` …… Not one of them lived a long life or died peacefully.\
+`"Kohaku, san.@ You said 'cursed'?"@
+ld c,":a;image\tachi\koha_t18.jpg",%type_crossfade_fst
 
-wave se0
+`"No, it isn't anything important.@ It is just that a lot of the members of the Tohno family have died young.@
+` Such as in accidents, or suicide, or illness; a curse that does not allow them a natural death.@ Well, that was the rumor, anyway."\
+
+`"----Suicide…… what?"@
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+
+`"Yes.@ Whatever the case, the members of the Tohno family…… mostly male, carried some mental illness and committed suicide when they became adults.@
+` These are just stubborn rumors, but it is said some of them were murderers before the war."\
+
+
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_41.jpg",%type_crossfade_fst
+bg "image\bg\bg_45b.jpg",%type_crossfade_fst
 
 
-`"Wha…………"@
-` This entire document is filled with horrible fates.@
-` Even worse, most of the deaths are death by madness.@ Taking one's own life.\
 
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-bg "image\bg\bg_41.jpg",%type_crossfade_mid
-waveloop se1
+` …… Mental illness?@
+` …… Murderers?@
+` …… Such as, seeing dreams of killing people every night?@
+` …… Such as, feeling a sense of longing as I see dreams of killing people every night?\
 
+`"Kohaku-san, that---"@
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
 
-`"Ah----"@
-` The light seems to fade.@
-` I feel as if blood is collecting in the back of my head.@
-` My limbs feel weak, and breathing becomes impossible.@
+`"Oh, I'm very sorry.@ Those are just dark rumors about the Tohno family."@
+`"No, that's fine.@ It's okay…… could you tell me in more detail, Kohaku-san?"@
+`"…… I do not mind, but I do not necessarily know all the details.@ Just that, well…… Makihisa-sama did have that kind of air about him."@
+`"My old man----my old man did?"@
+wave se0
 
-ld c,":a;image\tachi\his_t08.jpg",%type_lshutter_fst
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
 
-`"Shiki-sama…!"@
-` Hisui… Hisui runs toward me.@
-` ---Somehow I hold myself up, grabbing onto a bookshelf.\
+` Blurring.@
+` My vision whirls around.\
 
-ld c,":a;image\tachi\his_t25.jpg",%type_crossfade_fst
+bg "image\bg\bg_45b.jpg",%type_crossfade_fst
+
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+
+`"Yes.@ I took care of Makihisa-sama's condition two years before he passed away.@
+` …… While you were living with the Arima family, Makihisa-sama would become very depressed and I would have to prepare his medicine to calm him."\
+`"Medicine to calm him----was my old man that bad, Kohaku-san?"@
+`"…… Yes.@ It would not be uncommon for him to walk into the garden at night and kill the pet dogs and cats, or to hurt his own body."\
+
+wave se0
+
+` ----Wha-
+` What is this?@
+` That's pretty much crazy.@
+` As crazy as I am in my dreams.@
+wave se0
+
+br
+` …… No, that is backwards.@
+` Am I crazy just like my old man?\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w500
 playstop
 
-`"Shiki-sama!@ Hold on, Shiki-sama…!"@
-` Hisui's worrying voice.@
-` But her hands never touch my body.@
-`"It's alright… I just, felt a little sick for a moment, so…"@
+bg "image\bg\bg_45b.jpg",%type_crossfade_mid
+quakey 1,200
+wave se4
 
-ld c,":a;image\tachi\his_t12.jpg",%type_crossfade_fst
+waveloop se1
 
-`"Shiki-sama, please do not push yourself…!@ Please, sit down.@ As pale as your face is, you should not be trying to stand…!"@
-` …… That's, new.@
-` Hisui is becoming frantic, calling out to me.\
+ld c,":a;image\tachi\koha_t09.jpg",%type_lshutter_fst
+`"Shiki-san……!?@
+` …… I hear Kohaku-san's voice.@
+` I---don't know when it happened, but I'm on my knees on the tatami floor.@
+`"Shiki-san, you look terrible.@ If you are feeling poorly, you should rest in your room……!"@
+` Kohaku-san says this as she grabs my shoulder.@
+` With her help, I can stand.\
 
-`"Yeah… I'm okay… so…"@
-` I try to regain my senses.@
-` But the dizziness doesn't fade.@
+`"…… Yeah…… I'm fine, so---"@
+` I am somehow able to focus again.@
+` But I am still dizzy.\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_45b.jpg",%type_crossfade_fst
+
+br
+` In the red and white swirl of my vision,
+` white.@
+` Kohaku… san's… terribly warm… looking neck.@
 br
 
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_41.jpg",%type_crossfade_fst
-
-` My vision flickers red and black.@
-` White.@
-` I gaze at the nape of Hisui's neck, a terribly warm white.\
-
-`"-----Ah."@
-` It's captivating.@
-` If my body could move properly, I would seize Hisui's body and----\
+`"------Ah."@
+` How captivating.@
+` If my body could move properly, I would seize Kohaku's body and----\
 
 bg "image\bg\ima_11b.jpg",%type_nowaitdisp
 
-` The black vision from my anemia all of sudden turns deep red.@
-` Hisui's, white neck.@
+
+` The black vision from my anemia all of sudden turns deep red…@
+` Kohaku's white neck.@
 ` Last night's crimson dream.@
 br
-` ---From the night of killing.@
+` ------The nighttime killings.@
 ` Painful pleasure, as if my heart would rip itself out.\
 
-bg "image\bg\bg_41.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_31b.jpg",%type_nowaitdisp
+bg "image\bg\ima_13.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_45b.jpg",%type_crossfade_fst
+
+
+`"Gg------!"@
+` Unable to bear it, I pull away from Kohaku-san.\
 
 wavestop
 
-`"Kuhh…!"@
-` Unable to bear it, I pull back from Hisui.@
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
 
-ld c,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
+`"Shiki-san……?"@
+`"No----I'm fine----I'm fine, so leave me alone."@
+ld c,":a;image\tachi\koha_t04.jpg",%type_crossfade_fst
 
-`"Shiki-sama…?"@
-`"No… it's alright… I'm alright, so, just leave me alone."@
+`"That won't do.@ If you collapse here, Akiha-sama will get very angry.@ In the first place, you look like you are in a lot of pain."@
+cl c,%type_crossfade_fst
 
-ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+` Kohaku-san says this and draws closer.\
 
-`"I refuse.@ You do not seem to realize the state of your body, Shiki-sama.@ With… with your body like this, I cannot leave you alone."@
-` And Hisui approaches.\
-
-cl a,%type_crossfade_fst
-
-` ---Bad.@
-`  This is, bad.@
+br
+` ------This isn't good.@
+br
+` It's scary.@
 ` If she comes within reach of my hands, I'm afraid I don't know what I'll do.\
 
-`"I'm fine, so go, Hisui…!"@
-ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+`"----I'm fine, just leave me alone, Kohaku… san…"@
+ld c,":a;image\tachi\koha_t04.jpg",%type_crossfade_fst
 
-`"I cannot listen to you.@ Shiki-sama, please, calm down."@
-br
+`"I can't.@ Shiki-san, please calm down."@
+
+wave se0
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_45b.jpg",%type_crossfade_fst
 
 waveloop se1
 
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_41.jpg",%type_crossfade_fst
-
-` …… So, stop.@
+` …… Please, stop.@
 ` It's dangerous if you come near me.@
 ` I told you not to come near me.@
-` Why.@
-` Why won't this woman listen to me?@
-br
+` Why?@
+` Why won't this woman listen to me?\
+
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
 
-` ---Why does she get in my way.@
-`  Why does it never go the way I want…!\
+wave se0
 
-bg "image\bg\bg_41.jpg",%type_crossfade_fst
+br
+br
+br
+br
+br
+br
+` ----Why?@
+br
+`   Why are you getting in my way?@
+wave se0
 
 
-`"Shut up…!@ Don't you understand I'm telling you to get away, Hisui!"@
+`   Why are you like this,
+`   Not doing what I want you to……!?\
+wave se0
 
-wave se4
+bg "image\bg\bg_45b.jpg",%type_nowaitdisp
+
+
+`"Shut up……!@ Don't you understand I'm telling you to get away, Kohaku!"@
+wave se9
 quakex 2,100
 
-`"Ah---"@
+`"Kyaa----!"@
+` Thud, a thick sound.@
+` Kohaku-san slams into the wall, her face distorting in pain.@
 br
-` A dull, thumping sound.@
-` Hisui is thrown against the bookshelves, her face distorted in pain.@
+`"Ah-------"@
 br
-`"Ah---"@
 ` …… Her expression causes my sanity to return.@
 ` The dizziness fades quickly.@
 ` After just a moment, all dizziness disappears, leaving only a feeling of guilt.\
 
-`"--I'm sorry.@ What was… I…"@
+`"--Sorry.@ What was… I…"@
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_mid
 
-ld c,":a;image\tachi\his_t21.jpg",%type_crossfade_fst
+`"It is okay, please do not worry about it.@ I only provoked you when you were in a bad mood."@
+br
+` She gives her usual smile.@
+br
+`"You are no longer pale and seem to have recovered.@ Shall we continue our conversation?"@ "No--that's enough for today.@ Sorry Kohaku-san.@ There's, something wrong with me."\
 
-`"-------------"@
-` Hisui looks down, not meeting my gaze.@
-`"---Hisui, I'm---I'm sorry, I don't know why I did such a thing…"@
+`"Oh?@ You are a man, so I don't think it is unnatural to be a little rough.@ In fact, I think you are usually too calm, Shiki-san."@
+` She says that, smiling.@
+`"………………"@
+` Seeing that smile makes my chest hurt.@
+` …… Kohaku-san trusts me.@
+` But what was I about to do to her just earlier----?\
 
-ld c,":a;image\tachi\his_t26.jpg",%type_crossfade_fst
-
-`"I apologize.@ I disobeyed your orders, and caused you discomfort."@
-`"…… No, I'm the one who should apologize.@ I did something horrible to you…"\
-
-ld c,":a;image\tachi\his_t21.jpg",%type_crossfade_fst
-
-`"Shiki-sama, please return to your room.@ You are tired; if you rest, I believe you will recover immediately."@
-`"-----"@
-` Hisui will not show me her face.@
-`"…… I understand; I'll go back to my room.@ I'm sorry, Hisui."@
-` There's no answer.@
-` I leave the room behind, being crushed by self-loathing.\
+`"…… Like you say, Kohaku-san, I will go back to my room.@ I really am sorry about earlier."@
+` I say this and run away.@
+` I leave the detached building behind, being crushed by self-loathing.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
 !w2000
-bg "image\bg\bg_40c.jpg",%type_lcartain_mid
-
 play "track01.ogg"
 
+bg "image\bg\bg_40c.jpg",%type_lcartain_mid
+
 ` ---After dinner, I return to my room.@
+` I collapse on my bed and remember Kohaku-san's face.@
 br
-` I fall on the bed, and remember Hisui's face.@
 `"----"@
 ` I don't understand.@
 ` Why I felt that way, and why I did that.\
 
 ` Back then…
-` Looking at Hisui's neck, I was lusting.@
+` Looking at Kohaku-san's neck, I was lusting.@
 ` Just like in last night's dream, I wanted to bite into her neck.@
 ` But, I can't even think about that right now.@
 br
@@ -288,11 +331,11 @@ br
 ` It was just dizziness and my fading consciousness contributing to the imagination.@
 ` What happened with Yumizuka is burnt into my mind, so I think I just remember it when I suffer from anemia.\
 
-`"Like Hisui said, maybe I'm just tired."@
+`"Like Kohaku-san said, maybe I'm just tired."@
 ` …… Perhaps.@
 ` I should hurry up and get to sleep, and rest my tired body.\
 
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 playstop
 
@@ -510,8 +553,9 @@ gosub *left_phase
 
 waveloop se1
 
-bg "image\bg\ima_11.jpg",%type_nowaitdisp
-!w750
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+
 
 `"Shiki-sama----?"@
 br
@@ -520,12 +564,12 @@ br
 `"Please get a hold of yourself, I will bring you a drink right away…!"@
 br
 ` ----The sound of running footsteps.\
-
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 
-
+br
 `"Ah----"@
-` I awaken from the nightmare.@
+` I awaken from the nightmare.\
+
 `"…… My own room."@
 ` I am definitely in my own room.@
 ` Just lying in bed, and morning has come.@
@@ -540,10 +584,13 @@ bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 ` I'm still a normal human being.@
 ` I don't want to drink people's blood, and I don't have a problem with the sun.@
 `"----Ah."@
-` No.@ Yesterday, I…@
-` What did I think when I saw Hisui's neck?@
+` No.@ Yesterday, I@
+` What did I think when I saw Kohaku-san's neck?@
+br
 ` ---Her white neck.@
 ` From the bottom of my heart, I wanted to drink the blood flowing in there----\
+
+
 
 
 

@@ -4,6 +4,7 @@ mov $phasetitle_a,":a;image\word\PARK_13A.PNG"
 mov $phasetitle_b,":a;image\word\epi.jpg"
 gosub *left_phase
 
+
 bg "image\bg\ima_11.jpg",%type_crossfade_slw
 
 play "track02.ogg"
@@ -57,7 +58,7 @@ br
 br
 br
 br
-` ----As it turned out,
+` ---As it turned out,
 ` I ended up waking in my own room.\
 
 ` It seems Senpai carried me here.@ Fortunately, Akiha and the others didn't know I left.@
@@ -73,7 +74,7 @@ br
 
 ` As for me,
 ` I carry an unfillable void in my heart, but I continue on as I did before.@
-` …… Or rather, I can bear it all.@
+` …… or rather, I can bear it all.@
 ` At times, I get overwhelmed when I am assailed by memories, but I don't think I'll go insane or anything for now.@
 br
 ` Some day.@
@@ -90,7 +91,5 @@ br
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 playstop
-
-!w2000
 
 return

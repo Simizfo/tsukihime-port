@@ -1,277 +1,116 @@
 
 
 
+
+
+
 bg "image\bg\bg_33d.jpg",%type_nowaitdisp
 
 
 
-
+` ----I should go back to my room.@
 br
-` ---I should check it out.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_48d.jpg",%type_lcartain_mid
-
-
-` I go outside.@
-` The previously present moon is now obscured by clouds.@
-br
-`"Hm………?"@
-` Someone is opening the front gate.@
-` I start to say something,
-`"………… Akiha?"@
-` Akiha looks quickly over her shoulder and exits the gate.\
-
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-bg "image\bg\bg_48d.jpg",%type_crossfade_fst
-waveloop se1
-
-`"Eh-----?"@
-` Thump.@
-` Out of nowhere, my chest starts to pound.@
-br
-` Thump.@
-` THUMP.@
-` Thump.@
-` THUMP.@
-br
-` My heart seems to pulse with new life.@
-` I can feel the blood coursing through my body, and the shaking of my fingers.@
-`"Ah-----"@
-` A chill runs down my back.@
-` Despite that, my body feels like it's on fire.\
-
-bg "image\bg\ima_11b.jpg",%type_nowaitdisp
-bg "image\bg\bg_32d.jpg",%type_nowaitdisp
-
-`"Akiha----what is she doing this late?---"@
-` I feel dizzy.@
-` I try to sort things out rationally, but I stop.@
-` Right now, I have to follow Akiha.\
-wavestop
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_24c.jpg",%type_lcartain_mid
-
+` Hisui's words echo inside my head.@
+` My leaden body weakens more, weighed down by those chains.@
 play "track06.ogg"
 
-`"Haa----"@
-` Stifling my breath, I follow after her.@
-` Thump, Thump.@
-` My beating heart.@
-` I follow her quietly to avoid being noticed.\
-
-` Thump, thump, thump.@
-` I feel regret.@ I don't have my knife tonight.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_25b.jpg",%type_lcartain_mid
-
-
-` There's no moonlight and it's now midnight.@
-` There isn't a sign of anyone else on the streets.@
 wave se0
 
-`                Thump,
-`                Thump.\
-` Akiha walks unsteadily.@
-` I try to silence my breathing and await my chance.@
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_33d.jpg",%type_crossfade_fst
+
+
+`"…………………………"@
+` I try to go up the stairs and my body stops.@
+` …… My legs can't go far up enough.@ It looks like I can only walk.@
+`"…………………… What is this?"@
+` …… Oh well.@ I should go back to the kitchen to ask Hisui to lend me her shoulder----\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_33d.jpg",%type_crossfade_fst
+quakey 2,300
+
+
+`"H------uh?"@
+` I start to go back and collapse on the carpet.@
+`"-----H, hey."@
+` I can't even shout.@
+` I exhaust myself crawling on my arms.\
+
+bg "image\bg\ima_10b.jpg",%type_crossfade_mid
+!w2000
+
+
+` Clomp, clomp.@ I hear footsteps.@
+` Hisui comes from the kitchen.@
+` …… I'm saved.@ Now Hisui can help me out---
+` Clomp-clomp, clomp-clomp, clomp.@
+`"…………………… No way."@
+` Crawling away from the stairs backfired.@
+` I have hidden myself in the shadows and Hisui goes up the stairs without even noticing me.\
+
+`"………………………… That was incredibly stupid of me."@
 wave se0
 
-`                Thump,
-`                Thump.@
-` It's taking her a while to be alone.@
-` Where she's going is trivial.@
-wave se0
-
-`                Thump,
-`                Thump.\
-` I'm terribly thirsty.@
-` I'm incredibly excited.@
-wave se0
-
-`                Thump,
-`              Thump, thump.@
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_27b.jpg",%type_lcartain_mid
-
-wave se0
-
+` As soon as I voice my thoughts, something catches my attention.@
+` The feeling of something close to me.@
 br
-` ---All of a sudden, I lose sight of her.@
-` Where'd she go?\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_25b.jpg",%type_lcartain_mid
-
-` I return to the main street.@
-` I feel instinctively that I'll see her again if I wait here.@
-wave se0
-
-` I let out a deep breath.@
-` My heart is still burning.@
-`"-------"@
-` That's odd.@
-` This isn't a dream.@
-` This isn't a dream, then why---is my blood burning as I'm following Akiha?@
-wave se0
-
-` It's like, I want to kill Akiha.\
+`"-----------!"@
+` I look behind me as I'm lying on the ground.@
+br
+` Over there,
+` a ghost-like figure.\
 
 waveloop se1
 
-`                  Thump
-!w1000
-`                  Thump
-!w1000
-`                  Thump
-!w750
-`                  Thump
-!w750
-`                  Thump
-!w750
-`                  Thump
-!w500
-`                  Thump
-!w500
-`                  Thump
-!w500
-`                  Thump
-!w250
-`                  Thump
-!w250
-`                  Thump
-!w250
-`                  Thump\
 
-wavestop
-
-
-` Sensing something, I instantly conceal myself.@
-` Akiha is coming.@
-` She looks around from side to side, as if searching for something.@
-br
-`"……… There isn't anyone here, I guess."@
-br
-` I hear her thinking aloud.@
-` I must be that close if I can hear her.@
-` Peering from the shadows, I look out into the street.\
-
-ld c,":a;image\tachi\aki_t27.jpg",%type_lshutter_fst
-
-`"---"@
-` My head aches.@
-` The air around me tenses.@
-
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-
-
-br
-` ----I collapse to the ground.@
-br
-` I've never felt such pain before.@
-` It's so bad it makes me seriously think my skull just split open and I'm going to die.\
-playstop
-
-!w2000
-bg "image\bg\bg_25b.jpg",%type_crossfade_fst
-
-`"Ah-----ouch…………"@
-` Shaking my head, I stand up.@
-` I don't know how long I was out, but the night is quiet.@
-br
-` ---Wait a minute.@
-br
-`"Wh, why am I here!?"@
-` I am out on the main street.@
-` I saw Akiha by the gate, and after that---that's right, I followed her.@
-`"…… What am I doing?"@
-` I'm surprised at what I'm doing.\
-
-`"------Huh?"@
-` An unpleasant smell pricks at my nose.@
-` A smell I've never known until now.@ The smell that stuck to my mouth during my dreams these past few days.@
-`"…… From that alley……?"@
-` Getting a bad feeling, I run towards that alley.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
-bg "image\bg\bg_31b.jpg",%type_lcartain_mid
-bg "image\bg\ima_13b.jpg",%type_lshutter_mid
-waveloop se10
-
-
-
-` ---It's like a rehash of my dream last night.@
-br
-` In the alley there is a collapsed stranger.@
-` Despite the blood flowing from the neck, the person is still breathing.@
-`"---------"@
-` Everything before me turns crimson.@
-` But this isn't a dream.@
-` Maybe it's because I've had all those dreams of murder, but I can think calmly.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_fst
-bg "image\bg\bg_25b.jpg",%type_lcartain_fst
-
-
-` I go out to the street.@
-` I go to the nearest public phone and call the nearest hospital.@
-` After giving a fake name, I tell the location and condition of the victim, and I hang up the phone.@
-` Now, before the ambulance comes, I should head back to the mansion so no one sees me.\
-
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_48d.jpg",%type_lcartain_mid
-bg "image\bg\ima_10.jpg",%type_lcartain_fst
-
-bg "image\bg\bg_33d.jpg",%type_lcartain_fst
-
-
-
-` *pant* *pant* *pant*------
-` After running without stopping, I can finally relax.@
-` I don't have anything to feel bad about, but I felt that getting involved would be dangerous, and I did the best I could.@
-` …… The person in the alley was still breathing,
-` and the bleeding wasn't that bad, so I don't think it was life-threatening.\
-
-wave se0
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_33d.jpg",%type_crossfade_fst
-
-`"Ah-----"@
-` …… As expected, running here with all my strength, including up the big hill, was a little much.@ I'm completely out of breath.\
-
-wave se0
-
-bg "image\bg\ima_10.jpg",%type_crossfade_fst
-bg "image\bg\bg_33d.jpg",%type_crossfade_fst
-
-`"Cra--"@
-` …… Dizziness assails me.@
-` I can feel my consciousness withdrawing.@
-` This isn't a normal dizziness.@
-` If it's this bad, if I collapse, I won't be able to get back up for a while.\
-
-wave se0
+`"----------"@
+` Then I really realize my situation.@
+` I can't move.@
+` I can't even call out.@
+` The dark mansion.@
+` …… That "someone" looks at me as if staring at its prey.@
+` Under all these conditions, it's no surprise if I die here.@
+` This situation seems like such a bad horror movie that I almost start to laugh instead of being scared.\
 
 bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-bg "image\bg\bg_33d.jpg",%type_crossfade_fst
-
-`"Damn……… I have to, get back, to my room, before----"@
-` I lean up against the stairs.@
-` I manage to take one step up the stairs.@
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-
-` That's it though.@
-` I collapse.\
+bg "image\bg\ima_10b.jpg",%type_crossfade_fst
 
 
-!w4000
+`"……………… Ha, haha."@
+` That "someone" takes a step towards me.@
+` Is it fear of being killed?@ My dizziness starts to increase.@
 
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\ima_10b.jpg",%type_crossfade_fst
+
+
+`"---------"@
+` The presence stops.@
+` It looks down at me and my defenseless back----
+playstop
+br
+`"Shiki-san, if you sleep there, you will catch a cold you know."@
+br
+` ---and throws me those cheerful words.\
+
+wavestop
+bg "image\bg\bg_33d.jpg",%type_tshutter_mid
+
+play "track03.ogg"
+
+`"…………………… Kohaku, san?"@
+`"Yes, it is me.@ What is it?"@
+` ……………… I let my tension go.@
+`"Shiki-san?@ Really, just what exactly are you doing lying down like that?"@
+` …… Her voice is really cheerful.@
+` With that, I relaxed, and I---
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+` completely overwhelmed by dizziness, my consciousness shuts down.\
+playstop
+
+!w5000
 
 
 mov $phasebg,"image\bg\bg_36d.jpg"
@@ -282,14 +121,20 @@ gosub *left_phase
 
 
 
-
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 bg "image\bg\bg_40a.jpg",%type_crossfade_fst
 
 play "track02.ogg"
 
 ` Strong rays of sunshine cause me to open my eyes.@ I'm in my room.@
-` I'm now wearing my pajamas and lying in bed.\
+` I am now wearing my pajamas and lying in bed.\
+`"---------That's right, last night."@
+` I collapsed in the lobby last night.@
+` Hisui did not realize I was there and Kohaku-san heard something and came.@
+`"…… That means that Akiha was the one that left."@
+` …… Probably.@ Akiha always had a strong sense of responsibility, so she must have gone looking for SHIKI on the streets.@
+`" …… Akiha.@ I told her to leave him to me……"\
+
 
 wave se3
 
@@ -297,7 +142,7 @@ wave se3
 ` With a knock, the door opens.@
 ` Kohaku-san enters carrying a towel and a bucket.@
 
-ld c,":a;image\tachi\koha_t02.jpg",%type_lshutter_fst
+ld c,":a;image\tachi\koha_t02.jpg",%type_lshutter_mid
 
 `"Ah, good morning Shiki-san.@ How are you feeling?"@
 ` Kohaku-san draws near with her normal smile.@
@@ -305,37 +150,30 @@ ld c,":a;image\tachi\koha_t02.jpg",%type_lshutter_fst
 ` I think back to last night's conversation with Hisui.@
 ` Tucking that away into the back of my mind, I try to make my usual smile.\
 
-`"Morning Kohaku-san.@ Um---did you carry me up here?"@
-
+`"Mornin', Kohaku-san.@ Um---did you carry me up here after last night?"@
 ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
-
-`"Huh?@ Don't you remember Shiki-san?@ I found you alone on the stairs and you stood up once I called you.@
+`"Huh?@ Do you not remember, Shiki-san?@ I found you collapsed in the lobby and you stood up once I called you.@
 ` You said you had a nice nap and started to walk.@ I did lend you my shoulder, but you walked here by yourself."@
-` ……… *sigh*@
-`"I don't remember.@ I must've been so tired that I forgot what I did."\
+`"……… Oh.@ I don't even remember it.@ I must have been so tired that I forgot what I did."@
+`"So you don't remember anything about last night?"@
+`"…… Maybe.@ I remember being in the kitchen-----"@
+` …… And hearing about Hisui and Kohaku-san's connection.\
 
-`"So you don't remember anything about last night?"\
-`"…… Maybe.@ I don't remember anything after I came back to the mansion."@
+ld c,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
 
-ld c,":a;image\tachi\koha_t18.jpg",%type_crossfade_fst
-
-`"Ahaha.@ That's unfortunate.@ Shiki-san, you kept apologizing to me.@
+`"Ahaha.@ That is unfortunate.@ Shiki-san, you kept apologizing to me.@
 ` I inquired why you kept apologizing, and you kept saying that you were an idiot and a blockhead.@
-
-ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
-
-` Shiki-san, are you a blockhead?"\
-
+` Shiki-san, are you a blockhead?"@
 `"No, I don't think so."@
 ` …… Well, I am really starting to get the idea that they think my brain is made out of wood.\
+cl c,%type_crossfade_fst
 
-cl c,%type_lshutter_fst
 
 `"…… Anyway, thanks a lot.@ If I slept on the stairs, I'd have caught a cold, and school---"@
-` Huh?@ Are my eyes playing tricks on me?@ The clock tells me it is already past ten in the morning.@
-`"Ah---!@ Ko, Kohaku-san, School!"@
+` Huh?@ Are my eyes playing tricks on me?@ The clock tells me it is already past ten in the morning.\
 
-ld c,":a;image\tachi\koha_t03.jpg",%type_lshutter_fst
+`"Ah---!@ Ko, Kohaku-san, School!"@
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
 
 `"Yes.@ Today is your school's founding holiday, so you don't have school."@
 `"--------"@
@@ -345,9 +183,9 @@ ld c,":a;image\tachi\koha_t03.jpg",%type_lshutter_fst
 `"Well, I should get up anyway.@ If I sleep any longer Akiha will---"@
 ` I sit up on my bed.@
 
-quakey 1,300
+quakey 2,300
 
-`"Huh-----I can't really."@
+`"Huh?-----I can't really."@
 ` My body won't move.@
 ` I try to get up with my arms, but they have no strength.\
 
@@ -395,6 +233,7 @@ playstop
 !w2500
 
 bg "image\bg\bg_40a.jpg",%type_bshutter_fst
+
 play "track01.ogg"
 
 ` Noon arrives.@
@@ -405,17 +244,13 @@ play "track01.ogg"
 ` …… Akiha saying that she doesn't care about it.@
 ` …… Hisui and Kohaku-san.@
 ` …… And the killer that's still on the loose.\
-
 ` I asked Kohaku-san, but it doesn't seem like there was a new victim in the news today.@
-` I guess last night's victim was saved, but while SHIKI is on the loose, there will be more victims.@
+` But as long as SHIKI is still on the loose, there will be more victims.@
 `"…… If only this body did what I told it to, I---"@
 ` I could stop SHIKI.@ I lay my head back down on the pillow as I start to say that.@
 ` Maybe it's because I've been seeing those dreams, but I'm beginning to have violent thoughts like SHIKI.@
 `"…… Whatever I do, I should heal up first."@
 ` I close my eyes.\
-
-
-
 
 
 
