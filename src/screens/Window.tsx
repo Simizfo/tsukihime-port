@@ -151,15 +151,27 @@ const Window = () => {
       let newText = text
       newText.push({ line: 'br' })
       setText(newText)
-    } else if (line.startsWith('ld c,')) { //sprite personnage
+    } else if (line.startsWith('ld ')) { //ajoute un sprite personnage
       //ld c,":a;image\tachi\stk_t01.jpg",%type_lshutter_fst
       let character:Character = {
         image: line.split(',')[1].split('"')[1].split(':a;')[1].replace('image\\tachi\\', '').replace('.jpg', ''),
         type: line.split(',')[2].replace('%', ''),
         pos: line.split(',')[0].replace('ld ', '')
       }
-      console.log(character)
-      setCharacters([...characters, character])
+
+      //if there is already a character with the same position, replace it
+      const index = characters.findIndex((c: Character) => c.pos === character.pos)
+      if (index !== -1) {
+        const newCharacters = characters
+        newCharacters[index] = character
+        setCharacters(newCharacters)
+      } else {
+        setCharacters([...characters, character])
+      }
+    } else if (line.startsWith('cl ')) { //enlève un sprite personnage
+      const pos = line.split(',')[0].replace('cl ', '')
+      const newCharacters = characters.filter((c: Character) => c.pos !== pos)
+      setCharacters(newCharacters)
     }
   }
 
