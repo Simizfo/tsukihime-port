@@ -190,9 +190,11 @@ const Window = () => {
       <CharactersScreen characters={characters} />
 
       <div className="box-text" onClick={handleClick}>
-        {text.map((line, i) =>
-          <LineComponent key={i} line={line} />
-        )}
+        <div className="text-container">
+          {text.map((line, i) =>
+            <LineComponent key={i} line={line} />
+          )}
+        </div>
       </div>
 
       {displayChoices &&

@@ -60,17 +60,19 @@ const HistoryScreen = ({ pages, text }: Props) => {
 
   return (
     <div className={`box-text ${displayHistory ? "show" : ""}`} id="history" ref={historyRef}>
-      {/* lignes des pages précédentes */}
-      {pages.map((page, i) =>
-        page.map((line: any, j: any) =>
-          <LineComponent key={i + "_" + j} line={line} />
-        )
-      )}
+      <div className="text-container">
+        {/* lignes des pages précédentes */}
+        {pages.map((page, i) =>
+          page.map((line: any, j: any) =>
+            <LineComponent key={i + "_" + j} line={line} />
+          )
+        )}
 
-      {/* lignes de la page actuelle */}
-      {text.map((line, i) =>
-        <LineComponent key={i} line={line} />
-      )}
+        {/* lignes de la page actuelle */}
+        {text.map((line, i) =>
+          <LineComponent key={i} line={line} />
+        )}
+      </div>
     </div>
   );
 };
