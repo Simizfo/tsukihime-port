@@ -46,7 +46,7 @@ export const fetchChoices = async (sceneNumber: number):Promise<any> => {
   })
 
   //if line starts with select, keep it and the lines after
-  const selectResult: any = {};
+  const selectResult: any = [];
   let j = 0
   let selectStart = false
   let selectEnd = false

@@ -6,6 +6,7 @@ import LineComponent from '../components/LineComponent';
 import HistoryScreen from './HistoryScreen';
 import { Line, Page } from '../types';
 import { fetchChoices, fetchScene } from '../utils/utils';
+import ChoicesScreen from './ChoicesScreen';
 
 const wave = new AudioTsuki()
 
@@ -13,6 +14,7 @@ const Window = () => {
   const [sceneNumber, setSceneNumber] = useState(20)
   const [scene, setScene] = useState<string[]>([])
   const [choices, setChoices] = useState<string[]>([])
+  const [displayChoices, setDisplayChoices] = useState(false)
   const [index, setIndex] = useState(0) //line
   const [text, setText] = useState<Line[]>([]) //current text
   const [history, setHistory] = useState<Line[]>([])
@@ -77,6 +79,10 @@ const Window = () => {
     //check if previous line has ended
     if (text[text.length - 1].lineHasEnded) {
       do {
+        if (scene[i] === "return") {
+          setDisplayChoices(true)
+          return
+        }
         processLine(scene[i])
         i++
       } while (!scene[i].startsWith('`'))
@@ -123,7 +129,9 @@ const Window = () => {
   }
 
   const handleClick = () => {
-    nextLine()
+    if (!displayChoices) {
+      nextLine()
+    }
   }
 
   return (
@@ -136,7 +144,11 @@ const Window = () => {
         {text.map((line, i) =>
           <LineComponent key={i} line={line} />
         )}
-      </div>      
+      </div>
+
+      {displayChoices &&
+        <ChoicesScreen choices={choices} />
+      }
     </div>
   )
 }
