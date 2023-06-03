@@ -54,16 +54,11 @@ const HistoryLayer = ({ pages, text }: Props) => {
   })
 
   useEffect(() => {
-    const historyElement = historyRef.current;
-    historyElement!.scrollTop = historyElement!.scrollHeight - historyElement!.clientHeight - 1;
-  }, [pages, text]);
-
-  useEffect(() => {
-    if (!displayHistory) {
-      const historyElement = historyRef.current;
-      historyElement!.scrollTop = historyElement!.scrollHeight - historyElement!.clientHeight - 1;
+    if (displayHistory) {
+      const historyElement = historyRef.current
+      historyElement!.scrollTop = historyElement!.scrollHeight - historyElement!.clientHeight - 1
     }
-  }, [displayHistory]);
+  }, [pages, text, displayHistory])
 
   //if a left click is made outside #history, hide history
   useEffect(() => {
