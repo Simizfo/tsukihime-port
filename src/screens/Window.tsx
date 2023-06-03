@@ -77,6 +77,7 @@ const Window = () => {
       goToNextScene()
     }
   }, [displayChoices])
+  
   const goToNextScene = async () => {
     const nextScene = await fetchGoToNextScene(sceneNumber)
     setNewScene(nextScene)

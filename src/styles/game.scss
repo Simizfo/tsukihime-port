@@ -112,23 +112,52 @@ body {
             }
         }
 
+        span {
+            position: relative;
+        }
+
+        .cursor {
+            position: absolute;
+            right: -22px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 20px;
+            height: 20px;
+        }
         #moon {
-            margin-left: 2px;
             animation: rotate 4s ease-in-out infinite;
             @keyframes rotate {
                 0% {
                     opacity: .3;
-                    filter: drop-shadow(0 0 2px #7edbff);
+                    filter: drop-shadow(0 0 1px #7edbff);
                     transform: rotate(0deg);
                 }
                 50% {
-                    opacity: .8;
+                    opacity: .9;
                     filter: drop-shadow(0 0 3px #7edbff) brightness(1.2);
                 }
                 100% {
                     opacity: .3;
-                    filter: drop-shadow(0 0 2px #7edbff);
+                    filter: drop-shadow(0 0 1px #7edbff);
                     transform: rotate(360deg);
+                }
+            }
+        }
+        #page {
+            opacity: .9;
+            animation: rotate3d 4s ease-in-out infinite;
+            @keyframes rotate3d {
+                0% {
+                    filter: brightness(0.8);
+                    transform: rotate3d(0, 1, 0, 0deg);
+                }
+                50% {
+                    filter: brightness(1.2);
+                }
+                100% {
+                    filter: brightness(0.8);
+                    transform: rotate3d(0, 1, 0, 360deg);
                 }
             }
         }
