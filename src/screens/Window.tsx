@@ -11,12 +11,14 @@ import TextLayer from '../layers/TextLayer';
 import BackgroundLayer from '../layers/BackgroundLayer';
 
 const wave = new AudioTsuki()
+const FIRST_SCENE = 20
 
 const Window = () => {
   const [sceneNumber, setSceneNumber] = useState(21) //20
   const [scene, setScene] = useState<string[]>([])
   const [choices, setChoices] = useState<Choice[]>([])
   const [displayChoices, setDisplayChoices] = useState(false)
+  const [displayText, setDisplayText] = useState(true)
   const [index, setIndex] = useState(0) //line
   const [text, setText] = useState<Line[]>([]) //current text
   const [history, setHistory] = useState<Line[]>([])
@@ -83,6 +85,19 @@ const Window = () => {
     const nextScene = await fetchGoToNextScene(sceneNumber)
     setNewScene(nextScene)
   }
+
+  //on right click toggle display text
+  useEffect(() => {
+    const handleRightClick = (e: MouseEvent) => {
+      if (e.button === 2) { //TODO && !displayHistory avec le contexte
+        setDisplayText(!displayText)
+      }
+    }
+    window.addEventListener('mousedown', handleRightClick)
+    return () => {
+      window.removeEventListener('mousedown', handleRightClick)
+    }
+  })
 
   //on press enter, go to next line
   useEffect(() => {
@@ -191,7 +206,7 @@ const Window = () => {
 
       <CharactersLayer characters={characters} />
 
-      <TextLayer text={text} handleClick={handleClick} />
+      <TextLayer text={text} handleClick={handleClick} displayText={displayText} />
 
       {displayChoices &&
         <ChoicesLayer choices={choices} setNewScene={setNewScene} />

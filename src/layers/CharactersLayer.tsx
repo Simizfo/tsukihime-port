@@ -10,7 +10,7 @@ const CharactersLayer = ({ characters }: Props) => {
     <div className="box-characters">
       {characters.map((character: Character, i) =>
         <div className={`img-container ${character.pos}`} key={i}>
-          <img src={"/image/tachipng/" + character.image + ".png"} alt="character" className={character.type} />
+          <img src={"/image/tachipng/" + character.image + ".png"} alt="character" className={character.type} draggable={false} />
         </div>
       )}
     </div>
