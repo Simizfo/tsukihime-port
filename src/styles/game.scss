@@ -111,6 +111,27 @@ body {
                 border-radius: 4px;
             }
         }
+
+        #moon {
+            margin-left: 2px;
+            animation: rotate 4s ease-in-out infinite;
+            @keyframes rotate {
+                0% {
+                    opacity: .3;
+                    filter: drop-shadow(0 0 2px #7edbff);
+                    transform: rotate(0deg);
+                }
+                50% {
+                    opacity: .8;
+                    filter: drop-shadow(0 0 3px #7edbff) brightness(1.2);
+                }
+                100% {
+                    opacity: .3;
+                    filter: drop-shadow(0 0 2px #7edbff);
+                    transform: rotate(360deg);
+                }
+            }
+        }
     }
     .box-choices {
         z-index: 3;

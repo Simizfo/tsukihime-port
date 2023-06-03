@@ -1,24 +1,25 @@
 import { Line } from "../types"
+import moonIcon from '../assets/icons/icon_moon.svg'
 
 type Props = {
   line: Line,
+  isLastLine?: boolean,
 }
 
-const LineComponent = ({ line }: Props) => {
+const LineComponent = ({ line, isLastLine }: Props) => {
 
   const lineDisplay = (line: string) => {
     if (line === 'br') {
       return <br />
     } else {
-      return line.replace(/`/g, '').replace(/\\/g, '')
+      return <span>{line.replace(/`/g, '').replace(/\\/g, '')}</span>
     }
   }
 
   return (
     <>
-    <span>
-      {lineDisplay(line.line)}
-    </span>
+    {lineDisplay(line.line)}
+    {isLastLine && <img src={moonIcon} alt="moon" id="moon" />}
     {line.lineHasEnded && <br />}
     </>
   );

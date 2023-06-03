@@ -192,7 +192,7 @@ const Window = () => {
       <div className="box-text" onClick={handleClick}>
         <div className="text-container">
           {text.map((line, i) =>
-            <LineComponent key={i} line={line} />
+            <LineComponent key={i} line={line} isLastLine={text.length - 1 === i} />
           )}
         </div>
       </div>
