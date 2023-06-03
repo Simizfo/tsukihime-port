@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import textScript from '../assets/game/scenes/scene21.txt';
 import '../styles/game.scss';
 import straliasJson from '../assets/game/stralias.json';
 import AudioTsuki from '../utils/AudioTsuki';
 import LineComponent from '../components/LineComponent';
+import HistoryScreen from './HistoryScreen';
 
 const wave = new AudioTsuki()
 
@@ -15,9 +16,7 @@ const Window = () => {
   const [pages, setPages] = useState<any[]>([]) //all text
   const [bg, setBg] = useState('')
   const [displayHistory, setDisplayHistory] = useState(false)
-  const bottomRef = useRef<null | HTMLDivElement>(null); 
 
-  //I have a very long text file. I want to display the first line that starts with `
   useEffect(() => {
     fetchScene()
   }, [])
@@ -41,7 +40,6 @@ const Window = () => {
 
   //init
   useEffect(() => {
-    //check if multidimensional array is empty
     if (scene.length !== 0) {
       let i = index
       do {
@@ -69,7 +67,7 @@ const Window = () => {
   //on press enter, go to next line
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Enter') {
+      if (e.key === 'Enter') { //TODO: empêcher de laisser appuyé
         nextLine()
       }
       if (e.ctrlKey) {
@@ -79,6 +77,19 @@ const Window = () => {
     window.addEventListener('keydown', handleKeyDown)
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
+    }
+  })
+
+  //if right click and history is displayed, hide history
+  useEffect(() => {
+    const handleContextMenu = (e: MouseEvent) => {
+      if (displayHistory) {
+        setDisplayHistory(false)
+      }
+    }
+    window.addEventListener('contextmenu', handleContextMenu)
+    return () => {
+      window.removeEventListener('contextmenu', handleContextMenu)
     }
   })
 
@@ -123,7 +134,6 @@ const Window = () => {
     const handleWheel = (e: WheelEvent) => {
       if (e.deltaY < 0 && !displayHistory) {
         setDisplayHistory(true)
-        bottomRef.current?.scrollIntoView()
       }
     }
     window.addEventListener('wheel', handleWheel)
@@ -179,18 +189,7 @@ const Window = () => {
       </div>
 
       {displayHistory &&
-      <div className='box-text' id="history">
-        {pages.map((page, i) =>
-          page.map((line: any, j:any) =>
-            <LineComponent key={i + "_" + j} line={line} />
-          )
-        )}
-
-        {text.map((line, i) =>
-          <LineComponent key={i} line={line} />
-        )}
-        <div ref={bottomRef} />
-      </div>
+        <HistoryScreen pages={pages} text={text} />
       }
     </div>
   )
