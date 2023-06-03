@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react';
 import '../styles/game.scss';
 import straliasJson from '../assets/game/stralias.json';
 import AudioTsuki from '../utils/AudioTsuki';
-import LineComponent from '../components/LineComponent';
 import HistoryLayer from '../layers/HistoryLayer';
 import { Character, Choice, Line, Page } from '../types';
 import { fetchChoices, fetchGoToNextScene, fetchScene } from '../utils/utils';
 import ChoicesLayer from '../layers/ChoicesLayer';
 import CharactersLayer from '../layers/CharactersLayer';
+import TextLayer from '../layers/TextLayer';
+import BackgroundLayer from '../layers/BackgroundLayer';
 
 const wave = new AudioTsuki()
 
@@ -186,17 +187,11 @@ const Window = () => {
     <div className="window">
       <HistoryLayer pages={pages} text={text} />
 
-      <img src={"/" + bg} alt="background" className="background" />
+      <BackgroundLayer bg={bg} />
 
       <CharactersLayer characters={characters} />
 
-      <div className="box-text" onClick={handleClick}>
-        <div className="text-container">
-          {text.map((line, i) =>
-            <LineComponent key={i} line={line} isLastLine={text.length - 1 === i} />
-          )}
-        </div>
-      </div>
+      <TextLayer text={text} handleClick={handleClick} />
 
       {displayChoices &&
         <ChoicesLayer choices={choices} setNewScene={setNewScene} />
