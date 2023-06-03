@@ -29,7 +29,6 @@ body {
         object-fit: cover;
     }
 
-
     .box-text {
         z-index: 1;
         user-select: none;
@@ -40,6 +39,7 @@ body {
         object-fit: cover;
 
         &#history {
+            z-index: -1;
             position: absolute;
             background-image: linear-gradient(180deg, rgb(4 34 48) 0%, rgb(17 15 48) 100%);
             color: var(--read-text-color);
@@ -47,6 +47,10 @@ body {
             width: 100%;
             height: 100%;
             padding-bottom: 40vh;
+
+            &.show {
+                z-index: 100;
+            }
         }
     }
 }

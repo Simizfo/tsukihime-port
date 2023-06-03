@@ -16,7 +16,6 @@ const Window = () => {
   const [history, setHistory] = useState<Line[]>([])
   const [pages, setPages] = useState<Page[]>([])
   const [bg, setBg] = useState('')
-  const [displayHistory, setDisplayHistory] = useState(false)
 
   useEffect(() => {
     fetchScene()
@@ -56,7 +55,7 @@ const Window = () => {
       }
 
       let newText: Line[] = text
-      newText.push({ line: scene[i], lineHasEnded: lineHasEnded })
+      newText.push({ line: scene[i], lineHasEnded: lineHasEnded, read: true })
       setText(newText)
       setHistory([...history, { line: scene[i], lineHasEnded: lineHasEnded }])
     }
@@ -76,47 +75,6 @@ const Window = () => {
     window.addEventListener('keydown', handleKeyDown)
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
-    }
-  })
-
-  //if right click and history is displayed, hide history
-  useEffect(() => {
-    const handleContextMenu = (e: MouseEvent) => {
-      if (displayHistory) {
-        setDisplayHistory(false)
-      }
-    }
-    window.addEventListener('contextmenu', handleContextMenu)
-    return () => {
-      window.removeEventListener('contextmenu', handleContextMenu)
-    }
-  })
-
-  //on mouse wheel up display history
-  useEffect(() => {
-    const handleWheel = (e: WheelEvent) => {
-      if (e.deltaY < 0 && !displayHistory && pages.length !== 0) {
-        setDisplayHistory(true)
-      }
-    }
-    window.addEventListener('wheel', handleWheel)
-    return () => {
-      window.removeEventListener('wheel', handleWheel)
-    }
-  })
-
-  //on scroll bottom in history, hide history
-  useEffect(() => {
-    const handleScroll = (e: any) => {
-      const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight
-      if (bottom) {
-        setDisplayHistory(false)
-      }
-    }
-    const history = document.getElementById('history')
-    history?.addEventListener('scroll', handleScroll)
-    return () => {
-      history?.removeEventListener('scroll', handleScroll)
     }
   })
 
@@ -149,7 +107,7 @@ const Window = () => {
       newText = []
     }
 
-    const newLine = { line: scene[i], lineHasEnded: lineHasEnded }
+    const newLine = { line: scene[i], lineHasEnded: lineHasEnded, read: true }
     newText.push(newLine)
     setText(newText)
     setHistory([...history, newLine])
@@ -178,17 +136,15 @@ const Window = () => {
 
   return (
     <div className="window">
+      <HistoryScreen pages={pages} text={text} />
+
       <img src={"/" + bg} alt="background" className="background" />
 
       <div className="box-text" onClick={handleClick}>
         {text.map((line, i) =>
           <LineComponent key={i} line={line} />
         )}
-      </div>
-
-      {displayHistory &&
-        <HistoryScreen pages={pages} text={text} />
-      }
+      </div>      
     </div>
   )
 }
