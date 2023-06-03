@@ -14,11 +14,16 @@ const LineComponent = ({ line, isLastLine }: Props) => {
     if (line === 'br') {
       return <br />
     } else {
+      let cursor:JSX.Element | null = null
+      if (isLastLine && !isLastLineOfPage) {
+        cursor = <img src={moonIcon} alt="moon" id="moon" className="cursor" />
+      } else if (isLastLine && isLastLineOfPage) {
+        cursor = <img src={pageIcon} alt="page" id="page" className="cursor" />
+      }
       return (
         <span>
           {line.replace(/`/g, '').replace(/\\/g, '')}
-          {isLastLine && !isLastLineOfPage && <img src={moonIcon} alt="moon" id="moon" className="cursor" />}
-          {isLastLineOfPage && <img src={pageIcon} alt="page" id="page" className="cursor" />}
+          {cursor}
         </span>
       )
     }

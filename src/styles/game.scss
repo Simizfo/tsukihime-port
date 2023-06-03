@@ -112,18 +112,10 @@ body {
             }
         }
 
-        span {
-            position: relative;
-        }
-
         .cursor {
-            position: absolute;
-            right: -22px;
-            top: 0;
-            bottom: 0;
-            margin: auto;
             width: 20px;
             height: 20px;
+            margin-left: 2px;
         }
         #moon {
             animation: rotate 4s ease-in-out infinite;
