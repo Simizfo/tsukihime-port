@@ -4,14 +4,15 @@ import straliasJson from '../assets/game/stralias.json';
 import AudioTsuki from '../utils/AudioTsuki';
 import LineComponent from '../components/LineComponent';
 import HistoryScreen from './HistoryScreen';
-import { Choice, Line, Page } from '../types';
+import { Character, Choice, Line, Page } from '../types';
 import { fetchChoices, fetchGoToNextScene, fetchScene } from '../utils/utils';
 import ChoicesScreen from './ChoicesScreen';
+import CharactersScreen from './CharactersScreen';
 
 const wave = new AudioTsuki()
 
 const Window = () => {
-  const [sceneNumber, setSceneNumber] = useState(20)
+  const [sceneNumber, setSceneNumber] = useState(21) //20
   const [scene, setScene] = useState<string[]>([])
   const [choices, setChoices] = useState<Choice[]>([])
   const [displayChoices, setDisplayChoices] = useState(false)
@@ -20,6 +21,7 @@ const Window = () => {
   const [history, setHistory] = useState<Line[]>([])
   const [pages, setPages] = useState<Page[]>([])
   const [bg, setBg] = useState('')
+  const [characters, setCharacters] = useState<Character[]>([])
 
   useEffect(() => {
     init()
@@ -136,19 +138,28 @@ const Window = () => {
   }
 
   const processLine = (line: string) => {
-    if (line.startsWith('bg ')) {
+    if (line.startsWith('bg ')) { //background
       let bg = line.split('"')[1]
       setBg(bg)
-    } else if (line.startsWith('waveloop ')) {
+    } else if (line.startsWith('waveloop ')) { //loop wave
       let waveStr = line.split(' ')[1]
       waveStr = JSON.parse(JSON.stringify(straliasJson))[waveStr]
       // wave.addWave(waveStr, true)
-    } else if (line.startsWith('wavestop')) {
+    } else if (line.startsWith('wavestop')) { //stop wave
       // wave.handleAudio("stop", false)
-    } else if (line.startsWith('br')) {
+    } else if (line.startsWith('br')) { //saut de ligne
       let newText = text
       newText.push({ line: 'br' })
       setText(newText)
+    } else if (line.startsWith('ld c,')) { //sprite personnage
+      //ld c,":a;image\tachi\stk_t01.jpg",%type_lshutter_fst
+      let character:Character = {
+        image: line.split(',')[1].split('"')[1].split(':a;')[1].replace('image\\tachi\\', '').replace('.jpg', ''),
+        type: line.split(',')[2].replace('%', ''),
+        pos: line.split(',')[0].replace('ld ', '')
+      }
+      console.log(character)
+      setCharacters([...characters, character])
     }
   }
 
@@ -163,6 +174,8 @@ const Window = () => {
       <HistoryScreen pages={pages} text={text} />
 
       <img src={"/" + bg} alt="background" className="background" />
+
+      <CharactersScreen characters={characters} />
 
       <div className="box-text" onClick={handleClick}>
         {text.map((line, i) =>
