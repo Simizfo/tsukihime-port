@@ -99,9 +99,12 @@ body {
             right: 0;
             margin: 0 auto;
             border-radius: 5px;
+            opacity: 0;
+            transition: all 0.2s ease-out;
 
             &.show {
                 z-index: 100;
+                opacity: 1;
             }
 
             //scrollbar
