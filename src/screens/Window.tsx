@@ -49,17 +49,15 @@ const Window = () => {
       } while (!scene[i].startsWith('`'))
       setIndex(i)
 
-      let hasEnded
+      let pageHasEnded = true
       if (scene[i + 1] !== undefined && scene[i + 1].startsWith(' ')) {
-        hasEnded = false
-      } else {
-        hasEnded = true
+        pageHasEnded = false
       }
 
       let newText: any[] = text
-      newText.push({ line: scene[i], hasEnded: hasEnded })
+      newText.push({ line: scene[i], pageHasEnded: pageHasEnded })
       setText(newText)
-      setHistory([...history, { line: scene[i], hasEnded: hasEnded }])
+      setHistory([...history, { line: scene[i], pageHasEnded: pageHasEnded }])
     }
   }, [scene])
   
@@ -98,7 +96,7 @@ const Window = () => {
     let i = index
 
     //check if previous line has ended
-    if (text[text.length - 1].hasEnded) {
+    if (text[text.length - 1].pageHasEnded) {
       do {
         processLine(scene[i])
         i++
@@ -108,9 +106,9 @@ const Window = () => {
     }
     setIndex(i)
 
-    let hasEnded = true
+    let pageHasEnded = true
     if (scene[i + 1] !== undefined && scene[i + 1].startsWith(' ')) {
-      hasEnded = false
+      pageHasEnded = false
     }
     
     let newText: any[] = text
@@ -123,7 +121,7 @@ const Window = () => {
     }
 
     //push new line accompanied with hasEnded
-    const newLine = { line: scene[i], hasEnded: hasEnded }
+    const newLine = { line: scene[i], pageHasEnded: pageHasEnded }
     newText.push(newLine)
     setText(newText)
     setHistory([...history, newLine])

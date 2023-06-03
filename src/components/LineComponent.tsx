@@ -1,5 +1,5 @@
 type Props = {
-  line: {line: string, hasEnded?: boolean},
+  line: {line: string, pageHasEnded?: boolean},
 }
 
 const LineComponent = ({ line }: Props) => {
@@ -17,7 +17,7 @@ const LineComponent = ({ line }: Props) => {
     <span>
       {lineDisplay(line.line)}
     </span>
-    {line.hasEnded && <br />}
+    {line.pageHasEnded && <br />}
     </>
   );
 }
