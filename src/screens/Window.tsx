@@ -5,11 +5,14 @@ import AudioTsuki from '../utils/AudioTsuki';
 import LineComponent from '../components/LineComponent';
 import HistoryScreen from './HistoryScreen';
 import { Line, Page } from '../types';
+import { fetchChoices, fetchScene } from '../utils/utils';
 
 const wave = new AudioTsuki()
 
 const Window = () => {
+  const [sceneNumber, setSceneNumber] = useState(20)
   const [scene, setScene] = useState<string[]>([])
+  const [choices, setChoices] = useState<string[]>([])
   const [index, setIndex] = useState(0) //line
   const [text, setText] = useState<Line[]>([]) //current text
   const [history, setHistory] = useState<Line[]>([])
@@ -17,24 +20,14 @@ const Window = () => {
   const [bg, setBg] = useState('')
 
   useEffect(() => {
-    fetchScene(20)
+    init()
   }, [])
 
-  const fetchScene = async (scene: number) => {
-    const script = await fetch(`./scenes/scene${scene}.txt`)
-
-    const data = await script.text();
-
-    //split data on \n or @
-    const lines = data.split(/[\n@]/)
-    const result: any = {};
-
-    lines.forEach((line, index) => {
-      result[index] = line
-    });
-    // console.log(result); // Check the output in the console
-
-    setScene(result)
+  const init = async () => {
+    const sceneTmp = await fetchScene(sceneNumber)
+    setScene(sceneTmp)
+    const choicesTmp = await fetchChoices(sceneNumber)
+    setChoices(choicesTmp)
   }
 
   //init
