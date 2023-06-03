@@ -82,7 +82,7 @@ body {
         &#history {
             z-index: -1;
             position: absolute;
-            background-image: linear-gradient(180deg, rgb(4 34 48) 0%, rgb(17 15 48) 100%);
+            background-image: linear-gradient(180deg, rgb(9 96 137) 0%, rgb(44 38 139) 100%);
             color: var(--read-text-color);
             overflow-y: scroll;
             width: 100%;
@@ -91,6 +91,18 @@ body {
 
             &.show {
                 z-index: 100;
+            }
+
+            //scrollbar
+            &::-webkit-scrollbar {
+                width: 20px;
+            }
+            &::-webkit-scrollbar-track {
+                background: #44444440;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #a7a7a7;
+                border-radius: 4px;
             }
         }
     }
