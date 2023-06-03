@@ -88,12 +88,17 @@ body {
         &#history {
             z-index: -1;
             position: absolute;
-            background-image: linear-gradient(180deg, rgb(9 96 137) 0%, rgb(44 38 139) 100%);
+            background-image: linear-gradient(180deg, rgb(9 96 137 / 80%) 0%, rgb(44 38 139 / 80%) 100%);
             color: var(--read-text-color);
             overflow-y: scroll;
-            width: 100%;
-            height: 100%;
-            padding-bottom: 40vh;
+            width: min(94%, 800px);
+            height: 94%;
+            padding-bottom: 20vh;
+            align-self: center;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            border-radius: 5px;
 
             &.show {
                 z-index: 100;
