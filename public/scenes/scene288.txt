@@ -1,20 +1,20 @@
 
-mov $phasebg,"image\bg\bg_33d.jpg"
-mov $phasetitle_a,":a;image\word\PCEL_11B.PNG"
+mov $phasebg,"image\bg\cmo_14.jpg"
+mov $phasetitle_a,":a;image\word\PCEL_11A.PNG"
 mov $phasetitle_b,":a;image\word\day_11.png"
 gosub *left_phase
 
 monocro #fffff0
 
 bg "image\bg\bg_40e.jpg",%type_crossfade_slw
+
 play "track06.ogg"
+
 
 ` It becomes morning and I finally manage to lock the door.@
 br
 ` *pant* *pant* *pant*
 br
-!w500
-
 ` My beast-like panting fills the room.@
 ` My head hurts.@
 ` It seems I dropped my glasses somewhere.@
@@ -22,40 +22,53 @@ br
 
 ` *pant* *pant* *pant*
 br
-!w500
-
 ` I feel so sick, I cut all of them I see.@
 ` I feel just a little better.@
-` Only during the instant I cut things apart does my heart feel at ease.@ But the more I cut, the thirstier I get.\
+` Only during the instant I cut things apart does my heart feel at ease.@
+` But the more I cut, the thirstier I get.\
 
 ` *pant* *pant* *pant*
 br
-!w500
-
 ` I know what I'm thirsty for.@
 ` I'm thirsty for everything.@
 ` Everything I see is pissing me off.\
+
+` They look miserable.@
+` I can't forgive that they are living meaninglessly even though they have death built into them.@
+` Why don't they die?@ They all have an end they can't escape, so why do they still exist like that?@
+` If it will end anyway---where is the meaning in existence?@
+` Everything I see is ghastly.\
+
+` But if I close my eyes, all I can remember is the sensation of killing.@
+` The sensation of a hard, unbloodied blade,
+` softly uniting with pulsing flesh.@
 br
+` There can't be a greater stimulation for a human than that.@
+` A terrible sensation that almost makes me want to bite my tongue off.@
+` It doesn't matter if it is a positive or negative feeling.\
+
+` Especially in my case.@ Because my first was the best beyond all belief, it's hopeless.@
+` …… Arcueid.@ The pleasure I got from severing her body into seventeen pieces still burns in my brain and won't go away.@
+br
+` Those beautiful body parts.@
+` The appearance of a human, but with a tenacious life that surpasses far beyond that of people.@
+` The enjoyment I had from the killing has faded.@ That time, I didn't kill Arcueid, but I must've killed my brain instead.\
+
 ` *pant* *pant* *pant*
 br
-!w500
-
 ` I want to destroy everything,
 ` kill everything.@
 ` I know that's wrong, but I don't think I can hold it in.@
 ` My body is filled with excitement; I'm about to go insane.\
 
-wave se3
-
 `"Shiki-sama, are you awake?"@
 `"----!"@
 ` I can hear Hisui's voice from the other side of the door.\
+
 `"Shiki-sama, it is not good if you keep the door locked.@ If you are awake, please open the door."@
 `"………… Op…… en…………?"@
 ` Open the door?@
-` Open the door and let Hisui inside?\
-
-br
+` Open the door and let Hisui inside?@
 ` ---You must be kidding me.@
 ` If that happened, I don't know what I would do.@
 ` Like this---if I stay alone like this, lying in bed with the curtains shut, I can stave off the desires that threaten to overtake my mind.@
@@ -66,12 +79,12 @@ br
 `"…… Shiki-sama?@ Are you not feeling well?"@
 `"I said leave me alone……!@ I'm fine, so just leave me alone……!"@
 ` If she---came in this room, something I couldn't take back would happen.@
+br
 `"…………"@
 ` After a deep silence, I hear her footsteps.@
 ` Quietly, she walks away from the door.\
 
 ` *pant* *pant* *pant*
-!w500
 br
 ` ---Now it's safe.@
 ` Thinking that, I calm down just a little.@
@@ -79,13 +92,10 @@ br
 
 `"H---uh?"@
 ` The book that was always beside my pillow isn't there.@
-` The book written in English…… I definitely can't read it, but it was a way to kill time.@
+` The book written in English …… I definitely can't read it, but it was a way to kill time.@
 ` I search but I can't find it.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
-
-bg "image\bg\bg_40e.jpg",%type_crossfade_mid
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
 bg "image\bg\bg_40e.jpg",%type_crossfade_mid
 
 ` I can't find it.@
@@ -94,11 +104,10 @@ bg "image\bg\bg_40e.jpg",%type_crossfade_mid
 br
 ` *pant* *pant* *pant*
 br
-!w500
-
 `"The book---the book."@
 ` Come to think of it,
 ` Why did I even put that book by my pillow?\
+
 ` I don't know.@ I don't even remember bringing it here.@
 ` I don't know where I brought it from.@
 ` In the first place---did that book even exist?\
@@ -107,12 +116,7 @@ br
 br
 br
 br
-br
-br
-br
 ` …… Really, you may have not realized it.\
-!w1000
-\
 
 ` …… I remember Roa's irksome voice.@
 ` That book---those contents.@
@@ -126,10 +130,8 @@ br
 br
 br
 br
-` "…… But you were already insane a long, long time ago……!"\
-!w1000
-\
-
+br
+` …… But you were already insane a long, long time ago……!\
 
 ` Roa said such words.@
 ` DREAM---dream.@
@@ -137,7 +139,6 @@ br
 ` In the first place, I don't have that strange knowledge inside of me.@
 ` There's no reason for me to have that dream.@
 ` That, isn't my dream.\
-
 br
 br
 br
@@ -146,9 +147,6 @@ br
 br
 br
 `   You may have not realized it.\
-
-!w1000
-\
 
 `"----Shut, up."@
 br
@@ -165,10 +163,6 @@ br
 br
 br
 `    You and I are connected, Shiki.\
-!w1000
-\
-
-
 
 `"----Shut up, you're dead."@
 ` You're already dead, you bastard, so stop your incessant calling out.@
@@ -186,16 +180,14 @@ br
 ` ---Yeah, I also thought so at first.@
 `    Even if this Roa came in---\
 
-!w1000
-\
+wave se4
 
 `"---I told you to shut up……!"@
-wave se9
-quakey 2,100
+quakey 4,100
+
 br
 ` *pant* *pant* *pant*-----
 br
-!w500
 ` …… I breathe heavily.@
 ` The sunlight pisses me off.@
 ` My throat.@ My throat is so dry, I'm about to go insane.\
@@ -204,412 +196,51 @@ br
 ` I hear Hisui's voice across the door.@
 ` …… I can't even answer.@
 ` Words.@ I can't even remember, my words.@
-`"Shiki-sama, please open up, Shiki-sama!"@
-` I hear her voice across the door.@
 br
-` …… Her voice almost sounds like it was in another language.\
-` So far away.@
+` What fills my head,\
 
-`"Ah-----gh."@
-` …… This isn't good.@
-` I, don't have the confidence to face Hisui like usual.@
-`"Shiki-sama, did something happen, Shiki-sama…………!"@
-` She knocks on the door.@
-`"…… Shut…… up……"@
-` I desperately place my hands over my ears…@
-`"        "@
-` …… I can't hear Hisui's voice anymore.@
-` Just like this,
-` I have to lock myself up in my room so I can't see Hisui, Akiha, or Kohaku-san----\
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
 
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-playstop
-
-bg "image\bg\bg_40e.jpg",%type_crossfade_slw
-waveloop se10
-
-` It's now ten in the morning.@
-` Hisui gave up and went back.@
-` Akiha and Kohaku-san came and took turns knocking but I ignored them.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-bg "image\bg\bg_40e.jpg",%type_crossfade_slw
-
-` Twelve o'clock.@
-` …… I'm hungry.@
-` But, I'm still fine.@
-` I pull the sheets over me and hug my shaking body.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-bg "image\bg\bg_40e.jpg",%type_crossfade_slw
-
-
-` Two o'clock.@
-` …… I'm dying of thirst.@
-` I've lost all sense of time.@
-` It feels very calm.@
-` But as if I was taking stimulants, my body wants to rage around.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-bg "image\bg\bg_40e.jpg",%type_crossfade_slw
+bg "image\bg\bg_40e.jpg",%type_nowaitdisp
 
 br
-` Four o'clock.@
-` …… More knocking.@
-` A name being called out.@
-` Whose voice is that?@ Whose name are they calling?@ I can't tell.\
+` What fills my, head,\
 
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-monocro #ff0000
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
 
-bg "image\bg\bg_40e.jpg",%type_crossfade_slw
+bg "image\bg\bg_40e.jpg",%type_nowaitdisp
 
 br
+` is just lust.@
 br
-` Five o'clock.@
-` It slowly starts to get dark.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-
-bg "image\bg\bg_40e.jpg",%type_crossfade_slw
-
-
+` I want to violate, violate any female.@
 br
-br
-br
-` Six o'clock.\
 
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+
+
+` I start to lust crazily.\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+
 monocro off
 
-bg "image\bg\bg_40f.jpg",%type_crossfade_slw
+bg "image\bg\bg_40e.jpg",%type_crossfade_fst
 
 
-br
-br
-br
-br
-` Seven o'clock.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-bg "image\bg\bg_40f.jpg",%type_crossfade_slw
+`"Uwaaaa----!"@
+wave se9
+wave se9
+wave se9
 
 br
-br
-br
-br
-br
-` Eight o'clock.\
+` My head.@ I bang my head against the wall.@
+` Over and over, as if I was trying to split it.@
+` But still---the thought of me slicing apart Hisui doesn't disappear from my brain.\
 
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-bg "image\bg\bg_40f.jpg",%type_crossfade_slw
+` Bam.@ Bam.@ I hit my head on the wall.@
+` As if she was trying to compete with it, Hisui knocks harder on the door.\
 
-wave se3
 
-br
-br
-br
-br
-br
-br
-` ---Someone, comes by.\
-
-`"Shiki-san, I've brought you dinner.@ You haven't had anything since this morning, so you'll collapse you know."@
-br
-` Kohaku's voice.@
-` She knocks on the door.@
-br
-`"Geez, if that's how it is, I'll get you to at least eat."@
-` A rattling sound.@
-` Not knocking, but the sound of a lock opening.\
-
-`"Huhuhu, time to use my secret weapon, the master key!"@
-`"----Ah."@
-br
-` The lock unlocks.@
-
-
-
-
-
-` …… The door opens.@
-` It's too late.@ Even if I send her away, she's already come inside.@
-br
-` ----But still.@
-` I can't even do the action called "eating food".@
-` It will get me too excited, and it will smash the remaining "Tohno Shiki" within me to pieces.\
-
-` …… *pant*…… *pant*…… *pant*……
-br
-` I breathe hard.@
-` Somehow.@
-` I have to resist it.\
-
-ld c,":a;image\tachi\koha_t02.jpg",%type_lshutter_mid
-
-`"Shiki-san, I'm coming in…… wh, what happened?"@
-` Still smiling, she looks in surprise at the room lying in shambles.\
-
-` …… *pant*…… *pant*…… *pant*……
-br
-` Her cute face devoid of fear.@
-` Her completely unguarded, defenseless figure.@ Her red hair----and her delicious-looking skin.\
-
-`"Shiki-san……?@ This is strange, how did all of this happen?"@
-` Still smiling, she draws closer to where I lie curled on the bed.@
-cl c,%type_lshutter_mid
-\
-
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-bg "image\bg\bg_40c.jpg",%type_crossfade_fst
-
-` -----------------Hurry.@
-wave se0
-
-` No.@
-` --------------Hurry.@
-wave se0
-
-`    No.@
-` -----------Hurry.@
-wave se0
-
-`       Stop it.@
-` --------Hurry.@
-wave se0
-
-`         Shut up.@
-` ------Hurry.@
-wave se0
-
-`            I don't want to.@
-` --Hurry.@
-wave se0
-
-`               I.\
-
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-bg "image\bg\bg_40c.jpg",%type_crossfade_fst
-
-`"Run---away…"@
-` Using the very last vestiges of my will, I manage to let those words out.\
-
-ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
-
-`"Eh?@ I'm sorry, I couldn't hear you, could you please say it again, Shiki-san?"@
-` But it's working against me.@
-` Concerned, she draws closer to my bed.@
-` To my/TO MY,
-!w1000
-
-` body/BODY,
-!w1000
-` her face/HER FORM,
-!w1000
-` draws closer/INVITES ME,
-!w1000
-` in.\
-
-waveloop se1
-
-` Her white fingers touch my shoulder lightly.@
-` Her fingers pulsing with blood.@
-` Her light body warmth.@
-` Small fireworks explode in the back of my head.\
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-
-`"Kya----!"@
-` I hear a scream.@
-` My hand wraps around her throat.\
-
-`"Hwa---ha, a, h---"@
-` My breathing is out of control.@
-` What.@ Am I.@ Trying.@ To do?\
-
-`"Shi…… ki, sa---"@
-` Her voice cuts off.@
-` Not caring, I grip harder.@
-` Grip.@
-` The bones in her neck creak.\
-
-`"St,o---!"@
-` A small tearing sound.@
-` Her fingers dig into my arm.@
-bg "image\bg\ima_13.jpg",%type_crossfade_mid
-
-
-` She must be getting frantic, being on the verge of death like that.@
-` Her nails push through my clothes and into the meat of my arm.\
-
-`"Ah----ch."@
-` Pain.@
-` Well, not as much pain as Kohaku must be feeling.@
-` But blood flows.@
-` It runs down from my arm and onto my hand grasping Kohaku's neck.\
-
-`"Ha----ha."@
-` Painted deep red.@
-` Her unresisting neck is now running with blood.@
-` I can't really feel her anymore.@
-` Just the fact that she'll die in a few seconds…\
-
-`"Haha-----ha."@
-` It seems so funny to me, I start to laugh.@ It hasn't even been a minute since I grabbed her neck.@
-` She won't die of suffocation.@
-` But here, by my hand.\
-
-`"Ha, haa, ha."@
-` For no reason, suddenly.\
-
-`"Hahaha, ha---ha, ha, ha."@
-` Like a simple appliance.\
-
-br
-br
-br
-br
-br
-br
-`"Ahahahahahahahahahahahaha!"@
-` She'll die by having the bones in her neck break.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-wavestop
-
-bg "image\bg\bg_40c.jpg",%type_crossfade_mid
-
-` In an instant,
-` like being freed from demonic possession, the heat disappears.@
-br
-` Before my eyes is the bloodied body of Kohaku-san.@
-` My hand is grasping her neck and any second now-----
-br
-`"------!"@
-` I quickly let go.\
-
-` Without a sound,
-br
-` Kohaku-san falls to the floor.\
-
-`"Uu…… ha, -----"@
-` Kohaku-san breathes painfully with her eyes closed.@ "Kohaku----san."@
-` …… She's alive.@
-` Just a little longer.@ If I kept going just a little longer, I would have----\
-
-`"Uu……, u, u………"@
-` …… She's crying.@
-` Collapsed on the floor, not able to move, she's crying.@
-` Looking down.@
-` Her kimono is covered with white fluid.@
-br
-` That, is my semen.@
-` I----by doing that, was released from whatever it was inside me?\
-
-`"-----Ha."@
-` I can't believe it.@
-` While one hand was choking Kohaku-san, my other hand----was reveling in the pleasure of killing something?@
-br
-` ----Thump.@
-br
-` It, isn't over.\
-` I'm still fully erect, and more than that, I am not satisfied myself.\
-
-` I'm so thirsty.@
-` I've---done such a terrible thing to Kohaku-san, but it doesn't seem to end.@
-` The truth is, my regret is fading even now as I look at Kohaku-san's neck.@
-br
-` Her white neck.@
-` Put my teeth at her throat and.\
-
-br
-br
-br
-br
-br
-br
-br
-` -----I want, to suck, her blood.\
-
-bg "image\bg\ima_11b.jpg",%type_crossfade_fst
-bg "image\bg\bg_40c.jpg",%type_crossfade_fst
-
-
-`"----What is this?"@
-!w500
-
-` I broke apart.@
-`"What the hell, what am I----"@
-!w500
-
-` I broke apart.@
-` Did I break down?\
-
-`"Why-----"@
-` Outside.@
-` I have to go outside.@
-` If I stay here, I'll kill Kohaku-san.@
-` If I stay in the mansion, I'll kill even Akiha and Hisui.@
-` So before those urges come again, I have to disappear.\
-
-`"What, am I, doing?"@
-` A place where no one is.@
-` I have to go to a place where no one is or I'll go crazy again----.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-
-wave se0
-
-` ---I leave the mansion.@
-` My ragged breath pours out of my dry throat.@
-`"…… A…… haa…… ha…… ah."@
-` How did, this happen?@
-` My mind is going, blank.@
-br
-` I can't remember.@
-` Such as how to breathe, how to think properly, balancing the movement of my arms and legs, I have to think about it or I can't do them properly.\
-
-wave se0
-
-`"Ah……, ha……"@
-` …… I don't have any place in mind.@
-` Just, for no reason whatsoever.@
-` I want to see golden moonlight.\
-
-
-bg "image\bg\bg_24d.jpg",%type_crossfade_mid
-
-wave se0
-
-` ---The lines won't disappear.@
-` The wavering in my vision worsens.@
-` The night city is shrouded in a white fog, as if it was a city that died thousands of years ago.@
-br
-` There's no sign of anyone else.@
-` A cocoon that's like a spider's web is everywhere on every building.@
-` It's terribly quiet.@
-` Like a dead city at the bottom of a vast ocean.\
-
-wave se0
-
-` In that illusion, I still walk.@
-` Overhead, the large golden moon shines radiantly.@
-` Is it the mercy of the moon?@
-` My headache has disappeared and my head is in a daze.@
-br
-` Under the moon.@
-` As if under a spell, I continue walking.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_slw
-
-` I walk down the dead city blanketed in darkness.@
-` I can feel the knife in my pocket.@
-` …… I can't believe it.@
-` Even without thinking about it, I seemed to have put it there.@
-br
-br
-` Probably,
-` so that at any time, I can kill someone.\
 
 return

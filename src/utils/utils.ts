@@ -1,6 +1,6 @@
 import { Choice } from "../types";
 
-const LOGIC_FILE = 'scene19.txt'
+const LOGIC_FILE = 'scene0.txt'
 
 /*
  * Fetch and split the script into lines
@@ -89,9 +89,17 @@ export const fetchChoices = async (sceneNumber: number):Promise<any> => {
   return choices
 }
 
-export const fetchChoiceNextScene = async (sceneNumber: number):Promise<number> => {
+export const fetchGoToNextScene = async (sceneNumber: number):Promise<number> => {
   const result = await fetchF(sceneNumber)
+  console.log("scene", sceneNumber)
 
-  console.log(result)
-  return 0
+  //if line starts with gosub *s keep the number after
+  let goToNextScene = 0
+  Object.keys(result).forEach((key) => {
+    if (result[key].startsWith('goto *f')) {
+      goToNextScene = parseInt(result[key].replace('goto *f', ''))
+    }
+  })
+
+  return goToNextScene
 }

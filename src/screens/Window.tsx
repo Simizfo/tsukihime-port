@@ -5,7 +5,7 @@ import AudioTsuki from '../utils/AudioTsuki';
 import LineComponent from '../components/LineComponent';
 import HistoryScreen from './HistoryScreen';
 import { Choice, Line, Page } from '../types';
-import { fetchChoices, fetchScene } from '../utils/utils';
+import { fetchChoices, fetchGoToNextScene, fetchScene } from '../utils/utils';
 import ChoicesScreen from './ChoicesScreen';
 
 const wave = new AudioTsuki()
@@ -68,6 +68,16 @@ const Window = () => {
     const choicesTmp = await fetchChoices(sceneNumber)
     setChoices(choicesTmp)
     setDisplayChoices(false)
+  }
+
+  useEffect(() => {
+    if (choices.length === 0 && displayChoices) {
+      goToNextScene()
+    }
+  }, [displayChoices])
+  const goToNextScene = async () => {
+    const nextScene = await fetchGoToNextScene(sceneNumber)
+    setNewScene(nextScene)
   }
 
   //on press enter, go to next line

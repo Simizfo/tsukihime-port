@@ -1,8 +1,6 @@
 
 
-
 bg "image\bg\bg_40c.jpg",%type_crossfade_mid
-waveloop se10
 
 ` Left by myself, I lie on my bed.@
 ` This house from eight years ago…
@@ -59,7 +57,10 @@ br
 `"Damn, I can't sleep like this!"@
 ` The dog's howling comes from somewhere near the mansion's fence.@
 br
-` …… It doesn't seem like I can go back to sleep at this rate.\
+` …… It doesn't seem like I can go back to sleep at this rate.@
+br
+
+
 
 
 return

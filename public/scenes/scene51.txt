@@ -1,96 +1,150 @@
 
-mov $phasebg,"image\bg\ima_10.jpg"
-mov $phasetitle_a,":a;image\word\PARK_13A.PNG"
-mov $phasetitle_b,":a;image\word\epi.jpg"
-gosub *left_phase
+mov $phasebg,"image\bg\bg_22b.jpg"
+mov $phasetitle_a,":a;image\word\PARK_02A.PNG"
+mov $phasetitle_b,":a;image\word\day_02.png"
+gosub *right_phase
 
-bg "image\bg\ima_11.jpg",%type_crossfade_slw
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+
+` Sensei told me.@
+` My eyes could see the points where things could easily be broken.@
+` And if that 'thing' were to be a person, then what I would see would be their vital spots.\
+` Lines which, if cut, could break something apart without any effort.@
+` With those lines, even things as hard as steel could easily be cut.@
+br
+`"In other words, everything in existence has its destiny of 'breaking' internalized within it.@ This is something inescapable for anything with a physical form, Shiki."\
+` That's what Sensei had said.@
+` I was still a child back then.@
+` I remember finally understanding what she meant and getting scared.@
+` In other words, the world is full of cracks, and it could collapse at any instant.@
+
+` If there are scribbles all over the ground, then there's a possibility that the earth would start breaking apart if I walk over it.@
+` ---When I realized what she meant, I thanked Sensei from the bottom of my heart for the glasses she gave me.\
+br
+` I couldn't have gone on living if I had continued to see the lines all the time.@
+` The points where things could easily be broken.@
+` There isn't a single advantage to being able to see them---\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+!w1000
+
+bg "image\bg\ima_03.jpg",%type_crossfade_mid
+
+
+`"---Good morning."@
+br
+` …… I hear an unfamiliar voice.\
+`"It is morning.@ It is time for you to awaken, Shiki-sama."@
+` …… Stop calling me Shiki-sama already.@
+` I told you yesterday, it sends chills down my back----\
+
+
+bg "image\bg\bg_40e.jpg",%type_crossfade_slw
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
 
 play "track02.ogg"
 
-`"Shiki-sama, it is morning.@ Please wake up."@
-br
-` …… I hear a familiar voice.\
-br
-`"Shiki-sama…… Please wake up.@ If you are late like yesterday, you will break your promise with Akiha-sama."@
-br
-` …… A voice partly tense, partly relaxed.\
 
-`"Shiki-sama.@ Is it okay?@ Akiha-sama will end up scolding you again."@
 br
-` …… No, it's not okay at all.@
+` ---I wake up.@
+` Hisui stands far from the bed, like a statue.@
+`"……"@
 br
-`"…… I'm up.@ I'm up, so hold on."@
-` Still under the sheets, I respond as I slowly open my eyes.\
-
-bg "image\bg\bg_40a.jpg",%type_crossfade_mid
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
+` Where am I?@
+br
 `"Good morning, Shiki-sama."@
-`"Ah, mornin'."@
-` I give a sleepy greeting in response and put on my glasses.@
-` It's past seven in the morning.@
-` Hisui came at her usual time and managed to wake me.@
+` The girl in a maid uniform bows.\
+`"Ah… yeah, I came home, right…"@
+` I push myself up, looking around the room.@
+cl c,%type_crossfade_fst
+
+` In that instant---
 br
-`"I will prepare your breakfast.@ After changing, please head towards the dining room."@
+` ---I feel sharp pain in my temples.\
+`"Huh---?"@
+`"Are you looking for your glasses?"@
+` Hisui gently hands me my glasses.@
+
+
+bg "image\bg\bg_40a.jpg",%type_lshutter_fst
+
+`"---Phew."@
+br
+` …… I let out a breath.@
+` Last night---Before I went to sleep, I had the feeling I was seeing the lines even with my glasses on.@ Seems like it was just my imagination.\
+`"Sstt……"@
+` Maybe it's because I slept in an unfamiliar room, but my mind is hazy.@
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"Shiki-sama…?"@
+` Hisui calls out to me.@
+` Shaking my head, I shake away my sleepiness.\
+`"Good morning, Hisui.@ Thanks for coming to wake me."@
+`"There is no need to thank me.@ It is my duty to come and wake you, Shiki-sama."@
+` Hisui gives a plain and completely expressionless response.\
+` …… Even in an unfavorable light, I think Hisui's features are beautiful.@
+` It should be wonderful for such a girl to wake me every morning, but as Hisui never smiles, I don't feel that happy about it.@
+br
+` …… What a shame.@
+` If Hisui only had half of Kohaku's brightness, she would be really cute.\
+
+`"---Do you need something?"@
+` Realizing I am looking at her, Hisui stares straight back at me.@
+`"No, nothing at all.@ Waking up with you there makes me feel like I'm really at the Tohno mansion."@
+` Now then.@ Getting off the bed, I stretch out both arms.@
+br
+` Suddenly, I realize I'm wearing pajamas.\
+` ---Eh, I'm sure that yesterday, I…\
+`"Huh?@ I thought I slept in my uniform last night."@
+`"Yes.@ Since it is bad for your health to do so, Nee-san changed your clothes and put you to bed afterwards."@
+` Hisui explains it as if it is something perfectly natural.@
+` I see.@ She changed my clothes.@ It's true that I could have caught a cold if I had just slept like that.@
+` Just the kind of attentive service you'd expect from a maid---Hey, wait a minute…!\
+
+`"Wh------!?"@
+` I quickly check my pants and underwear.@
+` My pants are brand new pajama pants.@ Even my underwear is new.\
+`"Wh-wh-wh-!?"@
+` I want to say 'What the hell did you do!?', but somehow the words are stuck in my throat.@
+` I've got to calm down and think things over for now.@
+` …… Let's see.@ First of all, half the blame belongs to me.@
+` And the one who changed me wasn't Hisui, it was her sister, Kohaku-san.@
+` It would be wrong to complain to Hisui.\
+`"---Hisui."@
+`"Yes, what is it?"@
+`"You don't have to do anything uncalled for like this from now on.@ If you have to, please wake me up.@ I can change myself, so I'd like to do so."@
+` My face is a deep red as I say all of this.@ Hisui obediently nods in affirmation.@
+`"Your uniform is folded and awaits you over there.@ Please come to the sitting room after you have changed."\
 cl c,%type_lshutter_mid
 
-` Hisui disappears from the room after a bow.\
 
-` I give a big yawn.@
-` After a nice stretch, I get up from bed.@
-` I change into my school uniform and cast a glance at my desk.@
-` …… On top is the knife I will not ever use again.\
+`"………"@
+` Damn it.@ How careless could I be.@
+` It was careless of me to begin with when I fell asleep on the bed like that, but to not have woken up while I was being changed is over the top.@
+`"Usually I would have sensed it, but… maybe I was just really tired."@
+` Complaining to myself isn't going to change anything.@ I can't just keep standing here talking to myself like an idiot.@ I'd better hurry up and change, then go have breakfast.\
 
-` The curtains sway in the wind.@
-` Hisui must have opened the window; the sky is refreshingly clear.@
-` It's just a little cold, though.@
-br
-` I approach the window to close it.\
+` My school uniform is neatly folded, and my shirt is even ironed.@
+` Passing my wrists through the sleeves feels good.@ It's that fresh, brand-new feeling.\
 
-bg "image\bg\ima_03.jpg",%type_lshutter_mid
+`"…… No, there's nothing wrong with being naked, is there?@ Yep."@
+` There was nothing wrong with it, but I couldn't help being embarrassed at the fact that I was being changed by the warmly smiling Kohaku-san.@
+` To top things off, the face in the mirror keeps smiling from time to time despite being bright red.@
+` …… Are you really okay, Tohno Shiki?@
+` I thought you were supposed to be uneasy about staying here, you amateur.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w500
+
+bg "image\bg\bg_34a.jpg",%type_lcartain_mid
+
+` Akiha and Kohaku-san are relaxing in the sitting room.@
+` Akiha is wearing the uniform of the Asagami Ladies' Academy, a famous school for young girls.@
+` They are drinking tea together gracefully, as if breakfast ended a long time ago.@
+` I----
+br
 
 
-br
-br
-br
-br
-br
-br
-` ----As it turned out,
-` I ended up waking in my own room.\
-
-` It seems Senpai carried me here.@ Fortunately, Akiha and the others didn't know I left.@
-` It's been one week since that night.@
-` Tohno Shiki's life hasn't changed a bit from what it was before.\
-
-` My relationship with Akiha is a bit uneasy at times, but of course we're brother and sister.@
-` Except for that passageway being repaired, the school has not changed at all.@
-br
-` …… No, it did change.@
-` At school, there's no senpai called Ciel anywhere, nor does anyone remember her.@
-` The instances of serial murders haven't occurred once since then.@ Since there's been no official arrest, the city streets are still relatively empty at night, but it'll probably return to normal in a month.\
-
-` As for me,
-` I carry an unfillable void in my heart, but I continue on as I did before.@
-` …… Or rather, I can bear it all.@
-` At times, I get overwhelmed when I am assailed by memories, but I don't think I'll go insane or anything for now.@
-br
-` Some day.@
-` Will I go crazy after not being able to bear these memories, or will I just return to living normally after getting used to them?\
-
-` Perhaps it's about a fifty-fifty chance.@
-` ---But until then,
-` even if it is a little girlish, I keep the final promise I made with her every day.@
-br
-`"----Autumn is drawing to a close, isn't it?"@
-br
-` The blue sky outside is enough to take my breath away.@
-` Taking a large, deep breath, I shut the window.\
-
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-playstop
-
-!w2000
 
 return

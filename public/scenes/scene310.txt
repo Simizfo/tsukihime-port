@@ -1,0 +1,2027 @@
+
+bg "image\event\ark_e04b.jpg",%type_nowaitdisp
+
+
+` But, I can't listen.@
+` She might be not on guard right now as the perfection is fading from her body.\
+`"…… Shiki.@ Or, do you hate me?"@
+` Her eyes look straight at me.@
+` I look at her face while being pinned down.@
+wave se0
+br
+` Sincerely.@ ---So strongly it might burn my brain.\
+
+`"…… I don't hate you Arcueid."@
+`"Really?"@
+` She sounds very happy.@
+br
+wave se0
+
+` …… My forehead is burning.@
+` As my brain throbs horribly, I definitely---
+br
+` See just one "line" of death.\
+
+`"But, I have to refuse.@ The one I love is Ciel, and not you, Arcueid……!"@
+`"-------!"@
+` Her eyes brim over with anger.@
+` But before then,
+` I slice through the "line" on her neck.\
+playstop
+
+wave se5
+
+bg "image\bg\ima_12.jpg",%type_lshutter_fst
+!w1000
+
+bg "image\bg\bg_29b.jpg",%type_crossfade_fst
+
+
+`"Ah-----"@
+` Fresh blood spilling from her neck, Arcueid collapses.@
+` Slipping out from underneath her, I get away.\
+
+`"Ha----Ah."@
+` I am out of breath.@
+` I'm not hurt, but I can't run in this state.@
+` It's Arcueid, she should be able to heal such a wound and will come to attack me again---
+br
+`"Ar…… cueid?"@
+` She doesn't even move.@
+` Blood flowing over the ground, her white body is covered in vermillion.\
+br
+br
+br
+br
+br
+br
+br
+wave se0
+
+` -----No way.@ Did I, kill her?\
+
+`"Wha---Arcueid, are---"@
+` Stopping my legs that tried to flee, I try to rush towards her body, but gasp.\
+
+` One arm.@
+` One of her arms on her collapsed figure…… like a spider's leg, stands up on the ground.@
+br
+
+
+
+` In that instant,
+` the whole world freezes over.\
+play "track06.ogg"
+
+waveloop se1
+
+bg "image\bg\ima_01.jpg",%type_crossfade_mid
+monocro #ff0000
+
+br
+br
+br
+br
+br
+br
+br
+`   "I      Wi   l    l"@
+br
+\
+
+
+br
+` *pant*.@ *pant*.@ *pant*.@
+br
+` …… From her neck spills her blood, and her breath.@
+` Her arm tenses.\
+
+br
+br
+br
+br
+br
+br
+br
+`  "Ki  ll,    Yo   u,"@
+br
+\
+
+br
+`  *pant*.@ *pant*.@ *pant* *pant*.@ *pant*.@ *pant*
+br
+` …… The vermillion blood continues to flow.@
+` Her body lifts slowly from the ground.\
+
+br
+br
+br
+br
+br
+br
+br
+`   "I   Wi   l    l"@
+br
+\
+
+br
+` Heavy, rapid breathing turns into laughter.@
+br
+` …… Her white body stained in blood.@
+` She raises her face.@
+` I can see her eyes gleaming between her golden hair.@
+` Her eyes are pitch-black.@
+` And in them,
+` glows a fierce, fiery red.\
+
+br
+br
+br
+br
+br
+br
+br
+`   "I    will    kill   you."@
+br
+\
+
+br
+`  *pant*.@ *pant*.@ *pant*.@
+br
+`  *pant*.@ *pant*.@ *pant*.@ ha.@ a.@ ahahaha, ha.@
+br
+` Hahaha, ahahaha,
+br
+` Ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahah-------!!!!\
+bg "image\bg\ima_01.jpg",%type_crossfade_slw
+monocro off
+
+`"Ar---cueid."@
+` Her eyes are looking at nothing.@
+` She tries to lift herself up with one hand, but every time, she collapses back down to the ground.@
+br
+` She slips on her own pool of blood, and each time, her body gets redder.@
+` Over, and over.@
+` She tries to stand up, slips, and falls.@
+` …… It seems as if she's enjoying that cycle of failure.\
+
+br
+`"Ju st, wait."@
+br
+`"-------"@
+` I can't move.@
+` Her voice, her figure, her will---flows compulsorily into my head.@
+br
+` My will is flowing, fusing, merging.@
+` The whole world spins around me.@
+br
+` In the middle of it all, her image dominates.\
+
+#ff0000
+
+
+br
+br
+br
+br
+br
+br
+br
+`          That's right.\
+
+` I have never felt such shame before.@
+` I have never been so disgraced.@
+br
+` ---That's, why it's funny.@
+br
+` I can't even imagine how much pleasure I'll get when I take this anger out on you, Shiki.\
+
+br
+` Destroy.@ Destroy.@ Destroy.@
+` Slowly, completely, gently beyond comparison, cruelly to the point of numbness, I'll violate your life.@
+br
+` That's right.@
+br
+` The instant I tear off your limbs, rip open your chest and pull out your intestines, biting into your neck as you ask for mercy, chewing through your eyes and spreading your brains on the ground like butter------!\
+
+
+#ffffff
+bg "image\bg\bg_27b.jpg",%type_crossfade_fst
+
+
+
+`"Just wait, I'll kill you soon……!"@
+` Smiling, laughing insanely, Arcueid wallows in a sea of her own blood.\
+
+
+`"----"@
+` I can't move.@
+` This isn't good.@
+` Even Roa can't move.@
+` If I stay here, I really will be killed.\
+` I have to escape.@
+` It doesn't matter where, if I don't get away from here quickly, I will get killed.\
+br
+`"-----Ah."@
+` But my legs won't move.@
+` Maybe they know.@
+` That no matter where I run, she'll kill me.\
+
+bg "image\bg\bg_29b.jpg",%type_lshutter_fst
+wavestop
+playstop
+
+`"Tohno-kun!@ What are you doing?@ This way!"@
+` ----That voice.@
+` That voice frees me from fear's grip.@
+br
+`"Senpai……!?"@
+ld c,":a;image\tachi\cel_t06b.jpg",%type_lshutter_fst
+`"Just hurry up……!@ Before she recovers, hurry!"@
+cl c,%type_lshutter_fst
+`"Ah----"@
+` Ignoring my bewilderment, she grabs my arm and starts to run.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+!w1000
+
+bg "image\bg\bg_24c.jpg",%type_lcartain_fst
+
+
+`"Hey…… Senpai, why---!?"@
+ld c,":a;image\tachi\cel_t06b.jpg",%type_crossfade_fst
+`"It doesn't matter.@ I'm the one who wants to ask!@ Tohno-kun, you unfaithful cheater!@ After I told you not to leave my place, why did you go meet Arcueid!?"@
+`"----"@
+` No, this isn't the time to be calling me an unfaithful cheater.\
+
+`"Senpai, that's not it.@ Um, I'm sorry for leaving the room.@ But I couldn't resist it, so I went outside and Arcueid was there---"@
+`"--Geez, I'll hear your excuses later.@ Now, we have to hurry!"@
+cl c,%type_lshutter_fst
+br
+` Ciel keeps running.@
+` …… This direction.@
+` It seems like she's heading for the school.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_02a.jpg",%type_lcartain_mid
+
+` After running here, Ciel finally stops.@
+`"----Senpai, what the hell is going on?@ I understand why we got away from Arcueid, but why did we come to the school?"@
+ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
+
+`"…… Here, nothing else will get destroyed.@ Please go into the school building ahead of me."@
+`"Wha----why?"@
+`"…… Arcueid is coming.@ Please escape, Tohno-kun."@
+`"------"@
+` Arcueid is coming----Is she going to chase us this far?\
+
+`"…… I don't think that'll happen.@ Certainly, she was pretty screwed up that time, but…… um, please listen without getting angry.@
+` She really is a good person.@ I overdid it earlier and she got pissed, but if she recovers and calms down, she should----"\
+
+`"----It's useless.@ In the first place, Roa, who is her enemy, is inside of you.@
+` And in addition, you wounded her that much.@ …… Right now, she's turned into a bloodthirsty vampire.@ She probably won't turn back to the Arcueid you know until she kills you."@
+`"Wha------"\
+
+`"…… She'll be done healing soon, I imagine."@
+` She mutters, and grabs my arm.@
+`"----We might have a bit of a chance inside the school building.@ In any case, to protect you, I have to settle it with her once and for all."@
+
+`"Ci…… el?"@
+`"When she is active, her subordinate Roa also gets active.@ To suppress Roa, we must let her sleep or fend her off.@
+` So, defeating her here is killing two birds with one stone."\
+cl c,%type_lshutter_fst
+` "Let's go," she says as she pulls me into the school building.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_10c.jpg",%type_lcartain_mid
+
+` At night, the hallway is illuminated only by the moonlight.@
+`"…………"@
+` I think back to the events of last night.@
+` It seems I have no good memories whatsoever of my school at night.\
+
+ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
+
+`"Please go up to the second floor, Tohno-kun.@ Fighting her is my duty."@
+`"No.@ This is my responsibility, so you go up to the second floor, Senpai.@ I'll--settle this."@
+`"…… Tohno-kun.@ I'll get mad."@
+` Ciel glares at me.@
+` But she seems to be getting more timid than angry.\
+
+`"Um…… Senpai?"@
+`"Tohno-kun, you know about my body, right?@ No matter what happens, I won't die.@ But a trivial wound could be fatal for you.@
+` Certainly you might be able to defeat Arcueid using your eyes, but before that, she would just shred you apart."@
+ld c,":a;image\tachi\cel_t10b.jpg",%type_crossfade_fst
+`"Tohno-kun, didn't you even say it yourself that you'll make me happy?@ So I beg of you, please don't die here."@
+`"But----Senpai, by yourself, you can't----"\
+
+ld c,":a;image\tachi\cel_t01b.jpg",%type_crossfade_fst
+`"Don't belittle me please.@ I've already exterminated scores of vampires before.@ When it comes to defeating vampires, there's no one better than me."@
+` She strikes a confident, gutsy pose.@
+br
+` …… But.@
+` I see the tips of her fingers shaking.\
+
+` Is she scared?@
+` Even for her, who has exterminated numerous vampires.@
+` No, because she has, she knows Arcueid isn't a normal opponent.\
+
+`"…… No, Senpai.@ Even still, I---"@
+` I don't want to leave Ciel by herself and run away.@
+` Before I can voice that thought, she presses a finger to my lips and stops me.\
+
+ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
+
+`"Tohno-kun, you shouldn't say that.@ Please, listen to my selfishness.@
+` For once----For once, I want to protect you out of my own will.@ If I don't do that, I'll never be able to face you with a smile from my heart."@
+` …… She says that with tears brimming in her eyes.\
+
+
+play "track08.ogg"
+
+`"…… Tohno-kun.@ I came back this early because it was no good."@
+`"------"@
+`"There isn't a way to help you at the church.@ The only thing there was were ways to try to use Roa to their advantage, and there wasn't anything that could help you as his host."@
+`"----I, see.@ Oh well, it can't be helped.@ It's not something for you to cry about, Ciel-senpai."\
+
+`"No……!@ If only I, I was better, I could have found something more, but I couldn't……!@
+` That's why----the only thing I can do now is to slow Roa's advance.@
+` …… It hurts.@
+` Even though I know the pain you're going through, I'm only selfishly thinking that I want you to be by my side as long as possible---!"\
+
+`"------"@
+` I don't want to see her cry.@
+` I embrace her so I won't be able to see it.@
+cl c,%type_crossfade_fst
+\
+
+`"Tohno----kun."@
+`"It's okay.@ I want to be with you as much as I can too.@ No matter how much it hurts, I'll fight Roa until the very end.@
+` …… You weren't being selfish.@ I'm the one being selfish."@
+`"But----But, that……!"\
+
+`"Don't get me wrong.@ I don't intend to lose to Roa.@
+` Before, Arcueid said something weird."@
+` So, maybe---there just might be a way left.\
+
+`"…… Ciel.@ I won't lose.@ But, my chances of stopping Arcueid are slim.@
+` That's why, I leave it to you.@ You're unbeatable against vampires, right?"@
+`"------Yes.@ Thank you, very much."@
+` Ciel's arm around my back tightens.@ As we hold each other, I try to put my lips onto hers.@
+br
+` Then, Ciel hops back like a rabbit.\
+
+ld c,":a;image\tachi\cel_t01b.jpg",%type_crossfade_fst
+
+`"----We can't kiss.@ If you do such a thing, I'll be too happy and wouldn't be able to concentrate.@
+` So let's just keep it as a hug for now."@
+`"…… Yeah.@ Then I'll go away, but if you get in trouble, just call out for me.@ I'll come right away."@
+br
+` Ciel nods silently.@
+` I----put my trust in her and turn around.\
+
+`"Please wait."@
+`"……?@ Did you forget something?"@
+
+`"Yes.@ …… Um, tomorrow, let's go play.@ The three of us with Inui-kun, we will make up for that one time."@
+` She says so with a fleeting smile.@
+br
+` ----I'm glad.\
+` I'm glad that our promise meant so much to her.\
+
+`"----Yeah.@ Then it's a promise."@
+` I stick out my hand.@
+`"Yes, please keep it this time."@
+` Ciel's hand touches mine.@
+` After a vigorous shake, she pulls back.@
+ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
+
+`"----Now please stay away.@ Her recovery seems to have completed just now."@
+`"Yeah."@
+cl c,%type_crossfade_fst
+` Nodding, I really turn my back to Ciel this time.\
+
+bg "image\bg\ima_10.jpg",%type_tcartain_mid
+
+playstop
+
+bg "image\bg\bg_11c.jpg",%type_bcartain_mid
+
+
+` ----It's quiet.@
+` I walk up to the second floor while holding my knife, and take a deep breath.@
+` …… I believe in Ciel.@
+` If she says she'll protect me, she'll definitely do so.\
+
+`"…… Idiot."@
+` But, I feel the same way too.@
+` Just like she told me that she'll protect me, I want to protect her too.@
+` That's why, I'm going to go back there right away.@
+br
+` Even Arcueid should have an opening when she's fighting Ciel.@
+` In that instance,
+` I'll give everything I have.\
+
+`"…… I'll deal with you later.@ Okay, Roa?"@
+br
+` I speak to myself as I look up at the moon.@
+` ----After I fend off Arcueid.@
+` I have to walk a tightrope with a very low chance of succeeding.\
+
+` There's no guarantee I'll survive.@ And in the first place, I don't even know if "this method" will work.@
+` But, there's nothing else to do.@
+br
+` ----If you have that power.@
+br
+` Some one told me before that there is a meaning behind having such a power, and a time will come when I will need that power.\
+
+`"…… Yeah, that's right.@ This is probably my duty, Sensei."@
+` …… I'm prepared.@
+` Now I just have to figure out how to get Arcueid---
+quakex 6,100
+\
+`"---!?"@
+` The building shakes.@
+` A large crash.@
+` An impact like a dump truck slamming into the building at full speed.\
+
+`"----No, way."@
+` The building is still shaking.@
+` It hasn't even been a minute since Ciel said Arcueid was done healing.@
+` From the park to here, such a distance.@
+` She came in just that amount of time----!?\
+
+` …… That's, different.@
+` That severity is entirely different from the Arcueid I know.\
+
+`"------Senpai!"@
+` Who cares about taking her opening right now.@
+` Without thinking, I run with all my might.\
+
+bg "image\bg\ima_10.jpg",%type_tcartain_mid
+!w1000
+play "track06.ogg"
+
+
+br
+` ----It's, a nightmare.@
+br
+` Ciel and Arcueid are in the hallway.@
+` In reality, that's all there is.@
+` That's all, but my legs freeze.@
+` This air.@
+` The air isn't normal.@
+` Everything.@
+` Everything, it's difficult to breathe as this whole place is filled with Arcueid's vampiric will, like I'm inside some living thing.\
+
+br
+` In the middle of it all, the fight between Ciel and Arcueid ended really easily, so one-sided.\
+
+bg "image\event\cel_e08.jpg",%type_crossfade_fst
+
+`"----Sen, pai."@
+` It's far.@ Across a seemingly infinite span, Ciel is almost killed by Arcueid.@
+` …… Ciel is almost dead, and she doesn't seem to see anything but Arcueid.\
+
+` …… Arcueid's arm reaches for Ciel's chest.@ With a sickening sound, she tries to rip out Ciel's heart.@
+br
+` That's, too much.\
+` Even if she says she won't die----pulling out her heart while she's still alive is too much.\
+
+`"Stop…………!"@
+` Arcueid turns around.@
+` She looks like she's staring at an insect.@
+br
+wave se0
+
+`"------Ah."@
+` Just that causes me to forget that I'm alive.\
+
+`"Oh, you're here too?@ Wait there, I'll be finished soon."@
+` Saying that, Arcueid destroys Ciel.@ She snaps Ciel's neck as she repeatedly tears her body apart with her other arm.\
+
+`"Pretty stubborn, huh.@ I guess you won't die unless Roa is killed, Ciel."@
+` Slash.@ Splat.@
+` A cycle like she said she experienced at The Church, a cycle of reviving and dying.\
+
+`"If I take in Roa, you have to continue living until I die.@
+` In order for you to die, you'd have to kill Roa with the Holy Sword of Reincarnation Criticism prepared by The Church."@
+`"…… So…… what?"@
+` Ciel painfully responds, half-conscious.\
+
+`"Is that alright with you?@ Roa's death means your death.@ If you destroy Roa, your body would return to a normal, boring human body."@
+`"…… That's…… what, I…… wish for."@
+`"I see.@ How pitiful.@ Your wish won't be granted.@ I'm going to take Roa back this time for sure.@
+` By slicing apart that lump of flesh over there hundreds of times……!"@
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+bg "image\bg\ima_12b.jpg",%type_crossfade_fst
+\
+
+`"------!"@
+` Ciel's body convulses.@
+` Arcueid rips out Ciel's heart.@
+` Even still, Ciel revives and coughs up blood.\
+
+`"------Arc…"@
+` Something snaps.@
+` My headache rages.@
+` I feel sick.@
+
+bg "image\event\ark_e06b.jpg",%type_nowaitdisp
+bg "image\bg\cmo_07.jpg",%type_nowaitdisp
+bg "image\bg\cmo_09.jpg",%type_nowaitdisp
+bg "image\event\ark_e06a.jpg",%type_nowaitdisp
+
+
+bg "image\bg\bg_10c.jpg",%type_nowaitdisp
+
+`"You shut the hell up----!"@
+` I slam my head into the wall.\
+
+br
+` Look.@
+` This isn't the time to pay attention to him.@
+` I can't let her lay even one more finger on Ciel.\
+
+br
+` Look.@
+` Give your brain a strain that could burst your blood vessels, and look.@
+` Look.@ Look.@ Look.@
+` Look at the "death" that would kill that vampire----
+
+bg "image\bg\bg_10f.jpg",%type_crossfade_mid
+br
+`"Why----!?"@
+` I almost go crazy.@
+` The death of animals.@ The death of plants.@ I can even see the death of the air before me.@ But Arcueid has nothing which can cause death on her.\
+
+` …… Before, someone told me that True Ancestors are a perfect life just by being in this natural world.@
+` They are an extension of nature, so they can draw as much power from the source called Earth.@
+` That's why they won't die.@ They have no limits.\
+
+`"Oh----"@
+` So that means…
+` They are only perfect in this natural world.\
+playstop
+waveloop se1
+
+` ----Look for it.@
+` It has to exist.\
+` If I can see the death of everything, the "point", has to exist somewhere.\
+
+` I was mistaken.@
+` There are no causes of death on Arcueid.@
+` In that case----first, I have to take that which makes it so----
+br
+` I found it.@
+` It's far away, but I can't allow any more of this.\
+
+`"Arcueid----!"@
+ld c,":a;image\tachi\ark_t23.jpg",%type_crossfade_fst
+` Her hand stops.@
+`"Follow me.@ I'll kill you out there."@
+` Saying that, I jump out the window and onto the school grounds.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+bg "image\bg\bg_02b.jpg",%type_lcartain_fst
+
+br
+` ----In the center of the ground.@
+` It's far.@ Can I make it?@
+` Arcueid pursues me with light footsteps.@
+br
+` It's far.@ It's far, but I'll strike first this time----\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_02b.jpg",%type_lshutter_fst
+
+`"Hah----"@
+` I reach the middle of the school ground.@
+` Arcueid comes straight at me.@
+br
+` Before that,
+` I take my knife and stab the large "point" at my feet, the "death" of the very world around me.\
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_02b.jpg",%type_nowaitdisp
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_02b.jpg",%type_nowaitdisp
+
+quakey 1,300
+
+` A distortion.@
+bg "image\bg\bg_02a.jpg",%type_crossfade_slw
+wavestop
+
+` With this, it's over.@
+` Everything around here… I "killed" the nature that Arcueid draws all of her power from.\
+
+`"----You've thought well, Shiki!"@
+` Arcueid comes towards me.@
+` Her body is filled with death now.@
+`"Alright------!"\
+
+` I can do it.@
+` I can kill Arcueid like this----But before I confirm my victory.\
+
+`"Go------ugh."@
+` Blood pours from my mouth.@
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+
+br
+`"Eh……?"@
+` …… Probably because her movements were so fast.@ I just couldn't believe it, and I didn't feel pain, or shock, or anything.@
+
+
+bg "image\bg\ima_13b.jpg",%type_crossfade_fst
+
+` The slicing sound finally reaches my ears.@ The sound of blood pouring forth.@
+` Looking down,
+` Arcueid's claws pierced through my chest before I even realized it.\
+
+bg "image\bg\bg_02a.jpg",%type_crossfade_slw
+play "track09.ogg"
+
+`"--------Ah."@
+` I feel faint.@
+` Everything starts to fade away quickly.@
+` Her arm has thrust through my chest, impaling me.@
+br
+` That…
+` That is a fatal wound for a normal human being.\
+
+
+`"Ha------"@
+` But, I won't die just yet.@
+` With the way I am now, I'll still be able to live for a bit longer.@
+` …… From my ankles, the pitch-black shadow of death starts to creep upwards.\
+
+`"Ah……………… ah."@
+` I don't care.@
+` I forcefully swallow the blood pouring from my mouth, and I slice the "line" on her chest with one hand.@
+wave se9
+
+\
+
+`"Gh………!"@
+` Arcueid's, voice.@
+` I can, barely hear it.@
+` My head, my head is fading.@
+` Is it the pain from Arcueid piercing my chest?@ Or is my brain about to burn out from being strained to the limit?@
+br
+` …… Well, whichever it is, it doesn't change the fact that my death is coming.\
+
+` I start to feel faint.@
+` But, before that----with this knife, I have to cut her line.\
+
+`"…… Disappear, you vampire----!"@
+`"Don't fool around, I won't die with such a thing!"@
+` Her hands grab my head.@
+` But faster than Arcueid's hands trying to squeeze my head, I slice my knife down to her thigh.@
+
+wave se11
+
+
+\
+
+`"Just go away……!@ I'll take Roa with me.@ Without your help, I'll kill him.@
+` So disappear.@ I don't want to fight you……!"@
+`"What are you saying----You're the one who refused me!"@
+br
+` Her grip increases.@
+` The sound of my skull fracturing.\
+
+`"I'll kill Roa right here.@ I told you I won't go back unless I do so!"@
+`"You---you, stupid woman----!"@
+` My knife swings again.@
+` With a slice, I cut off her arm.@
+` Her white arm falls to the ground.\
+
+` Arcueid staggers back.@
+` As soon as I see that, I crumble to the ground.@
+br
+` Like a puppet with its strings cut, I collapse on my rear end.\
+
+ld c,":a;image\tachi\ark_t18.jpg",%type_crossfade_mid
+
+`"Shi, ki----"@
+` …… I, hear Arcueid's, somewhat hesitating voice.@
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_02a.jpg",%type_nowaitdisp
+
+`"--------"@
+` I can't, speak well.@
+` *cough*
+` If I move my throat, the only thing that pours forth is red blood.\
+
+`"Shi----ki."@
+` …… Fading.@
+` The pressure and killing aura Arcueid was exerting is fading away.@
+` Is it because of her wounds?@ Or is it because the wounds she gave me were so terrible?@
+br
+` She is returning to the Arcueid that I once knew.\
+
+`"-----Thank, God."@
+` I don't know what's so good.@
+` But, I.\
+
+
+`"Hang in there, Shiki……!@ If you become mine, that wound will be nothing……!"@
+` She reaches out to me.@
+`"------"@
+` With a hazy mind,
+` I lift my hand and stop her.\
+
+`"Why……?@ Shiki, you'll die like this, you know?@ Look----I'll forgive you for earlier, and I won't worry about Ciel either.@
+` I, I don't want you to die Shiki……!@ So----please, please become mine, Shiki……!"@
+` Back and forth.@
+` Even though I can barely breathe, I shake my head no.\
+
+ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
+
+`"…… I don't understand.@ If you die, Roa will just reincarnate.@ Even you hate Roa, right?@ If you die like this, he'll just take over your body."@
+`"----------"@
+` …… Oh yeah.@ Certainly----I can't let that happen.\
+
+` But, if I just follow Arcueid, I think the same thing will happen.@
+` Even if Arcueid sucks my blood, like what happened to Roa, and I gain the willpower so I won't lose to Roa…
+br
+` …… In the end, Roa will not disappear by his own will unless Arcueid turns to acknowledge him.\
+
+`"…… No.@ I can't do what you say."@
+`"Why?@ Do you really----really hate me that much, Shiki?"@
+br
+` …… Don't be crazy.@ Even as a lie, I can't say----
+br
+`"…… Please.@ I know how you feel, but please forgive him.@ Roa simply wanted for you to like him.@ For that, he reincarnated over and over, and was looking forward to your arrival each time.@
+` …… But, he's a human.@ He's not an existence that can live for a long, long time like you do."@
+
+` …… Yes, for humans, immortality is too far away.@
+` Roa believed his method of reincarnation would let him exist forever.@
+br
+` But, even that had its limit.@
+` Because that method was the same as making "descendents" which shared his same past and goals, but not creating another "self" for him.\
+
+`"…… Roa is as good as gone now.@ He is just an existence which does the same thing over and over because of his past.@
+` ----So, I have to end it for him."@
+ld c,":a;image\tachi\ark_t13.jpg",%type_crossfade_fst
+
+`"Shiki---you're already…"@
+` …… Sanity returns to Arcueid's eyes.@
+` The deep crimson of her eyes thins to red.@
+` Her golden hair flutters underneath the moon.\
+
+` There, is the Arcueid that I liked.\
+
+bg "image\bg\ima_18.jpg",%type_crossfade_mid
+
+` I look up at her as if staring at the moon.@
+` …… Sorry, Ciel.@ I can't help but think she's incredibly beautiful.@
+br
+` Those red eyes, those resolute, yet friendly eyes, her white slender curves, even the gash I just gave her on her chest that is welling up with blood.@
+br
+` Everything about her, she really is----Arcueid really is beautiful.\
+
+` That's why it's so unfortunate.@
+` The vestiges of my chest tighten at the thought that it has to end like this.@
+br
+` …… Damn it.@ If only Arcueid had returned to sanity just a bit faster, none of this would have had to happen.\
+
+bg "image\bg\bg_02a.jpg",%type_crossfade_mid
+
+ld c,":a;image\tachi\ark_t13.jpg",%type_crossfade_fst
+
+`"I see, Shiki.@ You're…… already one with Roa?"@
+`"…………"@
+` I don't know.@
+` Just----all of this was too much.@
+` Right now as I speak, my memories are disappearing.@
+` Ciel said something like that.@
+` That if I tried too hard to see something that should not be seen, my blood vessels will burst and that I would lose my mind.\
+
+ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
+
+`"…… Shiki, you idiot.@ Are you saying you'll let Ciel kill you?"@
+`"----Of course not.@ But I'm already like this thanks to you.@ I probably can't hold on for long."@
+`"………………"@
+` Arcueid looks down at herself.@
+` Her chest, and the large slash wrought by my knife.\
+
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+`"I don't believe it.@ Until now, I've never met someone who could wound me this much."@
+` There is a faint glimmer of resentment and regret in her voice.\
+
+`"…… It really is too bad.@ But, it looks like I'm at my limit as well.@ I need to return to my castle quickly to heal this wound."@
+`"----Right.@ So, you should just hurry and get out of here."@
+
+cl c,%type_crossfade_fst
+
+`"………………"@
+` She doesn't answer.@
+` It probably wasn't even a brief pause.@
+` Just, for that instant,
+` It's probably that I wanted to treasure the last moment before we parted.\
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_mid
+` Arcueid gives an amazed sigh.@
+`"You're such a mean guy.@ You say mean things until the very end.@ But, you know what?"@
+ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_mid
+br
+`"I liked that about you, Shiki."\
+
+cl c,%type_crossfade_slw
+` Saying that,
+` with a smile to the very end, her body disappears like fading mist.\
+
+bg "image\bg\ima_18.jpg",%type_crossfade_mid
+
+`"I see----we were the same after all."@
+` Thinking that aloud, I look up at the moon.@
+` In the end, it really was just a brief moment, but we both returned to the relationship we had when we first teamed up together.\
+
+`"-----!"@
+` I, really liked her.@
+` It had nothing to do with the Roa inside of me.@
+` Just, she attracted me.@
+` That's why, parting like this after we were fighting only moments ago, is too painful.@
+br
+` Why did it turn out like this?@
+` Our relationship----I don't think we made that many big mistakes.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_02a.jpg",%type_crossfade_mid
+
+`"Gh----ho."@
+` The blood doesn't stop.@
+` I try to breathe, but blood just flows forth from my mouth like a pump.@
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+
+
+` …… I'm, almost gone.@
+` Arcueid should have taken it easy on me.@
+` If I get such a big hole in my chest, even a half-vampire like me can't be saved.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+
+
+`"------Tss."@
+` Thump.@
+` It's not my heart.@ The beating of my heart has long since stopped.@
+` The only pulse remains in my head.\
+` It's probably because I strained myself too hard to get Arcueid back.@
+` I----Tohno Shiki begins to fade and Roa becomes stronger.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+
+
+` …… My body, is almost completely dead.@
+` After I die, Roa will take over.@
+` Even though I can't, Roa would probably find a way to heal himself.@
+br
+` If that happens----I would make the same mistake Ciel did.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+
+
+`"----Sorry."@
+` That's all I can say.@
+` Thu, mp.@
+` I, really, can't, keep, conscious.@
+` Before that----I look at myself.@
+` The "point" is on my scar.@
+` The "point" of my death, of Roa's death.\
+
+br
+br
+br
+br
+br
+` ----Tohno-kun, you said it yourself.@ That you'd make me happy.@
+` So please, don't die here.@
+!w1000
+
+\
+
+
+`"--------"@
+` That's why, all I can do is apologize.@
+` I can't ask for forgiveness.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+
+` Even though I wanted to do so much, it turns out that I won't be able to do anything for her.@
+` Then at least, in the very end.@
+` I should release her, from her terrible fate.\
+
+` ------*sigh*@
+` Taking a deep breath, I place my knife on my chest.@
+` The "point" is at the tip of my knife.@
+` All that's left is for me to push.@
+` Just that.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+br
+br
+br
+br
+br
+br
+br
+` ------Stop.\
+
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+
+` …… I can hear a voice.@
+` It has to be a hallucination.@
+br
+` ………… Tohno-kun…………!@
+br
+` A crying voice calls out from the school building.@
+` Looking up, I see a fully healed Ciel running towards me.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+br
+br
+br
+br
+br
+br
+br
+` ---------Stop it.\
+
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+
+`"………………"@
+` …… If I see her face, I will lose my resolve.@
+` Probably, I'll feel sorry and be unable to finish this.@
+` That's why, before she comes.\
+
+` I strengthen the power in my hand.@
+` The knife slides silently into my body.@
+` With just that.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+br
+br
+br
+br
+br
+br
+br
+` ----St----\
+
+` The voice disappears.@
+` An old book.@
+` I thought I saw a illusion of it disappearing page by page into the darkness.\
+
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+
+` With that.@
+` I was able to fall into the deep darkness I fell into years ago.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+` Tohno-kun, Tohno-kun……!\
+
+br
+` ----I hear, a voice.\
+
+br
+br
+br
+` Tohno-kun…… why……!?\
+
+br
+br
+br
+br
+br
+` ----See?@ Just as I thought.\
+
+br
+br
+br
+br
+br
+` …… No.@ I don't want this……!\
+
+br
+br
+br
+br
+br
+br
+br
+br
+` ----If I heard this crying voice,\
+
+br
+br
+br
+br
+br
+br
+` Why……!?@ You said you wouldn't die……!\
+
+br
+br
+br
+br
+br
+br
+br
+` ------I knew I would regret it----
+playstop
+
+\
+!w3000
+
+
+mov $phasebg,"image\bg\ima_10.jpg"
+mov $phasetitle_a,":a;image\word\PCEL_13A.PNG"
+mov $phasetitle_b,":a;image\word\epi.jpg"
+gosub *left_phase
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+!w3000
+wave se0
+
+!w3000
+wave se0
+
+!w2000
+wave se0
+
+!w2000
+wave se0
+
+!w1000
+wave se0
+
+!w1000
+wave se0
+
+!w1000
+wave se0
+
+!w500
+wave se0
+
+!w500
+wave se0
+
+!w500
+wave se0
+
+!w500
+wave se0
+
+bg "image\bg\bg_51.jpg",%type_crossfade_mid
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_51.jpg",%type_crossfade_mid
+
+waveloop se10
+
+br
+br
+br
+br
+br
+` -----It was,
+`     a hospital room that somehow seemed nostalgic.\
+
+
+`"……………… Ah."@
+` I let out a breath.@
+`"………… I'm, alive."@
+` My chest moves up and down as I breathe.@
+` A comfortable breeze blows in through the open window.@
+` The yellow curtains sway playfully in the wind.@
+` The fresh blue sky is enough to take my breath away.@
+` The air is warm, like a spring day.\
+
+`"I'm…… alive."@
+` I look around as I speak to myself in amazement.@
+` There's no one else in the spacious room.@
+` I'm lying in bed with an IV in my right arm.@
+` There's a large bandage on my chest----\
+
+`"………… What's this?"@
+br
+` I take out the IV and remove my bandage.@
+` There's nothing under the bandage.\
+` Only my chest.@
+` Having a bandage there means there's a wound there, but there's not a trace whatsoever of anything.\
+
+` …… I tilt my head to the side questioningly.@
+` Did I do something to get a wound on my chest?@
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\siki_t01.jpg",%type_crossfade_fst
+bg "image\bg\bg_51.jpg",%type_crossfade_fst
+
+
+`"-----"@
+` I look over to the open door.@
+` From the empty hallway, some unknown child peers into the room.@
+`"………………"@
+` Before I can call out, the child walks away somewhere.@
+br
+` ------What was that just now?@
+br
+`"-----Something."@
+` I feel like, I forgot something.\
+
+wave se3
+
+`"Tohno, I'm coming in."@
+` The door gets knocked and Arihiko walks into the room.\
+
+play "track03.ogg"
+
+ld c,":a;image\tachi\ari_t01.jpg",%type_lshutter_fst
+`"Yo, you're up?@ Good, good.@ We really couldn't talk much yesterday, but you seem a lot better now."@
+` He cheerfully walks over to the side of the bed.\
+
+`"…… Arihiko.@ What are you doing?"@
+`"Huh?@ What am I doing?@ I'm here to check up on you.@ You asked me that yesterday too.@ You must still be out of it."@
+`"Check up?----on who?"@
+ld c,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+`"I'm sure your head would space out after sleeping for two months, but don't keep asking me the same things you asked me yesterday.@ It's about your body, so didn't the doctor tell you about it?"@
+cl c,%type_crossfade_fst
+` Saying that, Arihiko takes a seat in a nearby chair.\
+
+`"……………… Eh?"@
+` I get even more confused, and I hold my head.\
+
+ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+`"Oh, the doctor didn't say anything?@ You've been here for a long time, you know."@
+`"…… Yeah.@ Well, I kind of figured that out, but……"@
+`"…… Hmm.@ The doctor did say you might not know what's going on.@
+` Well, I guess it can't be helped… I guess it's more friendly for me to tell you than having a doctor tell you."@
+` Crossing his arms and nodding to himself, Arihiko looks me in the eye.\
+
+`"It was two months ago.@ You were found collapsed on the ground at school."@
+`"……… Ground………"@
+br
+` ----Why is it?@
+` Now that he mentions it, I feel like I know something.@
+br
+`"It seems the track and field club found you during morning practice.@ They come at around five o'clock in the morning, so they say you must have collapsed there during the night, but what's the truth?"\
+
+`"Um----Even if you ask, I don't know.@ First of all, you say I was collapsed on the school grounds, but I never even go near there."@
+`"Right.@ Well, anyway, you were found there collapsed.@ You weren't hurt or bleeding so you were taken to the clinic because they thought it was your anemia.@ But you never woke up.@
+` So we called your house and then you were brought to this hospital.@
+` You've been in a coma for about two months since then."\
+
+` Arihiko tells me an amazing story.\
+
+`"A coma for two months----that's usually…"@
+`"Yeah, even the doctor seemed to have thrown in the towel.@ To be in a coma for even a week means you're a vegetable.@ Then, yesterday, you just woke up and said "Yo, Arihiko".@ I thought my heart would stop.@ Ahahaha!"@
+` He laughs heartily.\
+
+`"Well, you were always the kind who could have died any moment anyway.@ So since I was thinking you'd be like that forever, it surprised me even more."@
+`"…… Arihiko.@ I'm in that kind of situation, and you're saying pretty mean things."\
+
+`"It's fine, 'cause you healed.@ But it was quite the amazing time while you were a vegetable.@
+` Even though they said you had no hope of recovery, Akiha-chan came and visited you every day.@ Senpai would come there at that time too, so it was really hard to be here."@
+` Arihiko gives a meaningful laugh.@
+` …… Wait, wait a minute.\
+
+`"Wait Arihiko.@ What's with that 'Akiha-chan'?"@
+`"Akiha-chan is Akiha-chan.@ It's your younger sister and every time we see each other here, our relationship gets closer and farther."@
+`"…… Akiha…… so, she came to visit me."@
+` …… hearing that, I remember about Akiha.\
+
+` Like Arihiko said, I must still be out of it.@ It's like I forgot about everything outside of this hospital room.@
+` …… Well, I remember whenever he tells me about it, so it doesn't really matter.@ But I feel really light and feel like something's strange.\
+
+`"…… You met Akiha?@ …… Sorry Arihiko.@ She's pretty up-tight, right?@ She says some harsh things sometimes, but please overlook it."@
+ld c,":a;image\tachi\ari_t05.jpg",%type_crossfade_fst
+
+`"'Pretty'!?@ 'Sometimes'!?@ Amazing, Tohno.@ I never thought you were that great of a guy until now!"@
+` Sitting in the chair with his arms still crossed, he laughs out loud.\
+
+` Arihiko is like he usually is.@
+` To be honest, I don't know what happened to me, but his infinite supply of cheerfulness does calm me down.@
+` -----*sigh*@
+` Leaning back on the bed, I take a deep breath.\
+
+ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+`"Oh, it's about time for your examination.@ Then I'll see ya' later.@ I was going to bring Senpai along, but she said she wouldn't come because she knew she was going to see you at school."@
+`"Eh…… Sen, pai?"\
+
+`"Yeah.@ We've been taking turns seeing you.@ Well, yesterday you woke up and hugged her right away, so she kind of got angry and said she wouldn't come here anymore.@ She was angry, so you should think up an excuse or something."@
+cl c,%type_lshutter_mid
+` Saying that, Arihiko leaves the room.\
+
+`"………… Senpai?"@
+` I can't, quite remember.@
+` To me, there's only one person who I call Senpai.@
+` The person's name, face, and personality, I know them all.@
+br
+` So why?@
+` Why do I feel like I shouldn't think deeply about this Senpai?\
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_51.jpg",%type_nowaitdisp
+
+
+` I feel light.@
+` It's probably because I've been asleep for two months and my body doesn't move at all.@
+` I feel like, something is missing.\
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_51.jpg",%type_nowaitdisp
+
+
+` ----Come to think of it, there's one other thing that's strange.@
+` I remember seeing this hospital room before.@
+` But, if my memory serves me correctly,
+` that hospital room from eight years ago has to have been long gone by now-------\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+play "track02.ogg"
+
+bg "image\bg\bg_32a.jpg",%type_crossfade_slw
+
+` The following day, I return to the mansion.@
+` Probably because I was asleep for so long, it feels like forever since I've been back at my own house.\
+
+bg "image\bg\bg_54a.jpg",%type_crossfade_fst
+bg "image\bg\bg_44a.jpg",%type_crossfade_fst
+
+`"………?"@
+` Before I go to the door to the mansion, I take a walk in the woods and come out to a strange place.@
+`"………"@
+` …… I never knew it.@
+` I never knew there was a Japanese style building like this here.\
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_44a.jpg",%type_nowaitdisp
+
+
+`"------!"@
+` I hear a commotion behind me.@
+` I whirl around and see----
+ld c,":a;image\tachi\siki_t01.jpg",%type_crossfade_mid
+
+` some kid just standing there.\
+
+`"--------"@
+` …… Did he get lost?@
+` He seems quite detached, almost like a ghost or something.@
+` It's just, on his chest.@
+` That scar on his chest showing through his kimono is terribly----\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+bg "image\bg\bg_44a.jpg",%type_crossfade_fst
+
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+`"Shiki-san, what are you doing?"@
+`"Eh----Kohaku, san?"@
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+`"Yes, I came to greet you.@ I was waiting for you by the doorway, but you headed towards the garden instead.@ I was a little surprised."@
+` As usual, Kohaku-san has that cheerful smile.\
+
+`"…… Well, I was just walking around.@ Kohaku-san do you know who that kid is?"@
+`"Huh?@ A kid?@ What do you mean?"@
+` It seems like Kohaku-san didn't see that kid.@
+`"No, if you didn't see him, that's fine.@ Shall we go back?@ Akiha's probably waiting."\
+
+ld c,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
+
+`"Yes, Akiha-sama didn't say anything, but she was pacing back and forth in the lobby all morning.@ I'm sure she is anxiously waiting for you, Shiki-san."@
+`"-----Oh.@ Then I should hurry up or who knows how mad at me she'll get."@
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+`"Yes, let's hurry, Shiki-san."@
+cl c,%type_lshutter_mid
+` Kohaku-san takes my hand and we run to the mansion.\
+
+` ----As we leave,
+` I felt like someone called me, and I look back at the Japanese style building.\
+
+ld c,":a;image\tachi\siki_t01.jpg",%type_crossfade_mid
+
+` …… Is it an illusion?@
+` The kid just stares as we run towards the mansion, as if he wanted to say something.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w3000
+
+bg "image\bg\ima_03.jpg",%type_crossfade_mid
+
+
+` Even if something does seem missing, the life of Tohno Shiki returns to normal.@
+` I'm back at the mansion, Akiha scolds me, Hisui wakes me up in the morning, and after eating the breakfast Kohaku-san made, I leave the mansion.@
+br
+` ----There's something missing.@
+br
+` Without being able to remember what it is, I get to school.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+play "track03.ogg"
+
+bg "image\bg\bg_01a.jpg",%type_crossfade_fst
+
+ld l,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+`"Yo, morning.@ You can come back to school now?"@
+` Arihiko greets me cheerfully.@
+`"I heard you had to rehabilitate for a while.@ I see, for you to come to school like this must be because of that."@
+` Arihiko gives a meaningful laugh.\
+
+`"I understand.@ It's only a month until graduation.@ That means you can be together for only a bit longer."@
+br
+` ……?@
+`"…… What do you mean?@ Together, with who?"@
+`"With who!?@ Of course you and----"@
+` Arihiko cuts off.@
+` I hear quick footsteps.\
+
+` Underneath the bright, early spring sunshine.@
+` Breathing quickly, she appears before me.@
+ld r,":a;image\tachi\cel_t04.jpg",%type_lshutter_fst
+`"Good morning.@ Great weather today, isn't it, Tohno-kun!"@
+` She gives her usual smile.@
+`"------Sen, pai."@
+` I gasp.@
+` That's right.@ Why, couldn't I remember about her until now?\
+
+ld r,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+`"Tohno-kun?@ Um… I said good morning…"@
+`"Ah----yeah, good morning, Senpai."@
+` I reply awkwardly.@
+` She seems a bit puzzled and tilts her head.\
+
+ld r,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+`"Geez.@ You finally got out of the hospital but you're not cheerful at all.@ I was so looking forward to seeing you again."@
+`"Looking forward to……?"\
+
+` Why can't I remember?\
+` Did something happen?@
+` I feel like something very important happened between the two of us, but I can't remember.@
+` All I can remember is that she's a third year upperclassman who took a liking to me and Arihiko for some reason, and that we would spend lunchtime together.\
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_01a.jpg",%type_nowaitdisp
+
+
+` …… I can't remember.@
+` I can't remember anything else.@ It's like I forgot about everything else because it was so sad or difficult that I cut the unneeded memories away.\
+
+ld r,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+`"Geez, Tohno-kun, did you forget our promise?" Senpai looks at me disappointedly.@
+br
+` ----Promise.@
+`    Promise.@
+`   An important, promise----\
+
+ld r,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+`"Hey, you said that the three of us would hang out in town.@ But, you collapsed the day before that and had to go to the hospital."@
+br
+` She looks like she really was looking forward to that little thing.@
+` So I didn't care about anything else.\
+
+`"…… That's right.@ Yeah, that's right."@
+ld r,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"Yes.@ Please don't forget it this time, Tohno-kun."@
+ld l,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+`"No, you can go ahead and forget, Tohno.@ Then Senpai and I can have fun by ourselves."@
+` …… Arihiko repeats what I heard sometime before.\
+
+ld r,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
+
+`"That won't do!@ We may not have a chance to do this again, so this time it has to be the three of us!"@
+` She seems unusually angry.@
+ld l,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+`"Th, that's not true.@ We're still students, so we can always hang out."\
+
+ld r,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+`"Yes, certainly you and Tohno-kun will have lots of free time, but I will be very busy starting in spring.@ The university I plan on attending is a little far, so it will not be easy to come back here."@
+ld l,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+`"Ah.@ That's right.@ Senpai, you----"@
+` Arihiko stops mid-sentence.@
+` I don't understand what she's talking about though.\
+
+ld r,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+`"Yes, after I graduate, I plan on going overseas to study.@ It's always been my dream to become a master at crafting cakes."@
+br
+` ----With such a smile,
+` Senpai says something outrageous.@
+br
+`"…… Senpai.@ Then, you won't be staying here……?"\
+
+ld r,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+`"Yes, I'll stay here.@ My house is here, so I don't plan on going to live over there.@ I can't exactly leave my father alone either.@
+` But the person I will be studying under is very strict, so I won't be able to come back for at least three years……"@
+br
+` --------What?\
+
+`"But, it's always been my childhood dream.@ The place I'm going to work as a live-in employee is a craftsman for the king.@
+` Normally non-relatives are not allowed to work there, but he told me I had great talent, so I am able to go there."@
+` Senpai happily speaks of another world I didn't even know existed.@
+`"Oh----that's, great but."@
+br
+` ----She'll be gone for three years… why?\
+
+ld r,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
+`"Yes, thank you very much.@ Three years is a long time, but you can wait that long, right Tohno-kun?"@
+` Senpai gives a faint smile to hide her embarrassment.@
+ld r,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+`"Now don't be unfaithful because I'm gone, Tohno-kun.@ You have a tendency to get swept away easily, so really, I want to take you with me."@
+` Senpai sighs.\
+
+`"Eh----Um, Senpai?"@
+ld r,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+`"But, that just can't be. You're still a student, and it would be impossible to convince Akiha-san in a year or two.@ So this time I will just trust you and leave for three years."@
+` …… Senpai declares this fiercely.@
+` Arihiko takes this all in with his mouth hanging wide open.\
+
+ld r,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+`"So.@ This may be the last time the three of us get to play together.@ So this time, please let me make a good memory out of it."@
+` She sounds truly happy as she says this.\
+
+wave se0
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_01a.jpg",%type_nowaitdisp
+
+
+br
+br
+br
+br
+br
+br
+` ------Throb.@
+`      It feels like, the scar on my chest hurts.\
+
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+waveloop se10
+
+`"Tohno-kun?@ What's wrong?@ Grabbing your chest like that, are you still hurt?"@
+`"Ah--no, not really.@ My chest was never injured, so it's just your imagination."@
+` As I answer, it feels strange.@
+` It's like, something is inconsistent.\
+
+wave se2
+
+!w3000
+
+` The first bell rings.@
+` Morning homeroom is about to start.@
+`"Then I'll come again at lunch break, okay?"@
+` Senpai disappears towards the school building.@
+br
+` Before she can do that, I ask her a question.@
+br
+`"----Senpai.@ Your father, what kind of person is he?"\
+
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+`"Eh?@ Tohno-kun, you know my father, don't you?@ My family has a bakery at the nearby town and you came to buy from there before.@
+` My father said you were such a pleasant young man too."@
+` She sounds truly happy as she says this.\
+
+waveloop se10
+
+`"------------"@
+` …… Now that she mentions it, I think it did happen.@
+br
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\bg_01a.jpg",%type_crossfade_fst
+
+
+` ----But, that's wrong.@
+` Senpai.@ There is no way your father can be alive.\
+
+playstop
+
+ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+
+`"Tohno-kun?"@
+` Senpai calls out to me.@
+` Everything suddenly turns colder.\
+
+`"You realized it, Tohno-kun?"@
+br
+` She asks me, somewhat sadly.\
+
+`"------Yeah, I did."@
+` I say that as tears fill my eyes.@
+br
+` ----I wish I never realized it.@
+` Then----I could have continued to live happily in this world where no one gets hurt.\
+
+`"Amazing.@ Normally, people never realize it.@ Usually, they ignore all the inconvenient inconsistencies."@
+`"----Yeah.@ Even if it was a little strange, if I was happy, I should have ignored it."\
+
+`"That's right. To be not able to lie about such things, you really are honest."@
+` …… Senpai.@
+` The girl who looks like Senpai, says this with incredible sadness.\
+
+`"---------"@
+` I really feel sorry, and regret tightens in my chest.@
+` But, it really couldn't be helped.@
+` My school life from before.@
+` The Ciel-senpai that seems like she's lived in this town.@
+` The Tohno Shiki who survived that wound without a single scar on his chest.@
+` …… These days similar to the original days without a single moment of unhappiness.\
+
+!w1400
+
+` ----That, was just too happy.@
+br
+`   and I knew this was a dream.@
+wavestop
+
+bg "image\bg\ima_08.jpg",%type_crossfade_slw
+
+
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+`"Geez, you are always like this Tohno-kun.@ Even though you overlook so many trivial things, you realize the one thing that you really wish you wouldn't.@ But, that is one of your good traits, I suppose.@
+` But still----"@
+br
+` She looks at me regretfully.@
+ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+br
+`"You should have at least overlooked it this time."@
+cl c,%type_crossfade_slw
+\
+` …… Senpai disappears.@
+` And so does the world.@
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+` It disappears in the same way.\
+
+
+` ------And, everything disappears.@
+` The world returns to the way it should be.@
+` I died.@ No, if I was dead, I even wouldn't have seen such a dream, so I might be on the very verge of death then.@
+` Well, anyway----it's certain that this has to be quite close to "death".\
+
+`"-------"@
+` …… Strangely, I'm not afraid.@
+` No matter if I'm already dead, or about to disappear, or have already disappeared,
+` Right now, that person is more important to me than myself.\
+
+`"…………… Sen, pai."@
+` That person who was smiling before me earlier.@
+` Ciel, who has so happily told me this fairy tale.@
+` Without pain or suffering, a completely ordinary life, a story as she wanted.@
+` No sadness at all, just a very common-place life, a radiant world.\
+
+` To me or Arihiko, it was a completely boring repetition of days without any value.@
+` That, that boring thing was.@
+br
+`"----To her, it was an unfulfillable dream."@
+` Thinking aloud, I feel sad.\
+
+` I selfishly ended my life.@
+` I didn't think deeply about what would happen afterwards.@
+` If this was what her dream was, then no matter how terrible I become or how pitiful I become,
+br
+` Maybe I should have stayed beside her, being helped by her and protecting her.\
+
+monocro #fffff0
+
+bg "image\bg\bg_44a.jpg",%type_crossfade_mid
+play "track09.ogg"
+
+
+`"That is the wish of the person called Ciel.@ It is not the wish of you yourself as Shiki, so you don't need to worry about it, right?"\
+br
+br
+br
+br
+br
+br
+br
+` ------Eh?@
+\
+`"Tohno Shiki has acted on what he thought was the best choice.@ You don't need to burden yourself with what Ciel wants.@ If you do that, you will be burdened by someone else's dream like earlier."\
+
+br
+br
+br
+br
+br
+br
+` ----Although there's no one other than me here anymore, I can hear someone else's voice.\
+
+`"Yeah.@ You woke yourself from the dream, so there is nothing else here besides Shiki.@
+` I see, you can use your brain a little, Tohno Shiki."\
+
+br
+br
+br
+br
+br
+br
+br
+` ----Then, you are.\
+
+`"No.@ I don't want you to get the wrong impression.@ Roa was killed by you already.@
+` In the first place, if Roa still existed, then there would be no way you could exist.@
+` Even though you are already dead."\
+
+br
+br
+br
+br
+br
+br
+` ----I don't, quite get it.@
+` Then what am I, right now?\
+
+`"Let's see, maybe you're on the verge of losing yourself?@
+` The time you stabbed yourself and the time you died.@ I think this is that brief moment in between the two."@
+br
+` Something snaps.@
+
+monocro off
+bg "image\bg\bg_51.jpg",%type_nowaitdisp
+
+` I see a projection of the familiar hospital room.\
+
+`"A thing called a dream cannot be something completely unknown.@ Any story, is only an extension of what that person knows.@
+` So, the dream you saw has some truth about reality.@
+` Such as----"\
+
+br
+br
+br
+br
+br
+br
+` ----Like becoming a vegetable without gaining consciousness?\
+
+`"Yeah, that at least is true.@
+` After you stabbed yourself, you were still left without waking up.@ This instant is really just a small gap of time between the two.@
+` When you wake up from this dream----you will simply be comatose, not even able to dream."\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+br
+br
+br
+br
+br
+br
+br
+` ----Then, what will happen to Senpai?\
+
+
+`"I don't know.@ But shouldn't you think about yourself more than other people?@
+` It won't be bad, so just close your eyes again.@
+` This time, try not to wake up.@
+` If you do that----then you can watch that happy dream again."\
+
+br
+br
+br
+br
+br
+br
+br
+` ----I don't understand.@ Who are you?\
+
+`"Hey.@ That doesn't really matter.@ If you wake up, you won't even be able to dream, you'd just become a 'pile of organs', you know?@
+` So, it's just better to sink back into that dream.@
+` You really did well.@ It is too bad for that person Ciel, but you and I also had horrible luck.@
+` So, I think we could at least see a happy dream, you know?"\
+
+br
+br
+br
+br
+br
+br
+br
+` ------So, who are you?\
+
+`"…… Hmm.@ You just said that earlier yourself.@ Since you woke up from that dream, there's nothing else here besides Shiki.@
+` So, I must----"@
+br
+!w1000
+ld c,":a;image\tachi\siki_t01.jpg",%type_crossfade_fst
+
+`"----probably look like this."\
+
+br
+` ---Ki…… d……@
+br
+`"Hey, excuse yourself.@ I'm a year older than you, you know.@ Tohno Shiki is only eight years old, right?@ With that in mind, I have existed for almost nine years."@
+br
+` ----Then, you are……\
+
+`"That's it.@ I was cast away until now, but since you fell into the same place, I called out to you.@
+` But, it's not like we're actually separate people.@ We are the same existence, after all.@
+` Even if you forgot, you are the Shiki that is the extension of me.@ But in my case, I am your foundation but not your past, so I am just trash.@
+` Well, it is difficult to talk about it, so let's just leave it aside."\
+
+` -----I don't understand.@ Then what does that trash want to make me do?@
+br
+`"That's what I've been saying.@ I'm warning you not to wake up.@ You, I mean Tohno Shiki's reality is nothing more than spending the rest of your life in a coma.@ If you awake to that, you won't even be able to dream.@ Even though you could manage your body, your brain would not function.\
+
+`"In other words, death.@ Not death to your existence, but the death of your will.@ In that situation…… you wouldn't need to die, right?@ Even if you woke up, you can't live in reality.@ I'd be much happier if you just watched a dream about reality here."@
+br
+` ----…… what is that?@
+` Even if I just slept the rest of my life, dreaming selfishly isn't fun at all.\
+
+`"That's true.@ You can either wake up to reality and face the death of your will or you can stay here and dream.@
+` No matter which, there really isn't much of a difference.@
+` If you wake up to reality and die, you wouldn't trouble yourself like this.@
+` If you call that happiness, it probably is many times happier."@
+br
+` ----Wha……\
+
+`"…… But, I want you to dream.@ We have the same name, but the dreams we can see are different.@
+` My dreams are usually about that day, or the days I had until I was nine years old.@
+` That may be happy, but there's no future for Shiki there.@
+` Such as getting older, having a person you like, living busily every day."\
+
+`"My reality, my knowledge, the future I can imagine from that is so small and hopeless that I can't even imagine those things.@
+` But, your dreams were different.@ What is normal scenery for you looks brilliant to me, even if they are just dreams.@
+` …… But with my limited years, I can't even think of your dreams by myself."\
+
+` ----………\
+br
+`"If you can't stand your selfish dream, then I can help a little.@ I can let you remember the other things you forgot that happened in the past.@ If we work together to fool each other, we can see a somewhat happy dream."@
+br
+` ----…………………\
+
+`"…… It seems you don't like that.@ I guess once you realize the truth, you have to wake up.@
+` But, your reality is already over.@ Certainly dreams can't compare to reality.@
+` But still----if you try, I think you can at least become a bit happy, right?"@
+br
+` ----…… No.@
+` Wouldn't we be the only ones becoming happy there, Shiki?\
+
+`"………… You are stupid.@ It's simple to be happy by yourself.@ If you start to think about others, it gets much more difficult.@
+` As a result, even what's good or bad becomes too difficult to figure out.@
+` And in reality, you and I never did anything wrong.@ But this is how we ended up, right?@
+` See, that's the person you are Shiki.@ You've only had things stolen from you, so you shouldn't worry about making others happy."\
+
+br
+` ----That may be true.@
+` But, still, I made a promise not to leave her alone.@
+` If everything before, if everything right now, if all of it is a dream------I have to wake up.\
+
+
+`"Even if there might be nothing for you if you wake up?"\
+
+` ----Because she's waiting.@ I have to go back.@
+` Even if it means my death----I promised I'll be there where she's waiting.\
+
+`"…… I see.@ Then, this is goodbye.@ I couldn't leave you alone, so I lent you a hand.@ But, like I thought, you don't need me now.@
+` …… All the same, it really was fun.@ I was able to see a good dream that maybe my future could be like that."@
+br
+` ----What, what's this?@ Shaking my hand all of a sudden.@ That's just weird.\
+
+`"Ahaha, I even felt weird.@ But, it can't be helped because I can't give you it unless we do this.@
+` Even though we are the same, if we are parted this much, we need an image to "merge".@ Well, I guess it's useless for me to tell you because you've even forgot about that."\
+
+monocro #fffff0
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\siki_t01.jpg",%type_crossfade_fst
+
+
+` ----Hey…… You, you're disappearing.@
+br
+`"You're starting to form shape.@
+` Well, it's about time for our goodbyes.@ I'll forget about you, so please forget about me.@
+` Now----It's meaningless to go back to the Shiki before becoming Tohno Shiki."@
+br
+` ----.\
+
+`"Oh yeah, about her.@ I like her too.@ So I agree on the fact that she's more important than you.@
+` But you know, if that's the case, never do something stupid again to make her cry, okay?"@
+cl c,%type_crossfade_slw
+\
+
+` ----And, he disappears.@
+` No, maybe died would be closer in meaning.@
+` …… I feel a strange pain.@
+` Missing, something I won't be able to get back.@
+br
+` I feel sad about something.@
+` Even though I tried to remember,
+br
+` I didn't quite grasp that it was nostalgia.\
+
+`"………………"@
+` My consciousness returns.@
+` I wake up from a moment's dream.@
+` If that dream disappears and I disappear,
+br
+` the only thing waiting for me is death.\
+playstop
+
+monocro off
+
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+
+!w2000
+play "track07.ogg"
+
+
+br
+br
+br
+br
+br
+br
+` ----Aimlessly.@
+` The morning light shines.\
+
+` My mind is hazy.@
+` I still can't think of anything.@
+` My body is collapsed.@
+` My head----is on something soft.@
+br
+` ----That's strange.@
+` I should have woken from that dream already.\
+
+` I open my eyes.@
+` I see, her crying face.@
+
+bg "image\event\cel_f01b.jpg",%type_crossfade_mid
+
+\
+
+`"---------"@
+` …… I just reach out my hand and touch her cheek.@
+` Her tears course down my fingers.@
+` Without a doubt, these warm tears are real.\
+
+bg "image\event\cel_f01.jpg",%type_crossfade_mid
+
+`"--------"@
+` …… She doesn't say anything.@
+` Neither do I----I do not feel that words are necessary.@ I just feel her warmth against me.\
+
+` ----Thump.@
+br
+` In the night sky, the moon still hangs from the time Arcueid disappeared, and my chest is covered in blood.@
+` But, that gaping wound has closed.@
+` Did she heal me or did that wound never exist in the first place?@
+br
+` …… Well, if I'm alive.@
+` That's just a trivial matter since I am able to exist here right now.\
+
+`"…… Tohno-kun…… Can you, understand me……?"@
+` Her shaking voice.@
+`"…… I'm surprised.@ Senpai, you're really crying."@
+`"----Yes.@ I've never felt like this ever before."@
+`"Haha, isn't that a bit much, Senpai?"@
+` I ramble with my hazy head.\
+
+` I feel spaced out.@
+` There's no headache.@ There's no pain.@ I don't know what happened to Roa or what happened to me.@ All I know is Ciel is here with me in the morning light.\
+
+` ………… *sigh*@
+` What happiness.@
+` What I want is all right here before me.\
+
+`"…… Thank goodness.@ I can keep my promise."@
+` I say that after a long sigh.@
+`"What are you saying?@ Aren't we supposed to go with Inui-kun and hang out today after school?@ So we really don't have time to just sit here all day, do we?"@
+` She speaks and gives a mischievous smile like before.\
+
+bg "image\event\cel_f02.jpg",%type_crossfade_fst
+
+`"-----I see.@ Then I should get up…… Ow……!"@
+` As soon as I try to get up, my chest stabs with pain.\
+
+`"Oh, don't move yet……!@ It was a big wound, so you should stay like this for at least another hour."@
+`"…… Ciel.@ You really contradicted yourself.@ You know that, right?"@
+`"Oh…… yes, it seems so.@ I seem to have lost my mind since you woke up."@
+` She gives a deep blush.\
+
+`"…… Aw, man.@ I'll be bored if I have to stay like this for another hour."@
+` All I can move is my arms.@
+` And she should get tired from having my head on her lap for an hour.\
+
+`"…… Sorry.@ Doesn't this tire you out?@ You can let me sleep on the ground---"@
+`"…… Geez, what are you saying?@ I'm doing this out of my own will, so please indulge my selfishness."\
+
+` Her cheeks turning even redder, she continues to look at me.@
+br
+`"…… And, if I stayed like this, I thought you might do it……"@
+`"Ah------"@
+br
+` ----I remember.@
+` Come to think of it, I think we made a promise like that before.\
+
+`"…… Yeah.@ I want to do so too."@
+` Saying that,
+` I reach out to her face with my only free arm.@
+` She quietly lowers her face.@
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+br
+` ----Our lips meet, deeply.\
+
+
+bg "image\event\cel_f02.jpg",%type_crossfade_fst
+
+` After what feels like an hour, we separate.@
+`"---------"@
+` …… I'm speechless.@
+` Just, at last, for real,
+` I feel like I've woken, from a long sleep.\
+
+`"…… First, good morning Ciel."@
+`"Yes.@ Good morning, Tohno-kun."@
+` Since her smiling face and her tears are more glorious than anything on this earth,
+` I relax and close my eyes.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+playstop
+play "track08.ogg"
+
+`"Eh……?@ Tohno-kun, Tohno-kun……!?"@
+`"M----Sorry, Senpai.@ I want…… to sleep a little longer."@
+` …… I really felt relaxed and all my tiredness returned.@
+` If I can, I want to sleep in Senpai's arms but I don't think that's possible.\
+
+`"…… You can just put me somewhere…… so when classes start, wake me up."@
+`"-----Hmph."@
+` She sounds a little disappointed.@
+` But, really----I'm sleepy right now.\
+
+`"----I understand.@ Then I'll carry you to my room, but is it okay?"@
+`"Eh…… Isn't that bad?@ We'll miss school if we do that."@
+`"It's okay, let's skip for today.@ Besides, there are a lot of things I want to ask you about, Tohno-kun."@
+` ---And then,
+` I feel myself being lifted.\
+
+`"Hey----Senpai, the clinic is fine, we don't have to go to your room……!"@
+`"Denied.@ Tohno-kun, you have to tell me what you did with Arcueid when I wasn't there."@
+` Ciel smiles as she holds me.@
+` There's enough intensity to almost banish all traces of sleepiness away.\
+
+`"Then, let's go.@ The sun is just rising, so if we hurry, no one will see us."@
+`"Senpai, that's why the clinic is much bet----uwaaaah!"@
+br
+` With a light stomp, Ciel takes a huge leap.@
+` I feel weightless, like I'm floating in space.@
+` At this rate, we really will be at Ciel's apartment soon but---\
+
+`"………… Whew."@
+` I feel like I really have fallen in love with a surprising person.@
+` But, I'm more than prepared.@
+` Even though I've settled the problem with Roa, Senpai has her own problems as well.@ I don't think we can return to a peaceful life.@
+` But, even still----I've decided to be with this person already.@
+` No matter what happens in the future, we'll get through it together.\
+
+`"That's right----Shiki."@
+` I whisper to the person in my dream.@
+` Well then, first thing's first----I have to start seriously thinking about what I should tell her about Arcueid---\
+
+
+resettimer
+waittimer 3000
+
+playstop
+
+cl a,%type_waitdisp
+bg "image\word\fin.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+mov %rockending, 0
+
+gosub *ending
+
+return

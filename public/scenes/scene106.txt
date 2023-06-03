@@ -1,348 +1,440 @@
 
-mov $phasebg,"image\bg\bg_11c.jpg"
-mov $phasetitle_a,":a;image\word\PCEL_09B.PNG"
-mov $phasetitle_b,":a;image\word\day_09.png"
-gosub *left_phase
 
-bg "image\bg\ima_10.jpg",%type_nowaitdisp
-bg "image\bg\ima_01.jpg",%type_crossfade_mid
+bg "image\bg\bg_29b.jpg",%type_crossfade_mid
 
 
-play "track09.ogg"
+`"I'm---exhausted."@
+` I collapse onto the ground.@
+` I fall on my rear and try to keep my body up with my hands.\
+` My right hand finally lets go of my knife.\
 
-` In my dream, I'm staring at the moon.\
-
-` I can't remember where I am or why I'm looking up at it.@
-` Maybe I looked up into the night sky not wanting to see anything, and the moon happened to be there.\
-
-` My back creaks.@
-` Coursing through my veins is an image of coldness.@
-` A solitary darkness that makes me dizzy.@
-` A radiant moon that sickens my heart.\
-
-` …… Strange.@
-` The overwhelming coldness feels more like a sense of nostalgia.\
-playstop
-
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-
-`"---Shiki-sama."@
-` …… I can hear Hisui's voice mingling with the morning light.@
+`"---Cold."@
+` I'm cold.@
+` The pain is numbed; it feels almost comfortable.@
+` My body is ripped with canine bite marks and beak marks.@
 br
-`"---Shiki-sama, it is time.@ Please wake up."@
-` Her inflectionless voice awakens me.\
+` ---Well, there's no mistake that I'll probably die like this.\
+
+`"----Shiki!"@
+` Arcueid's voice.@
+`"----Run, you're getting targeted!"@
+` Arcueid shouts as she dashes towards me.@ "………… Eh?"@
+` I stare up at the night sky as I sit.@
+` There,
+` I see the white moon,
 
 
-bg "image\bg\bg_40e.jpg",%type_crossfade_mid
+bg "image\bg\cmo_16.jpg",%type_crossfade_mid
 
-`"------"@
+
+` and the figure of a blue crow.\
+
+` It screams as it falls straight towards me.@
+` It drops down to pierce my brain with its sharp beak.@
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+
 br
-` As soon as I wake up, terrible things enter my vision.@
-` I get a headache like I was just shot in the head.@
-`"Ah----"@
-` I almost lose my just awakened consciousness.@ Before I fade away completely, I quickly grab my glasses.\
+`"----!"@
+` I try and stand up to escape.@
+` But, my body is at its limit.@
+` I try to stand but only end up collapsing on the ground.@
 
-bg "image\bg\bg_40a.jpg",%type_crossfade_mid
-play "track02.ogg"
-
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_mid
-`"Shiki-sama……?@ Are you not feeling well?"@
-`"…… No, I'm just a little tired from yesterday.@ I'll be alright, so don't worry."@
-` Lightly shaking my head, I clear my head of what I was seeing.@
-` …… Last night, I forced myself to keep my promise with Arcueid, so my body isn't back to normal yet.\
-
-
-`"Good morning, Hisui.@ Thanks for coming to wake me up, as always."@
-` Sitting up in bed, I do my best to smile naturally.\
-ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
-`"No, this is my duty.@ There is no need for you to thank me, Shiki-sama."@
-`"Really, but I am grateful.@ You are infinitely better than an alarm clock."@
+` Because I fell on my back, I get a disturbingly clear view of the crow.@
 br
-` I stand up.@
-` It's not yet seven o'clock---about ten minutes earlier than I usually get up.\
 
-`"…… Hmm, breakfast?@ I'll be there soon, so please go ahead of me."@
-`"Yes, I will wait for you in the sitting room."@
-cl c,%type_lshutter_mid
-` Giving a bow, Hisui exits the room.\
-
-` ----Well then.@
-` I'm still feeling a little sluggish, but it's not so bad that I have to skip school.@ I'm sure after I eat the breakfast Kohaku-san prepared, I'll feel a lot better.\
+bg "image\bg\ima_14.jpg",%type_nowaitdisp
 
 
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_34a.jpg",%type_lcartain_mid
+` It dives just like a bullet towards my face---and with the sound of sliced flesh, it dies right before my eyes.\
 
-` As usual, Akiha is sitting on the sofa, and Hisui is waiting by the wall.@
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+
+` The blue crow was impaled by a flying nail which looks like a large sword.@
+
+` It had to have come from somewhere above.@
+`"…………"@
+` I look up at the night sky.@
+
+
+bg "image\bg\ima_18.jpg",%type_crossfade_fst
+
+
+` There, is the white moon.\
+
+bg "image\event\cel_e04.jpg",%type_crossfade_slw
+
+
 br
-ld c,":a;image\tachi\aki_t04a.jpg",%type_lshutter_mid
-
-`"Good morning, Nii-san.@ Did you sleep well last night?"@
-` Akiha greets me calmly as I enter the room.@
-` She doesn't know I left last night.@ …… Since she was so worried, I feel guilty for sneaking out.\
-
-
-`"…… Yeah, good morning Akiha.@ You're up early today, too."@
-ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
-
-`"No, I'm like always…… Nii-san?"@
-` As if reading my mind, she looks directly at me.@
-`"Um----Is there something on my face, Akiha?"\
-
-ld c,":a;image\tachi\aki_t17a.jpg",%type_crossfade_fst
-
-`"No, that isn't it…… Nii-san, are you really alright?@ You still do not look well, so if you are still sick, maybe it is better if you just rest today----"@
 br
-` ----Oh, that's it.@
-` I relax, realizing she did not find out about last night.\
+br
+br
+br
+br
+br
+` And, there's someone dressed in black, priest-like garments.\
 
-`"No, I'm really okay.@ I'll be better sooner or later, so please don't look so worried."@
-ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
-
-`"…… Okay.@ If you say so, Nii-san, then I will not say anything."@
-cl c,%type_crossfade_mid
-` She goes quiet, still looking worried.\
-
-`"Hm, it's quite rare for you to be convinced this quickly.@ It's not like you."@
-ld l,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
-
-
-`"Hey, I'm always sensible.@ I only warn you because you're the one with the problems.@ So please do not blame me for your imperfections."@
-` She glares at me.@
-`"Oh, that's more like it.@ Hey, Hisui, doesn't it not feel like morning unless Akiha gets harsh?"@
-ld r,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-`"……………………"@
-` Is it because I suddenly called out to her or because she doesn't know what to say?@ Hisui neither confirms nor denies my statement.\
-
-
-`"See?@ Look, Akiha, Hisui thinks so, too."@
-`"Don't be foolish.@ Hisui doesn't say anything because she is surprised."@
-` Wrinkling her forehead in a frown, Akiha glares again.@
-ld l,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
-
-`"Also, I've always wanted to say this, but you rely on Hisui too much.@ You have been sleeping since yesterday, so it would have been fine if you woke up earlier.@ But you always wake up late.@ Are you slacking off because Hisui does not say anything?"\
-
-`"Wha----You make it sound like I'm causing her trouble!"@
-ld l,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
-`"Not 'like', you are causing her trouble.@ Hey, don't you think so, Hisui?"@
+`"-----"@
+` The figure stands on a streetlight and stares down at me.@
+` Despite just being almost killed, I vacantly think those high-laced boots look really cool.@
+br
+` The figure doesn't say anything.@
+` The emotionless eyes resemble the sharp moonlight.@
+` Resembles…
+` The figure----really resembles Senpai.@
+br
 `"………………"@
-` Hisui still doesn't say anything and stands there quietly.\
-
-ld l,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
-`"See?@ Hisui says she thinks so, too."@
-`"No way!@ She didn't say anything!"@
-ld r,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
-
-`"……………………"@
-` Hisui is silent.@
-` But, her silence feels like she's agreeing more with Akiha.\
-
-`"………… Oogh."@
-` I feel like it's now two against one.\
-
-`"Shiki-san.@ Breakfast is ready~"@
-` With great timing, Kohaku-san's voice echoes through the room.@
-`"Um, I'm gonna go eat."@
-` I quickly head towards the dining room.\
-
-ld l,":a;image\tachi\aki_t02.jpg",%type_crossfade_fst
-ld r,":a;image\tachi\his_t08.jpg",%type_crossfade_fst
-
-`"……………………"@
-` I feel the silent pressure of the two behind me drilling into my back.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-!w2000
-
-bg "image\bg\bg_34a.jpg",%type_lcartain_mid
+` My mind swims.@
+` Caaaaaaawww.@ The crow's death cry.@
+` And, I close my eyes quietly.\
 
 
-` After breakfast, I head back to the sitting room.@
-` Akiha isn't there, and Hisui is the only one standing.\
-
-`"Huh?@ Akiha left for school already?"@
-ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-
-`"Yes.@ It is also time for you to go to school as well, Shiki-sama."@
-`"Ah, it's already twenty after?@ I guess I should get going soon."@
-` …… To be honest, I still don't feel too good, but I'm sure I'll return to normal soon.\
-
-`"Sorry, Hisui, but can you get my bag from my room?@ I'm going to wash my face."@
-`"As you wish."@
-cl c,%type_lshutter_mid
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-
-bg "image\bg\bg_48a.jpg",%type_lcartain_mid
-
-
-` After getting all my preparations done, I leave the mansion.@
-` Holding my bag, Hisui sees me off at the entrance.\
-
-`"I'll be going.@ I'm not sure when I'll be back, but probably by dinner."@
-ld c,":a;image\tachi\his_t05.jpg",%type_crossfade_fst
-`"Yes, I will be waiting."@
-` She gives a silent bow.@
-` …… There's a trace of uneasiness in her face.\
-
-`"Hisui?@ Are you feeling sick?"@
-`"No----it is not me, but you do not appear well.@ I am unsure if it is a good idea to let you go."@
-` She speaks hesitantly.\
-
-`"I'm alright.@ I don't feel great, but just a little heavy.@ Geez, both you and Akiha like to worry a lot."@
-`"…… Is that so?@ If it is just us, then that will be fine, but…"\
-
-`"…… Geez.@ I'll come back early today and rest, so that should be good, right?@ I won't overdo anything, so don't look like that."@
-`"………… Yes.@ Forgive me, Shiki-sama."@
-` She still looks very worried.\
-
-`"I'm off.@ I'll be better by the time I get back, so please relax."@
-ld c,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
-
-`"Ah----Shiki-sama----"\
-bg "image\bg\ima_03.jpg",%type_lcartain_mid
-
-` I ignore her and leave the mansion.@
-` The image of Hisui watching me uneasily remains in my head.\
-playstop
-
-bg "image\bg\bg_22a.jpg",%type_lcartain_mid
-play "track03.ogg"
-
-` I head towards school.@
-` My feet are heavy and it feels like I'm in another person's body as I head down the hill.@
-` …… It's probably just the weariness from last night.@ Even though I thought I would recover right away, the sluggishness doesn't fade.\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_01a.jpg",%type_lcartain_mid
-
-` It's ten minutes until eight.@
-` The school gate is flooded with arriving students.@
-`"---Ah."@
-` By the gate, I see a familiar figure.\
-
-`"…… Ciel… Senpai."@
-` It's a completely normal, morning scene.@
-` But, what I saw that time----
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-monocro #ffff00
-
-bg "image\event\cel_e04.jpg",%type_crossfade_fst
-monocro off
-
-bg "image\bg\bg_01a.jpg",%type_lshutter_fst
-
-` If it wasn't for that, it would be a normal morning.@
-`"------"@
-` Not even knowing what I plan on doing, I chase after Senpai.\
-
-bg "image\bg\bg_03a.jpg",%type_lcartain_mid
-
-`"Senpai!"@
-` I call after her.@
-
-ld c,":a;image\tachi\cel_t01a.jpg",%type_lshutter_mid
-
-`"Oh, good morning, Tohno-kun.@ It's strange meeting you out here."@
-`"…… Yeah, I saw your figure from behind, so I ran after you, Senpai.@ Um…… there was something I wanted to ask."@
-` I sneak a look at her face.\
-`"Yes, what is it?"@
-` She faces me with her usual, gentle smile.\
-
-`"…… Uh Senpai.@ Two nights ago, were you near my house?@ In a black coat and a skirt flowing in the wind."@
-ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
-`"……?@ What are you talking about?"@
-`"Um……!@ well--yeah, the high-laced boots suited you.@ I was kind of fascinated, you looked, really cool."\
-
-
-ld c,":a;image\tachi\cel_t05.jpg",%type_crossfade_fst
-
-` ……"Huh?" Senpai tilts her head.@
-` She frowns like she doesn't understand my words completely, and then denies it.\
-
-ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
-
-`"Um, I don't quite understand, but you're saying that I was near your house two nights ago, looking like that?"@
-`"Yeah.@ Senpai, that was you, right?"@
-ld c,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
-
-`"No way.@ Tohno-kun, are you saying I look like I really have that much free time?"@
-br
-` ---Senpai is really angry.@
-` She can't be playing dumb or lying.\
-
-
-`"Ah----No, that's not it, but I just…… saw someone that looked like you in park last night, so---"@
-` Senpai gives a sigh.@
-ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
-
-`"Tohno-kun, that wasn't me.@ I don't have that kind of hobby."@
-`"Ah---Yeah, I know.@ I just wanted to ask."\
-
-` …… Certainly after having her say that, she is right.@
-` Ciel-senpai and the person that night aren't related at all.@
-` In the first place, Senpai's just a normal person, and if she was actually there---she had to have seen me fight that bandaged guy with my knife.@
-` If she saw such a gruesome scene, there'd be no way she could talk with me normally like this.\
-
-`"…… Sorry, please forget about it.@ I guess it was just someone else."@
-ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
-
-
-`"That's fine, but…… did that person really look like me?@ That weird person?"@
-`"Well, I'm not too sure.@ It was dark, and far away………… huh?"@
-` Yeah, it was far and I couldn't make out her face.@
-` So why did I think it looked like Senpai……?\
-
-`"…… Hmm… Maybe there is something wrong with me."@
-` I cross my arms and think.\
-br
-wave se2
-
-
-` Then, the ten minute bell rings.@
-`"---Crap, we'll be late.@ Bye, Senpai, see you later!"\
-
-bg "image\bg\ima_10.jpg",%type_lcartain_mid
-bg "image\bg\bg_06a.jpg",%type_lcartain_mid
-
-` I dash into my classroom.@
-` It's still five minutes before class, so it's very noisy inside.@
-`"Arihiko, isn't here."@
-` Knowing him, he'll probably come in around second period.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_slw
 
+play "track09.ogg"
+
+` …… I keep bleeding.@
+` In my groggy state,
+` I can hear Arcueid and someone else arguing.\
+
+`"I cannot leave it to you.@ I will heal him."@
+` A horribly hostile voice.@
+`"Don't do anything you shouldn't.@ This is mine, so it doesn't concern you."@
+` Arcueid sounds the same too.@
+br
+` …… She sounds the same, but I wish she wouldn't selfishly make me her object.\
+
+`"Yes, this certainly does not concern me right now.@
+` However, I do not think you can heal such wounds.@ All you can do is watch him die.@
+` Or----do you intend on making this young man one of your subordinates, Arcueid Brunestud?"@
+`"…… Do you think I would do such a thing?"@
+` …… I can hear more than hostility in their voices.@
+` There's so much tension I expect another fight to the death to start.\
+
+`"Then please be quiet.@ With those wounds, he cannot last long."@
+`"---I really hate you.@ You should just disappear before I kill you."@
+`"I really hate you as well.@ You don't need to tell me anything; I plan on leaving once his wounds are healed.@
+` You yourself should disappear before I kill you.@ I can't stand seeing you around."@
+br
+` …… A conversation full of tension and hostility.@
+` My mind goes totally blank----\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+!w2000
+
+bg "image\bg\bg_29b.jpg",%type_crossfade_slw
+
+
+`"----Har… d."@
+` Yeah, it's hard.@
+` I feel something hard against my back, and it causes me to wake with a start.\
+
+
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_mid
+
+
+`"……………………"@
+`"Huh?----Arcueid?"@
+` I look around.@
+` I'm in the park lying on a bench.@
+` I look at the park's clock, and it's past one in the morning.@ I guess it hasn't even been an hour since then.\
+
+`"………………"@
+` Arcueid looks at me wordlessly.@
+` …… Or maybe it's more like a glare.@
+`"Ar…… cueid……?"@
+
+
+ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
+
+
+`"……………………"@
+` Arcueid doesn't respond.@
+` I don't know why, but she seems really angry.\
+
+`"…… There."@
+` For now, I stand up.@
+`"Oh----my wounds are healed."@
+` I was so bloody and cut up, but there isn't a single scar anywhere.@
+` There isn't any pain either, as if my fight with Nrvnqsr was all a dream.@
+br
+` ---But, that was no dream.@
+` Then, this---must be…
+br
+`"Arcueid.@ Don't tell me you used another part of Nrvnqsr's body again……?"\
+
+
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+
+`"No, unfortunately not.@ It would've been a quick fix and you would've gotten stronger with it too.@ But since you 'killed' Nrvnqsr completely, we can no longer use his body."@
+`"Really?@ I guess you healed me in another way then.@
+` …… Wow, I really am back to normal.@ I don't feel pain or dizziness.@ Just how in the world did you do it, Arcueid?"@
+`"I don't know.@ I wasn't the one who healed you."@
+
+
+cl a,%type_crossfade_fst
+
+
+` She exclaims and looks away, displeased.\
+
+`"…………?"@
+` It seems that's the reason.@
+` But… if she wasn't the one to heal me, then just who did----?\
+
+
+bg "image\event\cel_e04.jpg",%type_crossfade_fst
+
+
+bg "image\bg\bg_29b.jpg",%type_crossfade_fst
+
+
+`"------Ah."@
+br
+` There was.@
+` There was another person.@
+` Someone who helped me.@
+` …… That woman in black garments who resembled Senpai far too much.\
+
+`"Arcueid… where is that person from before!?"@
+
+
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+
+`"………………"@
+` Still looking displeased, she looks away and ignores me.@
+`"Hey, Arcueid!@ I'm asking you what happened to that person from before!"@
+`"I don't know.@ I didn't see anyone."@
+` She turns away and pretends not to know anything.\
+
+`"Hey---you just said you weren't the one who helped me.@ If it wasn't you, then who else could've done it?"@
+
+
+ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
+
+
+`"Oh, enough already, I said I don't know, so I don't know!"@
+br
+` Oh.@ It seems she's taking it out on me.@
+br
+`"In the first place, why are you so interested in that person?@ It doesn't have anything to do with you, right?"@
+`"Idi---there is something.@ …… It was dark; I couldn't really tell, but that person looked like someone I know."\
+
+
+ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
+
+
+`"----That's just a coincidence.@ Just forget about that person.@ If you talk about it again in front of me, I'll really get mad."@
+
+
+cl a,%type_crossfade_fst
+
+
+` Ending quickly, she looks away.@
+`"…… Why are you so angry?"@
+` I should be the one getting angry.@
+` I just want to know who that person from before was, that's all.\
+
+`"…… Fine, I got it.@ I won't ask anymore.@ Besides, our partnership ends here anyway."@
+
+
+ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
+
+
+`"Eh---?"@
+`"Isn't it obvious?@ We defeated the vampire who did as he pleased in this town, so my responsibility's gone now.@
+` I have to get back home soon, or Akiha will yell at me.@ I think it's about time to cut it off, Arcueid."@
+
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+
+`"Hm----you're right.@ Now that you mention it, it's already this late, too."@
+` Arcueid nods.\
+
+
+cl a,%type_lshutter_fst
+
+
+
+
+`"Alright."@
+` I also nod in understanding.@
+br
+` …… I nodded out of understanding, but…
+` there's still something lingering.@
+` As if I regret parting with her.@
+br
+`"-----"@
+` That's ridiculous.@
+` She's a vampire, and I'm a normal human.@
+` If I associated with her anymore…… something will happen that I can't take back.\
+
+`"…… Bye, Arcueid."@
+` Raising a hand, I step away.@
+`"Um.@ There were a lot of horrible things that happened, but it was pretty fun, too.@ So---um, take care of yourself."@
+
+
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+
+`"Yeah.@ It is late, and you have to get back home."@
+
+
+ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
+
+
+`"Good night.@ Till next time, Shiki!"@
+
+
+cl a,%type_lshutter_fst
+
+
+`"…………"@
+` …… I think she just said something odd.\
+` I try to say, "This is the last time, idiot," but I stop myself.@
+`"…… Well, there are a lot of problems, but she is quite an interesting person."@
+` I speak as if trying to convince myself.@
+` But, it's the truth.@
+` So, even if it is just once in a while…
+` I feel like--if by some chance we got to meet again--it wouldn't be a bad thing.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
 playstop
 
 !w1000
 
 
 
-bg "image\bg\bg_06a.jpg",%type_crossfade_mid
-
-wave se2
+bg "image\bg\bg_32d.jpg",%type_crossfade_slw
 
 
-` Lunch time.@
-` It looks like Arihiko's not coming.@
-` …… Inui Arihiko and Yumizuka Satsuki are the two people absent today.@ Yumizuka Satsuki has caught a cold or something and she will be absent for a while.\
+` I return to the mansion.@
+` It's about two in the morning, and there's not a single light on in the mansion.@
+br
+`"…… I have to sneak in."@
+` I climb over the fence and enter the garden.@
+` Fortunately, the door is open and I am able to enter inside without waking anyone.\
 
-`"…… Senpai doesn't seem to be coming too, so I guess I'll eat by myself."@
-` I say that, but I'm not hungry.\
+bg "image\bg\bg_48d.jpg",%type_lcartain_mid
 
-bg "image\bg\ima_11.jpg",%type_crossfade_fst
-bg "image\bg\bg_06a.jpg",%type_crossfade_fst
+bg "image\bg\bg_33d.jpg",%type_lcartain_mid
 
-` …… What is it?@
-` I didn't feel so good to begin with, but after coming to school, I feel a lot worse.@
-` It's not just my body feeling heavy.@ The scar on my chest is irritating; it's an annoying sensation.\
+bg "image\bg\bg_40d.jpg",%type_lcartain_mid
 
-`"…… Maybe I shouldn't have come to school."@
-` …… For a brief moment, I see the worrying faces of Hisui and Akiha in my mind.@
-` Maybe the fact that I ignored Akiha's wishes for me to rest last night and instead went to see Arcueid might've caused this.@
-` Being worn out by just sitting, I start to feel a strange uneasiness.\
 
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
+` *sigh*@
+` I get back to my room and take a deep breath.@
+br
+` It's over.@
+` I truly feel all the events these past three days, all the strange things, are actually finished.@
+br
+`"Well then----time for bed."@
+` I sink my tired body into bed and fall asleep.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+
+br
+` ---Or at least, I intended to.@
+br
+`"……………………"@
+` But, I just can't sleep.@
+` My mind and body are tired, but I can't stop thinking about that figure and I can't sleep.@
+`"…… It couldn't…… have been Senpai, but……"@
+` But, she resembles Senpai so much.\
+
+` I couldn't get a good look at her face, so I can't say for sure.@
+` So---I think it's just my mistake.@
+`"…… Tomorrow…… I'll ask her…… at school."@
+` Yeah---that's right.@
+` I can see her at school any time, so I'll ask her then.@ Then, she can just say, "That wasn't me," and it'll all be alright.\
+
+`"----Alright, that's what I'll do."@
+` It's decided.@
+` Now, then---if I just read a boring book, I'll probably fall asleep.\
+
+
+bg "image\bg\cmo_15.jpg",%type_lshutter_mid
+
+waveloop se10
+
+br
+br
+br
+br
+br
+br
+br
+`       "Immortality".@
+\
+
+` If those words are to be a grand reality, it would be one of the things which would define eternity.@
+` But in reality, nothing in existence has reached that level.\
+
+` For example, those vampires occasionally spoken of in legends are not immortal.@
+` After all, they are defective because they require stealing from others to exist.@
+` Furthermore, the fact that their supplemental parts have to be of the same species---in this case, generally referring to humans----means that they are not versatile at all.@
+` They call themselves the transcendent race, but that is not evolution, it is degeneration.@
+br
+` That which cannot function independently in perpetuity cannot be called eternal.@
+` It is presumptuous to call something immortal if it depends on others to halt its aging.\
+
+` There already exists something close to perfection which can function independently in perpetuity.@
+` It feeds on itself and multiplies.@ It has no such thing as a lifespan.@ Old cells become food as nutrients and new cells are produced from it.@
+` Such as a jellyfish.@
+` However, it is perpetual only because it has no intelligence.@
+` If having no intelligence is fine, then it is no different from gaining eternity by death.\
+
+` If you want to be eternal living as a human, it is impossible by the method of immortality.@
+` Long years destroy the body and wear away flexibility of the mind.\
+
+` Immortality or eternity.@
+` I have no attachment to stained immortality.@
+` Persistently maintaining individuality makes eternity unattainable.@
+br
+` Instead of gaining immortality as a single human,
+` I chose the infinity in which I continue to exist eternally.\
+
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+
+
+bg "image\bg\cmo_10.jpg",%type_lshutter_mid
+
+
+` …… I see; certainly a different approach than I.@ However, with your method, will you not lose eternity at the extinction of the human race?@
+` Your method always requires an unborn child other than yourself.\
+
+` Yes, that is true.@ But if no other humans existed, I would not be able to confirm my own self.@
+` So----if humans become extinct, then continuing to live would be worthless.@ At that point, my immortality would end.\
+
+` …… I do not understand your theory.@ That is far from the thesis of eternity, Serpent.\
+
+` No, it is eternity.@ When a time comes to perish, everything should perish.@ If observers cease to exist, then that means everything is unchanging.@
+` The eternity I embody is temporary until that time occurs.@
+` I cannot turn everything into nothingness.@ Therefore, I will continue living until it happens.@
+` …… Although, I have found yet another amusement.\
+
+` Is that why you called me?\
+
+` Yes.@ I will show you a mystic method which allows you to slightly shape what is inside of you.@ There is someone I wish for you to catch using this achievement from the age of the gods, Chaos.\
+
+
+wavestop
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+!w3000
+
+
+
 
 return
