@@ -58,9 +58,29 @@ const HistoryLayer = ({ pages, text }: Props) => {
     historyElement!.scrollTop = historyElement!.scrollHeight - historyElement!.clientHeight - 1;
   }, [pages, text]);
 
+  useEffect(() => {
+    if (!displayHistory) {
+      const historyElement = historyRef.current;
+      historyElement!.scrollTop = historyElement!.scrollHeight - historyElement!.clientHeight - 1;
+    }
+  }, [displayHistory]);
+
+  //if a left click is made outside #history, hide history
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      if (e.button === 0 && displayHistory && !historyRef.current?.contains(e.target as Node)) {
+        setDisplayHistory(false)
+      }
+    }
+    window.addEventListener('mousedown', handleClick)
+    return () => {
+      window.removeEventListener('mousedown', handleClick)
+    }
+  })
+
   return (
-    <div className="box-history">
-      <div className={`box-text ${displayHistory ? "show" : ""}`} id="history" ref={historyRef}>
+    <div className={`box-history ${displayHistory ? "show" : ""}`}>
+      <div className="box-text" id="history" ref={historyRef}>
         <div className="text-container">
           {/* lignes des pages précédentes */}
           {pages.map((page, i) =>
