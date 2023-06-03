@@ -4,9 +4,8 @@ type Props = {
   characters: Character[]
 }
 
-const CharactersScreen = ({ characters }: Props) => {
 
-  console.log(characters)
+const CharactersLayerScreen = ({ characters }: Props) => {
   return (
     <div className="box-characters">
       {characters.map((character: Character, i) =>
@@ -18,4 +17,4 @@ const CharactersScreen = ({ characters }: Props) => {
   )
 }
 
-export default CharactersScreen
+export default CharactersLayerScreen

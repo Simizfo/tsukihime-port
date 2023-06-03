@@ -6,8 +6,8 @@ import LineComponent from '../components/LineComponent';
 import HistoryScreen from './HistoryScreen';
 import { Character, Choice, Line, Page } from '../types';
 import { fetchChoices, fetchGoToNextScene, fetchScene } from '../utils/utils';
-import ChoicesScreen from './ChoicesScreen';
-import CharactersScreen from './CharactersScreen';
+import ChoicesLayerScreen from './ChoicesLayerScreen';
+import CharactersLayerScreen from './CharactersLayerScreen';
 
 const wave = new AudioTsuki()
 
@@ -77,7 +77,7 @@ const Window = () => {
       goToNextScene()
     }
   }, [displayChoices])
-  
+
   const goToNextScene = async () => {
     const nextScene = await fetchGoToNextScene(sceneNumber)
     setNewScene(nextScene)
@@ -188,7 +188,7 @@ const Window = () => {
 
       <img src={"/" + bg} alt="background" className="background" />
 
-      <CharactersScreen characters={characters} />
+      <CharactersLayerScreen characters={characters} />
 
       <div className="box-text" onClick={handleClick}>
         <div className="text-container">
@@ -199,7 +199,7 @@ const Window = () => {
       </div>
 
       {displayChoices &&
-        <ChoicesScreen choices={choices} setNewScene={setNewScene} />
+        <ChoicesLayerScreen choices={choices} setNewScene={setNewScene} />
       }
     </div>
   )
