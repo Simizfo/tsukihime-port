@@ -1,5 +1,7 @@
+import { Line } from "../types"
+
 type Props = {
-  line: {line: string, pageHasEnded?: boolean},
+  line: Line,
 }
 
 const LineComponent = ({ line }: Props) => {
@@ -17,7 +19,7 @@ const LineComponent = ({ line }: Props) => {
     <span>
       {lineDisplay(line.line)}
     </span>
-    {line.pageHasEnded && <br />}
+    {line.lineHasEnded && <br />}
     </>
   );
 }

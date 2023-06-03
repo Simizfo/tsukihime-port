@@ -1,11 +1,12 @@
 import LineComponent from "../components/LineComponent";
 
 type Props = {
-  pages: any[],
-  text: any[],
+  pages: Page[],
+  text: Line[],
 }
 
 import { useEffect, useRef } from 'react';
+import { Line, Page } from "../types";
 
 const HistoryScreen = ({ pages, text }: Props) => {
   const historyRef = useRef<HTMLDivElement>(null);;

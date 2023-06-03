@@ -5,15 +5,16 @@ import straliasJson from '../assets/game/stralias.json';
 import AudioTsuki from '../utils/AudioTsuki';
 import LineComponent from '../components/LineComponent';
 import HistoryScreen from './HistoryScreen';
+import { Line, Page } from '../types';
 
 const wave = new AudioTsuki()
 
 const Window = () => {
   const [scene, setScene] = useState<string[]>([])
   const [index, setIndex] = useState(0) //line
-  const [text, setText] = useState<any[]>([]) //current text
-  const [history, setHistory] = useState<any[]>([])
-  const [pages, setPages] = useState<any[]>([]) //all text
+  const [text, setText] = useState<Line[]>([]) //current text
+  const [history, setHistory] = useState<Line[]>([])
+  const [pages, setPages] = useState<Page[]>([])
   const [bg, setBg] = useState('')
   const [displayHistory, setDisplayHistory] = useState(false)
 
@@ -49,15 +50,15 @@ const Window = () => {
       } while (!scene[i].startsWith('`'))
       setIndex(i)
 
-      let pageHasEnded = true
+      let lineHasEnded = true
       if (scene[i + 1] !== undefined && scene[i + 1].startsWith(' ')) {
-        pageHasEnded = false
+        lineHasEnded = false
       }
 
-      let newText: any[] = text
-      newText.push({ line: scene[i], pageHasEnded: pageHasEnded })
+      let newText: Line[] = text
+      newText.push({ line: scene[i], lineHasEnded: lineHasEnded })
       setText(newText)
-      setHistory([...history, { line: scene[i], pageHasEnded: pageHasEnded }])
+      setHistory([...history, { line: scene[i], lineHasEnded: lineHasEnded }])
     }
   }, [scene])
   
@@ -96,7 +97,7 @@ const Window = () => {
     let i = index
 
     //check if previous line has ended
-    if (text[text.length - 1].pageHasEnded) {
+    if (text[text.length - 1].lineHasEnded) {
       do {
         processLine(scene[i])
         i++
@@ -106,22 +107,21 @@ const Window = () => {
     }
     setIndex(i)
 
-    let pageHasEnded = true
+    let lineHasEnded = true
     if (scene[i + 1] !== undefined && scene[i + 1].startsWith(' ')) {
-      pageHasEnded = false
+      lineHasEnded = false
     }
     
-    let newText: any[] = text
+    let newText: Line[] = text
 
-    //if previous array last element in history ends with \, reset text
+    //if previous array last element in history ends with \, reset text and add the page to pages
     const lastElement = history[history.length - 1].line
     if (lastElement !== undefined && lastElement[lastElement.length - 1] === '\\') {
       setPages([...pages, text])
       newText = []
     }
 
-    //push new line accompanied with hasEnded
-    const newLine = { line: scene[i], pageHasEnded: pageHasEnded }
+    const newLine = { line: scene[i], lineHasEnded: lineHasEnded }
     newText.push(newLine)
     setText(newText)
     setHistory([...history, newLine])
