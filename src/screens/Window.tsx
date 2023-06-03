@@ -92,6 +92,34 @@ const Window = () => {
     }
   })
 
+  //on mouse wheel up display history
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      if (e.deltaY < 0 && !displayHistory && pages.length !== 0) {
+        setDisplayHistory(true)
+      }
+    }
+    window.addEventListener('wheel', handleWheel)
+    return () => {
+      window.removeEventListener('wheel', handleWheel)
+    }
+  })
+
+  //on scroll bottom in history, hide history
+  useEffect(() => {
+    const handleScroll = (e: any) => {
+      const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight
+      if (bottom) {
+        setDisplayHistory(false)
+      }
+    }
+    const history = document.getElementById('history')
+    history?.addEventListener('scroll', handleScroll)
+    return () => {
+      history?.removeEventListener('scroll', handleScroll)
+    }
+  })
+
   //go to next line that starts with `
   const nextLine = () => {
     let i = index
@@ -126,34 +154,6 @@ const Window = () => {
     setText(newText)
     setHistory([...history, newLine])
   }
-
-  //on mouse wheel up display history
-  useEffect(() => {
-    const handleWheel = (e: WheelEvent) => {
-      if (e.deltaY < 0 && !displayHistory) {
-        setDisplayHistory(true)
-      }
-    }
-    window.addEventListener('wheel', handleWheel)
-    return () => {
-      window.removeEventListener('wheel', handleWheel)
-    }
-  })
-
-  //on scroll bottom in history, hide history
-  useEffect(() => {
-    const handleScroll = (e: any) => {
-      const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight
-      if (bottom) {
-        setDisplayHistory(false)
-      }
-    }
-    const history = document.getElementById('history')
-    history?.addEventListener('scroll', handleScroll)
-    return () => {
-      history?.removeEventListener('scroll', handleScroll)
-    }
-  })
 
   const processLine = (line: string) => {
     if (line.startsWith('bg ')) {
