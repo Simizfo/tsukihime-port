@@ -5,7 +5,7 @@ type Props = {
 }
 
 
-const CharactersLayerScreen = ({ characters }: Props) => {
+const CharactersLayer = ({ characters }: Props) => {
   return (
     <div className="box-characters">
       {characters.map((character: Character, i) =>
@@ -17,4 +17,4 @@ const CharactersLayerScreen = ({ characters }: Props) => {
   )
 }
 
-export default CharactersLayerScreen
+export default CharactersLayer

@@ -5,7 +5,7 @@ type Props = {
   setNewScene: (sceneNumber: number) => void
 }
 
-const ChoicesLayerScreen = ({ choices, setNewScene }: Props) => {
+const ChoicesLayer = ({ choices, setNewScene }: Props) => {
   return (
     <div className="box-choices">
       <div className="choices-container">
@@ -19,4 +19,4 @@ const ChoicesLayerScreen = ({ choices, setNewScene }: Props) => {
   )
 }
 
-export default ChoicesLayerScreen;
+export default ChoicesLayer

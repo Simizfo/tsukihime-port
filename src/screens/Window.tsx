@@ -3,11 +3,11 @@ import '../styles/game.scss';
 import straliasJson from '../assets/game/stralias.json';
 import AudioTsuki from '../utils/AudioTsuki';
 import LineComponent from '../components/LineComponent';
-import HistoryScreen from './HistoryScreen';
+import HistoryLayer from '../layers/HistoryLayer';
 import { Character, Choice, Line, Page } from '../types';
 import { fetchChoices, fetchGoToNextScene, fetchScene } from '../utils/utils';
-import ChoicesLayerScreen from './ChoicesLayerScreen';
-import CharactersLayerScreen from './CharactersLayerScreen';
+import ChoicesLayer from '../layers/ChoicesLayer';
+import CharactersLayer from '../layers/CharactersLayer';
 
 const wave = new AudioTsuki()
 
@@ -184,11 +184,11 @@ const Window = () => {
 
   return (
     <div className="window">
-      <HistoryScreen pages={pages} text={text} />
+      <HistoryLayer pages={pages} text={text} />
 
       <img src={"/" + bg} alt="background" className="background" />
 
-      <CharactersLayerScreen characters={characters} />
+      <CharactersLayer characters={characters} />
 
       <div className="box-text" onClick={handleClick}>
         <div className="text-container">
@@ -199,7 +199,7 @@ const Window = () => {
       </div>
 
       {displayChoices &&
-        <ChoicesLayerScreen choices={choices} setNewScene={setNewScene} />
+        <ChoicesLayer choices={choices} setNewScene={setNewScene} />
       }
     </div>
   )

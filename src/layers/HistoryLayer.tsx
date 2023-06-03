@@ -8,7 +8,7 @@ type Props = {
 import { useEffect, useRef, useState } from 'react';
 import { Line, Page } from "../types";
 
-const HistoryScreen = ({ pages, text }: Props) => {
+const HistoryLayer = ({ pages, text }: Props) => {
   const [displayHistory, setDisplayHistory] = useState(false)
   const historyRef = useRef<HTMLDivElement>(null);;
 
@@ -78,4 +78,4 @@ const HistoryScreen = ({ pages, text }: Props) => {
 };
 
 
-export default HistoryScreen;
+export default HistoryLayer
