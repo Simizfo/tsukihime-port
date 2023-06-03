@@ -5,3 +5,8 @@ export type Line = {
 }
 
 export type Page = Line[]
+
+export type Choice = {
+    libe: string,
+    f: number,
+}

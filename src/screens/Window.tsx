@@ -4,7 +4,7 @@ import straliasJson from '../assets/game/stralias.json';
 import AudioTsuki from '../utils/AudioTsuki';
 import LineComponent from '../components/LineComponent';
 import HistoryScreen from './HistoryScreen';
-import { Line, Page } from '../types';
+import { Choice, Line, Page } from '../types';
 import { fetchChoices, fetchScene } from '../utils/utils';
 import ChoicesScreen from './ChoicesScreen';
 
@@ -13,7 +13,7 @@ const wave = new AudioTsuki()
 const Window = () => {
   const [sceneNumber, setSceneNumber] = useState(20)
   const [scene, setScene] = useState<string[]>([])
-  const [choices, setChoices] = useState<string[]>([])
+  const [choices, setChoices] = useState<Choice[]>([])
   const [displayChoices, setDisplayChoices] = useState(false)
   const [index, setIndex] = useState(0) //line
   const [text, setText] = useState<Line[]>([]) //current text
@@ -37,6 +37,10 @@ const Window = () => {
     if (scene.length !== 0) {
       let i = index
       do {
+        if (scene[i] === "return") {
+          setDisplayChoices(true)
+          return
+        }
         processLine(scene[i])
   
         i++
@@ -53,8 +57,7 @@ const Window = () => {
       setText(newText)
       setHistory([...history, { line: scene[i], lineHasEnded: lineHasEnded }])
     }
-  }, [scene])
-  
+  }, [scene])  
 
   //on press enter, go to next line
   useEffect(() => {

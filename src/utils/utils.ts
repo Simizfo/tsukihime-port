@@ -1,3 +1,5 @@
+import { Choice } from "../types";
+
 const LOGIC_FILE = 'scene19.txt'
 
 /*
@@ -69,6 +71,16 @@ export const fetchChoices = async (sceneNumber: number):Promise<any> => {
       delete selectResult[key]
     }
   })
-  console.log(selectResult); // Check the output in the console
-  return selectResult
+
+  let choices:Choice[] = []
+  //split on ` and remove ,*f
+  selectResult.forEach((line:string) => {
+    const libe = line.split('`, *f')[0]
+    const f = parseInt(line.split('`, *f')[1])
+    choices.push({libe, f})
+  })
+
+  console.log(choices)
+
+  return choices
 }

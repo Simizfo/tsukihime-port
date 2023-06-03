@@ -1,15 +1,20 @@
+import { Choice } from "../types"
+
 type Props = {
-  choices: string[],
+  choices: Choice[],
 }
 
 const ChoicesScreen = ({ choices }: Props) => {
-  console.log(choices)
+  const findNextScene = (choice: Choice) => {
+    console.log(choice)
+  }
+
   return (
     <div className="box-choices">
       <div className="choices-container">
-        {choices.map((choice: any, i:any) =>
-          <button key={i} className="choice">
-            {choice}
+        {choices.map((choice: Choice, i:any) =>
+          <button key={i} className="choice" onClick={() => findNextScene(choice)}>
+            {choice.libe}
           </button>
         )}
       </div>
