@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import textScript from '../assets/game/scenes/scene21.txt';
 import '../styles/game.scss';
 import straliasJson from '../assets/game/stralias.json';
@@ -10,9 +10,12 @@ const wave = new AudioTsuki()
 const Window = () => {
   const [scene, setScene] = useState<string[]>([])
   const [index, setIndex] = useState(0) //line
-  const [text, setText] = useState<any[]>([])
+  const [text, setText] = useState<any[]>([]) //current text
   const [history, setHistory] = useState<any[]>([])
+  const [pages, setPages] = useState<any[]>([]) //all text
   const [bg, setBg] = useState('')
+  const [displayHistory, setDisplayHistory] = useState(false)
+  const bottomRef = useRef<null | HTMLDivElement>(null); 
 
   //I have a very long text file. I want to display the first line that starts with `
   useEffect(() => {
@@ -31,10 +34,8 @@ const Window = () => {
     lines.forEach((line, index) => {
       result[index] = line
     });
-
     // console.log(result); // Check the output in the console
 
-    
     setScene(result)
   }
 
@@ -106,6 +107,7 @@ const Window = () => {
     //if previous array last element in history ends with \, reset text
     const lastElement = history[history.length - 1].line
     if (lastElement !== undefined && lastElement[lastElement.length - 1] === '\\') {
+      setPages([...pages, text])
       newText = []
     }
 
@@ -115,6 +117,35 @@ const Window = () => {
     setText(newText)
     setHistory([...history, newLine])
   }
+
+  //on mouse wheel up display history
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      if (e.deltaY < 0 && !displayHistory) {
+        setDisplayHistory(true)
+        bottomRef.current?.scrollIntoView()
+      }
+    }
+    window.addEventListener('wheel', handleWheel)
+    return () => {
+      window.removeEventListener('wheel', handleWheel)
+    }
+  })
+
+  //on scroll bottom in history, hide history
+  useEffect(() => {
+    const handleScroll = (e: any) => {
+      const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight
+      if (bottom) {
+        setDisplayHistory(false)
+      }
+    }
+    const history = document.getElementById('history')
+    history?.addEventListener('scroll', handleScroll)
+    return () => {
+      history?.removeEventListener('scroll', handleScroll)
+    }
+  })
 
   const processLine = (line: string) => {
     if (line.startsWith('bg ')) {
@@ -138,15 +169,29 @@ const Window = () => {
   }
 
   return (
-    <div className="window" onClick={handleClick}>
+    <div className="window">
       <img src={"/" + bg} alt="background" className="background" />
 
-      <div className="box-text">
+      <div className="box-text" onClick={handleClick}>
         {text.map((line, i) =>
           <LineComponent key={i} line={line} />
         )}
       </div>
 
+      {displayHistory &&
+      <div className='box-text' id="history">
+        {pages.map((page, i) =>
+          page.map((line: any, j:any) =>
+            <LineComponent key={i + "_" + j} line={line} />
+          )
+        )}
+
+        {text.map((line, i) =>
+          <LineComponent key={i} line={line} />
+        )}
+        <div ref={bottomRef} />
+      </div>
+      }
     </div>
   )
 }
