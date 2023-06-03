@@ -3,6 +3,7 @@ import { useState } from 'react'
 // import viteLogo from '/electron-vite.animate.svg'
 import './styles/App.css'
 import Window from './screens/Window'
+import "./assets/fonts/Ubuntu-Regular.ttf"
 
 function App() {
 

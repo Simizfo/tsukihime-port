@@ -1,5 +1,11 @@
+//import from asset font
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../assets/fonts/Ubuntu-Regular.ttf');
+}
+
 :root {
-    --text-color: #fff;
+    --text-color: #e7e7e7;
     --read-text-color: #c5e1ff;
 }
 
@@ -13,11 +19,11 @@ body {
 
 .window {
     color: var(--text-color);
-    text-shadow: 0 0 5px #000;
     display: flex;
     height: 100vh;
     width: 100vw;
     font-size: 1.1em;
+    font-family: Ubuntu, sans-serif;
 
     .background {
         position: absolute;
@@ -37,7 +43,6 @@ body {
         position: absolute;
         overflow: hidden;
 
-        //don't show the first left half of the image
         .img-container {
             position: absolute;
             bottom: 0;
@@ -61,16 +66,18 @@ body {
                 height: inherit;
                 object-fit: cover;
             }
-            
         }
     }
     .box-text {
         z-index: 2;
         user-select: none;
-        background-color: #0006;
-        padding: 2em;
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 6%, rgba(0, 0, 0, 0.5) 94%, rgba(0, 0, 0, 0.2) 100%);
+        padding: 6% 8%;;
         width: inherit;
         height: inherit;
+        text-shadow: 0 0 5px #000;
+        line-height: 1.6em;
+        letter-spacing: 1px;
 
         &#history {
             z-index: -1;
