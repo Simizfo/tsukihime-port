@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import textScript from '../assets/game/scenes/scene21.txt';
 import '../styles/game.scss';
 import straliasJson from '../assets/game/stralias.json';
 import AudioTsuki from '../utils/AudioTsuki';
@@ -22,7 +21,7 @@ const Window = () => {
   }, [])
 
   const fetchScene = async () => {
-    const script = await fetch(textScript)
+    const script = await fetch('./scenes/scene21.txt')
 
     const data = await script.text();
 
