@@ -57,7 +57,18 @@ const Window = () => {
       setText(newText)
       setHistory([...history, { line: scene[i], lineHasEnded: lineHasEnded }])
     }
-  }, [scene])  
+  }, [scene])
+
+  const setNewScene = async (sceneNumber: number) => {
+    setIndex(0)
+    setText([])
+    setSceneNumber(sceneNumber)
+    const sceneTmp = await fetchScene(sceneNumber)
+    setScene(sceneTmp)
+    const choicesTmp = await fetchChoices(sceneNumber)
+    setChoices(choicesTmp)
+    setDisplayChoices(false)
+  }
 
   //on press enter, go to next line
   useEffect(() => {
@@ -150,7 +161,7 @@ const Window = () => {
       </div>
 
       {displayChoices &&
-        <ChoicesScreen choices={choices} />
+        <ChoicesScreen choices={choices} setNewScene={setNewScene} />
       }
     </div>
   )

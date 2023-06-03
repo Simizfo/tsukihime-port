@@ -22,7 +22,7 @@ export const fetchScene = async (scene: number):Promise<string[]> => {
   return result
 }
 
-export const fetchChoices = async (sceneNumber: number):Promise<any> => {
+export const fetchF = async (sceneNumber: number):Promise<any> => {
   const script = await fetch(`./scenes/` + LOGIC_FILE)
 
   const data = await script.text();
@@ -46,6 +46,12 @@ export const fetchChoices = async (sceneNumber: number):Promise<any> => {
       i++
     }
   })
+
+  return result
+}
+
+export const fetchChoices = async (sceneNumber: number):Promise<any> => {
+  const result = await fetchF(sceneNumber)
 
   //if line starts with select, keep it and the lines after
   const selectResult: any = [];
@@ -80,7 +86,12 @@ export const fetchChoices = async (sceneNumber: number):Promise<any> => {
     choices.push({libe, f})
   })
 
-  console.log(choices)
-
   return choices
+}
+
+export const fetchChoiceNextScene = async (sceneNumber: number):Promise<number> => {
+  const result = await fetchF(sceneNumber)
+
+  console.log(result)
+  return 0
 }

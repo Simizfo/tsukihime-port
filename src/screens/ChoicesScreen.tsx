@@ -2,11 +2,12 @@ import { Choice } from "../types"
 
 type Props = {
   choices: Choice[],
+  setNewScene: (sceneNumber: number) => void
 }
 
-const ChoicesScreen = ({ choices }: Props) => {
+const ChoicesScreen = ({ choices, setNewScene }: Props) => {
   const findNextScene = (choice: Choice) => {
-    console.log(choice)
+    setNewScene(choice.f)
   }
 
   return (
