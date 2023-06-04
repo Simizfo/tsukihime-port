@@ -1,5 +1,5 @@
 import LineComponent from "../components/LineComponent";
-import { useContext, useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { Line, Page } from "../types";
 import { store } from "../context/GameContext";
 import { addEventListener } from "../utils/utils";
@@ -72,11 +72,16 @@ const HistoryLayer = ({ pages, text }: Props) => {
         <div className="text-container">
           {/* lignes des pages précédentes */}
           {pages.map((page, i) =>
-            page.map((line: any, j: any) =>
-              <LineComponent key={`histo_page_${i}_${j}`} line={line} printInstantly={true} />
-            )
+            <React.Fragment key={`histo_page_${i}`}>
+              {page.map((line: Line, j: any) =>
+                <LineComponent key={`histo_page_${i}_${j}`} line={line} printInstantly={true} />
+              )}
+              {i !== pages.length - 1 && <hr />}
+            </React.Fragment>
           )}
 
+          <hr />
+          
           {/* lignes de la page actuelle */}
           {text.map((line, i) =>
             <LineComponent key={`histo_text_${i}`} line={line} printInstantly={true} />

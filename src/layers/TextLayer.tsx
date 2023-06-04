@@ -28,7 +28,7 @@ const TextLayer = ({ text, handleClick }: Props) => {
         {text.map((line, i) =>
           <LineComponent key={`text_${i}`}
             line={line}
-            printInstantly={i === text.length - 1 ? false : true}
+            printInstantly={i !== text.length - 1}
             isLastLine={text.length - 1 === i} />
         )}
       </div>
