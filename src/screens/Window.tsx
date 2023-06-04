@@ -10,13 +10,14 @@ import CharactersLayer from '../layers/CharactersLayer';
 import TextLayer from '../layers/TextLayer';
 import BackgroundLayer from '../layers/BackgroundLayer';
 import { store } from '../context/GameContext';
+import MenuLayer from '../layers/MenuLayer';
 
 const wave = new AudioTsuki()
 const FIRST_SCENE = 20
 
 const Window = () => {
   const { state, dispatch } = useContext(store)
-  const [sceneNumber, setSceneNumber] = useState(21)
+  const [sceneNumber, setSceneNumber] = useState(402)
   const [scene, setScene] = useState<string[]>([])
   const [choices, setChoices] = useState<Choice[]>([])
   const [index, setIndex] = useState(0) //line
@@ -57,10 +58,10 @@ const Window = () => {
         lineHasEnded = false
       }
 
-      let newText: Line[] = text
-      newText.push({ line: scene[i], lineHasEnded: lineHasEnded, read: true })
+      let newText: Line[] = []
+      newText[0] = { line: scene[i], lineHasEnded: lineHasEnded, read: true }
       setText(newText)
-      setHistory([...history, { line: scene[i], lineHasEnded: lineHasEnded }])
+      setHistory([...history, newText[0]])
     }
   }, [scene])
 
@@ -86,16 +87,6 @@ const Window = () => {
     setNewScene(nextScene)
   }
 
-  //on right click toggle display text
-  useEffect(() => {
-    const handleRightClick = (e: MouseEvent) => {
-      if (e.button === 2 && !state.dispHistory && !state.dispChoices) {
-        dispatch({ type: 'SET_DISP_TEXT', payload: !state.dispText })
-      }
-    }
-    return addEventListener({event: 'mousedown', handler: handleRightClick})
-  })
-
   //on press enter, go to next line
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -109,6 +100,16 @@ const Window = () => {
     return addEventListener({event: 'keydown', handler: handleKeyDown})
   })
 
+  //on right click disp menu
+  useEffect(() => {
+    const handleContextMenu = (e: MouseEvent) => {
+      if (e.button === 2 && !state.dispHistory) {
+        dispatch({ type: 'SET_DISP_MENU', payload: !state.dispMenu })
+      }
+    }
+    return addEventListener({event: 'contextmenu', handler: handleContextMenu})
+  })
+  
   //go to next line that starts with `
   const nextLine = () => {
     let i = index
@@ -208,6 +209,8 @@ const Window = () => {
       {state.dispChoices &&
         <ChoicesLayer choices={choices} setNewScene={setNewScene} />
       }
+
+      <MenuLayer />
     </div>
   )
 }
