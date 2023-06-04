@@ -12,14 +12,14 @@ type Props = {
 const TextLayer = ({ text, handleClick }: Props) => {
   const { state, dispatch } = useContext(store)
 
-  //on right click toggle display text
+  //on spacebar press toggle display text
   useEffect(() => {
-    const handleRightClick = (e: MouseEvent) => {
-      if (e.button === 2 && !state.dispHistory && !state.dispChoices) {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.code === 'Space' && !state.dispHistory && !state.dispChoices) {
         dispatch({ type: 'SET_DISP_TEXT', payload: !state.dispText })
       }
     }
-    return addEventListener({event: 'mousedown', handler: handleRightClick})
+    return addEventListener({event: 'keydown', handler: handleKeyDown})
   })
 
   return (
