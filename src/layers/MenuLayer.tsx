@@ -30,7 +30,16 @@ const MenuLayer = () => {
     dispatch({ type: 'SET_DISP_CHOICES', payload: false })
   }
 
+  const historyMode = () => {
+    dispatch({ type: 'SET_DISP_MENU', payload: false })
+    dispatch({ type: 'SET_DISP_HISTORY', payload: true })
+  }
+
   const titleMenu = () => {
+  }
+
+  const closeMenu = () => {
+    dispatch({ type: 'SET_DISP_MENU', payload: false })
   }
 
   return (
@@ -39,8 +48,14 @@ const MenuLayer = () => {
         <button onClick={graphicMode}>
           Graphics
         </button>
+        <button onClick={historyMode}>
+          History
+        </button>
         <button onClick={titleMenu}>
           Title menu
+        </button>
+        <button onClick={closeMenu}>
+          Close
         </button>
       </div>
     </nav>
