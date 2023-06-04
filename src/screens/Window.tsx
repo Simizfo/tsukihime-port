@@ -13,6 +13,8 @@ import MenuLayer from '../layers/MenuLayer';
 import { STRALIAS_JSON } from '../utils/constants';
 
 const FIRST_SCENE = 20
+const MAX_PAGES = 20
+const playing_track = new AudioTsuki()
 
 const Window = () => {
   const { state, dispatch } = useContext(store)
@@ -84,6 +86,11 @@ const Window = () => {
     setNewScene(nextScene)
   }
 
+  //don't keep more than 20 pages, erase the oldest if needed
+  useEffect(() => {
+
+  }, [pages])
+
   //on press enter, go to next line
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -146,30 +153,36 @@ const Window = () => {
   }
 
   const processLine = (line: string) => {
-    const prefix = line.split(' ')[0];
+    const prefix = line.split(' ')[0]
 
     switch(prefix) {
       case 'bg':
         foundBackground(line)
-        break;
+        break
+      case 'play':
+        foundPlay(line)
+        break
+      case 'playstop':
+        foundPlaystop()
+        break
       case 'wave':
         foundWave(line)
-        break;
+        break
       case 'waveloop':
         foundWaveloop(line)
-        break;
+        break
       case 'wavestop':
         foundWavestop(line)
-        break;
+        break
       case 'br':
         foundBr()
-        break;
+        break
       case 'ld':
         foundLd(line)
-        break;
+        break
       case 'cl':
         foundCl(line)
-        break;
+        break
     }
     
     function foundBackground(line: string) {
@@ -178,6 +191,16 @@ const Window = () => {
         type: line.split(',')[1].replace('%', '')
       }
       setBg(bgTmp)
+    }
+
+    function foundPlay(line: string) {
+      const track = "CD/" + line.split('"')[1]
+      playing_track.setAudio(track, true)
+      playing_track.play()
+    }
+
+    function foundPlaystop() {
+      playing_track.stop()
     }
 
     function foundWave(line: string) {
