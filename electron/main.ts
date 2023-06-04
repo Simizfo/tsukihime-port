@@ -41,14 +41,14 @@ function createMenu() {
   const template = [
     {
       label: 'Reload',
-      accelerator: 'CmdOrCtrl+R',
+      accelerator: 'CmdOrCtrl+Shift+R',
       click: function () {
         win?.webContents.reload()
       }
     },
     {
       label: 'Toggle DevTools',
-      accelerator: 'Alt+CmdOrCtrl+I',
+      accelerator: 'CmdOrCtrl+Shift+I',
       click: function () {
         win?.webContents.toggleDevTools()
       }
