@@ -136,9 +136,9 @@ const Window = () => {
     
     let newText: Line[] = text
 
-    //if previous array last element in history ends with \, reset text and add the page to pages
-    const lastElement = history[history.length - 1].line
-    if (lastElement !== undefined && lastElement[lastElement.length - 1] === '\\') {
+    //if last line in history ends with \, reset text and add the page to pages
+    const lastLine: string = history[history.length - 1].line
+    if (lastLine !== undefined && lastLine[lastLine.length - 1] === '\\') {
       setPages([...pages, text])
       newText = []
     }
