@@ -16,7 +16,7 @@ const HistoryLayer = ({ pages, text }: Props) => {
   useEffect(() => {
     //on mouse wheel up display history
     const handleWheel = (e: WheelEvent) => {
-      if (e.deltaY < 0 && !state.dispHistory && pages.length !== 0) {
+      if (e.deltaY < 0 && !state.dispHistory && !state.dispMenu && pages.length !== 0) {
         dispatch({ type: 'SET_DISP_HISTORY', payload: true })
       }
     }
