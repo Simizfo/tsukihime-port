@@ -25,9 +25,11 @@ const TextLayer = ({ text, handleClick }: Props) => {
   return (
     <div className={`box box-text ${state.dispText ? "" : "hide"}`} onClick={handleClick}>
       <div className="text-container">
-        {/* should print instantly only if it's not the last line of text */}
         {text.map((line, i) =>
-          <LineComponent key={i} line={line} printInstantly={i === text.length - 1 ? false : true} isLastLine={text.length - 1 === i} />
+          <LineComponent key={`text_${i}`}
+            line={line}
+            printInstantly={i === text.length - 1 ? false : true}
+            isLastLine={text.length - 1 === i} />
         )}
       </div>
     </div>

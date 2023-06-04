@@ -73,13 +73,13 @@ const HistoryLayer = ({ pages, text }: Props) => {
           {/* lignes des pages précédentes */}
           {pages.map((page, i) =>
             page.map((line: any, j: any) =>
-              <LineComponent key={`${i}_${j}`} line={line} printInstantly={true} />
+              <LineComponent key={`histo_page_${i}_${j}`} line={line} printInstantly={true} />
             )
           )}
 
           {/* lignes de la page actuelle */}
           {text.map((line, i) =>
-            <LineComponent key={i} line={line} printInstantly={true} />
+            <LineComponent key={`histo_text_${i}`} line={line} printInstantly={true} />
           )}
         </div>
       </div>
