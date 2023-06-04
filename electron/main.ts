@@ -13,7 +13,7 @@ function createWindow() {
   win = new BrowserWindow({
     width: 1000,
     height: 600,
-    icon: path.join(process.env.PUBLIC, 'electron-vite.svg'),
+    icon: path.join(process.env.PUBLIC, 'arc.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
