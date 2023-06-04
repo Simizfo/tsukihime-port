@@ -49,7 +49,7 @@ const HistoryLayer = ({ pages, text }: Props) => {
   })
 
   useEffect(() => {
-    dispatch({ type: 'SET_DISP_TEXT', payload: !state.dispText })
+    dispatch({ type: 'SET_DISP_TEXT', payload: !state.dispHistory })
   }, [state.dispHistory])
 
   useEffect(() => {
