@@ -4,7 +4,7 @@ import straliasJson from '../assets/game/stralias.json';
 import AudioTsuki from '../utils/AudioTsuki';
 import HistoryLayer from '../layers/HistoryLayer';
 import { Background, Character, Choice, Line, Page } from '../types';
-import { fetchChoices, fetchGoToNextScene, fetchScene } from '../utils/utils';
+import { fetchChoices, fetchGoToNextScene, fetchScene, addEventListener } from '../utils/utils';
 import ChoicesLayer from '../layers/ChoicesLayer';
 import CharactersLayer from '../layers/CharactersLayer';
 import TextLayer from '../layers/TextLayer';
@@ -89,12 +89,11 @@ const Window = () => {
   //on right click toggle display text
   useEffect(() => {
     const handleRightClick = (e: MouseEvent) => {
-      if (e.button === 2 && !state.dispHistory) {
+      if (e.button === 2 && !state.dispHistory && !state.dispChoices) {
         dispatch({ type: 'SET_DISP_TEXT', payload: !state.dispText })
       }
     }
-    window.addEventListener('mousedown', handleRightClick)
-    return () => window.removeEventListener('mousedown', handleRightClick)
+    return addEventListener({event: 'mousedown', handler: handleRightClick})
   })
 
   //on press enter, go to next line
@@ -107,8 +106,7 @@ const Window = () => {
         nextLine()
       }
     }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    return addEventListener({event: 'keydown', handler: handleKeyDown})
   })
 
   //go to next line that starts with `

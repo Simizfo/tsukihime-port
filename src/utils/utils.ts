@@ -103,3 +103,8 @@ export const fetchGoToNextScene = async (sceneNumber: number):Promise<number> =>
 
   return goToNextScene
 }
+
+export const addEventListener = ({event, handler, element = window}: any) => {
+  element.addEventListener(event, handler)
+  return () => element.removeEventListener(event, handler)
+}
