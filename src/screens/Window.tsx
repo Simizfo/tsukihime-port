@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import '../styles/game.scss';
 import straliasJson from '../assets/game/stralias.json';
 import AudioTsuki from '../utils/AudioTsuki';
@@ -9,16 +9,17 @@ import ChoicesLayer from '../layers/ChoicesLayer';
 import CharactersLayer from '../layers/CharactersLayer';
 import TextLayer from '../layers/TextLayer';
 import BackgroundLayer from '../layers/BackgroundLayer';
+import { store } from '../context/GameContext';
 
 const wave = new AudioTsuki()
 const FIRST_SCENE = 20
 
 const Window = () => {
-  const [sceneNumber, setSceneNumber] = useState(21) //20
+  const { state, dispatch } = useContext(store)
+  const [sceneNumber, setSceneNumber] = useState(21)
   const [scene, setScene] = useState<string[]>([])
   const [choices, setChoices] = useState<Choice[]>([])
   const [displayChoices, setDisplayChoices] = useState(false)
-  const [displayText, setDisplayText] = useState(true)
   const [index, setIndex] = useState(0) //line
   const [text, setText] = useState<Line[]>([]) //current text
   const [history, setHistory] = useState<Line[]>([])
@@ -89,8 +90,8 @@ const Window = () => {
   //on right click toggle display text
   useEffect(() => {
     const handleRightClick = (e: MouseEvent) => {
-      if (e.button === 2) { //TODO && !displayHistory avec le contexte
-        setDisplayText(!displayText)
+      if (e.button === 2 && !state.dispHistory) {
+        dispatch({ type: 'SET_DISP_TEXT', payload: !state.dispText })
       }
     }
     window.addEventListener('mousedown', handleRightClick)
@@ -206,7 +207,7 @@ const Window = () => {
 
       <CharactersLayer characters={characters} />
 
-      <TextLayer text={text} handleClick={handleClick} displayText={displayText} />
+      <TextLayer text={text} handleClick={handleClick} />
 
       {displayChoices &&
         <ChoicesLayer choices={choices} setNewScene={setNewScene} />

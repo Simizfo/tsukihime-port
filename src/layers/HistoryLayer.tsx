@@ -5,20 +5,19 @@ type Props = {
   text: Line[],
 }
 
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { Line, Page } from "../types";
 import { store } from "../context/GameContext";
 
 const HistoryLayer = ({ pages, text }: Props) => {
-  const [displayHistory, setDisplayHistory] = useState(false)
+  const { state, dispatch } = useContext(store)
   const historyRef = useRef<HTMLDivElement>(null)
-  const { state } = useContext(store)
 
   //if right click and history is displayed, hide history
   useEffect(() => {
     const handleContextMenu = (e: MouseEvent) => {
-      if (displayHistory) {
-        setDisplayHistory(false)
+      if (state.dispHistory) {
+        dispatch({ type: 'SET_DISP_HISTORY', payload: false })
       }
     }
     window.addEventListener('contextmenu', handleContextMenu)
@@ -30,8 +29,8 @@ const HistoryLayer = ({ pages, text }: Props) => {
   //on mouse wheel up display history
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
-      if (e.deltaY < 0 && !displayHistory && pages.length !== 0) {
-        setDisplayHistory(true)
+      if (e.deltaY < 0 && !state.dispHistory && pages.length !== 0) {
+        dispatch({ type: 'SET_DISP_HISTORY', payload: true })
       }
     }
     window.addEventListener('wheel', handleWheel)
@@ -45,7 +44,7 @@ const HistoryLayer = ({ pages, text }: Props) => {
     const handleScroll = (e: any) => {
       const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight
       if (bottom) {
-        setDisplayHistory(false)
+        dispatch({ type: 'SET_DISP_HISTORY', payload: false })
       }
     }
     const history = document.getElementById('history')
@@ -56,17 +55,21 @@ const HistoryLayer = ({ pages, text }: Props) => {
   })
 
   useEffect(() => {
-    if (displayHistory) {
+    dispatch({ type: 'SET_DISP_TEXT', payload: !state.dispText })
+  }, [state.dispHistory])
+
+  useEffect(() => {
+    if (state.dispHistory) {
       const historyElement = historyRef.current
       historyElement!.scrollTop = historyElement!.scrollHeight - historyElement!.clientHeight - 1
     }
-  }, [pages, text, displayHistory])
+  }, [pages, text, state.dispHistory])
 
   //if a left click is made outside #history, hide history
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
-      if (e.button === 0 && displayHistory && !historyRef.current?.contains(e.target as Node)) {
-        setDisplayHistory(false)
+      if (e.button === 0 && state.dispHistory && !historyRef.current?.contains(e.target as Node)) {
+        dispatch({ type: 'SET_DISP_HISTORY', payload: false })
       }
     }
     window.addEventListener('mousedown', handleClick)
@@ -76,7 +79,7 @@ const HistoryLayer = ({ pages, text }: Props) => {
   })
 
   return (
-    <div className={`box-history ${displayHistory ? "show" : ""}`}>
+    <div className={`box-history ${state.dispHistory ? "show" : ""}`}>
       <div className="box-text" id="history" ref={historyRef}>
         <div className="text-container">
           {/* lignes des pages précédentes */}
