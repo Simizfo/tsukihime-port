@@ -97,6 +97,9 @@ body {
             margin: 0 auto;
         }
 
+        span {
+            overflow-wrap: break-word;
+        }
         .cursor {
             width: 20px;
             height: 20px;
