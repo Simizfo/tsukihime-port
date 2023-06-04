@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, Menu } from 'electron'
 import path from 'node:path'
 
 process.env.DIST = path.join(__dirname, '../dist')
@@ -33,6 +33,29 @@ function createWindow() {
 
   //open devtools
   win.webContents.openDevTools()
+
+  createMenu()
+}
+
+function createMenu() {
+  const template = [
+    {
+      label: 'Reload',
+      accelerator: 'CmdOrCtrl+R',
+      click: function () {
+        win?.webContents.reload()
+      }
+    },
+    {
+      label: 'Toggle DevTools',
+      accelerator: 'Alt+CmdOrCtrl+I',
+      click: function () {
+        win?.webContents.toggleDevTools()
+      }
+    },
+  ]
+  const menu = Menu.buildFromTemplate(template)
+  Menu.setApplicationMenu(menu)
 }
 
 app.on('window-all-closed', () => {
