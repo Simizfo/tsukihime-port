@@ -5,12 +5,14 @@ type Props = {
   text: Line[],
 }
 
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { Line, Page } from "../types";
+import { store } from "../context/GameContext";
 
 const HistoryLayer = ({ pages, text }: Props) => {
   const [displayHistory, setDisplayHistory] = useState(false)
-  const historyRef = useRef<HTMLDivElement>(null);;
+  const historyRef = useRef<HTMLDivElement>(null)
+  const { state } = useContext(store)
 
   //if right click and history is displayed, hide history
   useEffect(() => {

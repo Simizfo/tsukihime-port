@@ -1,14 +1,15 @@
 import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/electron-vite.animate.svg'
 import './styles/App.css'
 import Window from './screens/Window'
 import "./assets/fonts/Ubuntu-Regular.ttf"
+import { StateProvider } from './context/GameContext'
 
 function App() {
 
   return (
-    <Window />
+    <StateProvider>
+      <Window />
+    </StateProvider>
   )
 }
 
