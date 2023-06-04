@@ -156,7 +156,7 @@ const Window = () => {
         foundWave(line)
         break;
       case 'waveloop':
-        foundWaveLoop(line)
+        foundWaveloop(line)
         break;
       case 'wavestop':
         foundWavestop(line)
@@ -186,7 +186,7 @@ const Window = () => {
       new AudioTsuki(STRALIAS_JSON[waveStr])
     }
 
-    function foundWaveLoop(line: string) {
+    function foundWaveloop(line: string) {
       let waveStr = line.split(' ')[1]
       waveStr = STRALIAS_JSON[waveStr]
       // wave.handleAudio("play")
@@ -202,8 +202,8 @@ const Window = () => {
       setText(newText)
     }
 
+    //add sprite
     function foundLd(line: string) {
-      //ld c,":a;image\tachi\stk_t01.jpg",%type_lshutter_fst
       const characterTmp: Character = {
         image: line.split(',')[1].split('"')[1].split(':a;')[1].replace('image\\tachi\\', '').replace('.jpg', ''),
         type: line.split(',')[2].replace('%', ''),
@@ -221,6 +221,7 @@ const Window = () => {
       }
     }
 
+    //remove sprite
     function foundCl(line: string) {
       const pos = line.split(',')[0].replace('cl ', '')
       const newCharacters = characters.filter((c: Character) => c.pos !== pos)

@@ -30,7 +30,7 @@ const LineComponent = ({ line, printInstantly, isLastLine }: Props) => {
 
       return () => clearInterval(interval)
     }
-  }, [printInstantly])
+  }, [line, printInstantly])
 
   const isLastLineOfPage = line.line.endsWith('\\');
 
