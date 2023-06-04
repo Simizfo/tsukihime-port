@@ -67,7 +67,7 @@ const HistoryLayer = ({ pages, text }: Props) => {
   }, [state.dispHistory])
 
   return (
-    <div className={`box-history ${state.dispHistory ? "show" : ""}`}>
+    <div className={`box box-history ${state.dispHistory ? "show" : ""}`}>
       <div className="box-text" id="history" ref={historyRef}>
         <div className="text-container">
           {/* lignes des pages précédentes */}

@@ -4,6 +4,7 @@ type State = {
   dispText: boolean,
   dispHistory: boolean,
   dispChoices: boolean,
+  dispMenu: boolean,
 }
 type StateProviderProps = {
   children: React.ReactNode
@@ -13,6 +14,7 @@ const initialState = {
   dispText: true,
   dispHistory: false,
   dispChoices: false,
+  dispMenu: false,
 }
 
 const store = createContext<{ state: State; dispatch: React.Dispatch<any> }>({
@@ -38,6 +40,11 @@ const [state, dispatch] = useReducer((curState: State, action: any) => {
         return {
           ...curState,
           dispChoices: action.payload
+        }
+      case 'SET_DISP_MENU' :
+        return {
+          ...curState,
+          dispMenu: action.payload
         }
       default:
         throw new Error()

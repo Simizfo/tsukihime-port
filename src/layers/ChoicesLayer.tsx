@@ -7,7 +7,7 @@ type Props = {
 
 const ChoicesLayer = ({ choices, setNewScene }: Props) => {
   return (
-    <div className="box-choices">
+    <div className="box box-choices">
       <div className="choices-container">
         {choices.map((choice: Choice, i:any) =>
           <button key={i} className="choice" onClick={() => setNewScene(choice.f)}>
