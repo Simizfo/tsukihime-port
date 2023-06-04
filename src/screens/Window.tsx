@@ -3,7 +3,7 @@ import '../styles/game.scss';
 import straliasJson from '../assets/game/stralias.json';
 import AudioTsuki from '../utils/AudioTsuki';
 import HistoryLayer from '../layers/HistoryLayer';
-import { Character, Choice, Line, Page } from '../types';
+import { Background, Character, Choice, Line, Page } from '../types';
 import { fetchChoices, fetchGoToNextScene, fetchScene } from '../utils/utils';
 import ChoicesLayer from '../layers/ChoicesLayer';
 import CharactersLayer from '../layers/CharactersLayer';
@@ -24,7 +24,7 @@ const Window = () => {
   const [text, setText] = useState<Line[]>([]) //current text
   const [history, setHistory] = useState<Line[]>([])
   const [pages, setPages] = useState<Page[]>([])
-  const [bg, setBg] = useState('')
+  const [bg, setBg] = useState<Background>({ image: '', type: ''})
   const [characters, setCharacters] = useState<Character[]>([])
 
   useEffect(() => {
@@ -157,8 +157,11 @@ const Window = () => {
 
   const processLine = (line: string) => {
     if (line.startsWith('bg ')) { //background
-      let bg = line.split('"')[1]
-      setBg(bg)
+      const bgTmp: Background = {
+        image: line.split('"')[1],
+        type: line.split(',')[1].replace('%', '')
+      }
+      setBg(bgTmp)
     } else if (line.startsWith('waveloop ')) { //loop wave
       let waveStr = line.split(' ')[1]
       waveStr = JSON.parse(JSON.stringify(straliasJson))[waveStr]
@@ -166,25 +169,25 @@ const Window = () => {
     } else if (line.startsWith('wavestop')) { //stop wave
       // wave.handleAudio("stop", false)
     } else if (line.startsWith('br')) { //saut de ligne
-      let newText = text
+      let newText: Line[] = text
       newText.push({ line: 'br' })
       setText(newText)
     } else if (line.startsWith('ld ')) { //ajoute un sprite personnage
       //ld c,":a;image\tachi\stk_t01.jpg",%type_lshutter_fst
-      let character:Character = {
+      let characterTmp: Character = {
         image: line.split(',')[1].split('"')[1].split(':a;')[1].replace('image\\tachi\\', '').replace('.jpg', ''),
         type: line.split(',')[2].replace('%', ''),
         pos: line.split(',')[0].replace('ld ', '')
       }
 
       //if there is already a character with the same position, replace it
-      const index = characters.findIndex((c: Character) => c.pos === character.pos)
+      const index = characters.findIndex((c: Character) => c.pos === characterTmp.pos)
       if (index !== -1) {
         const newCharacters = characters
-        newCharacters[index] = character
+        newCharacters[index] = characterTmp
         setCharacters(newCharacters)
       } else {
-        setCharacters([...characters, character])
+        setCharacters([...characters, characterTmp])
       }
     } else if (line.startsWith('cl ')) { //enlève un sprite personnage
       const pos = line.split(',')[0].replace('cl ', '')

@@ -1,10 +1,12 @@
+import { Background } from "../types"
+
 type Props = {
-  bg: string
+  bg: Background
 }
 
 const BackgroundLayer = ({ bg }: Props) => {
   return (
-    <img src={"/" + bg} alt="background" className="background" />
+    <img src={`/${bg.image}`} alt="background" className="background" />
   )
 }
 

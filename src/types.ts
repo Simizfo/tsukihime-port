@@ -17,3 +17,9 @@ export type Character = {
     type: string,
     pos: string, //r, l, c
 }
+
+//bg "image\bg\bg_05a.jpg",%type_lcartain_mid
+export type Background = {
+    image: string,
+    type: string,
+}
