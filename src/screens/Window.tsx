@@ -22,7 +22,6 @@ const Window = () => {
   const [choices, setChoices] = useState<Choice[]>([])
   const [index, setIndex] = useState(0) //line
   const [text, setText] = useState<Line[]>([]) //current text
-  const [history, setHistory] = useState<Line[]>([])
   const [pages, setPages] = useState<Page[]>([])
   const [bg, setBg] = useState<Background>({ image: '', type: ''})
   const [characters, setCharacters] = useState<Character[]>([])
@@ -61,7 +60,6 @@ const Window = () => {
       let newText: Line[] = []
       newText[0] = { line: scene[i], lineHasEnded: lineHasEnded, read: true }
       setText(newText)
-      setHistory([...history, newText[0]])
     }
   }, [scene])
 
@@ -137,7 +135,7 @@ const Window = () => {
     let newText: Line[] = text
 
     //if last line in history ends with \, reset text and add the page to pages
-    const lastLine: string = history[history.length - 1].line
+    const lastLine: string = text[text.length - 1].line
     if (lastLine !== undefined && lastLine[lastLine.length - 1] === '\\') {
       setPages([...pages, text])
       newText = []
@@ -146,7 +144,6 @@ const Window = () => {
     const newLine = { line: scene[i], lineHasEnded: lineHasEnded, read: true }
     newText.push(newLine)
     setText(newText)
-    setHistory([...history, newLine])
   }
 
   const processLine = (line: string) => {
