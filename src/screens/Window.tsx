@@ -19,7 +19,6 @@ const Window = () => {
   const [sceneNumber, setSceneNumber] = useState(21)
   const [scene, setScene] = useState<string[]>([])
   const [choices, setChoices] = useState<Choice[]>([])
-  const [displayChoices, setDisplayChoices] = useState(false)
   const [index, setIndex] = useState(0) //line
   const [text, setText] = useState<Line[]>([]) //current text
   const [history, setHistory] = useState<Line[]>([])
@@ -44,7 +43,7 @@ const Window = () => {
       let i = index
       do {
         if (scene[i] === "return") {
-          setDisplayChoices(true)
+          dispatch({ type: 'SET_DISP_CHOICES', payload: true })
           return
         }
         processLine(scene[i])
@@ -73,14 +72,14 @@ const Window = () => {
     setScene(sceneTmp)
     const choicesTmp = await fetchChoices(sceneNumber)
     setChoices(choicesTmp)
-    setDisplayChoices(false)
+    dispatch({ type: 'SET_DISP_CHOICES', payload: false })
   }
 
   useEffect(() => {
-    if (choices.length === 0 && displayChoices) {
+    if (choices.length === 0 && state.dispChoices) {
       goToNextScene()
     }
-  }, [displayChoices])
+  }, [state.dispChoices])
 
   const goToNextScene = async () => {
     const nextScene = await fetchGoToNextScene(sceneNumber)
@@ -95,9 +94,7 @@ const Window = () => {
       }
     }
     window.addEventListener('mousedown', handleRightClick)
-    return () => {
-      window.removeEventListener('mousedown', handleRightClick)
-    }
+    return () => window.removeEventListener('mousedown', handleRightClick)
   })
 
   //on press enter, go to next line
@@ -111,9 +108,7 @@ const Window = () => {
       }
     }
     window.addEventListener('keydown', handleKeyDown)
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown)
-    }
+    return () => window.removeEventListener('keydown', handleKeyDown)
   })
 
   //go to next line that starts with `
@@ -124,7 +119,7 @@ const Window = () => {
     if (text[text.length - 1].lineHasEnded) {
       do {
         if (scene[i] === "return") {
-          setDisplayChoices(true)
+          dispatch({ type: 'SET_DISP_CHOICES', payload: true })
           return
         }
         processLine(scene[i])
@@ -197,7 +192,7 @@ const Window = () => {
   }
 
   const handleClick = () => {
-    if (!displayChoices) {
+    if (!state.dispChoices) {
       nextLine()
     }
   }
@@ -212,7 +207,7 @@ const Window = () => {
 
       <TextLayer text={text} handleClick={handleClick} />
 
-      {displayChoices &&
+      {state.dispChoices &&
         <ChoicesLayer choices={choices} setNewScene={setNewScene} />
       }
     </div>

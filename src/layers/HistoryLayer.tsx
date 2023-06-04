@@ -21,9 +21,7 @@ const HistoryLayer = ({ pages, text }: Props) => {
       }
     }
     window.addEventListener('contextmenu', handleContextMenu)
-    return () => {
-      window.removeEventListener('contextmenu', handleContextMenu)
-    }
+    return () => window.removeEventListener('contextmenu', handleContextMenu)
   })
 
   //on mouse wheel up display history
@@ -34,9 +32,7 @@ const HistoryLayer = ({ pages, text }: Props) => {
       }
     }
     window.addEventListener('wheel', handleWheel)
-    return () => {
-      window.removeEventListener('wheel', handleWheel)
-    }
+    return () => window.removeEventListener('wheel', handleWheel)
   })
 
   //on scroll bottom in history, hide history
@@ -49,9 +45,7 @@ const HistoryLayer = ({ pages, text }: Props) => {
     }
     const history = document.getElementById('history')
     history?.addEventListener('scroll', handleScroll)
-    return () => {
-      history?.removeEventListener('scroll', handleScroll)
-    }
+    return () => history?.removeEventListener('scroll', handleScroll)
   })
 
   useEffect(() => {
@@ -73,9 +67,7 @@ const HistoryLayer = ({ pages, text }: Props) => {
       }
     }
     window.addEventListener('mousedown', handleClick)
-    return () => {
-      window.removeEventListener('mousedown', handleClick)
-    }
+    return () => window.removeEventListener('mousedown', handleClick)
   })
 
   return (
@@ -96,8 +88,8 @@ const HistoryLayer = ({ pages, text }: Props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 
 export default HistoryLayer

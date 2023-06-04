@@ -6,7 +6,7 @@ type Props = {
 
 const BackgroundLayer = ({ bg }: Props) => {
   return (
-    <img src={`/${bg.image}`} alt="background" className="background" />
+    <img src={`/${bg.image}`} alt="background" className="background" draggable={false} />
   )
 }
 
