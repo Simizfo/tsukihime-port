@@ -1,30 +1,19 @@
 export default class AudioTsuki {
     audio: HTMLAudioElement;
+    loop: boolean;
     
-    constructor() {
-        this.audio = new Audio();
-    }
-
-    //add a new audio
-    addWave(wave: string, loop: boolean) {
-        this.audio.src = wave;
+    constructor(audio: string, loop: boolean = false) {
+        this.audio = new Audio(audio);
         this.audio.play();
-
-        if (loop) {
-            this.audio.loop = true;
-        }
+        this.loop = loop;
     }
 
     //play or stop audio
-    handleAudio(action: string, loop: boolean) {
+    handleAudio(action: string) {
         if (action === "play") {
             this.audio.play();
         } else if (action === "stop") {
             this.audio.pause();
-        }
-
-        if (loop) {
-            this.audio.loop = true;
         }
     }
 }

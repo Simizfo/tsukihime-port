@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
 import '../styles/game.scss';
-import straliasJson from '../assets/game/stralias.json';
 import AudioTsuki from '../utils/AudioTsuki';
 import HistoryLayer from '../layers/HistoryLayer';
 import { Background, Character, Choice, Line, Page } from '../types';
@@ -11,8 +10,8 @@ import TextLayer from '../layers/TextLayer';
 import BackgroundLayer from '../layers/BackgroundLayer';
 import { store } from '../context/GameContext';
 import MenuLayer from '../layers/MenuLayer';
+import { STRALIAS_JSON } from '../utils/constants';
 
-const wave = new AudioTsuki()
 const FIRST_SCENE = 20
 
 const Window = () => {
@@ -147,25 +146,65 @@ const Window = () => {
   }
 
   const processLine = (line: string) => {
-    if (line.startsWith('bg ')) { //background
+    const prefix = line.split(' ')[0];
+
+    switch(prefix) {
+      case 'bg':
+        foundBackground(line)
+        break;
+      case 'wave':
+        foundWave(line)
+        break;
+      case 'waveloop':
+        foundWaveLoop(line)
+        break;
+      case 'wavestop':
+        foundWavestop(line)
+        break;
+      case 'br':
+        foundBr()
+        break;
+      case 'ld':
+        foundLd(line)
+        break;
+      case 'cl':
+        foundCl(line)
+        break;
+    }
+    
+    function foundBackground(line: string) {
       const bgTmp: Background = {
         image: line.split('"')[1],
         type: line.split(',')[1].replace('%', '')
       }
       setBg(bgTmp)
-    } else if (line.startsWith('waveloop ')) { //loop wave
+    }
+
+    function foundWave(line: string) {
+      // wave se0
       let waveStr = line.split(' ')[1]
-      waveStr = JSON.parse(JSON.stringify(straliasJson))[waveStr]
-      // wave.addWave(waveStr, true)
-    } else if (line.startsWith('wavestop')) { //stop wave
-      // wave.handleAudio("stop", false)
-    } else if (line.startsWith('br')) { //saut de ligne
-      let newText: Line[] = text
+      new AudioTsuki(STRALIAS_JSON[waveStr])
+    }
+
+    function foundWaveLoop(line: string) {
+      let waveStr = line.split(' ')[1]
+      waveStr = STRALIAS_JSON[waveStr]
+      // wave.handleAudio("play")
+    }
+
+    function foundWavestop(line: string) {
+      // wave.handleAudio("stop")
+    }
+
+    function foundBr() {
+      const newText: Line[] = text
       newText.push({ line: 'br' })
       setText(newText)
-    } else if (line.startsWith('ld ')) { //ajoute un sprite personnage
+    }
+
+    function foundLd(line: string) {
       //ld c,":a;image\tachi\stk_t01.jpg",%type_lshutter_fst
-      let characterTmp: Character = {
+      const characterTmp: Character = {
         image: line.split(',')[1].split('"')[1].split(':a;')[1].replace('image\\tachi\\', '').replace('.jpg', ''),
         type: line.split(',')[2].replace('%', ''),
         pos: line.split(',')[0].replace('ld ', '')
@@ -180,7 +219,9 @@ const Window = () => {
       } else {
         setCharacters([...characters, characterTmp])
       }
-    } else if (line.startsWith('cl ')) { //enlève un sprite personnage
+    }
+
+    function foundCl(line: string) {
       const pos = line.split(',')[0].replace('cl ', '')
       const newCharacters = characters.filter((c: Character) => c.pos !== pos)
       setCharacters(newCharacters)
