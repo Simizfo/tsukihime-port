@@ -53,6 +53,17 @@ function createMenu() {
         win?.webContents.toggleDevTools()
       }
     },
+    {
+      label: 'Help',
+      submenu: [
+        {
+          label: 'GitHub',
+          click: function () {
+            require('electron').shell.openExternal('https://github.com/requinDr/tsukihime-port')
+          }
+        }
+      ]
+    }
   ]
   const menu = Menu.buildFromTemplate(template)
   Menu.setApplicationMenu(menu)

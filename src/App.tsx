@@ -13,7 +13,7 @@ function App() {
     <StateProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navigate to="/title" />} />
+          <Route path="/" element={<Navigate to="/window" />} /> {/* nav to title latter in prod */}
           <Route path="/title" element={<TitleMenuScreen />} />
           <Route path="/window" element={<Window />} />
         </Routes>
