@@ -1,6 +1,7 @@
 import { useContext, useEffect, useRef } from "react"
 import { store } from "../context/GameContext"
 import { addEventListener } from "../utils/utils"
+import { useNavigate } from "react-router-dom"
 
 /**
  * TODO
@@ -11,6 +12,7 @@ import { addEventListener } from "../utils/utils"
  */
 const MenuLayer = () => {
   const { state, dispatch } = useContext(store)
+  const navigate = useNavigate()
   const menuRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -36,6 +38,7 @@ const MenuLayer = () => {
   }
 
   const titleMenu = () => {
+    navigate('/')
   }
 
   const closeMenu = () => {
