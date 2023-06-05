@@ -86,9 +86,11 @@ const Window = () => {
     setNewScene(nextScene)
   }
 
-  //don't keep more than 20 pages, erase the oldest if needed
   useEffect(() => {
-
+    //limit history pages
+    if (pages.length > MAX_PAGES) {
+      setPages(pages.slice(1))
+    }
   }, [pages])
 
   //on press enter, go to next line
