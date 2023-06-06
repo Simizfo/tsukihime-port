@@ -15,15 +15,15 @@ const TextLayer = ({ text, handleClick }: Props) => {
   //on spacebar press toggle display text
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.code === 'Space' && !state.dispHistory && !state.dispChoices && !state.dispMenu) {
-        dispatch({ type: 'SET_DISP_TEXT', payload: !state.dispText })
+      if (e.code === 'Space' && !state.disp.history && !state.disp.choices && !state.disp.menu) {
+        dispatch({ type: 'SET_DISP_TEXT', payload: !state.disp.text })
       }
     }
     return addEventListener({event: 'keydown', handler: handleKeyDown})
   })
 
   return (
-    <div className={`box box-text ${state.dispText ? "" : "hide"}`} onClick={handleClick}>
+    <div className={`box box-text ${state.disp.text ? "" : "hide"}`} onClick={handleClick}>
       <div className="text-container">
         {text.map((line, i) =>
           <LineComponent key={`text_${i}`}

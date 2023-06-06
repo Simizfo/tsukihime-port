@@ -18,7 +18,7 @@ const MenuLayer = () => {
   useEffect(() => {
     //if a left click is made outside the menu, hide it
     const handleClick = (e: MouseEvent) => {
-      if (e.button === 0 && state.dispMenu && !menuRef.current?.contains(e.target as Node)) {
+      if (e.button === 0 && state.disp.menu && !menuRef.current?.contains(e.target as Node)) {
         dispatch({ type: 'SET_DISP_MENU', payload: false })
       }
     }
@@ -45,14 +45,32 @@ const MenuLayer = () => {
     dispatch({ type: 'SET_DISP_MENU', payload: false })
   }
 
+  const quickSave = () => {
+    localStorage.setItem('game', JSON.stringify(state.game))
+    alert('Game saved!')
+  }
+
+  const quickLoad = () => {
+    const game = localStorage.getItem('game')
+    if (game) {
+      dispatch({ type: 'SET_GAME', payload: JSON.parse(game) })
+    }
+  }
+
   return (
-    <nav className={`box box-menu ${state.dispMenu ? "show" : ""}`}>
+    <nav className={`box box-menu ${state.disp.menu ? "show" : ""}`}>
       <div className="menu-container" ref={menuRef}>
         <button onClick={graphicMode}>
           Graphics
         </button>
         <button onClick={historyMode}>
           History
+        </button>
+        <button onClick={quickSave}>
+          Quick save
+        </button>
+        <button onClick={quickLoad}>
+          Quick load
         </button>
         <button onClick={titleMenu}>
           Title menu

@@ -10,18 +10,16 @@ import TextLayer from '../layers/TextLayer';
 import BackgroundLayer from '../layers/BackgroundLayer';
 import { store } from '../context/GameContext';
 import MenuLayer from '../layers/MenuLayer';
-import { STRALIAS_JSON } from '../utils/constants';
+import { HISTORY_MAX_PAGES, STRALIAS_JSON } from '../utils/constants';
 
-const FIRST_SCENE = 20
-const MAX_PAGES = 20
 const playing_track = new AudioTsuki()
 
 const Window = () => {
   const { state, dispatch } = useContext(store)
-  const [sceneNumber, setSceneNumber] = useState(402)
+  const [sceneNumber, setSceneNumber] = useState(state.game.scene)
   const [scene, setScene] = useState<string[]>([])
   const [choices, setChoices] = useState<Choice[]>([])
-  const [index, setIndex] = useState(0) //line
+  const [index, setIndex] = useState(state.game.index) //line
   const [text, setText] = useState<Line[]>([]) //current text
   const [pages, setPages] = useState<Page[]>([])
   const [bg, setBg] = useState<Background>({ image: '', type: ''})
@@ -76,10 +74,10 @@ const Window = () => {
   }
 
   useEffect(() => {
-    if (choices.length === 0 && state.dispChoices) {
+    if (choices.length === 0 && state.disp.choices) {
       goToNextScene()
     }
-  }, [state.dispChoices])
+  }, [state.disp.choices])
 
   const goToNextScene = async () => {
     const nextScene = await fetchGoToNextScene(sceneNumber)
@@ -88,7 +86,7 @@ const Window = () => {
 
   useEffect(() => {
     //limit history pages
-    if (pages.length > MAX_PAGES) {
+    if (pages.length > HISTORY_MAX_PAGES) {
       setPages(pages.slice(1))
     }
   }, [pages])
@@ -109,17 +107,15 @@ const Window = () => {
   //on right click disp menu
   useEffect(() => {
     const handleContextMenu = (e: MouseEvent) => {
-      if (e.button === 2 && !state.dispHistory) {
-        dispatch({ type: 'SET_DISP_MENU', payload: !state.dispMenu })
+      if (e.button === 2 && !state.disp.history) {
+        dispatch({ type: 'SET_DISP_MENU', payload: !state.disp.menu })
       }
     }
     return addEventListener({event: 'contextmenu', handler: handleContextMenu})
   })
   
   //go to next line that starts with `
-  const nextLine = () => {
-    let i = index
-
+  const nextLine = (i = index) => {
     //check if previous line has ended
     if (text[text.length - 1].lineHasEnded) {
       do {
@@ -255,7 +251,7 @@ const Window = () => {
   }
 
   const handleClick = () => {
-    if (!state.dispChoices) {
+    if (!state.disp.choices) {
       nextLine()
     }
   }
@@ -270,7 +266,7 @@ const Window = () => {
 
       <TextLayer text={text} handleClick={handleClick} />
 
-      {state.dispChoices &&
+      {state.disp.choices &&
         <ChoicesLayer choices={choices} setNewScene={setNewScene} />
       }
 

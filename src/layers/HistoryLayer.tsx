@@ -16,7 +16,7 @@ const HistoryLayer = ({ pages, text }: Props) => {
   useEffect(() => {
     //on mouse wheel up display history
     const handleWheel = (e: WheelEvent) => {
-      if (e.deltaY < 0 && !state.dispHistory && !state.dispMenu && pages.length !== 0) {
+      if (e.deltaY < 0 && !state.disp.history && !state.disp.menu && pages.length !== 0) {
         dispatch({ type: 'SET_DISP_HISTORY', payload: true })
       }
     }
@@ -26,7 +26,7 @@ const HistoryLayer = ({ pages, text }: Props) => {
   useEffect(() => {
     //on right click, when history is displayed, hide history
     const handleContextMenu = (e: MouseEvent) => {
-      if (state.dispHistory) {
+      if (state.disp.history) {
         dispatch({ type: 'SET_DISP_HISTORY', payload: false })
       }
     }
@@ -36,7 +36,7 @@ const HistoryLayer = ({ pages, text }: Props) => {
   useEffect(() => {
     //if a left click is made outside #history, hide history
     const handleClick = (e: MouseEvent) => {
-      if (e.button === 0 && state.dispHistory && !historyRef.current?.contains(e.target as Node)) {
+      if (e.button === 0 && state.disp.history && !historyRef.current?.contains(e.target as Node)) {
         dispatch({ type: 'SET_DISP_HISTORY', payload: false })
       }
     }
@@ -55,19 +55,19 @@ const HistoryLayer = ({ pages, text }: Props) => {
   })
 
   useEffect(() => {
-    dispatch({ type: 'SET_DISP_TEXT', payload: !state.dispHistory })
-  }, [state.dispHistory])
+    dispatch({ type: 'SET_DISP_TEXT', payload: !state.disp.history })
+  }, [state.disp.history])
 
   useEffect(() => {
     //scroll to the bottom of history
-    if (state.dispHistory) {
+    if (state.disp.history) {
       const historyElement = historyRef.current
       historyElement!.scrollTop = historyElement!.scrollHeight - historyElement!.clientHeight - 1
     }
-  }, [state.dispHistory])
+  }, [state.disp.history])
 
   return (
-    <div className={`box box-history ${state.dispHistory ? "show" : ""}`}>
+    <div className={`box box-history ${state.disp.history ? "show" : ""}`}>
       <div className="box-text" id="history" ref={historyRef}>
         <div className="text-container">
           {/* lignes des pages précédentes */}
