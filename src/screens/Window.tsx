@@ -16,7 +16,7 @@ const playing_track = new AudioManager()
 
 const Window = () => {
   const { state, dispatch } = useContext(store)
-  const [sceneNumber, setSceneNumber] = useState(374)
+  const [sceneNumber, setSceneNumber] = useState(20)
   const [scene, setScene] = useState<string[]>([])
   const [choices, setChoices] = useState<Choice[]>([])
   const [index, setIndex] = useState(state.game.index) //line
