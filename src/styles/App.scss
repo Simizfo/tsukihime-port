@@ -95,6 +95,7 @@ img {
         grid-template-columns: 2fr 1fr;
         gap: 2em;
         height: calc(100% - 48px);
+        max-height: 660px;
     }
 
     .gallery-container {
@@ -165,7 +166,7 @@ img {
         color: var(--text-color);
         text-shadow: 0 0 2px black;
         position: fixed;
-        bottom: 1em;
+        bottom: max(1em, 4vh);
 
         &:hover {
             cursor: pointer;
@@ -177,6 +178,7 @@ img {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 200px;
             gap: 1em;
+            max-height: none;
         }
 
         .gallery-container {
