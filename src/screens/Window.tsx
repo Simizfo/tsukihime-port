@@ -26,15 +26,8 @@ const Window = () => {
   const [characters, setCharacters] = useState<Character[]>([])
 
   useEffect(() => {
-    init()
+    setNewScene(sceneNumber)
   }, [])
-
-  const init = async () => {
-    const sceneTmp = await fetchScene(sceneNumber)
-    setScene(sceneTmp)
-    const choicesTmp = await fetchChoices(sceneNumber)
-    setChoices(choicesTmp)
-  }
 
   useEffect(() => {
     if (scene.length !== 0) nextLine()
@@ -105,8 +98,8 @@ const Window = () => {
     
     let newText: Line[] = text
 
-    const previousLine = text[text.length - 1]?.line
-    if (previousLine?.endsWith('\\')) { // reset text and add the page to pages
+    const previousLine = text[text.length - 1]
+    if (previousLine?.line.endsWith('\\')) { // reset text and add the page to pages
       setPages([...pages, text])
       newText = []
     }
@@ -199,13 +192,13 @@ const Window = () => {
 
       //if there is already a character with the same position, replace it
       const index = characters.findIndex((c: Character) => c.pos === characterTmp.pos)
+      const newCharacters = [...characters]
       if (index !== -1) {
-        const newCharacters = characters
         newCharacters[index] = characterTmp
-        setCharacters(newCharacters)
       } else {
-        setCharacters([...characters, characterTmp])
+        newCharacters.push(characterTmp)
       }
+      setCharacters(newCharacters)
     }
 
     //remove sprite
