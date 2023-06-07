@@ -57,55 +57,59 @@ const GalleryScreen = () => {
 
   return (
     <div id="gallery">
-      <img src={titleMenuBg} alt="title menu" className="bg-image" />
+      <div className="page-content">
+        <img src={titleMenuBg} alt="title menu" className="bg-image" />
 
-      <main>
-        <div className='gallery-container'>
-          {images.map((eventImage, i) => (
-            <img key={eventImage + i} src={`/image/event/${eventImage}.jpg`} alt="event" draggable={false} />
-          ))}
-        </div>
+        <h2 className="title">Gallery</h2>
 
-        <div className="gallery-char-container">
-          <GalleryCharComponent
-            character={CHARACTERS.arcueid}
-            background='/image/event/ark_e02.jpg'
-            selected={selected}
-            handleSelected={handleSelected} />
+        <main>
+          <div className='gallery-container'>
+            {images.map((eventImage, i) => (
+              <img key={eventImage + i} src={`/image/event/${eventImage}.jpg`} alt="event" draggable={false} />
+            ))}
+          </div>
 
-          <GalleryCharComponent
-            character={CHARACTERS.ciel}
-            background='/image/event/cel_e02a.jpg'
-            selected={selected}
-            handleSelected={handleSelected} />
+          <div className="gallery-char-container">
+            <GalleryCharComponent
+              character={CHARACTERS.arcueid}
+              background='/image/event/ark_e02.jpg'
+              selected={selected}
+              handleSelected={handleSelected} />
 
-          <GalleryCharComponent
-            character={CHARACTERS.akiha}
-            background='/image/event/aki_e07a.jpg'
-            selected={selected}
-            handleSelected={handleSelected} />
+            <GalleryCharComponent
+              character={CHARACTERS.ciel}
+              background='/image/event/cel_e02a.jpg'
+              selected={selected}
+              handleSelected={handleSelected} />
 
-          <GalleryCharComponent
-            character={CHARACTERS.kohaku}
-            background='/image/event/koha_e01a.jpg'
-            selected={selected}
-            handleSelected={handleSelected} />
+            <GalleryCharComponent
+              character={CHARACTERS.akiha}
+              background='/image/event/aki_e07a.jpg'
+              selected={selected}
+              handleSelected={handleSelected} />
 
-          <GalleryCharComponent
-            character={CHARACTERS.hisui}
-            background='/image/event/his_e04.jpg'
-            selected={selected}
-            handleSelected={handleSelected} />
+            <GalleryCharComponent
+              character={CHARACTERS.kohaku}
+              background='/image/event/koha_e01a.jpg'
+              selected={selected}
+              handleSelected={handleSelected} />
 
-          <GalleryCharComponent
-            character={CHARACTERS.others}
-            background='/image/bg/ima_07.jpg'
-            selected={selected}
-            handleSelected={handleSelected} />
-        </div>
-      </main>
+            <GalleryCharComponent
+              character={CHARACTERS.hisui}
+              background='/image/event/his_e04.jpg'
+              selected={selected}
+              handleSelected={handleSelected} />
 
-      <Link to="/title" className="back-button">Back</Link>
+            <GalleryCharComponent
+              character={CHARACTERS.others}
+              background='/image/bg/ima_07.jpg'
+              selected={selected}
+              handleSelected={handleSelected} />
+          </div>
+        </main>
+
+        <Link to="/title" className="back-button">Back</Link>
+      </div>
     </div>
   )
 }
