@@ -18,7 +18,7 @@ const TitleMenuScreen = () => {
           Quick load
         </Link>
 
-        <Link to="/" className="menu-item">
+        <Link to="/gallery" className="menu-item">
           Gallery
         </Link>
       </nav>
