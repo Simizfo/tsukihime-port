@@ -71,17 +71,19 @@ img {
     position: relative;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
 
     .gallery-container {
-        display: flex;
-        gap: .2em;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: .6em;
         margin: 1em;
+        overflow-y: scroll;
 
         img {
             display: block;
-            width: 160px;
-            height: 120px;
+            aspect-ratio: 4/3;
+            width: 100%;
             border-radius: 4px;
         }
     }
