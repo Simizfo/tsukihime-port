@@ -140,6 +140,9 @@ const Window = () => {
       case 'cl':
         foundCl(line)
         break
+      case 'waittimer':
+        foundWaittimer(line)
+        break
     }
     
     function foundBackground(line: string) {
@@ -206,6 +209,13 @@ const Window = () => {
       const pos = line.split(',')[0].replace('cl ', '')
       const newCharacters = characters.filter((c: Character) => c.pos !== pos)
       setCharacters(newCharacters)
+    }
+
+    function foundWaittimer(line: string) {
+      const time = line.split(' ')[1]
+      setTimeout(() => {
+        console.log('waittimer')
+      }, parseInt(time))
     }
   }
 
