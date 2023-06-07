@@ -63,9 +63,8 @@ const Window = () => {
   }
 
   useEffect(() => {
-    //limit history pages
     if (pages.length > HISTORY_MAX_PAGES) {
-      setPages(pages.slice(1))
+      setPages(pages.slice(1)) //limit history pages
     }
   }, [pages])
 
@@ -81,21 +80,11 @@ const Window = () => {
     }
     return addEventListener({event: 'keydown', handler: handleKeyDown})
   })
-
-  //on right click disp menu
-  useEffect(() => {
-    const handleContextMenu = (e: MouseEvent) => {
-      if (e.button === 2 && !state.disp.history) {
-        dispatch({ type: 'SET_DISP_MENU', payload: !state.disp.menu })
-      }
-    }
-    return addEventListener({event: 'contextmenu', handler: handleContextMenu})
-  })
   
   //go to next line that starts with `
   const nextLine = (i = index) => {
     //check if previous line has ended
-    if ((text[text.length - 1] && text[text.length - 1].lineHasEnded) || text.length === 0) {
+    if (text[text.length - 1]?.lineHasEnded || text.length === 0) {
       do {
         if (scene[i] === "return") {
           dispatch({ type: 'SET_DISP_CHOICES', payload: true })
@@ -103,31 +92,23 @@ const Window = () => {
         }
         processLine(scene[i])
         i++
-      } while (!scene[i].startsWith('`'))
+      } while (!scene[i]?.startsWith('`'))
     } else {
       i++
     }
     setIndex(i)
-
-
     setters(i)
   }
 
-  const setters = (i = index) => {
-    let lineHasEnded = true
-    if (scene[i + 1] !== undefined && scene[i + 1].startsWith(' ')) {
-      lineHasEnded = false
-    }
+  const setters = (i: number) => {
+    const lineHasEnded = !(scene[i + 1]?.startsWith(' '))
     
     let newText: Line[] = text
 
-    //if last line in history ends with \, reset text and add the page to pages
-    if (text[text.length - 1]) {
-      const lastLine: string = text[text.length - 1].line
-      if (lastLine !== undefined && lastLine[lastLine.length - 1] === '\\') {
-        setPages([...pages, text])
-        newText = []
-      }
+    const previousLine = text[text.length - 1]?.line
+    if (previousLine?.endsWith('\\')) { // reset text and add the page to pages
+      setPages([...pages, text])
+      newText = []
     }
 
     const newLine = { line: scene[i], lineHasEnded: lineHasEnded, read: true }

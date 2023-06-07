@@ -15,6 +15,16 @@ const MenuLayer = () => {
   const navigate = useNavigate()
   const menuRef = useRef<HTMLDivElement>(null)
 
+  //on right click disp menu
+  useEffect(() => {
+    const handleContextMenu = (e: MouseEvent) => {
+      if (e.button === 2 && !state.disp.history) {
+        dispatch({ type: 'SET_DISP_MENU', payload: !state.disp.menu })
+      }
+    }
+    return addEventListener({event: 'contextmenu', handler: handleContextMenu})
+  })
+  
   useEffect(() => {
     //if a left click is made outside the menu, hide it
     const handleClick = (e: MouseEvent) => {
