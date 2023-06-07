@@ -176,12 +176,12 @@ const Window = () => {
       playing_track.play()
       playing_track.setLoop(true)
       playing_track.setVolume(state.game.volume)
-      dispatch({ type: 'SET_GAME_TRACK', payload: track })
+      dispatch({ type: 'SET_GAME', payload: { ...state.game, track: track } })
     }
 
     function foundPlaystop() {
       playing_track.stop()
-      dispatch({ type: 'SET_GAME_TRACK', payload: '' })
+      dispatch({ type: 'SET_GAME', payload: { ...state.game, track: '' } })
     }
 
     function foundWave(line: string) {
