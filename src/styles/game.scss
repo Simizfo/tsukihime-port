@@ -250,18 +250,6 @@ body {
             bottom: 0;
             margin: auto;
             border-radius: 5px;
-
-            //scrollbar
-            &::-webkit-scrollbar {
-                width: 20px;
-            }
-            &::-webkit-scrollbar-track {
-                background: #44444440;
-            }
-            &::-webkit-scrollbar-thumb {
-                background: #a7a7a7;
-                border-radius: 4px;
-            }
         }
     }
 }
