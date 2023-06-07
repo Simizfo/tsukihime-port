@@ -42,6 +42,7 @@ export type ContextState = {
       hisui: number,
     },
     eventImages: string[],
-    track: string
+    track: string,
+    volume: number,
   }
 }

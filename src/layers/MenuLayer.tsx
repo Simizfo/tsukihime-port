@@ -68,6 +68,14 @@ const MenuLayer = () => {
     }
   }
 
+  const volume = () => {
+    if (state.game.volume === 0) {
+      dispatch({ type: 'SET_GAME', payload: { ...state.game, volume: 1 } })
+    } else {
+      dispatch({ type: 'SET_GAME', payload: { ...state.game, volume: 0 } })
+    }
+  }
+
   return (
     <nav className={`box box-menu ${state.disp.menu ? "show" : ""}`}>
       <div className="menu-container" ref={menuRef}>
@@ -88,6 +96,9 @@ const MenuLayer = () => {
         </button>
         <button onClick={closeMenu}>
           Close
+        </button>
+        <button onClick={volume}>
+          {state.game.volume === 0 ? 'Unmute' : 'Mute'}
         </button>
       </div>
     </nav>

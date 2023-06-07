@@ -22,7 +22,8 @@ export const initialContextState = {
       hisui: 0,
     },
     eventImages: [],
-    track: ""
+    track: "",
+    volume: 1,
   }
 }
 

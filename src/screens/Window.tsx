@@ -39,6 +39,10 @@ const Window = () => {
   }, [])
 
   useEffect(() => {
+    playing_track.setVolume(state.game.volume)
+  }, [state.game.volume])
+
+  useEffect(() => {
     if (scene.length !== 0) nextLine()
   }, [scene])
 
@@ -171,6 +175,7 @@ const Window = () => {
       playing_track.loadAudio(track)
       playing_track.play()
       playing_track.setLoop(true)
+      playing_track.setVolume(state.game.volume)
       dispatch({ type: 'SET_GAME_TRACK', payload: track })
     }
 
@@ -184,6 +189,7 @@ const Window = () => {
       let waveStr = line.split(' ')[1]
       const audio = new AudioManager()
       audio.loadAudio(STRALIAS_JSON[waveStr])
+      audio.setVolume(state.game.volume)
       audio.play()
     }
 

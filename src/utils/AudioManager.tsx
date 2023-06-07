@@ -49,5 +49,9 @@ export class AudioManager {
     setLoop(loop: boolean): void {
       this.audio.loop = loop;
     }
+
+    getAudio(): string {
+      return this.audio.src;
+    }
   }
   
