@@ -11,12 +11,7 @@ export const fetchScene = async (scene: number):Promise<string[]> => {
   const data = await script.text();
 
   //split data on \n or @
-  const lines = data.split(/[\n@]/)
-  const result: any = {};
-
-  lines.forEach((line, index) => {
-    result[index] = line
-  });
+  const result = data.split(/[\n@]/)
   // console.log(result); // Check the output in the console
 
   return result
