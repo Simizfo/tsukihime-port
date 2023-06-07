@@ -150,6 +150,9 @@ const Window = () => {
         image: line.split('"')[1],
         type: line.split(',')[1].replace('%', '')
       }
+      if (bgTmp.image.includes('image\\event\\')) {
+        dispatch({ type: 'ADD_GAME_EVENT_IMAGE', payload: bgTmp.image })
+      }
       setBg(bgTmp)
     }
 

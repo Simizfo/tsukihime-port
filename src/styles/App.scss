@@ -14,6 +14,9 @@
     z-index: -1;
     filter: brightness(0.9) contrast(1.1);
 }
+img {
+    user-select: none;
+}
 
 #title-menu {
     width: 100vw;
@@ -67,15 +70,31 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
     .gallery-container {
+        display: flex;
+        gap: .2em;
+        margin: 1em;
+
+        img {
+            display: block;
+            width: 160px;
+            height: 120px;
+            border-radius: 4px;
+        }
+    }
+
+    .gallery-char-container {
         margin: 3em;
         display: flex;
         flex-direction: column;
         gap: 2em;
         align-items: flex-end;
 
-        .gallery-item {
+        .gallery-char-item {
+            all: unset;
             background-color: #00c4ff;
             position: relative;
             clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);

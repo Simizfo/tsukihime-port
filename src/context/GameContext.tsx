@@ -61,6 +61,14 @@ const StateProvider = ({children}: StateProviderProps) => {
             index: action.payload
           }
         }
+      case 'ADD_GAME_EVENT_IMAGE' :
+        return {
+          ...curState,
+          game: {
+            ...curState.game,
+            eventImages: [...curState.game.eventImages, action.payload]
+          }
+        }
       default:
         throw new Error()
     }

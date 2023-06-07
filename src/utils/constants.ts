@@ -12,7 +12,7 @@ export const initialContextState = {
     menu: false,
   },
   game: {
-    scene: 20,
+    scene: 22,
     index: 0,
     regard: {
       ark: 0,
@@ -20,7 +20,8 @@ export const initialContextState = {
       akiha: 0,
       kohaku: 0,
       hisui: 0,
-    }
+    },
+    eventImages: [],
   }
 }
 

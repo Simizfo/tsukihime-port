@@ -40,6 +40,7 @@ export type ContextState = {
       akiha: number,
       kohaku: number,
       hisui: number,
-    }
+    },
+    eventImages: string[],
   }
 }
