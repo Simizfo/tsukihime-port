@@ -121,7 +121,7 @@ img {
             clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
             transition: var(--transition);
             height: 60px;
-            width: min(300px, 100%);
+            width: calc(min(300px, 100%) - 4px);
             border: 2px solid transparent;
 
             img {

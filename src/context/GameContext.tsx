@@ -62,6 +62,7 @@ const StateProvider = ({children}: StateProviderProps) => {
           }
         }
       case 'ADD_GAME_EVENT_IMAGE' :
+        if (curState.game.eventImages.includes(action.payload)) return curState
         return {
           ...curState,
           game: {
