@@ -36,30 +36,8 @@ const Window = () => {
     setChoices(choicesTmp)
   }
 
-  //init
   useEffect(() => {
-    if (scene.length !== 0) {
-      let i = index
-      do {
-        if (scene[i] === "return") {
-          dispatch({ type: 'SET_DISP_CHOICES', payload: true })
-          return
-        }
-        processLine(scene[i])
-  
-        i++
-      } while (!scene[i].startsWith('`'))
-      setIndex(i)
-
-      let lineHasEnded = true
-      if (scene[i + 1] !== undefined && scene[i + 1].startsWith(' ')) {
-        lineHasEnded = false
-      }
-
-      let newText: Line[] = []
-      newText[0] = { line: scene[i], lineHasEnded: lineHasEnded, read: true }
-      setText(newText)
-    }
+    if (scene.length !== 0) nextLine()
   }, [scene])
 
   const setNewScene = async (sceneNumber: number) => {
@@ -117,7 +95,7 @@ const Window = () => {
   //go to next line that starts with `
   const nextLine = (i = index) => {
     //check if previous line has ended
-    if (text[text.length - 1].lineHasEnded) {
+    if ((text[text.length - 1] && text[text.length - 1].lineHasEnded) || text.length === 0) {
       do {
         if (scene[i] === "return") {
           dispatch({ type: 'SET_DISP_CHOICES', payload: true })
@@ -131,6 +109,11 @@ const Window = () => {
     }
     setIndex(i)
 
+
+    setters(i)
+  }
+
+  const setters = (i = index) => {
     let lineHasEnded = true
     if (scene[i + 1] !== undefined && scene[i + 1].startsWith(' ')) {
       lineHasEnded = false
@@ -139,10 +122,12 @@ const Window = () => {
     let newText: Line[] = text
 
     //if last line in history ends with \, reset text and add the page to pages
-    const lastLine: string = text[text.length - 1].line
-    if (lastLine !== undefined && lastLine[lastLine.length - 1] === '\\') {
-      setPages([...pages, text])
-      newText = []
+    if (text[text.length - 1]) {
+      const lastLine: string = text[text.length - 1].line
+      if (lastLine !== undefined && lastLine[lastLine.length - 1] === '\\') {
+        setPages([...pages, text])
+        newText = []
+      }
     }
 
     const newLine = { line: scene[i], lineHasEnded: lineHasEnded, read: true }
