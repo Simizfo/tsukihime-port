@@ -11,13 +11,14 @@
     grid-template-columns: 1fr 2fr;
     align-items: center;
     gap: 1em;
+    position: relative;
 
     .bg-image {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
-        width: 100%;
+        width: 200%;
         height: 100%;
         object-fit: cover;
         z-index: -1;
@@ -27,8 +28,8 @@
     .logo {
         display: block;
         margin: 0 auto;
-        width: max(28vw, 200px);
-        height: 60vh;
+        width: max(30vw, 200px);
+        height: 70vh;
         object-fit: contain;
     }
 
