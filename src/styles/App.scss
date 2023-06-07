@@ -6,6 +6,11 @@
 #title-menu {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 1em;
 
     .bg-image {
         position: absolute;
@@ -19,11 +24,18 @@
         filter: brightness(0.9) contrast(1.1);
     }
 
+    .logo {
+        display: block;
+        margin: 0 auto;
+        width: max(28vw, 200px);
+        height: 60vh;
+        object-fit: contain;
+    }
+
     .menu {
         display: flex;
-        justify-content: center;
-        height: 100%;
-        align-items: center;
+        margin-top: 2em;
+        align-items: flex-start;
         font-size: 1.3em;
         font-family: UbuntuBold, sans-serif;
         text-transform: uppercase;
@@ -33,19 +45,17 @@
 
         a {
             all: unset;
-            color: var(--text-color);
             text-decoration: none;
             transition: var(--transition);
             user-select: none;
-            text-shadow: 0 0 11px #dfdfdf;
+            text-shadow: 0 0 11px #0723ab;
 
             &:hover {
-                background: linear-gradient(227deg, #0037ff, #8600ff);
+                background: linear-gradient(227deg, #00c4ff, #00e8ff);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 cursor: pointer;
-                color: hsla(185.58, 98.26%, 54.9%, 0.74);
-                filter: drop-shadow(0px 0px 6px hsla(185.58, 98.26%, 54.9%, 0.74));
+                filter: drop-shadow(0px 0px 6px hsla(325, 92%, 15%, 0.74));
             }
         }
     }

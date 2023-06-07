@@ -48,7 +48,8 @@ const MenuLayer = () => {
   }
 
   const titleMenu = () => {
-    navigate('/')
+    navigate('/title')
+    dispatch({ type: 'SET_DISP_MENU', payload: false })
   }
 
   const closeMenu = () => {
