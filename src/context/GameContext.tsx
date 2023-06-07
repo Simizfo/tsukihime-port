@@ -69,6 +69,14 @@ const StateProvider = ({children}: StateProviderProps) => {
             eventImages: [...curState.game.eventImages, action.payload]
           }
         }
+      case 'SET_GAME_TRACK' :
+        return {
+          ...curState,
+          game: {
+            ...curState.game,
+            track: action.payload
+          }
+        }
       default:
         throw new Error()
     }

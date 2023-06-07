@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import '../styles/game.scss';
-import AudioTsuki from '../utils/AudioTsuki';
+import { AudioManager } from '../utils/AudioManager';
 import HistoryLayer from '../layers/HistoryLayer';
 import { Background, Character, Choice, Line, Page } from '../types';
 import { fetchChoices, fetchGoToNextScene, fetchScene, addEventListener } from '../utils/utils';
@@ -12,11 +12,11 @@ import { store } from '../context/GameContext';
 import MenuLayer from '../layers/MenuLayer';
 import { HISTORY_MAX_PAGES, STRALIAS_JSON } from '../utils/constants';
 
-const playing_track = new AudioTsuki()
+const playing_track = new AudioManager()
 
 const Window = () => {
   const { state, dispatch } = useContext(store)
-  const [sceneNumber, setSceneNumber] = useState(state.game.scene)
+  const [sceneNumber, setSceneNumber] = useState(374)
   const [scene, setScene] = useState<string[]>([])
   const [choices, setChoices] = useState<Choice[]>([])
   const [index, setIndex] = useState(state.game.index) //line
@@ -27,6 +27,15 @@ const Window = () => {
 
   useEffect(() => {
     setNewScene(sceneNumber)
+
+    if (state.game.track !== '' && !playing_track.isPlaying()) {
+      playing_track.loadAudio(state.game.track)
+      playing_track.play()
+      playing_track.setLoop(true)
+    }
+    return () => {
+      playing_track.stop()
+    }
   }, [])
 
   useEffect(() => {
@@ -158,18 +167,24 @@ const Window = () => {
 
     function foundPlay(line: string) {
       const track = "CD/" + line.split('"')[1]
-      playing_track.setAudio(track, true)
+      if (playing_track.isPlaying()) playing_track.stop()
+      playing_track.loadAudio(track)
       playing_track.play()
+      playing_track.setLoop(true)
+      dispatch({ type: 'SET_GAME_TRACK', payload: track })
     }
 
     function foundPlaystop() {
       playing_track.stop()
+      dispatch({ type: 'SET_GAME_TRACK', payload: '' })
     }
 
     function foundWave(line: string) {
       // wave se0
       let waveStr = line.split(' ')[1]
-      new AudioTsuki(STRALIAS_JSON[waveStr])
+      const audio = new AudioManager()
+      audio.loadAudio(STRALIAS_JSON[waveStr])
+      audio.play()
     }
 
     function foundWaveloop(line: string) {
