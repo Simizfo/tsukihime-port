@@ -24,6 +24,16 @@ const MenuLayer = () => {
     }
     return addEventListener({event: 'contextmenu', handler: handleContextMenu})
   })
+
+  //on press escape disp menu
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && !state.disp.history) {
+        dispatch({ type: 'SET_DISP_MENU', payload: !state.disp.menu })
+      }
+    }
+    return addEventListener({event: 'keydown', handler: handleKeyDown})
+  })
   
   useEffect(() => {
     //if a left click is made outside the menu, hide it
