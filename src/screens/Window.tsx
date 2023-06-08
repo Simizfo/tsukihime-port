@@ -12,7 +12,7 @@ import { store } from '../context/GameContext';
 import MenuLayer from '../layers/MenuLayer';
 import { HISTORY_MAX_PAGES, STRALIAS_JSON } from '../utils/constants';
 
-const playing_track = new AudioManager()
+const audio = new AudioManager()
 
 const Window = () => {
   const { state, dispatch } = useContext(store)
@@ -28,18 +28,16 @@ const Window = () => {
   useEffect(() => {
     setNewScene(sceneNumber)
 
-    if (state.game.track !== '' && !playing_track.isPlaying()) {
-      playing_track.loadAudio(state.game.track)
-      playing_track.play()
-      playing_track.setLoop(true)
+    if (state.game.track !== '' && !audio.isTrackPlaying()) {
+      audio.playTrack(state.game.track, true)
     }
     return () => {
-      playing_track.stop()
+      audio.stopTrack()
     }
   }, [])
 
   useEffect(() => {
-    playing_track.setVolume(state.game.volume)
+    audio.masterVolume = state.game.volume;
   }, [state.game.volume])
 
   useEffect(() => {
@@ -77,7 +75,7 @@ const Window = () => {
   //on press enter, go to next line
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Enter') { //TODO: empêcher de laisser appuyé
+      if (e.key === 'Enter' && !e.repeat) {
         nextLine()
       }
       if (e.ctrlKey) {
@@ -170,36 +168,37 @@ const Window = () => {
     }
 
     function foundPlay(line: string) {
-      const track = "CD/" + line.split('"')[1]
-      if (playing_track.isPlaying()) playing_track.stop()
-      playing_track.loadAudio(track)
-      playing_track.play()
-      playing_track.setLoop(true)
-      playing_track.setVolume(state.game.volume)
-      dispatch({ type: 'SET_GAME', payload: { ...state.game, track: track } })
+      const name = line.split('"')[1]
+      const path = "CD/" + name
+      audio.setSoundFileUrl(name, path);
+      audio.playTrack(name, true);
+      audio.masterVolume = state.game.volume
+      dispatch({ type: 'SET_GAME', payload: { ...state.game, track: name } })
     }
 
     function foundPlaystop() {
-      playing_track.stop()
+      audio.stopTrack()
       dispatch({ type: 'SET_GAME', payload: { ...state.game, track: '' } })
     }
 
     function foundWave(line: string) {
       // wave se0
       let waveStr = line.split(' ')[1]
-      const audio = new AudioManager()
-      audio.loadAudio(STRALIAS_JSON[waveStr])
-      audio.setVolume(state.game.volume)
-      audio.play()
+      audio.setSoundFileUrl(waveStr, STRALIAS_JSON[waveStr])
+      audio.masterVolume = state.game.volume;
+      audio.playSE(waveStr);
     }
 
     function foundWaveloop(line: string) {
       let waveStr = line.split(' ')[1]
-      waveStr = STRALIAS_JSON[waveStr]
+      audio.setSoundFileUrl(waveStr, STRALIAS_JSON[waveStr])
+      audio.masterVolume = state.game.volume;
+      audio.playSE(waveStr, true);
       // wave.handleAudio("play")
     }
 
     function foundWavestop(line: string) {
+      audio.stopSE();
       // wave.handleAudio("stop")
     }
 
