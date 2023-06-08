@@ -11,8 +11,8 @@ const VITE_DEV_SERVER_URL = process.env['VITE_DEV_SERVER_URL']
 
 function createWindow() {
   win = new BrowserWindow({
-    width: 1000,
-    height: 600,
+    width: 960,
+    height: 720,
     icon: path.join(process.env.PUBLIC, 'arc.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),

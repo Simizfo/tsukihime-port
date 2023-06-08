@@ -50,6 +50,7 @@ const MenuLayer = () => {
   const titleMenu = () => {
     navigate('/title')
     dispatch({ type: 'SET_DISP_MENU', payload: false })
+    dispatch({ type: 'SET_GAME', payload: { ...state.game, track: "" } })
   }
 
   const closeMenu = () => {
