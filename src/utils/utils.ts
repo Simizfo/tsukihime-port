@@ -11,7 +11,7 @@ export const fetchScene = async (scene: number):Promise<string[]> => {
   const data = await script.text();
 
   //split data on \n or @
-  const result = data.split(/[\n@]/)
+  const result = data.split(/[\n\r@]/)
   // console.log(result); // Check the output in the console
 
   return result
@@ -23,7 +23,7 @@ export const fetchF = async (sceneNumber: number):Promise<any> => {
   const data = await script.text();
 
   //keep only lines after *f sceneNumber and before *f sceneNumber + 1
-  const lines = data.split(/[\n@]/)
+  const lines = data.split(/[\n\r@]/)
   const result: any = {};
 
   let i = 0
