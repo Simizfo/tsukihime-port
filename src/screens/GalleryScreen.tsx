@@ -2,22 +2,50 @@ import { Link } from 'react-router-dom'
 import titleMenuBg from '../assets/game/menus/title-menu-bg.png'
 import { useContext, useEffect, useState } from 'react'
 import { store } from '../context/GameContext'
-import { GALLERY_IMAGES } from '../utils/constants'
+import { CHARACTERS, GALLERY_IMAGES } from '../utils/constants'
+import GalleryCharComponent from '../components/GalleryCharComponent'
 
 const GalleryScreen = () => {
   const { state } = useContext(store)
+  const [selected, setSelected] = useState<CHARACTERS>(CHARACTERS.arcueid)
   const [images, setImages] = useState<string[]>(GALLERY_IMAGES.arcueid)
 
   useEffect(() => {
-    handleSelected(GALLERY_IMAGES.arcueid)
+    handleSelected(CHARACTERS.arcueid)
   }, [])
 
-  const handleSelected = (selectedImages: string[]) => {
-    let imagesTmp = [...selectedImages]
+  const handleSelected = (selectedChar: CHARACTERS) => {
+    let imagesTmp: string[] = []
+
+    switch (selectedChar) {
+      case CHARACTERS.arcueid:
+        setSelected(CHARACTERS.arcueid)
+        imagesTmp = GALLERY_IMAGES.arcueid
+        break
+      case CHARACTERS.ciel:
+        setSelected(CHARACTERS.ciel)
+        imagesTmp = GALLERY_IMAGES.ciel
+        break
+      case CHARACTERS.akiha:
+        setSelected(CHARACTERS.akiha)
+        imagesTmp = GALLERY_IMAGES.akiha
+        break
+      case CHARACTERS.kohaku:
+        setSelected(CHARACTERS.kohaku)
+        imagesTmp = GALLERY_IMAGES.kohaku
+        break
+      case CHARACTERS.hisui:
+        setSelected(CHARACTERS.hisui)
+        imagesTmp = GALLERY_IMAGES.hisui
+        break
+      case CHARACTERS.others:
+        setSelected(CHARACTERS.others)
+        imagesTmp = GALLERY_IMAGES.others
+        break
+    }
 
     //all selected images that are not in the eventImages array are replaced with koha_e01a
     imagesTmp = imagesTmp.map((image) => {
-      console.log(`image\\event\\${image}.jpg`)
       if (!state.game.eventImages.includes(`image\\event\\${image}.jpg`)) {
         return 'koha_e01a'
       }
@@ -29,48 +57,58 @@ const GalleryScreen = () => {
 
   return (
     <div id="gallery">
-      <img src={titleMenuBg} alt="title menu" className="bg-image" />
+      <div className="page-content">
+        <img src={titleMenuBg} alt="title menu" className="bg-image" />
 
-      <div className='gallery-container'>
-        {images.map((eventImage, i) => (
-          <img key={eventImage + i} src={`/image/event/${eventImage}.jpg`} alt="event" draggable={false} />
-        ))}
-      </div>
+        <h2 className="title">Gallery</h2>
 
-      <div className='gallery-char-container'>
-        <button className='gallery-char-item' onClick={() => handleSelected(GALLERY_IMAGES.arcueid)}>
-          <img src="/image/event/ark_e02.jpg" alt="Arcueid" draggable={false} />
-          <span>Arcueid</span>
-        </button>
+        <main>
+          <div className='gallery-container'>
+            {images.map((eventImage, i) => (
+              <img key={eventImage + i} src={`/image/event/${eventImage}.jpg`} alt="event" draggable={false} />
+            ))}
+          </div>
 
-        <button className='gallery-char-item' onClick={() => handleSelected(GALLERY_IMAGES.ciel)}>
-          <img src="/image/event/cel_e02a.jpg" alt="Ciel" draggable={false} />
-          <span>Ciel</span>
-        </button>
+          <div className="gallery-char-container">
+            <GalleryCharComponent
+              character={CHARACTERS.arcueid}
+              background='/image/event/ark_e02.jpg'
+              selected={selected}
+              handleSelected={handleSelected} />
 
-        <button className='gallery-char-item' onClick={() => handleSelected(GALLERY_IMAGES.akiha)}>
-          <img src="/image/event/aki_e07a.jpg" alt="Akiha" draggable={false} />
-          <span>Tohno Akiha</span>
-        </button>
+            <GalleryCharComponent
+              character={CHARACTERS.ciel}
+              background='/image/event/cel_e02a.jpg'
+              selected={selected}
+              handleSelected={handleSelected} />
 
-        <button className='gallery-char-item' onClick={() => handleSelected(GALLERY_IMAGES.kohaku)}>
-          <img src="/image/event/koha_e01a.jpg" alt="Kohaku" draggable={false} />
-          <span>Kohaku</span>
-        </button>
+            <GalleryCharComponent
+              character={CHARACTERS.akiha}
+              background='/image/event/aki_e07a.jpg'
+              selected={selected}
+              handleSelected={handleSelected} />
 
-        <button className='gallery-char-item' onClick={() => handleSelected(GALLERY_IMAGES.hisui)}>
-          <img src="/image/event/his_e04.jpg" alt="Hisui" draggable={false} />
-          <span>Hisui</span>
-        </button>
+            <GalleryCharComponent
+              character={CHARACTERS.kohaku}
+              background='/image/event/koha_e01a.jpg'
+              selected={selected}
+              handleSelected={handleSelected} />
 
-        <button className='gallery-char-item' onClick={() => handleSelected(GALLERY_IMAGES.others)}>
-          <img src="/image/bg/ima_07.jpg" alt="Others" draggable={false} />
-          <span>Others</span>
-        </button>
-      </div>
+            <GalleryCharComponent
+              character={CHARACTERS.hisui}
+              background='/image/event/his_e04.jpg'
+              selected={selected}
+              handleSelected={handleSelected} />
 
-      <div>
-        <Link to="/title" className="menu-item">Back</Link>
+            <GalleryCharComponent
+              character={CHARACTERS.others}
+              background='/image/bg/ima_07.jpg'
+              selected={selected}
+              handleSelected={handleSelected} />
+          </div>
+        </main>
+
+        <Link to="/title" className="back-button">Back</Link>
       </div>
     </div>
   )

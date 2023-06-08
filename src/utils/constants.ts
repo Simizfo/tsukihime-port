@@ -29,6 +29,15 @@ export const initialContextState = {
 
 export const HISTORY_MAX_PAGES = 20
 
+export enum CHARACTERS {
+  arcueid = "Arcueid",
+  ciel = "Ciel",
+  akiha = "Akiha",
+  kohaku = "Kohaku",
+  hisui = "Hisui",
+  others = "Others",
+}
+
 export const GALLERY_IMAGES = {
   arcueid: [
     "ark_e01", "ark_e02", "ark_e03", "ark_e04", "ark_e04b", "ark_e05a", "ark_e05b", "ark_e06a", "ark_e06b", "ark_e07", "ark_e08", "ark_e09", "ark_e10", 
@@ -51,6 +60,9 @@ export const GALLERY_IMAGES = {
     "koha_h01", "koha_h02", "koha_h03", "koha_h04", "koha_h05", "koha_h06a", "koha_h06b", "koha_h07", "koha_h08", "koha_h10", "koha_h10b", "koha_h11"
   ],
   hisui: [
+    "his_e01", "his_e01b", "his_e02", "his_e02b", "his_e02b2", "his_e03", "his_e04", "his_e05", "his_e06", "his_e07a", "his_e07b", "his_e08", "his_e09",
+    "his_f01", "his_f02", "his_f03",
+    "his_h01", "his_h02", "his_h03", "his_h04a", "his_h04b", "his_h05", "his_h06", "his_h06b", "his_h07", "his_h08", "his_h09", "his_h10", "his_h11", "his_h12", "his_h13", "his_h14", "his_h15", "his_h16"
   ],
   others: [
     "ao_01", "ao_02", "hal_e01", "nero_e04", "stk_e01a", "stk_e01b", "stk_e01c", "stk_e01d", "stk_e02", "stk_e03"
