@@ -29,6 +29,7 @@ const Window = () => {
     setNewScene(sceneNumber)
 
     if (state.game.track !== '' && !audio.isTrackPlaying()) {
+      audio.setSoundFileUrl(state.game.track,  "CD/" + state.game.track), 
       audio.playTrack(state.game.track, true)
     }
     return () => {

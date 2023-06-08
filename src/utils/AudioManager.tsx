@@ -10,7 +10,6 @@ export class AudioManager {
     private sounds: Map<string, {buffer: AudioBuffer|Promise<AudioBuffer>|null, path: string}>;
     
     constructor() {
-      debugger
       this.context = new AudioContext();
 
       this.trackGainNode = this.context.createGain();
@@ -43,7 +42,7 @@ export class AudioManager {
     private async loadFile(name: string, forceReload: boolean = false): Promise<AudioBuffer> {
       const sound = this.sounds.get(name);
       if (!sound)
-        return Promise.reject(`Unknown audio "${name}. Use setAudioFileUrl(name, path)`+
+        return Promise.reject(`Unknown audio "${name}". Use setSoundFileUrl(name, path)`+
                               ` to associate names with paths`);
       if (sound.buffer && !forceReload)
           return sound.buffer;
