@@ -47,9 +47,10 @@ const GalleryScreen = () => {
     //all selected images that are not in the eventImages array are replaced with koha_e01a
     imagesTmp = imagesTmp.map((image) => {
       if (!state.game.eventImages.includes(`image\\event\\${image}.jpg`)) {
-        return 'koha_e01a'
+        return '/image/gallery/notreg.jpg'
+      } else {
+        return `/image/event/${image}.jpg`
       }
-      return image
     })
 
     setImages(imagesTmp)
@@ -65,7 +66,7 @@ const GalleryScreen = () => {
         <main>
           <div className='gallery-container'>
             {images.map((eventImage, i) => (
-              <img key={eventImage + i} src={`/image/event/${eventImage}.jpg`} alt="event" draggable={false} />
+              <img key={eventImage + i} src={eventImage} alt="event" draggable={false} />
             ))}
           </div>
 
