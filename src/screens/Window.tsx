@@ -87,7 +87,7 @@ const Window = () => {
   })
   
   //go to next line that starts with `
-  const nextLine = (i = index) => {
+  const nextLine = async (i = index) => {
     //check if previous line has ended
     if (text[text.length - 1]?.lineHasEnded || text.length === 0) {
       do {
@@ -121,126 +121,151 @@ const Window = () => {
     setText(newText)
   }
 
-  const processLine = (line: string) => {
-    const prefix = line.split(' ')[0]
+  function ignore() {
+    //do nothing
+  }
+  const commands = {
+    'bg'        : processBg,
+    'play'      : processPlay,
+    'playstop'  : processPlaystop,
+    'wave'      : processWave,
+    'waveloop'  : processWaveloop,
+    'wavestop'  : processWavestop,
+    'br'        : processBr,
+    'ld'        : processLd,
+    'cl'        : processCl,
+    'resettimer': ignore, //'resettimer' and 'waittimer' are always together
+    'waittimer' : processWaittimer,
+    'mov'       : ignore, // TODO store variable
+    'gosub'     : ignore, // TODO jump to label, then jump back to next line on return
+    'goto'      : ignore, // TODO jump to label, no return
+  };
 
-    switch(prefix) {
-      case 'bg':
-        foundBackground(line)
-        break
-      case 'play':
-        foundPlay(line)
-        break
-      case 'playstop':
-        foundPlaystop()
-        break
-      case 'wave':
-        foundWave(line)
-        break
-      case 'waveloop':
-        foundWaveloop(line)
-        break
-      case 'wavestop':
-        foundWavestop(line)
-        break
-      case 'br':
-        foundBr()
-        break
-      case 'ld':
-        foundLd(line)
-        break
-      case 'cl':
-        foundCl(line)
-        break
-      case 'waittimer':
-        foundWaittimer(line)
-        break
-    }
+  const processLine = async (line: string) => {
+
+    if (!/^[a-zA-Z]/.test(line))
+      return; // not a command (does not start with a letter)
+    //TODO line that start with '*' are labels used by gosub and goto
     
-    function foundBackground(line: string) {
+    let index = line.indexOf(' ');
+    if (index === -1)
+      index = line.length;
+    const cmd = line.substring(0, index);
+    const arg = line.substring(index+1);
+    //TODO replace known variables in args ?
+    if (cmd in commands)
+      await commands[cmd as keyof typeof commands](arg);
+    else
+      console.error(`unknown command [${line}]`);
+  }
+    
+  function processBg(arg: string) {
+    //TODO : process correctly $xxxxxxx / #xxxxxxx backgrounds
+    const [bg, type] = arg.split(',').map(x=>x.trim());
+    
+    if (bg.startsWith('"') && bg.endsWith('"')) {
       const bgTmp: Background = {
-        image: line.split('"')[1],
-        type: line.split(',')[1].replace('%', '')
+        image: bg.substring(1, bg.length-1),
+        type: type.replace('%', '')
       }
       if (bgTmp.image.includes('image\\event\\')) {
         dispatch({ type: 'ADD_GAME_EVENT_IMAGE', payload: bgTmp.image })
       }
       setBg(bgTmp)
     }
+    else if (bg.startsWith('#')) { // color
+      //TODO
+    }
+    else if (bg.startsWith('$')) { //variable
+      //TODO
+    }
+    else {
+      throw Error(`Ill-formed 'bg' command arguments [${arg}]`)
+    }
+  }
 
-    function foundPlay(line: string) {
-      const name = line.split('"')[1]
-      const path = "CD/" + name
-      audio.setSoundFileUrl(name, path);
-      audio.playTrack(name, true);
-      audio.masterVolume = state.game.volume
-      dispatch({ type: 'SET_GAME', payload: { ...state.game, track: name } })
+  function processPlay(arg: string) {
+    const name = arg.split('"')[1];
+    const path = "CD/" + name;
+    audio.setSoundFileUrl(name, path);
+    audio.playTrack(name, true);
+    audio.masterVolume = state.game.volume
+    dispatch({ type: 'SET_GAME', payload: { ...state.game, track: name } })
+  }
+
+  function processPlaystop() {
+    audio.stopTrack()
+    dispatch({ type: 'SET_GAME', payload: { ...state.game, track: '' } })
+  }
+
+  function processWave(arg: string) {
+    let waveStr = arg
+    audio.setSoundFileUrl(waveStr, STRALIAS_JSON[waveStr])
+    audio.masterVolume = state.game.volume;
+    audio.playSE(waveStr);
+  }
+
+  function processWaveloop(arg: string) {
+    let waveStr = arg
+    audio.setSoundFileUrl(waveStr, STRALIAS_JSON[waveStr])
+    audio.masterVolume = state.game.volume;
+    audio.playSE(waveStr, true);
+  }
+
+  function processWavestop() {
+    audio.stopSE();
+  }
+
+  function processBr() {
+    const newText: Line[] = text
+    newText.push({ line: 'br' })
+    setText(newText)
+  }
+
+  //add sprite
+  function processLd(arg: string) {
+    let [pos, image, type] = arg.split(',');
+    if (image.startsWith('"') && image.endsWith('"')) {
+      image = image.substring(1, image.length-1)
+                   .replace('image\\tachi\\', '')
+                   .replace('image/tachi/', '')
+                   .replace('.jpg', '')
+    }
+    else if (image.startsWith('$')) { // variable
+      //TODO
+    }
+    else {
+      throw Error(`Ill-formed 'ld' command arguments [${arg}]`)
+    }
+    const characterTmp: Character = {
+      image: image,
+      type: type.replace('%', ''),
+      pos: pos
     }
 
-    function foundPlaystop() {
-      audio.stopTrack()
-      dispatch({ type: 'SET_GAME', payload: { ...state.game, track: '' } })
+    //if there is already a character with the same position, replace it
+    const index = characters.findIndex((c: Character) => c.pos === characterTmp.pos)
+    const newCharacters = [...characters]
+    if (index !== -1) {
+      newCharacters[index] = characterTmp
+    } else {
+      newCharacters.push(characterTmp)
     }
+    setCharacters(newCharacters)
+  }
 
-    function foundWave(line: string) {
-      // wave se0
-      let waveStr = line.split(' ')[1]
-      audio.setSoundFileUrl(waveStr, STRALIAS_JSON[waveStr])
-      audio.masterVolume = state.game.volume;
-      audio.playSE(waveStr);
-    }
+  //remove sprite
+  function processCl(arg: string) {
+    const pos = arg.split(',')[0]
+    const newCharacters = characters.filter((c: Character) => c.pos !== pos)
+    setCharacters(newCharacters)
+  }
 
-    function foundWaveloop(line: string) {
-      let waveStr = line.split(' ')[1]
-      audio.setSoundFileUrl(waveStr, STRALIAS_JSON[waveStr])
-      audio.masterVolume = state.game.volume;
-      audio.playSE(waveStr, true);
-      // wave.handleAudio("play")
-    }
-
-    function foundWavestop(line: string) {
-      audio.stopSE();
-      // wave.handleAudio("stop")
-    }
-
-    function foundBr() {
-      const newText: Line[] = text
-      newText.push({ line: 'br' })
-      setText(newText)
-    }
-
-    //add sprite
-    function foundLd(line: string) {
-      const characterTmp: Character = {
-        image: line.split(',')[1].split('"')[1].split(':a;')[1].replace('image\\tachi\\', '').replace('.jpg', ''),
-        type: line.split(',')[2].replace('%', ''),
-        pos: line.split(',')[0].replace('ld ', '')
-      }
-
-      //if there is already a character with the same position, replace it
-      const index = characters.findIndex((c: Character) => c.pos === characterTmp.pos)
-      const newCharacters = [...characters]
-      if (index !== -1) {
-        newCharacters[index] = characterTmp
-      } else {
-        newCharacters.push(characterTmp)
-      }
-      setCharacters(newCharacters)
-    }
-
-    //remove sprite
-    function foundCl(line: string) {
-      const pos = line.split(',')[0].replace('cl ', '')
-      const newCharacters = characters.filter((c: Character) => c.pos !== pos)
-      setCharacters(newCharacters)
-    }
-
-    function foundWaittimer(line: string) {
-      const time = line.split(' ')[1]
-      setTimeout(() => {
-        console.log('waittimer')
-      }, parseInt(time))
-    }
+  function processWaittimer(arg: string) {
+    const time = parseInt(arg)
+    return new Promise((resolve)=> {
+      setTimeout(resolve, time)
+    });
   }
 
   const handleClick = () => {
