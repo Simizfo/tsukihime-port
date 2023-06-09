@@ -168,12 +168,13 @@ const Window = () => {
     const [bg, type] = arg.split(',').map(x=>x.trim());
     
     if (bg.startsWith('"') && bg.endsWith('"')) {
+      const img = bg.replace(/image\\|"|\.jpg/g, '')
       const bgTmp: Background = {
-        image: bg.substring(1, bg.length-1),
+        image: img,
         type: type.replace('%', '')
       }
-      if (bgTmp.image.includes('image\\event\\')) {
-        dispatch({ type: 'ADD_GAME_EVENT_IMAGE', payload: bgTmp.image })
+      if (img.includes('event\\')) {
+        dispatch({ type: 'ADD_GAME_EVENT_IMAGE', payload: img })
       }
       setBg(bgTmp)
     }

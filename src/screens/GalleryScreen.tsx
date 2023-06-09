@@ -46,7 +46,7 @@ const GalleryScreen = () => {
 
     imagesTmp = imagesTmp.map((image) => {
       const extension = state.permanent.imagesFolder === 'image' ? 'jpg' : 'webp'
-      if (!state.permanent.eventImages.includes(`image\\event\\${image}.jpg`)) {
+      if (!state.permanent.eventImages.includes(`event\\${image}`)) {
         return "/image/gallery/notreg.jpg"
       } else {
         return `/${state.permanent.imagesFolder}/event/${image}.${extension}`
