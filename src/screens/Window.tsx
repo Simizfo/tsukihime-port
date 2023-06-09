@@ -230,6 +230,7 @@ const Window = () => {
                    .replace('image\\tachi\\', '')
                    .replace('image/tachi/', '')
                    .replace('.jpg', '')
+                   .replace(':a;', '')
     }
     else if (image.startsWith('$')) { // variable
       //TODO
