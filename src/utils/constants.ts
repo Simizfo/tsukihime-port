@@ -21,9 +21,11 @@ export const initialContextState = {
       kohaku: 0,
       hisui: 0,
     },
-    eventImages: [],
     track: "",
     volume: 1,
+  },
+  permanent: {
+    eventImages: [],
   }
 }
 

@@ -41,8 +41,10 @@ export type ContextState = {
       kohaku: number,
       hisui: number,
     },
-    eventImages: string[],
     track: string,
     volume: number,
+  },
+  permanent: {
+    eventImages: string[]
   }
 }

@@ -46,7 +46,7 @@ const GalleryScreen = () => {
 
     //all selected images that are not in the eventImages array are replaced with koha_e01a
     imagesTmp = imagesTmp.map((image) => {
-      if (!state.game.eventImages.includes(`image\\event\\${image}.jpg`)) {
+      if (!state.permanent.eventImages.includes(`image\\event\\${image}.jpg`)) {
         return '/image/gallery/notreg.jpg'
       } else {
         return `/image/event/${image}.jpg`

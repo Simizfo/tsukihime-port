@@ -1,4 +1,4 @@
-import { createContext, useReducer } from 'react'
+import { createContext, useEffect, useReducer } from 'react'
 import { ContextState } from '../types'
 import { initialContextState } from '../utils/constants'
 
@@ -6,6 +6,10 @@ type StateProviderProps = {
   children: React.ReactNode
 }
 
+const permanent = localStorage.getItem('permanent')
+if (permanent) {
+  initialContextState.permanent = JSON.parse(permanent)
+}
 
 const store = createContext<{ state: ContextState; dispatch: React.Dispatch<any> }>({
   state: initialContextState,
@@ -62,12 +66,12 @@ const StateProvider = ({children}: StateProviderProps) => {
           }
         }
       case 'ADD_GAME_EVENT_IMAGE' :
-        if (curState.game.eventImages.includes(action.payload)) return curState
+        if (curState.permanent.eventImages.includes(action.payload)) return curState
         return {
           ...curState,
-          game: {
-            ...curState.game,
-            eventImages: [...curState.game.eventImages, action.payload]
+          permanent: {
+            ...curState.permanent,
+            eventImages: [...curState.permanent.eventImages, action.payload]
           }
         }
       default:
@@ -75,6 +79,9 @@ const StateProvider = ({children}: StateProviderProps) => {
     }
   }, initialContextState)
   
+  useEffect(() => {
+    localStorage.setItem('permanent', JSON.stringify(state.permanent))
+  }, [state.permanent])
   return <Provider value={{state, dispatch}}>{children}</Provider>
 }
 
