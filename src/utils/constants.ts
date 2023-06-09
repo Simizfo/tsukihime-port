@@ -26,7 +26,12 @@ export const initialContextState = {
       hisui: 0,
     },
     track: "",
-    volume: 1,
+    looped_se: "",
+    volume: {
+      master: 1,
+      track: 1,
+      se: 1,
+    },
   },
   permanent: {
     imagesFolder: "image_x2",

@@ -80,10 +80,10 @@ const MenuLayer = () => {
   }
 
   const volume = () => {
-    if (state.game.volume === 0) {
-      dispatch({ type: 'SET_GAME', payload: { ...state.game, volume: 1 } })
+    if (state.game.volume.master === 0) {
+      dispatch({ type: 'SET_VOLUME', payload: { master: 1 } })
     } else {
-      dispatch({ type: 'SET_GAME', payload: { ...state.game, volume: 0 } })
+      dispatch({ type: 'SET_VOLUME', payload: { master: 0 } })
     }
   }
 

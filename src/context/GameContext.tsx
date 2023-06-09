@@ -67,6 +67,17 @@ const StateProvider = ({children}: StateProviderProps) => {
             eventImages: [...curState.permanent.eventImages, action.payload]
           }
         }
+      case 'SET_VOLUME' :
+        return {
+          ...curState,
+          game: {
+            ...curState.game,
+            volume: {
+              ...curState.game.volume,
+              ...action.payload
+            }
+          }
+        }
       default:
         throw new Error()
     }

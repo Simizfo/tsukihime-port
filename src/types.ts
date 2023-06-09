@@ -43,7 +43,12 @@ export type ContextState = {
       hisui: number,
     },
     track: string,
-    volume: number,
+    looped_se: string,
+    volume: {
+      master: number,
+      track: number,
+      se: number
+    },
   },
   permanent: {
     imagesFolder: string,

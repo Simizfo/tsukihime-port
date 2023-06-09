@@ -13,6 +13,7 @@ import MenuLayer from '../layers/MenuLayer';
 import { HISTORY_MAX_PAGES, STRALIAS_JSON } from '../utils/constants';
 
 const audio = new AudioManager()
+let timer: number|null = null;
 
 const Window = () => {
   const { state, dispatch } = useContext(store)
@@ -23,7 +24,7 @@ const Window = () => {
   const [text, setText] = useState<Line[]>([]) //current text
   const [pages, setPages] = useState<Page[]>([])
   const [bg, setBg] = useState<Background>(state.game.bg)
-  const [characters, setCharacters] = useState<Character[]>([])
+  const [characters, setCharacters] = useState<Map<string,Character>>(new Map())
 
   useEffect(() => {
     dispatch({ type: 'SET_GAME', payload: { ...state.game, bg: bg } })
@@ -42,7 +43,9 @@ const Window = () => {
   }, [])
 
   useEffect(() => {
-    audio.masterVolume = state.game.volume;
+    audio.masterVolume = state.game.volume.master;
+    audio.trackVolume = state.game.volume.track;
+    audio.seVolume = state.game.volume.se;
   }, [state.game.volume])
 
   useEffect(() => {
@@ -125,27 +128,36 @@ const Window = () => {
     setText(newText)
   }
 
+  const getVariable = (name: string) => {
+    const variables = state.game.variables;
+    for (const variable of variables) {
+      if (variable.name == name)
+        return variable.value;
+    }
+    return null;
+  }
+
   function ignore() {
     //do nothing
   }
   const commands = {
-    'bg'        : processBg,
-    'play'      : processPlay,
-    'playstop'  : processPlaystop,
-    'wave'      : processWave,
-    'waveloop'  : processWaveloop,
-    'wavestop'  : processWavestop,
+    'bg'        : processImage,
+    'ld'        : processImage,
+    'cl'        : processImage,
+    'play'      : processAudio,
+    'playstop'  : processAudio,
+    'wave'      : processAudio,
+    'waveloop'  : processAudio,
+    'wavestop'  : processAudio,
     'br'        : processBr,
-    'ld'        : processLd,
-    'cl'        : processCl,
-    'resettimer': ignore, //'resettimer' and 'waittimer' are always together
-    'waittimer' : processWaittimer,
+    'resettimer': processTimer, //'resettimer' and 'waittimer' are always together
+    'waittimer' : processTimer,
     'mov'       : ignore, // TODO store variable
     'gosub'     : ignore, // TODO jump to label, then jump back to next line on return
     'goto'      : ignore, // TODO jump to label, no return
   };
 
-  const processLine = async (line: string) => {
+  async function processLine(line: string) {
 
     if (!/^[a-zA-Z]/.test(line))
       return; // not a command (does not start with a letter)
@@ -158,67 +170,38 @@ const Window = () => {
     const arg = line.substring(index+1);
     //TODO replace known variables in args ?
     if (cmd in commands)
-      await commands[cmd as keyof typeof commands](arg);
+      await commands[cmd as keyof typeof commands](arg, cmd);
     else
       console.error(`unknown command [${line}]`);
   }
-    
-  function processBg(arg: string) {
-    //TODO : process correctly $xxxxxxx / #xxxxxxx backgrounds
-    const [bg, type] = arg.split(',').map(x=>x.trim());
-    
-    if (bg.startsWith('"') && bg.endsWith('"')) {
-      const img = bg.replace(/image\\|"|\.jpg/g, '')
-      const bgTmp: Background = {
-        image: img,
-        type: type.replace('%', '')
-      }
-      if (img.includes('event\\')) {
-        dispatch({ type: 'ADD_GAME_EVENT_IMAGE', payload: img })
-      }
-      setBg(bgTmp)
+
+  function processAudio(arg: string, cmd: string) {
+    let {track, looped_se} = state.game;
+    let name = arg
+    switch(cmd) {
+      case 'play' :
+        track = name.split('"')[1]
+        const path = "CD/" + track
+        audio.setSoundFileUrl(track, path)
+        audio.playTrack(track, true)
+        break
+      case 'playstop' :
+        track = ''
+        audio.stopTrack()
+        break
+      case 'wave' :
+      case 'waveloop' :
+        const loop = (cmd == 'waveloop')
+        looped_se = loop ? name : ''
+        audio.setSoundFileUrl(name, STRALIAS_JSON[name])
+        audio.playSE(name, loop);
+        break
+      case 'wavestop' :
+        looped_se = ''
+        audio.stopSE();
+        break
     }
-    else if (bg.startsWith('#')) { // color
-      //TODO
-    }
-    else if (bg.startsWith('$')) { //variable
-      //TODO
-    }
-    else {
-      throw Error(`Ill-formed 'bg' command arguments [${arg}]`)
-    }
-  }
-
-  function processPlay(arg: string) {
-    const name = arg.split('"')[1];
-    const path = "CD/" + name;
-    audio.setSoundFileUrl(name, path);
-    audio.playTrack(name, true);
-    audio.masterVolume = state.game.volume
-    dispatch({ type: 'SET_GAME', payload: { ...state.game, track: name } })
-  }
-
-  function processPlaystop() {
-    audio.stopTrack()
-    dispatch({ type: 'SET_GAME', payload: { ...state.game, track: '' } })
-  }
-
-  function processWave(arg: string) {
-    let waveStr = arg
-    audio.setSoundFileUrl(waveStr, STRALIAS_JSON[waveStr])
-    audio.masterVolume = state.game.volume;
-    audio.playSE(waveStr);
-  }
-
-  function processWaveloop(arg: string) {
-    let waveStr = arg
-    audio.setSoundFileUrl(waveStr, STRALIAS_JSON[waveStr])
-    audio.masterVolume = state.game.volume;
-    audio.playSE(waveStr, true);
-  }
-
-  function processWavestop() {
-    audio.stopSE();
+    dispatch({ type: 'SET_GAME', payload: { ...state.game, track: track, looped_se :looped_se } });
   }
 
   function processBr() {
@@ -227,51 +210,86 @@ const Window = () => {
     setText(newText)
   }
 
-  //add sprite
-  function processLd(arg: string) {
-    let [pos, image, type] = arg.split(',');
-    if (image.startsWith('"') && image.endsWith('"')) {
-      image = image.substring(1, image.length-1)
-                   .replace('image\\tachi\\', '')
-                   .replace('image/tachi/', '')
-                   .replace('.jpg', '')
-                   .replace(':a;', '')
-    }
-    else if (image.startsWith('$')) { // variable
-      //TODO
-    }
-    else {
-      throw Error(`Ill-formed 'ld' command arguments [${arg}]`)
-    }
-    const characterTmp: Character = {
-      image: image,
-      type: type.replace('%', ''),
-      pos: pos
+
+  function processImage(arg: string, cmd: string) {
+    let args = arg.split(',')
+    let pos:string|null = null,
+        image:string|null = null,
+        type:string|null = null
+
+    switch(cmd) {
+      case 'bg': [image, type] = args; break
+      case 'ld': [pos, image, type] = args; break
+      case 'cl': [pos, type] = args; break
+      default : throw Error(`unknown image command ${cmd} ${arg}`)
     }
 
-    //if there is already a character with the same position, replace it
-    const index = characters.findIndex((c: Character) => c.pos === characterTmp.pos)
-    const newCharacters = [...characters]
-    if (index !== -1) {
-      newCharacters[index] = characterTmp
-    } else {
-      newCharacters.push(characterTmp)
+    // get image
+    if (image != null) {
+      if (image.startsWith('$')) { // variable
+        image = getVariable(image) as string|null
+        if (image === null)
+          throw Error(`undefined variable for [${cmd} ${arg}]`)
+      }
+      if (image.startsWith('"') && image.endsWith('"')) {
+        // remove ':a;', 'image/', 'image/tachi/', '"', '.jpg'
+        image = image.replace(/:a;|image[/\\](tachi[/\\])?|"|\.jpg/g, '')
+      }
+      else if (image.startsWith('#')) { // color
+        //TODO
+      }
+      else {
+        throw Error(`Ill-formed arguments for [${cmd} ${arg}]`)
+      }
     }
-    setCharacters(newCharacters)
+    if (type != null) {
+      type = type.replace('%', '');
+    }
+
+    switch(cmd) {
+      case 'cl' : {
+        const newCharacters = new Map(characters)
+        newCharacters.delete(pos as string);
+        setCharacters(newCharacters)
+        break
+      }
+      case 'ld' : {
+        const newCharacters = new Map(characters);
+        newCharacters.set(pos as string, {
+          image: image as string,
+          type: type,
+          pos: pos as string
+        });
+        break
+      }
+      case 'bg' :
+        const bgTmp: Background = {
+          image: image as string,
+          type: type
+        }
+        if (bgTmp.image.includes('image\\event\\')) {
+          dispatch({ type: 'ADD_GAME_EVENT_IMAGE', payload: image })
+        }
+        setBg(bgTmp)
+    }
   }
 
-  //remove sprite
-  function processCl(arg: string) {
-    const pos = arg.split(',')[0]
-    const newCharacters = characters.filter((c: Character) => c.pos !== pos)
-    setCharacters(newCharacters)
-  }
-
-  function processWaittimer(arg: string) {
-    const time = parseInt(arg)
-    return new Promise((resolve)=> {
-      setTimeout(resolve, time)
-    });
+  function processTimer(arg: string, cmd: string) {
+    switch (cmd) {
+      case 'resettimer' :
+        timer = Date.now()
+        break
+      case 'waittimer' :
+        let time_to_wait = parseInt(arg)
+        if (timer !== null)
+          time_to_wait = timer + time_to_wait - Date.now();
+        
+        return new Promise((resolve)=> {
+          setTimeout(resolve, time_to_wait)
+          //TODO store 'resolve', and call it to skip timer
+        });
+      default : throw Error(`unknown timer command ${cmd} ${arg}`)
+    }
   }
 
   const handleClick = () => {
@@ -286,7 +304,7 @@ const Window = () => {
 
       <BackgroundLayer bg={bg} />
 
-      <CharactersLayer characters={characters} />
+      <CharactersLayer characters={Array.from(characters.values())} />
 
       <TextLayer text={text} handleClick={handleClick} />
 
