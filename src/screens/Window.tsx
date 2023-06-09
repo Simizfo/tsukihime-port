@@ -22,8 +22,12 @@ const Window = () => {
   const [index, setIndex] = useState(state.game.index) //line
   const [text, setText] = useState<Line[]>([]) //current text
   const [pages, setPages] = useState<Page[]>([])
-  const [bg, setBg] = useState<Background>({ image: '', type: ''})
+  const [bg, setBg] = useState<Background>(state.game.bg)
   const [characters, setCharacters] = useState<Character[]>([])
+
+  useEffect(() => {
+    dispatch({ type: 'SET_GAME', payload: { ...state.game, bg: bg } })
+  }, [bg])
 
   useEffect(() => {
     setNewScene(sceneNumber)

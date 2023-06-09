@@ -57,14 +57,6 @@ const StateProvider = ({children}: StateProviderProps) => {
           ...curState,
           game: action.payload
         }
-      case 'SET_GAME_INDEX' :
-        return {
-          ...curState,
-          game: {
-            ...curState.game,
-            index: action.payload
-          }
-        }
       case 'ADD_GAME_EVENT_IMAGE' :
         if (curState.permanent.eventImages.includes(action.payload)) return curState
         return {

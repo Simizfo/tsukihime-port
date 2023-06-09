@@ -34,6 +34,7 @@ export type ContextState = {
   game: {
     scene: number,
     index: number,
+    bg: Background,
     regard: {
       ark: number,
       ciel: number,

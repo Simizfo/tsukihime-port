@@ -14,6 +14,10 @@ export const initialContextState = {
   game: {
     scene: 22,
     index: 0,
+    bg: {
+      image: "",
+      type: "",
+    },
     regard: {
       ark: 0,
       ciel: 0,
