@@ -47,7 +47,7 @@ const GalleryScreen = () => {
     imagesTmp = imagesTmp.map((image) => {
       const extension = state.permanent.imagesFolder === 'image' ? 'jpg' : 'webp'
       if (!state.permanent.eventImages.includes(`event\\${image}`)) {
-        return "/image/gallery/notreg.jpg"
+        return "/image_x2/notreg.webp"
       } else {
         return `/${state.permanent.imagesFolder}/event/${image}.${extension}`
       }
@@ -64,12 +64,6 @@ const GalleryScreen = () => {
         <h2 className="title">Gallery</h2>
 
         <main>
-          <div className='gallery-container'>
-            {images.map((eventImage, i) => (
-              <img key={eventImage + i} src={eventImage} alt="event" draggable={false} />
-            ))}
-          </div>
-
           <div className="gallery-char-container">
             <GalleryCharComponent
               character={CHARACTERS.arcueid}
@@ -106,6 +100,12 @@ const GalleryScreen = () => {
               background='/image/bg/ima_07.jpg'
               selected={selected}
               handleSelected={handleSelected} />
+          </div>
+
+          <div className='gallery-container'>
+            {images.map((eventImage, i) => (
+              <img key={eventImage + i} src={eventImage} alt="event" draggable={false} />
+            ))}
           </div>
         </main>
 
