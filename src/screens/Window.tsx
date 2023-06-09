@@ -292,6 +292,18 @@ const Window = () => {
     }
   }
 
+  function processMov(arg: string) {
+    const [varName, value] = arg.split(',')
+    if (varName.startsWith('%')) { // numeric variable
+      //TODO store parseInt(value)
+    }
+    else if (varName.startsWith('$')) { // string variable
+      //TODO store value
+    }
+    else {
+      throw Error(`Ill-formed variable name in 'mov' command: [${arg}]`)
+    }
+  }
   const handleClick = () => {
     if (!state.disp.choices) {
       nextLine()

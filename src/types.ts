@@ -49,6 +49,7 @@ export type ContextState = {
       track: number,
       se: number
     },
+    variables: {name: string, value: number|string}[], // TODO: consider using a Map instead
   },
   permanent: {
     imagesFolder: string,

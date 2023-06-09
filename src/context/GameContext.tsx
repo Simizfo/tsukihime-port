@@ -78,6 +78,17 @@ const StateProvider = ({children}: StateProviderProps) => {
             }
           }
         }
+      case 'SET_VAR' :
+        return {
+          ...curState,
+          game: {
+            ...curState.game,
+            variables: [
+              ...curState.game.variables,
+              {name: action.payload.name, value: action.payload.value}
+            ]
+          }
+        }
       default:
         throw new Error()
     }

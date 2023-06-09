@@ -32,6 +32,7 @@ export const initialContextState = {
       track: 1,
       se: 1,
     },
+    variables: [],
   },
   permanent: {
     imagesFolder: "image_x2",
