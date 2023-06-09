@@ -109,7 +109,7 @@ const MenuLayer = () => {
         </button>
         <div className="action-icons">
           <button onClick={volume}>
-            {state.game.volume === 0 ? <FaVolumeMute /> : <FaVolumeUp />}
+            {state.game.volume.master === 0 ? <FaVolumeMute /> : <FaVolumeUp />}
           </button>
           <button onClick={closeMenu}>
             <IoClose />
