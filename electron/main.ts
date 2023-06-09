@@ -54,6 +54,23 @@ function createMenu() {
       }
     },
     {
+      label: 'Window size',
+      submenu: [
+        {
+          label: '800x600 (original)',
+          click: function () {
+            win?.setSize(800, 600)
+          }
+        },
+        {
+          label: '960x720 (x1.2)',
+          click: function () {
+            win?.setSize(960, 720)
+          }
+        },
+      ]
+    },
+    {
       label: 'Help',
       submenu: [
         {
