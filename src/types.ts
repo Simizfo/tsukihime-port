@@ -46,6 +46,7 @@ export type ContextState = {
     volume: number,
   },
   permanent: {
+    imagesFolder: string,
     eventImages: string[]
   }
 }

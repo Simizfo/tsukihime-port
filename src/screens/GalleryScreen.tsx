@@ -8,7 +8,7 @@ import GalleryCharComponent from '../components/GalleryCharComponent'
 const GalleryScreen = () => {
   const { state } = useContext(store)
   const [selected, setSelected] = useState<CHARACTERS>(CHARACTERS.arcueid)
-  const [images, setImages] = useState<string[]>(GALLERY_IMAGES.arcueid)
+  const [images, setImages] = useState<string[]>([])
 
   useEffect(() => {
     handleSelected(CHARACTERS.arcueid)
@@ -44,12 +44,12 @@ const GalleryScreen = () => {
         break
     }
 
-    //all selected images that are not in the eventImages array are replaced with koha_e01a
     imagesTmp = imagesTmp.map((image) => {
+      const extension = state.permanent.imagesFolder === 'image' ? 'jpg' : 'webp'
       if (!state.permanent.eventImages.includes(`image\\event\\${image}.jpg`)) {
-        return '/image/gallery/notreg.jpg'
+        return "/image/gallery/notreg.jpg"
       } else {
-        return `/image/event/${image}.jpg`
+        return `/${state.permanent.imagesFolder}/event/${image}.${extension}`
       }
     })
 

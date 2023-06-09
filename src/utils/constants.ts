@@ -29,6 +29,7 @@ export const initialContextState = {
     volume: 1,
   },
   permanent: {
+    imagesFolder: "image_x2",
     eventImages: [],
   }
 }

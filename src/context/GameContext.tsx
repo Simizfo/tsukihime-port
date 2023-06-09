@@ -8,6 +8,7 @@ type StateProviderProps = {
 
 const permanent = localStorage.getItem('permanent')
 if (permanent) {
+  //concat initialContextState.permanent with permanent
   initialContextState.permanent = JSON.parse(permanent)
 }
 
