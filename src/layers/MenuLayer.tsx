@@ -2,6 +2,8 @@ import { useContext, useEffect, useRef } from "react"
 import { store } from "../context/GameContext"
 import { addEventListener } from "../utils/utils"
 import { useNavigate } from "react-router-dom"
+import { FaVolumeMute, FaVolumeUp } from "react-icons/fa"
+import { IoClose } from "react-icons/io5"
 
 /**
  * TODO
@@ -57,7 +59,7 @@ const MenuLayer = () => {
     dispatch({ type: 'SET_DISP_HISTORY', payload: true })
   }
 
-  const titleMenu = () => {
+  const title = () => {
     navigate('/title')
     dispatch({ type: 'SET_DISP_MENU', payload: false })
     dispatch({ type: 'SET_GAME', payload: { ...state.game, track: "" } })
@@ -102,15 +104,17 @@ const MenuLayer = () => {
         <button onClick={quickLoad}>
           Quick load
         </button>
-        <button onClick={titleMenu}>
-          Title menu
+        <button onClick={title}>
+          Title
         </button>
-        <button onClick={closeMenu}>
-          Close
-        </button>
-        <button onClick={volume}>
-          {state.game.volume === 0 ? 'Unmute' : 'Mute'}
-        </button>
+        <div className="action-icons">
+          <button onClick={volume}>
+            {state.game.volume === 0 ? <FaVolumeMute /> : <FaVolumeUp />}
+          </button>
+          <button onClick={closeMenu}>
+            <IoClose />
+          </button>
+        </div>
       </div>
     </nav>
   )

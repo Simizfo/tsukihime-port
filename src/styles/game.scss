@@ -187,19 +187,20 @@ body {
         overflow: hidden;
         backdrop-filter: blur(0px);
 
-        $width: 220px;
+        $width: 230px;
         &.show {
             z-index: 4;
             backdrop-filter: blur(1px);
 
             .menu-container {
-                right: 0;
+                right: 6vw;
             }
         }
 
         .menu-container {
-            background: linear-gradient(-90deg, hsl(217deg 60% 36% / 40%) 0%, hsl(205deg 89% 35% / 40%) 100%);
+            background: linear-gradient(180deg, hsl(217deg 60% 36% / 40%) 0%, hsl(205deg 89% 35% / 40%) 100%);
             border-left: 1px solid #19c9b0;
+            border-right: 1px solid #19c9b0;
             box-shadow: -2px 0 4px 0px #103e93c2;
             position: absolute;
             gap: 1em;
@@ -208,8 +209,8 @@ body {
             flex-direction: column;
             height: 100%;
             width: $width;
-            padding: 10vh 1em;
-            font-size: 1.1em;
+            padding: 10vh 1.4em;
+            font-size: 1.3em;
             transition: all .4s ease-out;
 
             button {
@@ -218,11 +219,26 @@ body {
                 text-decoration: none;
                 transition: var(--transition);
                 user-select: none;
+                display: flex;
+                align-items: center;
 
                 &:hover {
                     cursor: pointer;
                     color: rgb(10 164 171);
                     text-shadow: 1px 0 5px rgb(14 79 187), 1px 0 6px rgba(28, 147, 147, 0.5215686275);
+                    text-decoration: underline;
+                }
+            }
+            .action-icons {
+                display: flex;
+                gap: 10px;
+                margin-top: auto;
+            
+                button {
+                    border: 1px solid;
+                    border-radius: 4px;
+                    padding: 0.2em;
+                    width: fit-content;
                 }
             }
         }
