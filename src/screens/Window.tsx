@@ -150,9 +150,13 @@ const Window = () => {
     'waveloop'  : processAudio,
     'wavestop'  : processAudio,
     'br'        : processBr,
-    'resettimer': processTimer, //'resettimer' and 'waittimer' are always together
+    'resettimer': processTimer,
     'waittimer' : processTimer,
-    'mov'       : ignore, // TODO store variable
+    'mov'       : processVar,
+    'add'       : processVar,
+    'sub'       : processVar,
+    'inc'       : processVar,
+    'dec'       : processVar,
     'gosub'     : ignore, // TODO jump to label, then jump back to next line on return
     'goto'      : ignore, // TODO jump to label, no return
   };
@@ -292,17 +296,35 @@ const Window = () => {
     }
   }
 
-  function processMov(arg: string) {
-    const [varName, value] = arg.split(',')
-    if (varName.startsWith('%')) { // numeric variable
-      //TODO store parseInt(value)
+  function processVar(arg: string, cmd: string) {
+    const [name, ...args] = arg.split(',')
+    let value = getVariable(name);
+    if (value === null && cmd != 'mov')
+      throw Error(`Reading undefined variable. [${cmd} ${arg}]`)
+    
+    switch (cmd) {
+      case 'mov' :
+        if (name.startsWith('%'))
+          value = parseInt(args[0])
+        else if (name.startsWith('$'))
+          value = args[0]
+        else
+          throw Error(`Ill-formed variable name in 'mov' command: [${arg}]`)
+        break
+      case 'add' :
+        value += args[0] // can be number or string
+        break
+      case 'sub' :
+        (value as number) -= parseInt(args[0])
+        break
+      case 'inc' :
+        (value as number) += 1
+        break
+      case 'dec' :
+        (value as number) -= 1
+        break
     }
-    else if (varName.startsWith('$')) { // string variable
-      //TODO store value
-    }
-    else {
-      throw Error(`Ill-formed variable name in 'mov' command: [${arg}]`)
-    }
+    dispatch({ type: 'SET_VAR', payload: {name: name, value: value} })
   }
   const handleClick = () => {
     if (!state.disp.choices) {
