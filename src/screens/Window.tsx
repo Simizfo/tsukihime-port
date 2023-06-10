@@ -237,7 +237,7 @@ const Window = () => {
       }
       if (image.startsWith('"') && image.endsWith('"')) {
         // remove ':a;', 'image/', 'image/tachi/', '"', '.jpg'
-        image = image.replace(/:a;|image[/\\](tachi[/\\])?|"|\.jpg/g, '')
+        image = image.replace(/:a;|image[\/\\](tachi[\/\\])?|"|\.jpg/g, '')
       }
       else if (!image.startsWith('#')) { // not image nor color
         throw Error(`Ill-formed arguments for [${cmd} ${arg}]`)
@@ -261,6 +261,7 @@ const Window = () => {
           type: type,
           pos: pos as string
         });
+        setCharacters(newCharacters)
         break
       }
       case 'bg' :
