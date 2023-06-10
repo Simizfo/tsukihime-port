@@ -4,6 +4,10 @@ import { useContext, useEffect, useState } from 'react'
 import { store } from '../context/GameContext'
 import { CHARACTERS, GALLERY_IMAGES } from '../utils/constants'
 import GalleryCharComponent from '../components/GalleryCharComponent'
+import Fancybox from "../components/Fancybox"
+import React from 'react'
+
+const defaultImg = "/image_x2/notreg.webp"
 
 const GalleryScreen = () => {
   const { state } = useContext(store)
@@ -47,7 +51,7 @@ const GalleryScreen = () => {
     imagesTmp = imagesTmp.map((image) => {
       const extension = state.permanent.imagesFolder === 'image' ? 'jpg' : 'webp'
       if (!state.permanent.eventImages.includes(`event\\${image}`)) {
-        return "/image_x2/notreg.webp"
+        return defaultImg
       } else {
         return `/${state.permanent.imagesFolder}/event/${image}.${extension}`
       }
@@ -102,11 +106,24 @@ const GalleryScreen = () => {
               handleSelected={handleSelected} />
           </div>
 
-          <div className='gallery-container'>
-            {images.map((eventImage, i) => (
-              <img key={eventImage + i} src={eventImage} alt="event" draggable={false} />
-            ))}
-          </div>
+          <Fancybox className='gallery-container'
+            options={{
+              Thumbs: false,
+              Toolbar: false,
+            }}
+          >
+            {images.map((eventImage, i) =>
+              <React.Fragment key={eventImage + i}>
+              {eventImage === defaultImg ?
+                <img src={eventImage} alt="event" draggable={false} />
+              :
+                <a href={eventImage} data-fancybox="gallery">
+                  <img src={eventImage} alt="event" draggable={false} />
+                </a>
+              }
+              </React.Fragment>
+            )}
+          </Fancybox>
         </main>
 
         <Link to="/title" className="back-button">Back</Link>
