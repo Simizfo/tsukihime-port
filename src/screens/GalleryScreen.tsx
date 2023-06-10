@@ -115,10 +115,10 @@ const GalleryScreen = () => {
             {images.map((eventImage, i) =>
               <React.Fragment key={eventImage + i}>
               {eventImage === defaultImg ?
-                <img src={eventImage} alt="event" draggable={false} />
+                <img src={eventImage} alt="event" />
               :
                 <a href={eventImage} data-fancybox="gallery">
-                  <img src={eventImage} alt="event" draggable={false} />
+                  <img src={eventImage} alt="event" />
                 </a>
               }
               </React.Fragment>

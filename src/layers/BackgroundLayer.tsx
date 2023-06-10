@@ -13,15 +13,13 @@ const BackgroundLayer = ({ bg }: Props) => {
   if (bg.image.startsWith('#')) {
     return (
       <div className="background"
-        style={{background:bg.image}}
-        draggable={false}/>
+        style={{background:bg.image}} />
     )
   } else {
     return (
       <img src={`${state.permanent.imagesFolder}/${bg.image}.${extension}`}
         alt="background"
-        className="background"
-        draggable={false} />
+        className="background" />
     )
   }
 }

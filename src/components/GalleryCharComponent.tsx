@@ -15,7 +15,7 @@ const GalleryCharComponent = ({ character, background, selected, handleSelected 
   return (
     <button className={`gallery-char-item ${character === selected ? "selected" : ""}`}
       onClick={() => handleSelected(character)}>
-      <img src={background} alt={character} draggable={false} />
+      <img src={background} alt={character} />
       <span>{character}</span>
     </button>
   )
