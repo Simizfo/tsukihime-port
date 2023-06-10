@@ -239,10 +239,7 @@ const Window = () => {
         // remove ':a;', 'image/', 'image/tachi/', '"', '.jpg'
         image = image.replace(/:a;|image[/\\](tachi[/\\])?|"|\.jpg/g, '')
       }
-      else if (image.startsWith('#')) { // color
-        //TODO
-      }
-      else {
+      else if (!image.startsWith('#')) { // not image nor color
         throw Error(`Ill-formed arguments for [${cmd} ${arg}]`)
       }
     }
