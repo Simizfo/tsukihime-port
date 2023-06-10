@@ -1,12 +1,24 @@
 
 export class AudioManager {
+
     private context: AudioContext;
+
+    //Gain nodes.
+    //Set separate gains for track and effects,
+    //and merge them into a global gain node to apply a common gain.
     private trackGainNode: GainNode;
     private seGainNode: GainNode;
     private masterGainNode: GainNode;
+
+    //Source nodes.
+    //Play the sounds from audio buffers.
     private trackNode: AudioBufferSourceNode|null;
     private seNode: AudioBufferSourceNode|null;
 
+    /**
+     * Maps track names and effect names to their audio buffers and paths.
+     * Audio buffers are loaded the first time they are used.
+     */
     private sounds: Map<string, {buffer: AudioBuffer|Promise<AudioBuffer>|null, path: string}>;
     
     constructor() {
@@ -26,6 +38,13 @@ export class AudioManager {
       this.seNode = null;
     }
 
+    /**
+     * Add an entry for a track or a special effect to the table,
+     * specifying the url where the audio buffer will be loaded from.
+     * @param name track/SE name.
+     * @param path url to the audio file.
+     * @param erase erase the entry if it already exists. Defaults to false.
+     */
     setSoundFileUrl(name: string, path: string, erase: boolean = false) : void {
       if (erase || !this.sounds.has(name)) {
         this.sounds.set(name, {path: path, buffer: null});
@@ -35,10 +54,24 @@ export class AudioManager {
       }
     }
 
+    /**
+     * Check whether the specified track / special effect
+     * is already mapped to an audio file.
+     * @param name name of the track / SE.
+     * @returns true if the name is already mapped, false otherwise.
+     */
     isSoundKnown(name: string) : boolean {
       return this.sounds.has(name);
     }
 
+    /**
+     * Load the audio buffer of the specified track / special effect,
+     * using the stored url.
+     * @param name name of the track / SE.
+     * @param forceReload force fetching the audio buffer again
+     *                    if it is already stored.
+     * @returns a promise resolved with the audio buffer when it is loaded.
+     */
     private async loadFile(name: string, forceReload: boolean = false): Promise<AudioBuffer> {
       const sound = this.sounds.get(name);
       if (!sound)
@@ -58,8 +91,16 @@ export class AudioManager {
       return sound.buffer;
     }
 
+    /**
+     * Delete the audio buffer. If the track or special effect is played again,
+     * it will be fetched again.
+     * Keeps the sound name mapped to the file url.
+     * @param name name of the track / SE.
+     */
     unloadFile(name: string) : void {
-      this.sounds.delete(name)
+      const sound = this.sounds.get(name);
+      if (sound)
+        sound.buffer = null;
     }
 
     private async createABSource(name: string, loop: boolean): Promise<AudioBufferSourceNode>
@@ -76,6 +117,13 @@ export class AudioManager {
       return node;
     }
     
+    /**
+     * Set the track to play. If a track is already playing, it is replaced
+     * by the specified one. Fetch the audio buffer if necessary.
+     * @param name name of the track to play.
+     * @param loop true if the track must be looped when it reaches the end
+     *             of the audio buffer, false otherwise. Defaults to true.
+     */
     async playTrack(name: string, loop = true): Promise<void> {
       if (this.trackNode) {
         this.trackNode.stop();
@@ -93,13 +141,29 @@ export class AudioManager {
       }
     }
     
+    /**
+     * Stop the current track.
+     */
     stopTrack(): void {
       this.trackNode?.stop();
     }
+
+    /**
+     * Check if a track is playing. When a track ends,
+     * it is no longer considered playing.
+     * @returns true if a track is playing, false otherwise.
+     */
     isTrackPlaying(): boolean {
       return !!this.trackNode;
     }
 
+    /**
+     * Set the special effect to play. If a track is already playing,
+     * it is replaced by the specified one. Fetch the audio buffer if necessary.
+     * @param name name of the SE to play.
+     * @param loop true if the SE must be looped when it reaches the end
+     *             of the audio buffer, false otherwise. Defaults to false.
+     */
     async playSE(name: string, loop = false): Promise<void> {
       if (this.seNode) {
         this.seNode.stop();
@@ -117,10 +181,16 @@ export class AudioManager {
       }
     }
 
+    /**
+     * Stop the current track.
+     */
     stopSE() : void {
       this.seNode?.stop();
     }
 
+    /**
+     * Common gain for both track and SE. Applied after track gain and SE gain
+     */
     set masterVolume(value: number) {
       this.masterGainNode.gain.value = value;
     }
@@ -129,6 +199,9 @@ export class AudioManager {
       return this.masterGainNode.gain.value;
     }
 
+    /**
+     * Gain for the track.
+     */
     set trackVolume(value: number) {
       this.trackGainNode.gain.value = value;
     }
@@ -137,6 +210,9 @@ export class AudioManager {
       return this.trackGainNode.gain.value;
     }
 
+    /**
+     * Gain for the special effects.
+     */
     set seVolume(value: number) {
       this.seGainNode.gain.value = value;
     }
