@@ -34,7 +34,7 @@ br
 bg "image\bg\bg_06b.jpg",%type_crossfade_mid
 
 monocro off
-play "track03.ogg"
+play "*3"
 
 ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
 

@@ -10,7 +10,7 @@
 
 
 bg "image\bg\ima_01.jpg",%type_crossfade_mid
-play "track07.ogg"
+play "*7"
 
 
 br

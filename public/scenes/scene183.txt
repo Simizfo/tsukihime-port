@@ -7,7 +7,7 @@ gosub *left_phase
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 
-play "track09.ogg"
+play "*9"
 
 ` ----It's morning.@
 ` I open my eyes and put on the glasses near my bed.@

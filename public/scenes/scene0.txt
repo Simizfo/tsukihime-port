@@ -9342,7 +9342,7 @@ setcursor 0,":c;icon\0.bmp",0,0
 setcursor 1,":c;icon\0.bmp",0,0
 autoclick 1500
 
-play "track09.ogg"
+play "*9"
 
 br
 br
@@ -9617,7 +9617,7 @@ return
 mov %staffrollwait,5600
 mov %mmstaffrollwait,4300
 
-play "track10.ogg"
+play "*10"
 
 setwindow 18,18, 36,21, 17,17, 0, 4, 22, 1, 1, #ffffff, 0, 0, 639, 479
 setcursor 0,":c;icon\0.bmp",0,0
@@ -9748,7 +9748,7 @@ gosub *mmpizza
 gosub *mmcatend
 stop
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
-play "track08.ogg"
+play "*8"
 return
 
 *eggs2
@@ -9760,7 +9760,7 @@ gosub *mmbadribbon
 gosub *mmdiary
 stop
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
-play "track08.ogg"
+play "*8"
 return
 
 
@@ -9771,7 +9771,7 @@ setwindow 18,18, 36,21, 17,17, 0, 4, 22, 1, 1, #aaaaaa, 0, 0, 639, 479
 bg "image\bg\bg_06a.jpg",%type_crossfade_mid
 textoff
 wave "wave\SE_BELL.WAV"
-play "track03.ogg"
+play "*3"
 ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
 wait 1000
 cl c,%type_lcartain_mid
@@ -9850,7 +9850,7 @@ ld c,":a;image\tachi\CEL_X01.PNG",%type_rcartain_fst
 cl a,%type_lshutter_fst
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 stop
-play "track08.ogg"
+play "*8"
 return
 
 
@@ -9860,7 +9860,7 @@ stop
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 bg "image\bg\bg_08a.jpg",%type_crossfade_mid
 setwindow 18,18, 36,21, 17,17, 0, 4, 22, 1, 1, #aaaaaa, 0, 0, 639, 479
-play "track03.ogg"
+play "*3"
 ld c,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
 ` Welcome to the mirror moon staffroom!@ You have found your way into one of the secret places in Tsukihime.@ In this room you can get a glimpse of the localization process that brought this popular game to the English-speaking audience.@
 ` You can probably find a detailed history of the project online somewhere, so instead of going into technical details, we will try to show you what really happened.\
@@ -10010,7 +10010,7 @@ bg "image\bg\ima_10.jpg",%type_nowaitdisp
 monocro off
 
 bg "image\bg\bg_08a.jpg",%type_crossfade_mid
-play "track03.ogg"
+play "*3"
 ` Ah---Aheheh, well……@ Let's just forget about all that as quickly as possible, alright?@
 ld c,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
 ` At this point we were almost finished, but there was one more milestone to reach……@
@@ -10025,7 +10025,7 @@ br
 bg "image\bg\ima_10.jpg",%type_crossfade_slw
 stop
 !w2000
-play "track08.ogg"
+play "*8"
 return
 
 
@@ -10138,7 +10138,7 @@ return
 *mmeroge
 bg "image\bg\bg_33a.jpg",%type_lcartain_mid
 ld c,":a;image\tachi\koha_t03.jpg",%type_lshutter_fst
-play "track03.ogg"
+play "*3"
 `"Huh?@ Weren't you with Akiha?"@
 `"Lady Akiha goes to school by car.@ Since I had something to give you this morning, I stayed behind."@
 `"Something to give me?"@
@@ -10227,7 +10227,7 @@ return
 
 
 *mmlastcurry
-play "track04.ogg"
+play "*4"
 bg "image\bg\bg_02a.jpg",%type_lshutter_mid
 ld c,":a;image\tachi\cel_t06c.jpg",%type_crossfade_fst
 `"-------"@
@@ -10334,7 +10334,7 @@ return
 *mmwasuremono
 bg "image\bg\bg_29b.jpg",%type_nowaitdisp
 ld c,":a;image\tachi\stk_t04.jpg",%type_crossfade_fst
-play "track06.ogg"
+play "*6"
 
 `"Ah---"@
 ` Yumizuka's body trembles.@
@@ -10520,7 +10520,7 @@ bg "image\bg\ima_12b.jpg",%type_nowaitdisp
 bg "image\bg\ima_11.jpg",%type_nowaitdisp
 bg "image\bg\bg_40b.jpg",%type_nowaitdisp
 wavestop
-play "track06.ogg"
+play "*6"
 
 `"AAAAAAAAAAAAAAAA!"@
 ` In the middle of the ultimate pain, I wake up.@
@@ -10597,7 +10597,7 @@ br
 br
 ` ……A cat is fine, too.\
 textoff
-play "track05.ogg"
+play "*5"
 lsp 8,":a;image\tachi\RAN_T08.PNG",240,0
 print %type_bcartain_slw
 repaint
@@ -10689,7 +10689,7 @@ bg "image\bg\cmo_05b.jpg",%type_lshutter_fst
 ` Mmm. I should go out with Arcueid tonight, maybe go see a vampire movie.\
 
 bg "image\bg\BG_34B.JPG",%type_lshutter_slw
-play "track03.ogg"
+play "*3"
 ` Dinner evolved into a drinking party that night.@
 ld l,":a;image\tachi\aki_t26.jpg",%type_lshutter_fst
 ` So rather than retiring to my room early and sneaking out, I enjoyed the evening with Akiha taking one shot after another.@
@@ -10886,7 +10886,7 @@ wait 500
 bg "image\bg\bg_29b.jpg",%type_crossfade_mid
 ld c,":a;image\tachi\stk_t08.jpg",%type_crossfade_mid
 
-play "track04.ogg"
+play "*4"
 ` Yumizuka slapped my hand aside and my knife skittered across the park.@ She cornered me, her bloodshot eyes glittering in the night.@
 `"Finally, Shiki.@ You'll be like me!"@
 ` 
@@ -11133,7 +11133,7 @@ playstop
 bg "image\bg\ima_10.jpg",%type_crossfade_slw
 
 bg "image\bg\cmo_20.jpg",%type_bcartain_mid
-play "track02.ogg"
+play "*2"
 
 ` I finally decided that I would return the ribbon.@ It took weeks after settling things with Arcueid and Ciel to weave my way through all the lies being told at the Tohno mansion.@
 ` 
@@ -11170,7 +11170,7 @@ cl c,%type_rshutter_fst
 ` Oh well, I should be getting to school too.\
 
 bg "image\bg\bg_06b.jpg",%type_lshutter_mid
-play "track03.ogg"
+play "*3"
 
 ` School is pretty uneventful.@ I manage to avoid a confrontation with Arcueid and Ciel, so I just go straight home.\
 
@@ -11396,7 +11396,7 @@ stop
 date %playingyear, %playingmonth, %playingday
 if %playingmonth==12 && %playingday==25 gosub *mmxmasegg
 
-play "track08.ogg"
+play "*8"
 
 *title_tochu
 
@@ -12236,7 +12236,7 @@ br
 br
 ` I hear a familiar voice.\
 
-play "track08.ogg"
+play "*8"
 
 
 bg "image\event\ao_01.jpg",lshutter_fst
@@ -12453,7 +12453,7 @@ playstop
 
 bg "image\bg\ima_21.jpg",crossfade_fst
 
-play "track07.ogg"
+play "*7"
 
 `"--------------"@
 ` For some strange reason, I'm not shedding any tears.@

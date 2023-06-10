@@ -8,7 +8,7 @@ monocro #fffff0
 
 bg "image\bg\bg_40e.jpg",%type_crossfade_slw
 
-play "track06.ogg"
+play "*6"
 
 
 ` It becomes morning and I finally manage to lock the door.@

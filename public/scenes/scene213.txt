@@ -14,7 +14,7 @@ bg "image\bg\bg_40b.jpg",%type_nowaitdisp
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_42b.jpg",%type_lcartain_mid
-play "track03.ogg"
+play "*3"
 
 ld c,":a;image\tachi\koha_t06.jpg",%type_lshutter_mid
 

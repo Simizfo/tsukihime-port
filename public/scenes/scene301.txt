@@ -51,7 +51,7 @@ br
 
 ld c,":a;image\tachi\cel_t15.jpg",%type_crossfade_fst
 
-play "track07.ogg"
+play "*7"
 
 `"---You finally decided to fight."@
 ` Her voice seems almost relieved.\

@@ -1,7 +1,7 @@
 
 
 
-play "track03.ogg"
+play "*3"
 
 
 bg "image\bg\bg_34c.jpg",%type_lshutter_mid
@@ -311,7 +311,7 @@ playstop
 
 !w1000
 bg "image\bg\bg_34b.jpg",%type_lshutter_mid
-play "track01.ogg"
+play "*1"
 
 
 ` It has gotten pretty late.@
@@ -522,7 +522,7 @@ br
 br
 
 bg "image\bg\ima_10.jpg",%type_crossfade_slw
-play "track08.ogg"
+play "*8"
 
 br
 `"Shiki-san, if you sleep there, you'll catch a cold."@
@@ -755,7 +755,7 @@ br
 ` I feel the dirty presence of someone else in my room.@
 ` Burning.@
 ` I decide to leave my room.\
-play "track04.ogg"
+play "*4"
 
 bg "image\bg\bg_33d.jpg",%type_nowaitdisp
 !w1000
@@ -894,7 +894,7 @@ br
 br
 
 bg "image\bg\ima_10.jpg",%type_lcartain_fst
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_52.jpg",%type_lcartain_fst
 

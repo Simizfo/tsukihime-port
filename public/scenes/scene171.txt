@@ -3,7 +3,7 @@
 bg "image\bg\ima_10.jpg",%type_lcartain_slw
 
 bg "image\bg\bg_27a.jpg",%type_lcartain_mid
-play "track03.ogg"
+play "*3"
 
 ` The weather's great so I decide to go to the park.@
 ` We can relax there and then go somewhere else more appropriate later.\

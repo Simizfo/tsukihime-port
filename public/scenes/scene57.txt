@@ -213,7 +213,7 @@ ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
 ` It's only right to repay good intentions with good intentions.@ With an energetic wave of the hand at Hisui, I leave the gates of the mansion behind.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_23a.jpg",%type_rcartain_mid
 
@@ -251,7 +251,7 @@ bg "image\bg\bg_01a.jpg",%type_lcartain_mid
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_06a.jpg",%type_lcartain_mid
 
-play "track03.ogg"
+play "*3"
 
 ` The classroom, just minutes before homeroom, is full of commotion.@
 ` Scattered all over the classroom are my classmates, intent on talking until the teacher arrives.@ It's like a festival in here, even though there are only a few minutes left.@

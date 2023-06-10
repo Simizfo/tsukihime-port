@@ -44,7 +44,7 @@ br
 
 bg "image\bg\bg_40a.jpg",%type_crossfade_fst
 
-play "track02.ogg"
+play "*2"
 
 ` Morning?@
 ` It seems I slept until now after Akiha treated me.@

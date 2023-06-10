@@ -1,6 +1,6 @@
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-play "track03.ogg"
+play "*3"
 
 bg "image\bg\bg_11a.jpg",%type_lcartain_fst
 
@@ -155,7 +155,7 @@ ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
 ` What an odd question.\
 
 `"Well, isn't it because the blood was drained from the bodies?@ It'd only be natural to call them vampires, wouldn't it?"@
-play "track04.ogg"
+play "*4"
 ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
 `"Do you know the folklore about vampires, Tohno-kun?"@
 ` Suddenly breaking into a smile, Senpai asks an even stranger question.\
@@ -175,7 +175,7 @@ ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
 `"Well-----that's…"@
 ` …… Senpai is still smiling.@
 ` I know it's only a joke, but I'm having difficulty laughing it off.\
-play "track03.ogg"
+play "*3"
 
 ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
 
@@ -301,7 +301,7 @@ br
 !w3000
 
 bg "image\bg\bg_10c.jpg",%type_tshutter_mid
-play "track01.ogg"
+play "*1"
 !w1000
 
 `"---Sorry for dragging you along with me, Arihiko."@

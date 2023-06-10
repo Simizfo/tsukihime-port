@@ -22,7 +22,7 @@ br
 ` It's just that, since I didn't have confidence in myself, I threw away my knife.@
 ` If I kept holding it, I know I would've done something worse than me dying.\
 
-play "track09.ogg"
+play "*9"
 
 ld c,":a;image\tachi\cel_t15.jpg",%type_lshutter_mid
 `"-------"@
@@ -393,7 +393,7 @@ br
 
 bg "image\event\cel_e07a.jpg",%type_crossfade_mid
 
-play "track07.ogg"
+play "*7"
 
 br
 ` ----We collide with a thud.@

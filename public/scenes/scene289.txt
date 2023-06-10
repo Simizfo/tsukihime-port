@@ -82,7 +82,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 bg "image\bg\bg_28b.jpg",%type_crossfade_mid
 
-play "track04.ogg"
+play "*4"
 
 ` Snap.@
 ` Something cracks in my head.@
@@ -802,7 +802,7 @@ br
 `"---Senpai.@ Why are you doing this too---?"@
 br
 
-play "track08.ogg"
+play "*8"
 
 `"I understand.@ Roa is already surfacing, right?@ Then it is too late already."@
 ` Lightly,
@@ -1317,7 +1317,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_fst
 
 bg "image\bg\bg_11c.jpg",%type_lcartain_fst
 
-play "track09.ogg"
+play "*9"
 
 ` *pant*, *pant*, *pant*, *pant*-----
 ` I run.@
@@ -1535,7 +1535,7 @@ br
 
 ld c,":a;image\tachi\cel_t15.jpg",%type_crossfade_fst
 
-play "track07.ogg"
+play "*7"
 
 `"---You finally decided to fight."@
 ` Her voice seems almost relieved.\

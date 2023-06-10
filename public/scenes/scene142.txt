@@ -48,7 +48,7 @@ bg "image\bg\bg_25b.jpg",%type_lcartain_mid
 ` When we approach the main street, Arcueid freezes.@
 ld c,":a;image\tachi\ark_t22.jpg",%type_lshutter_fst
 
-play "track04.ogg"
+play "*4"
 
 `"---Found it."@
 `"Eh……… ?"@
@@ -327,7 +327,7 @@ bg "image\bg\bg_27b.jpg",%type_lcartain_mid
 
 ld c,":a;image\tachi\ark_t01a.jpg",%type_lshutter_fst
 
-play "track02.ogg"
+play "*2"
 
 
 `"Well, as you wish, Shiki, I'll talk about whatever you want."@
@@ -566,7 +566,7 @@ ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
 
 ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
 
-play "track08.ogg"
+play "*8"
 
 ` "But you can relax, Shiki.@
 ` Even if their avowed enemies are not in this country, I'm here right now.@

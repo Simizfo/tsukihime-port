@@ -88,7 +88,7 @@ br
 ` painted in red sunlight, she is standing by the window.\
 
 bg "image\event\ark_f01.jpg",%type_crossfade_fst
-play "track07.ogg"
+play "*7"
 
 
 ` She doesn't move at all, but she's there.@

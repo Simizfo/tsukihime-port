@@ -7,7 +7,7 @@ bg "image\bg\bg_45e.jpg",%type_crossfade_fst
 ` There's no way I can do that.@
 ` Akiha didn't do anything wrong.\
 ` She didn't do anything wrong, so why-----does she have to end like this?\
-play "track09.ogg"
+play "*9"
 
 `"………………"@
 ` The sound of my knife dropping.@
@@ -65,7 +65,7 @@ monocro off
 
 bg "image\bg\ima_03.jpg",%type_crossfade_mid
 
-play "track02.ogg"
+play "*2"
 
 
 ` I open my eyes.@
@@ -122,7 +122,7 @@ playstop
 
 bg "image\bg\bg_45b.jpg",%type_crossfade_mid
 
-play "track07.ogg"
+play "*7"
 
 ` In the room lives a girl.@
 ` No, the term "lives" is not right.@

@@ -64,7 +64,7 @@ bg "image\bg\ima_11.jpg",%type_crossfade_slw
 
 bg "image\bg\bg_15a.jpg",%type_crossfade_mid
 
-play "track09.ogg"
+play "*9"
 
 br
 br
@@ -409,7 +409,7 @@ cl a,%type_crossfade_fst
 
 
 \
-play "track08.ogg"
+play "*8"
 
 ` In this room.@
 br
@@ -549,7 +549,7 @@ playstop
 
 ` Arcueid imitates me and sits on a sofa.\
 
-play "track04.ogg"
+play "*4"
 
 `"Well, I'll ask then.@
 ` The guy last night----the one you called Nrvnqsr… just what the hell is he?@

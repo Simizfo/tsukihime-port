@@ -11,7 +11,7 @@ gosub *right_phase
 bg "image\bg\ima_11.jpg",%type_crossfade_slw
 
 bg "image\bg\cmo_05.jpg",%type_crossfade_mid
-play "track09.ogg"
+play "*9"
 
 
 ` Back then, the whole mansion was like a giant playground.@
@@ -53,7 +53,7 @@ br
 ` I told you yesterday, it sends chills down my back----\
 
 
-play "track02.ogg"
+play "*2"
 
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 

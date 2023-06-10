@@ -66,7 +66,7 @@ br
 wavestop
 
 ld c,":a;image\tachi\his_t20.jpg",%type_crossfade_mid
-play "track01.ogg"
+play "*1"
 
 br
 ` ----I see Hisui acting strangely.@
@@ -206,7 +206,7 @@ ld c,":a;image\tachi\his_t22.jpg",%type_crossfade_mid
 ` Once I glimpse her fingers grasping her skirt, I can no longer look away.\
 wavestop
 
-play "track05.ogg"
+play "*5"
 
 bg "image\event\his_h15.jpg",%type_bshutter_mid
 
@@ -618,7 +618,7 @@ bg "image\bg\ima_11.jpg",%type_crossfade_slw
 
 bg "image\bg\bg_40a.jpg",%type_lcartain_fst
 
-play "track02.ogg"
+play "*2"
 
 
 ` ………, ………………, ……………………@

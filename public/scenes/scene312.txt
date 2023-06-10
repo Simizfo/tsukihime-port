@@ -2,7 +2,7 @@
 ` ----With this, it is over.@
 br
 ` Tohno Shiki will soon disappear, and everything will end.@
-play "track07.ogg"
+play "*7"
 
 bg "image\event\aki_e01.jpg",%type_crossfade_mid
 bg "image\event\stk_e01a.jpg",%type_crossfade_mid
@@ -241,7 +241,7 @@ br
 br
 ` ----As I think that, I grab Akiha's arm.\
 
-play "track09.ogg"
+play "*9"
 
 bg "image\event\aki_e02.jpg",%type_crossfade_mid
 

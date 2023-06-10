@@ -309,7 +309,7 @@ wavestop
 bg "image\bg\ima_10.jpg",%type_lcartain_fst
 !w1000
 
-play "track08.ogg"
+play "*8"
 
 bg "image\bg\bg_11c.jpg",%type_lcartain_fst
 

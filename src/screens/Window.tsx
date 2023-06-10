@@ -3,7 +3,7 @@ import '../styles/game.scss';
 import { AudioManager } from '../utils/AudioManager';
 import HistoryLayer from '../layers/HistoryLayer';
 import { Background, Character, Choice, Line, Page } from '../types';
-import { fetchChoices, fetchGoToNextScene, fetchScene, addEventListener } from '../utils/utils';
+import { fetchChoices, fetchGoToNextScene, fetchScene, addEventListener, getTrackFile } from '../utils/utils';
 import ChoicesLayer from '../layers/ChoicesLayer';
 import CharactersLayer from '../layers/CharactersLayer';
 import TextLayer from '../layers/TextLayer';
@@ -184,7 +184,7 @@ const Window = () => {
     let name = arg
     switch(cmd) {
       case 'play' :
-        track = name.split('"')[1]
+        track = getTrackFile(name)
         const path = "CD/" + track
         audio.setSoundFileUrl(track, path)
         audio.playTrack(track, true)

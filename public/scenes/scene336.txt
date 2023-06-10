@@ -115,7 +115,7 @@ wave se0
 `"…… This is bad…… I have to go back to my room."@
 ` I shake my head lightly, and I decide to go back to my room before I really faint.@
 
-play "track01.ogg"
+play "*1"
 
 ld c,":a;image\tachi\koha_t02b.jpg",%type_lshutter_fst
 

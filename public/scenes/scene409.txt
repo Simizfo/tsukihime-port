@@ -59,7 +59,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_fst
 
 monocro #ffff00
 bg "image\bg\bg_45b.jpg",%type_crossfade_mid
-play "track07.ogg"
+play "*7"
 
 
 ` When I was just a small kid, taken to new surroundings and not being used to the new people, I locked myself up in my room.@
@@ -93,7 +93,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_fst
 monocro #ffff00
 
 bg "image\bg\bg_45b.jpg",%type_crossfade_mid
-play "track07.ogg"
+play "*7"
 
 ` …… That girl came every day.@
 ` She would always knock, not getting tired of doing so.@
@@ -175,7 +175,7 @@ bg "image\event\his_e01.jpg",%type_crossfade_mid
 !w1000
 bg "image\bg\bg_40b.jpg",%type_nowaitdisp
 
-play "track07.ogg"
+play "*7"
 
 ` She sounds like she's crying.@
 ` The tone is different, but it feels similar to what that girl told me back then.\
@@ -212,7 +212,7 @@ br
 ` Really, who was she--?\
 
 
-play "track08.ogg"
+play "*8"
 
 bg "image\bg\bg_40b.jpg",%type_crossfade_fst
 
@@ -336,7 +336,7 @@ bg "image\bg\bg_40b.jpg",%type_crossfade_mid
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w2000
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_40c.jpg",%type_crossfade_mid
 
@@ -653,7 +653,7 @@ bg "image\bg\ima_10.jpg",%type_tshutter_fst
 ` The rustling of her clothes tells me she is coming closer.@
 ` And then…
 ` Something shifts onto the bed and I feel something touch my lips.\
-play "track08.ogg"
+play "*8"
 
 `"-------"@
 ` A tender sensation.@
@@ -959,7 +959,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 ` She must be used to them, as she takes off her maid uniform rather easily.\
 
 bg "image\bg\bg_40d.jpg",%type_crossfade_fst
-play "track05.ogg"
+play "*5"
 
 
 bg "image\event\his_h12.jpg",%type_crossfade_mid
@@ -1955,7 +1955,7 @@ br
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 bg "image\bg\bg_41.jpg",%type_lcartain_mid
 
-play "track01.ogg"
+play "*1"
 
 ` I enter the old man's room.@
 ` …… This place should definitely have something to answer my questions.@
@@ -1994,7 +1994,7 @@ monocro #ffff00
 bg "image\bg\bg_41.jpg",%type_bshutter_mid
 
 
-play "track09.ogg"
+play "*9"
 
 ` ~ Month ~ Day
 ` My son SHIKI succumbed to his Tohno blood.@
@@ -2195,7 +2195,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_fst
 
 bg "image\bg\ima_08.jpg",%type_crossfade_fst
 
-play "track07.ogg"
+play "*7"
 
 br
 br
@@ -2281,7 +2281,7 @@ br
 `"----!?"@
 ` I turn around.@
 ` I don't know when she arrived, but Hisui is there.\
-play "track08.ogg"
+play "*8"
 
 ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_mid
 
@@ -2667,7 +2667,7 @@ br
 ` Before I start to think, I dash towards the building.\
 
 bg "image\bg\ima_10.jpg",%type_lshutter_fst
-play "track06.ogg"
+play "*6"
 
 bg "image\bg\bg_07b.jpg",%type_lshutter_fst
 
@@ -2889,7 +2889,7 @@ playstop
 bg "image\bg\ima_10.jpg",%type_tshutter_mid
 
 bg "image\bg\bg_11c.jpg",%type_bshutter_mid
-play "track09.ogg"
+play "*9"
 
 
 

@@ -174,7 +174,7 @@ cl a,%type_crossfade_fst
 ` My…@
 ` If that dream of mine is just a dream…\
 wavestop
-play "track01.ogg"
+play "*1"
 
 `"---Senpai.@ Is this true?@ Is it the same as those vampire killings from before?"@
 

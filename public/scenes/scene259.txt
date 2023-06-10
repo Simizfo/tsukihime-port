@@ -49,7 +49,7 @@ bg "image\bg\bg_25b.jpg",%type_lcartain_mid
 
 ` When we approach the main street, Arcueid freezes.@
 ld c,":a;image\tachi\ark_t22.jpg",%type_lshutter_fst
-play "track04.ogg"
+play "*4"
 
 `"---Found it."@
 `"Eh……… ?"@
@@ -352,7 +352,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_slw
 
 
 bg "image\bg\bg_28b.jpg",%type_lcartain_slw
-play "track02.ogg"
+play "*2"
 
 
 ld c,":a;image\tachi\ark_t01a.jpg",%type_lshutter_mid
@@ -539,7 +539,7 @@ bg "image\bg\bg_28b.jpg",%type_crossfade_fst
 
 ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
 
-play "track09.ogg"
+play "*9"
 
 `"Oh, Shiki, you're making that face again.@
 ` You can relax.@ Even though the avowed enemies of the vampires do not have a presence in this country, I'm still here.@

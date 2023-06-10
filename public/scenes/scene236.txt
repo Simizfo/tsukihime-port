@@ -59,7 +59,7 @@ bg "image\bg\bg_40a.jpg",%type_crossfade_fst
 ld c,":a;image\tachi\his_t04.jpg",%type_lshutter_fst;S.E.’âŽ~
 wavestop
 
-play "track02.ogg"
+play "*2"
 
 `"Shiki-sama……!"@
 ` And then,
@@ -281,7 +281,7 @@ cl c,%type_crossfade_fst
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 playstop
 !w2000
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_06a.jpg",%type_rshutter_mid
 
@@ -488,7 +488,7 @@ br
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 !w2000
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_27b.jpg",%type_lcartain_fst
 
@@ -559,7 +559,7 @@ br
 ` Without a doubt, it is Yumizuka Satsuki.\
 
 
-play "track09.ogg"
+play "*9"
 
 
 `"Yumi… zuka?"@

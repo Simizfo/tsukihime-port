@@ -14,7 +14,7 @@ bg "image\bg\bg_24b.jpg",%type_lcartain_mid
 ` Leaving from the main gate, I come to the intersection that leads to the residential district.@
 ` This is the point at which the paths to the city and the residential district, where the mansion is, part---
 br
-play "track03.ogg"
+play "*3"
 ld c,":a;image\tachi\stk_t01.jpg",%type_lshutter_mid
 `"Oh, it's Tohno-kun."@
 ` Suddenly, I run into Yumizuka.@
@@ -135,7 +135,7 @@ br
 ` Yeah, something like that did happen.\
 
 playstop
-play "track07.ogg"
+play "*7"
 
 bg "image\bg\ima_10.jpg",%type_tshutter_mid
 monocro #0000ff

@@ -13,7 +13,7 @@ bg "image\bg\bg_33b.jpg",%type_nowaitdisp
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_42b.jpg",%type_lcartain_mid
-play "track01.ogg"
+play "*1"
 
 
 `"She's probably sweeping in the back."@
@@ -172,7 +172,7 @@ br
 
 bg "image\bg\bg_45b.jpg",%type_crossfade_fst
 
-play "track04.ogg"
+play "*4"
 
 `"Kohaku, san.@ You said 'cursed'?"@
 
@@ -312,7 +312,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 bg "image\bg\bg_45c.jpg",%type_crossfade_mid
 
-play "track08.ogg"
+play "*8"
 
 ` …… The time passes quietly.@
 ` Neither of us say anything.@
@@ -374,7 +374,7 @@ playstop
 ` I see---
 br
 bg "image\event\koha_e03.jpg",%type_crossfade_mid
-play "track07.ogg"
+play "*7"
 
 
 ` ---her smiling very peacefully.\
@@ -536,7 +536,7 @@ cl c,%type_lshutter_mid
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w1000
 bg "image\bg\bg_40c.jpg",%type_lcartain_mid
-play "track01.ogg"
+play "*1"
 
 
 ` I eat dinner alone and go back to my room.@
@@ -611,7 +611,7 @@ br
 wavestop
 
 bg "image\bg\bg_25b.jpg",%type_crossfade_mid
-play "track04.ogg"
+play "*4"
 
 
 ` The city at night.@
@@ -824,7 +824,7 @@ wave se3
 ` Knock.@ Knock.@
 
 ld c,":a;image\tachi\his_t16.jpg",%type_lshutter_mid
-play "track02.ogg"
+play "*2"
 
 
 ` "Please excuse me," Hisui says as she enters the room.@

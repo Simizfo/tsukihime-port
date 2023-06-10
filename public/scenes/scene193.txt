@@ -43,7 +43,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 bg "image\event\ark_e10.jpg",%type_crossfade_mid
 
-play "track07.ogg"
+play "*7"
 
 `"………………"@
 ` Arcueid doesn't say anything.@
@@ -223,7 +223,7 @@ playstop
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 bg "image\bg\ima_01.jpg",%type_crossfade_mid
-play "track08.ogg"
+play "*8"
 
 `"Oh----"@
 ` Her gasp isn't one of resistance.@
@@ -368,7 +368,7 @@ playstop
 
 bg "image\bg\ima_10.jpg",%type_lshutter_mid
 bg "image\event\ark_h05.jpg",%type_lshutter_mid
-play "track05.ogg"
+play "*5"
 
 `"N……"@
 ` Our lips come together naturally.@

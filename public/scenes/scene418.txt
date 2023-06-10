@@ -13,7 +13,7 @@ bg "image\bg\bg_33b.jpg",%type_nowaitdisp
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_41.jpg",%type_lcartain_mid
 
-play "track03.ogg"
+play "*3"
 
 
 ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_mid
@@ -89,7 +89,7 @@ br
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 bg "image\bg\bg_41.jpg",%type_crossfade_mid
 
-play "track06.ogg"
+play "*6"
 
 `"Ah----"@
 ` My vision thins.@
@@ -239,7 +239,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_mid
 !w2000
 bg "image\bg\bg_40c.jpg",%type_lcartain_mid
 
-play "track01.ogg"
+play "*1"
 
 ` I eat dinner alone and go back to my room.@
 ` I guess Akiha was still feeling poorly because she wasn't there.\
@@ -309,7 +309,7 @@ br
 wavestop
 
 bg "image\bg\bg_25b.jpg",%type_crossfade_mid
-play "track04.ogg"
+play "*4"
 
 
 ` The nighttime city.@
@@ -522,7 +522,7 @@ wave se3
 ` Knock.@ Knock.@
 
 ld c,":a;image\tachi\his_t16.jpg",%type_lshutter_mid
-play "track02.ogg"
+play "*2"
 
 
 ` "Please excuse me," Hisui says as she enters the room.@

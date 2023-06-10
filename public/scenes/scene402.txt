@@ -8,7 +8,7 @@
 
 bg "image\bg\bg_34b.jpg",%type_crossfade_fst
 
-play "track01.ogg"
+play "*1"
 
 ` After dinner is over, I head to the sitting room to have some tea.@
 ` …… Not that I'm in the mood to elegantly drink tea, but I can't exactly refuse Akiha and Kohaku-san's invitation.@
@@ -362,7 +362,7 @@ bg "image\bg\bg_33a.jpg",%type_crossfade_fst
 ` Hisui realizes I'm here and quietly walks over to me.@
 
 ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_mid
-play "track01.ogg"
+play "*1"
 
 
 `"Good morning, Shiki-sama."@
@@ -405,7 +405,7 @@ bg "image\bg\bg_40a.jpg",%type_rcartain_mid
 ` Thinking about what I should do next, I decide to walk around the mansion.\
 
 bg "image\bg\bg_33a.jpg",%type_lcartain_mid
-play "track01.ogg"
+play "*1"
 
 ` I arrive at the lobby.@
 ` For some reason, I aimlessly wander around the mansion to confirm my childhood memories.\
@@ -620,7 +620,7 @@ bg "image\bg\ima_11.jpg",%type_nowaitdisp
 !w500
 
 bg "image\bg\bg_40c.jpg",%type_crossfade_mid
-play "track01.ogg"
+play "*1"
 
 
 ` …… I can hear voices talking.\
@@ -802,7 +802,7 @@ playstop
 
 !w4000
 bg "image\bg\ima_02.jpg",%type_crossfade_mid
-play "track09.ogg"
+play "*9"
 
 
 br
@@ -1047,7 +1047,7 @@ monocro off
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 
-play "track02.ogg"
+play "*2"
 
 `"Huh?@ …… Why?"@
 ` Touching my cheeks, I realize I was crying.@
@@ -1149,7 +1149,7 @@ playstop
 !w2000
 bg "image\bg\bg_40a.jpg",%type_lcartain_fst
 
-play "track03.ogg"
+play "*3"
 
 
 ` Kohaku-san arrives soon and lends me her shoulder.@
@@ -1578,7 +1578,7 @@ br
 bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 wavestop
 
-play "track01.ogg"
+play "*1"
 
 ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
 
@@ -1720,7 +1720,7 @@ gosub *left_phase
 
 
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
-play "track02.ogg"
+play "*2"
 
 
 ` The light from the window wakes me up.@
@@ -1781,7 +1781,7 @@ playstop
 !w2000
 bg "image\bg\bg_40a.jpg",%type_lcartain_mid
 
-play "track03.ogg"
+play "*3"
 
 ` ---After that, it's pretty much like yesterday morning.@
 br
@@ -2047,7 +2047,7 @@ wave se0
 ` ---My headache.\
 
 bg "image\bg\bg_40e.jpg",%type_crossfade_mid
-play "track06.ogg"
+play "*6"
 
 
 `"……… Eh?"@
@@ -2465,7 +2465,7 @@ bg "image\bg\bg_40b.jpg",%type_nowaitdisp
 
 wavestop
 
-play "track06.ogg"
+play "*6"
 
 `"AAAAAAAAAAAAAAAA!"@
 ` In the middle of the ultimate pain, I wake up.@
@@ -2551,7 +2551,7 @@ cl c,%type_lshutter_fst
 bg "image\bg\ima_10.jpg",%type_lshutter_mid
 !w1500
 bg "image\bg\bg_40c.jpg",%type_lcartain_mid
-play "track01.ogg"
+play "*1"
 
 ` ---It looks like the blood came from my hand and my thigh.@
 ` I say 'looks like' because I just think so.@
@@ -2692,7 +2692,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w1000
 bg "image\bg\bg_40c.jpg",%type_crossfade_fst
 
-play "track06.ogg"
+play "*6"
 
 
 ` ---My excited body thinks about the same thing, no matter who I saw.@
@@ -2748,7 +2748,7 @@ playstop
 !w4000
 bg "image\bg\bg_40d.jpg",%type_crossfade_mid
 
-play "track08.ogg"
+play "*8"
 
 br
 ` ---The door opens with a creak.@
@@ -2812,7 +2812,7 @@ bg "image\bg\ima_10.jpg",%type_nowaitdisp
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 bg "image\bg\ima_10.jpg",%type_nowaitdisp
 bg "image\bg\bg_40a.jpg",%type_crossfade_slw
-play "track01.ogg"
+play "*1"
 
 !w1000
 
@@ -2900,7 +2900,7 @@ playstop
 monocro #ffff00
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 wave se0
-play "track09.ogg"
+play "*9"
 
 
 `"Ahh………!"@
@@ -2944,7 +2944,7 @@ playstop
 monocro off
 bg "image\bg\ima_11.jpg",%type_nowaitdisp
 bg "image\bg\bg_40a.jpg",%type_nowaitdisp
-play "track01.ogg"
+play "*1"
 
 `"------Sssttt!"@
 ` …… I guess it was a dream.@
@@ -3151,7 +3151,7 @@ playstop
 
 bg "image\bg\bg_40b.jpg",%type_crossfade_mid
 
-play "track08.ogg"
+play "*8"
 
 ` ---It's afternoon now.@
 br
@@ -3276,7 +3276,7 @@ playstop
 !w1000
 bg "image\bg\bg_40d.jpg",%type_crossfade_slw
 
-play "track01.ogg"
+play "*1"
 
 ` It's midnight, and I made Hisui return to her room.@
 ` Even though I felt better earlier, I don't know when that headache will return and make me lose my sanity.@
@@ -3450,7 +3450,7 @@ quakex 2,200
 
 bg "image\bg\bg_40a.jpg",%type_lcartain_mid
 
-play "track02.ogg"
+play "*2"
 
 ` *wheeze* *wheeze* *wheeze* *wheeze*
 br
@@ -3632,7 +3632,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w3000
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 
-play "track09.ogg"
+play "*9"
 
 ` -------------------------------------------------.\
 
@@ -3795,7 +3795,7 @@ br
 ` What are you…
 ` saying   right now   Hisui ?\
 
-play "track04.ogg"
+play "*4"
 
 `"However, it will take more time, so let's talk to pass the time.@ …… Yes.@ Let's talk about your beloved childhood, Shiki-sama."@
 ` Still standing,
@@ -3893,7 +3893,7 @@ playstop
 
 ld c,":a;image\tachi\his_t02.jpg",%type_crossfade_fst
 
-play "track08.ogg"
+play "*8"
 
 `"…… Shiki-sama.@ I will now tend to your… lower parts."@
 ` Her face flushed with embarrassment, Hisui says such an unbelievable thing.@

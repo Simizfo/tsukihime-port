@@ -231,7 +231,7 @@ wavestop
 ` With light footsteps, she comes into the alley, shrugging her shoulders in disappointment.\
 `"Hello.@ You really gave me some trouble yesterday."@
 ld c,":a;image\tachi\ark_t01.jpg",%type_crossfade_fst
-play "track09.ogg"
+play "*9"
 ` With a warm smile, she comes into the alley.@
 ` ----I've got to run away.@
 br

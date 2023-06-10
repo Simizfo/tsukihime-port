@@ -4,7 +4,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 bg "image\bg\bg_46c.jpg",%type_rcartain_mid
 
-play "track03.ogg"
+play "*3"
 
 ` …… Let's see… Kohaku-san's room is… here, isn't it?@
 br
@@ -165,7 +165,7 @@ wave se3
 ld c,":a;image\tachi\his_t16.jpg",%type_crossfade_mid
 `"Excuse me."@
 ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-play "track01.ogg"
+play "*1"
 `"Good evening.@ Thanks for making my bed, Hisui."@
 ` Hisui quietly nods in acceptance.@
 `"…… Urgh."@

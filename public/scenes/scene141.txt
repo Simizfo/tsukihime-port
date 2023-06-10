@@ -1,7 +1,7 @@
 
 bg "image\bg\bg_29b.jpg",%type_nowaitdisp
 
-play "track03.ogg"
+play "*3"
 
 ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
 

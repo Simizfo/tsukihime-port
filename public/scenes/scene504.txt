@@ -13,7 +13,7 @@
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_18c.jpg",%type_lcartain_mid
-play "track05.ogg"
+play "*5"
 
 `"……………"@
 ` Plopping down on the bed, I look down at myself.@

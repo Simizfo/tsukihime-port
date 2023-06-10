@@ -49,7 +49,7 @@ br
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
-play "track06.ogg"
+play "*6"
 
 
 !w500

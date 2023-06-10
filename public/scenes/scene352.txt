@@ -27,7 +27,7 @@ bg "image\bg\bg_44a.jpg",%type_lcartain_mid
 bg "image\bg\ima_10.jpg",%type_lshutter_mid
 bg "image\bg\bg_45b.jpg",%type_lshutter_mid
 
-play "track01.ogg"
+play "*1"
 
 ld c,":a;image\tachi\koha_t09.jpg",%type_lshutter_mid
 
@@ -73,7 +73,7 @@ br
 ` A child adopted ten years ago.@ Two years later, the child died.@
 ` In other words, eight years ago… That's when I had my accident and was sent to the hospital.\
 
-play "track06.ogg"
+play "*6"
 
 
 bg "image\bg\cmo_05.jpg",%type_nowaitdisp
@@ -304,7 +304,7 @@ br
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 !w2000
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_40c.jpg",%type_lcartain_mid
 

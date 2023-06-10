@@ -12,7 +12,7 @@ playstop
 ` I close my eyes and cast my mind back.\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
-play "track09.ogg"
+play "*9"
 
 bg "image\event\his_e01.jpg",%type_crossfade_mid
 

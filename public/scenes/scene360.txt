@@ -18,7 +18,7 @@ ld c,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
 ` Saying so, I start running toward our classroom.\
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 !w2000
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_06b.jpg",%type_tshutter_mid
 
@@ -185,7 +185,7 @@ wave se0
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
 bg "image\bg\bg_26a.jpg",%type_crossfade_mid
 
-play "track06.ogg"
+play "*6"
 
 ` *pant*-----*pant*
 br

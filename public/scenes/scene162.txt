@@ -9,7 +9,7 @@ wavestop
 
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 
-play "track09.ogg"
+play "*9"
 
 br
 ` Tweet, Tweet, Tweet
@@ -141,7 +141,7 @@ br
 playstop
 
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
-play "track02.ogg"
+play "*2"
 
 ` Arcueid finally gets away from the bed.@
 `"…… Geez, sneaking onto someone's bed like that.@ Didn't you think about how hard the sheets would be to clean if you left a mess from your shoes?"@

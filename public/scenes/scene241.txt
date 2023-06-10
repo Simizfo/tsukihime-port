@@ -101,7 +101,7 @@ br
 bg "image\bg\ima_10.jpg",%type_lshutter_mid
 
 !w2000
-play "track06.ogg"
+play "*6"
 !w1000
 bg "image\bg\bg_26a.jpg",%type_rcartain_mid
 
@@ -182,7 +182,7 @@ br
 bg "image\bg\ima_10.jpg",%type_lshutter_fst
 bg "image\bg\bg_29b.jpg",%type_lshutter_fst
 
-play "track09.ogg"
+play "*9"
 
 `"Yumizuka--!?"@
 ` I guess there is the joy of finally finding her.@

@@ -1,7 +1,7 @@
 
 
 bg "image\bg\bg_29b.jpg",%type_lcartain_fst
-play "track09.ogg"
+play "*9"
 
 ` It's probably because of all the recent murders, but it's only ten o'clock and there's no one in the park.@
 ` The empty night hangs overhead.@
@@ -169,7 +169,7 @@ ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
 
 bg "image\bg\bg_29b.jpg",%type_crossfade_fst
 
-play "track01.ogg"
+play "*1"
 
 ` I put my glasses back on.@
 ` My vision returns back to normal and I relax.\

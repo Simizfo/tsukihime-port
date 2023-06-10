@@ -10,7 +10,7 @@ bg "image\bg\bg_40b.jpg",%type_nowaitdisp
 ` Since I'm always in her debt, I'll go and help Hisui out.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_fst
-play "track03.ogg"
+play "*3"
 
 bg "image\bg\bg_33b.jpg",%type_lcartain_fst
 
@@ -96,7 +96,7 @@ br
 ` That long ago, it's only natural that I wouldn't remember.@
 `"But, the heads of the household have had pretty short lifespans.@ My old man died before he was fifty, and before that, before thirty in an accident… Wow, before that, eighteen years of age, suicide…!?"@
 playstop
-play "track06.ogg"
+play "*6"
 
 br
 ` ----No, wait a second.@
@@ -263,7 +263,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_mid
 !w2000
 bg "image\bg\bg_40c.jpg",%type_lcartain_mid
 
-play "track01.ogg"
+play "*1"
 
 ` ---After dinner, I return to my room.@
 br

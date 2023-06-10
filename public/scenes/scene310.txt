@@ -71,7 +71,7 @@ br
 
 ` In that instant,
 ` the whole world freezes over.\
-play "track06.ogg"
+play "*6"
 
 waveloop se1
 
@@ -338,7 +338,7 @@ ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
 ` …… She says that with tears brimming in her eyes.\
 
 
-play "track08.ogg"
+play "*8"
 
 `"…… Tohno-kun.@ I came back this early because it was no good."@
 `"------"@
@@ -461,7 +461,7 @@ quakex 6,100
 
 bg "image\bg\ima_10.jpg",%type_tcartain_mid
 !w1000
-play "track06.ogg"
+play "*6"
 
 
 br
@@ -645,7 +645,7 @@ bg "image\bg\ima_13b.jpg",%type_crossfade_fst
 ` Arcueid's claws pierced through my chest before I even realized it.\
 
 bg "image\bg\bg_02a.jpg",%type_crossfade_slw
-play "track09.ogg"
+play "*9"
 
 `"--------Ah."@
 ` I feel faint.@
@@ -1153,7 +1153,7 @@ wave se3
 `"Tohno, I'm coming in."@
 ` The door gets knocked and Arihiko walks into the room.\
 
-play "track03.ogg"
+play "*3"
 
 ld c,":a;image\tachi\ari_t01.jpg",%type_lshutter_fst
 `"Yo, you're up?@ Good, good.@ We really couldn't talk much yesterday, but you seem a lot better now."@
@@ -1258,7 +1258,7 @@ bg "image\bg\bg_51.jpg",%type_nowaitdisp
 
 bg "image\bg\ima_10.jpg",%type_crossfade_slw
 
-play "track02.ogg"
+play "*2"
 
 bg "image\bg\bg_32a.jpg",%type_crossfade_slw
 
@@ -1338,7 +1338,7 @@ br
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
-play "track03.ogg"
+play "*3"
 
 bg "image\bg\bg_01a.jpg",%type_crossfade_fst
 
@@ -1614,7 +1614,7 @@ br
 monocro #fffff0
 
 bg "image\bg\bg_44a.jpg",%type_crossfade_mid
-play "track09.ogg"
+play "*9"
 
 
 `"That is the wish of the person called Ciel.@ It is not the wish of you yourself as Shiki, so you don't need to worry about it, right?"\
@@ -1851,7 +1851,7 @@ monocro off
 bg "image\bg\ima_11.jpg",%type_crossfade_slw
 
 !w2000
-play "track07.ogg"
+play "*7"
 
 
 br
@@ -1967,7 +1967,7 @@ bg "image\event\cel_f02.jpg",%type_crossfade_fst
 
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 playstop
-play "track08.ogg"
+play "*8"
 
 `"Eh……?@ Tohno-kun, Tohno-kun……!?"@
 `"M----Sorry, Senpai.@ I want…… to sleep a little longer."@

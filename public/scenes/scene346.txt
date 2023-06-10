@@ -64,7 +64,7 @@ wave se2
 !w1000
 
 bg "image\bg\bg_06a.jpg",%type_tshutter_mid
-play "track03.ogg"
+play "*3"
 
 
 ` ----Fourth period ends.@

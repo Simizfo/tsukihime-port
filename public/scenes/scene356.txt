@@ -50,7 +50,7 @@ br
 
 !w1000
 
-play "track03.ogg"
+play "*3"
 
 bg "image\bg\bg_06a.jpg",%type_tcartain_mid
 

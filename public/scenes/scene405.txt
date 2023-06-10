@@ -18,7 +18,7 @@ wave se3
 ` It's probably…… Kohaku-san, I suppose.\
 
 ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
-play "track09.ogg"
+play "*9"
 
 `"Please excuse me, Shiki-sama."@
 `"---------Eh?"@
@@ -331,7 +331,7 @@ wavestop
 !w2000
 bg "image\bg\bg_40b.jpg",%type_lcartain_slw
 
-play "track01.ogg"
+play "*1"
 
 `"Ah-----"@
 ` …… Somehow, I make it to my room.@

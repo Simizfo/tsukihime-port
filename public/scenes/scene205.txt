@@ -29,7 +29,7 @@ br
 
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
-play "track02.ogg"
+play "*2"
 
 
 ` ---I wake up.@

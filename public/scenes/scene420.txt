@@ -53,7 +53,7 @@ wavestop
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_24c.jpg",%type_lcartain_mid
 
-play "track06.ogg"
+play "*6"
 
 `"Haa----"@
 ` Stifling my breath, I follow after her.@
@@ -286,7 +286,7 @@ gosub *left_phase
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 bg "image\bg\bg_40a.jpg",%type_crossfade_fst
 
-play "track02.ogg"
+play "*2"
 
 ` Strong rays of sunshine cause me to open my eyes.@ I'm in my room.@
 ` I'm now wearing my pajamas and lying in bed.\
@@ -395,7 +395,7 @@ playstop
 !w2500
 
 bg "image\bg\bg_40a.jpg",%type_bshutter_fst
-play "track01.ogg"
+play "*1"
 
 ` Noon arrives.@
 ` After bringing the food, Kohaku-san went back to her duties.@

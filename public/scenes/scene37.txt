@@ -5,7 +5,7 @@
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 bg "image\bg\bg_22b.jpg",%type_lcartain_mid
-play "track01.ogg"
+play "*1"
 
 
 ` I walk along a different path than the one I usually take.@

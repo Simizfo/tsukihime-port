@@ -108,7 +108,7 @@ br
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 bg "image\bg\bg_40e.jpg",%type_crossfade_fst
 
-play "track02.ogg"
+play "*2"
 
 ` I feel like, I just saw an old, familiar dream.@
 ` I open my eyes.@
@@ -570,7 +570,7 @@ bg "image\bg\ima_11.jpg",%type_crossfade_slw
 !w2000
 
 
-play "track08.ogg"
+play "*8"
 
 bg "image\bg\bg_40c.jpg",%type_crossfade_mid
 

@@ -10,7 +10,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 bg "image\bg\bg_01b.jpg",%type_lcartain_mid
 
-play "track03.ogg"
+play "*3"
 
 `"I've told you before, but we can't go inside.@ I've skipped school today after all, and you're an outsider."@
 ld c,":a;image\tachi\ark_t01a.jpg",%type_lshutter_fst
@@ -129,7 +129,7 @@ playstop
 
 ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
 
-play "track07.ogg"
+play "*7"
 
 `"Shiki."@
 `"What is it?@ Suddenly looking serious like that.@ You really did have a reason for bringing me here, didn't you?"@
@@ -502,7 +502,7 @@ bg "image\bg\bg_28b.jpg",%type_lcartain_mid
 
 ld c,":a;image\tachi\ark_t08.jpg",%type_nowaitdisp
 
-play "track01.ogg"
+play "*1"
 
 `"See, even though you were complaining, you still kept up, Shiki.@ Ahaha~"@
 ` Arcueid laughs.@

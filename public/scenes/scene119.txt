@@ -11,7 +11,7 @@ ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
 `"Ehh---!?"@
 ` I jump up in bed.\
 
-play "track01.ogg"
+play "*1"
 
 `"S-S-Senpai………!?"@
 ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
@@ -179,7 +179,7 @@ cl c,%type_lshutter_fst
 ` And then,@
 br
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
-play "track05.ogg"
+play "*5"
 
 bg "image\event\cel_h01.jpg",%type_lshutter_mid
 

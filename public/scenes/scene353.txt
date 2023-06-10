@@ -4,7 +4,7 @@
 bg "image\bg\ima_11b.jpg",%type_nowaitdisp
 bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
-play "track01.ogg"
+play "*1"
 
 `"---What am I thinking?"@
 ` No, I'm just tired.@

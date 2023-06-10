@@ -79,7 +79,7 @@ br
 
 monocro #ff0000
 bg "image\bg\bg_11d.jpg",%type_lshutter_mid
-play "track09.ogg"
+play "*9"
 
 br
 br

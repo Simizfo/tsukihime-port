@@ -91,7 +91,7 @@ br
 
 bg "image\bg\bg_40a.jpg",%type_crossfade_slw
 
-play "track02.ogg"
+play "*2"
 
 ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
 

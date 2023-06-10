@@ -11,7 +11,7 @@ bg "image\bg\bg_33a.jpg",%type_nowaitdisp
 ` Avoiding Akiha because of this little thing will be confirming something is wrong with me.\
 
 bg "image\bg\bg_34a.jpg",%type_lshutter_mid
-play "track02.ogg"
+play "*2"
 
 
 ld c,":a;image\tachi\aki_t09.jpg",%type_crossfade_fst

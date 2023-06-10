@@ -15,7 +15,7 @@ wavestop
 
 bg "image\bg\bg_31b.jpg",%type_crossfade_fst
 
-play "track09.ogg"
+play "*9"
 
 `"Ha----ah!"@
 ` I pull back from her body.@

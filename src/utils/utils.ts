@@ -103,3 +103,17 @@ export const addEventListener = ({event, handler, element = window}: any) => {
   element.addEventListener(event, handler)
   return () => element.removeEventListener(event, handler)
 }
+
+/**
+ * "*5" -> track05.ogg
+ */
+export const getTrackFile = (track: string):string => {
+  // Extract the number from the input
+  const number = Number(track.replace(/\D/g, ''));
+
+  // Pad the number with leading zeros
+  const paddedNumber = number.toString().padStart(2, '0');
+
+  // Construct the desired output
+  return `track${paddedNumber}.ogg`;
+}

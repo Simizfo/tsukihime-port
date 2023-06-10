@@ -3,7 +3,7 @@
 bg "image\bg\bg_31a.jpg",%type_nowaitdisp
 
 
-play "track09.ogg"
+play "*9"
 
 
 `"I---"@

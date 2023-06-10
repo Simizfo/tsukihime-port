@@ -26,7 +26,7 @@ br
 `"………"@
 ` Quietly, I sneak back inside.@
 ` If Arcueid is still asleep, then there… should… be… no… problem……\
-play "track03.ogg"
+play "*3"
 
 ld c,":a;image\tachi\ark_t16.jpg",%type_lshutter_fst
 `"---Shiki!"@
@@ -58,7 +58,7 @@ playstop
 ` …… I'm ashamed.@
 ` I was---only a little ways away from treading all over her good intentions.\
 
-play "track01.ogg"
+play "*1"
 
 `"Hey, Shiki, are you listening to me?"@
 `"…… Yeah, I'm listening.@ You're right, it's my fault.@ I'm sorry for going out on my own like that."@
@@ -204,7 +204,7 @@ playstop
 
 bg "image\bg\bg_19d.jpg",%type_lshutter_fst
 
-play "track09.ogg"
+play "*9"
 
 ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
 `"Although we're typically called simply 'vampires', we're divided into two main categories.@

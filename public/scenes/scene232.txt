@@ -19,7 +19,7 @@ playstop
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 !w500
 bg "image\event\cel_e02b.jpg",%type_lcartain_mid
-play "track02.ogg"
+play "*2"
 
 `"Thanks for the meal."@
 ` I bring my hands together briefly and start to dig in to Senpai's lunch.@

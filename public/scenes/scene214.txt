@@ -9,7 +9,7 @@ bg "image\bg\bg_40b.jpg",%type_nowaitdisp
 
 bg "image\bg\ima_10.jpg",%type_lshutter_fst
 bg "image\bg\bg_46b.jpg",%type_lshutter_mid
-play "track01.ogg"
+play "*1"
 
 ` ---Well then.@
 ` Hisui said she'd be cleaning the mansion, but where could she be?@
@@ -58,7 +58,7 @@ playstop
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 bg "image\event\his_e04.jpg",%type_crossfade_mid
-play "track09.ogg"
+play "*9"
 
 
 `"Hisu--"@

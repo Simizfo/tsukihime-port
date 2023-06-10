@@ -123,7 +123,7 @@ br
 ` I gape at the large television mounted on the wall at the end of the cafeteria.@
 ` At my school, they record the morning news and replay it at lunch.@
 ` I just stare dumbfounded at the news broadcast that is several hours late.\
-play "track04.ogg"
+play "*4"
 
 
 
@@ -302,7 +302,7 @@ br
 br
 ` ----No, wait a second.@
 ` No matter how you look at it, this is strange.\
-play "track06.ogg"
+play "*6"
 
 wave se0
 
@@ -644,7 +644,7 @@ cl c,%type_lshutter_fst
 `"Please tell me about the Nanaya family.@ I think I have a right to know."@
 `"--------"@
 ` In that instant, Akiha freezes like a puppet whose strings were cut.\
-play "track08.ogg"
+play "*8"
 
 ld c,":a;image\tachi\aki_t11b.jpg",%type_lshutter_fst
 
@@ -902,7 +902,7 @@ ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
 ` …… No, more than that.@
 ` Hisui and Kohaku-san have worked here since they were very young.@
 ` So---it would not be strange for them to know that I was adopted.\
-play "track01.ogg"
+play "*1"
 
 `"…… Hisui.@ There is something that I want to ask.@ Is it okay?"@
 
@@ -1002,7 +1002,7 @@ br
 `"------"@
 ` Thud.@
 ` The power drains from my legs and I collapse onto the chair.\
-play "track09.ogg"
+play "*9"
 
 
 `"-----How--"@

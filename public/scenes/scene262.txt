@@ -102,7 +102,7 @@ cl a,%type_lshutter_fst
 bg "image\bg\ima_10.jpg",%type_lcartain_fst
 
 bg "image\bg\bg_05a.jpg",%type_lcartain_fst
-play "track03.ogg"
+play "*3"
 
 wave se2
 

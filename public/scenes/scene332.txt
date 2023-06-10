@@ -3,7 +3,7 @@
 
 bg "image\bg\bg_23b.jpg",%type_lcartain_mid
 
-play "track08.ogg"
+play "*8"
 
 ` I walk with Akiha towards the mansion.@
 `"……"@
@@ -81,7 +81,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 bg "image\bg\bg_32b.jpg",%type_lcartain_fst
 
-play "track01.ogg"
+play "*1"
 
 ` We arrive at the mansion.@
 ` Akiha steps forward to open the gate, but as if remembering something, turns to me.@

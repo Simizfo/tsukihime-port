@@ -11,7 +11,7 @@ gosub *right_phase
 
 
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
-play "track09.ogg"
+play "*9"
 
 bg "image\bg\cmo_05b.jpg",%type_crossfade_fst
 
@@ -99,7 +99,7 @@ br
 
 bg "image\bg\ima_11.jpg",%type_crossfade_slw
 !w500
-play "track02.ogg"
+play "*2"
 
 bg "image\bg\bg_40a.jpg",%type_crossfade_slw
 
@@ -338,7 +338,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_mid
 playstop
 
 !w2000
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_06a.jpg",%type_rshutter_mid
 

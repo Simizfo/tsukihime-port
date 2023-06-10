@@ -147,7 +147,7 @@ br
 `"----!@ More importantly, Senpai!"@
 ` I turn around to check on Senpai.@
 ` The ground was soaked in blood , so I have to get her to a hospital………\
-play "track08.ogg"
+play "*8"
 
 `"……………… Eh?"@
 br
@@ -462,7 +462,7 @@ bg "image\bg\cmo_07.jpg",%type_nowaitdisp
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
 
 bg "image\event\ark_e06b.jpg",%type_crossfade_fst
-play "track09.ogg"
+play "*9"
 
 br
 ` A grassy plain hidden from the sun.@
@@ -498,7 +498,7 @@ playstop
 bg "image\bg\ima_11.jpg",%type_crossfade_slw
 bg "image\bg\bg_40a.jpg",%type_crossfade_slw
 
-play "track02.ogg"
+play "*2"
 
 ` I feel like I had a nostalgic dream and I wake up from my slumber.@
 br
@@ -803,7 +803,7 @@ br
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w1000
-play "track03.ogg"
+play "*3"
 
 bg "image\bg\bg_48a.jpg",%type_lcartain_mid
 ` I walk out the front door.@
@@ -966,7 +966,7 @@ bg "image\bg\ima_11.jpg",%type_crossfade_slw
 bg "image\bg\bg_53.jpg",%type_nowaitdisp
 
 wavestop
-play "track04.ogg"
+play "*4"
 
 `"Ah-----gg."@
 ` My chest hurts.@
@@ -1008,7 +1008,7 @@ br
 playstop
 
 bg "image\bg\bg_40c.jpg",%type_crossfade_slw
-play "track09.ogg"
+play "*9"
 
 br
 ` …… I can hear voices talking.@

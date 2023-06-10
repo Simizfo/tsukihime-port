@@ -40,7 +40,7 @@ br
 ` ----No, wait a second.@
 ` No matter how you look at it, this is strange.@
 br
-play "track04.ogg"
+play "*4"
 
 wave se0
 
@@ -204,7 +204,7 @@ br
 `"Shiki-sama, please excuse me."@
 br
 ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_mid
-play "track01.ogg"
+play "*1"
 
 ` …… Hisui enters my room.\
 

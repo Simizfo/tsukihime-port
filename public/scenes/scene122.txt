@@ -47,7 +47,7 @@ ld c,":a;image\tachi\koha_t03b.jpg",%type_lshutter_fst
 
 ` and Kohaku-san.\
 cl c,%type_crossfade_fst
-play "track01.ogg"
+play "*1"
 
 `"Akiha……?@ What are you doing here at this hour?@ And why is Kohaku-san with you?@ Did something happen?"@
 ` I slip out of bed as I speak.@
@@ -224,7 +224,7 @@ wavestop
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 bg "image\bg\bg_40c.jpg",%type_crossfade_mid
 
-play "track05.ogg"
+play "*5"
 
 `"Hu----h?"@
 ` …… No, this time it's different.@

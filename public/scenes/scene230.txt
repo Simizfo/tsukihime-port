@@ -1,5 +1,5 @@
 
-play "track03.ogg"
+play "*3"
 
 bg "image\bg\bg_11b.jpg",%type_crossfade_slw
 

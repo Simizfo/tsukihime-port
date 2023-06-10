@@ -12,7 +12,7 @@ gosub *left_phase
 
 bg "image\bg\bg_33c.jpg",%type_lcartain_mid
 
-play "track01.ogg"
+play "*1"
 
 ` Letting Kohaku-san take care of Akiha, I come down to the first floor.@
 ` I can't treat Akiha's wounds.@
@@ -159,7 +159,7 @@ wave se8
 
 ld c,":a;image\tachi\aki_t01c.jpg",%type_lshutter_mid
 
-play "track08.ogg"
+play "*8"
 
 ` -----I can't believe it.@
 ` It's Akiha.\
@@ -602,7 +602,7 @@ cl c,%type_crossfade_fst
 bg "image\bg\ima_11.jpg",%type_lshutter_mid
 playstop
 !w1500
-play "track05.ogg"
+play "*5"
 
 bg "image\event\aki_h02.jpg",%type_crossfade_mid
 
@@ -1530,7 +1530,7 @@ br
 ` And I fall into a deep sleep.\
 
 !w3000
-play "track09.ogg"
+play "*9"
 
 `"…… Nii-san, please don't forget about our promise."@
 br
@@ -1583,7 +1583,7 @@ br
 
 bg "image\bg\bg_45b.jpg",%type_crossfade_mid
 
-play "track03.ogg"
+play "*3"
 
 `"Ouchhh………!"@
 ` I wake to a sharp pain in my arm.@

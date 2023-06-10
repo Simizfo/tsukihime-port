@@ -2,7 +2,7 @@
 wave se2
 
 bg "image\bg\bg_06a.jpg",%type_nowaitdisp
-play "track03.ogg"
+play "*3"
 
 
 ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
@@ -44,7 +44,7 @@ br
 ` Professor Nrvnqsr, please go ahead.\
 
 
-play "track04.ogg"
+play "*4"
 
 ld l,":a;image\tachi\nero_t03.jpg",%type_lshutter_fst
 
@@ -63,7 +63,7 @@ br
 cl l,%type_lshutter_mid
 
 
-play "track03.ogg"
+play "*3"
 
 ` Um…… Yes, thank you very much.@
 ` This concludes our fourth period lesson.@

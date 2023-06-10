@@ -43,7 +43,7 @@ bg "image\bg\ima_11.jpg",%type_nowaitdisp
 br
 ` So why?@
 ` Why won't my arm move----\
-play "track07.ogg"
+play "*7"
 
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
 
@@ -148,7 +148,7 @@ playstop
 
 bg "image\bg\bg_10f.jpg",%type_crossfade_mid
 
-play "track08.ogg"
+play "*8"
 
 ` How much time has passed?@
 ` My mind which has been in a trance…

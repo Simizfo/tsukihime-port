@@ -24,7 +24,7 @@ wave se3
 ` Hisui enters with a bow.\
 
 ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-play "track01.ogg"
+play "*1"
 
 `"I have come to make the bed.@ You may not enjoy watching it, so would you mind relaxing in the sitting room for a while?"@
 `"No, I don't mind watching.@ I'll just behave myself in the corner, so just go ahead and do your job without minding me."@

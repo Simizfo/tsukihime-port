@@ -14,7 +14,7 @@ br
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_46b.jpg",%type_lcartain_mid
 
-play "track03.ogg"
+play "*3"
 
 ` …… I arrive at her room.@
 ` Akiha's room is in the middle of the east wing.@ My room is about forty meters away, so this a rare opportunity.@

@@ -26,7 +26,7 @@ br
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_06a.jpg",%type_lcartain_mid
-play "track03.ogg"
+play "*3"
 
 `"Huh----?"@
 ` I thought I was the first one, but it seems like some of my classmates are already here.\

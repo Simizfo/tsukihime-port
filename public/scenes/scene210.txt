@@ -3,7 +3,7 @@
 
 bg "image\bg\bg_06a.jpg",%type_crossfade_mid
 
-play "track01.ogg"
+play "*1"
 
 ` --Even after second period, Yumizuka still didn't show up.@
 ` With no way to find out, my bad feeling about this grows.\

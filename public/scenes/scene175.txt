@@ -2,7 +2,7 @@
 
 bg "image\bg\bg_56.jpg",%type_nowaitdisp
 
-play "track03.ogg"
+play "*3"
 
 
 ` ----Hmm.@

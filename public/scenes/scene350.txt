@@ -5,7 +5,7 @@
 !w2000
 bg "image\bg\bg_06b.jpg",%type_tshutter_mid
 
-play "track01.ogg"
+play "*1"
 
 ` School ends.@
 ` Let's go meet Akiha at the first year classrooms.@

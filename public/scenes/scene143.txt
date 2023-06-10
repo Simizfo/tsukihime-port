@@ -50,7 +50,7 @@ bg "image\bg\bg_40e.jpg",%type_crossfade_mid
 
 bg "image\bg\bg_40a.jpg",%type_lshutter_mid
 
-play "track02.ogg"
+play "*2"
 
 ` I take in some air.@
 ` After taking a few deep breaths, I manage to calm down.@
@@ -107,7 +107,7 @@ br
 ` Akiha's irritation is permeating the air.@ You could practically cut the tension with a knife.@
 br
 
-play "track02.ogg"
+play "*2"
 
 ld c,":a;image\tachi\koha_t01a.jpg",%type_lshutter_fst
 `"Good morning, Shiki-san."@

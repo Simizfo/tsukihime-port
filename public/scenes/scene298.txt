@@ -2,7 +2,7 @@
 
 bg "image\bg\bg_02a.jpg",%type_nowaitdisp
 
-play "track04.ogg"
+play "*4"
 
 br
 ` ---I jump back instantly.@

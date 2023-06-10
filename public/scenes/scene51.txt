@@ -44,7 +44,7 @@ bg "image\bg\bg_40e.jpg",%type_crossfade_slw
 
 ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
 
-play "track02.ogg"
+play "*2"
 
 
 br

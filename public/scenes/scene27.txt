@@ -3,7 +3,7 @@
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 bg "image\bg\bg_11a.jpg",%type_crossfade_mid
-play "track03.ogg"
+play "*3"
 
 
 ` During lunchtime the hall is packed.@

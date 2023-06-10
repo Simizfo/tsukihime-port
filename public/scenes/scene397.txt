@@ -17,7 +17,7 @@ br
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w2000
 bg "image\bg\bg_25b.jpg",%type_lcartain_mid
-play "track06.ogg"
+play "*6"
 
 
 ` -----I go out into the night-shrouded town.@

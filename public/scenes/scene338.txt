@@ -2,7 +2,7 @@
 
 
 
-play "track01.ogg"
+play "*1"
 
 ` Dinner, as usual, is a quiet affair with just me and Akiha.@
 ` Kohaku-san stands behind Akiha, and Hisui stands behind me during our wordless dinner.\

@@ -2,7 +2,7 @@
 
 bg "image\bg\bg_32d.jpg",%type_lcartain_mid
 
-play "track06.ogg"
+play "*6"
 
 ` …… I go up the residential hill and arrive at the outskirts of the mansion.@
 ` It's around two in the morning.@

@@ -67,7 +67,7 @@ bg "image\bg\bg_24c.jpg",%type_nowaitdisp
 bg "image\bg\ima_10.jpg",%type_nowaitdisp
 bg "image\bg\bg_25b.jpg",%type_crossfade_mid
 
-play "track04.ogg"
+play "*4"
 
 ` It seems I went into town at night.@
 ` It seems like I'm waiting with bloodshot eyes for someone to pass by.\

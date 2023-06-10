@@ -95,7 +95,7 @@ br
 
 bg "image\bg\ima_10.jpg",%type_crossfade_slw
 
-play "track09.ogg"
+play "*9"
 
 ` …… I keep bleeding.@
 ` In my groggy state,

@@ -82,7 +82,7 @@ monocro off
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
-play "track06.ogg"
+play "*6"
 
 ` The entrance to the alley.@
 ` I run to the narrow path between the buildings.@
@@ -219,7 +219,7 @@ bg "image\bg\bg_31b.jpg",%type_crossfade_fst
 wavestop
 
 ld c,":a;image\tachi\ark_t20b.jpg",%type_nowaitdisp
-play "track04.ogg"
+play "*4"
 
 
 br

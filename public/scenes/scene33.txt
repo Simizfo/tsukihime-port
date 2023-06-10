@@ -1,7 +1,7 @@
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
-play "track03.ogg"
+play "*3"
 
 bg "image\bg\bg_11b.jpg",%type_lcartain_fst
 

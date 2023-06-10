@@ -53,7 +53,7 @@ br
 bg "image\bg\ima_10.jpg",%type_lshutter_mid
 bg "image\bg\bg_53b.jpg",%type_lshutter_mid
 
-play "track06.ogg"
+play "*6"
 
 ` This is the last stop.\
 

@@ -15,7 +15,7 @@ gosub *left_phase
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
-play "track07.ogg"
+play "*7"
 
 ` ---I had a dream.@
 br
@@ -241,7 +241,7 @@ playstop
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 bg "image\bg\bg_18b.jpg",%type_tshutter_mid
 
-play "track01.ogg"
+play "*1"
 
 
 ` ----Pain.@
@@ -586,7 +586,7 @@ bg "image\bg\bg_44b.jpg",%type_nowaitdisp
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_45e.jpg",%type_lcartain_mid
 
-play "track09.ogg"
+play "*9"
 
 br
 br
@@ -746,7 +746,7 @@ wave se11
 
 bg "image\bg\ima_10.jpg",%type_lshutter_fst
 
-play "track04.ogg"
+play "*4"
 
 `"Damn, I thought I'd cut you in half along with your knife---but that thing is pretty strong for an antique, Shiki!"@
 ` SHIKI swings "it" above his head.@

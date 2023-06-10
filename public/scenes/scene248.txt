@@ -54,7 +54,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 bg "image\bg\bg_09a.jpg",%type_lcartain_mid
 
-play "track03.ogg"
+play "*3"
 
 ` I start to eat with Senpai.@
 ` Even though I got the impression that she was in a bad mood from Arihiko and her reaction back then, it certainly doesn't seem that way.\

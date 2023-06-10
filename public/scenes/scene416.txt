@@ -39,7 +39,7 @@ wave se0
 
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 
-play "track02.ogg"
+play "*2"
 
 
 ` A wrenching pain suddenly wakes me.@
@@ -387,7 +387,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w2000
 
 bg "image\bg\bg_06b.jpg",%type_lcartain_mid
-play "track01.ogg"
+play "*1"
 
 
 ` Before I know it, the day is over.@
@@ -639,7 +639,7 @@ br
 
 bg "image\bg\bg_33c.jpg",%type_lshutter_fst
 
-play "track08.ogg"
+play "*8"
 
 ld c,":a;image\tachi\aki_t20b.jpg",%type_lshutter_fst
 
@@ -819,7 +819,7 @@ playstop
 !w2000
 bg "image\bg\bg_46c.jpg",%type_crossfade_mid
 
-play "track01.ogg"
+play "*1"
 
 ld c,":a;image\tachi\koha_t01a.jpg",%type_lshutter_fst
 
@@ -1008,7 +1008,7 @@ bg "image\bg\ima_11.jpg",%type_nowaitdisp
 monocro off
 bg "image\bg\ima_03.jpg",%type_crossfade_fst
 
-play "track02.ogg"
+play "*2"
 
 ` I open my eyes.@
 ` Thanks to Kohaku-san's medicine, my head has cleared perfectly.@
@@ -1052,7 +1052,7 @@ bg "image\bg\bg_30b.jpg",%type_crossfade_fst
 bg "image\bg\ima_12.jpg",%type_nowaitdisp
 !w200
 bg "image\bg\bg_31b.jpg",%type_crossfade_fst
-play "track04.ogg"
+play "*4"
 
 
 br
@@ -1194,7 +1194,7 @@ bg "image\bg\bg_01c.jpg",%type_nowaitdisp
 
 
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
-play "track06.ogg"
+play "*6"
 
 bg "image\bg\bg_10c.jpg",%type_crossfade_fst
 
@@ -1525,7 +1525,7 @@ gosub *left_phase
 
 bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
-play "track02.ogg"
+play "*2"
 
 br
 br

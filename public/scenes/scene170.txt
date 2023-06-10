@@ -3,7 +3,7 @@
 bg "image\bg\ima_10.jpg",%type_lcartain_slw
 
 bg "image\bg\bg_25a.jpg",%type_lcartain_mid
-play "track03.ogg"
+play "*3"
 
 ` For the time being, we go into town.@
 ` All that's left is to branch off the main street and go to the empty alley----\

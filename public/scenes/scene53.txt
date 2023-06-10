@@ -52,7 +52,7 @@ bg "image\event\ark_e02.jpg",%type_lshutter_mid
 
 bg "image\bg\bg_24a.jpg",%type_lshutter_mid
 
-play "track03.ogg"
+play "*3"
 
 
 ` She has her typical smile as she crosses the intersection.@

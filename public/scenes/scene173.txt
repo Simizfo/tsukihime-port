@@ -12,7 +12,7 @@ bg "image\bg\bg_56.jpg",%type_nowaitdisp
 bg "image\bg\ima_10.jpg",%type_lshutter_mid
 bg "image\bg\bg_56.jpg",%type_lshutter_mid
 
-play "track09.ogg"
+play "*9"
 
 `"…… Yeah, that's how it was------"@
 ` Finishing my explanation, I read Arcueid's expression.@

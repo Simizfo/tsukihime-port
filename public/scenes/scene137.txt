@@ -46,7 +46,7 @@ br
 bg "image\bg\ima_10.jpg",%type_lcartain_fst
 bg "image\bg\bg_34b.jpg",%type_lcartain_fst
 
-play "track03.ogg"
+play "*3"
 
 
 ` ----Too late.@

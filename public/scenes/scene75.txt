@@ -166,7 +166,7 @@ br
 `"Hold on.@ What's that?"@
 ` I get up and walk.@
 ` I walk to the middle of the alley, and I finally realize what it is.\
-play "track06.ogg"
+play "*6"
 ` A blue-colored bird.@
 ` A crow, to be precise.@
 br
@@ -294,7 +294,7 @@ ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
 `"…… It melted… no, maybe it's just dissolving.@ ----It can't be, can it?@ There's no way Chaos would be in a place like this."@
 ` Heaving a long sigh, she approaches me.\
 
-play "track01.ogg"
+play "*1"
 
 ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
 

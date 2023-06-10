@@ -13,7 +13,7 @@ br
 
 bg "image\bg\ima_10.jpg",%type_lcartain_slw
 bg "image\bg\bg_32b.jpg",%type_lcartain_slw
-play "track01.ogg"
+play "*1"
 
 ` I don't swing by anywhere else and head right back to the mansion.@
 ` The sun hasn't quite set so Akiha probably isn't back yet.\

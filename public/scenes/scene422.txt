@@ -85,7 +85,7 @@ wavestop
 
 bg "image\event\aki_h13.jpg",%type_crossfade_mid
 
-play "track09.ogg"
+play "*9"
 
 ` Kohaku stands there with a blushing face, but does not move.@
 ` Akiha presses her lips against the bared white chest.@
@@ -234,7 +234,7 @@ bg "image\bg\bg_44a.jpg",%type_nowaitdisp
 bg "image\bg\ima_11.jpg",%type_nowaitdisp
 bg "image\bg\bg_54a.jpg",%type_nowaitdisp
 
-play "track06.ogg"
+play "*6"
 
 `"Ha-----ah."@
 ` Fighting back nausea, I escape with blood-shot eyes.@
@@ -354,7 +354,7 @@ bg "image\bg\bg_40a.jpg",%type_lcartain_mid
 `  …… No.@
 ` That isn't really important.@
 ` Why---why couldn't I understand her?\
-play "track07.ogg"
+play "*7"
 
 `"-------Kohaku, san-----"@
 ` …… The word in Makihisa's journal.@
@@ -450,7 +450,7 @@ bg "image\bg\bg_40c.jpg",%type_nowaitdisp
 bg "image\bg\ima_10.jpg",%type_nowaitdisp
 bg "image\bg\bg_40c.jpg",%type_crossfade_mid
 
-play "track01.ogg"
+play "*1"
 
 
 `"Akiha-sama, won't you call a doctor?"@
@@ -566,7 +566,7 @@ gosub *left_phase
 
 
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
-play "track07.ogg"
+play "*7"
 
 
 ` ----Why is there this much sadness?@
@@ -633,7 +633,7 @@ playstop
 
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 
-play "track02.ogg"
+play "*2"
 
 `"-------"@
 ` I slowly wake up for no apparent reason.@
@@ -741,7 +741,7 @@ playstop
 
 bg "image\bg\bg_40a.jpg",%type_bshutter_mid
 
-play "track03.ogg"
+play "*3"
 
 ` It passes noon and the sun starts its dip from the top of the sky.@
 ` My condition does not improve, but it doesn't get worse either.@
@@ -909,7 +909,7 @@ wavestop
 
 ` ---And just like that.@
 ` Suddenly, my dizziness comes to a complete stop.\
-play "track08.ogg"
+play "*8"
 
 ld c,":a;image\tachi\aki_t11b.jpg",%type_crossfade_fst
 
@@ -1043,7 +1043,7 @@ playstop
 
 ` -----, and.@
 ` As if to spoil this great mood, Akiha's stomach lets out a growl.@
-play "track03.ogg"
+play "*3"
 
 ld c,":a;image\tachi\aki_t24.jpg",%type_crossfade_fst
 
@@ -1080,7 +1080,7 @@ playstop
 !w2000
 bg "image\bg\bg_40b.jpg",%type_rshutter_mid
 
-play "track01.ogg"
+play "*1"
 
 wave se3
 
@@ -1208,7 +1208,7 @@ playstop
 
 
 bg "image\event\koha_e05.jpg",%type_crossfade_mid
-play "track07.ogg"
+play "*7"
 
 
 ` ---I can't even hold onto her tightly.\
@@ -1315,7 +1315,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 bg "image\bg\bg_40d.jpg",%type_crossfade_mid
 
-play "track01.ogg"
+play "*1"
 
 ` ----Night falls.@
 br
@@ -1404,7 +1404,7 @@ wave se0
 ` Strange.@
 ` My feelings are completely calm, so why---why is my blood racing to meet this vampire?\
 
-play "track06.ogg"
+play "*6"
 
 `                  Thump
 `                  Thump
@@ -1493,7 +1493,7 @@ cl c,%type_lshutter_fst
 `"Akiha, what are you doing here!?"@
 br
 ` ……………… Well, I guess it's pretty obvious we're after the same thing.\
-play "track03.ogg"
+play "*3"
 
 ld c,":a;image\tachi\aki_t03b.jpg",%type_lshutter_fst
 
@@ -1562,7 +1562,7 @@ playstop
 !w2000
 bg "image\bg\bg_46c.jpg",%type_lcartain_fst
 
-play "track01.ogg"
+play "*1"
 
 ld c,":a;image\tachi\aki_t21b.jpg",%type_lshutter_mid
 
@@ -1627,7 +1627,7 @@ gosub *left_phase
 
 
 bg "image\bg\ima_02.jpg",%type_crossfade_mid
-play "track09.ogg"
+play "*9"
 
 ` ----I hear the voices of reed warblers.@
 br
@@ -1705,7 +1705,7 @@ playstop
 
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 
-play "track02.ogg"
+play "*2"
 
 
 ` I open my eyes to the morning sun streaming from my window.@
@@ -1792,7 +1792,7 @@ br
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_40b.jpg",%type_lcartain_mid
 
-play "track01.ogg"
+play "*1"
 
 ` …… The sun sinks below the horizon.@
 ` Lying on my side, I gaze emptily out the window.@
@@ -2057,7 +2057,7 @@ cl c,%type_lshutter_fst
 ` The deep sky.@
 ` The red rays of sun glaring through the sky and into the room.@
 ` Like three days ago, she turns her back to the crimson sky.\
-play "track08.ogg"
+play "*8"
 
 bg "image\event\aki_e07a.jpg",%type_lshutter_fst
 
@@ -2307,7 +2307,7 @@ bg "image\bg\bg_36c.jpg",%type_crossfade_fst
 
 bg "image\event\aki_e07b.jpg",%type_crossfade_mid
 
-play "track04.ogg"
+play "*4"
 
 `"I told you your body is alive only because of me.@
 ` Do you understand?@ I just have to think it and you will die.@ That is the life of Tohno Shiki, Nii-san."@

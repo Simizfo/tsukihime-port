@@ -78,7 +78,7 @@ br
 ` Suddenly---the invasive feeling inside my head disappears.@
 
 monocro off
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_31a.jpg",%type_crossfade_fst
 

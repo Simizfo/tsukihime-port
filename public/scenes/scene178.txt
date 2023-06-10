@@ -2,7 +2,7 @@
 
 bg "image\bg\bg_28b.jpg",%type_lshutter_mid
 
-play "track01.ogg"
+play "*1"
 
 ` The hand of the clock ticks by.@
 ` It's been two hours since we came here.@
@@ -75,7 +75,7 @@ cl c,%type_crossfade_fst
 
 \
 
-play "track08.ogg"
+play "*8"
 
 ` The promised time.@
 ` The promise backed only by words, to meet here at ten o'clock at night.@
@@ -280,7 +280,7 @@ wavestop
 
 bg "image\bg\bg_28b.jpg",%type_nowaitdisp
 
-play "track09.ogg"
+play "*9"
 
 ` Panting fills the air.@
 br

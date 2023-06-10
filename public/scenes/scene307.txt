@@ -25,7 +25,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w3000
 
 bg "image\bg\cmo_15.jpg",%type_crossfade_mid
-play "track04.ogg"
+play "*4"
 
 br
 br
@@ -279,7 +279,7 @@ br
 br
 br
 ` There, Arcueid stands dressed in white.\
-play "track09.ogg"
+play "*9"
 
 ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
 
@@ -644,7 +644,7 @@ wave se4
 ` Her body pushes up against my shoulders.@
 ` I'm down.@
 ` In an instant, without me knowing what's going on, Arcueid has pinned me down.\
-play "track08.ogg"
+play "*8"
 
 bg "image\event\ark_e04b.jpg",%type_crossfade_fst
 

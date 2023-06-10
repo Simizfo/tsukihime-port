@@ -95,7 +95,7 @@ bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
 !w1000
 wavestop
-play "track02.ogg"
+play "*2"
 
 ` "Excuse me," Hisui says as she enters the room.@
 

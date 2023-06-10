@@ -6,7 +6,7 @@
 
 bg "image\bg\bg_34b.jpg",%type_tcartain_mid
 
-play "track01.ogg"
+play "*1"
 
 ` It's after dinner, and we drink tea in the sitting room.@
 ` Akiha sits across from me and Hisui stands by the wall.@

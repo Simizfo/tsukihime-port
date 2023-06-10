@@ -2,7 +2,7 @@
 wave se2
 
 bg "image\bg\bg_06a.jpg",%type_nowaitdisp
-play "track03.ogg"
+play "*3"
 
 
 ld c,":a;image\tachi\osiete.png",%type_lcartain_mid

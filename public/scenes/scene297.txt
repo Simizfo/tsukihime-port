@@ -245,7 +245,7 @@ wavestop
 ` I really can't understand what she's talking about.@
 ` She ignores my bewilderment and keeps talking.\
 
-play "track09.ogg"
+play "*9"
 
 `"…… I told you before, Tohno-kun.@ Roa has requirements for the family he decides to reincarnate into.@
 ` If you think the other way around, you just have to look for families with those traits.@ When you know that, finding him is very simple.@

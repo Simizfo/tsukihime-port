@@ -83,7 +83,7 @@ br
 
 bg "image\bg\bg_40a.jpg",%type_crossfade_slw
 
-play "track02.ogg"
+play "*2"
 
 ` I slowly open my eyes.@
 ` I'm lying in bed with the radiant sunlight streaming through the window.@
@@ -207,7 +207,7 @@ playstop
 
 bg "image\bg\bg_23a.jpg",%type_lcartain_slw
 
-play "track03.ogg"
+play "*3"
 
 ` I walk the morning path to school.@
 ` Monday morning.@ For some reason, my feet feel really light today.@

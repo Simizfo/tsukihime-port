@@ -83,7 +83,7 @@ br
 ` The bandaged man appears to be smiling.@
 wavestop
 
-play "track04.ogg"
+play "*4"
 
 `"I feel sad, Shiki.@ You don't even remember the person you've killed?"@
 ` He steps toward me.@
@@ -179,7 +179,7 @@ bg "image\bg\bg_36d.jpg",%type_nowaitdisp
 bg "image\bg\ima_11b.jpg",%type_nowaitdisp
 bg "image\bg\ima_10.jpg",%type_nowaitdisp
 playstop
-play "track09.ogg"
+play "*9"
 
 bg "image\bg\cmo_05.jpg",%type_crossfade_mid
 
@@ -235,7 +235,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 playstop
 !w2000
-play "track04.ogg"
+play "*4"
 
 
 bg "image\bg\bg_36d.jpg",%type_crossfade_mid

@@ -35,7 +35,7 @@ wave se0
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
-play "track06.ogg"
+play "*6"
 
 bg "image\bg\bg_10c.jpg",%type_lcartain_mid
 waveloop se1

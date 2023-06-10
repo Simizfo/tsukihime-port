@@ -62,7 +62,7 @@ br
 
 monocro #ff0000
 quakey 1,100
-play "track04.ogg"
+play "*4"
 
 
 `"---Gah!?"@

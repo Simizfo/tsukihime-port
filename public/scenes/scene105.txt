@@ -25,7 +25,7 @@ br
 
 ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
 
-play "track08.ogg"
+play "*8"
 
 `"Shiki, are you okay?"@
 ` Arcueid walks toward me as if nothing happened just now.@

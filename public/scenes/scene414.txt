@@ -65,7 +65,7 @@ br
 !w2500
 bg "image\bg\bg_40c.jpg",%type_crossfade_mid
 
-play "track01.ogg"
+play "*1"
 
 `"Ah-----"@
 ` When I come to, I'm lying in my room.@
@@ -123,7 +123,7 @@ playstop
 !w2000
 bg "image\bg\ima_11.jpg",%type_crossfade_slw
 bg "image\bg\bg_45c.jpg",%type_crossfade_mid
-play "track07.ogg"
+play "*7"
 
 
 
@@ -231,7 +231,7 @@ gosub *left_phase
 bg "image\bg\ima_11.jpg",%type_crossfade_fst
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 
-play "track02.ogg"
+play "*2"
 
 ` ---A bright light floods my consciousness.@
 ` As I open my eyes, the morning light shines through the window.@

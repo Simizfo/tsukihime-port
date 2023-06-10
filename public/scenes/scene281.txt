@@ -6,7 +6,7 @@ bg "image\bg\bg_50.jpg",%type_nowaitdisp
 
 bg "image\bg\ima_10.jpg",%type_lcartain_fst
 bg "image\bg\bg_05a.jpg",%type_lcartain_fst
-play "track02.ogg"
+play "*2"
 
 ld c,":a;image\tachi\cel_t12.jpg",%type_lshutter_mid
 `"Oh?@ Tohno-kun, fifth period will start soon you know.@ You should hurry back to class."@
@@ -199,7 +199,7 @@ br
 monocro #ff0000
 bg "image\bg\bg_09b.jpg",%type_crossfade_fst
 
-play "track04.ogg"
+play "*4"
 
 quakey 2,100
 br

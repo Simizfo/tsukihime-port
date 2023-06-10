@@ -2,7 +2,7 @@
 bg "image\bg\bg_19b.jpg",%type_nowaitdisp
 
 
-play "track01.ogg"
+play "*1"
 
 `"…… I did promise, after all."@
 ` No matter what it was I promised, I can't break it.@
@@ -123,7 +123,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 `"----Nn."@
 
 bg "image\bg\bg_19d.jpg",%type_crossfade_mid
-play "track03.ogg"
+play "*3"
 
 ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
 
@@ -181,7 +181,7 @@ br
 `"I don't mind talking.@ But why are you being so formal all of a sudden?"@
 `"---Yeah, I haven't asked you the most important thing yet… So, what's your ultimate objective here?"\
 
-play "track01.ogg"
+play "*1"
 
 ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
 
@@ -275,7 +275,7 @@ playstop
 
 bg "image\bg\bg_19d.jpg",%type_lshutter_fst
 
-play "track09.ogg"
+play "*9"
 
 ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
 `"Although we're typically called simply 'vampires', we're divided into two main categories.@

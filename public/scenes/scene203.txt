@@ -44,7 +44,7 @@ wave se7
 ` I get out of bed, and slip out of the room quietly.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-play "track06.ogg"
+play "*6"
 
 bg "image\bg\bg_46c.jpg",%type_lcartain_mid
 

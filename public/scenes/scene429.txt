@@ -9,7 +9,7 @@ bg "image\bg\bg_06g.jpg",%type_nowaitdisp
 
 
 
-play "track04.ogg"
+play "*4"
 
 ` This is it.@
 ` I don't plan on ending up like SHIKI in that dream.@
@@ -108,7 +108,7 @@ bg "image\bg\ima_10.jpg",%type_nowaitdisp
 wave se0
 ld c,":a;image\tachi\aki_t23b.jpg",%type_crossfade_fst
 cl c,%type_nowaitdisp
-play "track09.ogg"
+play "*9"
 
 br
 ` -------------Throb
@@ -220,7 +220,7 @@ br
 ` My headache disappears.@
 ` The strength in my body also disappears.@
 ` As my mind dims, I put all my strength into my arms so my knife will not descend on Akiha.\
-play "track07.ogg"
+play "*7"
 
 !w3000
 `"Why…… won't you, kill me?"@
@@ -363,7 +363,7 @@ br
 
 ` Akiha looks disbelievingly at that figure.@
 ` I---just like Akiha, stare blankly.\
-play "track08.ogg"
+play "*8"
 
 `"Ko----haku?"@
 `"Yes……!@ Akiha-sama, it is me……!@ It is me, so please---please let go……!"@
@@ -479,7 +479,7 @@ br
 
 bg "image\bg\bg_40a.jpg",%type_tshutter_fst
 
-play "track03.ogg"
+play "*3"
 
 `"-------!"@
 ` I jump up from bed.@
@@ -670,7 +670,7 @@ playstop
 
 bg "image\event\koha_f02.jpg",%type_crossfade_fst
 
-play "track02.ogg"
+play "*2"
 
 br
 ` -------The train continues forward.@

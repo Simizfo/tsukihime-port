@@ -318,7 +318,7 @@ br
 
 bg "image\bg\bg_28b.jpg",%type_crossfade_slw
 
-play "track01.ogg"
+play "*1"
 
 ld c,":a;image\tachi\cel_t13.jpg",%type_crossfade_mid
 
@@ -647,7 +647,7 @@ playstop
 bg "image\bg\bg_18b.jpg",%type_crossfade_slw
 
 
-play "track09.ogg"
+play "*9"
 
 br
 ` I can hear the sound of rain.@

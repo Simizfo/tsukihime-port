@@ -4,7 +4,7 @@
 
 bg "image\event\ark_e05b.jpg",%type_lshutter_mid
 
-play "track04.ogg"
+play "*4"
 
 ` ---I hear a creaking noise.\
 br

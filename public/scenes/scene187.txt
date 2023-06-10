@@ -25,7 +25,7 @@ br
 br
 ld c,":a;image\tachi\ark_t08.jpg",%type_lshutter_fst
 
-play "track03.ogg"
+play "*3"
 
 `"Ahaha, you found me~"@
 ` Arcueid appears more cheerfully than ever.\
@@ -95,7 +95,7 @@ ld c,":a;image\tachi\ark_t17.jpg",%type_crossfade_fst
 
 `"----"\
 
-play "track05.ogg"
+play "*5"
 
 `"…… That won't do, Shiki.@ I said to just forget about it."@
 ` Arcueid says this weakly.@
@@ -156,7 +156,7 @@ playstop
 ` I can't think since it was so sudden.@
 ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
 
-play "track06.ogg"
+play "*6"
 
 
 `"We're surrounded.@ Get ready Shiki.@ If you don't fight, you'll just die."@

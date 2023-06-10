@@ -124,7 +124,7 @@ cl c,%type_lshutter_fst
 ` Inside is what I brought from the Arimas, only a few things.@
 ` I take my knife out of the drawer.@
 ` …… And I see that which I haven't yet returned.\
-play "track07.ogg"
+play "*7"
 
 `"Kohaku-san."@
 ` Gripping the final remnants, I walk.@
@@ -234,7 +234,7 @@ cl c,%type_crossfade_fst
 ` Kohaku-san shuffles over to me and holds my hand.@
 ` …… How long were we like this?@
 ` Kohaku-san doesn't say anything.@ After holding my hand like a child, she smiles once more and places my hand against her chest.\
-play "track08.ogg"
+play "*8"
 
 ld c,":a;image\tachi\koha_t03b.jpg",%type_lshutter_fst
 
@@ -336,7 +336,7 @@ br
 
 bg "image\bg\bg_40c.jpg",%type_tshutter_mid
 
-play "track05.ogg"
+play "*5"
 
 ` I fall onto the bed.@
 ` I can't even move.@ Even breathing is painful as the world warps around me like a smothering blanket.@
@@ -1337,7 +1337,7 @@ gosub *left_phase
 bg "image\bg\ima_11.jpg",%type_nowaitdisp
 !w1000
 bg "image\bg\bg_40d.jpg",%type_crossfade_mid
-play "track08.ogg"
+play "*8"
 
 
 ` I blankly stare at the ceiling as I continue lying in bed.@
@@ -1606,7 +1606,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_fst
 !w2000
 
 bg "image\bg\bg_01c.jpg",%type_lcartain_fst
-play "track09.ogg"
+play "*9"
 
 
 ` ---And I return to the place.@
@@ -1670,7 +1670,7 @@ playstop
 
 bg "image\bg\ima_10.jpg",%type_lshutter_mid
 bg "image\bg\bg_10c.jpg",%type_lshutter_mid
-play "track04.ogg"
+play "*4"
 
 br
 br
@@ -1732,7 +1732,7 @@ playstop
 ` All of them have completely lost consciousness.@
 ` On their necks are trails of blood.@
 ` In the middle of it all, that red haired "monster" is laughing.\
-play "track09.ogg"
+play "*9"
 
 ld c,":a;image\tachi\aki_t28.jpg",%type_lshutter_mid
 
@@ -1903,7 +1903,7 @@ playstop
 ` Her red hair fluttering, she hides her anguished face as she continues vomiting.@ It's almost as if she was letting out her screams.\
 
 
-play "track04.ogg"
+play "*4"
 
 br
 `"---Thief Cat!@ I should have killed you."@
@@ -1948,7 +1948,7 @@ br
 ` The air is burning.@ Her red hair expands without limit.@
 ` This, is overwhelming, power.\
 
-play "track06.ogg"
+play "*6"
 
 `"Ah--------"@
 ` I start to stagger.@
@@ -2187,7 +2187,7 @@ br
 br
 ` Why did you come out?@ Why couldn't you stay passed out in the classroom?@
 br
-play "track08.ogg"
+play "*8"
 
 `"-----Akiha, sama."@
 br
@@ -2268,7 +2268,7 @@ ld c,":a;image\tachi\aki_t30.jpg",%type_crossfade_fst
 ` Akiha says this tearfully.@
 br
 ` ---But, still.@
-play "track07.ogg"
+play "*7"
 
 br
 `"………… I knew.@ All of that, I already knew it, Akiha."\
@@ -2382,7 +2382,7 @@ playstop
 bg "image\bg\ima_10.jpg",%type_crossfade_slw
 bg "image\bg\bg_11c.jpg",%type_crossfade_mid
 
-play "track04.ogg"
+play "*4"
 
 `"-----------"@
 ` My legs stop.@

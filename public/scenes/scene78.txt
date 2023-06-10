@@ -50,7 +50,7 @@ quakey 2,100
 `"---Huh?"@
 ` That's strange.@
 ` As I take a few steps forward, I fall down hard on the ground.\
-play "track03.ogg"
+play "*3"
 
 ld c,":a;image\tachi\ark_t11.jpg",%type_lshutter_mid
 `"Hey.@ What are you doing?"@

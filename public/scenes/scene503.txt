@@ -6,7 +6,7 @@ gosub *left_phase
 
 bg "image\bg\ima_11.jpg",%type_crossfade_slw
 
-play "track02.ogg"
+play "*2"
 
 `"Shiki-sama, it is morning.@ Please wake up."@
 br

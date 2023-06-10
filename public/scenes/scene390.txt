@@ -6,7 +6,7 @@
 
 
 bg "image\bg\bg_40c.jpg",%type_lcartain_mid
-play "track01.ogg"
+play "*1"
 
 
 ` ---After dinner, I return to my room.@

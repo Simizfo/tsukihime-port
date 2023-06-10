@@ -1,6 +1,6 @@
 
 
-play "track03.ogg"
+play "*3"
 
 
 
@@ -104,7 +104,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_mid
 playstop
 
 bg "image\bg\bg_46c.jpg",%type_lcartain_mid
-play "track01.ogg"
+play "*1"
 
 
 ` I turn the doorknob to Hisui's room, and I stop, stunned.@
@@ -158,7 +158,7 @@ playstop
 !w2000
 bg "image\bg\ima_11.jpg",%type_crossfade_slw
 bg "image\bg\bg_45c.jpg",%type_crossfade_mid
-play "track07.ogg"
+play "*7"
 
 
 
@@ -298,7 +298,7 @@ br
 ` Sensing something beside me, my dozing eyes fly open.\
 
 bg "image\event\his_e03.jpg",%type_lshutter_mid
-play "track02.ogg"
+play "*2"
 
 `"……… sssssst!"@
 ` I frantically stop my surprised shout.@

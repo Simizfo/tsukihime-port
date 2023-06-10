@@ -48,7 +48,7 @@ bg "image\bg\bg_09b.jpg",%type_crossfade_fst
 
 
 ` The world starts to spin around me.\
-play "track04.ogg"
+play "*4"
 
 bg "image\bg\ima_11.jpg",%type_nowaitdisp
 

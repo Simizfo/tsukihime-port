@@ -11,7 +11,7 @@ bg "image\bg\bg_11d.jpg",%type_nowaitdisp
 br
 ` To absolutely ensure my kill, the enemy needs to be defenseless.\
 
-play "track06.ogg"
+play "*6"
 
 ld c,":a;image\tachi\aki_t28.jpg",%type_crossfade_fst
 `"You made a mistake, Nii-san.@ That was your last chance to kill me."@

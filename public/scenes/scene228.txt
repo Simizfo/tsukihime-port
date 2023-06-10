@@ -107,7 +107,7 @@ br
 
 
 ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_slw
-play "track03.ogg"
+play "*3"
 
 
 `"Huh----Sen… pai?"@

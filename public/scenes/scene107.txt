@@ -84,7 +84,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 br
 ` And this resulted in…\
 
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_10c.jpg",%type_crossfade_fst
 ld c,":a;image\tachi\koha_t01b.jpg",%type_crossfade_fst
@@ -135,7 +135,7 @@ bg "image\bg\bg_11c.jpg",%type_crossfade_mid
 
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
 bg "image\bg\bg_11c.jpg",%type_crossfade_fst
-play "track06.ogg"
+play "*6"
 
 `"Kohaku…… san?"@
 ` I use all of my foggy consciousness to look around me.@

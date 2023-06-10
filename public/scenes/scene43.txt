@@ -4,7 +4,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 bg "image\bg\bg_34b.jpg",%type_lcartain_mid
 
-play "track02.ogg"
+play "*2"
 
 ` When I get to the sitting room, Akiha is relaxing there alone.@
 ` There's no sign of Kohaku-san or Hisui.@
@@ -217,7 +217,7 @@ wave se3
 ld c,":a;image\tachi\his_t16.jpg",%type_crossfade_mid
 `"Excuse me."@
 ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-play "track01.ogg"
+play "*1"
 `"Good evening.@ Thanks for making my bed, Hisui."@
 ` Hisui quietly nods in acceptance.@
 `"…… Urgh."@

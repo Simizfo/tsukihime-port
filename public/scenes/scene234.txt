@@ -14,7 +14,7 @@ br
 ` It is getting late and I should head back.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_48d.jpg",%type_lcartain_mid
 
@@ -64,7 +64,7 @@ gosub *right_phase
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 
-play "track02.ogg"
+play "*2"
 
 ` …… I feel as if someone is calling my name as I wake up.@
 br
@@ -200,7 +200,7 @@ playstop
 
 !w1000
 bg "image\bg\bg_06a.jpg",%type_lcartain_mid
-play "track03.ogg"
+play "*3"
 
 
 ` ----As I arrive at my classroom I look for Yumizuka-san.@
@@ -260,7 +260,7 @@ br
 
 bg "image\bg\ima_10.jpg",%type_tcartain_mid
 
-play "track01.ogg"
+play "*1"
 
 ` ----Come to think of it, maybe it is natural.@
 ` The school was bound to find out if I was walking around late at night in my school uniform.@
@@ -352,7 +352,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_fst
 wave se0
 
 bg "image\bg\bg_06c.jpg",%type_crossfade_fst
-play "track04.ogg"
+play "*4"
 
 br
 br

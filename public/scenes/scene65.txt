@@ -46,7 +46,7 @@ br
 ` All I can do now is fall towards the floor---\
 !w1000
 bg "image\bg\bg_06a.jpg",%type_nowaitdisp
-play "track03.ogg"
+play "*3"
 `"Excuse me, Sensei."@
 br
 ` ---And,
@@ -395,7 +395,7 @@ wavestop
 
 bg "image\bg\ima_13.jpg",%type_crossfade_mid
 
-play "track04.ogg"
+play "*4"
 
 `"---Eh?"@
 ` I can hear an incredibly dumb-sounding voice.@

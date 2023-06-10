@@ -1,6 +1,6 @@
 
 bg "image\bg\bg_56.jpg",%type_nowaitdisp
-play "track01.ogg"
+play "*1"
 
 ` …… That's right.@
 ` I've been helping Arcueid look for this "enemy", but I don't even know what kind of guy he is yet.@

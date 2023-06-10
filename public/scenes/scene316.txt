@@ -108,7 +108,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w2000
 
 bg "image\bg\bg_34b.jpg",%type_lcartain_mid
-play "track01.ogg"
+play "*1"
 
 ` ---The treatment was quite simple.@
 br
@@ -277,7 +277,7 @@ gosub *right_phase
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 bg "image\bg\bg_40a.jpg",%type_crossfade_fst
 
-play "track02.ogg"
+play "*2"
 
 ` I wake from a long sleep.@
 ` The sunshine from the window looks closer to mid-day than morning.@

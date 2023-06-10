@@ -103,7 +103,7 @@ ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
 `"Oh, did I look that cheerful?@ I thought I was always watching you all though."@
 `"Yeah, I remember.@ You would always run around with us, but you would tell us to stop doing dangerous things and look out for us."\
 
-play "track09.ogg"
+play "*9"
 
 ` …… Ah, I really do remember.@
 ` Playing tag in the courtyard of the mansion.\

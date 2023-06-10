@@ -14,7 +14,7 @@ br
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_33c.jpg",%type_lcartain_mid
-play "track09.ogg"
+play "*9"
 
 
 ` I go down to the lobby quietly, so that Hisui and Kohaku-san won't notice.@
@@ -109,7 +109,7 @@ bg "image\bg\bg_03c.jpg",%type_crossfade_fst
 monocro off
 bg "image\bg\ima_10.jpg",%type_lshutter_fst
 bg "image\bg\bg_10f.jpg",%type_lshutter_fst
-play "track06.ogg"
+play "*6"
 
 wave se0
 
@@ -492,7 +492,7 @@ br
 
 bg "image\bg\bg_10f.jpg",%type_lshutter_mid
 
-play "track09.ogg"
+play "*9"
 
 ` The meat, divided into eight pieces, now just rolls around the corridor.@
 br
@@ -633,7 +633,7 @@ ld c,":a;image\tachi\cel_t16.jpg",%type_crossfade_mid
 ` Before I realize it, Senpai's body is right in front of me.@
 br
 `"Well then, Tohno-kun.@ Let us continue last night's fight."\
-play "track04.ogg"
+play "*4"
 
 cl a,%type_nowaitdisp
 

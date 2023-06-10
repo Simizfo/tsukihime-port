@@ -15,7 +15,7 @@ bg "image\bg\bg_04.jpg",%type_lshutter_fst
 bg "image\bg\ima_10.jpg",%type_lshutter_mid
 bg "image\event\cel_e01.jpg",%type_lshutter_mid
 
-play "track03.ogg"
+play "*3"
 
 `"Hey, homeroom is starting soon."@
 `"Huh?"@
@@ -155,7 +155,7 @@ playstop
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_06a.jpg",%type_lcartain_mid
 
-play "track03.ogg"
+play "*3"
 
 ` When I reach my class, it's already the break after first period.\
 

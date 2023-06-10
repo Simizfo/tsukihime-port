@@ -6,7 +6,7 @@ bg "image\bg\bg_29b.jpg",%type_lcartain_mid
 
 ld c,":a;image\tachi\ark_t04.jpg",%type_crossfade_fst
 
-play "track01.ogg"
+play "*1"
 
 `"What did you want to talk about, Shiki?"@
 `"About vampires.@ You said it before.@ That the recent serial killings were the work of a vampire."@

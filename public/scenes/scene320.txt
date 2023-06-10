@@ -8,7 +8,7 @@ bg "image\bg\bg_34a.jpg",%type_nowaitdisp
 ` Since Akiha's actually home for a change, I guess I'll pass the time talking to her.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-play "track03.ogg"
+play "*3"
 
 bg "image\bg\bg_46a.jpg",%type_lcartain_mid
 wave se3

@@ -15,7 +15,7 @@ br
 
 bg "image\bg\bg_11a.jpg",%type_lcartain_mid
 
-play "track03.ogg"
+play "*3"
 
 ` I knock on the tea ceremony room door.@
 ` After a brief wait, the door creaks open and Senpai pokes out her head.@

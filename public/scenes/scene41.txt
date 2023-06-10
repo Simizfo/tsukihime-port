@@ -20,7 +20,7 @@ bg "image\bg\bg_48b.jpg",%type_lcartain_fst
 ` There isn't any affectionate "ding-dong" chime from the doorbell.@
 ` The oppressive silence continues for a few seconds.@
 ` Then, the sound of pattering footsteps behind the door indicates someone's presence.\
-play "track03.ogg"
+play "*3"
 `"We have been waiting for you."@
 ` The door opens with a creak.@
 ` Inside is the lobby I remembered and a young girl in an apron.\
@@ -75,7 +75,7 @@ playstop
 
 bg "image\bg\bg_34c.jpg",%type_lcartain_mid
 
-play "track01.ogg"
+play "*1"
 
 ` Guided by the girl, I head to the sitting room.@
 br

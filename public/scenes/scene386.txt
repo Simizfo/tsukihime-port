@@ -30,7 +30,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_32b.jpg",%type_lcartain_mid
 bg "image\bg\bg_33b.jpg",%type_lshutter_mid
 
-play "track01.ogg"
+play "*1"
 
 ` I enter the lobby and immediately encounter Hisui.@
 

@@ -109,7 +109,7 @@ br
 
 bg "image\event\his_e07a.jpg",%type_crossfade_mid
 
-play "track07.ogg"
+play "*7"
 
 ` Akiha just lies on the floor, powerless, with terribly calm eyes.@
 `"Akiha……!"@
@@ -314,7 +314,7 @@ bg "image\bg\ima_18.jpg",%type_crossfade_mid
 
 ` Hisui uneasily watches me as I run up the stairs.\
 !w2500
-play "track09.ogg"
+play "*9"
 
 bg "image\bg\ima_02.jpg",%type_lcartain_mid
 
@@ -451,7 +451,7 @@ br
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 bg "image\bg\ima_01.jpg",%type_crossfade_mid
-play "track09.ogg"
+play "*9"
 
 br
 ` ------It's over.@
@@ -494,7 +494,7 @@ gosub *left_phase
 
 bg "image\bg\ima_03.jpg",%type_nowaitdisp
 
-play "track02.ogg"
+play "*2"
 
 br
 br
@@ -545,7 +545,7 @@ br
 ` That… is probably----.\
 
 bg "image\bg\ima_03.jpg",%type_crossfade_mid
-play "track08.ogg"
+play "*8"
 
 
 ` A clear holiday afternoon.@
@@ -852,7 +852,7 @@ br
 
 
 bg "image\event\his_f01.jpg",%type_crossfade_mid
-play "track07.ogg"
+play "*7"
 
 
 ` She stabs herself, and falls to the ground.@
@@ -1027,7 +1027,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w7000
 bg "image\bg\bg_48a.jpg",%type_crossfade_mid
 
-play "track02.ogg"
+play "*2"
 
 
 
@@ -1103,7 +1103,7 @@ playstop
 
 bg "image\bg\bg_48a.jpg",%type_crossfade_fst
 
-play "track08.ogg"
+play "*8"
 
 
 br
@@ -1159,7 +1159,7 @@ br
 ` It was a lone memory that a girl gave to him a long time ago.\
 
 bg "image\event\his_f03.jpg",%type_crossfade_mid
-play "track07.ogg"
+play "*7"
 
 ` The ribbon flies up and up.@
 ` Riding the wind, as if it was never there before, it vanishes into the forest.@

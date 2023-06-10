@@ -9,7 +9,7 @@ gosub *left_phase
 
 bg "image\bg\cmo_20.jpg",%type_crossfade_slw
 
-play "track07.ogg"
+play "*7"
 
 ` …… It was years and years ago.@
 ` I came here, after having shut myself up in my room for so long.@
@@ -61,7 +61,7 @@ br
 
 !w2000
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
-play "track02.ogg"
+play "*2"
 
 
 `"Nn…"@
@@ -393,7 +393,7 @@ cl a,%type_crossfade_fst
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_06a.jpg",%type_lcartain_mid
 
-play "track01.ogg"
+play "*1"
 
 ` …… There are only a few people in the classroom.@
 ` I move to my seat by the window, and put down my bag.@
@@ -500,7 +500,7 @@ cl a,%type_lshutter_fst
 
 bg "image\bg\ima_10.jpg",%type_lshutter_fst
 bg "image\bg\bg_06a.jpg",%type_lshutter_fst
-play "track08.ogg"
+play "*8"
 
 
 ` Click, the hand of the clock hits 1pm.@
@@ -797,7 +797,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w3000
 bg "image\bg\bg_29b.jpg",%type_lcartain_mid
 
-play "track01.ogg"
+play "*1"
 
 ` --------Night falls.@
 br
@@ -859,7 +859,7 @@ wave se0
 ` But this is no time to stand around.@
 `"Akiha----!"@
 ` Crying out, I run to the mansion with all my strength.\
-play "track06.ogg"
+play "*6"
 
 bg "image\bg\ima_10.jpg",%type_lshutter_fst
 

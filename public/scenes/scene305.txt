@@ -19,7 +19,7 @@ gosub *right_phase
 
 
 bg "image\bg\ima_11.jpg",%type_crossfade_slw
-play "track02.ogg"
+play "*2"
 
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 

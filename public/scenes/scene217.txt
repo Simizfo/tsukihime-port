@@ -85,7 +85,7 @@ wave se0
 bg "image\bg\bg_31b.jpg",%type_crossfade_mid
 monocro #ff0000
 
-play "track04.ogg"
+play "*4"
 
 
 
@@ -231,7 +231,7 @@ br
 ` A terrible nightmare.@
 ` But---it can't be a nightmare, because it's not a dream.\
 
-play "track01.ogg"
+play "*1"
 
 `"Tohno-kun.@ It'll be dangerous if you stay there."@
 `"----!"@
@@ -303,7 +303,7 @@ br
 
 
 ld c,":a;image\tachi\stk_t06.jpg",%type_crossfade_fst
-play "track06.ogg"
+play "*6"
 
 ` Both hands are dyed crimson.@
 ` Not yet dry, the blood drips off them in red droplets.@
@@ -459,7 +459,7 @@ br
 ` I look up in the direction of the voice.@
 ` …… Akiha is standing on the stairs.\
 
-play "track01.ogg"
+play "*1"
 
 ld c,":a;image\tachi\aki_t03b.jpg",%type_crossfade_mid
 

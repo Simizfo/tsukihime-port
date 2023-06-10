@@ -100,7 +100,7 @@ bg "image\bg\bg_34a.jpg",%type_lcartain_mid
 
 ld l,":a;image\tachi\aki_t01a.jpg",%type_lshutter_fst
 
-play "track03.ogg"
+play "*3"
 
 ` Akiha looks at me questioningly as I came out of the dining room so soon after I went in.@
 `"Nii-san, did you forget something?"@

@@ -5,7 +5,7 @@
 
 bg "image\bg\bg_34b.jpg",%type_crossfade_slw
 
-play "track03.ogg"
+play "*3"
 
 
 ` ---Dinner is over, and it is now nighttime.@
@@ -257,7 +257,7 @@ monocro #0000ff
 
 bg "image\bg\bg_28b.jpg",%type_crossfade_slw
 
-play "track06.ogg"
+play "*6"
 
 `"---Hm?"@
 ` There's something different about the park.@
@@ -479,7 +479,7 @@ br
 
 ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
 
-play "track01.ogg"
+play "*1"
 
 `"…… Fine, then I'll tell you.@
 ` The Dead Apostles are vampires that try the utmost to conceal their existence.@
@@ -860,7 +860,7 @@ playstop
 
 ` With an extremely happy smile, Arcueid looks up at me as I still stand there in surprise.\
 
-play "track03.ogg"
+play "*3"
 
 `"How was last night?@ Who came?"\
 `"Huh?"@

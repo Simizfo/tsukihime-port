@@ -2,7 +2,7 @@
 
 monocro off
 bg "image\bg\bg_29b.jpg",%type_crossfade_mid
-play "track01.ogg"
+play "*1"
 
 `"Ah---the lamp posts are turning back on."@
 ` The previously dark lamp posts spring back to life.@

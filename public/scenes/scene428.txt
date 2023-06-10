@@ -90,7 +90,7 @@ bg "image\bg\ima_10.jpg",%type_tshutter_fst
 ` All I can understand is what I'm doing.@
 ` I'm suspended in mid-air, and just like Kohaku-san earlier, I'm crucified to the wall by Akiha's hair.\
 
-play "track04.ogg"
+play "*4"
 
 `"How careless.@ It's nothing compared to a natural-born assassin like you, Nii-san, but I can still hide my presence.@
 ` Well, that's what I did and while you were paying so much attention to the hallway, I came by from the next classroom.@ Next time, you should learn from experience and pay attention to the balcony, too."@

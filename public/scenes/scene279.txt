@@ -36,7 +36,7 @@ br
 
 bg "image\bg\ima_10.jpg",%type_lshutter_fst
 bg "image\bg\bg_50.jpg",%type_lshutter_fst
-play "track03.ogg"
+play "*3"
 
 ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
 `"----Senpai!"@

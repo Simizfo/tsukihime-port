@@ -120,7 +120,7 @@ br
 
 !w3000
 
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_40c.jpg",%type_crossfade_slw
 br

@@ -86,7 +86,7 @@ cl a,%type_crossfade_fst
 bg "image\bg\ima_10.jpg",%type_lcartain_fst
 !w2000
 
-play "track03.ogg"
+play "*3"
 
 bg "image\bg\bg_01a.jpg",%type_lcartain_fst
 

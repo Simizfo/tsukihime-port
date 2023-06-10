@@ -67,7 +67,7 @@ playstop
 
 
 bg "image\bg\bg_32a.jpg",%type_lcartain_mid
-play "track03.ogg"
+play "*3"
 
 
 ` Luckily, no one saw me as I made my way out.@

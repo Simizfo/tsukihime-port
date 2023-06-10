@@ -21,7 +21,7 @@ ld c,":a;image\tachi\his_t08.jpg",%type_lshutter_fst
 br
 ` Not even a second after I ask…
 ` With an incredible counterpunch, she totally knocks out my plan.\
-play "track03.ogg"
+play "*3"
 
 cl c,%type_lshutter_fst
 
@@ -173,7 +173,7 @@ ld c,":a;image\tachi\his_t15.jpg",%type_crossfade_fst
 `"----!"@
 ` Hisui's body flinches noticeably.@
 ` I don't even notice.@ The only thing I care about right now is treating her cut.\
-play "track08.ogg"
+play "*8"
 
 bg "image\event\his_e05.jpg",%type_crossfade_mid
 

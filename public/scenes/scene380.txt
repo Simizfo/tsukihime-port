@@ -178,7 +178,7 @@ cl a,%type_tshutter_mid
 ` I push my body and manage to stand up.@
 ` He's still alive.@
 wave se0
-play "track09.ogg"
+play "*9"
 
 ` Then----I have to kill him.\
 

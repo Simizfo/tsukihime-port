@@ -106,7 +106,7 @@ wavestop
 
 bg "image\bg\ima_10.jpg",%type_crossfade_slw
 !w1000
-play "track06.ogg"
+play "*6"
 
 bg "image\bg\bg_40c.jpg",%type_nowaitdisp
 

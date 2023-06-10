@@ -34,7 +34,7 @@ bg "image\bg\ima_11b.jpg",%type_crossfade_fst
 
 bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
-play "track02.ogg"
+play "*2"
 
 `"Nnn------"@
 ` I wake with a sudden ache.\
@@ -234,7 +234,7 @@ ld c,":a;image\tachi\his_t16.jpg",%type_crossfade_fst
 ` Raising a hand to the bowing Hisui, I exit the front gate of the mansion.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-play "track03.ogg"
+play "*3"
 
 bg "image\bg\bg_23a.jpg",%type_lcartain_mid
 
@@ -576,7 +576,7 @@ bg "image\bg\ima_10.jpg",%type_tcartain_mid
 wave se2
 
 bg "image\bg\bg_06a.jpg",%type_bcartain_mid
-play "track03.ogg"
+play "*3"
 
 
 ` At lunch, the classroom gets frantic.@

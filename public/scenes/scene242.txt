@@ -93,7 +93,7 @@ br
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 !w1000
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_27b.jpg",%type_lcartain_mid
 
@@ -163,7 +163,7 @@ br
 bg "image\bg\ima_10.jpg",%type_lshutter_fst
 bg "image\bg\bg_29b.jpg",%type_lshutter_fst
 
-play "track09.ogg"
+play "*9"
 
 `"Yumi… zuka?"@
 ` Her figure is tormented.@ Without a thought for what happened last night, I run towards her.@

@@ -17,7 +17,7 @@ ld c,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
 bg "image\bg\ima_10.jpg",%type_lcartain_fst
 bg "image\bg\bg_05a.jpg",%type_lcartain_fst
 
-play "track01.ogg"
+play "*1"
 
 ` …… Anyway, I get her to come to the rear of the school building so forcefully that it can't be helped if she gets mad at me.@
 ` Fifth period has already started.\
@@ -75,7 +75,7 @@ ld c,":a;image\tachi\cel_t05.jpg",%type_crossfade_fst
 ` Senpai's face lights up as if I said the funniest joke, and she bursts into laughter.\
 
 `"Senpai, this is no joke, I'm---"@
-play "track08.ogg"
+play "*8"
 
 ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
 
@@ -148,7 +148,7 @@ br
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_24b.jpg",%type_lcartain_mid
 
-play "track01.ogg"
+play "*1"
 
 
 ` I walk home together with Akiha.@
@@ -508,7 +508,7 @@ bg "image\bg\ima_11.jpg",%type_crossfade_mid
 
 bg "image\bg\bg_40c.jpg",%type_crossfade_slw
 
-play "track01.ogg"
+play "*1"
 
 
 ` …… I can hear voices talking.@
@@ -572,7 +572,7 @@ br
 
 `"…… Honestly, getting into a fight over me.@ Even if you look like an adult, you're still a child."@
 ld l,":a;image\tachi\aki_t14b.jpg",%type_crossfade_fst
-play "track08.ogg"
+play "*8"
 
 `"But----you were out for a long time, Nii-san.@ You were out for more than five hours, and nothing like this has happened before.@ What would I have done if you'd never woken up…!"\
 
@@ -662,7 +662,7 @@ br
 bg "image\bg\ima_10.jpg",%type_crossfade_slw
 playstop
 !w2000
-play "track07.ogg"
+play "*7"
 
 ` …… The wound in my chest hurts.@
 ` The third child.@

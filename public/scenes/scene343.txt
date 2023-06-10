@@ -64,7 +64,7 @@ wave se3
 
 ` Excusing herself, Hisui enters the room.@
 ` The same figure, the same voice as always.@
-play "track02.ogg"
+play "*2"
 
 ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_mid
 

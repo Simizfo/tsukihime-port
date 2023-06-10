@@ -1,7 +1,7 @@
 
 
 bg "image\bg\bg_06c.jpg",%type_nowaitdisp
-play "track07.ogg"
+play "*7"
 
 
 

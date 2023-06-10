@@ -26,7 +26,7 @@ br
 `"Shiki-sama, please wake up.@ You will be late for school."@
 
 bg "image\bg\bg_40a.jpg",%type_nowaitdisp
-play "track02.ogg"
+play "*2"
 
 `"---------Eh?"@
 ` Hisui is in front of me.@
@@ -129,7 +129,7 @@ bg "image\bg\bg_22b.jpg",%type_lshutter_mid
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_33b.jpg",%type_lshutter_mid
 
-play "track03.ogg"
+play "*3"
 
 ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
 

@@ -191,7 +191,7 @@ bg "image\bg\ima_18.jpg",%type_crossfade_fst
 
 bg "image\bg\bg_19d.jpg",%type_nowaitdisp
 
-play "track06.ogg"
+play "*6"
 
 ` --------Suddenly
 br

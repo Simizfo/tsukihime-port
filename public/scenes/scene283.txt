@@ -393,7 +393,7 @@ br
 
 bg "image\event\cel_e09.jpg",%type_crossfade_slw
 
-play "track07.ogg"
+play "*7"
 
 
 br
@@ -899,7 +899,7 @@ br
 ` But, it seems like there's no need for that.\
 
 
-play "track09.ogg"
+play "*9"
 
 bg "image\bg\ima_18.jpg",%type_crossfade_fst
 
@@ -1146,7 +1146,7 @@ cl c,%type_lshutter_mid
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
-play "track08.ogg"
+play "*8"
 
 bg "image\bg\bg_01c.jpg",%type_lcartain_mid
 

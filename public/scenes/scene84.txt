@@ -25,7 +25,7 @@ br
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 !w3000
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_25a.jpg",%type_crossfade_mid
 

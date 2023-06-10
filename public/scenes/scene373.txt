@@ -84,7 +84,7 @@ br
 wavestop
 
 ld c,":a;image\tachi\aki_t11c.jpg",%type_crossfade_fst
-play "track09.ogg"
+play "*9"
 
 `"-------"@
 ` …… It was Akiha, with her flowing red hair.@
@@ -260,7 +260,7 @@ bg "image\bg\bg_33c.jpg",%type_bshutter_mid
 ` Someone calls from behind.@
 
 ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
-play "track01.ogg"
+play "*1"
 
 `"I have turned on the emergency power.@ Akiha-sama's wounds are pretty shallow, so please do not worry."@
 `"Hisui---where were you?"@
@@ -413,7 +413,7 @@ bg "image\bg\bg_46c.jpg",%type_lcartain_fst
 
 bg "image\bg\bg_37.jpg",%type_lshutter_mid
 
-play "track09.ogg"
+play "*9"
 
 ` I go into Akiha's bedroom.@
 ` As she was sleeping on the bed until now, she raises herself slowly.\

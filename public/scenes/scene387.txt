@@ -21,7 +21,7 @@ br
 bg "image\bg\ima_10.jpg",%type_lshutter_mid
 bg "image\bg\bg_41.jpg",%type_lshutter_mid
 
-play "track08.ogg"
+play "*8"
 
 ` In the old man's old room, Hisui is arranging books.@
 ` Even though it is no longer being used, his room is still being cleaned like before.\

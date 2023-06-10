@@ -158,7 +158,7 @@ br
 `"Hey you.@ It's dangerous to sit down in a place like that."\
 bg "image\bg\cmo_01.jpg",%type_lshutter_fst
 
-play "track07.ogg"
+play "*7"
 
 br
 ` I hear a woman's voice from behind me.\
@@ -448,7 +448,7 @@ br
 
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 bg "image\bg\ima_03.jpg",%type_crossfade_mid
-play "track02.ogg"
+play "*2"
 
 `"Shiki, hurry up.@ You're going to be late for school."@
 ` I hear Keiko-san's voice floating in from the kitchen.@

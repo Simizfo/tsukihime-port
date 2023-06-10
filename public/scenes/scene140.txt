@@ -3,7 +3,7 @@
 
 bg "image\bg\bg_29b.jpg",%type_nowaitdisp
 
-play "track03.ogg"
+play "*3"
 
 
 `"Huh?"@
@@ -85,7 +85,7 @@ br
 `"Don't make me say it again.@ I'm saying that it was you who came!"@
 ` I shout angrily as I look away.@
 ` Arcueid's eyes widen in surprise.@
-play "track01.ogg"
+play "*1"
 
 ld c,":a;image\tachi\ark_t12.jpg",%type_crossfade_fst
 `"M, me……?"@

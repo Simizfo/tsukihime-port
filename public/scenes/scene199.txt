@@ -46,7 +46,7 @@ wavestop
 
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 
-play "track09.ogg"
+play "*9"
 
 !w3000
 
@@ -84,7 +84,7 @@ playstop
 
 bg "image\bg\bg_40c.jpg",%type_crossfade_mid
 
-play "track08.ogg"
+play "*8"
 
 ` …………………………………………………………
 ` …………………………………………… A nostalgic,
@@ -1025,7 +1025,7 @@ cl c,%type_lshutter_mid
 bg "image\bg\ima_10.jpg",%type_lcartain_slw
 bg "image\bg\bg_10c.jpg",%type_lcartain_slw
 
-play "track06.ogg"
+play "*6"
 
 waveloop se1
 
@@ -1290,7 +1290,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_slw
 
 bg "image\event\ark_e07.jpg",%type_crossfade_mid
 
-play "track07.ogg"
+play "*7"
 
 `"Arcueid----!"@
 ` I call out to her.@
@@ -1462,7 +1462,7 @@ br
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 bg "image\bg\bg_49.jpg",%type_crossfade_mid
-play "track09.ogg"
+play "*9"
 
 ` We face each other in the moonlit hallway.@
 ` Roa doesn't move from the spot where Arcueid was before.@
@@ -1757,7 +1757,7 @@ bg "image\bg\bg_02b.jpg",%type_crossfade_mid
 
 
 quakey 3,100
-play "track04.ogg"
+play "*4"
 
 `"………!?"@
 ` I collapse.@ I fall on the ground.@

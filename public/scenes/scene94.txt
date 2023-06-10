@@ -39,7 +39,7 @@ bg "image\bg\ima_11.jpg",%type_crossfade_slw
 
 bg "image\bg\bg_15c.jpg",%type_crossfade_mid
 
-play "track09.ogg"
+play "*9"
 
 br
 `"Investigators believe the cause of Takada Youichi's motorcycle accident was a malfunction in the brake pedal which occurred while he was descending a steep hill.@
@@ -261,7 +261,7 @@ ld c,":a;image\tachi\ark_t12.jpg",%type_crossfade_fst
 ` I just became so fixated when I saw you on the street--when I came to, I had already, sliced you into pieces----"@
 cl c,%type_crossfade_fst
 
-play "track08.ogg"
+play "*8"
 
 br
 ` In this room.@
@@ -480,7 +480,7 @@ bg "image\bg\ima_10.jpg",%type_lcartain_mid
 
 bg "image\bg\bg_15c.jpg",%type_rcartain_slw
 
-play "track03.ogg"
+play "*3"
 
 `"Hey, that tickles."@
 `"………………"@
@@ -533,7 +533,7 @@ ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
 
 ld c,":a;image\tachi\ark_t02.jpg",%type_crossfade_fst
 
-play "track04.ogg"
+play "*4"
 
 `"I won't say that.@
 ` I think you know this already but he is also a vampire.@ We call him Nrvnqsr and he is quite an exception.@

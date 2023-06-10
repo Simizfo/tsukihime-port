@@ -6,7 +6,7 @@ bg "image\bg\ima_10.jpg",%type_nowaitdisp
 br
 ` I hear a voice by my ear.@
 ` Last night---the voice I heard until right before I slept… the voice I can't forget.\
-play "track05.ogg"
+play "*5"
 
 bg "image\bg\bg_40d.jpg",%type_crossfade_fst
 

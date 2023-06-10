@@ -3,7 +3,7 @@
 
 bg "image\bg\bg_34a.jpg",%type_tcartain_mid
 
-play "track03.ogg"
+play "*3"
 
 ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
 

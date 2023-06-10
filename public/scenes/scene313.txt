@@ -15,7 +15,7 @@ ld c,":a;image\tachi\stk_t04.jpg",%type_crossfade_fst
 
 cl c,%type_lshutter_fst
 
-play "track06.ogg"
+play "*6"
 
 ` A choking sound.@
 ` Squatting on the ground, Yumizuka coughs heavily, and she spits out a lump of blood.@
@@ -316,7 +316,7 @@ wave se0
 
 bg "image\bg\ima_11b.jpg",%type_nowaitdisp
 bg "image\bg\bg_29c.jpg",%type_nowaitdisp
-play "track04.ogg"
+play "*4"
 
 #ff0000
 br
@@ -495,7 +495,7 @@ bg "image\bg\ima_10.jpg",%type_nowaitdisp
 
 bg "image\bg\bg_29c.jpg",%type_crossfade_fst
 
-play "track08.ogg"
+play "*8"
 
 `"Wha------"@
 ` This is, a continuation of my nightmare.@

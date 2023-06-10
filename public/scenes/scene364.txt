@@ -51,7 +51,7 @@ wave se0
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
 bg "image\bg\bg_26a.jpg",%type_crossfade_mid
 
-play "track06.ogg"
+play "*6"
 
 ` *pant*-----*pant*
 br

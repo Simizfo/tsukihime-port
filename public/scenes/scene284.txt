@@ -8,7 +8,7 @@ bg "image\bg\ima_10.jpg",%type_nowaitdisp
 
 bg "image\bg\bg_40a.jpg",%type_bcartain_slw
 
-play "track02.ogg"
+play "*2"
 
 `"------!"@
 ` I wake up with a start and kick off my sheets, sitting up in bed.@
@@ -142,7 +142,7 @@ cl c,%type_lshutter_mid
 bg "image\bg\ima_10.jpg",%type_lcartain_slw
 !w1000
 
-play "track03.ogg"
+play "*3"
 
 bg "image\bg\bg_06a.jpg",%type_crossfade_fst
 wave se2

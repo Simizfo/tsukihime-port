@@ -28,7 +28,7 @@ bg "image\bg\bg_40a.jpg",%type_tshutter_mid
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_34a.jpg",%type_lcartain_mid
 
-play "track02.ogg"
+play "*2"
 
 ` No one is in the sitting room.@
 ` There is one teacup on the table.@ Probably the one Akiha was using until just now.@

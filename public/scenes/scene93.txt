@@ -89,7 +89,7 @@ br
 ` The door opens.@
 ` Within---are two black dogs.\
 
-play "track04.ogg"
+play "*4"
 
 `"------"@
 ` …… I see.@ You guys came after me.@
@@ -366,7 +366,7 @@ bg "image\bg\bg_20b.jpg",%type_nowaitdisp
 
 ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_slw
 
-play "track09.ogg"
+play "*9"
 
 `"Ah, are you awake?"@
 `"…… A…… Arcueid……?"@

@@ -188,7 +188,7 @@ br
 ` ---Is that why?@
 ` Even though I still can't grasp the situation, I start to calm down.\
 
-play "track01.ogg"
+play "*1"
 
 
 ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
@@ -390,7 +390,7 @@ br
 
 ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
 
-play "track09.ogg"
+play "*9"
 
 `"…… I explained this before, but Roa chooses fine lineages and excellent bodies for his next host.@
 ` So once you find out Roa is in this place, the answer comes naturally when you investigate the families which meet his criteria."@
@@ -536,7 +536,7 @@ ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
 ` But once they fall, there's no longer the need to restrain themselves.@ Then, they just become demons which suck human blood for their own pleasure."@
 cl c,%type_crossfade_fst
 \
-play "track08.ogg"
+play "*8"
 
 ` …… I remember how Arcueid appeared earlier.@
 ` Her blood-shot eyes.@

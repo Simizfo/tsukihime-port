@@ -77,7 +77,7 @@ bg "image\bg\ima_11b.jpg",%type_crossfade_fst
 ` And just like that,
 ` I get on the bed and keep her from escaping.\
 
-play "track06.ogg"
+play "*6"
 
 bg "image\event\his_h03.jpg",%type_crossfade_mid
 

@@ -18,7 +18,7 @@ bg "image\bg\ima_11.jpg",%type_nowaitdisp
 bg "image\bg\ima_10.jpg",%type_nowaitdisp
 bg "image\bg\bg_40a.jpg",%type_crossfade_fst
 
-play "track02.ogg"
+play "*2"
 
 ` I open my eyes to the morning light.@
 ` Even though my body still feels heavy, probably because of yesterday's anemia, I feel pretty good.@
@@ -297,7 +297,7 @@ br
 wavestop
 bg "image\bg\bg_40a.jpg",%type_nowaitdisp
 
-play "track01.ogg"
+play "*1"
 
 `"----Eh?"@
 ` …… My own room.@
@@ -507,7 +507,7 @@ br
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_48d.jpg",%type_lcartain_mid
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-play "track08.ogg"
+play "*8"
 
 
 ` I walk in the moonlight.@
@@ -734,7 +734,7 @@ wavestop
 
 !w1000
 bg "image\bg\bg_40d.jpg",%type_lcartain_fst
-play "track06.ogg"
+play "*6"
 
 ` Somehow, I make it back alone.@
 ` I breathe desperately.@
@@ -838,7 +838,7 @@ br
 
 bg "image\bg\bg_26a.jpg",%type_nowaitdisp
 
-play "track04.ogg"
+play "*4"
 
 ` It seems I went into town at night again.@
 ` It seems my eyes are bloodshot,
@@ -1135,7 +1135,7 @@ wavestop
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_34a.jpg",%type_lcartain_mid
 
-play "track02.ogg"
+play "*2"
 
 ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
 
@@ -1256,7 +1256,7 @@ br
 `"Hey, you.@ If you just stand around like that, you'll be late."@
 `"Eh?"@
 ` Someone hits me on the shoulder.@
-play "track03.ogg"
+play "*3"
 
 ld c,":a;image\tachi\cel_t04.jpg",%type_lshutter_mid
 
@@ -1392,7 +1392,7 @@ bg "image\bg\ima_10.jpg",%type_lshutter_mid
 wave se2
 
 bg "image\bg\bg_05a.jpg",%type_rshutter_mid
-play "track01.ogg"
+play "*1"
 
 
 ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst

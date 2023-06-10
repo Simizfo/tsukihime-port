@@ -22,7 +22,7 @@ br
 
 bg "image\bg\bg_40e.jpg",%type_crossfade_mid
 
-play "track02.ogg"
+play "*2"
 
 `"……"@
 ` I wake up.@

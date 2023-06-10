@@ -46,7 +46,7 @@ ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
 ` She narrows her eyes as if she was in a bad mood.@
 ` No, she looks less like she was in a bad mood and more like she's irritated.\
 
-play "track09.ogg"
+play "*9"
 
 
 `"I may know the person who helped you, Shiki.@ …… Man.@ If it's really her, she'll probably be able to find the enemy before me."@

@@ -99,7 +99,7 @@ gosub *left_phase
 
 !w1000
 bg "image\bg\bg_25b.jpg",%type_tshutter_mid
-play "track06.ogg"
+play "*6"
 
 
 ` ---I am in the night-shrouded town.@

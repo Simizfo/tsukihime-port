@@ -22,7 +22,7 @@ br
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w2000
-play "track07.ogg"
+play "*7"
 
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 

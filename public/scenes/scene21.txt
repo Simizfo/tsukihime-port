@@ -2,7 +2,7 @@
 
 bg "image\bg\bg_06a.jpg",%type_lcartain_mid
 
-play "track03.ogg"
+play "*3"
 
 
 ` I arrive in class earlier than usual.@
@@ -224,7 +224,7 @@ bg "image\bg\ima_10.jpg",%type_nowaitdisp
 
 bg "image\bg\bg_10a.jpg",%type_crossfade_mid
 
-play "track02.ogg"
+play "*2"
 
 ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
 

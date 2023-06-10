@@ -3,7 +3,7 @@ bg "image\bg\bg_05a.jpg",%type_nowaitdisp
 
 ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
 
-play "track03.ogg"
+play "*3"
 
 `"---I understand.@
 ` So you teamed up with her to defeat the vampire in this city.@ Right, Tohno-kun?"@
@@ -125,7 +125,7 @@ br
 playstop
 
 ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
-play "track01.ogg"
+play "*1"
 
 `"Let's get back to the main subject.@ Please listen carefully, Tohno-kun."@
 `"Yes, please keep it short."@
@@ -279,7 +279,7 @@ ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
 ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
 
 
-play "track09.ogg"
+play "*9"
 
 `"---No.@ Arcueid Brunestud's and my enemy.@ There is no need for you to worry about 'The Serpent', Tohno-kun.@
 ` So please don't go with Arcueid any longer.@
@@ -661,7 +661,7 @@ br
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
 bg "image\bg\bg_32c.jpg",%type_lcartain_mid
 
-play "track09.ogg"
+play "*9"
 
 ` I go outside.@
 ` There were never many people around the mansion to begin with, but because of all these serial killings, it is unnaturally quiet.@ It's not even ten o'clock yet, but the emptiness makes it feel more like past one o'clock.\

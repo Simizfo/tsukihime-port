@@ -50,7 +50,7 @@ bg "image\bg\bg_40e.jpg",%type_crossfade_slw
 
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
 
-play "track02.ogg"
+play "*2"
 
 ` I take in some air.@
 ` After taking a few deep breaths, I manage to calm down.@

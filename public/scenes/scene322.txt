@@ -2,7 +2,7 @@
 
 
 
-play "track03.ogg"
+play "*3"
 
 
 
@@ -63,7 +63,7 @@ playstop
 
 bg "image\bg\bg_42b.jpg",%type_lcartain_mid
 
-play "track09.ogg"
+play "*9"
 
 ` Following Akiha, I go out to the courtyard to get some fresh air.@
 ` It is still before six o'clock.@
@@ -131,7 +131,7 @@ playstop
 !w1000
 bg "image\bg\bg_40c.jpg",%type_crossfade_mid
 
-play "track01.ogg"
+play "*1"
 
 `"Ah-----"@
 ` When I come to, I'm lying in my room.@

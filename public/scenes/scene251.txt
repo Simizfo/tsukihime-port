@@ -4,7 +4,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 
 bg "image\bg\bg_11b.jpg",%type_crossfade_slw
 
-play "track03.ogg"
+play "*3"
 
 ` I hurry to the tea ceremony room.@
 ` Senpai has her hand on the door as I arrive.\

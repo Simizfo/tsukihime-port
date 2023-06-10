@@ -18,7 +18,7 @@ bg "image\bg\ima_11.jpg",%type_crossfade_slw
 
 bg "image\bg\bg_40a.jpg",%type_lcartain_fst
 
-play "track02.ogg"
+play "*2"
 
 
 ` ………, ………………, ……………………@

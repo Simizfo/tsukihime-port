@@ -1,7 +1,7 @@
 
 
 bg "image\bg\bg_56.jpg",%type_lcartain_slw
-play "track03.ogg"
+play "*3"
 
 ` It's now past two, so to ease my hunger I take us to a fast food restaurant.@
 br
@@ -167,7 +167,7 @@ ld c,":a;image\tachi\ark_t10.jpg",%type_crossfade_fst
 ` All I know----is to drink human blood is to refuse to recognize them as people."@
 ` She looks away, not even trying to look at me.\
 
-play "track09.ogg"
+play "*9"
 
 `"Hey Shiki.@ What if?@ What if birds or fish had the same amount of intelligence and life span as you did?@ Could you eat them?@ Could you justify it to yourself by saying no matter how much intelligence they have, they are still food?@ And then eat them?"@
 

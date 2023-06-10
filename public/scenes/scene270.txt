@@ -74,7 +74,7 @@ ld c,":a;image\tachi\cel_t01b.jpg",%type_crossfade_fst
 `"But, it really is better if we separate here.@ We are no longer friends, and if Arcueid were to see us---"@
 br
 `"Hm?@ What would happen, Ciel?"@
-play "track06.ogg"
+play "*6"
 
 br
 `"----!"@

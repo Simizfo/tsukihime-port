@@ -54,7 +54,7 @@ br
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 !w2000
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_40c.jpg",%type_crossfade_mid
 

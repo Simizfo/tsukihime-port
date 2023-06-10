@@ -87,7 +87,7 @@ cl c,%type_crossfade_fst
 ` After instructing Hisui, I leave the mansion with Akiha.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_mid
-play "track03.ogg"
+play "*3"
 
 bg "image\bg\bg_01a.jpg",%type_rcartain_mid
 

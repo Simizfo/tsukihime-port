@@ -12,7 +12,7 @@
 !w1000
 bg "image\bg\bg_54a.jpg",%type_lcartain_mid
 
-play "track08.ogg"
+play "*8"
 
 
 ` --To my surprise, Akiha has not gone beyond the mansion.@

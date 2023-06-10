@@ -70,7 +70,7 @@ br
 bg "image\bg\bg_31b.jpg",%type_crossfade_mid
 monocro #ff0000
 
-play "track04.ogg"
+play "*4"
 
 
 `"----Eh?"@
@@ -199,7 +199,7 @@ br
 ` A terrible nightmare.@
 ` But---it can't be a nightmare, because it's not a dream.\
 
-play "track01.ogg"
+play "*1"
 
 `"Tohno-kun.@ It'll be dangerous if you stay there."@
 `"----!"@
@@ -271,7 +271,7 @@ br
 ` she brings her hands out.\
 
 ld c,":a;image\tachi\stk_t06.jpg",%type_crossfade_fst
-play "track06.ogg"
+play "*6"
 
 ` Both hands are dyed crimson.@
 ` Not yet dry, the blood drips off them in red droplets.@
@@ -527,7 +527,7 @@ wave se3
 
 
 ld c,":a;image\tachi\his_t23.jpg",%type_lshutter_mid
-play "track01.ogg"
+play "*1"
 
 ` …… What's this?@
 ` Hisui enters carrying a tray and something that looks like medicine wrapped in paper.\

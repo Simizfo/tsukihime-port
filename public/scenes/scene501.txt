@@ -76,7 +76,7 @@ br
 
 monocro #ff0000
 bg "image\bg\ima_13b.jpg",%type_tshutter_fst
-play "track04.ogg"
+play "*4"
 
 
 `"Ah------eh?"@

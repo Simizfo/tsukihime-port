@@ -79,7 +79,7 @@ br
 
 ld c,":a;image\tachi\ark_t16.jpg",%type_lshutter_mid
 
-play "track09.ogg"
+play "*9"
 
 `"Hey Shiki, it's already two hours past the agreed time.@ What were----"@
 ld c,":a;image\tachi\ark_t13.jpg",%type_crossfade_fst
@@ -204,7 +204,7 @@ ld c,":a;image\tachi\ark_t05b.jpg",%type_crossfade_fst
 `"So what is it Arcueid?@ That bandaged man, and that person wearing those robes like some priest, are they enemies of yours?"@
 ld c,":a;image\tachi\ark_t07.jpg",%type_crossfade_fst
 
-play "track01.ogg"
+play "*1"
 
 `"…… Yes.@ Both of them are 'enemies'.@ I don't know just who or what that bandaged man is, but that woman wearing those Catholic robes, I have an idea about."@
 ` She narrows her eyes as if she was in a bad mood.@

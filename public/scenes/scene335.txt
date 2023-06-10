@@ -15,7 +15,7 @@ br
 ` Being with company is surely more pleasant than being alone.\
 
 bg "image\bg\ima_10.jpg",%type_lcartain_fst
-play "track03.ogg"
+play "*3"
 
 bg "image\bg\bg_34c.jpg",%type_lcartain_fst
 

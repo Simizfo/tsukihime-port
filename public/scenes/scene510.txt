@@ -14,7 +14,7 @@ bg "image\bg\ima_10.jpg",%type_nowaitdisp
 bg "image\bg\ima_01.jpg",%type_crossfade_mid
 
 
-play "track09.ogg"
+play "*9"
 
 ` In my dream, I'm staring at the moon.\
 
@@ -49,7 +49,7 @@ br
 ` I almost lose my just awakened consciousness.@ Before I fade away completely, I quickly grab my glasses.\
 
 bg "image\bg\bg_40a.jpg",%type_crossfade_mid
-play "track02.ogg"
+play "*2"
 
 ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_mid
 `"Shiki-sama……?@ Are you not feeling well?"@
@@ -206,7 +206,7 @@ bg "image\bg\ima_03.jpg",%type_lcartain_mid
 playstop
 
 bg "image\bg\bg_22a.jpg",%type_lcartain_mid
-play "track03.ogg"
+play "*3"
 
 ` I head towards school.@
 ` My feet are heavy and it feels like I'm in another person's body as I head down the hill.@
@@ -430,7 +430,7 @@ bg "image\bg\ima_10.jpg",%type_crossfade_mid
 br
 ` And this resulted in…\
 
-play "track01.ogg"
+play "*1"
 
 bg "image\bg\bg_10c.jpg",%type_crossfade_fst
 ld c,":a;image\tachi\koha_t01b.jpg",%type_crossfade_fst
@@ -481,7 +481,7 @@ bg "image\bg\bg_11c.jpg",%type_crossfade_mid
 
 bg "image\bg\ima_10.jpg",%type_crossfade_fst
 bg "image\bg\bg_11c.jpg",%type_crossfade_fst
-play "track06.ogg"
+play "*6"
 
 `"Kohaku…… san?"@
 ` I use all of my foggy consciousness to look around me.@

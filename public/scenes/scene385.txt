@@ -99,7 +99,7 @@ gosub *left_phase
 
 
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
-play "track02.ogg"
+play "*2"
 
 
 ` -----Warm sunlight.@
@@ -177,7 +177,7 @@ bg "image\bg\ima_10.jpg",%type_tshutter_mid
 playstop
 
 bg "image\bg\ima_03.jpg",%type_bshutter_mid
-play "track09.ogg"
+play "*9"
 
 
 
@@ -214,7 +214,7 @@ bg "image\bg\bg_40a.jpg",%type_bshutter_mid
 
 bg "image\bg\ima_10.jpg",%type_crossfade_mid
 bg "image\bg\bg_34a.jpg",%type_lcartain_mid
-play "track02.ogg"
+play "*2"
 
 
 ` I come down to the dining room and finish my breakfast.@
@@ -303,7 +303,7 @@ playstop
 
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
 bg "image\bg\ima_03.jpg",%type_crossfade_mid
-play "track07.ogg"
+play "*7"
 
 
 ` ----I look at the flowing scenery.@
@@ -354,7 +354,7 @@ br
 bg "image\bg\bg_42b.jpg",%type_lcartain_mid
 bg "image\bg\bg_54b.jpg",%type_lcartain_mid
 
-play "track08.ogg"
+play "*8"
 
 ` I am in the forest.@
 ` I have not set foot in this place since that night.@
@@ -464,7 +464,7 @@ br
 ` I could feel his heartbeat inside me as I used to.@ No, stronger than ever before.\
 
 bg "image\bg\ima_11.jpg",%type_crossfade_mid
-play "track07.ogg"
+play "*7"
 
 bg "image\event\aki_f02.jpg",%type_crossfade_mid
 
