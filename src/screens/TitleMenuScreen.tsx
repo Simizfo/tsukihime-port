@@ -1,8 +1,19 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import titleMenuBg from '../assets/game/menus/title-menu-bg.png'
 import tsukiLogo from "../assets/game/menus/tsukihime-logo.webp"
+import { AudioManager } from '../utils/AudioManager'
 
+const audio = new AudioManager()
 const TitleMenuScreen = () => {
+
+  // useEffect(() => {
+  //   if (!audio.isSoundKnown("menuTheme")) {
+  //     audio.setSoundFileUrl("menuTheme", "CD/track08.ogg"), 
+  //     audio.playTrack("menuTheme", true)
+  //   }
+  // }, [])
+
   return (
     <div id="title-menu">
       <img src={titleMenuBg} alt="title menu" className="bg-image" />

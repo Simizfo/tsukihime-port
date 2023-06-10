@@ -39,6 +39,7 @@ const Window = () => {
     }
     return () => {
       audio.stopTrack()
+      audio.stopSE()
     }
   }, [])
 

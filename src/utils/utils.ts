@@ -12,7 +12,6 @@ export const fetchScene = async (scene: number):Promise<string[]> => {
 
   //split data on \n or @
   const result = data.split(/[\n\r@]/)
-  // console.log(result); // Check the output in the console
 
   return result
 }
