@@ -7,7 +7,8 @@
 :root {
     --text-color: #e7e7e7;
     --read-text-color: #c5e1ff;
-    --transition: all 0.2s ease-out;
+    --transition-time: 0.2s
+    --transition: all var(--transition-time) ease-out;
 }
 
 * {
@@ -34,8 +35,42 @@ body {
         width: inherit;
         height: inherit;
         object-fit: cover;
-        transition: 1s;
     }
+    .background[fade-effect="crossfade"] {
+        opacity: 0%;
+        transition: var(--transition-time);
+    }
+    .background[fade-effect="lshutter"] {
+        mask-image: linear-gradient(
+            to right,
+            transparent 20%,
+            #fff 40%,
+            #fff 60%,
+            transparent 80%
+          );
+        -webkit-mask-image: linear-gradient(
+            to right,
+            transparent 20%,
+            #fff 40%,
+            #fff 60%,
+            transparent 80%
+          );
+        -webkit-mask-size: 500%;
+        mask-size: 500%;
+        animation: lshutter var(--transition-time) linear; // var --transition-time changed in inline css
+    }
+
+    @keyframes lshutter {
+        0% {
+          -webkit-mask-position: center;
+          mask-position: center;
+        }
+        100% {
+          -webkit-mask-position: left;
+          mask-position: left;
+        }
+    }
+
     .fade {
         opacity: 0;
     }
