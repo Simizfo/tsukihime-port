@@ -81,8 +81,3 @@ export const GALLERY_IMAGES = {
     "ao_01", "ao_02", "hal_e01", "nero_e04", "stk_e01a", "stk_e01b", "stk_e01c", "stk_e01d", "stk_e02", "stk_e03"
   ],
 }
-
-export enum BgTransition {
-  type_crossfade_slw = "type_crossfade_slw", //fade
-  type_lcartain_mid = "type_lcartain_mid" //bars transition from left to right
-}

@@ -1,7 +1,6 @@
 import { useContext, useEffect, useRef, useState } from "react"
 import { store } from "../context/GameContext"
 import { Background } from "../types"
-import { BgTransition } from "../utils/constants"
 
 type Props = {
   bg: Background
