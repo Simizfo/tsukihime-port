@@ -42,10 +42,10 @@ const BackgroundLayer = ({ bg }: Props) => {
   function getTransition(type: string) {
     let duration = 0
     let effect = type
-    
+
     if (effect.startsWith('type_'))
       effect = effect.substring('type_'.length)
-    
+
     const index = effect.lastIndexOf('_')
     if (index !== -1) {
       let speed = effect.substring(index+1);
@@ -87,7 +87,7 @@ const BackgroundLayer = ({ bg }: Props) => {
 
   ({effect, duration} = getTransition(bg.type));
 
-  if (bgTmp.current != bg && duration > 0) {
+  if (bgTmp.current.image != "" && bgTmp.current.image != bg.image && duration > 0) {
     const elmt1 = createImg(bg),
           elmt2 = createImg(bgTmp.current,{style:{'--transition-time': `${duration}ms`}, 'fade-effect': effect})
     return (

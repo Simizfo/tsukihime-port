@@ -35,10 +35,17 @@ body {
         width: inherit;
         height: inherit;
         object-fit: cover;
+
+        animation-duration: var(--transition-time); // var --transition-time changed in inline css
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
     }
     .background[fade-effect="crossfade"] {
-        opacity: 0%;
-        transition: var(--transition-time);
+        animation-name: crossfade;
+    }
+    @keyframes crossfade {
+        from { opacity: 1; }
+        to { opacity: 0; }
     }
     .background[fade-effect="lshutter"] {
         mask-image: linear-gradient(
@@ -57,15 +64,15 @@ body {
           );
         -webkit-mask-size: 500%;
         mask-size: 500%;
-        animation: lshutter var(--transition-time) linear; // var --transition-time changed in inline css
+        animation-name: lshutter;
     }
 
     @keyframes lshutter {
-        0% {
+        from {
           -webkit-mask-position: center;
           mask-position: center;
         }
-        100% {
+        to {
           -webkit-mask-position: left;
           mask-position: left;
         }
@@ -267,7 +274,7 @@ body {
                 display: flex;
                 gap: 10px;
                 margin-top: auto;
-            
+
                 button {
                     border: 1px solid;
                     border-radius: 4px;
