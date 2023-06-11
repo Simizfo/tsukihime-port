@@ -39,6 +39,7 @@ body {
         animation-duration: var(--transition-time); // var --transition-time changed in inline css
         animation-timing-function: linear;
         animation-iteration-count: 1;
+        animation-fill-mode: forwards;
     }
     .background[fade-effect="crossfade"] {
         animation-name: crossfade;
@@ -47,7 +48,8 @@ body {
         from { opacity: 1; }
         to { opacity: 0; }
     }
-    .background[fade-effect="lshutter"] {
+    .background[fade-effect="lshutter"],
+    .background[fade-effect="rshutter"] {
         mask-image: linear-gradient(
             to right,
             transparent 20%,
@@ -64,18 +66,37 @@ body {
           );
         -webkit-mask-size: 500%;
         mask-size: 500%;
+    }
+    .background[fade-effet="lshutter"] {
         animation-name: lshutter;
+        @keyframes lshutter {
+            from {
+            -webkit-mask-position: center;
+            mask-position: center;
+            }
+            to {
+            -webkit-mask-position: left;
+            mask-position: left;
+            }
+        }
+    }
+    .background[fade-effet="rshutter"] {
+        animation-name: rshutter;
+        @keyframes rshutter {
+            from {
+            -webkit-mask-position: center;
+            mask-position: center;
+            }
+            to {
+            -webkit-mask-position: right;
+            mask-position: right;
+            }
+        }
     }
 
-    @keyframes lshutter {
-        from {
-          -webkit-mask-position: center;
-          mask-position: center;
-        }
-        to {
-          -webkit-mask-position: left;
-          mask-position: left;
-        }
+
+    .fade {
+        opacity: 0;
     }
 
     .box {
