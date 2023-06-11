@@ -78,10 +78,6 @@ body {
         }
     }
 
-    .fade {
-        opacity: 0;
-    }
-
     .box {
         width: inherit;
         height: inherit;
@@ -141,6 +137,7 @@ body {
 
         span {
             overflow-wrap: break-word;
+            position: relative;
         }
         hr {
             border: 0;
@@ -152,6 +149,8 @@ body {
             width: 20px;
             height: 20px;
             margin-left: 2px;
+            position: absolute;
+            bottom: 2px;
         }
         #moon {
             animation: rotate 4s ease-in-out infinite;
