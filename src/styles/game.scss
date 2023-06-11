@@ -48,8 +48,10 @@ body {
         from { opacity: 1; }
         to { opacity: 0; }
     }
-    .background[fade-effect="lshutter"],
-    .background[fade-effect="rshutter"] {
+    .background[fade-effect="lmaskcross"],
+    .background[fade-effect="rmaskcross"],
+    .background[fade-effect="lscroll"],
+    .background[fade-effect="rscroll"] {
         mask-image: linear-gradient(
             to right,
             transparent 20%,
@@ -67,9 +69,10 @@ body {
         -webkit-mask-size: 500%;
         mask-size: 500%;
     }
-    .background[fade-effet="lshutter"] {
-        animation-name: lshutter;
-        @keyframes lshutter {
+    .background[fade-effect="lmaskcross"],
+    .background[fade-effect="lscroll"] {
+        animation-name: lscroll;
+        @keyframes lscroll {
             from {
             -webkit-mask-position: center;
             mask-position: center;
@@ -80,9 +83,10 @@ body {
             }
         }
     }
-    .background[fade-effet="rshutter"] {
-        animation-name: rshutter;
-        @keyframes rshutter {
+    .background[fade-effect="rmaskcross"],
+    .background[fade-effect="rscroll"] {
+        animation-name: rscroll;
+        @keyframes rscroll {
             from {
             -webkit-mask-position: center;
             mask-position: center;
@@ -90,6 +94,49 @@ body {
             to {
             -webkit-mask-position: right;
             mask-position: right;
+            }
+        }
+    }
+    .background[fade-effect="lshutter"],
+    .background[fade-effect="rshutter"],
+    .background[fade-effect="lcartain"],
+    .background[fade-effect="rcartain"] {
+        mask-image:
+            linear-gradient(to right, transparent, transparent 50%, white 50%, white),
+            linear-gradient(to right, white, white 50%, transparent 50%, transparent);
+        -webkit-mask-image:
+            linear-gradient(to right, transparent, transparent 50%, white 50%, white),
+            linear-gradient(to right, white, white 50%, transparent 50%, transparent);
+        mask-size: 50px 100%, 50px 100%;
+        -webkit-mask-size: 50px 100%, 50px 100%;
+        mask-repeat: repeat;
+        -webkit-mask-repeat: repeat;
+        mask-composite: exclude;
+        -webkit-mask-composite: xor;
+    }
+    .background[fade-effect="lshutter"],
+    .background[fade-effect="lcurtain"] {
+        animation-name: lshutter;
+        @keyframes lshutter {
+            from {
+                mask-position: 0 0, 50px 0;
+                -webkit-mask-position: 0 0, 50px 0;
+            }
+            to {
+                mask-position: 0 0, 25px 0;
+                -webkit-mask-position: 0 0, 25px 0;
+            }
+        }
+    }
+    .background[fade-effect="rshutter"],
+    .background[fade-effect="rcurtain"] {
+        animation-name: rshutter;
+        @keyframes rshutter {
+            from {
+                mask-position: 0 0, 50px 0;
+            }
+            to {
+                mask-position: 0 0, 75px 0;
             }
         }
     }
