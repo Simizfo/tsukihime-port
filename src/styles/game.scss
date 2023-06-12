@@ -58,7 +58,7 @@ body {
           }
         }
     }
-    @mixin shutter($prefix, $position) {
+    @mixin shutterh($prefix, $position) {
         @keyframes #{$prefix}shutter {
             from {
                 mask-position: 0 0, 25px 0;
@@ -67,6 +67,18 @@ body {
             to {
                 mask-position: 0 0, $position 0;
                 -webkit-mask-position: 0 0, $position 0;
+            }
+        }
+    }
+    @mixin shutterv($prefix, $position) {
+        @keyframes #{$prefix}shutter {
+            from {
+                mask-position: 0 0, 0 25px;
+                -webkit-mask-position: 0 0, 0 25px;
+            }
+            to {
+                mask-position: 0 0, 0 $position;
+                -webkit-mask-position: 0 0, 0 $position;
             }
         }
     }
@@ -115,15 +127,41 @@ body {
             -webkit-mask-composite: xor;
         }
 
+        &[fade-effect="tshutter"],
+        &[fade-effect="bshutter"],
+        &[fade-effect="tcartain"],
+        &[fade-effect="bcartain"] {
+            $linear-gradients: linear-gradient(to bottom, transparent 50%, #fff 50%),
+                linear-gradient(to bottom, transparent 50%, #fff 50%);
+            mask-size: 100% 50px, 100% 50px;
+            -webkit-mask-size: 100% 50px, 100% 50px;
+            mask-repeat: repeat;
+            -webkit-mask-repeat: repeat;
+            mask-composite: exclude;
+            -webkit-mask-composite: xor;
+        }
+
         &[fade-effect="lshutter"],
         &[fade-effect="lcurtain"] {
-            @include shutter("l", 0);
+            @include shutterh("l", 50px);
             animation-name: lshutter;
         }
 
         &[fade-effect="rshutter"],
         &[fade-effect="rcurtain"] {
-            @include shutter("r", 50px);
+            @include shutterh("r", 0);
+            animation-name: rshutter;
+        }
+
+        &[fade-effect="tshutter"],
+        &[fade-effect="tcurtain"] {
+            @include shutterv("t", 50px);
+            animation-name: lshutter;
+        }
+
+        &[fade-effect="bshutter"],
+        &[fade-effect="bcurtain"] {
+            @include shutterh("b", 0);
             animation-name: rshutter;
         }
     }
