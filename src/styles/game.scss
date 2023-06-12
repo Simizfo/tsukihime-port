@@ -41,6 +41,36 @@ body {
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
     }
+
+    @keyframes crossfade {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+    @mixin scroll($prefix, $direction) {
+        @keyframes #{$prefix}scroll {
+          from {
+            -webkit-mask-position: center;
+            mask-position: center;
+          }
+          to {
+            -webkit-mask-position: $direction;
+            mask-position: $direction;
+          }
+        }
+    }
+    @mixin shutter($prefix, $position) {
+        @keyframes #{$prefix}shutter {
+            from {
+                mask-position: 0 0, 25px 0;
+                -webkit-mask-position: 0 0, 25px 0;
+            }
+            to {
+                mask-position: 0 0, $position 0;
+                -webkit-mask-position: 0 0, $position 0;
+            }
+        }
+    }
+
     .background {
         &[fade-effect="crossfade"] {
             animation-name: crossfade;
@@ -59,11 +89,13 @@ body {
 
         &[fade-effect="lmaskcross"],
         &[fade-effect="lscroll"] {
+            @include scroll("l", left);
             animation-name: lscroll;
         }
 
         &[fade-effect="rmaskcross"],
         &[fade-effect="rscroll"] {
+            @include scroll("r", right);
             animation-name: rscroll;
         }
 
@@ -85,56 +117,14 @@ body {
 
         &[fade-effect="lshutter"],
         &[fade-effect="lcurtain"] {
+            @include shutter("l", 0);
             animation-name: lshutter;
         }
 
         &[fade-effect="rshutter"],
         &[fade-effect="rcurtain"] {
+            @include shutter("r", 50px);
             animation-name: rshutter;
-        }
-    }
-    @keyframes crossfade {
-        from { opacity: 1; }
-        to { opacity: 0; }
-    }
-    @keyframes lscroll {
-        from {
-            -webkit-mask-position: center;
-            mask-position: center;
-        }
-        to {
-            -webkit-mask-position: left;
-            mask-position: left;
-        }
-    }
-    @keyframes rscroll {
-        from {
-            -webkit-mask-position: center;
-            mask-position: center;
-        }
-        to {
-            -webkit-mask-position: right;
-            mask-position: right;
-        }
-    }
-    @keyframes lshutter {
-        from {
-            mask-position: 0 0, 25px 0;
-            -webkit-mask-position: 0 0, 25px 0;
-        }
-        to {
-            mask-position: 0 0, 0 0;
-            -webkit-mask-position: 0 0, 0 0;
-        }
-    }
-    @keyframes rshutter {
-        from {
-            mask-position: 0 0, 25px 0;
-            -webkit-mask-position: 0 0, 25px 0;
-        }
-        to {
-            mask-position: 0 0, 50px 0;
-            -webkit-mask-position: 0 0, 50px 0;
         }
     }
 
