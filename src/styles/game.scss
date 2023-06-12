@@ -102,11 +102,11 @@ body {
     .background[fade-effect="lcartain"],
     .background[fade-effect="rcartain"] {
         mask-image:
-            linear-gradient(to right, transparent, transparent 50%, white 50%, white),
-            linear-gradient(to right, white, white 50%, transparent 50%, transparent);
+            linear-gradient(to right, transparent 50%, white 50%,),
+            linear-gradient(to right, transparent 50%, white 50%,);
         -webkit-mask-image:
-            linear-gradient(to right, transparent, transparent 50%, white 50%, white),
-            linear-gradient(to right, white, white 50%, transparent 50%, transparent);
+            linear-gradient(to right, transparent 50%, white 50%,),
+            linear-gradient(to right, transparent 50%, white 50%,);
         mask-size: 50px 100%, 50px 100%;
         -webkit-mask-size: 50px 100%, 50px 100%;
         mask-repeat: repeat;
@@ -119,12 +119,12 @@ body {
         animation-name: lshutter;
         @keyframes lshutter {
             from {
-                mask-position: 0 0, 50px 0;
-                -webkit-mask-position: 0 0, 50px 0;
-            }
-            to {
                 mask-position: 0 0, 25px 0;
                 -webkit-mask-position: 0 0, 25px 0;
+            }
+            to {
+                mask-position: 0 0, 0 0;
+                -webkit-mask-position: 0 0, 0 0;
             }
         }
     }
