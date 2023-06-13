@@ -1,0 +1,36 @@
+// background
+@keyframes crossfade {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@mixin scroll($prefix, $direction) {
+  @keyframes #{$prefix}scroll {
+    from {
+      -webkit-mask-position: center;
+      mask-position: center;
+    }
+    to {
+      -webkit-mask-position: $direction;
+      mask-position: $direction;
+    }
+  }
+
+  animation-name: #{$prefix}scroll;
+}
+
+$size: 25px;
+@mixin shutter($prefix, $from, $to) {
+  @keyframes #{$prefix}shutter {
+      from {
+          mask-position: 0 0, $from;
+          -webkit-mask-position: 0 0, $from
+      }
+      to {
+          mask-position: 0 0, $to;
+          -webkit-mask-position: 0 0, $to;
+      }
+  }
+
+  animation-name: #{$prefix}shutter;
+}

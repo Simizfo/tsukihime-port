@@ -1,3 +1,5 @@
+@use 'transitions' as *;
+
 //import from asset font
 @font-face {
     font-family: 'Ubuntu';
@@ -40,50 +42,7 @@ body {
         animation-timing-function: linear;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-    }
-
-    @keyframes crossfade {
-        from { opacity: 1; }
-        to { opacity: 0; }
-    }
-    @mixin scroll($prefix, $direction) {
-        @keyframes #{$prefix}scroll {
-          from {
-            -webkit-mask-position: center;
-            mask-position: center;
-          }
-          to {
-            -webkit-mask-position: $direction;
-            mask-position: $direction;
-          }
-        }
-    }
-    @mixin shutterh($prefix, $position) {
-        @keyframes #{$prefix}shutter {
-            from {
-                mask-position: 0 0, 25px 0;
-                -webkit-mask-position: 0 0, 25px 0;
-            }
-            to {
-                mask-position: 0 0, $position 0;
-                -webkit-mask-position: 0 0, $position 0;
-            }
-        }
-    }
-    @mixin shutterv($prefix, $position) {
-        @keyframes #{$prefix}shutter {
-            from {
-                mask-position: 0 0, 0 25px;
-                -webkit-mask-position: 0 0, 0 25px;
-            }
-            to {
-                mask-position: 0 0, 0 $position;
-                -webkit-mask-position: 0 0, 0 $position;
-            }
-        }
-    }
-
-    .background {
+        
         &[fade-effect="crossfade"] {
             animation-name: crossfade;
         }
@@ -95,20 +54,18 @@ body {
             $linear-gradient: linear-gradient(to right, transparent 20%, #fff 40%, #fff 60%, transparent 80%);
             mask-image: $linear-gradient;
             -webkit-mask-image: $linear-gradient;
-            -webkit-mask-size: 500%;
             mask-size: 500%;
+            -webkit-mask-size: 500%;
         }
 
         &[fade-effect="lmaskcross"],
         &[fade-effect="lscroll"] {
             @include scroll("l", left);
-            animation-name: lscroll;
         }
 
         &[fade-effect="rmaskcross"],
         &[fade-effect="rscroll"] {
             @include scroll("r", right);
-            animation-name: rscroll;
         }
 
         &[fade-effect="lshutter"],
@@ -133,6 +90,8 @@ body {
         &[fade-effect="bcartain"] {
             $linear-gradients: linear-gradient(to bottom, transparent 50%, #fff 50%),
                 linear-gradient(to bottom, transparent 50%, #fff 50%);
+            mask-image: $linear-gradients;
+            -webkit-mask-image: $linear-gradients;
             mask-size: 100% 50px, 100% 50px;
             -webkit-mask-size: 100% 50px, 100% 50px;
             mask-repeat: repeat;
@@ -143,26 +102,22 @@ body {
 
         &[fade-effect="lshutter"],
         &[fade-effect="lcurtain"] {
-            @include shutterh("l", 50px);
-            animation-name: lshutter;
+            @include shutter('l', ($size 0), ($size * 2 0));
         }
 
         &[fade-effect="rshutter"],
         &[fade-effect="rcurtain"] {
-            @include shutterh("r", 0);
-            animation-name: rshutter;
+            @include shutter('r', ($size 0), (0 0));
         }
 
         &[fade-effect="tshutter"],
         &[fade-effect="tcurtain"] {
-            @include shutterv("t", 50px);
-            animation-name: lshutter;
+            @include shutter('t', (0 $size), (0 $size * 2));
         }
 
         &[fade-effect="bshutter"],
         &[fade-effect="bcurtain"] {
-            @include shutterh("b", 0);
-            animation-name: rshutter;
+            @include shutter('b', (0 $size), (0 0));
         }
     }
 
