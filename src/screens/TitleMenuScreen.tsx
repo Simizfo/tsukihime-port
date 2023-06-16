@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import titleMenuBg from '../assets/game/menus/title-menu-bg.png'
+import titleMenuBg from '../assets/game/menus/title-menu-bg.webp'
 import tsukiLogo from "../assets/game/menus/tsukihime-logo.webp"
 import { AudioManager } from '../utils/AudioManager'
 

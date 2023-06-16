@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import titleMenuBg from '../assets/game/menus/title-menu-bg.png'
+import titleMenuBg from '../assets/game/menus/title-menu-bg.webp'
 import { useContext, useEffect, useState } from 'react'
 import { store } from '../context/GameContext'
 import { CHARACTERS, GALLERY_IMAGES } from '../utils/constants'
