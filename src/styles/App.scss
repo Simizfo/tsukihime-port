@@ -130,6 +130,7 @@ $linear-gradient: linear-gradient(180deg, #000000 0%, #001864 100%);
 
         a {
             overflow: hidden;
+            height: max-content;
         }
         img {
             display: block;
@@ -210,6 +211,11 @@ $linear-gradient: linear-gradient(180deg, #000000 0%, #001864 100%);
         .gallery-char-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            overflow-x: scroll;
+
+            .gallery-char-item {
+                grid-row: 1;
+            }
         }
     }
 }
