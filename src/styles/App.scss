@@ -128,10 +128,21 @@ $linear-gradient: linear-gradient(180deg, #000000 0%, #001864 100%);
         border-bottom: 1px solid;
         box-shadow: inset 0px 0 3px #000;
 
+        a {
+            overflow: hidden;
+        }
         img {
             display: block;
             aspect-ratio: 4/3;
             width: 100%;
+        }
+        .h img {
+            filter: blur(12px);
+            transition: var(--transition);
+
+            &:hover {
+                filter: blur(0);
+            }
         }
     }
 

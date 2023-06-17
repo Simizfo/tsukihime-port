@@ -57,6 +57,8 @@ const GalleryScreen = () => {
     })
 
     setImages(imagesTmp)
+
+    document.querySelector('.gallery-container')?.scrollTo(0, 0)
   }
 
   return (
@@ -101,17 +103,17 @@ const GalleryScreen = () => {
             options={{
               Thumbs: false,
               Toolbar: false,
-            }}
-          >
+            }}>
             {images.map((eventImage, i) =>
               <React.Fragment key={eventImage + i}>
-              {eventImage === defaultImg ?
-                <img src={eventImage} alt="event" />
-              :
-                <a href={eventImage} data-fancybox="gallery">
+                {eventImage === defaultImg ?
                   <img src={eventImage} alt="event" />
-                </a>
-              }
+                :
+                  <a href={eventImage} data-fancybox="gallery"
+                    className={eventImage.includes('_h') ? 'h' : ''}>
+                    <img src={eventImage} alt="event" />
+                  </a>
+                }
               </React.Fragment>
             )}
           </Fancybox>
