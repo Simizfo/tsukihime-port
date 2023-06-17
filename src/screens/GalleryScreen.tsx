@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import titleMenuBg from '../assets/game/menus/title-menu-bg.webp'
 import { useContext, useEffect, useState } from 'react'
 import { store } from '../context/GameContext'
 import { CHARACTERS, GALLERY_IMAGES } from '../utils/constants'
@@ -63,45 +62,37 @@ const GalleryScreen = () => {
   return (
     <div id="gallery">
       <div className="page-content">
-        <img src={titleMenuBg} alt="title menu" className="bg-image" />
-
         <h2 className="title">Gallery</h2>
 
         <main>
           <div className="gallery-char-container">
             <GalleryCharComponent
               character={CHARACTERS.arcueid}
-              background='/image/event/ark_e02.jpg'
               selected={selected}
               handleSelected={handleSelected} />
 
             <GalleryCharComponent
               character={CHARACTERS.ciel}
-              background='/image/event/cel_e02a.jpg'
               selected={selected}
               handleSelected={handleSelected} />
 
             <GalleryCharComponent
               character={CHARACTERS.akiha}
-              background='/image/event/aki_e07a.jpg'
               selected={selected}
               handleSelected={handleSelected} />
 
             <GalleryCharComponent
               character={CHARACTERS.kohaku}
-              background='/image/event/koha_e01a.jpg'
               selected={selected}
               handleSelected={handleSelected} />
 
             <GalleryCharComponent
               character={CHARACTERS.hisui}
-              background='/image/event/his_e04.jpg'
               selected={selected}
               handleSelected={handleSelected} />
 
             <GalleryCharComponent
               character={CHARACTERS.others}
-              background='/image/bg/ima_07.jpg'
               selected={selected}
               handleSelected={handleSelected} />
           </div>
