@@ -270,7 +270,7 @@ const Window = () => {
           image: image as string,
           type: type
         }
-        if (bgTmp.image.includes('image\\event\\')) {
+        if (bgTmp.image.includes('event\\')) {
           dispatch({ type: 'ADD_GAME_EVENT_IMAGE', payload: image })
         }
         setBg(bgTmp)
