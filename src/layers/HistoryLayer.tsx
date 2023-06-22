@@ -34,16 +34,6 @@ const HistoryLayer = ({ pages, text }: Props) => {
   })
 
   useEffect(() => {
-    //if a left click is made outside #history, hide history
-    const handleClick = (e: MouseEvent) => {
-      if (e.button === 0 && state.disp.history && !historyRef.current?.contains(e.target as Node)) {
-        dispatch({ type: 'SET_DISP_HISTORY', payload: false })
-      }
-    }
-    return addEventListener({event: 'mousedown', handler: handleClick})
-  })
-
-  useEffect(() => {
     //when scrolled to the bottom of history, hide history
     const handleScroll = (e: any) => {
       const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight
@@ -88,6 +78,10 @@ const HistoryLayer = ({ pages, text }: Props) => {
           )}
         </div>
       </div>
+
+      <footer>
+        <button onClick={() => dispatch({ type: 'SET_DISP_HISTORY', payload: false })}>Close</button>
+      </footer>
     </div>
   )
 }
