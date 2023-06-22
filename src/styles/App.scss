@@ -124,8 +124,7 @@ $linear-gradient: linear-gradient(180deg, #000000 0%, #001864 100%);
         height: inherit;
         align-content: start;
         padding: 1em;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
+        border-block: 1px solid;
         box-shadow: inset 0px 0 3px #000;
 
         a {
@@ -158,8 +157,7 @@ $linear-gradient: linear-gradient(180deg, #000000 0%, #001864 100%);
             clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
             transition: var(--transition);
             width: min(300px, 100%);
-            border-top: 2px solid transparent;
-            border-bottom: 2px solid transparent;
+            border-block: 2px solid transparent;
             box-shadow: inset 0 0 20px black;
             padding: 0 18px;
 
@@ -176,8 +174,7 @@ $linear-gradient: linear-gradient(180deg, #000000 0%, #001864 100%);
             }
 
             &.selected, &:hover {
-                border-top: 2px solid #51c7ff;
-                border-bottom: 2px solid #51c7ff;
+                border-block: 2px solid #51c7ff;
             }
         }
     }
