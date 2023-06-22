@@ -11,7 +11,66 @@ bg "image\bg\bg_51.jpg",%type_crossfade_mid
 resettimer
 waittimer 1000
 
+bg "image\bg\bg_51b.jpg",%type_crossfade_mid
 
+waveloop se10
+
+` When I came to, I was lying on a hospital bed.@
+` The curtain on the nearby window sways gently.@
+` It is a beautiful day outside,
+` and the dry wind signals the end of summer.\
+
+`"Hello, Tohno Shiki-kun.@ Congratulations on your recovery."@
+br
+` The unfamiliar old man extends his hand for a handshake.@
+` His square-rimmed glasses and warm smile are very befitting.@
+` His tidy-looking white clothes suit him perfectly, too.\
+
+`"Can you understand what I am saying, Shiki-kun?"@
+`"…… No.@ Why am I in a hospital?"@
+`"You don't remember, do you?@ You were involved in a car accident while you were walking.@
+` Your chest was stabbed by a shard of glass, and it was unlikely that you would survive."@
+` Very unbefitting of what a doctor would say, yet he says it while still smiling cheerfully.\
+br
+br
+br
+br
+br
+br
+` ------Terrible.@
+`     I feel terrible.\
+
+`"…… I'm tired.@ Can I go to sleep?"@
+`"Yes, you should rest.@ You must focus on recuperating, and not push yourself."@
+` The doctor is still smiling.@
+` To be honest, I can't stand that smile anymore…
+`"Can I ask you something, doctor?"@
+`"What is it, Shiki-kun?"@
+`"Why are there scribbles all over your body?@ And there are cracks, all over the walls… Why are there cracks in the walls?"@
+br
+` The smile vanishes for just a brief moment, then returns to his face immediately.@ He turns and walks away.\
+
+`"---It seems there was some brain damage after all.@ Get a hold of Dr. Ashiya in neurology.@ I also suspect he may have suffered some damage to his eyes.@ Spend the afternoon examining his eyes."@
+br
+` The doctor whispers to the nurse so that I won't hear him.\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_slw
+
+bg "image\bg\bg_51b.jpg",%type_lshutter_mid
+
+
+`"……… Weird.@ There are scribbles all over everyone's bodies."@
+` The sloppy, zigzagging black lines, running all over the floors, walls, the ceiling…
+` I don't understand what they mean, but looking at them makes me feel sick.@
+`"…… I wonder what it is."@
+` The bed too, is covered in these scribbly lines.@
+` When I touch the line with my finger, my fingertip sinks down into the crack.@
+`"---Oh!"@
+` It seems as if I could reach farther down with something narrower, so I trace the line with a fruit knife that was lying on the bedside table.\
+
+` I didn't use any strength at all, yet the knife sinks into the bed, all the way up to the hilt.@
+` It was fun, so I drag the knife along the scribbly line.@
+br
 ` THUD!@
 br
 ` With a heavy sound, the bed snaps cleanly in two.@
@@ -20,8 +79,8 @@ br
 ` The girl in the bed next to mine screams.@
 ` The nurses run over and take the knife away from me.\
 
-bg "image\bg\ima_10.jpg",%type_rscroll_slw
-bg "image\bg\bg_55b.jpg",%type_rscroll_slw
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_55b.jpg",%type_crossfade_slw
 
 `"How did you break the bed, Shiki-kun?"@
 br
