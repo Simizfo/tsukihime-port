@@ -22,6 +22,15 @@ const TextLayer = ({ text, handleClick }: Props) => {
     return addEventListener({event: 'keydown', handler: handleKeyDown})
   })
 
+  useEffect(() => {
+    const handleContextMenu = (e: MouseEvent) => {
+      if (e.button === 2 && !state.disp.history && !state.disp.text) {
+        dispatch({ type: 'SET_DISP_TEXT', payload: true })
+      }
+    }
+    return addEventListener({event: 'contextmenu', handler: handleContextMenu})
+  })
+
   return (
     <div className={`box box-text ${state.disp.text ? "" : "hide"}`} onClick={handleClick}>
       <div className="text-container">

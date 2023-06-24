@@ -20,7 +20,7 @@ const MenuLayer = () => {
   //on right click disp menu
   useEffect(() => {
     const handleContextMenu = (e: MouseEvent) => {
-      if (e.button === 2 && !state.disp.history) {
+      if (e.button === 2 && state.disp.text) {
         dispatch({ type: 'SET_DISP_MENU', payload: !state.disp.menu })
       }
     }
