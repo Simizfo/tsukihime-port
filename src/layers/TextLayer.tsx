@@ -15,7 +15,7 @@ const TextLayer = ({ text, handleClick }: Props) => {
   //on spacebar press toggle display text
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.code === 'Space' && !state.disp.history && !state.disp.choices && !state.disp.menu) {
+      if (e.code === 'Space' && state.disp.text && !state.disp.choices && !state.disp.menu) {
         dispatch({ type: 'SET_DISP_TEXT', payload: !state.disp.text })
       }
     }
@@ -24,7 +24,7 @@ const TextLayer = ({ text, handleClick }: Props) => {
 
   useEffect(() => {
     const handleContextMenu = (e: MouseEvent) => {
-      if (e.button === 2 && !state.disp.history && !state.disp.text) {
+      if (e.button === 2 && !state.disp.text) {
         dispatch({ type: 'SET_DISP_TEXT', payload: true })
       }
     }
