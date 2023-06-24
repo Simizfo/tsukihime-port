@@ -272,7 +272,7 @@ body {
         overflow: hidden;
         backdrop-filter: blur(0px);
 
-        $width: 230px;
+        $width: 200px;
         &.show {
             z-index: 4;
             backdrop-filter: blur(1px);
@@ -283,19 +283,29 @@ body {
         }
 
         .menu-container {
-            background: linear-gradient(180deg, hsl(217deg 60% 36% / 40%) 0%, hsl(205deg 89% 35% / 40%) 100%);
-            border-inline: 1px solid #19c9b0;
-            box-shadow: -2px 0 4px 0px #103e93c2;
+            background: linear-gradient(180deg, hsla(205, 89%, 35%, 0.2) 0%,
+                                                hsla(217, 79%, 28%, 0.6) 20%,
+                                                hsla(217, 79%, 28%, 0.6) 80%,
+                                                hsla(205, 89%, 35%, 0.2) 100%);
+            border-inline: 2px solid #19b39c8c;
             position: absolute;
-            gap: 1em;
             right: -$width;
-            display: flex;
-            flex-direction: column;
             height: 100%;
             width: $width;
-            padding: 10vh 1.4em;
-            font-size: 1.3em;
             transition: all .4s ease-out;
+            padding: 6vh 1.4em;
+            display: flex;
+            align-items: center;
+
+            menu {
+                all: unset;
+                height: min(100%, 600px);
+                width: 100%;
+                display: flex;
+                gap: 1em;
+                flex-direction: column;
+                font-size: 1.2em;
+            }
 
             button {
                 all: unset;

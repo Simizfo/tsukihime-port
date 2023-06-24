@@ -92,29 +92,31 @@ const MenuLayer = () => {
   return (
     <nav className={`box box-menu ${state.disp.menu ? "show" : ""}`}>
       <div className="menu-container" ref={menuRef}>
-        <button onClick={graphicMode}>
-          Graphics
-        </button>
-        <button onClick={historyMode}>
-          History
-        </button>
-        <button onClick={quickSave}>
-          Quick save
-        </button>
-        <button onClick={quickLoad}>
-          Quick load
-        </button>
-        <button onClick={title}>
-          Title
-        </button>
-        <div className="action-icons">
-          <button onClick={volume}>
-            {state.game.volume.master === 0 ? <FaVolumeMute /> : <FaVolumeUp />}
+        <menu>
+          <button onClick={graphicMode}>
+            Graphics
           </button>
-          <button onClick={closeMenu}>
-            <IoClose />
+          <button onClick={historyMode}>
+            History
           </button>
-        </div>
+          <button onClick={quickSave}>
+            Quick save
+          </button>
+          <button onClick={quickLoad}>
+            Quick load
+          </button>
+          <button onClick={title}>
+            Title
+          </button>
+          <div className="action-icons">
+            <button onClick={volume}>
+              {state.game.volume.master === 0 ? <FaVolumeMute /> : <FaVolumeUp />}
+            </button>
+            <button onClick={closeMenu}>
+              <IoClose />
+            </button>
+          </div>
+        </menu>
       </div>
     </nav>
   )
