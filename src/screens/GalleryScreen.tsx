@@ -1,10 +1,11 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react'
 import { store } from '../context/GameContext'
 import { CHARACTERS, GALLERY_IMAGES } from '../utils/constants'
 import GalleryCharComponent from '../components/GalleryCharComponent'
 import Fancybox from "../components/Fancybox"
-import React from 'react'
+import '../styles/gallery.scss'
 
 const defaultImg = "/image_x2/notreg.webp"
 
@@ -62,10 +63,8 @@ const GalleryScreen = () => {
   }
 
   return (
-    <div id="gallery">
+    <div className="page" id="gallery">
       <div className="page-content">
-        <h2 className="title">Gallery</h2>
-
         <main>
           <div className="gallery-char-container">
             <GalleryCharComponent

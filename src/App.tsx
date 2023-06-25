@@ -7,6 +7,7 @@ import { StateProvider } from './context/GameContext'
 import Window from './screens/Window'
 import TitleMenuScreen from './screens/TitleMenuScreen';
 import GalleryScreen from './screens/GalleryScreen';
+import ConfigScreen from './screens/ConfigScreen';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/title" element={<TitleMenuScreen />} />
           <Route path="/window" element={<Window />} />
           <Route path="/gallery" element={<GalleryScreen />} />
+          <Route path="/config" element={<ConfigScreen />} />
         </Routes>
       </BrowserRouter>
     </StateProvider>

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import tsukiLogo from "../assets/game/menus/tsukihime-logo.webp"
 import { AudioManager } from '../utils/AudioManager'
+import '../styles/title-menu.scss'
 
 const audio = new AudioManager()
 const TitleMenuScreen = () => {
@@ -14,7 +15,7 @@ const TitleMenuScreen = () => {
   // }, [])
 
   return (
-    <div id="title-menu">
+    <div className="page" id="title-menu">
       <img src={tsukiLogo} alt="tsukihime logo" className="logo" />
 
       <nav className="menu">
@@ -24,6 +25,10 @@ const TitleMenuScreen = () => {
 
         <Link to="/" className="menu-item">
           Quick load
+        </Link>
+
+        <Link to="/config" className="menu-item">
+          Config
         </Link>
 
         <Link to="/gallery" className="menu-item">
