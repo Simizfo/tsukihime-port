@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import tsukiLogo from "../assets/game/menus/tsukihime-logo.webp"
 import { AudioManager } from '../utils/AudioManager'
 import '../styles/title-menu.scss'
+import ParticlesComponent from '../components/ParticlesComponent'
 
 const audio = new AudioManager()
 const TitleMenuScreen = () => {
@@ -16,6 +17,8 @@ const TitleMenuScreen = () => {
 
   return (
     <div className="page" id="title-menu">
+      
+      <ParticlesComponent />
       <img src={tsukiLogo} alt="tsukihime logo" className="logo" />
 
       <nav className="menu">

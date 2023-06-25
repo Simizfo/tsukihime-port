@@ -1,3 +1,5 @@
+@use 'particles' as *;
+
 #title-menu {
     display: flex;
     flex-direction: column;
@@ -46,4 +48,3 @@
         }
     }
 }
-
