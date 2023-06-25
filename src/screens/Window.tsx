@@ -84,11 +84,12 @@ const Window = () => {
   //on press enter, go to next line
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Enter' && !e.repeat) {
-        nextLine()
-      }
-      if (e.ctrlKey) {
-        nextLine()
+      if (!state.disp.history && !state.disp.choices && !state.disp.menu) {
+        if (e.key === 'Enter' && !e.repeat) {
+          nextLine()
+        } else if (e.ctrlKey) {
+          nextLine()
+        }
       }
     }
     return addEventListener({event: 'keydown', handler: handleKeyDown})

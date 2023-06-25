@@ -9,7 +9,7 @@ type Props = {
   isLastLine?: boolean,
 }
 
-const LETTER_DELAY = 26
+const LETTER_DELAY = 20
 
 const LineComponent = ({ line, printInstantly, isLastLine }: Props) => {
   const [displayedLine, setDisplayedLine] = useState('')
