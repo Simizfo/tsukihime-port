@@ -4,6 +4,20 @@ import numaliasJson from '../assets/game/numalias.json'
 export const STRALIAS_JSON = JSON.parse(JSON.stringify(straliasJson))
 export const NUMALIAS_JSON = JSON.parse(JSON.stringify(numaliasJson))
 
+export enum IMAGES_FOLDERS {
+  image = "image",
+  image_x2 = "image_x2",
+}
+
+export enum CHARACTERS {
+  arcueid = "Arcueid",
+  ciel = "Ciel",
+  akiha = "Akiha",
+  kohaku = "Kohaku",
+  hisui = "Hisui",
+  others = "Others",
+}
+
 export const initialContextState = {
   disp: {
     text: true,
@@ -35,21 +49,12 @@ export const initialContextState = {
     variables: [],
   },
   permanent: {
-    imagesFolder: "image_x2",
+    imagesFolder: IMAGES_FOLDERS.image_x2,
     eventImages: [],
   }
 }
 
 export const HISTORY_MAX_PAGES = 20
-
-export enum CHARACTERS {
-  arcueid = "Arcueid",
-  ciel = "Ciel",
-  akiha = "Akiha",
-  kohaku = "Kohaku",
-  hisui = "Hisui",
-  others = "Others",
-}
 
 export const GALLERY_IMAGES = {
   arcueid: [

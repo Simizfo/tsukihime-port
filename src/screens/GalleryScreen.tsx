@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react'
 import { store } from '../context/GameContext'
-import { CHARACTERS, GALLERY_IMAGES } from '../utils/constants'
+import { CHARACTERS, GALLERY_IMAGES, IMAGES_FOLDERS } from '../utils/constants'
 import GalleryCharComponent from '../components/GalleryCharComponent'
 import Fancybox from "../components/Fancybox"
 import '../styles/gallery.scss'
@@ -49,7 +49,7 @@ const GalleryScreen = () => {
     }
 
     imagesTmp = imagesTmp.map((image) => {
-      const extension = state.permanent.imagesFolder === 'image' ? 'jpg' : 'webp'
+      const extension = state.permanent.imagesFolder === IMAGES_FOLDERS.image ? 'jpg' : 'webp'
       if (!state.permanent.eventImages.includes(`event\\${image}`)) {
         return defaultImg
       } else {

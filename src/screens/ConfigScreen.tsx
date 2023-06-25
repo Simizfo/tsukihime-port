@@ -3,16 +3,43 @@ import { Link } from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react'
 import { store } from '../context/GameContext'
 import '../styles/config.scss'
+import { IMAGES_FOLDERS } from '../utils/constants'
 
 const ConfigScreen = () => {
-  const { state } = useContext(store)
+  const { state, dispatch } = useContext(store)
 
+  const setVolume = (vol: number) => {
+    dispatch({ type: 'SET_VOLUME', payload: { master: vol } })
+  }
+
+  const setImagesFolder = (folder: string) => {
+    dispatch({ type: 'SET_PERMANENT', payload: { imagesFolder: folder } })
+  }
 
   return (
     <div className="page" id="config">
       <div className="page-content">
         <main>
-          
+          <div>
+            Volume: {state.game.volume.master}
+            <input
+              type="range"
+              min="0"
+              max="10"
+              step={1}
+              value={state.game.volume.master}
+              onChange={(e) => setVolume(parseInt(e.target.value))} />
+          </div>
+
+          <div>
+            Quality: 
+            <select
+              value={state.permanent.imagesFolder}
+              onChange={(e) => setImagesFolder(e.target.value)}>
+              <option value={IMAGES_FOLDERS.image}>640x480 (original)</option>
+              <option value={IMAGES_FOLDERS.image_x2}>1280x960</option>
+            </select>
+          </div>
         </main>
 
         <Link to="/title" className="back-button">Back</Link>

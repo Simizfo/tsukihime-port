@@ -89,6 +89,14 @@ const StateProvider = ({children}: StateProviderProps) => {
             ]
           }
         }
+      case 'SET_PERMANENT' :
+        return {
+          ...curState,
+          permanent: {
+            ...curState.permanent,
+            ...action.payload
+          }
+        }
       default:
         throw new Error()
     }
