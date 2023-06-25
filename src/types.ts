@@ -1,3 +1,5 @@
+import { IMAGES_FOLDERS, TEXT_SPEED } from "./utils/constants"
+
 export type Line = {
     line: string,
     lineHasEnded?: boolean,
@@ -52,7 +54,8 @@ export type ContextState = {
     variables: {name: string, value: number|string}[], // TODO: consider using a Map instead
   },
   permanent: {
-    imagesFolder: string,
-    eventImages: string[]
+    imagesFolder: IMAGES_FOLDERS,
+    eventImages: string[],
+    textSpeed: TEXT_SPEED
   }
 }

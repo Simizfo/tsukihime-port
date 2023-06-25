@@ -1,7 +1,9 @@
 import { Line } from "../types"
 import moonIcon from '../assets/icons/icon_moon.svg'
 import pageIcon from '../assets/icons/icon_bars.svg'
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
+import { store } from "../context/GameContext"
+import { TEXT_SPEED } from "../utils/constants"
 
 type Props = {
   line: Line,
@@ -9,13 +11,12 @@ type Props = {
   isLastLine?: boolean,
 }
 
-const LETTER_DELAY = 20
-
 const LineComponent = ({ line, printInstantly, isLastLine }: Props) => {
+  const { state } = useContext(store)
   const [displayedLine, setDisplayedLine] = useState('')
 
   useEffect(() => {
-    if (printInstantly) {
+    if (printInstantly || state.permanent.textSpeed === TEXT_SPEED.instant) {
       setDisplayedLine(line.line)
       return
     } else {
@@ -26,7 +27,7 @@ const LineComponent = ({ line, printInstantly, isLastLine }: Props) => {
         if (currentIndex > line.line.length) {
           clearInterval(interval)
         }
-      }, LETTER_DELAY)
+      }, state.permanent.textSpeed)
 
       return () => clearInterval(interval)
     }

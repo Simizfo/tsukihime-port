@@ -18,6 +18,13 @@ export enum CHARACTERS {
   others = "Others",
 }
 
+export enum TEXT_SPEED {
+  instant = 0,
+  fast = 1,
+  normal = 20,
+  slow = 50,
+}
+
 export const initialContextState = {
   disp: {
     text: true,
@@ -51,6 +58,7 @@ export const initialContextState = {
   permanent: {
     imagesFolder: IMAGES_FOLDERS.image_x2,
     eventImages: [],
+    textSpeed: TEXT_SPEED.normal,
   }
 }
 
