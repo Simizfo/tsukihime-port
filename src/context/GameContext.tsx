@@ -8,7 +8,6 @@ type StateProviderProps = {
 
 const permanent = localStorage.getItem('permanent')
 if (permanent) {
-  //concat initialContextState.permanent with permanent
   initialContextState.permanent = JSON.parse(permanent)
 }
 
@@ -21,7 +20,7 @@ const {Provider} = store
 const StateProvider = ({children}: StateProviderProps) => {
   const [state, dispatch] = useReducer((curState: ContextState, action: any) => {
     switch (action.type) {
-      case 'SET_DISP_TEXT' :
+      case 'SET_DISP_TEXT':
         return {
           ...curState,
           disp: {
@@ -29,7 +28,7 @@ const StateProvider = ({children}: StateProviderProps) => {
             text: action.payload
           }
         }
-      case 'SET_DISP_HISTORY' :
+      case 'SET_DISP_HISTORY':
         return {
           ...curState,
           disp: {
@@ -37,7 +36,7 @@ const StateProvider = ({children}: StateProviderProps) => {
             history: action.payload
           }
         }
-      case 'SET_DISP_CHOICES' :
+      case 'SET_DISP_CHOICES':
         return {
           ...curState,
           disp: {
@@ -45,7 +44,7 @@ const StateProvider = ({children}: StateProviderProps) => {
             choices: action.payload
           }
         }
-      case 'SET_DISP_MENU' :
+      case 'SET_DISP_MENU':
         return {
           ...curState,
           disp: {
@@ -53,12 +52,12 @@ const StateProvider = ({children}: StateProviderProps) => {
             menu: action.payload
           }
         }
-      case 'SET_GAME' :
+      case 'SET_GAME':
         return {
           ...curState,
           game: action.payload
         }
-      case 'ADD_GAME_EVENT_IMAGE' :
+      case 'ADD_GAME_EVENT_IMAGE':
         if (curState.permanent.eventImages.includes(action.payload)) return curState
         return {
           ...curState,
@@ -67,7 +66,7 @@ const StateProvider = ({children}: StateProviderProps) => {
             eventImages: [...curState.permanent.eventImages, action.payload]
           }
         }
-      case 'SET_VOLUME' :
+      case 'SET_VOLUME':
         return {
           ...curState,
           game: {
@@ -78,7 +77,7 @@ const StateProvider = ({children}: StateProviderProps) => {
             }
           }
         }
-      case 'SET_VAR' :
+      case 'SET_VAR':
         return {
           ...curState,
           game: {
@@ -89,7 +88,7 @@ const StateProvider = ({children}: StateProviderProps) => {
             ]
           }
         }
-      case 'SET_PERMANENT' :
+      case 'SET_PERMANENT':
         return {
           ...curState,
           permanent: {
@@ -105,6 +104,7 @@ const StateProvider = ({children}: StateProviderProps) => {
   useEffect(() => {
     localStorage.setItem('permanent', JSON.stringify(state.permanent))
   }, [state.permanent])
+  
   return <Provider value={{state, dispatch}}>{children}</Provider>
 }
 
