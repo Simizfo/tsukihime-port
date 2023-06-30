@@ -3,7 +3,7 @@ import '../styles/game.scss';
 import audio from '../utils/AudioManager';
 import HistoryLayer from '../layers/HistoryLayer';
 import { Background, Character, Choice } from '../types';
-import { Queue, fetchChoices, fetchGoToNextScene, fetchScene } from '../utils/utils';
+import { Queue, fetchChoices, fetchGoToNextScene, fetchScene, moveBg } from '../utils/utils';
 import ChoicesLayer from '../layers/ChoicesLayer';
 import CharactersLayer from '../layers/CharactersLayer';
 import TextLayer from '../layers/TextLayer';
@@ -22,7 +22,9 @@ const keyMapping = {
   "graphics": {code: "Space", repeat: false},
   "menu": {key: "Escape", repeat: false/*, [KeyMap.condition]: ()=>TODO not in menu*/ },
   "back": {key: "Escape", repeat: false},
-  "save": {key: "S", ctrlKey: true/*, [KeyMap.condition]: ()=>true*/ }
+  "save": {key: "S", ctrlKey: true/*, [KeyMap.condition]: ()=>true*/ },
+  "up": {key: "ArrowUp", repeat: false},
+  "down": {key: "ArrowDown", repeat: false},
 }
 
 const Window = () => {
@@ -45,8 +47,6 @@ const Window = () => {
 //##############################################################################
 
   useEffect(() => {
-    setSceneNumber(INIT_SCENE)
-
     if (state.game.track !== '' && !audio.isTrackPlaying()) {
       audio.setSoundFileUrl(state.game.track,  "CD/" + state.game.track),
       audio.playTrack(state.game.track, true)
@@ -74,6 +74,14 @@ const Window = () => {
         break
       case "back" : break
       case "save" : return true //prevent default behaviour of Ctrl+S
+      case "up" :
+        if(!state.disp.menu && !state.disp.history)
+          moveBg('up')
+        break
+      case "down" :
+        if(!state.disp.menu && !state.disp.history)
+          moveBg('down')
+        break
     }
   })
 

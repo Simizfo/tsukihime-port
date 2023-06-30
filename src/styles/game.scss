@@ -37,6 +37,12 @@ body {
         width: inherit;
         height: inherit;
         object-fit: cover;
+        object-position: center;
+        transition: object-position var(--transition-time) ease-out;
+
+        &.top { object-position: top; }
+        &.center { object-position: center; }
+        &.bottom { object-position: bottom; }
 
         animation-duration: var(--transition-time); // var --transition-time changed in inline css
         animation-timing-function: linear;

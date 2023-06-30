@@ -180,3 +180,23 @@ export class Queue<T> {
     return this.buffer.length
   }
 }
+
+export function moveBg(dir: string)  {
+  const bgClass = document.querySelector('.background')?.classList
+  
+  if (bgClass?.contains('center')) {
+    if (dir === 'up') {
+      bgClass.replace('center', 'top')
+    } else if (dir === 'down') {
+      bgClass.replace('center', 'bottom')
+    }
+  } else if (bgClass?.contains('top')) {
+    if (dir === 'down') {
+      bgClass.replace('top', 'center')
+    }
+  } else if (bgClass?.contains('bottom')) {
+    if (dir === 'up') {
+      bgClass.replace('bottom', 'center')
+    }
+  }
+}
