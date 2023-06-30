@@ -27,7 +27,7 @@ const keyMapping = {
 
 const Window = () => {
   const { state, dispatch } = useContext(store)
-  const [sceneNumber, setSceneNumber] = useState(504)
+  const [sceneNumber, setSceneNumber] = useState(INIT_SCENE)
   const [scene, setScene] = useState<string[]>([])
   const [choices, setChoices] = useState<Choice[]>([])
   const [lineIdx, setLineIdx] = useState(state.game.index) //line index in scene file
@@ -112,7 +112,7 @@ const Window = () => {
     switch(breakChar) {
       case '@' : // waiting for user
       case '\\' : // page end, waiting for user
-      lastBreak.current = breakChar
+        lastBreak.current = breakChar
         break
       case '\n' : // line end, move to next line
         onLineComplete()

@@ -59,6 +59,7 @@ export const initialContextState = {
     imagesFolder: IMAGES_FOLDERS.image_x2,
     eventImages: [],
     textSpeed: TEXT_SPEED.normal,
+    galleryBlur: true,
   }
 }
 

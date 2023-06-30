@@ -56,6 +56,7 @@ export type ContextState = {
   permanent: {
     imagesFolder: IMAGES_FOLDERS,
     eventImages: string[],
-    textSpeed: TEXT_SPEED
+    textSpeed: TEXT_SPEED,
+    galleryBlur: boolean,
   }
 }
