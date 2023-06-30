@@ -1,12 +1,10 @@
-import LineComponent from "../components/LineComponent";
-import React, { useContext, useEffect, useRef } from 'react';
-import { Line, Page } from "../types";
+import { Fragment, useContext, useEffect, useRef } from 'react';
 import { store } from "../context/GameContext";
-import { addEventListener } from "../utils/utils";
+import { addEventListener, convertText } from "../utils/utils";
 
 type Props = {
-  pages: Page[],
-  text: Line[],
+  pages: Iterable<string[]>,
+  text: string[],
 }
 
 const HistoryLayer = ({ pages, text }: Props) => {
@@ -16,8 +14,10 @@ const HistoryLayer = ({ pages, text }: Props) => {
   useEffect(() => {
     //on mouse wheel up display history
     const handleWheel = (e: WheelEvent) => {
-      if (e.deltaY < 0 && !state.disp.history && !state.disp.menu && pages.length !== 0) {
-        dispatch({ type: 'SET_DISP_HISTORY', payload: true })
+      if (e.deltaY < 0 && !state.disp.history && !state.disp.menu) {
+        const it = pages[Symbol.iterator]()
+        if (!it.next().done) // at least one element in the iterator
+          dispatch({ type: 'SET_DISP_HISTORY', payload: true })
       }
     }
     return addEventListener({event: 'wheel', handler: handleWheel})
@@ -32,6 +32,7 @@ const HistoryLayer = ({ pages, text }: Props) => {
     }
     return addEventListener({event: 'contextmenu', handler: handleContextMenu})
   })
+
 
   useEffect(() => {
     //when scrolled to the bottom of history, hide history
@@ -61,21 +62,17 @@ const HistoryLayer = ({ pages, text }: Props) => {
       <div className="box-text" id="history" ref={historyRef}>
         <div className="text-container">
           {/* lignes des pages précédentes */}
-          {pages.map((page, i) =>
-            <React.Fragment key={`histo_page_${i}`}>
-              {page.map((line: Line, j: any) =>
-                <LineComponent key={`histo_page_${i}_${j}`} line={line} printInstantly={true} />
-              )}
-              {i !== pages.length - 1 && <hr />}
-            </React.Fragment>
+          {Array.from(pages, (page, i) =>
+            <Fragment key={i}>
+              {i > 0 && <hr/>}
+              {page.map(convertText)}
+            </Fragment>
           )}
 
           <hr />
-          
+
           {/* lignes de la page actuelle */}
-          {text.map((line, i) =>
-            <LineComponent key={`histo_text_${i}`} line={line} printInstantly={true} />
-          )}
+          {text.map(convertText)}
         </div>
       </div>
 

@@ -1,52 +1,48 @@
 import { useContext, useEffect, useRef, useState } from "react"
 import { store } from "../context/GameContext"
 import { Background } from "../types"
+import Timer from "../utils/timer";
 
-type Props = {
-  bg: Background
+//##############################################################################
+//#                               TOOL FUNCTIONS                               #
+//##############################################################################
+
+function createImg(imgDir: string, bg: Background, transition: object = {}) {
+  const image = bg.image;
+  const attrs = {
+    className: "background",
+    ...transition
+  }
+  if (image.startsWith('#')) {
+    return (
+      <div
+        style={{ background: image }}
+        {...attrs}
+      />
+    )
+  }
+  else {
+    const extension = imgDir === 'image' ? 'jpg' : 'webp';
+    return (
+      <img
+        src={`${imgDir}/${image}.${extension}`}
+        alt="background"
+        {...attrs}
+      />
+    )
+  }
 }
 
-const BackgroundLayer = ({ bg }: Props) => {
-  const { state, dispatch } = useContext(store);
-  const [fade, setFade] = useState(false);
-  const bgTmp = useRef<Background>(bg);
-  const extension = state.permanent.imagesFolder === 'image' ? 'jpg' : 'webp';
+function getTransition(type: string, skipTransition = false) {
+  let duration = 0
+  let effect = type
 
-  let effect = '',
-      duration = 0
+  if (effect.startsWith('type_'))
+    effect = effect.substring('type_'.length)
 
-  useEffect(() => {
-    if (duration > 0) {
-      crossfade(duration)
-    } else {
-      bgTmp.current = bg;
-    }
-  }, [bg]);
-
-  const crossfade = (duration: number) => {
-    dispatch({ type: 'SET_DISP_TEXT', payload: false })
-    setFade(true);
-    setTimeout(() => {
-      bgTmp.current = bg;
-      setFade(false);
-    }, duration);
-  }
-
-  useEffect(() => {
-    if (!fade) {
-      dispatch({ type: 'SET_DISP_TEXT', payload: true });
-    }
-  }, [fade, dispatch]);
-
-  function getTransition(type: string) {
-    let duration = 0
-    let effect = type
-
-    if (effect.startsWith('type_'))
-      effect = effect.substring('type_'.length)
-
-    const index = effect.lastIndexOf('_')
-    if (index !== -1) {
+  const index = effect.lastIndexOf('_')
+  if (index !== -1) {
+    if (!skipTransition) {
       let speed = effect.substring(index+1);
       switch(speed) {
         case 'slw': duration = 1500; break
@@ -54,41 +50,71 @@ const BackgroundLayer = ({ bg }: Props) => {
         case 'fst': duration = 400; break
         default : throw Error(`Ill-formed effect '${effect}'`);
       }
-      effect = effect.substring(0, index);
     }
-    return {effect, duration}
+    effect = effect.substring(0, index);
+  }
+  return {effect, duration}
+}
+
+//##############################################################################
+//#                                 COMPONENT                                  #
+//##############################################################################
+
+type Props = {
+  bg: Background,
+  skipTransition?: boolean,
+  onTransitionEnd?: (()=>void)|null,
+}
+
+const BackgroundLayer = ({ bg, skipTransition = false, onTransitionEnd = null }: Props) => {
+  const bgTmp = useRef<Background>(bg)
+  const timer = useRef<Timer|null>(null)
+  const {state, dispatch} = useContext(store)
+  const [duration, setDuration] = useState<number>(0)
+  const [effect, setEffect] = useState<string>('')
+
+  const imgFolder = state.permanent.imagesFolder
+
+  const onAnimationEnd = ()=> {
+    bgTmp.current = bg;
+    timer.current = null
+    dispatch({ type: 'SET_DISP_TEXT', payload: true });
+    if (onTransitionEnd)
+      onTransitionEnd()
   }
 
-  const createImg = (bg: Background, transition: object = {})=> {
-    const {image, type} = bg;
-    const attrs = {
-      className: "background",
-      ...transition
+//_______________________________property changes_______________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  useEffect(() => {
+    const {effect, duration} = getTransition(bg.type, skipTransition)
+    setEffect(effect)
+    setDuration(duration)
+    if (duration > 0) {
+      dispatch({ type: 'SET_DISP_TEXT', payload: false });
+      timer.current = new Timer(duration, onAnimationEnd)
+      timer.current.start()
+    } else {
+      onAnimationEnd()
     }
-    if (image.startsWith('#')) {
-      return (
-        <div
-          style={{ background: image }}
-          {...attrs}
-        />
-      )
+    return ()=> {
+      timer.current?.cancel()
     }
-    else {
-      return (
-        <img
-          src={`${state.permanent.imagesFolder}/${image}.${extension}`}
-          alt="background"
-          {...attrs}
-        />
-      )
-    }
-  }
+  }, [bg]);
 
-  ({effect, duration} = getTransition(bg.type));
+  useEffect(()=> {
+    if (skipTransition) {
+      timer.current?.skip()
+    }
+  }, [skipTransition])
+
+//____________________________________render____________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   if (bgTmp.current.image != "" && bgTmp.current.image != bg.image && duration > 0) {
-    const elmt1 = createImg(bg),
-          elmt2 = createImg(bgTmp.current,{style:{'--transition-time': `${duration}ms`}, 'fade-effect': effect})
+    const elmt1 = createImg(imgFolder, bg),
+          elmt2 = createImg(imgFolder, bgTmp.current,
+                            {style:{'--transition-time': `${duration}ms`},
+                             'fade-effect': effect})
     return (
       <>
         {elmt1}
@@ -96,7 +122,7 @@ const BackgroundLayer = ({ bg }: Props) => {
       </>
     )
   } else {
-    return createImg(bg)
+    return createImg(imgFolder, bg)
   }
 };
 

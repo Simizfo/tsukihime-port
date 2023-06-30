@@ -1,23 +1,22 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import tsukiLogo from "../assets/game/menus/tsukihime-logo.webp"
-import { AudioManager } from '../utils/AudioManager'
+import audio from '../utils/AudioManager'
 import '../styles/title-menu.scss'
 import ParticlesComponent from '../components/ParticlesComponent'
 
-const audio = new AudioManager()
 const TitleMenuScreen = () => {
 
   // useEffect(() => {
   //   if (!audio.isSoundKnown("menuTheme")) {
-  //     audio.setSoundFileUrl("menuTheme", "CD/track08.ogg"), 
+  //     audio.setSoundFileUrl("menuTheme", "CD/track08.ogg"),
   //     audio.playTrack("menuTheme", true)
   //   }
   // }, [])
 
   return (
     <div className="page" id="title-menu">
-      
+
       <ParticlesComponent />
       <img src={tsukiLogo} alt="tsukihime logo" className="logo" />
 

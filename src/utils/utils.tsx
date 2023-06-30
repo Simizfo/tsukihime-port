@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Choice } from "../types";
 
 const LOGIC_FILE = 'scene0.txt'
@@ -11,7 +12,7 @@ export const fetchScene = async (scene: number):Promise<string[]> => {
   const data = await script.text();
 
   //split data on \n or @
-  const result = data.split(/[\n\r@]/)
+  const result = data.split(/[\n\r]/).filter(line=>line.length > 0)
 
   return result
 }
@@ -103,10 +104,80 @@ export const addEventListener = ({event, handler, element = window}: any) => {
   return () => element.removeEventListener(event, handler)
 }
 
-/**
- * "*5" -> track05.ogg
- */
-export const getTrackFile = (track: string): string => {
-  const paddedNumber = track.replace(/\D/g, '').padStart(2, '0');
-  return `track${paddedNumber}.ogg`;
+export function convertText(text: string, key: any = undefined): JSX.Element {
+
+  const nodes: Array<JSX.Element|string> = []
+  if ( text.length > 0 && text != "br") {
+    //remove '`', '@' and '\',
+    //replace '|' with '…'
+    text = text.replace(/[`@\\]/g, '')
+              .replace(/\|/g, '…')
+
+    //replace consecutive dashes with a continuous line
+    //TODO make text transparent in CSS, replace with straight line.
+    let m
+    while ((m = /-{2,}/g.exec(text)) !== null) {
+      if (m.index > 0)
+        nodes.push(text.substring(0, m.index))
+      nodes.push(<span className="dash" dash-size={m[0].length}>{m[0]}</span>)
+      text = text.substring(m.index + m[0].length)
+    }
+    if (text.length > 0)
+      nodes.push(text)
+  }
+  if (key !== undefined)
+    return <Fragment key={key}>{...nodes}</Fragment>
+  else
+    return <>{...nodes}</>
+}
+
+export function objectMatch(toTest: any, minKeys: any) {
+	for(let p in minKeys) {
+		if(minKeys.hasOwnProperty(p) && !(p in toTest) || minKeys[p] !== toTest[p])
+			return false;
+	}
+	return true;
+}
+
+export function objectsEqual(obj1: any, obj2: any) {
+	return objectMatch(obj1, obj2) && objectMatch(obj2, obj1);
+}
+
+export class Queue<T> {
+  private buffer: T[]
+  private limit: number
+  constructor(init_elmts: Iterable<T> = [], limit: number = 0) {
+    this.buffer = Array.from(init_elmts)
+    if (limit == 0 && init_elmts instanceof Queue)
+      this.limit = init_elmts.limit
+    else
+      this.limit = limit
+  }
+  private clean() {
+    if (this.limit > 0 && this.buffer.length > this.limit)
+      this.buffer.splice(0, this.buffer.length - this.limit)
+  }
+  push(elmt: T): Queue<T> {
+    this.buffer.push(elmt)
+    this.clean()
+    return this
+  }
+  pop(): T|undefined {
+    return this.buffer.shift()
+  }
+  get(index: number) {
+    if (index >= 0)
+      return this.buffer[index]
+    else
+      return this.buffer[this.buffer.length+index]
+  }
+  clear() {
+    this.buffer.splice(0, this.buffer.length)
+  }
+  [Symbol.iterator]() {
+    return this.buffer[Symbol.iterator]()
+  }
+  get length() {
+    return this.buffer.length
+  }
 }
