@@ -38,11 +38,8 @@ export default class KeyMap {
 
   private listener_template(event: KeyboardEvent) {
     if (this.callback) {
-      let action = this.getAction(event);
-      if (action) {
-        return this.callback(action, event) || false;
-      }
-      else return false;
+      const action = this.getAction(event);
+      return action ? this.callback(action, event) || false : false;
     }
   }
 
@@ -143,10 +140,9 @@ export default class KeyMap {
   }
 
   private getAction(evt: KeyboardEvent) {
-    let key = evt.key,
-      code = evt.code;
-    if (/^a-z$/.test(key)) // one lowercase letter
-      key = key.toUpperCase()
+    const key = evt.key.toUpperCase();
+    const code = evt.code;
+
     let actions = this.mapping.get(code) || this.mapping.get(key);
 
     if (actions) {
