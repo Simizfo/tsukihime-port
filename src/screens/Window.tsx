@@ -27,7 +27,7 @@ const keyMapping = {
 
 const Window = () => {
   const { state, dispatch } = useContext(store)
-  const [sceneNumber, setSceneNumber] = useState(INIT_SCENE)
+  const [sceneNumber, setSceneNumber] = useState(504)
   const [scene, setScene] = useState<string[]>([])
   const [choices, setChoices] = useState<Choice[]>([])
   const [lineIdx, setLineIdx] = useState(state.game.index) //line index in scene file
@@ -90,12 +90,7 @@ const Window = () => {
 //##############################################################################
 //#                              SCENE PROCESSING                              #
 //##############################################################################
-/*
-  useEffect(() => {
-    if (scene.length !== 0)
-     nextLine()
-  }, [scene])
-*/
+
   useEffect(()=> {
     setLineIdx(0)
     setText([])

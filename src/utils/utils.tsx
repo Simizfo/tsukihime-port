@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { Choice } from "../types";
 
 const LOGIC_FILE = 'scene0.txt'
