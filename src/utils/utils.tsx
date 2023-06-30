@@ -126,9 +126,9 @@ export function convertText(text: string, key: any = undefined): JSX.Element {
       nodes.push(text)
   }
   if (key !== undefined)
-    return <Fragment key={key}>{...nodes}</Fragment>
+    return <span key={key}>{...nodes}</span>
   else
-    return <>{...nodes}</>
+    return <span>{...nodes}</span>
 }
 
 export function objectMatch(toTest: any, minKeys: any) {

@@ -65,14 +65,24 @@ const HistoryLayer = ({ pages, text }: Props) => {
           {Array.from(pages, (page, i) =>
             <Fragment key={i}>
               {i > 0 && <hr/>}
-              {page.map(convertText)}
+              {page.map((line, i)=>
+                <Fragment key={i}>
+                  {i > 0 && <br/>}
+                  {convertText(line)}
+                </Fragment>
+              )}
             </Fragment>
           )}
 
           <hr />
 
           {/* lignes de la page actuelle */}
-          {text.map(convertText)}
+          {text.map((line, i)=>
+            <Fragment key={i}>
+              {i > 0 && <br/>}
+              {convertText(line)}
+            </Fragment>
+          )}
         </div>
       </div>
 
