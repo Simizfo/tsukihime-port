@@ -42,7 +42,7 @@ body {
         animation-timing-function: linear;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        
+
         &[fade-effect="crossfade"] {
             animation-name: crossfade;
         }
@@ -179,6 +179,7 @@ body {
         }
 
         span {
+            white-space: pre-wrap;
             overflow-wrap: break-word;
             position: relative;
         }
