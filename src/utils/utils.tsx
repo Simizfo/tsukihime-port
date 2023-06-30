@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { Choice } from "../types";
 
 const LOGIC_FILE = 'scene0.txt'
@@ -119,8 +118,11 @@ export function convertText(text: string, key: any = undefined): JSX.Element {
     while ((m = /-{2,}/g.exec(text)) !== null) {
       if (m.index > 0)
         nodes.push(text.substring(0, m.index))
-      nodes.push(<span className="dash" dash-size={m[0].length}>{m[0]}</span>)
-      text = text.substring(m.index + m[0].length)
+      const len = m[0].length
+      nodes.push(<span className="dash" dash-size={len}>
+          {"–".repeat(len) /*en-dash*/}
+        </span>)
+      text = text.substring(m.index + len)
     }
     if (text.length > 0)
       nodes.push(text)

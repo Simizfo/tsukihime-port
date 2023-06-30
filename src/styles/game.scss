@@ -183,6 +183,15 @@ body {
             overflow-wrap: break-word;
             position: relative;
         }
+        .dash {
+            color: transparent;
+            text-shadow: none;
+            text-decoration: line-through var(--text-color);
+            filter: drop-shadow(0 1px black)
+                    drop-shadow(1px 0 black)
+                    drop-shadow(0 -0.5px black)
+                    drop-shadow(-0.5px 0 black)
+        }
         hr {
             border: 0;
             height: 4px;
