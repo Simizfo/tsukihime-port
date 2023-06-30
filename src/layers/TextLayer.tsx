@@ -6,7 +6,7 @@ import Timer from "../utils/timer"
 import { TEXT_SPEED } from "../utils/constants"
 import { convertText } from "../utils/utils"
 
-const icons: {[key: string] : string} = {
+const icons: {[key: string]: string} = {
   "moon": moonIcon,
   "page": pageIcon
 }
@@ -15,7 +15,7 @@ const icons: {[key: string] : string} = {
 //#                               TOOL FUNCTIONS                               #
 //##############################################################################
 
-function nextBreak(text: string, startIndex = 0) : number {
+function nextBreak(text: string, startIndex = 0): number {
   let index = text.indexOf('@', startIndex)
   if (index == -1) {
     index = text.indexOf('\\', startIndex)
@@ -37,7 +37,7 @@ type Props = {
   [key: string] : any // other properties to apply to the root 'div' element of the component
 }
 
-const TextLayer = memo(({ text, skipBreaks = 0, fastforward=false, onBreak, ...props }: Props) => {
+const TextLayer = memo(({ text, skipBreaks = 0, fastforward = false, onBreak, ...props }: Props) => {
 
   const [ previousLines, setPreviousLines ] = useState<string[]>([]) // lines to display entirely
   const [ lastLine, setLastLine ] = useState<string>("") // line to display gradually
@@ -65,7 +65,7 @@ const TextLayer = memo(({ text, skipBreaks = 0, fastforward=false, onBreak, ...p
           index = lastLine.length
       }
 
-      const textSpeed = state.permanent.textSpeed ?? TEXT_SPEED.normal
+      const textSpeed = state.permanent.textSpeed
 
       if (fastforward || textSpeed == TEXT_SPEED.instant) {
         //jump directly to next '@' of '\\'
@@ -117,7 +117,7 @@ const TextLayer = memo(({ text, skipBreaks = 0, fastforward=false, onBreak, ...p
             {i > 0 && <br/>}
             {convertText(line)}
           </Fragment>)}
-        {previousLines.length > 0 && lastLine.length > 0 ? <br/> : <></>}
+        {previousLines.length > 0 && lastLine.length > 0 && <br/>}
         <span>
           {convertText(lastLine.substring(0, cursor))}
           {glyph.length > 0 &&

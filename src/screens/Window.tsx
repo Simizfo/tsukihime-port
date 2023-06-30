@@ -23,7 +23,6 @@ const keyMapping = {
   "menu": {key: "Escape", repeat: false/*, [KeyMap.condition]: ()=>TODO not in menu*/ },
   "back": {key: "Escape", repeat: false},
   "save": {key: "S", ctrlKey: true/*, [KeyMap.condition]: ()=>true*/ }
-
 }
 
 const Window = () => {
