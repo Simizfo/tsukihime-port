@@ -181,22 +181,16 @@ export class Queue<T> {
   }
 }
 
-export function moveBg(dir: string)  {
+export function moveBg(dir: string) {
+  const positions = ['top', 'center', 'bottom']
   const bgClass = document.querySelector('.background')?.classList
   
-  if (bgClass?.contains('center')) {
-    if (dir === 'up') {
-      bgClass.replace('center', 'top')
-    } else if (dir === 'down') {
-      bgClass.replace('center', 'bottom')
-    }
-  } else if (bgClass?.contains('top')) {
-    if (dir === 'down') {
-      bgClass.replace('top', 'center')
-    }
-  } else if (bgClass?.contains('bottom')) {
-    if (dir === 'up') {
-      bgClass.replace('bottom', 'center')
-    }
+  const currentPosition = positions.findIndex(pos => bgClass?.contains(pos));
+
+  if (currentPosition !== -1) {
+    bgClass?.replace(
+      positions[currentPosition],
+      positions[currentPosition + (dir === 'up' ? -1 : 1)] || positions[currentPosition]
+    )
   }
 }
