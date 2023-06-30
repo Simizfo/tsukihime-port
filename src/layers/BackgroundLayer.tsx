@@ -10,7 +10,7 @@ import Timer from "../utils/timer";
 function createImg(imgDir: string, bg: Background, transition: object = {}) {
   const image = bg.image;
   const attrs = {
-    className: "background",
+    className: "background center",
     ...transition
   }
   if (image.startsWith('#')) {

@@ -23,7 +23,7 @@ export default class KeyMap {
 
   static readonly condition : unique symbol = Symbol.for("condition function to trigger action")
 
-  constructor(mapping: KeyMapMapping|null = null, callback : KeyMapCallback|null = null) {
+  constructor(mapping: KeyMapMapping|null = null, callback: KeyMapCallback|null = null) {
     this.mapping = new Map()
     this.callback = callback
     this.keyListener = this.listener_template.bind(this) as EventListener
@@ -31,7 +31,7 @@ export default class KeyMap {
       this.setMapping(mapping)
   }
 
-  get onKeyEvent() : EventListener { // to use in "onClick = " expressions
+  get onKeyEvent(): EventListener { // to use in "onClick = " expressions
     return this.keyListener
   }
 

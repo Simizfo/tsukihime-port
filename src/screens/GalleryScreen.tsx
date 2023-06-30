@@ -109,7 +109,7 @@ const GalleryScreen = () => {
                   <img src={eventImage} alt="event" />
                 :
                   <a href={eventImage} data-fancybox="gallery"
-                    className={eventImage.includes('_h') ? 'h' : ''}>
+                    className={eventImage.includes('_h') && state.permanent.galleryBlur ? 'h' : ''}>
                     <img src={eventImage} alt="event" />
                   </a>
                 }

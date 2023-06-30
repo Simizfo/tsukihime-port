@@ -183,3 +183,17 @@ export class Queue<T> {
     return this.buffer.length
   }
 }
+
+export function moveBg(dir: string) {
+  const positions = ['top', 'center', 'bottom']
+  const bgClass = document.querySelector('.background')?.classList
+  
+  const currentPosition = positions.findIndex(pos => bgClass?.contains(pos));
+
+  if (currentPosition !== -1) {
+    bgClass?.replace(
+      positions[currentPosition],
+      positions[currentPosition + (dir === 'up' ? -1 : 1)] || positions[currentPosition]
+    )
+  }
+}

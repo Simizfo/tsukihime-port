@@ -55,6 +55,14 @@ const ConfigScreen = () => {
               <option value={TEXT_SPEED.slow}>Slow</option>
             </select>
           </div>
+
+          <div>
+            Blur gallery thumbnails:
+            <input
+              type="checkbox"
+              checked={state.permanent.galleryBlur}
+              onChange={(e) => dispatch({ type: 'SET_PERMANENT', payload: { galleryBlur: e.target.checked } })} />
+          </div>
         </main>
 
         <Link to="/title" className="back-button">Back</Link>
