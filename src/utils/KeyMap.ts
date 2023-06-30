@@ -140,8 +140,11 @@ export default class KeyMap {
   }
 
   private getAction(evt: KeyboardEvent) {
-    const key = evt.key.toUpperCase();
+    let key = evt.key;
     const code = evt.code;
+
+    if (/^a-z$/.test(key)) // one lowercase letter
+      key = key.toUpperCase()
 
     let actions = this.mapping.get(code) || this.mapping.get(key);
 
