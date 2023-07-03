@@ -120,7 +120,7 @@ export function convertText(text: string, key: any = undefined): JSX.Element {
         nodes.push(text.substring(0, m.index))
       const len = m[0].length
       nodes.push(<span className="dash" dash-size={len}>
-          {"–".repeat(len) /*en-dash*/}
+          {"\u{2002}".repeat(len) /*en-dash-sized space*/}
         </span>)
       text = text.substring(m.index + len)
     }
@@ -187,7 +187,7 @@ export class Queue<T> {
 export function moveBg(dir: string) {
   const positions = ['top', 'center', 'bottom']
   const bgClass = document.querySelector('.background')?.classList
-  
+
   const currentPosition = positions.findIndex(pos => bgClass?.contains(pos));
 
   if (currentPosition !== -1) {
