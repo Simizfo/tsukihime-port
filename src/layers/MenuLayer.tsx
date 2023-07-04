@@ -82,7 +82,7 @@ const MenuLayer = () => {
   }
 
   const volume = () => {
-    if (state.game.volume.master === 0) {
+    if (state.permanent.volume.master === 0) {
       dispatch({ type: 'SET_VOLUME', payload: { master: 1 } })
     } else {
       dispatch({ type: 'SET_VOLUME', payload: { master: 0 } })
@@ -110,7 +110,7 @@ const MenuLayer = () => {
           </button>
           <div className="action-icons">
             <button onClick={volume}>
-              {state.game.volume.master === 0 ? <FaVolumeMute /> : <FaVolumeUp />}
+              {state.permanent.volume.master === 0 ? <FaVolumeMute /> : <FaVolumeUp />}
             </button>
             <button onClick={closeMenu}>
               <IoClose />

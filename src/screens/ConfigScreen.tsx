@@ -24,13 +24,13 @@ const ConfigScreen = () => {
       <div className="page-content">
         <main>
           <div>
-            Volume: {state.game.volume.master}
+            Volume: {state.permanent.volume.master}
             <input
               type="range"
               min="0"
               max="10"
               step={1}
-              value={state.game.volume.master}
+              value={state.permanent.volume.master}
               onChange={(e) => setVolume(parseInt(e.target.value))} />
           </div>
 

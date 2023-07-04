@@ -69,10 +69,10 @@ const StateProvider = ({children}: StateProviderProps) => {
       case 'SET_VOLUME':
         return {
           ...curState,
-          game: {
-            ...curState.game,
+          permanent: {
+            ...curState.permanent,
             volume: {
-              ...curState.game.volume,
+              ...curState.permanent.volume,
               ...action.payload
             }
           }

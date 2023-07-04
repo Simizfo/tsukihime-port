@@ -20,7 +20,7 @@ const Window = () => {
   const [sceneNumber, setSceneNumber] = useState(INIT_SCENE)
   const [scene, setScene] = useState<string[]>([])
   const [choices, setChoices] = useState<Choice[]>([])
-  const [lineIdx, setLineIdx] = useState(state.game.index) //line index in scene file
+  const [lineIdx, setLineIdx] = useState<number>(0) //line index in scene file
   const [text, setText] = useState<string[]>([]) //text on current page
   const [pages, setPages] = useState<Queue<string[]>>(new Queue([], HISTORY_MAX_PAGES))
   const [bg, setBg] = useState<Background>(state.game.bg)
@@ -106,10 +106,10 @@ const Window = () => {
   }, [bg])
 
   useEffect(() => {
-    audio.masterVolume = state.game.volume.master;
-    audio.trackVolume = state.game.volume.track;
-    audio.seVolume = state.game.volume.se;
-  }, [state.game.volume])
+    audio.masterVolume = state.permanent.volume.master;
+    audio.trackVolume = state.permanent.volume.track;
+    audio.seVolume = state.permanent.volume.se;
+  }, [state.permanent.volume])
 
 //##############################################################################
 //#                              SCENE PROCESSING                              #

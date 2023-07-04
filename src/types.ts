@@ -46,11 +46,6 @@ export type ContextState = {
     },
     track: string,
     looped_se: string,
-    volume: {
-      master: number,
-      track: number,
-      se: number
-    },
     variables: {name: string, value: number|string}[], // TODO: consider using a Map instead
   },
   permanent: {
@@ -58,5 +53,10 @@ export type ContextState = {
     eventImages: string[],
     textSpeed: TEXT_SPEED,
     galleryBlur: boolean,
+    volume: {
+      master: number,
+      track: number,
+      se: number
+    },
   }
 }

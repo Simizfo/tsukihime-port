@@ -48,11 +48,6 @@ export const initialContextState = {
     },
     track: "",
     looped_se: "",
-    volume: {
-      master: 1,
-      track: 1,
-      se: 1,
-    },
     variables: [],
   },
   permanent: {
@@ -60,6 +55,11 @@ export const initialContextState = {
     eventImages: [],
     textSpeed: TEXT_SPEED.normal,
     galleryBlur: true,
+    volume: {
+      master: 1,
+      track: 1,
+      se: 1,
+    },
   }
 }
 
