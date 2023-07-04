@@ -133,15 +133,15 @@ export function convertText(text: string, key: any = undefined): JSX.Element {
     return <span>{...nodes}</span>
 }
 
-export function objectMatch(toTest: any, minKeys: any) {
-	for(let p in minKeys) {
-		if(minKeys.hasOwnProperty(p) && !(p in toTest) || minKeys[p] !== toTest[p])
+export function objectMatch(toTest: Object, minKeys: Object, useSymbols=true): boolean {
+	for(let p of [...Object.getOwnPropertyNames(minKeys), ...(useSymbols ? Object.getOwnPropertySymbols(minKeys) : [])]) {
+		if(!(p in toTest) || (minKeys as any)[p] !== (toTest as any)[p])
 			return false;
 	}
 	return true;
 }
 
-export function objectsEqual(obj1: any, obj2: any) {
+export function objectsEqual(obj1: Object, obj2: Object) {
 	return objectMatch(obj1, obj2) && objectMatch(obj2, obj1);
 }
 

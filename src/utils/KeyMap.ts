@@ -63,7 +63,7 @@ export default class KeyMap {
             if (i == 0)
               condition = filter
             else
-              throw Error("a funtion is only possible on the first element of the array")
+              throw Error("a function is only possible on the first element of the array")
           } else {
             if (condition) {
               if (KeyMap.condition in evtFilter[i])
@@ -145,6 +145,7 @@ export default class KeyMap {
             actions[i].action = action;
           else
             actions.splice(i, 1);
+          action = null
           break;
         }
       }
@@ -164,7 +165,7 @@ export default class KeyMap {
 
     if (actions) {
       let maxAttrLen = 0; // filters with more constraints are prefered
-      let result;
+      let result = undefined;
       let args = []
       for (let action of actions) {
         let attrLen = Object.keys(action.keyEventFilter).length; // constraints number, without [KeyMap.condition]
@@ -172,14 +173,14 @@ export default class KeyMap {
         const condition = filter[KeyMap.condition];
         if (condition)
           attrLen+=0.5 // condition function not as important as event attributes
-        if (attrLen > maxAttrLen && objectMatch(evt, filter)
+        if (attrLen > maxAttrLen && objectMatch(evt, filter, false)
             && (condition?.(action, evt, ...(filter?.[KeyMap.args]??[]))??true)) {
           maxAttrLen = attrLen;
           result = action.action;
           args = filter?.[KeyMap.args]??[]
         }
       }
-      if (maxAttrLen > 0) {
+      if (result) {
         return { action: result, args: args };
       }
     }

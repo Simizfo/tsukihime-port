@@ -66,7 +66,7 @@ const Window = () => {
     "history": [()=> objectMatch(stateRef.current.disp, {text: true, menu: false, history: false}),
       {key: "ArrowUp", repeat: false},
       {key: "ArrowLeft", repeat: false}],
-    "graphics": {code: "Space", repeat: false, [KeyMap.condition]: ()=>objectMatch(stateRef.current.disp, {menu: false, history: true})},
+    "graphics": {code: "Space", repeat: false, [KeyMap.condition]: ()=>objectMatch(stateRef.current.disp, {menu: false, history: false})},
     "menu": {key: "Escape", repeat: false, [KeyMap.condition]: ()=>!stateRef.current.disp.menu },
     "back": {key: "Escape", repeat: false},
     "save": {key: "S", ctrlKey: true},
