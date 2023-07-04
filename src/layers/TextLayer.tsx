@@ -4,7 +4,7 @@ import moonIcon from '../assets/icons/icon_moon.svg'
 import pageIcon from '../assets/icons/icon_bars.svg'
 import Timer from "../utils/timer"
 import { TEXT_SPEED } from "../utils/constants"
-import { convertText } from "../utils/utils"
+import { convertText, isDigit } from "../utils/utils"
 
 const icons: {[key: string]: string} = {
   "moon": moonIcon,
@@ -16,13 +16,14 @@ const icons: {[key: string]: string} = {
 //##############################################################################
 
 function nextBreak(text: string, startIndex = 0): number {
-  let index = text.indexOf('@', startIndex)
-  if (index == -1) {
-    index = text.indexOf('\\', startIndex)
-    if (index == -1)
-      index = text.length
+  const breaks = ["@", "\\", '!w']
+  let result = text.length
+  for (let b of breaks) {
+    const index = text.indexOf(b, startIndex)
+    if (index >= 0 && index < result)
+      result = index
   }
-  return index
+  return result
 }
 
 //##############################################################################
@@ -55,7 +56,7 @@ const TextLayer = memo(({ text, skipBreaks = 0, fastforward = false, onBreak, ..
     // calculate how many characters to display when the component is updated
     if (lastLine.length != 0) {
       let index = 0
-      if (skipBreaks > 0){
+      if (skipBreaks > 0) {
         let breaksSkipped = 0
         while (breaksSkipped < skipBreaks && index != -1) {
           index = nextBreak(lastLine, index+1)
@@ -76,6 +77,12 @@ const TextLayer = memo(({ text, skipBreaks = 0, fastforward = false, onBreak, ..
         setCursor(lastLine.length)
         onBreak('\n')
       } else {
+        //if inline '!wXXX' command, skip remaining characters of the command
+        if (lastLine.substring(index, index+2) == '!w') {
+          index += 2
+          while (isDigit(lastLine,index))
+            index++
+        }
         // gradually display next characters
         const timer = new Timer(textSpeed, ()=> {
           index++
@@ -83,6 +90,13 @@ const TextLayer = memo(({ text, skipBreaks = 0, fastforward = false, onBreak, ..
           if (['@','\\','\n'].includes(char)) {
             timer.pause()
             onBreak(char)
+          }
+          else if (char == '!' && lastLine.charAt(index+1) == 'w') {
+            timer.pause()
+            let indexEnd = index+2
+            while (isDigit(lastLine,indexEnd))
+              indexEnd++
+            onBreak(lastLine.substring(index, indexEnd))
           }
           else {
             while (lastLine.charAt(index+1) == '-')

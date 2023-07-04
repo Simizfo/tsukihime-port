@@ -1,11 +1,13 @@
 /**
  * Created by Loic France on 12/20/2016.
  */
-import {objectMatch, objectsEqual} from "./utils"
+import { objectMatch, objectsEqual } from "./utils"
 
-export type KeyMapCallback = (action: any, event: KeyboardEvent) => boolean|void
-export type KeyMapCondition = (action: any, event: KeyboardEvent) => boolean
-export type KeyMapMapping = {[key: string]: KeymapKeyFilter|(KeymapKeyFilter|KeyMapCondition)[]}
+export type KeyMapCallback = (action: any, event: KeyboardEvent, ...args: any) => boolean|void
+export type KeyMapCondition = (action: any, event: KeyboardEvent, ...args: any) => boolean
+export type KeyMapMapping = {
+  [key: string]: KeymapKeyFilter|Array<KeymapKeyFilter|KeyMapCondition>
+}
 
 type KeymapKeyFilter = ({
     code: string
@@ -13,6 +15,7 @@ type KeymapKeyFilter = ({
     key: string
 }) & {
   [KeyMap.condition]?: (action: any, event: KeyboardEvent) => boolean,
+  [KeyMap.args]?: any|Array<any>
   [key: string]: any // other parameters to filter keyboard events (repeat, ctrlKey, etc)
 }
 
@@ -22,6 +25,7 @@ export default class KeyMap {
   private keyListener: EventListener
 
   static readonly condition : unique symbol = Symbol.for("condition function to trigger action")
+  static readonly args : unique symbol = Symbol.for("additional parameters on callback")
 
   constructor(mapping: KeyMapMapping|null = null, callback: KeyMapCallback|null = null) {
     this.mapping = new Map()
@@ -38,8 +42,8 @@ export default class KeyMap {
 
   private listener_template(event: KeyboardEvent) {
     if (this.callback) {
-      const action = this.getAction(event);
-      return action ? this.callback(action, event) || false : false;
+      const result = this.getAction(event);
+      return result ? this.callback(result.action, event, ...result.args) || false : false;
     }
   }
 
@@ -52,7 +56,7 @@ export default class KeyMap {
         if (typeof evtFilter[0] == "function") {
           condition = evtFilter[0]
           i = 1
-        } else {}
+        }
         for (let i = 0; i < evtFilter.length; i++) {
           let filter = evtFilter[i]
           if (typeof filter == "function") {
@@ -64,16 +68,16 @@ export default class KeyMap {
             if (condition) {
               if (KeyMap.condition in evtFilter[i])
                 throw Error("cannot accumulate global condition and local condition")
-              filter = {...(evtFilter[i] as KeymapKeyFilter), [KeyMap.condition]: condition}
+              filter = { ...(evtFilter[i] as KeymapKeyFilter), [KeyMap.condition]: condition }
             } else {
               filter = evtFilter[i] as KeymapKeyFilter
             }
-            this.setAction(filter,
-              action
-            );
+            this.setAction(filter, action);
           }
         }
-      } else this.setAction(evtFilter, action);
+      } else {
+        this.setAction(evtFilter, action);
+      }
     }
   }
 
@@ -87,6 +91,10 @@ export default class KeyMap {
 
   enable(element: HTMLElement|Document, events: string|string[],
        options: boolean|AddEventListenerOptions|undefined = undefined) {
+
+    if (element !== document && !(element as HTMLElement).hasAttribute('tabindex')) {
+      (element as HTMLElement).setAttribute('tabindex', '-1'); // so it can receive keyboard events
+    }
     if (Array.isArray(events)) {
       for (let event of events) {
         element.addEventListener(event, this.keyListener, options);
@@ -97,6 +105,9 @@ export default class KeyMap {
 
   disable(element: HTMLElement|Document, events: string|string[],
         options: boolean|AddEventListenerOptions|undefined = undefined) {
+    if (element !== document && (element as HTMLElement).getAttribute('tabindex') == '-1') {
+      (element as HTMLElement).removeAttribute('tabindex');
+    }
     if (Array.isArray(events)) {
       for (let event of events) {
         element.removeEventListener(event, this.keyListener, options);
@@ -119,10 +130,13 @@ export default class KeyMap {
         id = id.toUpperCase()
     }
     const actions = this.mapping.get(id);
+    if (KeyMap.args in keyEventFilter && !Array.isArray(keyEventFilter[KeyMap.args])) {
+      keyEventFilter[KeyMap.args] = [keyEventFilter[KeyMap.args]]
+    }
 
     if (actions === undefined) {
       if (action)
-        this.mapping.set(id, [{keyEventFilter: keyEventFilter, action: action}]);
+        this.mapping.set(id, [{ keyEventFilter: keyEventFilter, action: action }]);
     }
     else {
       for (let i = 0; i < actions.length; i++) {
@@ -135,7 +149,7 @@ export default class KeyMap {
         }
       }
       if (action)
-        actions.push({keyEventFilter: keyEventFilter, action: action});
+        actions.push({ keyEventFilter: keyEventFilter, action: action });
     }
   }
 
@@ -151,20 +165,22 @@ export default class KeyMap {
     if (actions) {
       let maxAttrLen = 0; // filters with more constraints are prefered
       let result;
+      let args = []
       for (let action of actions) {
-        let attrLen = Object.keys(action.keyEventFilter).length; //constraints number
+        let attrLen = Object.keys(action.keyEventFilter).length; // constraints number, without [KeyMap.condition]
         const filter = action.keyEventFilter;
-        const condition = filter[KeyMap.condition]; // condition not counted in attrLen
+        const condition = filter[KeyMap.condition];
         if (condition)
-          attrLen++
+          attrLen+=0.5 // condition function not as important as event attributes
         if (attrLen > maxAttrLen && objectMatch(evt, filter)
-            && (!condition || condition(action, evt))) {
+            && (condition?.(action, evt, ...(filter?.[KeyMap.args]??[]))??true)) {
           maxAttrLen = attrLen;
           result = action.action;
+          args = filter?.[KeyMap.args]??[]
         }
       }
       if (maxAttrLen > 0) {
-        return result;
+        return { action: result, args: args };
       }
     }
     return undefined;

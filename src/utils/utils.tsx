@@ -109,7 +109,7 @@ export function convertText(text: string, key: any = undefined): JSX.Element {
   if ( text.length > 0 && text != "br") {
     //remove '`', '@' and '\',
     //replace '|' with '…'
-    text = text.replace(/[`@\\]/g, '')
+    text = text.replace(/[`@\\]|(\!w\d+\b)/g, '')
               .replace(/\|/g, '…')
 
     //replace consecutive dashes with a continuous line
@@ -143,6 +143,11 @@ export function objectMatch(toTest: any, minKeys: any) {
 
 export function objectsEqual(obj1: any, obj2: any) {
 	return objectMatch(obj1, obj2) && objectMatch(obj2, obj1);
+}
+
+export function isDigit(str: string, index: number = 0) {
+  const char = str.charAt(index)
+  return char >= '0' && char <= '9'
 }
 
 export class Queue<T> {
@@ -185,6 +190,10 @@ export class Queue<T> {
 }
 
 export function moveBg(dir: string) {
+
+  if (!["up", "down"].includes(dir))
+    throw Error(`Illegal argument ${dir}`)
+
   const positions = ['top', 'center', 'bottom']
   const bgClass = document.querySelector('.background')?.classList
 
