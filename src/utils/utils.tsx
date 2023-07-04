@@ -146,7 +146,7 @@ export function objectsEqual(obj1: Object, obj2: Object) {
 }
 
 export function objectsMerge(dest: Object, src: Object, override=false) {
-	for(let p in [...Object.getOwnPropertyNames(src), ...Object.getOwnPropertySymbols(src)]) {
+	for(let p of [...Object.getOwnPropertyNames(src), ...Object.getOwnPropertySymbols(src)]) {
     if (!(p in dest))
       (dest as any)[p] = (src as any)[p]
     else if (typeof ((dest as any)[p]) == "object" && typeof ((src as any)[p]) == "object")
