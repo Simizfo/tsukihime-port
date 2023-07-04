@@ -1,6 +1,7 @@
 import { createContext, useEffect, useReducer } from 'react'
 import { ContextState } from '../types'
 import { initialContextState } from '../utils/constants'
+import { objectsMerge } from '../utils/utils'
 
 type StateProviderProps = {
   children: React.ReactNode
@@ -8,7 +9,7 @@ type StateProviderProps = {
 
 const permanent = localStorage.getItem('permanent')
 if (permanent) {
-  initialContextState.permanent = JSON.parse(permanent)
+  objectsMerge(initialContextState.permanent, JSON.parse(permanent), true)
 }
 
 const store = createContext<{ state: ContextState; dispatch: React.Dispatch<any> }>({

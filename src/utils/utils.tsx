@@ -145,6 +145,18 @@ export function objectsEqual(obj1: Object, obj2: Object) {
 	return objectMatch(obj1, obj2) && objectMatch(obj2, obj1);
 }
 
+export function objectsMerge(dest: Object, src: Object, override=false) {
+	for(let p in [...Object.getOwnPropertyNames(src), ...Object.getOwnPropertySymbols(src)]) {
+    if (!(p in dest))
+      (dest as any)[p] = (src as any)[p]
+    else if (typeof ((dest as any)[p]) == "object" && typeof ((src as any)[p]) == "object")
+      objectsMerge((dest as any)[p], (src as any)[p], override)
+    else if (override)
+      (dest as any)[p] = (src as any)[p]
+	}
+  return dest
+}
+
 export function isDigit(str: string, index: number = 0) {
   const char = str.charAt(index)
   return char >= '0' && char <= '9'
