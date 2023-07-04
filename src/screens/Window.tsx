@@ -13,7 +13,7 @@ import MenuLayer from '../layers/MenuLayer';
 import { HISTORY_MAX_PAGES, STRALIAS_JSON } from '../utils/constants';
 import KeyMap from '../utils/KeyMap';
 
-const INIT_SCENE = 20
+const INIT_SCENE = 409
 
 const Window = () => {
   const { state, dispatch } = useContext(store)
@@ -71,8 +71,8 @@ const Window = () => {
     "back": {key: "Escape", repeat: false},
     "save": {key: "S", ctrlKey: true},
     "bg_move": [()=> objectMatch(stateRef.current.disp, {menu: false, history: false}),
-      {[KeyMap.args]: "up", key: "ArrowUp", repeat: false},
-      {[KeyMap.args]: "down", key: "ArrowDown", repeat: false}]
+      {[KeyMap.args]: "up", key: "ArrowUp", ctrlKey: true, repeat: false},
+      {[KeyMap.args]: "down", key: "ArrowDown", ctrlKey: true, repeat: false}]
   }))
 
   keyMap.current.setCallback((action, _event: KeyboardEvent, ...args)=> {
