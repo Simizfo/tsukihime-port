@@ -267,11 +267,11 @@ const Window = () => {
   }
 
   /**
-   * "*5" -> track05.ogg
+   * "*5" -> track05.mp3
    */
   function getTrackFile(track: string): string {
     const paddedNumber = track.replace(/\D/g, '').padStart(2, '0');
-    return `track${paddedNumber}.ogg`;
+    return `track${paddedNumber}.mp3`;
   }
 
   function processAudioCmd(arg: string, cmd: string) {

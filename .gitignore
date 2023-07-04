@@ -25,7 +25,5 @@ release
 *.sln
 *.sw?
 public/CD/desktop.ini
-script-convert/execute.bat
-script-convert/numalias.json
-script-convert/stralias.json
-script-convert/scenes
+script-convert/*
+public/CD/*
