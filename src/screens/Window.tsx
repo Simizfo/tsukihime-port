@@ -227,37 +227,34 @@ const Window = () => {
     'quakex'    : null, //TODO : vertical shake effect
     'quakey'    : null, //TODO : horizontal shake effect
     'monocro'   : null, //TODO : fade screen to monochrome
-  }), [text])
+  }), [lineIdx, scene])
 
   function processCmd(line: string) {
     if (!/^[a-zA-Z\!]/.test(line))
       return; // not a command (does not start with a letter or a '!')
     //TODO line that start with '*' are labels used by gosub and goto
-    let func = null,
-        cmd = null,
-        args = null
+    
+    let func, cmd, args
+
     if (line.startsWith("!w")) {
-      func = processTimer
-      cmd = line.substring(0, 2)
-      args = line.substring(2)
+      func = processTimer;
+      [cmd, args] = [line.substring(0, 2), line.substring(2)]
     } else {
-      let index = line.indexOf(' ');
-      if (index === -1)
-        index = line.length;
-      cmd = line.substring(0, index);
-      args = line.substring(index+1);
+      const [command, ...rest] = line.split(' ');
+      [cmd, args] = [command, rest.join(' ')];
+      
       //TODO replace known variables in args ?
-      if (cmd in commands) {
-        func = commands[cmd as keyof typeof commands]
-      }
-      else {
-        console.error(`unknown command scene ${sceneNumber}:${lineIdx}[${line}]`);
+      if (!(cmd in commands)) {
+        console.warn(`Unknown command scene ${sceneNumber}:${lineIdx}[${line}]`)
         onLineComplete()
+        return
       }
+  
+      func = commands[cmd as keyof typeof commands]
     }
+    
     const wait = func?.(args, cmd)
-    if (!wait)
-      onLineComplete()
+    if (!wait) onLineComplete()
   }
 
   function processBr() {
@@ -298,7 +295,7 @@ const Window = () => {
         audio.stopSE();
         break
     }
-    dispatch({ type: 'SET_GAME', payload: { ...state.game, track: track, looped_se :looped_se } });
+    dispatch({ type: 'SET_GAME', payload: { ...state.game, track: track, looped_se: looped_se } });
   }
 
   function processImage(arg: string, cmd: string) {
@@ -324,14 +321,11 @@ const Window = () => {
       if (image.startsWith('"') && image.endsWith('"')) {
         // remove ':a;', 'image/', 'image/tachi/', '"', '.jpg'
         image = image.replace(/:a;|image[\/\\](tachi[\/\\])?|"|\.jpg/g, '')
-      }
-      else if (!image.startsWith('#')) { // not image nor color
+      } else if (!image.startsWith('#')) { // not image nor color
         throw Error(`Ill-formed arguments for [${cmd} ${arg}]`)
       }
     }
-    if (type != null) {
-      type = type.replace('%', '');
-    }
+    type = type?.replace('%', '')
 
     switch(cmd) {
       case 'cl' : {
@@ -346,18 +340,17 @@ const Window = () => {
           image: image as string,
           type: type,
           pos: pos as string
-        });
+        })
         setCharacters(newCharacters)
         break
       }
       case 'bg' :
-        const path = image as string
         const bgTmp: Background = {
           image: image as string,
           type: type
         }
-        if (path.includes('event\\')) {
-          dispatch({ type: 'ADD_GAME_EVENT_IMAGE', payload: path })
+        if ((image as string).includes('event\\')) {
+          dispatch({ type: 'ADD_GAME_EVENT_IMAGE', payload: image })
         }
         setBg(bgTmp)
         return true
