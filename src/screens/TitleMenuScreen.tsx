@@ -9,7 +9,7 @@ const TitleMenuScreen = () => {
 
   // useEffect(() => {
   //   if (!audio.isSoundKnown("menuTheme")) {
-  //     audio.setSoundFileUrl("menuTheme", "CD/track08.ogg"),
+  //     audio.setSoundFileUrl("menuTheme", "CD/track08.mp3"),
   //     audio.playTrack("menuTheme", true)
   //   }
   // }, [])

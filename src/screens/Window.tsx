@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import '../styles/game.scss';
 import audio from '../utils/AudioManager';
 import HistoryLayer from '../layers/HistoryLayer';
@@ -136,7 +136,6 @@ const Window = () => {
     switch(breakChar.charAt(0)) {
       case '!' : // wait a certain amount of time
         lastBreak.current = breakChar
-        console.log(breakChar)
         processTimer(breakChar.substring(2), breakChar.substring(0,2))
         break
       case '@' : // waiting for user
@@ -205,7 +204,7 @@ const Window = () => {
     return null;
   }
 
-  const commands = {
+  const commands = useMemo(()=> ({
     'bg'        : processImage,
     'ld'        : processImage,
     'cl'        : processImage,
@@ -228,10 +227,9 @@ const Window = () => {
     'quakex'    : null, //TODO : vertical shake effect
     'quakey'    : null, //TODO : horizontal shake effect
     'monocro'   : null, //TODO : fade screen to monochrome
-  }
+  }), [text])
 
   function processCmd(line: string) {
-
     if (!/^[a-zA-Z\!]/.test(line))
       return; // not a command (does not start with a letter or a '!')
     //TODO line that start with '*' are labels used by gosub and goto
@@ -370,7 +368,7 @@ const Window = () => {
     switch (cmd) {
       case 'waittimer' :
       case '!w' :
-        let time_to_wait = parseInt(arg)
+        const time_to_wait = parseInt(arg)
         setTimeout(onLineComplete, time_to_wait)
         return true
       default :
