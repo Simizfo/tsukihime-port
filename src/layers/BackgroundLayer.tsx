@@ -8,7 +8,7 @@ import Timer from "../utils/timer";
 //##############################################################################
 
 function createImg(imgDir: string, bg: Background, transition: object = {}) {
-  const image = bg.image;
+  const image = bg.image||"#000";
   const attrs = {
     className: "background center",
     ...transition
