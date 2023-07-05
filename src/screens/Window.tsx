@@ -345,6 +345,7 @@ const Window = () => {
         break
       }
       case 'bg' :
+        setCharacters(new Map())
         const bgTmp: Background = {
           image: image as string,
           type: type
