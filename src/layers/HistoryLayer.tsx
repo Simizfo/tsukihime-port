@@ -87,7 +87,9 @@ const HistoryLayer = ({ pages, text }: Props) => {
       </div>
 
       <footer>
-        <button onClick={() => dispatch({ type: 'SET_DISP_HISTORY', payload: false })}>Close</button>
+        <button onClick={() => dispatch({ type: 'SET_DISP_HISTORY', payload: false })}>
+          Close
+        </button>
       </footer>
     </div>
   )

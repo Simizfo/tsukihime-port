@@ -201,8 +201,10 @@ export class Queue<T> {
   }
 }
 
+/**
+ * Move background up or down
+ */
 export function moveBg(dir: string) {
-
   if (!["up", "down"].includes(dir))
     throw Error(`Illegal argument ${dir}`)
 
@@ -217,4 +219,12 @@ export function moveBg(dir: string) {
       positions[currentPosition + (dir === 'up' ? -1 : 1)] || positions[currentPosition]
     )
   }
+}
+
+/**
+ * "*5" -> track05.mp3
+ */
+export function getTrackFile(track: string): string {
+  const paddedNumber = track.replace(/\D/g, '').padStart(2, '0');
+  return `track${paddedNumber}.mp3`;
 }

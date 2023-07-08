@@ -13,7 +13,10 @@ const CharactersLayer = ({ characters }: Props) => {
     <div className="box box-characters">
       {characters.map((character: Character, i) =>
         <div className={`img-container ${character.pos}`} key={i}>
-          <img src={`/${state.permanent.imagesFolder}/tachi/${character.image}.webp`} alt="character" className={character.type} />
+          <img src={`/${state.permanent.imagesFolder}/tachi/${character.image}.webp`}
+            alt={`character ${character.image}`}
+            className={character.type}
+          />
         </div>
       )}
     </div>

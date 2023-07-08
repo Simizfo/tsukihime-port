@@ -3,7 +3,7 @@ import '../styles/game.scss';
 import audio from '../utils/AudioManager';
 import HistoryLayer from '../layers/HistoryLayer';
 import { Background, Character, Choice, ContextState } from '../types';
-import { Queue, fetchChoices, fetchGoToNextScene, fetchScene, moveBg, objectMatch } from '../utils/utils';
+import { Queue, fetchChoices, fetchGoToNextScene, fetchScene, getTrackFile, moveBg, objectMatch } from '../utils/utils';
 import ChoicesLayer from '../layers/ChoicesLayer';
 import CharactersLayer from '../layers/CharactersLayer';
 import TextLayer from '../layers/TextLayer';
@@ -13,7 +13,7 @@ import MenuLayer from '../layers/MenuLayer';
 import { HISTORY_MAX_PAGES, STRALIAS_JSON } from '../utils/constants';
 import KeyMap from '../utils/KeyMap';
 
-const INIT_SCENE = 409
+const INIT_SCENE = 22
 
 const Window = () => {
   const { state, dispatch } = useContext(store)
@@ -55,7 +55,6 @@ const Window = () => {
   useEffect(()=>{
     stateRef.current = state
   }, [state])
-
 
   const keyMap = useRef<KeyMap>(new KeyMap({
     "next": [()=> objectMatch(stateRef.current.disp, {menu: false, choices: false, history: false}),
@@ -196,12 +195,7 @@ const Window = () => {
   }, [lineIdx, scene])
 
   function getVariable(name: string) {
-    const variables = state.game.variables;
-    for (const variable of variables) {
-      if (variable.name == name)
-      return variable.value;
-    }
-    return null;
+    return state.game.variables.find(variable => variable.name === name)?.value ?? null;
   }
 
   const commands = useMemo(()=> ({
@@ -261,14 +255,6 @@ const Window = () => {
     setText([...text, "br"])
   }
 
-  /**
-   * "*5" -> track05.mp3
-   */
-  function getTrackFile(track: string): string {
-    const paddedNumber = track.replace(/\D/g, '').padStart(2, '0');
-    return `track${paddedNumber}.mp3`;
-  }
-
   function processAudioCmd(arg: string, cmd: string) {
     let {track, looped_se} = state.game;
     let name = arg
@@ -299,7 +285,7 @@ const Window = () => {
   }
 
   function processImage(arg: string, cmd: string) {
-    let args = arg.split(',')
+    const args = arg.split(',')
     let pos:string|null = null,
         image:string|null = null,
         type:string|null = null
@@ -330,12 +316,12 @@ const Window = () => {
     switch(cmd) {
       case 'cl' : {
         const newCharacters = new Map(characters)
-        newCharacters.delete(pos as string);
+        newCharacters.delete(pos as string)
         setCharacters(newCharacters)
         break
       }
       case 'ld' : {
-        const newCharacters = new Map(characters);
+        const newCharacters = new Map(characters)
         newCharacters.set(pos as string, {
           image: image as string,
           type: type,
@@ -350,8 +336,8 @@ const Window = () => {
           image: image as string,
           type: type
         }
-        if ((image as string).includes('event\\')) {
-          dispatch({ type: 'ADD_GAME_EVENT_IMAGE', payload: image })
+        if (bgTmp.image.includes('event\\')) {
+          dispatch({ type: 'ADD_GAME_EVENT_IMAGE', payload: bgTmp.image })
         }
         setBg(bgTmp)
         return true
