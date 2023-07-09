@@ -1,5 +1,6 @@
+import { observe } from "./Observer"
 import { IMAGES_FOLDERS, TEXT_SPEED } from "./constants"
-import { objectsMerge } from "./utils"
+import { objectMatch, objectsMerge } from "./utils"
 
 //##############################################################################
 //#                          ENGINE-RELATED VARIABLES                          #
@@ -23,9 +24,23 @@ const defaultsSettings = {
 // deep-copy defaultsSettings
 export const settings = objectsMerge({}, defaultsSettings) as typeof defaultsSettings
 // load from file
-const savedSettings = localStorage.getItem('permanent')
-if (savedSettings)
-  objectsMerge(settings, JSON.parse(savedSettings), true)
+const savedSettings = JSON.parse(localStorage.getItem('permanent')||"{}")
+objectsMerge(settings, savedSettings, true)
+
+function saveSettings() {
+  if (!objectMatch(settings, savedSettings)) {
+    objectsMerge(savedSettings, settings, true)
+    localStorage.setItem('permanent', JSON.stringify(savedSettings))
+  }
+}
+
+observe(settings, 'imagesFolder', saveSettings)
+observe(settings, 'eventImages', saveSettings)
+observe(settings, 'textSpeed', saveSettings)
+observe(settings, 'galleryBlur', saveSettings)
+observe(settings.volume, 'master', saveSettings)
+observe(settings.volume, 'track', saveSettings)
+observe(settings.volume, 'se', saveSettings)
 
 //_________________________________display mode_________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
