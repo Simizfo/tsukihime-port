@@ -1,10 +1,17 @@
 type ObserverCallback<T=any> = (value: T)=>void
 type Observable = {[key: PropertyKey]: any}
+
+class ObservableParent {
+    constru
+}
+
 type PropertyObserver = {
     originalDesciptor: PropertyDescriptor,
     hasChanged: boolean,
     callbacks: Array<ObserverCallback>
 }
+
+type ChildObserverCallback = (property: PropertyKey, value: any)=>void
 
 class PropertiesObserver {
 
@@ -112,6 +119,12 @@ export function observe<T extends Observable>(object: T, property: keyof T, call
         (object as any)[observerSymbol] = new PropertiesObserver(object)
     }
     object[observerSymbol].observe(property, callback)
+}
+
+export function observeChildren<T extends ObservableParent, TA>(parent: Array<T>, objectKey: keyof T, callback: ChildObserverCallback) {
+    if (!(observerSymbol in object)) {
+        (parent as an)
+    }
 }
 
 /**
