@@ -5,7 +5,8 @@ import Timer from "../utils/timer";
 
 
 export type Sprite = {
-  image: string, type: string
+  image: string,
+  type: string
 }
 
 type SpritePos = keyof typeof gameContext.graphics
@@ -65,8 +66,8 @@ function processImageCmd(arg: string, cmd: string, onFinish: VoidFunction) {
   transition.pos = pos as SpritePos|'a'
 
   if (cmd == 'bg') {
-    //clearAllSprites() // TODO check if necessary
-    if ((image as string).includes('event\\')) {
+    clearAllSprites()
+    if ((image as string).includes('event/')) {
       settings.eventImages.push(image as string)
     }
   }

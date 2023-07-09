@@ -49,7 +49,7 @@ const GalleryScreen = () => {
 
     imagesTmp = imagesTmp.map((image) => {
       const extension = settings.imagesFolder === IMAGES_FOLDERS.image ? 'jpg' : 'webp'
-      if (!settings.eventImages.includes(`event\\${image}`)) {
+      if (!settings.eventImages.includes(`event/${image}`)) {
         return defaultImg
       } else {
         return `/${settings.imagesFolder}/event/${image}.${extension}`
