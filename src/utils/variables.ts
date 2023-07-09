@@ -25,11 +25,11 @@ const defaultsSettings = {
 export const settings = objectsMerge({}, defaultsSettings) as typeof defaultsSettings
 // load from file
 const savedSettings = JSON.parse(localStorage.getItem('permanent')||"{}")
-objectsMerge(settings, savedSettings, true)
+objectsMerge(settings, savedSettings, {override: true})
 
 function saveSettings() {
   if (!objectMatch(settings, savedSettings)) {
-    objectsMerge(savedSettings, settings, true)
+    objectsMerge(savedSettings, settings, {override: true, copySymbols: false})
     localStorage.setItem('permanent', JSON.stringify(savedSettings))
   }
 }
@@ -185,13 +185,13 @@ type SaveState = {context: typeof gameContext, progress: typeof progress}
 
 export function createSaveState(): SaveState {
   const ss: SaveState = {context: {}, progress: {}} as SaveState
-  objectsMerge(ss.context, gameContext)
-  objectsMerge(ss.progress, progress)
+  objectsMerge(ss.context, gameContext, {copySymbols: false})
+  objectsMerge(ss.progress, progress, {copySymbols: false})
   return ss
 }
 export function loadSaveState(ss: SaveState) {
-  objectsMerge(gameContext, ss.context, true)
-  objectsMerge(progress, ss.progress, true)
+  objectsMerge(gameContext, ss.context, {override: true})
+  objectsMerge(progress, ss.progress, {override: true})
 }
 
 //###   PUT IN GLOBAL FOR DEBUG   ###

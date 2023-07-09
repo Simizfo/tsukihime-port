@@ -148,12 +148,16 @@ export function objectsEqual(obj1: Object, obj2: Object, useSymbols=true) {
 	return objectMatch(obj1, obj2, useSymbols) && objectMatch(obj2, obj1, useSymbols)
 }
 
-export function objectsMerge(dest: Object, src: Object, override=false) {
-	for(let p of [...Object.getOwnPropertyNames(src), ...Object.getOwnPropertySymbols(src)]) {
+export function objectsMerge(dest: Object, src: Object, {override=false, copyNamed=true, copySymbols=true} = {}) {
+  const props = [
+    ...(copyNamed ? Object.getOwnPropertyNames(src) : []),
+    ...(copySymbols ? Object.getOwnPropertySymbols(src) : [])]
+  console.log(dest, src)
+	for(let p of props) {
     if (!(p in dest))
       (dest as any)[p] = (src as any)[p]
     else if (typeof ((dest as any)[p]) == "object" && typeof ((src as any)[p]) == "object")
-      objectsMerge((dest as any)[p], (src as any)[p], override)
+      objectsMerge((dest as any)[p], (src as any)[p], {override, copyNamed, copySymbols})
     else if (override)
       (dest as any)[p] = (src as any)[p]
 	}

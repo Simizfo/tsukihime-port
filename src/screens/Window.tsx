@@ -9,7 +9,7 @@ import { HISTORY_MAX_PAGES } from '../utils/constants';
 import KeyMap from '../utils/KeyMap';
 
 import script from '../utils/ScriptManager';
-import { SCREEN, displayMode } from '../utils/variables';
+import { SCREEN, displayMode, gameContext } from '../utils/variables';
 import GraphicsLayer from '../layers/GraphicsLayer';
 
 const keyMap = new KeyMap({
@@ -80,6 +80,11 @@ const Window = () => {
 
   const textFinished = useRef<boolean>(true)
   const history = useRef<Queue<string>>(new Queue([], HISTORY_MAX_PAGES))
+
+  useEffect(()=> {
+    gameContext.scene = 20;
+    gameContext.index = 0;
+  }, [])
 
   useEffect(function() {
     script.onText = function(str:string) {
