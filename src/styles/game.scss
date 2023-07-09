@@ -39,98 +39,46 @@ body {
         object-fit: cover;
         object-position: center;
         transition: object-position var(--transition-time) ease-out;
-
-        &.top { object-position: top; }
-        &.center { object-position: center; }
-        &.bottom { object-position: bottom; }
-
-        animation-duration: var(--transition-time); // var --transition-time changed in inline css
-        animation-timing-function: linear;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-
-        &[fade-effect="crossfade"] {
-            animation-name: crossfade;
-        }
-
-        &[fade-effect="lmaskcross"],
-        &[fade-effect="rmaskcross"],
-        &[fade-effect="lscroll"],
-        &[fade-effect="rscroll"] {
-            $linear-gradient: linear-gradient(to right, transparent 20%, #fff 40%, #fff 60%, transparent 80%);
-            mask-image: $linear-gradient;
-            -webkit-mask-image: $linear-gradient;
-            mask-size: 500%;
-            -webkit-mask-size: 500%;
-        }
-
-        &[fade-effect="lmaskcross"],
-        &[fade-effect="lscroll"] {
-            @include scroll("l", left);
-        }
-
-        &[fade-effect="rmaskcross"],
-        &[fade-effect="rscroll"] {
-            @include scroll("r", right);
-        }
-
-        &[fade-effect="lshutter"],
-        &[fade-effect="rshutter"],
-        &[fade-effect="lcartain"],
-        &[fade-effect="rcartain"] {
-            $linear-gradients: linear-gradient(to right, transparent 50%, #fff 50%),
-                linear-gradient(to right, transparent 50%, #fff 50%);
-            mask-image: $linear-gradients;
-            -webkit-mask-image: $linear-gradients;
-            mask-size: 50px 100%, 50px 100%;
-            -webkit-mask-size: 50px 100%, 50px 100%;
-            mask-repeat: repeat;
-            -webkit-mask-repeat: repeat;
-            mask-composite: exclude;
-            -webkit-mask-composite: xor;
-        }
-
-        &[fade-effect="tshutter"],
-        &[fade-effect="bshutter"],
-        &[fade-effect="tcartain"],
-        &[fade-effect="bcartain"] {
-            $linear-gradients: linear-gradient(to bottom, transparent 50%, #fff 50%),
-                linear-gradient(to bottom, transparent 50%, #fff 50%);
-            mask-image: $linear-gradients;
-            -webkit-mask-image: $linear-gradients;
-            mask-size: 100% 50px, 100% 50px;
-            -webkit-mask-size: 100% 50px, 100% 50px;
-            mask-repeat: repeat;
-            -webkit-mask-repeat: repeat;
-            mask-composite: exclude;
-            -webkit-mask-composite: xor;
-        }
-
-        &[fade-effect="lshutter"],
-        &[fade-effect="lcurtain"] {
-            @include shutter('l', ($size 0), ($size * 2 0));
-        }
-
-        &[fade-effect="rshutter"],
-        &[fade-effect="rcurtain"] {
-            @include shutter('r', ($size 0), (0 0));
-        }
-
-        &[fade-effect="tshutter"],
-        &[fade-effect="tcurtain"] {
-            @include shutter('t', (0 $size), (0 $size * 2));
-        }
-
-        &[fade-effect="bshutter"],
-        &[fade-effect="bcurtain"] {
-            @include shutter('b', (0 $size), (0 0));
-        }
     }
 
     .box {
         width: inherit;
         height: inherit;
         position: absolute;
+    }
+    .box-graphics {
+        z-index: 0;
+        overflow: hidden;
+        display: grid;
+
+        img {
+            position: absolute;
+            overflow: hidden;
+            height: inherit;
+            object-fit: cover;
+            &.l, &.c, &.r {
+                z-index: 1;
+                bottom: 0;
+                height: 100%;
+                display: flex;
+
+            }
+
+            &.l { justify-self: left; }
+            &.c { justify-self: center; }
+            &.r { justify-self: right; }
+
+            &.bg[bg-align] {
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                display: block;
+                width: inherit;
+                object-position: attr(bg-align);
+                transition: object-position var(--transition-time) ease-out;
+            }
+
+        }
     }
     .box-characters {
         z-index: 1;

@@ -25,9 +25,10 @@ type Props = {
 
 const TextLayer = memo(({ text, immediate = false, onFinish, ...props }: Props) => {
 
-  const [ previousText, setPreviousText ] = useState<string[]>([]) // lines to display entirely
-  const [ newText, setNewText ] = useState<string>("") // line to display gradually
+  const [ previousLines, setPreviousLines ] = useState<string[]>([]) // lines to display entirely
+  const [ lastLine, setLastLine ] = useState<string>("") // line to display gradually
   const [ cursor, setCursor ] = useState<number>(0) // position of the cursor on the last line.
+  const [ startIndex, setStartIndex ] = useState<number>(0)
   const [ glyph, setGlyph ] = useState<string>('') // id of the animated glyph to display at end of line
 
   const [ display, setDisplay ] = useState<boolean>(displayMode.text)
@@ -40,32 +41,36 @@ const TextLayer = memo(({ text, immediate = false, onFinish, ...props }: Props) 
   }, [])
 
   useEffect(()=> {
-    const index = Math.max(
-        text.lastIndexOf('\n', text.length-2),
-        text.lastIndexOf('@', text.length-2))
-    const [previousText, newText] = (index == -1) ? [[], text] :
-        [text.substring(0, index+1).split('\n'), text.substring(index+1)]
-
-    setNewText(newText)
-    setPreviousText(previousText)
-    setCursor(0)
+    const index = text.lastIndexOf('\n', text.length-2)
+    let lines
+    if (index == -1)
+      lines = [text]
+    else
+      lines = [...text.substring(0, index).split('\n'), text.substring(index+1)]
+    setLastLine(lines.pop()??"")
+    if (lines.length != previousLines.length) {
+      setStartIndex(0)
+    } else {
+      setStartIndex(cursor)
+    }
+    setPreviousLines(lines)
   }, [text])
 
   useEffect(()=> {
-    if (newText.length > 0) {
+    if (lastLine.length > 0) {
       const textSpeed = settings.textSpeed
-      if (immediate || textSpeed == TEXT_SPEED.instant) {
-        setCursor(newText.length)
+      if (immediate || textSpeed == TEXT_SPEED.instant || startIndex >= lastLine.length) {
+        setCursor(lastLine.length)
         onFinish()
       } else {
-        let index = 0
+        let index = startIndex
         // gradually display next characters
         const timer = new Timer(textSpeed, ()=> {
           index++
-          while (newText.charAt(index+1) == '-')
+          while (lastLine.charAt(index+1) == '-')
             index++
           setCursor(index)
-          if (index >= newText.length) {
+          if (index >= lastLine.length) {
             timer.cancel()
             onFinish()
           }
@@ -74,15 +79,15 @@ const TextLayer = memo(({ text, immediate = false, onFinish, ...props }: Props) 
         setCursor(index)
         return timer.cancel.bind(timer)
       }
-    } else if (previousText.length > 0) {
+    } else if (previousLines.length > 0) {
       onFinish()
     }
-  }, [previousText, newText, immediate])
+  }, [previousLines, lastLine, startIndex, immediate])
 
   useEffect(()=> {
     //if last character is '@' or '\', display the appropriate image
-    if (cursor >= newText.length) {
-      switch(newText.charAt(newText.length-1))
+    if (cursor >= lastLine.length) {
+      switch(lastLine.charAt(lastLine.length-1))
       {
         case '@' : setGlyph('moon'); break
         case '\\' : setGlyph('page'); break
@@ -98,13 +103,14 @@ const TextLayer = memo(({ text, immediate = false, onFinish, ...props }: Props) 
   return (
     <div className={`box box-text ${!display ? "hide ":""}${className||''}`} {...remaining_props}>
       <div className="text-container">
-        {previousText.map((line, i)=>
+        {previousLines.map((line, i)=>
           <Fragment key={i}>
             {i > 0 && <br/>}
             {convertText(line)}
           </Fragment>)}
+        {previousLines.length > 0 && lastLine.length > 0 && <br/>}
         <span>
-          {convertText(newText.substring(0, cursor))}
+          {convertText(lastLine.substring(0, cursor).replace('\n', ''))}
           {glyph.length > 0 &&
             <img src={icons[glyph]} alt={glyph} id={glyph} className="cursor" />
           }

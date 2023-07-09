@@ -1,16 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useContext, useEffect, useState } from 'react'
-import { store } from '../context/GameContext'
+import { useEffect, useState } from 'react'
 import { CHARACTERS, GALLERY_IMAGES, IMAGES_FOLDERS } from '../utils/constants'
 import GalleryCharComponent from '../components/GalleryCharComponent'
 import Fancybox from "../components/Fancybox"
 import '../styles/gallery.scss'
+import { settings } from '../utils/variables'
 
 const defaultImg = "/image_x2/notreg.webp"
 
 const GalleryScreen = () => {
-  const { state } = useContext(store)
   const [selected, setSelected] = useState<CHARACTERS>(CHARACTERS.arcueid)
   const [images, setImages] = useState<string[]>([])
 
@@ -49,11 +48,11 @@ const GalleryScreen = () => {
     }
 
     imagesTmp = imagesTmp.map((image) => {
-      const extension = state.permanent.imagesFolder === IMAGES_FOLDERS.image ? 'jpg' : 'webp'
-      if (!state.permanent.eventImages.includes(`event\\${image}`)) {
+      const extension = settings.imagesFolder === IMAGES_FOLDERS.image ? 'jpg' : 'webp'
+      if (!settings.eventImages.includes(`event\\${image}`)) {
         return defaultImg
       } else {
-        return `/${state.permanent.imagesFolder}/event/${image}.${extension}`
+        return `/${settings.imagesFolder}/event/${image}.${extension}`
       }
     })
 
@@ -109,7 +108,7 @@ const GalleryScreen = () => {
                   <img src={eventImage} alt="event" />
                 :
                   <a href={eventImage} data-fancybox="gallery"
-                    className={eventImage.includes('_h') && state.permanent.galleryBlur ? 'h' : ''}>
+                    className={eventImage.includes('_h') && settings.galleryBlur ? 'h' : ''}>
                     <img src={eventImage} alt="event" />
                   </a>
                 }

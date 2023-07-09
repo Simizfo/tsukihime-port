@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import tsukiLogo from "../assets/game/menus/tsukihime-logo.webp"
-import audio from '../utils/AudioManager'
+//import audio from '../utils/AudioManager'
 import '../styles/title-menu.scss'
 import ParticlesComponent from '../components/ParticlesComponent'
+import { SCREEN, displayMode } from '../utils/variables'
 
 const TitleMenuScreen = () => {
 
@@ -13,7 +14,9 @@ const TitleMenuScreen = () => {
   //     audio.playTrack("menuTheme", true)
   //   }
   // }, [])
-
+  useEffect(()=> {
+    displayMode.screen = SCREEN.TITLE
+  }, [])
   return (
     <div className="page" id="title-menu">
 

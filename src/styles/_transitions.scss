@@ -34,3 +34,87 @@ $size: 25px;
 
   animation-name: #{$prefix}shutter;
 }
+
+*[fade-in], *[fade-out] {
+  animation-duration: var(--transition-time); // var --transition-time changed in inline css
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+*[fade-out="crossfade"] {
+  animation-name: crossfade;
+}
+
+*[fade-out="lmaskcross"],
+*[fade-out="rmaskcross"],
+*[fade-out="lscroll"],
+*[fade-out="rscroll"] {
+  $linear-gradient: linear-gradient(to right, transparent 20%, #fff 40%, #fff 60%, transparent 80%);
+  mask-image: $linear-gradient;
+  -webkit-mask-image: $linear-gradient;
+  mask-size: 500%;
+  -webkit-mask-size: 500%;
+}
+
+*[fade-out="lmaskcross"],
+*[fade-out="lscroll"] {
+  @include scroll("l", left);
+}
+
+*[fade-out="rmaskcross"],
+*[fade-out="rscroll"] {
+  @include scroll("r", right);
+}
+
+*[fade-out="lshutter"],
+*[fade-out="rshutter"],
+*[fade-out="lcartain"],
+*[fade-out="rcartain"] {
+  $linear-gradients: linear-gradient(to right, transparent 50%, #fff 50%),
+      linear-gradient(to right, transparent 50%, #fff 50%);
+  mask-image: $linear-gradients;
+  -webkit-mask-image: $linear-gradients;
+  mask-size: 50px 100%, 50px 100%;
+  -webkit-mask-size: 50px 100%, 50px 100%;
+  mask-repeat: repeat;
+  -webkit-mask-repeat: repeat;
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+}
+
+*[fade-out="tshutter"],
+*[fade-out="bshutter"],
+*[fade-out="tcartain"],
+*[fade-out="bcartain"] {
+  $linear-gradients: linear-gradient(to bottom, transparent 50%, #fff 50%),
+      linear-gradient(to bottom, transparent 50%, #fff 50%);
+  mask-image: $linear-gradients;
+  -webkit-mask-image: $linear-gradients;
+  mask-size: 100% 50px, 100% 50px;
+  -webkit-mask-size: 100% 50px, 100% 50px;
+  mask-repeat: repeat;
+  -webkit-mask-repeat: repeat;
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+}
+
+*[fade-out="lshutter"],
+*[fade-out="lcurtain"] {
+  @include shutter('l', ($size 0), ($size * 2 0));
+}
+
+*[fade-out="rshutter"],
+*[fade-out="rcurtain"] {
+  @include shutter('r', ($size 0), (0 0));
+}
+
+*[fade-out="tshutter"],
+*[fade-out="tcurtain"] {
+  @include shutter('t', (0 $size), (0 $size * 2));
+}
+
+[fade-out="bshutter"],
+[fade-out="bcurtain"] {
+  @include shutter('b', (0 $size), (0 0));
+}

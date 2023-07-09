@@ -28,7 +28,7 @@ export const fetchF = async (sceneNumber: number):Promise<any> => {
   let i = 0
   let start = false
   let end = false
-  lines.forEach((line, index) => {
+  lines.forEach((line, _index) => {
     if (line === ('*f' + sceneNumber)) {
       start = true
     }
@@ -134,15 +134,18 @@ export function convertText(text: string, key: any = undefined): JSX.Element {
 }
 
 export function objectMatch(toTest: Object, minKeys: Object, useSymbols=true): boolean {
-	for(let p of [...Object.getOwnPropertyNames(minKeys), ...(useSymbols ? Object.getOwnPropertySymbols(minKeys) : [])]) {
+  const props = [
+    ...Object.getOwnPropertyNames(minKeys),
+    ...(useSymbols ? Object.getOwnPropertySymbols(minKeys) : [])]
+	for(let p of props) {
 		if(!(p in toTest) || (minKeys as any)[p] !== (toTest as any)[p])
 			return false;
 	}
 	return true;
 }
 
-export function objectsEqual(obj1: Object, obj2: Object) {
-	return objectMatch(obj1, obj2) && objectMatch(obj2, obj1);
+export function objectsEqual(obj1: Object, obj2: Object, useSymbols=true) {
+	return objectMatch(obj1, obj2, useSymbols) && objectMatch(obj2, obj1, useSymbols)
 }
 
 export function objectsMerge(dest: Object, src: Object, override=false) {
