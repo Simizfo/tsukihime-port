@@ -161,7 +161,7 @@ function createImg(pos: SpritePos,
   }
   else {
     const folder: string = settings.imagesFolder
-    const extension = folder === 'image' ? 'jpg' : 'webp';
+    const extension = folder === 'image' && !image.includes("tachi") ? 'jpg' : 'webp';
     return (
       <img
         src={`${folder}/${image}.${extension}`}
