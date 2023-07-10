@@ -257,11 +257,3 @@ export class Queue<T> {
     return this.buffer[Symbol.iterator]()
   }
 }
-
-/**
- * "*5" -> track05.mp3
- */
-export function getTrackFile(track: string): string {
-  const paddedNumber = track.replace(/\D/g, '').padStart(2, '0');
-  return `track${paddedNumber}.mp3`;
-}
