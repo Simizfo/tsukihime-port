@@ -3,7 +3,7 @@ import { Choice } from "../types"
 import { displayMode, gameContext } from "../utils/variables"
 import { observe, unobserve } from "../utils/Observer"
 import { fetchChoices } from "../utils/utils"
-import script from "../utils/ScriptManager"
+import script from "../utils/script"
 
 const choicesContainer: {choices: Choice[]} = {
   choices: []

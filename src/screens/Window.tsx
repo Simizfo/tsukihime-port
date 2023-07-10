@@ -9,7 +9,7 @@ import MenuLayer from '../layers/MenuLayer';
 import { HISTORY_MAX_PAGES } from '../utils/constants';
 import KeyMap from '../utils/KeyMap';
 
-import script from '../utils/ScriptManager';
+import script from '../utils/script';
 import { SCREEN, displayMode, gameContext } from '../utils/variables';
 import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
 
