@@ -133,33 +133,47 @@ export function convertText(text: string, key: any = undefined): JSX.Element {
     return <span>{...nodes}</span>
 }
 
-export function objectMatch(toTest: Object, minKeys: Object, useSymbols=true): boolean {
+export function objectMatch(toTest: {[key:PropertyKey]: any}, minKeys: {[key:PropertyKey]: any}, useSymbols=true): boolean {
   const props = [
     ...Object.getOwnPropertyNames(minKeys),
     ...(useSymbols ? Object.getOwnPropertySymbols(minKeys) : [])]
 	for(let p of props) {
-		if(!(p in toTest) || (minKeys as any)[p] !== (toTest as any)[p])
-			return false;
+    if (!(p in toTest))
+      return false
+		if(minKeys[p] !== toTest[p]) {
+      if (minKeys[p] instanceof Object && toTest[p] instanceof Object)
+        return objectMatch(toTest[p], minKeys[p])
+      return false;
+    }
 	}
 	return true;
 }
 
-export function objectsEqual(obj1: Object, obj2: Object, useSymbols=true) {
+export function objectsEqual(obj1: {[key:PropertyKey]: any}, obj2: {[key:PropertyKey]: any}, useSymbols=true) {
 	return objectMatch(obj1, obj2, useSymbols) && objectMatch(obj2, obj1, useSymbols)
 }
 
-export function objectsMerge(dest: Object, src: Object, {override=false, copyNamed=true, copySymbols=true} = {}) {
+export function objectsMerge(dest: {[key:PropertyKey]: any}, src: {[key:PropertyKey]: any}, {override=false, copyNamed=true, copySymbols=true} = {}) {
   const props = [
     ...(copyNamed ? Object.getOwnPropertyNames(src) : []),
     ...(copySymbols ? Object.getOwnPropertySymbols(src) : [])]
-  console.log(dest, src)
 	for(let p of props) {
-    if (!(p in dest))
-      (dest as any)[p] = (src as any)[p]
-    else if (typeof ((dest as any)[p]) == "object" && typeof ((src as any)[p]) == "object")
-      objectsMerge((dest as any)[p], (src as any)[p], {override, copyNamed, copySymbols})
-    else if (override)
-      (dest as any)[p] = (src as any)[p]
+    if (src[p]?.constructor == Object) {
+      if (dest[p]?.constructor == Object)
+        objectsMerge(dest[p], src[p], {override, copyNamed, copySymbols})
+      else if (!(p in dest) || override)
+        dest[p] = objectsMerge({}, src[p], {override, copyNamed, copySymbols})
+    } else if (src[p]?.constructor == Array) {
+      if (dest[p]?.constructor == Array) {
+        if (override)
+          dest[p].splice(0, dest[p].length)
+        dest[p].push(src[p].slice(dest[p].length))
+      } else if (!(p in dest) || override) {
+        dest[p] = Array.from(src[p])
+      }
+    } else if (!(p in dest) || override) {
+      dest[p] = src[p]
+    }
 	}
   return dest
 }

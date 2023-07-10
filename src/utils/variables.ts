@@ -1,6 +1,6 @@
-import { observe } from "./Observer"
+import { observe, observeChildren } from "./Observer"
 import { IMAGES_FOLDERS, TEXT_SPEED } from "./constants"
-import { objectMatch, objectsMerge } from "./utils"
+import { objectMatch, objectsEqual, objectsMerge } from "./utils"
 
 //##############################################################################
 //#                          ENGINE-RELATED VARIABLES                          #
@@ -21,26 +21,31 @@ const defaultsSettings = {
   },
 }
 
-// deep-copy defaultsSettings
-export const settings = objectsMerge({}, defaultsSettings) as typeof defaultsSettings
 // load from file
-const savedSettings = JSON.parse(localStorage.getItem('permanent')||"{}")
-objectsMerge(settings, savedSettings, {override: true})
+const savedSettings = (()=>{
+  const fileContent = localStorage.getItem('permanent')
+  if (fileContent && fileContent.length > 0)
+    return JSON.parse(fileContent)
+  else
+    // deep-copy defaultsSettings
+    return objectsMerge({}, defaultsSettings)
+})()
+// deep-copy savedSettings
+export const settings = objectsMerge({}, savedSettings) as typeof defaultsSettings
 
-function saveSettings() {
-  if (!objectMatch(settings, savedSettings)) {
+function saveSettings(...args: any[]) {
+  console.log(args)
+  if (!objectMatch(savedSettings, settings, false)) {
     objectsMerge(savedSettings, settings, {override: true, copySymbols: false})
     localStorage.setItem('permanent', JSON.stringify(savedSettings))
   }
 }
 
 observe(settings, 'imagesFolder', saveSettings)
-observe(settings, 'eventImages', saveSettings)
 observe(settings, 'textSpeed', saveSettings)
 observe(settings, 'galleryBlur', saveSettings)
-observe(settings.volume, 'master', saveSettings)
-observe(settings.volume, 'track', saveSettings)
-observe(settings.volume, 'se', saveSettings)
+observeChildren(settings, 'eventImages', saveSettings)
+observeChildren(settings, 'volume', saveSettings)
 
 //_________________________________display mode_________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
