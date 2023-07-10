@@ -6,6 +6,7 @@ import GalleryCharComponent from '../components/GalleryCharComponent'
 import Fancybox from "../components/Fancybox"
 import '../styles/gallery.scss'
 import { settings } from '../utils/variables'
+import { motion } from 'framer-motion'
 
 const defaultImg = "/image_x2/notreg.webp"
 
@@ -62,7 +63,11 @@ const GalleryScreen = () => {
   }
 
   return (
-    <div className="page" id="gallery">
+    <motion.div
+      className="page" id="gallery"
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{opacity: 0}}>
       <div className="page-content">
         <main>
           <div className="gallery-char-container">
@@ -119,7 +124,7 @@ const GalleryScreen = () => {
 
         <Link to="/title" className="back-button">Back</Link>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

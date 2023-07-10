@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import '../styles/game.scss';
+import { motion } from 'framer-motion'
 import HistoryLayer from '../layers/HistoryLayer';
 import { Queue, objectMatch } from '../utils/utils';
 import ChoicesLayer from '../layers/ChoicesLayer';
@@ -154,7 +155,12 @@ const Window = () => {
   }
 
   return (
-    <div className="window" ref={rootElmtRef}>
+    <motion.div
+      className="window" ref={rootElmtRef}
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{scale: 1.5, opacity: 0}}
+      transition={{duration: 0.5}}>
       <HistoryLayer pages={history.current} text={text??""} />
 
       <GraphicsLayer />
@@ -164,7 +170,7 @@ const Window = () => {
 
       <ChoicesLayer />
       <MenuLayer />
-    </div>
+    </motion.div>
   )
 }
 

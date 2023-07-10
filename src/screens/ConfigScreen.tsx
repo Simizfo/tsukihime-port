@@ -4,6 +4,7 @@ import '../styles/config.scss'
 import { IMAGES_FOLDERS, TEXT_SPEED } from '../utils/constants'
 import { SCREEN, displayMode, settings } from '../utils/variables'
 import { observe, unobserve } from '../utils/Observer'
+import { motion } from 'framer-motion'
 
 const ConfigScreen = () => {
   
@@ -47,7 +48,11 @@ const ConfigScreen = () => {
   }, [])
 
   return (
-    <div className="page" id="config">
+    <motion.div
+      className="page" id="config"
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{opacity: 0}}>
       <div className="page-content">
         <main>
           <div>
@@ -94,7 +99,7 @@ const ConfigScreen = () => {
 
         <Link to="/title" className="back-button">Back</Link>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
