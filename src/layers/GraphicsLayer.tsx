@@ -36,15 +36,15 @@ export function moveBg(direction: string) {
   const positions: Array<typeof displayMode.bgAlignment>
       = ["top", "center", "bottom"]
   let index = positions.indexOf(displayMode.bgAlignment)
-  if (direction == "down" && index < 2) index++;
-  else if(direction == "up" && index > 0) index--;
+  if (direction == "down" && index < 2) index++
+  else if(direction == "up" && index > 0) index--
   displayMode.bgAlignment = positions[index]
 }
 //_______________________________script commands________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 function processImageCmd(arg: string, cmd: string, onFinish: VoidFunction) {
-  let args = arg.split(',')
+  const args = arg.split(',')
   let pos:string = 'bg',
       image:string = '',
       type:string = ''
@@ -69,9 +69,9 @@ function processImageCmd(arg: string, cmd: string, onFinish: VoidFunction) {
 
   type = type?.replace('%', '')
 
-  setSprite(pos as SpritePos, image);
+  setSprite(pos as SpritePos, image)
 
-  const {effect, duration} = getTransition(type);
+  const {effect, duration} = getTransition(type)
   transition.effect = effect
   transition.duration = duration
   transition.pos = pos as SpritePos|'a'
@@ -84,13 +84,13 @@ function processImageCmd(arg: string, cmd: string, onFinish: VoidFunction) {
   }
 
   if (duration > 0) {
-    displayMode.text = false;
+    displayMode.text = false
     // Listen for the 'duration' to be set to 0
     // The component sets it to 0 after completing the animation,
     // and calling 'next' the command also sets it to 0
     const callback = (duration: number)=> {
       if (duration == 0) {
-        displayMode.text = true;
+        displayMode.text = true
         unobserve(transition, 'duration', callback)
         onFinish()
       }
@@ -114,7 +114,7 @@ function setSprite(pos: SpritePos|'a', image: string) {
       throw Error("Unexpected image parameter with 'a' position")
     clearAllSprites()
   } else if (['l', 'c', 'r', 'bg'].includes(pos)) {
-    gameContext.graphics[pos as 'c'|'l'|'r'|'bg'] = image;
+    gameContext.graphics[pos as 'c'|'l'|'r'|'bg'] = image
   }
 }
 const commands = {
@@ -144,15 +144,15 @@ function getTransition(type: string, skipTransition = false) {
   const index = effect.lastIndexOf('_')
   if (index !== -1) {
     if (!skipTransition) {
-      let speed = effect.substring(index+1);
+      let speed = effect.substring(index+1)
       switch(speed) {
         case 'slw': duration = 1500; break
         case 'mid': duration = 800; break
         case 'fst': duration = 400; break
-        default : throw Error(`Ill-formed effect '${effect}'`);
+        default : throw Error(`Ill-formed effect '${effect}'`)
       }
     }
-    effect = effect.substring(0, index);
+    effect = effect.substring(0, index)
   }
   return {effect, duration}
 }
@@ -161,7 +161,7 @@ function createImg(pos: SpritePos,
                    image = gameContext.graphics[pos],
                    attrs: {[key:string]: any} = {}) {
 
-  image = image||"#00000000";
+  image = image||"#00000000"
   if (image.startsWith('#')) {
     return (
       <div
@@ -172,7 +172,7 @@ function createImg(pos: SpritePos,
   }
   else {
     const folder: string = settings.imagesFolder
-    const extension = folder === 'image' && !image.includes("tachi") ? 'jpg' : 'webp';
+    const extension = folder === 'image' && !image.includes("tachi") ? 'jpg' : 'webp'
     return (
       <img
         src={`${folder}/${image}.${extension}`}
@@ -185,7 +185,7 @@ function createImg(pos: SpritePos,
 
 function createTransitionGroup(pos : SpritePos, prevImage: string, currImage: string, _attrs: {[key:string]:any}) {
   const {duration, effect} = transition
-  let {className, ...attrs} = _attrs;
+  let {className, ...attrs} = _attrs
   className = (className?+className+" ":"")+pos
   if (duration > 0 && prevImage != currImage) {
     return <Fragment key={currImage}>
@@ -257,7 +257,7 @@ export const GraphicsLayer = memo(function() {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   const onAnimationEnd = ()=> {
-    transition.duration = 0;
+    transition.duration = 0
     timer.current = null
   }
 
