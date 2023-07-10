@@ -25,44 +25,6 @@ export enum TEXT_SPEED {
   slow = 50,
 }
 
-export const initialContextState = {
-  disp: {
-    text: true,
-    history: false,
-    choices: false,
-    menu: false,
-  },
-  game: {
-    scene: 22,
-    index: 0,
-    bg: {
-      image: "",
-      type: "",
-    },
-    regard: {
-      ark: 0,
-      ciel: 0,
-      akiha: 0,
-      kohaku: 0,
-      hisui: 0,
-    },
-    track: "",
-    looped_se: "",
-    variables: [],
-  },
-  permanent: {
-    imagesFolder: IMAGES_FOLDERS.image_x2,
-    eventImages: [],
-    textSpeed: TEXT_SPEED.normal,
-    galleryBlur: true,
-    volume: {
-      master: 1,
-      track: 1,
-      se: 1,
-    },
-  }
-}
-
 export const HISTORY_MAX_PAGES = 20
 
 export const GALLERY_IMAGES = {

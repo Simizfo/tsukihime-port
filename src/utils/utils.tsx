@@ -28,7 +28,7 @@ export const fetchF = async (sceneNumber: number):Promise<any> => {
   let i = 0
   let start = false
   let end = false
-  lines.forEach((line, index) => {
+  lines.forEach((line, _index) => {
     if (line === ('*f' + sceneNumber)) {
       start = true
     }
@@ -133,26 +133,47 @@ export function convertText(text: string, key: any = undefined): JSX.Element {
     return <span>{...nodes}</span>
 }
 
-export function objectMatch(toTest: Object, minKeys: Object, useSymbols=true): boolean {
-	for(let p of [...Object.getOwnPropertyNames(minKeys), ...(useSymbols ? Object.getOwnPropertySymbols(minKeys) : [])]) {
-		if(!(p in toTest) || (minKeys as any)[p] !== (toTest as any)[p])
-			return false;
+export function objectMatch(toTest: {[key:PropertyKey]: any}, minKeys: {[key:PropertyKey]: any}, useSymbols=true): boolean {
+  const props = [
+    ...Object.getOwnPropertyNames(minKeys),
+    ...(useSymbols ? Object.getOwnPropertySymbols(minKeys) : [])]
+	for(let p of props) {
+    if (!(p in toTest))
+      return false
+		if(minKeys[p] !== toTest[p]) {
+      if (minKeys[p] instanceof Object && toTest[p] instanceof Object)
+        return objectMatch(toTest[p], minKeys[p])
+      return false;
+    }
 	}
 	return true;
 }
 
-export function objectsEqual(obj1: Object, obj2: Object) {
-	return objectMatch(obj1, obj2) && objectMatch(obj2, obj1);
+export function objectsEqual(obj1: {[key:PropertyKey]: any}, obj2: {[key:PropertyKey]: any}, useSymbols=true) {
+	return objectMatch(obj1, obj2, useSymbols) && objectMatch(obj2, obj1, useSymbols)
 }
 
-export function objectsMerge(dest: Object, src: Object, override=false) {
-	for(let p of [...Object.getOwnPropertyNames(src), ...Object.getOwnPropertySymbols(src)]) {
-    if (!(p in dest))
-      (dest as any)[p] = (src as any)[p]
-    else if (typeof ((dest as any)[p]) == "object" && typeof ((src as any)[p]) == "object")
-      objectsMerge((dest as any)[p], (src as any)[p], override)
-    else if (override)
-      (dest as any)[p] = (src as any)[p]
+export function objectsMerge(dest: {[key:PropertyKey]: any}, src: {[key:PropertyKey]: any}, {override=false, copyNamed=true, copySymbols=true} = {}) {
+  const props = [
+    ...(copyNamed ? Object.getOwnPropertyNames(src) : []),
+    ...(copySymbols ? Object.getOwnPropertySymbols(src) : [])]
+	for(let p of props) {
+    if (src[p]?.constructor == Object) {
+      if (dest[p]?.constructor == Object)
+        objectsMerge(dest[p], src[p], {override, copyNamed, copySymbols})
+      else if (!(p in dest) || override)
+        dest[p] = objectsMerge({}, src[p], {override, copyNamed, copySymbols})
+    } else if (src[p]?.constructor == Array) {
+      if (dest[p]?.constructor == Array) {
+        if (override)
+          dest[p].splice(0, dest[p].length)
+        dest[p].push(src[p].slice(dest[p].length))
+      } else if (!(p in dest) || override) {
+        dest[p] = Array.from(src[p])
+      }
+    } else if (!(p in dest) || override) {
+      dest[p] = src[p]
+    }
 	}
   return dest
 }
@@ -162,9 +183,19 @@ export function isDigit(str: string, index: number = 0) {
   return char >= '0' && char <= '9'
 }
 
+/**
+ * A FIFO queue of objects
+ * Can be used as a history the keeps only the last N entries.
+ */
 export class Queue<T> {
   private buffer: T[]
   private limit: number
+  /**
+   * @param init_elmts initial elements in the buffer.
+   * @param limit if > 0, there is no limit. Defaults to 0.
+   *              If {@link init_elmts} is a Queue and {@link limit} = 0,
+   *              the limit is copied from the copied queue.
+   */
   constructor(init_elmts: Iterable<T> = [], limit: number = 0) {
     this.buffer = Array.from(init_elmts)
     if (limit == 0 && init_elmts instanceof Queue)
@@ -172,52 +203,58 @@ export class Queue<T> {
     else
       this.limit = limit
   }
+  /**
+   * number of items in the queue
+   */
+  get length() {
+    return this.buffer.length
+  }
+  /**
+   * Remove the oldest elements to fit the buffer size
+   * in the specified limit.
+   * Nothing happens if the limit is not set (= 0).
+   */
   private clean() {
     if (this.limit > 0 && this.buffer.length > this.limit)
       this.buffer.splice(0, this.buffer.length - this.limit)
   }
+  /**
+   * Empty the buffer.
+   */
+  clear() {
+    this.buffer.splice(0, this.buffer.length)
+  }
+  /**
+   * Append the element at the end of the queue.
+   * If the limit is exceeded, remove the oldest elements
+   * @param elmt element to insert
+   * @returns this
+   */
   push(elmt: T): Queue<T> {
     this.buffer.push(elmt)
     this.clean()
     return this
   }
+  /**
+   * Remove and return the oldest element in the queue
+   * @returns the removed item
+   */
   pop(): T|undefined {
     return this.buffer.shift()
   }
+  /**
+   * Get the element at the specified index in the buffer
+   * @param index index of the element to get
+   * @returns the element in the buffer at {@link index}
+   */
   get(index: number) {
     if (index >= 0)
       return this.buffer[index]
     else
       return this.buffer[this.buffer.length+index]
   }
-  clear() {
-    this.buffer.splice(0, this.buffer.length)
-  }
   [Symbol.iterator]() {
     return this.buffer[Symbol.iterator]()
-  }
-  get length() {
-    return this.buffer.length
-  }
-}
-
-/**
- * Move background up or down
- */
-export function moveBg(dir: string) {
-  if (!["up", "down"].includes(dir))
-    throw Error(`Illegal argument ${dir}`)
-
-  const positions = ['top', 'center', 'bottom']
-  const bgClass = document.querySelector('.background')?.classList
-
-  const currentPosition = positions.findIndex(pos => bgClass?.contains(pos));
-
-  if (currentPosition !== -1) {
-    bgClass?.replace(
-      positions[currentPosition],
-      positions[currentPosition + (dir === 'up' ? -1 : 1)] || positions[currentPosition]
-    )
   }
 }
 

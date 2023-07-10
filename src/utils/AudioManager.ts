@@ -1,3 +1,7 @@
+import { observe } from "./Observer";
+import { STRALIAS_JSON } from "./constants";
+import { settings, gameContext, displayMode, SCREEN } from "./variables";
+
 //##############################################################################
 //#                             AudioManager class                             #
 //##############################################################################
@@ -238,7 +242,71 @@ class AudioManager {
 //#                         Application-specific code                          #
 //##############################################################################
 
-const audio = new AudioManager()
-//TODO: map all tracks to their path
+export const audio = new AudioManager()
 
-export default audio
+//_______________________________register sounds________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+for(const [key, value] of Object.entries(STRALIAS_JSON)) {
+  if (/^se\d+$/.test(key))
+    audio.setSoundFileUrl(key, value as string)
+}
+
+for (let i=1; i <= 10; i++) {
+  // "*5" -> CD/track05.mp3
+  const paddedNumber = i.toString().padStart(2,'0')
+  audio.setSoundFileUrl(`"*${i}"`, `CD/track${paddedNumber}.mp3`)
+}
+
+//_______________________________react to changes_______________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+function playTrack(name: string) {
+  if (name?.length > 0)
+    audio.playTrack(name, true)
+  else
+    audio.stopTrack()
+}
+function loopSE(name: string) {
+  if (name?.length > 0)
+    audio.playSE(name, true)
+  else
+    audio.stopSE()
+}
+observe(gameContext.audio, 'track', (name)=> {
+  if (displayMode.screen == SCREEN.WINDOW)
+    playTrack(name)
+})
+observe(gameContext.audio, 'looped_se', (name)=> {
+  if (displayMode.screen == SCREEN.WINDOW)
+    loopSE(name)
+})
+
+observe(displayMode, 'screen', (screen)=> {
+  if (screen == SCREEN.WINDOW) {
+    const {track, looped_se} = gameContext.audio
+    playTrack(track)
+    loopSE(looped_se)
+  } else {
+    playTrack('')
+    loopSE('')
+  }
+})
+
+audio.masterVolume = settings.volume.master
+audio.trackVolume = settings.volume.track
+audio.seVolume = settings.volume.se
+observe(settings.volume, 'master' , (v)=>{audio.masterVolume = v})
+observe(settings.volume, 'track'  , (v)=>{audio.trackVolume = v})
+observe(settings.volume, 'se'     , (v)=>{audio.seVolume = v})
+
+//___________________________________commands___________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+export const commands = {
+  'play'    : (arg:string)=> { gameContext.audio.track = arg },
+  'playstop': ()=>           { gameContext.audio.track = "" },
+  'wave'    : (arg:string)=> { audio.playSE(arg) },
+  'waveloop': (arg: string)=>{ gameContext.audio.looped_se = arg },
+  'wavestop': ()=>           { gameContext.audio.looped_se = "" },
+}

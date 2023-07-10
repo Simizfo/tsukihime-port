@@ -1,86 +1,60 @@
-import { useContext, useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import '../styles/game.scss';
-import audio from '../utils/AudioManager';
+import { motion } from 'framer-motion'
 import HistoryLayer from '../layers/HistoryLayer';
-import { Background, Character, Choice, ContextState } from '../types';
-import { Queue, fetchChoices, fetchGoToNextScene, fetchScene, getTrackFile, moveBg, objectMatch } from '../utils/utils';
+import { Queue, objectMatch } from '../utils/utils';
 import ChoicesLayer from '../layers/ChoicesLayer';
-import CharactersLayer from '../layers/CharactersLayer';
 import TextLayer from '../layers/TextLayer';
-import BackgroundLayer from '../layers/BackgroundLayer';
-import { store } from '../context/GameContext';
 import MenuLayer from '../layers/MenuLayer';
-import { HISTORY_MAX_PAGES, STRALIAS_JSON } from '../utils/constants';
+import { HISTORY_MAX_PAGES } from '../utils/constants';
 import KeyMap from '../utils/KeyMap';
 
-const INIT_SCENE = 22
+import script from '../utils/script';
+import { SCREEN, displayMode, gameContext } from '../utils/variables';
+import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
+
+const keyMap = new KeyMap({
+  "next":     [()=> objectMatch(displayMode, {menu: false, choices: false, history: false}),
+              {key: "Enter", repeat: false},
+              {key: "Control", repeat: true},
+              {key: "ArrowDown", repeat: false},
+              {key: "ArrowRight", repeat: false}],
+  "history":  [()=> objectMatch(displayMode, {text: true, menu: false, history: false}),
+              {key: "ArrowUp", repeat: false},
+              {key: "ArrowLeft", repeat: false}],
+  "graphics": {code: "Space", repeat: false, [KeyMap.condition]: ()=>objectMatch(displayMode, {menu: false, history: false})},
+  "menu":     {key: "Escape", repeat: false, [KeyMap.condition]: ()=>!displayMode.menu },
+  "back":     {key: "Escape", repeat: false},
+  "save":     {key: "S", ctrlKey: true},
+  "bg_move":  [()=> objectMatch(displayMode, {menu: false, history: false}),
+              {key: "ArrowUp", ctrlKey: true, repeat: false, [KeyMap.args]: "up"},
+              {key: "ArrowDown", ctrlKey: true, repeat: false, [KeyMap.args]: "down"}]
+})
 
 const Window = () => {
-  const { state, dispatch } = useContext(store)
-  const [sceneNumber, setSceneNumber] = useState(INIT_SCENE)
-  const [scene, setScene] = useState<string[]>([])
-  const [choices, setChoices] = useState<Choice[]>([])
-  const [lineIdx, setLineIdx] = useState<number>(0) //line index in scene file
-  const [text, setText] = useState<string[]>([]) //text on current page
-  const [pages, setPages] = useState<Queue<string[]>>(new Queue([], HISTORY_MAX_PAGES))
-  const [bg, setBg] = useState<Background>(state.game.bg)
-  const [characters, setCharacters] = useState<Map<string,Character>>(new Map())
-  const lastBreak = useRef<string>('')
-  const [skipBreaks, setSkipBreaks] = useState<number>(0)
+  const [text, setText] = useState<string>("") //text on current page
   const [fastForward, setFastForward] = useState<boolean>(false)
-
-//##############################################################################
-//#                                    INIT                                    #
-//##############################################################################
-
-  useEffect(() => {
-    if (state.game.track !== '' && !audio.isTrackPlaying()) {
-      audio.setSoundFileUrl(state.game.track,  "CD/" + state.game.track),
-      audio.playTrack(state.game.track, true)
-    }
-
-    return () => {
-      audio.stopTrack()
-      audio.stopSE()
-    }
-  }, [])
 
 //##############################################################################
 //#                                   HOOKS                                    #
 //##############################################################################
-  const stateRef = useRef<ContextState>(state)
 
   const rootElmtRef = useRef(null)
 
-  useEffect(()=>{
-    stateRef.current = state
-  }, [state])
+  useEffect(()=> {
+    displayMode.screen = SCREEN.WINDOW
+  }, [])
 
-  const keyMap = useRef<KeyMap>(new KeyMap({
-    "next": [()=> objectMatch(stateRef.current.disp, {menu: false, choices: false, history: false}),
-      {key: "Enter", repeat: false},
-      {key: "Control", repeat: true},
-      {key: "ArrowDown", repeat: false},
-      {key: "ArrowRight", repeat: false}],
-    "history": [()=> objectMatch(stateRef.current.disp, {text: true, menu: false, history: false}),
-      {key: "ArrowUp", repeat: false},
-      {key: "ArrowLeft", repeat: false}],
-    "graphics": {code: "Space", repeat: false, [KeyMap.condition]: ()=>objectMatch(stateRef.current.disp, {menu: false, history: false})},
-    "menu": {key: "Escape", repeat: false, [KeyMap.condition]: ()=>!stateRef.current.disp.menu },
-    "back": {key: "Escape", repeat: false},
-    "save": {key: "S", ctrlKey: true},
-    "bg_move": [()=> objectMatch(stateRef.current.disp, {menu: false, history: false}),
-      {[KeyMap.args]: "up", key: "ArrowUp", ctrlKey: true, repeat: false},
-      {[KeyMap.args]: "down", key: "ArrowDown", ctrlKey: true, repeat: false}]
-  }))
+//_________________________________Key Mapping__________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  keyMap.current.setCallback((action, _event: KeyboardEvent, ...args)=> {
+  keyMap.setCallback((action, _event: KeyboardEvent, ...args)=> {
     switch(action) {
       case "next" : next(); break
       case "history": break // TODO show history
       case "graphics": toggleGraphics(); break
       case "menu" :
-        dispatch({ type: 'SET_DISP_MENU', payload: !state.disp.menu })
+        displayMode.menu = !displayMode.menu
         break
       case "back" : break
       case "save" : return true //prevent default behaviour of Ctrl+S
@@ -93,312 +67,74 @@ const Window = () => {
   useEffect(()=> {
     if (rootElmtRef.current) {
       const elmt = rootElmtRef.current as HTMLElement
-      keyMap.current.enable(elmt, "keydown", {
+      keyMap.enable(elmt, "keydown", {
         capture: false // default if bubble. set to true to change to capture
       })
-      return keyMap.current.disable.bind(keyMap.current, elmt, "keydown")
+      return keyMap.disable.bind(keyMap, elmt, "keydown")
     }
   }, [rootElmtRef.current])
 
-  useEffect(() => {
-    dispatch({ type: 'SET_GAME', payload: { ...state.game, bg: bg } })
-  }, [bg])
-
-  useEffect(() => {
-    audio.masterVolume = state.permanent.volume.master;
-    audio.trackVolume = state.permanent.volume.track;
-    audio.seVolume = state.permanent.volume.se;
-  }, [state.permanent.volume])
 
 //##############################################################################
 //#                              SCENE PROCESSING                              #
 //##############################################################################
 
-  useEffect(()=> {
-    setLineIdx(0)
-    setText([])
-  }, [scene])
+  const textFinished = useRef<boolean>(true)
+  const history = useRef<Queue<string>>(new Queue([], HISTORY_MAX_PAGES))
 
   useEffect(()=> {
-    fetchChoices(sceneNumber).then(setChoices)
-    fetchScene(sceneNumber).then(setScene)
-    dispatch({ type: 'SET_DISP_CHOICES', payload: false })
-  }, [sceneNumber])
+    gameContext.scene = 20;
+    gameContext.index = 0;
+  }, [])
 
-  useEffect(() => {
-    if (choices.length === 0 && state.disp.choices) {
-      fetchGoToNextScene(sceneNumber).then(setSceneNumber)
+  useEffect(function() {
+    script.onText = function(str:string) {
+      //keep fast-forward if previous text did not end with '@' or '\'
+      const trimmed = text.trim()
+      const lastChar = trimmed.charAt(trimmed.length-1)
+      if (['@','\\'].includes(lastChar))
+        setFastForward(false)
+      setText(text+str)
+      textFinished.current = false
     }
-  }, [state.disp.choices])
-
-  const onTextBreak = (breakChar: string)=> {
-    switch(breakChar.charAt(0)) {
-      case '!' : // wait a certain amount of time
-        lastBreak.current = breakChar
-        processTimer(breakChar.substring(2), breakChar.substring(0,2))
-        break
-      case '@' : // waiting for user
-      case '\\' : // page end, waiting for user
-        lastBreak.current = breakChar
-        break
-      case '\n' : // line end, move to next line
-        onLineComplete()
-        break
+    script.onPage = function(){
+      setFastForward(false)
+      if (text) { //TODO: allow empty pages
+        history.current?.push(text)
+        //TODO: include some context in the history: copy variables, active sounds and graphics
+      }
+      setText("")
+    }
+  }, [text])
+  
+  const onTextBreak = ()=> {
+    textFinished.current = true
+    const breakChar = text?.charAt(text.length-1)??""
+    if (!['\\','@'].includes(breakChar)) {
+      script.next()
     }
   }
 
   function next() {
-    if (objectMatch(state.disp, {text: false, menu: false, history: false})) {
-      toggleGraphics()
-    }
-    else if (objectMatch(state.disp, {text: true, menu: false, history: false})) {
-      if (scene[lineIdx].startsWith('`')) {
-        if (lastBreak.current) {// text is stopped at '@' or '\'
-          setFastForward(false)
-          setSkipBreaks(skipBreaks+1)
-        }
-        else {
-          setFastForward(true)
-        }
+    if (objectMatch(displayMode, {menu: false, history: false})) {
+      if (!displayMode.text)
+        toggleGraphics()
+      else if (textFinished.current) {
+        script.next()
       } else {
-        //TODO skip timeout for command
+        setFastForward(true)
       }
     }
-  }
-
-  function onLineComplete() {
-    if (lastBreak.current.startsWith('!')) { // command in middle of text line
-      setSkipBreaks(skipBreaks+1)
-      setFastForward(false)
-    } else {
-      setSkipBreaks(0)
-      if (lastBreak.current == '\\') {
-        setPages(new Queue<string[]>(pages).push(text))
-        setText([])
-      }
-      lastBreak.current = ''
-      setLineIdx(lineIdx+1)
-    }
-  }
-
-  useEffect(()=> {
-    if (scene && scene.length > 0) {
-      const line = scene[lineIdx]
-      //console.log(`[SCRIPT]${lineIdx.toString().padStart(3)}/${scene.length}|${line}`)
-      if (line.startsWith('`')) {
-        setText([...text, line])
-      }
-      else {
-        processCmd(line)
-      }
-    }
-  }, [lineIdx, scene])
-
-  function getVariable(name: string) {
-    return state.game.variables.find(variable => variable.name === name)?.value ?? null;
-  }
-
-  const commands = useMemo(()=> ({
-    'bg'        : processImage,
-    'ld'        : processImage,
-    'cl'        : processImage,
-    'play'      : processAudioCmd,
-    'playstop'  : processAudioCmd,
-    'wave'      : processAudioCmd,
-    'waveloop'  : processAudioCmd,
-    'wavestop'  : processAudioCmd,
-    'br'        : processBr,
-    'waittimer' : processTimer,
-    'mov'       : processVarCmd,
-    'add'       : processVarCmd,
-    'sub'       : processVarCmd,
-    'inc'       : processVarCmd,
-    'dec'       : processVarCmd,
-    'return'    : processReturn,
-    'resettimer': null, // all 'waittimer' are immediately after 'resettimer'
-    'gosub'     : null,
-    'goto'      : null,
-    'quakex'    : null, //TODO : vertical shake effect
-    'quakey'    : null, //TODO : horizontal shake effect
-    'monocro'   : null, //TODO : fade screen to monochrome
-  }), [lineIdx, scene])
-
-  function processCmd(line: string) {
-    if (!/^[a-zA-Z\!]/.test(line))
-      return; // not a command (does not start with a letter or a '!')
-    //TODO line that start with '*' are labels used by gosub and goto
-    
-    let func, cmd, args
-
-    if (line.startsWith("!w")) {
-      func = processTimer;
-      [cmd, args] = [line.substring(0, 2), line.substring(2)]
-    } else {
-      const [command, ...rest] = line.split(' ');
-      [cmd, args] = [command, rest.join(' ')];
-      
-      //TODO replace known variables in args ?
-      if (!(cmd in commands)) {
-        console.warn(`Unknown command scene ${sceneNumber}:${lineIdx}[${line}]`)
-        onLineComplete()
-        return
-      }
-  
-      func = commands[cmd as keyof typeof commands]
-    }
-    
-    const wait = func?.(args, cmd)
-    if (!wait) onLineComplete()
-  }
-
-  function processBr() {
-    setText([...text, "br"])
-  }
-
-  function processAudioCmd(arg: string, cmd: string) {
-    let {track, looped_se} = state.game;
-    let name = arg
-    switch(cmd) {
-      case 'play' :
-        track = getTrackFile(name)
-        const path = "CD/" + track
-        audio.setSoundFileUrl(track, path)
-        audio.playTrack(track, true)
-        break
-      case 'playstop' :
-        track = ''
-        audio.stopTrack()
-        break
-      case 'wave' :
-      case 'waveloop' :
-        const loop = (cmd == 'waveloop')
-        looped_se = loop ? name : ''
-        audio.setSoundFileUrl(name, STRALIAS_JSON[name])
-        audio.playSE(name, loop);
-        break
-      case 'wavestop' :
-        looped_se = ''
-        audio.stopSE();
-        break
-    }
-    dispatch({ type: 'SET_GAME', payload: { ...state.game, track: track, looped_se: looped_se } });
-  }
-
-  function processImage(arg: string, cmd: string) {
-    const args = arg.split(',')
-    let pos:string|null = null,
-        image:string|null = null,
-        type:string|null = null
-
-    switch(cmd) {
-      case 'bg': [image, type] = args; break
-      case 'ld': [pos, image, type] = args; break
-      case 'cl': [pos, type] = args; break
-      default : throw Error(`unknown image command ${cmd} ${arg}`)
-    }
-
-    // get image
-    if (image != null) {
-      if (image.startsWith('$')) { // variable
-        image = getVariable(image) as string|null
-        if (image === null)
-          throw Error(`undefined variable for [${cmd} ${arg}]`)
-      }
-      if (image.startsWith('"') && image.endsWith('"')) {
-        // remove ':a;', 'image/', 'image/tachi/', '"', '.jpg'
-        image = image.replace(/:a;|image[\/\\](tachi[\/\\])?|"|\.jpg/g, '')
-      } else if (!image.startsWith('#')) { // not image nor color
-        throw Error(`Ill-formed arguments for [${cmd} ${arg}]`)
-      }
-    }
-    type = type?.replace('%', '')
-
-    switch(cmd) {
-      case 'cl' : {
-        const newCharacters = new Map(characters)
-        newCharacters.delete(pos as string)
-        setCharacters(newCharacters)
-        break
-      }
-      case 'ld' : {
-        const newCharacters = new Map(characters)
-        newCharacters.set(pos as string, {
-          image: image as string,
-          type: type,
-          pos: pos as string
-        })
-        setCharacters(newCharacters)
-        break
-      }
-      case 'bg' :
-        setCharacters(new Map())
-        const bgTmp: Background = {
-          image: image as string,
-          type: type
-        }
-        if (bgTmp.image.includes('event\\')) {
-          dispatch({ type: 'ADD_GAME_EVENT_IMAGE', payload: bgTmp.image })
-        }
-        setBg(bgTmp)
-        return true
-    }
-  }
-
-  function processTimer(arg: string, cmd?: string) {
-    switch (cmd) {
-      case 'waittimer' :
-      case '!w' :
-        const time_to_wait = parseInt(arg)
-        setTimeout(onLineComplete, time_to_wait)
-        return true
-      default :
-        throw Error(`unknown timer command ${cmd} ${arg}`)
-    }
-  }
-
-  function processVarCmd(arg: string, cmd: string) {
-    const [name, ...args] = arg.split(',')
-    let value = getVariable(name);
-    if (value === null && cmd != 'mov')
-      throw Error(`Reading undefined variable. [${cmd} ${arg}]`)
-
-    switch (cmd) {
-      case 'mov' :
-        if (name.startsWith('%'))
-          value = parseInt(args[0])
-        else if (name.startsWith('$'))
-          value = args[0]
-        else
-          throw Error(`Ill-formed variable name in 'mov' command: [${arg}]`)
-        break
-      case 'add' :
-        value += args[0] // can be number or string
-        break
-      case 'sub' :
-        (value as number) -= parseInt(args[0])
-        break
-      case 'inc' :
-        (value as number) += 1
-        break
-      case 'dec' :
-        (value as number) -= 1
-        break
-    }
-    dispatch({ type: 'SET_VAR', payload: {name: name, value: value} })
-  }
-
-  function processReturn() {
-    dispatch({ type: 'SET_DISP_CHOICES', payload: true })
   }
 
   function toggleGraphics() {
-    dispatch({ type: 'SET_DISP_TEXT', payload: !state.disp.text })
+    displayMode.text = !displayMode.text
   }
 
   const handleClick = (evt : MouseEvent) => {
     switch(evt.button) {
       case 0 : // left button
-        if (objectMatch(state.disp, {choices: false, history: false, menu: false})) {
+        if (objectMatch(displayMode, {choices: false, history: false, menu: false})) {
           next()
         }
         break
@@ -419,23 +155,22 @@ const Window = () => {
   }
 
   return (
-    <div className="window" ref={rootElmtRef}>
-      <HistoryLayer pages={pages} text={text} />
+    <motion.div
+      className="window" ref={rootElmtRef}
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{scale: 1.5, opacity: 0}}
+      transition={{duration: 0.5}}>
+      <HistoryLayer pages={history.current} text={text??""} />
 
-      <BackgroundLayer bg={bg} onTransitionEnd={onLineComplete}/>
+      <GraphicsLayer />
 
-      <CharactersLayer characters={Array.from(characters.values())} />
+      <TextLayer text={text??""} immediate={fastForward}
+                 onFinish={onTextBreak} onClick={handleClick} />
 
-      <TextLayer text={text} fastforward={fastForward} skipBreaks={skipBreaks}
-                {...(state.disp.text ? {} : {className:"hide"})}
-                 onBreak={onTextBreak} onClick={handleClick} />
-
-      {state.disp.choices &&
-        <ChoicesLayer choices={choices} setNewScene={setSceneNumber} />
-      }
-
+      <ChoicesLayer />
       <MenuLayer />
-    </div>
+    </motion.div>
   )
 }
 

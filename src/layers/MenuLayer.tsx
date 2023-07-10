@@ -1,9 +1,10 @@
-import { useContext, useEffect, useRef } from "react"
-import { store } from "../context/GameContext"
+import { useEffect, useRef, useState } from "react"
 import { addEventListener } from "../utils/utils"
-import { useNavigate } from "react-router-dom"
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 import { IoClose } from "react-icons/io5"
+import { SCREEN, createSaveState, displayMode, loadSaveState, settings } from "../utils/variables"
+import { observe, unobserve } from "../utils/Observer"
+import { useNavigate } from "react-router-dom"
 
 /**
  * TODO
@@ -13,15 +14,29 @@ import { IoClose } from "react-icons/io5"
  * - charger
  */
 const MenuLayer = () => {
-  const { state, dispatch } = useContext(store)
   const navigate = useNavigate()
   const menuRef = useRef<HTMLDivElement>(null)
+  const [display, setDisplay] = useState<boolean>(displayMode.menu)
+  const [mute, setMute] = useState<boolean>(settings.volume.master == 0)
+
+  useEffect(()=> {
+    const callback = ()=> {
+      setDisplay(displayMode.menu)
+      setMute(settings.volume.master == 0)
+    }
+    observe(displayMode, 'menu', callback)
+    observe(settings.volume, 'master', callback)
+    return ()=> {
+      unobserve(displayMode, 'menu', callback)
+      unobserve(settings.volume, 'master', callback)
+    }
+  }, [])
 
   //on right click disp menu
   useEffect(() => {
     const handleContextMenu = (e: MouseEvent) => {
-      if (e.button === 2 && state.disp.text) {
-        dispatch({ type: 'SET_DISP_MENU', payload: !state.disp.menu })
+      if (e.button === 2 && displayMode.text) {
+        displayMode.menu = !displayMode.menu
       }
     }
     return addEventListener({event: 'contextmenu', handler: handleContextMenu})
@@ -30,8 +45,8 @@ const MenuLayer = () => {
   //on press escape disp menu
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && !state.disp.history) {
-        dispatch({ type: 'SET_DISP_MENU', payload: !state.disp.menu })
+      if (e.key === 'Escape' && !displayMode.history) {
+        displayMode.menu = !displayMode.menu
       }
     }
     return addEventListener({event: 'keydown', handler: handleKeyDown})
@@ -40,57 +55,55 @@ const MenuLayer = () => {
   useEffect(() => {
     //if a left click is made outside the menu, hide it
     const handleClick = (e: MouseEvent) => {
-      if (e.button === 0 && state.disp.menu && !menuRef.current?.contains(e.target as Node)) {
-        dispatch({ type: 'SET_DISP_MENU', payload: false })
+      if (e.button === 0 && displayMode.menu && !menuRef.current?.contains(e.target as Node)) {
+        displayMode.menu = false
       }
     }
     return addEventListener({event: 'mousedown', handler: handleClick})
   })
 
   const graphicMode = () => {
-    dispatch({ type: 'SET_DISP_MENU', payload: false })
-    dispatch({ type: 'SET_DISP_HISTORY', payload: false })
-    dispatch({ type: 'SET_DISP_TEXT', payload: false })
-    dispatch({ type: 'SET_DISP_CHOICES', payload: false })
+    displayMode.menu = false
+    displayMode.history = false
+    displayMode.choices = false
+    displayMode.text = false
   }
 
   const historyMode = () => {
-    dispatch({ type: 'SET_DISP_MENU', payload: false })
-    dispatch({ type: 'SET_DISP_HISTORY', payload: true })
+    displayMode.menu = false
+    displayMode.history = true
   }
 
   const title = () => {
-    navigate('/title')
-    dispatch({ type: 'SET_DISP_MENU', payload: false })
-    dispatch({ type: 'SET_GAME', payload: { ...state.game, track: "" } })
+    navigate(SCREEN.TITLE)
+    displayMode.menu = false
   }
 
   const closeMenu = () => {
-    dispatch({ type: 'SET_DISP_MENU', payload: false })
+    displayMode.menu = false
   }
 
   const quickSave = () => {
-    localStorage.setItem('game', JSON.stringify(state.game))
+    const saveState = createSaveState()
+    localStorage.setItem('game', JSON.stringify(saveState))
     alert('Game saved!')
   }
 
   const quickLoad = () => {
-    const game = localStorage.getItem('game')
-    if (game) {
-      dispatch({ type: 'SET_GAME', payload: JSON.parse(game) })
+    const saveState = localStorage.getItem('game')
+    if (saveState) {
+      loadSaveState(JSON.parse(saveState))
     }
   }
 
   const volume = () => {
-    if (state.permanent.volume.master === 0) {
-      dispatch({ type: 'SET_VOLUME', payload: { master: 1 } })
-    } else {
-      dispatch({ type: 'SET_VOLUME', payload: { master: 0 } })
-    }
+    console.log("volume : ", settings.volume.master)
+    settings.volume.master = (settings.volume.master > 0 ? 0 : 1)
+    console.log("volume : ", settings.volume.master)
   }
 
   return (
-    <nav className={`box box-menu ${state.disp.menu ? "show" : ""}`}>
+    <nav className={`box box-menu ${display ? "show" : ""}`}>
       <div className="menu-container" ref={menuRef}>
         <menu>
           <button onClick={graphicMode}>
@@ -110,7 +123,7 @@ const MenuLayer = () => {
           </button>
           <div className="action-icons">
             <button onClick={volume}>
-              {state.permanent.volume.master === 0 ? <FaVolumeMute /> : <FaVolumeUp />}
+              {mute ? <FaVolumeMute /> : <FaVolumeUp />}
             </button>
             <button onClick={closeMenu}>
               <IoClose />
