@@ -28,7 +28,14 @@ const transition: Transition = {
 //##############################################################################
 //#                                 FUNCTIONS                                  #
 //##############################################################################
-
+export function moveBg(direction: string) {
+  const positions: Array<typeof displayMode.bgAlignment>
+      = ["top", "center", "bottom"]
+  let index = positions.indexOf(displayMode.bgAlignment)
+  if (direction == "down" && index < 2) index++;
+  else if(direction == "up" && index > 0) index--;
+  displayMode.bgAlignment = positions[index]
+}
 //_______________________________script commands________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -149,7 +156,7 @@ function getTransition(type: string, skipTransition = false) {
 function createImg(pos: SpritePos,
                    image = gameContext.graphics[pos],
                    attrs: {[key:string]: any} = {}) {
-  
+
   image = image||"#00000000";
   if (image.startsWith('#')) {
     return (
@@ -228,20 +235,20 @@ export const GraphicsLayer = memo(function() {
 
     for(const pos of POSITIONS)
       observe(gameContext.graphics, pos, imageCallback)
-    
+
     observe(displayMode, 'bgAlignment', setBgAlign)
     observe(transition, 'duration', animCallback)
 
     return ()=> {
       for (const pos of POSITIONS)
         unobserve(gameContext.graphics, pos, imageCallback)
-      
+
       unobserve(displayMode, 'bgAlignment', setBgAlign)
       unobserve(transition, 'duration', animCallback)
     }
 
   }, [])
-  
+
 //__________________________________animations__________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

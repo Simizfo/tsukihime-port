@@ -68,14 +68,17 @@ body {
             &.c { justify-self: center; }
             &.r { justify-self: right; }
 
-            &.bg[bg-align] {
+            &.bg {
                 position: absolute;
                 inset: 0;
                 z-index: 0;
                 display: block;
                 width: inherit;
-                object-position: attr(bg-align);
                 transition: object-position var(--transition-time) ease-out;
+
+                &[bg-align="top"] { object-position: top; }
+                &[bg-align="center"] { object-position: center; }
+                &[bg-align="bottom"] { object-position: bottom; }
             }
 
         }

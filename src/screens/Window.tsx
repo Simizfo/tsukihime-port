@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import '../styles/game.scss';
 import HistoryLayer from '../layers/HistoryLayer';
-import { Queue, moveBg, objectMatch } from '../utils/utils';
+import { Queue, objectMatch } from '../utils/utils';
 import ChoicesLayer from '../layers/ChoicesLayer';
 import TextLayer from '../layers/TextLayer';
 import MenuLayer from '../layers/MenuLayer';
@@ -10,7 +10,7 @@ import KeyMap from '../utils/KeyMap';
 
 import script from '../utils/ScriptManager';
 import { SCREEN, displayMode, gameContext } from '../utils/variables';
-import GraphicsLayer from '../layers/GraphicsLayer';
+import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
 
 const keyMap = new KeyMap({
   "next":     [()=> objectMatch(displayMode, {menu: false, choices: false, history: false}),
