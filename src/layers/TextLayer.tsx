@@ -40,14 +40,14 @@ const TextLayer = memo(({ text, immediate = false, onFinish, ...props }: Props) 
   }, [])
 
   useEffect(()=> {
-    const index = Math.max(
-        text.lastIndexOf('\n', text.length-2),
-        text.lastIndexOf('@', text.length-2))
-    const [previousText, newText] = (index == -1) ? [[], text] :
-        [text.substring(0, index+1).split('\n'), text.substring(index+1)]
-
-    setNewText(newText)
-    setPreviousText(previousText)
+    const previous = previousText.join('\n') + newText
+    if (text.startsWith(previous)) {
+      setPreviousText((previous).split('\n'))
+      setNewText(text.substring(previous.length))
+    } else {
+      setPreviousText([])
+      setNewText(text)
+    }
     setCursor(0)
   }, [text])
 

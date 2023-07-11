@@ -122,58 +122,50 @@ function processIfCmd(arg: string, _: string, onFinish: VoidFunction) {
   if (index == -1)
     throw Error(`no separation between condition and command: "if ${arg}"`)
   const condition = arg.substring(0, index)
-  return checkIfCondition(condition) && processLine(arg.substring(index+1), onFinish)
+  if (checkIfCondition(condition))
+    return processLine(arg.substring(index+1), onFinish)
 
 }
 
 function processText(text: string, cmd:string, onFinish: VoidFunction) {
   // special cases : 'br' and '\' command are transformed into text
-  if (cmd == "br") {
+  if (cmd == "br")
     text = "\n"
-  } else if (cmd == '\\') {
+  else if (cmd == '\\')
     text = "\\"
-  }
-  //make sure the text line ends with a '\n'
+  
+  // make sure the text line ends with a '\n'
   if (!text.endsWith('\n'))
     text = text+'\n'
   
+  // split the text on inline timers.
+  const inlineTimerIndex = text.search('!w');
+  if (inlineTimerIndex >= 0)
+  {
+    const endIndex = text.indexOf(' ', inlineTimerIndex)
+    const textAfter = text.substring(endIndex)
+    const inlineTimer = text.substring(inlineTimerIndex, endIndex)
+    // once the text before the timer is processed,
+    // execute the timer, and then process the remaining text.
+    onFinish = processLine.bind(null, inlineTimer,
+        processLine.bind(null, `\`${textAfter}`, onFinish))
+    text = text.substring(0, inlineTimerIndex)
+  }
+  
   let index
-  let inlineTimer: CommandHandler|undefined
-  // the text is split into tokens at all '@', '!wXXX' and '\'.
+  // the text is split into tokens at all '@' and '\'.
   // tokens are sent one at a time to the script.onText
   // at every call of script.next.
-  // '!wXXX' commands are executed separately
   const next = ()=> {
-    if (inlineTimer) { // timer running.
-      inlineTimer.next() // Fast-forward timer
-    } else if (text.startsWith('\\')) {
+    if (text.startsWith('\\')) {
       newPageCallback()
       onFinish()
-    } else if (text.startsWith('!w')) {
-      const cmdEndIndex = text.search(/ |$/)
-      const time = text.substring(2, cmdEndIndex)
-      text = text.substring(cmdEndIndex)
-      inlineTimer = processTimerCmd('!w', time, ()=> {
-        inlineTimer = undefined;
-        next()
-      })
     } else if (text.length > 0) {
-      index = text.search(/@|\\|!\w|\n/)
+      index = text.search(/@|\\|\n|$/)
       const breakChar = text.charAt(index)
-      let token = text.substring(0, index)
-      switch (breakChar) {
-        case '@' :
-        case '\n' :
-          index ++
-          token += breakChar
-          break;
-        case '\\' :
-          token += breakChar
-          break;
-        case '!' :
-          index = text.indexOf(' ', index)
-          break
-      }
+      let token = text.substring(0, index+1)
+      if (breakChar != '\\')
+        index ++
 
       text = text.substring(index)
       textCallback(token)
@@ -192,6 +184,8 @@ function processText(text: string, cmd:string, onFinish: VoidFunction) {
 /**
  * Execute the script line. Extract the command name and arguments from the line,
  * and calls the appropriate function to process it.
+ * Update currentCommand. When a line must be split into multiple commands,
+ * use this function to process all sub-commands
  * @param line the script line to process
  * @param onFinish callback function called when the line has been processed
  */
@@ -217,11 +211,8 @@ export function processLine(line: string, onFinish: VoidFunction) {
     // execute the '\' command separately
     if (args.endsWith('\\')) {
       args = args.substring(0, args.length-1)
-      const originalOnFinish = onFinish
       //when the first command finishes, execute the '\\' command
-      onFinish = ()=> {
-        processLine('\\', originalOnFinish)
-      }
+      onFinish = processLine.bind(null, '\\', onFinish)
     }
   }
   if (!commands.has(cmd)) {
