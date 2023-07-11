@@ -115,9 +115,12 @@ body {
     .box-text {
         z-index: 2;
         user-select: none;
-        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.5) 90%, rgba(0, 0, 0, 0.2) 100%);
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%,
+                                                 rgba(0, 0, 0, 0.5) 10%,
+                                                 rgba(0, 0, 0, 0.5) 90%,
+                                                 rgba(0, 0, 0, 0.2) 100%);
         padding: 6% 12%;
-        text-shadow: #000 1px 1px, #000 -1px 1px, #000 -1px -1px, #000 1px -1px;
+        text-shadow: #000 1px 1px 1px, #000 -1px 1px 1px, #000 -1px -1px 1px, #000 1px -1px 1px;
         line-height: 1.6em;
         letter-spacing: 1px;
         font-size: clamp(.8em, min(2.5vw, 3.6vh), 1.15em);
@@ -143,7 +146,7 @@ body {
         }
         .dash {
             text-decoration: line-through;
-            text-shadow: #000 0.8px 0.8px, #000 -0.8px 0.8px, #000 -0.8px -0.8px, #000 0.8px -0.8px;
+            text-shadow: #000 .8px .8px .6px, #000 -.8px .8px .6px, #000 -.8px -.8px .6px, #000 .8px -.8px .6px;
         }
         hr {
             border: 0;
