@@ -135,15 +135,18 @@ export function convertText(text: string, key: any = undefined): JSX.Element {
 
 export function objectMatch(toTest: {[key:PropertyKey]: any}, minKeys: {[key:PropertyKey]: any}, useSymbols=true): boolean {
   const props = [
-    ...Object.getOwnPropertyNames(minKeys),
-    ...(useSymbols ? Object.getOwnPropertySymbols(minKeys) : [])]
-	for(let p of props) {
+      ...Object.getOwnPropertyNames(minKeys),
+      ...(useSymbols ? Object.getOwnPropertySymbols(minKeys) : [])]
+	for(const p of props) {
     if (!(p in toTest))
       return false
 		if(minKeys[p] !== toTest[p]) {
-      if (minKeys[p] instanceof Object && toTest[p] instanceof Object)
-        return objectMatch(toTest[p], minKeys[p])
-      return false;
+      if (minKeys[p].constructor != toTest[p].constructor)
+        return false
+      if (minKeys[p].constructor != Object && minKeys[p].constructor != Array)
+        return false
+      if (!objectMatch(toTest[p], minKeys[p], useSymbols))
+        return false
     }
 	}
 	return true;
@@ -153,29 +156,22 @@ export function objectsEqual(obj1: {[key:PropertyKey]: any}, obj2: {[key:Propert
 	return objectMatch(obj1, obj2, useSymbols) && objectMatch(obj2, obj1, useSymbols)
 }
 
-export function objectsMerge(dest: {[key:PropertyKey]: any}, src: {[key:PropertyKey]: any}, {override=false, copyNamed=true, copySymbols=true} = {}) {
+export function overrideAttributes(dest: {[key: PropertyKey]: any}, src: {[key: PropertyKey]: any}, useSymbols=true) {
   const props = [
-    ...(copyNamed ? Object.getOwnPropertyNames(src) : []),
-    ...(copySymbols ? Object.getOwnPropertySymbols(src) : [])]
-	for(let p of props) {
-    if (src[p]?.constructor == Object) {
-      if (dest[p]?.constructor == Object)
-        objectsMerge(dest[p], src[p], {override, copyNamed, copySymbols})
-      else if (!(p in dest) || override)
-        dest[p] = objectsMerge({}, src[p], {override, copyNamed, copySymbols})
-    } else if (src[p]?.constructor == Array) {
-      if (dest[p]?.constructor == Array) {
-        if (override)
-          dest[p].splice(0, dest[p].length)
-        dest[p].push(src[p].slice(dest[p].length))
-      } else if (!(p in dest) || override) {
-        dest[p] = Array.from(src[p])
-      }
-    } else if (!(p in dest) || override) {
+    ...Object.getOwnPropertyNames(src),
+    ...(useSymbols ? Object.getOwnPropertySymbols(src) : [])]
+
+  for (const p of props) {
+    if (src[p]?.constructor == Object) { // deep-copy objects
+      if (dest[p]?.constructor != Object)
+        dest[p] = {}
+      overrideAttributes(dest[p], src[p], useSymbols)
+    } else if (src[p]?.constructor == Array) { // copy arrays
+      dest[p] = src[p].slice(0, src[p].length)
+    } else { // use same value/ref for other attributes
       dest[p] = src[p]
     }
-	}
-  return dest
+  }
 }
 
 export function isDigit(str: string, index: number = 0) {

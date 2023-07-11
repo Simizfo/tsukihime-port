@@ -78,7 +78,8 @@ function processImageCmd(arg: string, cmd: string, onFinish: VoidFunction) {
 
   if (cmd == 'bg') {
     clearAllSprites()
-    if ((image as string).includes('event/')) {
+    if ((image as string).includes('event/') &&
+        !settings.eventImages.includes(image)) {
       settings.eventImages.push(image as string)
     }
   }

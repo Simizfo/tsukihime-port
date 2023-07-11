@@ -1,6 +1,6 @@
 import { observe, observeChildren } from "./Observer"
 import { IMAGES_FOLDERS, TEXT_SPEED } from "./constants"
-import { objectMatch, objectsEqual, objectsMerge } from "./utils"
+import { objectMatch, overrideAttributes } from "./utils"
 
 //##############################################################################
 //#                          ENGINE-RELATED VARIABLES                          #
@@ -22,21 +22,19 @@ const defaultsSettings = {
 }
 
 // load from file
-const savedSettings = (()=>{
+let savedSettings = (()=>{
+  const result = structuredClone(defaultsSettings)
   const fileContent = localStorage.getItem('permanent')
   if (fileContent && fileContent.length > 0)
-    return JSON.parse(fileContent)
-  else
-    // deep-copy defaultsSettings
-    return objectsMerge({}, defaultsSettings)
+    overrideAttributes(result, JSON.parse(fileContent), false)
+  return result
 })()
 // deep-copy savedSettings
-export const settings = objectsMerge({}, savedSettings) as typeof defaultsSettings
+export const settings = structuredClone(savedSettings)
 
-function saveSettings(...args: any[]) {
-  console.log(args)
+function saveSettings() {
   if (!objectMatch(savedSettings, settings, false)) {
-    objectsMerge(savedSettings, settings, {override: true, copySymbols: false})
+    overrideAttributes(savedSettings, settings, false)
     localStorage.setItem('permanent', JSON.stringify(savedSettings))
   }
 }
@@ -189,14 +187,14 @@ export const commands = {
 type SaveState = {context: typeof gameContext, progress: typeof progress}
 
 export function createSaveState(): SaveState {
-  const ss: SaveState = {context: {}, progress: {}} as SaveState
-  objectsMerge(ss.context, gameContext, {copySymbols: false})
-  objectsMerge(ss.progress, progress, {copySymbols: false})
+  const ss: SaveState = {
+    context: structuredClone(gameContext),
+    progress: structuredClone(progress)}
   return ss
 }
 export function loadSaveState(ss: SaveState) {
-  objectsMerge(gameContext, ss.context, {override: true})
-  objectsMerge(progress, ss.progress, {override: true})
+  overrideAttributes(gameContext, ss.context, false)
+  overrideAttributes(progress, ss.progress, false)
 }
 
 //###   PUT IN GLOBAL FOR DEBUG   ###
