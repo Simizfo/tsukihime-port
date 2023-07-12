@@ -198,9 +198,14 @@ export function loadSaveState(ss: SaveState) {
 }
 
 //###   PUT IN GLOBAL FOR DEBUG   ###
+declare global {
+  interface Window {
+    [key: string]: any;
+  }
+}
 window.settings = settings
 window.progress = progress
 window.displayMode = displayMode
-window.gameContext = gameContext
+window.g = window.gameContext = gameContext
 window.temp_vars = temp
 displayMode.screen = SCREEN.WINDOW
