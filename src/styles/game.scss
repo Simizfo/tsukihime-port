@@ -66,7 +66,6 @@ body {
                 &[bg-align="center"] { object-position: center; }
                 &[bg-align="bottom"] { object-position: bottom; }
             }
-
         }
     }
     .box-text {
@@ -83,12 +82,12 @@ body {
         font-size: clamp(.82em, min(2.5vw, 3.6vh), 1.15em);
         opacity: 1;
         transition: var(--transition);
+        transition-property: opacity, z-index;
         overflow-x: hidden;
 
         &.hide {
             z-index: -1;
             opacity: 0;
-            visibility: hidden;
         }
 
         .text-container {
@@ -188,12 +187,12 @@ body {
     }
 
     .box-menu {
-        z-index: -2;
+        z-index: -1;
         background-color: #0006;
-        visibility: hidden;
         display: flex;
         justify-content: flex-end;
         transition: var(--transition);
+        transition-property: opacity, z-index;
         overflow: hidden;
         backdrop-filter: blur(0px);
 
@@ -201,7 +200,6 @@ body {
         &.show {
             z-index: 4;
             backdrop-filter: blur(1px);
-            visibility: visible;
 
             .menu-container {
                 right: 6vw;
@@ -268,6 +266,7 @@ body {
         z-index: -1;
         opacity: 0;
         transition: var(--transition);
+        transition-property: opacity, z-index;
         &.show {
             z-index: 100;
             opacity: 1;
