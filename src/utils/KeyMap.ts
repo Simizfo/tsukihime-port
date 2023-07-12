@@ -126,7 +126,7 @@ export default class KeyMap {
       id = keyEventFilter.code as string
     else {
       id = keyEventFilter.key as string
-      if (/^a-z$/.test(id)) // one lowercase letter
+      if (/^[a-z]$/.test(id)) // one lowercase letter
         id = id.toUpperCase()
     }
     const actions = this.mapping.get(id);
@@ -158,7 +158,7 @@ export default class KeyMap {
     let key = evt.key;
     const code = evt.code;
 
-    if (/^a-z$/.test(key)) // one lowercase letter
+    if (/^[a-z]$/.test(key)) // one lowercase letter
       key = key.toUpperCase()
 
     let actions = this.mapping.get(code) || this.mapping.get(key);
