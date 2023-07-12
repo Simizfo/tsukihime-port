@@ -160,13 +160,16 @@ function getTransition(type: string, skipTransition = false) {
 
 function createImg(pos: SpritePos,
                    image = gameContext.graphics[pos],
-                   attrs: {[key:string]: any} = {}) {
+                   _attrs: {[key:string]: any} = {}) {
 
   image = image||"#00000000"
+  let {className, ...attrs} = _attrs
+  className = (className?+className+" ":"")+pos
   if (image.startsWith('#')) {
     return (
       <div
         style={{ background: image }}
+        className={className}
         {...attrs}
       />
     )
@@ -178,37 +181,10 @@ function createImg(pos: SpritePos,
       <img
         src={`${folder}/${image}.${extension}`}
         alt={`[[sprite:${image}]]`}
+        className={className}
         {...attrs}
       />
     )
-  }
-}
-
-function createTransitionGroup(pos : SpritePos, prevImage: string, currImage: string, _attrs: {[key:string]:any}) {
-  const {duration, effect} = transition
-  let {className, ...attrs} = _attrs
-  className = (className?+className+" ":"")+pos
-  if (duration > 0 && prevImage != currImage) {
-    return <Fragment key={currImage}>
-      {createImg(pos as SpritePos, currImage, {
-        style: {'--transition-time': `${duration}ms`},
-        'fade-in': effect,
-        className: className,
-        ...attrs
-      })}
-      {createImg(pos as SpritePos, prevImage, {
-        style: {'--transition-time': `${duration}ms`},
-        'fade-out': effect,
-        className: className,
-        ...attrs
-      })}
-    </Fragment>
-  } else {
-    return createImg(pos as SpritePos, currImage, {
-      key: pos,
-      className: className,
-      ...attrs
-    })
   }
 }
 
@@ -281,15 +257,51 @@ export const GraphicsLayer = memo(function() {
 
 //____________________________________render____________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  const {pos: trans_pos, duration, effect} = transition
   return (
     <div className="box box-graphics">
-      {POSITIONS.map((pos) =>
-        createTransitionGroup(pos as SpritePos,
-          prevImages[pos as SpritePos],
-          currImages[pos as SpritePos],
-          {...(pos=='bg'?{'bg-align': bgAlign} : {})}
-        )
-      )}
+      {(duration == 0) ? // no animation => display all sprites without effect
+        POSITIONS.map((pos)=> createImg(pos, currImages[pos], {
+          key: currImages[pos]||pos,
+          ...(pos == 'bg' ? {'bg-align': bgAlign} : {})
+        }))
+      : (trans_pos == "bg") ? // special case for background animation :
+                              // only animate fade-in of the background
+                              // on top of all previous sprites unanimated
+        <>
+        {POSITIONS.map((pos)=> createImg(pos, prevImages[pos], {
+          key: prevImages[pos]||pos,
+          ...(pos == 'bg' ? {'bg-align': bgAlign} : {})
+        }))}
+        {createImg('bg', currImages.bg, {
+          key: currImages.bg||'bg',
+          'bg-align': bgAlign,
+          'fade-in': effect,
+          style: {'--transition-time': `${duration}ms`},
+        })}
+        </>
+      : POSITIONS.map((pos)=> // animation of characters: for the animated
+                              // characters, display the new sprite on top of
+                              // the previous sprite. Non-animated sprites
+                              // only have their current sprite displayed
+        <Fragment key={pos}>
+          {(pos != 'bg' && ([pos, 'a'].includes(trans_pos))) &&
+          createImg(pos, prevImages[pos], {
+            key: prevImages[pos]||pos,
+            className: pos,
+            'fade-out': effect,
+            ...(currImages[pos] ? {'to-sprite': currImages[pos]} : {}),
+            style: {'--transition-time': `${duration}ms`},
+            })}
+          {createImg(pos, currImages[pos], {
+            key: currImages[pos]||pos,
+            className: pos,
+            ...((pos != 'bg' && ([pos, 'a'].includes(trans_pos))) ? {
+              'fade-in': effect,
+              style: {'--transition-time': `${duration}ms`},
+            } : {})})}
+        </Fragment>)
+      }
     </div>
   )
 })
