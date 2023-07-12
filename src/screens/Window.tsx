@@ -21,9 +21,11 @@ const keyMap = new KeyMap({
               {key: "ArrowRight", repeat: false}],
   "history":  [()=> objectMatch(displayMode, {text: true, menu: false, history: false}),
               {key: "ArrowUp", repeat: false},
-              {key: "ArrowLeft", repeat: false}],
+              {key: "ArrowLeft", repeat: false},
+              {key: "H", repeat: false},
+              {key: "h", repeat: false}],
   "graphics": {code: "Space", repeat: false, [KeyMap.condition]: ()=>objectMatch(displayMode, {menu: false, history: false})},
-  "menu":     {key: "Escape", repeat: false, [KeyMap.condition]: ()=>!displayMode.menu },
+  "menu":     {key: "Escape", repeat: false, [KeyMap.condition]: ()=>objectMatch(displayMode, {menu: false, history: false})},
   "back":     {key: "Escape", repeat: false},
   "save":     {key: "S", ctrlKey: true},
   "bg_move":  [()=> objectMatch(displayMode, {menu: false, history: false}),
@@ -51,11 +53,9 @@ const Window = () => {
   keyMap.setCallback((action, _event: KeyboardEvent, ...args)=> {
     switch(action) {
       case "next" : next(); break
-      case "history": break // TODO show history
+      case "history": toggleHistory(); break
       case "graphics": toggleGraphics(); break
-      case "menu" :
-        displayMode.menu = !displayMode.menu
-        break
+      case "menu" : toggleMenu(); break
       case "back" : break
       case "save" : return true //prevent default behaviour of Ctrl+S
       case "bg_move" :
@@ -83,7 +83,7 @@ const Window = () => {
   const history = useRef<Queue<string>>(new Queue([], HISTORY_MAX_PAGES))
 
   useEffect(()=> {
-    gameContext.scene = 20;
+    gameContext.scene = 29;
     gameContext.index = 0;
   }, [])
 
@@ -127,8 +127,17 @@ const Window = () => {
     }
   }
 
+  function toggleMenu() {
+    displayMode.menu = !displayMode.menu
+  }
+
   function toggleGraphics() {
     displayMode.text = !displayMode.text
+  }
+
+  function toggleHistory() {
+    displayMode.text = !displayMode.text
+    displayMode.history = !displayMode.history
   }
 
   const handleClick = (evt : MouseEvent) => {
