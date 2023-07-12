@@ -52,11 +52,6 @@ export default class KeyMap {
     for (const [action, evtFilter] of Object.entries(mapping)) {
       if (Array.isArray(evtFilter)) {
         let condition = null
-        let i
-        if (typeof evtFilter[0] == "function") {
-          condition = evtFilter[0]
-          i = 1
-        }
         for (let i = 0; i < evtFilter.length; i++) {
           let filter = evtFilter[i]
           if (typeof filter == "function") {
