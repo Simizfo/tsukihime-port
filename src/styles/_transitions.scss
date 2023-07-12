@@ -48,6 +48,14 @@ $size: 25px;
 
 *[fade-out="crossfade"] { animation-name: fadeOut }
 *[fade-in ="crossfade"] { animation-name: fadeIn  }
+*[for-mask] {
+  -webkit-mask-image: var(--from-image),var(--to-image);
+  mask-image: var(--from-image),var(--to-image);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+}
 
 *[fade-out="lmaskcross"], *[fade-in="lmaskcross"],
 *[fade-out="rmaskcross"], *[fade-in="rmaskcross"],

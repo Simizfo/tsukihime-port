@@ -157,6 +157,11 @@ function getTransition(type: string, skipTransition = false) {
   }
   return {effect, duration}
 }
+function imgUrl(img: string) {
+  const folder: string = settings.imagesFolder
+  const extension = folder === 'image' && !img.includes("tachi") ? 'jpg' : 'webp'
+  return `${folder}/${img}.${extension}`
+}
 
 function createImg(pos: SpritePos,
                    image = gameContext.graphics[pos],
@@ -175,11 +180,9 @@ function createImg(pos: SpritePos,
     )
   }
   else {
-    const folder: string = settings.imagesFolder
-    const extension = folder === 'image' && !image.includes("tachi") ? 'jpg' : 'webp'
     return (
       <img
-        src={`${folder}/${image}.${extension}`}
+        src={imgUrl(image)}
         alt={`[[sprite:${image}]]`}
         className={className}
         {...attrs}
@@ -234,6 +237,7 @@ export const GraphicsLayer = memo(function() {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   const onAnimationEnd = ()=> {
+    console.error("end");
     transition.duration = 0
     timer.current = null
   }
@@ -246,6 +250,7 @@ export const GraphicsLayer = memo(function() {
       timer.current.start()
       return ()=> {
         if (timer.current) {
+          console.error("skip");
           timer.current?.skip()
           timer.current = null
         }
@@ -286,16 +291,27 @@ export const GraphicsLayer = memo(function() {
                               // only have their current sprite displayed
         <Fragment key={pos}>
           {(pos != 'bg' && ([pos, 'a'].includes(trans_pos))) &&
-          createImg(pos, prevImages[pos], {
-            key: prevImages[pos]||pos,
-            className: pos,
-            'fade-out': effect,
-            ...(currImages[pos] ? {'to-sprite': currImages[pos]} : {}),
-            style: {'--transition-time': `${duration}ms`},
+            <>
+            {currImages[pos] && prevImages[pos] && effect=="crossfade" &&
+              // add an opaque background to the image to prevent the background
+              // from being visible by transparency
+              createImg(pos, prevImages[pos], {
+                key: `mask${prevImages[pos]||pos}`,
+                'for-mask': "",
+                style: {
+                  '--from-image': `url(${imgUrl(prevImages[pos])})`,
+                  '--to-image': `url(${imgUrl(currImages[pos])})`
+                }
+              })}
+            {createImg(pos, prevImages[pos], {
+              key: prevImages[pos]||pos,
+              'fade-out': effect,
+              style: {'--transition-time': `${duration}ms`},
             })}
+            </>
+          }
           {createImg(pos, currImages[pos], {
             key: currImages[pos]||pos,
-            className: pos,
             ...((pos != 'bg' && ([pos, 'a'].includes(trans_pos))) ? {
               'fade-in': effect,
               style: {'--transition-time': `${duration}ms`},
