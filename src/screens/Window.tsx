@@ -12,6 +12,7 @@ import KeyMap from '../utils/KeyMap';
 import script from '../utils/script';
 import { SCREEN, displayMode, gameContext } from '../utils/variables';
 import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const keyMap = new KeyMap({
   "next":     [()=> objectMatch(displayMode, {menu: false, choices: false, history: false}),
@@ -177,6 +178,10 @@ const Window = () => {
                  onFinish={onTextBreak} onClick={handleClick} />
 
       <ChoicesLayer />
+
+      <button className="menu-button" onClick={toggleMenu}>
+        <FaArrowLeft />
+      </button>
       <MenuLayer />
     </motion.div>
   )
