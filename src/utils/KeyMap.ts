@@ -1,7 +1,7 @@
 /**
  * Created by Loic France on 12/20/2016.
  */
-import { objectMatch, objectsEqual } from "./utils"
+import { objectsEqual } from "./utils"
 
 export type KeyMapCallback = (action: any, event: KeyboardEvent, ...args: any) => boolean|void
 export type KeyMapCondition = (action: any, event: KeyboardEvent, ...args: any) => boolean
@@ -163,16 +163,22 @@ export default class KeyMap {
       let result = undefined;
       let args = []
       for (let action of actions) {
-        let attrLen = Object.keys(action.keyEventFilter).length; // constraints number, without [KeyMap.condition]
         const filter = action.keyEventFilter;
+        let attrLen = Object.keys(filter).length; // constraints number, without [KeyMap.condition]
         const condition = filter[KeyMap.condition];
         if (condition)
           attrLen+=0.5 // condition function not as important as event attributes
-        if (attrLen > maxAttrLen && objectMatch(evt, filter, false)
-            && (condition?.(action, evt, ...(filter?.[KeyMap.args]??[]))??true)) {
-          maxAttrLen = attrLen;
-          result = action.action;
-          args = filter?.[KeyMap.args]??[]
+        if (attrLen > maxAttrLen) {
+          const filteredEvt = {
+            ...Object.fromEntries(Object.keys(filter).map(k=>[k,evt[k as keyof typeof evt]])),
+            key // override event key
+          } as typeof filter
+          if (!Object.entries(filter).some(([k,v])=>(filteredEvt[k] != v))
+              && (condition?.(action, evt, ...(filter?.[KeyMap.args]??[]))??true)) {
+            maxAttrLen = attrLen;
+            result = action.action;
+            args = filter?.[KeyMap.args]??[]
+          }
         }
       }
       if (result) {
