@@ -79,7 +79,12 @@ const Window = () => {
 //#                              SCENE PROCESSING                              #
 //##############################################################################
 
-  const textFinished = useRef<boolean>(true)
+  /**
+   * - `"running"`: the text is progressively being displayed
+   * - `"idle"`: hit a '@' or '\', and waiting for user to move to next
+   * - `"none"`: current command is not text-related (last text-command has ended)
+   */
+  const textState = useRef<"running"|"idle"|"none">("none")
   const history = useRef<Queue<string>>(new Queue([], HISTORY_MAX_PAGES))
 
   useEffect(()=> {
@@ -95,7 +100,7 @@ const Window = () => {
       if (['@','\\'].includes(lastChar))
         setFastForward(false)
       setText(text+str)
-      textFinished.current = false
+      textState.current = "running"
     }
     script.onPage = function(){
       setFastForward(false)
@@ -108,19 +113,22 @@ const Window = () => {
   }, [text])
   
   const onTextBreak = ()=> {
-    textFinished.current = true
     const breakChar = text?.charAt(text.length-1)??""
     if (!['\\','@'].includes(breakChar)) {
+      textState.current = "none"
       script.next()
+    } else {
+      textState.current = "idle"
     }
   }
 
   function next() {
-    if (objectMatch(displayMode, {menu: false, history: false})) {
-      if (!displayMode.text)
+    if (objectMatch(displayMode, {choices: false, menu: false, history: false})) {
+      if (!displayMode.text && textState.current == "idle") // text has been hidden manually
         toggleGraphics()
-      else if (textFinished.current) {
+      else if (textState.current != 'running') {
         script.next()
+        textState.current = "none"
       } else {
         setFastForward(true)
       }

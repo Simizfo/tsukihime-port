@@ -91,7 +91,6 @@ function processImageCmd(arg: string, cmd: string, onFinish: VoidFunction) {
     // and calling 'next' the command also sets it to 0
     const callback = (duration: number)=> {
       if (duration == 0) {
-        displayMode.text = true
         unobserve(transition, 'duration', callback)
         onFinish()
       }
@@ -213,8 +212,11 @@ export const GraphicsLayer = memo(function() {
     }
 
     const animCallback = (duration: number)=> {
-      if (duration == 0)
+      if (duration == 0) { // skipped the on-going animation, or animation has ended
         setPrevImages({...gameContext.graphics})
+        timer.current?.cancel()
+        timer.current == null
+      }
     }
 
     for(const pos of POSITIONS)
@@ -237,7 +239,6 @@ export const GraphicsLayer = memo(function() {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   const onAnimationEnd = ()=> {
-    console.error("end");
     transition.duration = 0
     timer.current = null
   }
@@ -248,13 +249,6 @@ export const GraphicsLayer = memo(function() {
       //displayMode.text = false
       timer.current = new Timer(duration, onAnimationEnd)
       timer.current.start()
-      return ()=> {
-        if (timer.current) {
-          console.error("skip");
-          timer.current?.skip()
-          timer.current = null
-        }
-      }
     } else {
       onAnimationEnd()
     }

@@ -48,6 +48,8 @@ const TextLayer = memo(({ text, immediate = false, onFinish, ...props }: Props) 
       setPreviousText([])
       setNewText(text)
     }
+    if (!displayMode.text)
+      displayMode.text = true
     setCursor(0)
   }, [text])
 
