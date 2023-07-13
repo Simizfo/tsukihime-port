@@ -25,7 +25,7 @@ const keyMap = new KeyMap({
               {key: "ArrowLeft", repeat: false},
               {key: "H", repeat: false}],
   "graphics": {code: "Space", repeat: false, [KeyMap.condition]: ()=>objectMatch(displayMode, {menu: false, history: false})},
-  "menu":     {key: "Escape", repeat: false, [KeyMap.condition]: ()=>objectMatch(displayMode, {menu: false, history: false})},
+  "menu":     {key: "Escape", repeat: false, [KeyMap.condition]: ()=>objectMatch(displayMode, {history: false})},
   "back":     {key: "Escape", repeat: false},
   "save":     {key: "S", ctrlKey: true},
   "bg_move":  [()=> objectMatch(displayMode, {menu: false, history: false}),
@@ -145,26 +145,11 @@ const Window = () => {
     displayMode.history = !displayMode.history
   }
 
-  const handleClick = (evt : MouseEvent) => {
-    switch(evt.button) {
-      case 0 : // left button
-        if (objectMatch(displayMode, {choices: false, history: false, menu: false})) {
-          next()
-        }
-        break
-      case 1 : // middle button
-        break
-      case 2 : // right button
-        toggleGraphics()
-        break
-      case 3 : // back button
-        //TODO show history
-        break
-      case 4 : // forward button
-        break
-      default :
-        console.error(`unknown mouse button ${evt.button}`)
-        break
+  const onContextMenu = (evt: React.MouseEvent) => {
+    if (objectMatch(displayMode, {choices: false, history: false, menu: false})) {
+      toggleMenu()
+      evt.preventDefault()
+      //TODO: allow menu when choices are displayed
     }
   }
 
@@ -174,13 +159,14 @@ const Window = () => {
       initial={{opacity: 0}}
       animate={{opacity: 1}}
       exit={{scale: 1.5, opacity: 0}}
-      transition={{duration: 0.5}}>
+      transition={{duration: 0.5}}
+      onContextMenu={onContextMenu}>
       <HistoryLayer pages={history.current} text={text??""} />
 
-      <GraphicsLayer />
+      <GraphicsLayer onClick={next} />
 
       <TextLayer text={text??""} immediate={fastForward}
-                 onFinish={onTextBreak} onClick={handleClick} />
+        onFinish={onTextBreak} onClick={next}/>
 
       <ChoicesLayer />
 

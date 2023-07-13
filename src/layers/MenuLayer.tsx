@@ -23,6 +23,10 @@ const MenuLayer = () => {
     const callback = ()=> {
       setDisplay(displayMode.menu)
       setMute(settings.volume.master == 0)
+      if (!displayMode.menu) {
+        if (menuRef.current?.contains(document.activeElement))
+          document.activeElement?.blur?.();
+      }
     }
     observe(displayMode, 'menu', callback)
     observe(settings.volume, 'master', callback)
@@ -32,26 +36,6 @@ const MenuLayer = () => {
     }
   }, [])
 
-  //on right click disp menu
-  useEffect(() => {
-    const handleContextMenu = (e: MouseEvent) => {
-      if (e.button === 2 && displayMode.text) {
-        displayMode.menu = !displayMode.menu
-      }
-    }
-    return addEventListener({event: 'contextmenu', handler: handleContextMenu})
-  })
-
-  //on press escape disp menu
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && !displayMode.history) {
-        displayMode.menu = !displayMode.menu
-      }
-    }
-    return addEventListener({event: 'keydown', handler: handleKeyDown})
-  })
-  
   useEffect(() => {
     //if a left click is made outside the menu, hide it
     const handleClick = (e: MouseEvent) => {
@@ -66,7 +50,7 @@ const MenuLayer = () => {
     displayMode.menu = false
     displayMode.history = false
     displayMode.choices = false
-    displayMode.text = false
+    displayMode.text = !displayMode.text
   }
 
   const historyMode = () => {

@@ -194,7 +194,7 @@ function createImg(pos: SpritePos,
 //#                                 COMPONENT                                  #
 //##############################################################################
 
-export const GraphicsLayer = memo(function() {
+export const GraphicsLayer = memo(function({...props}: {[key: string]: any}) {
 
   const [bgAlign, setBgAlign] = useState<'top'|'center'|'bottom'>(displayMode.bgAlignment)
 
@@ -258,7 +258,7 @@ export const GraphicsLayer = memo(function() {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   const {pos: trans_pos, duration, effect} = transition
   return (
-    <div className="box box-graphics">
+    <div className="box box-graphics" {...props} >
       {(duration == 0) ? // no animation => display all sprites without effect
         POSITIONS.map((pos)=> createImg(pos, currImages[pos], {
           key: currImages[pos]||pos,
@@ -290,7 +290,7 @@ export const GraphicsLayer = memo(function() {
               // add an opaque background to the image to prevent the background
               // from being visible by transparency
               createImg(pos, prevImages[pos], {
-                key: `mask${prevImages[pos]||pos}`,
+                key: `mask${prevImages[pos]}`,
                 'for-mask': "",
                 style: {
                   '--from-image': `url(${imgUrl(prevImages[pos])})`,
