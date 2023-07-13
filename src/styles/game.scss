@@ -187,19 +187,24 @@ body {
     }
 
     .box-menu {
+        --panel-trans-time: 0.4s;
         z-index: -1;
         background-color: #0006;
+        opacity: 0;
         display: flex;
         justify-content: flex-end;
         transition: var(--transition);
         transition-property: opacity, z-index;
+        // when hiding, wait before starting the transition
+        transition-delay: calc(var(--panel-trans-time) - var(--transition-time));
         overflow: hidden;
-        backdrop-filter: blur(0px);
+        backdrop-filter: blur(1px);
 
         $width: 200px;
         &.show {
             z-index: 4;
-            backdrop-filter: blur(1px);
+            opacity: 1;
+            transition-delay: 0s;
 
             .menu-container {
                 right: 6vw;
@@ -216,7 +221,7 @@ body {
             right: -$width;
             height: 100%;
             width: $width;
-            transition: all .4s ease-out;
+            transition: all var(--panel-trans-time) ease-out;
             padding: 6vh 1.4em;
             display: flex;
             align-items: center;
