@@ -25,7 +25,7 @@ const MenuLayer = () => {
       setMute(settings.volume.master == 0)
       if (!displayMode.menu) {
         if (menuRef.current?.contains(document.activeElement))
-          document.activeElement?.blur?.();
+          (document.activeElement as HTMLElement).blur?.();
       }
     }
     observe(displayMode, 'menu', callback)
