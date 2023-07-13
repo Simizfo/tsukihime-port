@@ -65,14 +65,11 @@ const Window = () => {
   })
 
   useEffect(()=> {
-    if (rootElmtRef.current) {
-      const elmt = rootElmtRef.current as HTMLElement
-      keyMap.enable(elmt, "keydown", {
-        capture: false // default if bubble. set to true to change to capture
-      })
-      return keyMap.disable.bind(keyMap, elmt, "keydown")
-    }
-  }, [rootElmtRef.current])
+    keyMap.enable(document, "keydown", {
+      capture: false // default if bubble. set to true to change to capture
+    })
+    return keyMap.disable.bind(keyMap, document, "keydown")
+  }, [])
 
 
 //##############################################################################
