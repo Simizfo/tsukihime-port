@@ -36,9 +36,15 @@ export const settings = structuredClone(savedSettings)
 
 function saveSettings() {
   if (!objectMatch(savedSettings, settings, false)) {
+    settings.completedScenes.sort()
     overrideAttributes(savedSettings, settings, false)
     localStorage.setItem('permanent', JSON.stringify(savedSettings))
   }
+}
+
+function onCompletionChange() {
+  settings.completedScenes.sort()
+  saveSettings()
 }
 
 observe(settings, 'imagesFolder'   , saveSettings)
@@ -47,7 +53,7 @@ observe(settings, 'galleryBlur'    , saveSettings)
 observe(settings, 'enableSceneSkip', saveSettings)
 observeChildren(settings, 'eventImages'    , saveSettings)
 observeChildren(settings, 'volume'         , saveSettings)
-observeChildren(settings, 'completedScenes', saveSettings)
+observeChildren(settings, 'completedScenes', onCompletionChange)
 
 //_________________________________display mode_________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -106,10 +112,7 @@ export const progress = {
     kohaku: 0,
     hisui: 0,
   },
-  // flags.[1-9,A-Z]: number
-  flags: Object.fromEntries(
-    Array.from({length: 35},(_, i) => [(i+1).toString(36).toUpperCase(),0])
-  ),
+  flags: new Array<string>(),
 }
 export const temp = { // temporaty variables (do not need to be saved)
   phasebg: "",      // not used in this web-based implementation (yet)
@@ -125,32 +128,35 @@ export const temp = { // temporaty variables (do not need to be saved)
 
 //___________________________________commands___________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+const completion = {
+  get ark_good()    { return settings.completedScenes.includes("53a") ? 1 : 0 },
+  get ark_true()    { return settings.completedScenes.includes("52a") ? 1 : 0 },
+  get ciel_good()   { return settings.completedScenes.includes("308") ? 1 : 0 },
+  get ciel_true()   { return settings.completedScenes.includes("310") ? 1 : 0 },
+  get akiha_good()  { return settings.completedScenes.includes("384") ? 1 : 0 },
+  get akiha_true()  { return settings.completedScenes.includes("385") ? 1 : 0 },
+  get hisui_good()  { return settings.completedScenes.includes("413") ? 1 : 0 },
+  get hisui_true()  { return settings.completedScenes.includes("412") ? 1 : 0 },
+  get kohaku_true() { return settings.completedScenes.includes("429") ? 1 : 0 },
+  get ark()    { return this.ark_good    + this.ark_true   },
+  get ciel()   { return this.ciel_good   + this.ciel_true  },
+  get akiha()  { return this.akiha_good  + this.akiha_true },
+  get hisui()  { return this.hisui_good  + this.hisui_true },
+  get kohaku() { return this.kohaku_true }
+}
 
-// Fake an object that to link variables located in the settings :
-// config variables, and scene completion
-const settingsProxy = new Proxy({}, {
-  get(_, name: string) {
-    if (name in settings)
-      return settings[name as keyof typeof settings] ? 1 : 0
-    else if (/^\d{3}$/.test(name)) // scene completion
-      return settings.completedScenes.includes(name) ? 1 : 0
-    else
-      throw Error(`unknown setting variable ${name}`)
+const flagsProxy = new Proxy({}, {
+  get(_, flag: string) {
+    return progress.flags.includes(flag) ? 1 : 0
   },
-  set(_, name: string, value: any) {
-    if (/^\d{3}$/.test(name)) {
-      const index = settings.completedScenes.indexOf(name)
-      if (index >= 0 && value == 0)
-        settings.completedScenes.splice(index, 1)
-      else if (index == -1 && value == 1) {
-        settings.completedScenes.push(name)
-        settings.completedScenes.sort()
-      }
-      return true
+  set(_, flag: string, value: number) {
+    if (value == 0 && progress.flags.includes(flag))
+      progress.flags.splice(progress.flags.indexOf(flag),1)
+    else if (value == 1 && !progress.flags.includes(flag)) {
+      progress.flags.push(flag)
+      progress.flags.sort()
     }
-    else {
-      return false
-    }
+    return true
   }
 })
 
@@ -163,20 +169,15 @@ function getVarLocation(name: string): [any, string] {
     parent = temp
   }
   else if (/^flg[1-9A-Z]$/.test(name)) {
-    parent = progress.flags
+    parent = flagsProxy
     name = name.charAt(3)
   }
   else if (/^[a-z]+_regard$/.test(name)) {
     parent = progress.regard
     name = name.substring(0,name.indexOf('_'))
   }
-  else if (/^1\d{3}$/.test(name)) { // scene completion
-    parent = settingsProxy
-    name = name.substring(1)
-  }
-  else if (name == "sceneskip") {
-    parent = settingsProxy
-    name = "enableSceneSkip"
+  else if (/^clear_[a-z]+/.test(name)) {
+    parent = completion
   }
   else {
     throw Error(`Unknown variable ${name}`)

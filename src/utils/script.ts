@@ -4,7 +4,7 @@ import { commands as audioCommands } from "./AudioManager"
 import { observe } from "./Observer"
 import Timer from "./timer"
 import { fetchFBlock, fetchScene } from "./utils"
-import { commands as variableCommands, getGameVariable, gameContext } from "./variables"
+import { commands as variableCommands, getGameVariable, gameContext, settings } from "./variables"
 
 type CommandHandler = {next: VoidFunction}
 type CommandProcessFunction = (arg: string, cmd: string, onFinish: VoidFunction)=>CommandHandler|void
@@ -331,9 +331,13 @@ async function loadLabel(label: string) {
 }
 
 async function onSceneEnd() {
-  console.log(`ending ${gameContext.label}`)
-  if (/^s\d+a?$/.test(gameContext.label)) {
-    gameContext.label = `skip${gameContext.label.substring(1)}`
+  const label = gameContext.label
+  console.log(`ending ${label}`)
+  if (/^s\d+a?$/.test(label)) {
+    // add scene to completed scenes
+    if (!settings.completedScenes.includes(label))
+      settings.completedScenes.push(label)
+    gameContext.label = `skip${label.substring(1)}`
     gameContext.index = 0;
   }
 }
