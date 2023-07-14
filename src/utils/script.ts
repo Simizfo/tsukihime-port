@@ -142,10 +142,20 @@ function processScriptMvmt(arg: string, cmd: string) {
         gameContext.label = arg.substring(1)
         gameContext.index = 0
         return {next:()=>{}}; // prevent processing next line
+      } else if (arg == "*endofplay") {
+        //TODO end session, return to title screen
+        return
       } else {
         return
       }
     case 'gosub' :
+      if (arg == "*right_phase" || arg == "*left_phase") {
+        //TODO process right_pahse, with vars temp.phase_bg,
+        // temp.phase_title_a, temp.phase_title_b
+      } else if (arg == "*ending") {
+        // ending is called from the scene. If necessary, set the scene
+        // as completed before jumping to ending
+      }
       if (/^\*s\d+a?$/.test(arg)) {
         //TODO ask skip if already read
         gameContext.label = arg.substring(1)
