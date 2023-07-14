@@ -25,8 +25,9 @@ const keyMap = new KeyMap({
               {key: "ArrowLeft", repeat: false},
               {key: "H", repeat: false}],
   "graphics": {code: "Space", repeat: false, [KeyMap.condition]: ()=>objectMatch(displayMode, {menu: false, history: false})},
-  "menu":     {key: "Escape", repeat: false, [KeyMap.condition]: ()=>objectMatch(displayMode, {history: false})},
-  "back":     {key: "Escape", repeat: false},
+  "menu":     [
+              {key: "Escape", repeat: false, [KeyMap.condition]: ()=>(displayMode.menu || !displayMode.history)},
+              {key: "Backspace", repeat: false, [KeyMap.condition]: ()=>displayMode.menu}],
   "save":     {key: "S", ctrlKey: true},
   "bg_move":  [()=> objectMatch(displayMode, {menu: false, history: false}),
               {key: "ArrowUp", ctrlKey: true, repeat: false, [KeyMap.args]: "up"},
@@ -56,7 +57,6 @@ const Window = () => {
       case "history": toggleHistory(); break
       case "graphics": toggleGraphics(); break
       case "menu" : toggleMenu(); break
-      case "back" : break
       case "save" : return true //prevent default behaviour of Ctrl+S
       case "bg_move" :
         moveBg(args[0])
@@ -146,7 +146,7 @@ const Window = () => {
   }
 
   const onContextMenu = (evt: React.MouseEvent) => {
-    if (objectMatch(displayMode, {choices: false, history: false, menu: false})) {
+    if (objectMatch(displayMode, {choices: false, history: false})) {
       toggleMenu()
       evt.preventDefault()
       //TODO: allow menu when choices are displayed
