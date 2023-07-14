@@ -9,8 +9,8 @@ export type Line = {
 export type Page = Line[]
 
 export type Choice = {
-  libe: string,
-  f: number,
+  str: string,
+  label: string,
 }
 
 //ld c,":a;image\tachi\stk_t01.jpg",%type_lshutter_fst
