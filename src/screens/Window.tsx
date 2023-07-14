@@ -146,10 +146,9 @@ const Window = () => {
   }
 
   const onContextMenu = (evt: React.MouseEvent) => {
-    if (objectMatch(displayMode, {choices: false, history: false})) {
+    if (!displayMode.history) {
       toggleMenu()
       evt.preventDefault()
-      //TODO: allow menu when choices are displayed
     }
   }
 
