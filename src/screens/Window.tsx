@@ -10,7 +10,7 @@ import { HISTORY_MAX_PAGES } from '../utils/constants';
 import KeyMap from '../utils/KeyMap';
 
 import script from '../utils/script';
-import { SCREEN, displayMode, gameContext } from '../utils/variables';
+import { SCREEN, displayMode, exportSave, gameContext, loadSave } from '../utils/variables';
 import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
 import { FaArrowLeft } from 'react-icons/fa';
 
@@ -29,6 +29,7 @@ const keyMap = new KeyMap({
               {key: "Escape", repeat: false, [KeyMap.condition]: ()=>(displayMode.menu || !displayMode.history)},
               {key: "Backspace", repeat: false, [KeyMap.condition]: ()=>displayMode.menu}],
   "save":     {key: "S", ctrlKey: true},
+  "load":     {key: "O", ctrlKey: true},
   "bg_move":  [()=> objectMatch(displayMode, {menu: false, history: false}),
               {key: "ArrowUp", ctrlKey: true, repeat: false, [KeyMap.args]: "up"},
               {key: "ArrowDown", ctrlKey: true, repeat: false, [KeyMap.args]: "down"}]
@@ -57,7 +58,12 @@ const Window = () => {
       case "history": toggleHistory(); break
       case "graphics": toggleGraphics(); break
       case "menu" : toggleMenu(); break
-      case "save" : return true //prevent default behaviour of Ctrl+S
+      case "save" :
+        exportSave();
+        return true // prevent default behaviour of Ctrl+S
+      case "load" :
+        loadSave();
+        return true // prevent default behaviour of Ctrl+O
       case "bg_move" :
         moveBg(args[0])
         break

@@ -43,7 +43,9 @@ export default class KeyMap {
   private listener_template(event: KeyboardEvent) {
     if (this.callback) {
       const result = this.getAction(event);
-      return result ? this.callback(result.action, event, ...result.args) || false : false;
+      const preventDefault = result ? this.callback(result.action, event, ...result.args) || false : false;
+      if (preventDefault)
+        event.preventDefault()
     }
   }
 

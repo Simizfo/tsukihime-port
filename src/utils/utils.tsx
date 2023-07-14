@@ -147,6 +147,44 @@ export function isDigit(str: string, index: number = 0) {
 }
 
 /**
+ * Let the user download the text in a text file
+ * @param text content of the file to download
+ * @param fileName default name of the file
+ */
+export function textFileUserDownload(text: string, fileName: string) {
+	let element = document.createElement('a');
+	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+	element.setAttribute('download', fileName);
+	element.style.display = 'none';
+	document.body.appendChild(element);
+	element.click();
+	document.body.removeChild(element);
+}
+
+/**
+ * requests one or multiple files from the user
+ * See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
+ * for more details on the {@link multiple} and {@link accept} parameters
+ */
+export function requestFilesFromUser({ multiple = false, accept = '' }): Promise<File|FileList|null> {
+	return new Promise(((resolve) => {
+		const input = document.createElement('input');
+		input.setAttribute("type", "file");
+
+		if (accept?.length > 0)
+			input.setAttribute("accept", accept);
+
+		if (multiple)
+			input.toggleAttribute("multiple", true);
+
+		input.addEventListener("change", ()=> {
+			resolve(input.files);
+		})
+		input.click();
+	}));
+}
+
+/**
  * A FIFO queue of objects
  * Can be used as a history the keeps only the last N entries.
  */

@@ -1,6 +1,6 @@
 import { observe, observeChildren } from "./Observer"
 import { IMAGES_FOLDERS, TEXT_SPEED } from "./constants"
-import { objectMatch, overrideAttributes } from "./utils"
+import { objectMatch, overrideAttributes, requestFilesFromUser, textFileUserDownload } from "./utils"
 
 //##############################################################################
 //#                          ENGINE-RELATED VARIABLES                          #
@@ -227,15 +227,54 @@ export const commands = {
 
 type SaveState = {context: typeof gameContext, progress: typeof progress}
 
-export function createSaveState(): SaveState {
+const saveStates = new Map<number|string, SaveState>()
+
+export function createSaveState(id: number|string, store=true) {
   const ss: SaveState = {
     context: structuredClone(gameContext),
     progress: structuredClone(progress)}
+  if (store)
+    saveStates.set(id, ss)
   return ss
 }
-export function loadSaveState(ss: SaveState) {
-  overrideAttributes(gameContext, ss.context, false)
-  overrideAttributes(progress, ss.progress, false)
+export function loadSaveState(ss: any|SaveState) {
+  if (ss.constructor != Object)
+    ss = saveStates.get(ss)
+  if (ss) {
+    overrideAttributes(gameContext, ss.context, false)
+    overrideAttributes(progress, ss.progress, false)
+  }
+}
+
+export function exportSave() {
+  const content = JSON.stringify({
+    settings: savedSettings,
+    saveStates: Object.fromEntries(saveStates.entries())
+  })
+  const date = new Date()
+  const dateString = `${date.getFullYear()}${date.getMonth()}${date.getDate()}`
+  textFileUserDownload(content, `tsukihime_save_${dateString}.thsave`)
+}
+
+export async function loadSave(save:string|undefined=undefined) {
+  if (!save) {
+    const file = await requestFilesFromUser({accept: ".thsave"}) as File|null
+    if (!file)
+      return // canceled by user
+    save = await new Promise(resolve=> {
+      const reader = new FileReader()
+      reader.readAsText(file)
+      reader.onload = (evt)=> { resolve(evt.target?.result as string)}
+    })
+    if (!save)
+      return;
+  }
+  const content = JSON.parse(save);
+  overrideAttributes(settings, content.settings, false);
+  saveStates.clear()
+  for (const [id, ss] of Object.entries(content.saveStates)) {
+    saveStates.set(id, ss as SaveState)
+  }
 }
 
 //###   PUT IN GLOBAL FOR DEBUG   ###
