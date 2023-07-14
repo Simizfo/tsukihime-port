@@ -141,15 +141,19 @@ function processScriptMvmt(arg: string, cmd: string) {
       if (/^\*f\d+a?$/.test(arg)) {
         gameContext.label = arg.substring(1)
         gameContext.index = 0
+        return {next:()=>{}}; // prevent processing next line
+      } else {
+        return
       }
-      return {next:()=>{}}; // prevent processing next line
     case 'gosub' :
       if (/^\*s\d+a?$/.test(arg)) {
         //TODO ask skip if already read
         gameContext.label = arg.substring(1)
         gameContext.index = 0
+        return {next:()=>{}}; // prevent processing next line
+      } else {
+        return
       }
-      return {next:()=>{}}; // prevent processing next line
     case 'return' :
       onSceneEnd();
       return {next:()=>{}}; // prevent processing next line
@@ -158,7 +162,7 @@ function processScriptMvmt(arg: string, cmd: string) {
 
 function processChoices(arg: string) {
   const choices: Choice[] = []
-  const tokens = arg.split(',')
+  const tokens = arg.split(/`,|(?<=\*\w+),/)
   for (let i = 0; i < tokens.length; i+= 2) {
     choices.push({
       str: tokens[i].trim().substring(1), // remove '`'
