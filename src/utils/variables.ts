@@ -14,11 +14,13 @@ const defaultsSettings = {
   eventImages: new Array<string>(),
   textSpeed: TEXT_SPEED.normal,
   galleryBlur: true,
+  enableSceneSkip: true, // ask to skip scenes
   volume: {
     master: 1,
     track: 1,
     se: 1,
   },
+  completedScenes: new Array<string>(), // list of scenes that have been completed
 }
 
 // load from file
@@ -39,11 +41,13 @@ function saveSettings() {
   }
 }
 
-observe(settings, 'imagesFolder', saveSettings)
-observe(settings, 'textSpeed', saveSettings)
-observe(settings, 'galleryBlur', saveSettings)
-observeChildren(settings, 'eventImages', saveSettings)
-observeChildren(settings, 'volume', saveSettings)
+observe(settings, 'imagesFolder'   , saveSettings)
+observe(settings, 'textSpeed'      , saveSettings)
+observe(settings, 'galleryBlur'    , saveSettings)
+observe(settings, 'enableSceneSkip', saveSettings)
+observeChildren(settings, 'eventImages'    , saveSettings)
+observeChildren(settings, 'volume'         , saveSettings)
+observeChildren(settings, 'completedScenes', saveSettings)
 
 //_________________________________display mode_________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -77,7 +81,7 @@ export const displayMode : {
 export const gameContext = {
 //_____________________________position in scenario_____________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  scene: 0, // set later. (0 is ignored by ScriptManager)
+  label: '', // scene id
   index: 0,
 //_______________________________audio, graphics________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -122,6 +126,34 @@ export const temp = { // temporaty variables (do not need to be saved)
 //___________________________________commands___________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+// Fake an object that to link variables located in the settings :
+// config variables, and scene completion
+const settingsProxy = new Proxy({}, {
+  get(_, name: string) {
+    if (name in settings)
+      return settings[name as keyof typeof settings] ? 1 : 0
+    else if (/^\d{3}$/.test(name)) // scene completion
+      return settings.completedScenes.includes(name) ? 1 : 0
+    else
+      throw Error(`unknown setting variable ${name}`)
+  },
+  set(_, name: string, value: any) {
+    if (/^\d{3}$/.test(name)) {
+      const index = settings.completedScenes.indexOf(name)
+      if (index >= 0 && value == 0)
+        settings.completedScenes.splice(index, 1)
+      else if (index == -1 && value == 1) {
+        settings.completedScenes.push(name)
+        settings.completedScenes.sort()
+      }
+      return true
+    }
+    else {
+      return false
+    }
+  }
+})
+
 function getVarLocation(name: string): [any, string] {
   if (!['$','%'].includes(name.charAt(0)))
     throw Error(`Ill-formed variable name in 'mov' command: "${name}"`)
@@ -137,6 +169,14 @@ function getVarLocation(name: string): [any, string] {
   else if (/^[a-z]+_regard$/.test(name)) {
     parent = progress.regard
     name = name.substring(0,name.indexOf('_'))
+  }
+  else if (/^1\d{3}$/.test(name)) { // scene completion
+    parent = settingsProxy
+    name = name.substring(1)
+  }
+  else if (name == "sceneskip") {
+    parent = settingsProxy
+    name = "enableSceneSkip"
   }
   else {
     throw Error(`Unknown variable ${name}`)

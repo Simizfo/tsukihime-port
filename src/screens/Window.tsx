@@ -85,7 +85,7 @@ const Window = () => {
   const history = useRef<Queue<string>>(new Queue([], HISTORY_MAX_PAGES))
 
   useEffect(()=> {
-    gameContext.scene = 29;
+    gameContext.label = 's29';
     gameContext.index = 0;
   }, [])
 

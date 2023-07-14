@@ -1,101 +1,68 @@
-import { Choice } from "../types";
-
 const LOGIC_FILE = 'scene0.txt'
 
 /*
  * Fetch and split the script into lines
  */
-export const fetchScene = async (scene: number):Promise<string[]> => {
-  const script = await fetch(`./scenes/scene${scene}.txt`)
+export async function fetchScene(sceneId: string):Promise<string[]> {
+  const script = await fetch(`./scenes/scene${sceneId}.txt`)
+      .then(script=>script.text())
 
-  const data = await script.text();
-
-  //split data on \n or @
-  const result = data.split(/[\n\r]/).filter(line=>line.length > 0)
+  //split data on \n
+  const result = script.split(/\r?\n/).filter(line=>line.length > 0)
 
   return result
 }
 
-export const fetchF = async (sceneNumber: number):Promise<any> => {
+async function fetchBlock(label: string):Promise<string[]> {
   const script = await fetch(`./scenes/` + LOGIC_FILE)
+      .then(script=>script.text())
 
-  const data = await script.text();
+  let start = script.indexOf(`\n*${label}`)
+  if (start == -1)
+    return []
+  start = script.indexOf('\n', start+1)+1
 
-  //keep only lines after *f sceneNumber and before *f sceneNumber + 1
-  const lines = data.split(/[\n\r@]/)
-  const result: any = {};
-
-  let i = 0
-  let start = false
-  let end = false
-  lines.forEach((line, _index) => {
-    if (line === ('*f' + sceneNumber)) {
-      start = true
-    }
-    if (line === ('*f' + (sceneNumber + 1))) {
-      end = true
-    }
-    if (start && !end) {
-      result[i] = line
-      i++
-    }
-  })
-
-  return result
+  let end = script.substring(start).search(/^\*(?!skip)/m)
+  end = (end == -1) ? script.length : start + end
+  
+  return script.substring(start, end)
+      .split(/\r?\n/)
+      .filter(line=>line.length>0)
 }
 
-export const fetchChoices = async (sceneNumber: number):Promise<any> => {
-  const result = await fetchF(sceneNumber)
+const ignoredFBlockLines= [
+  "gosub *regard_update",
+  "!sd"
+]
 
-  //if line starts with select, keep it and the lines after
-  const selectResult: any = [];
-  let j = 0
-  let selectStart = false
-  let selectEnd = false
-  Object.keys(result).forEach((key) => {
-    if (result[key].startsWith('select')) {
-      selectStart = true
+export async function fetchFBlock(label: string): Promise<string[]> {
+  const afterScene = /^skip\d+a?$/.test(label)
+  if (afterScene) {
+    label = label.substring(4) // after 'skip'
+  }
+  const lines = (await fetchBlock(`f${label}`)).filter(
+      line=>!ignoredFBlockLines.includes(line))
+  
+  // find 'gosub *sXXX'
+  let sceneLine = lines.findIndex(line=>/^gosub\s+\*s\d/.test(line))
+  if (sceneLine >= 0) {
+    // remove scene skip code
+    const skipEnd = lines.indexOf("return")+1
+    if (afterScene)
+      lines.splice(0, skipEnd)
+    else {
+      lines.splice(sceneLine-1, skipEnd - sceneLine + 1, lines[sceneLine])
+      sceneLine--
     }
-
-    if (selectStart && !selectEnd) {
-      selectResult[j] = result[key]
-      j++
-    }
-  })
-
-  //remove select and tab from the lines
-  Object.keys(selectResult).forEach((key) => {
-    selectResult[key] = selectResult[key].replace('select `', '')
-    selectResult[key] = selectResult[key].replace('\t`', '')
-    if (selectResult[key] === '') {
-      delete selectResult[key]
-    }
-  })
-
-  let choices:Choice[] = []
-  //split on ` and remove ,*f
-  selectResult.forEach((line:string) => {
-    const libe = line.split('`, *f')[0]
-    const f = parseInt(line.split('`, *f')[1])
-    choices.push({libe, f})
-  })
-
-  return choices
-}
-
-export const fetchGoToNextScene = async (sceneNumber: number):Promise<number> => {
-  const result = await fetchF(sceneNumber)
-  console.log("scene", sceneNumber)
-
-  //if line starts with gosub *s keep the number after
-  let goToNextScene = 0
-  Object.keys(result).forEach((key) => {
-    if (result[key].startsWith('goto *f')) {
-      goToNextScene = parseInt(result[key].replace('goto *f', ''))
-    }
-  })
-
-  return goToNextScene
+  }
+  // concatenate choices
+  let choiceLine = lines.findIndex(line=>line.startsWith('select'))
+  if (choiceLine >= 0) {
+    const choices = lines.slice(choiceLine).map(line=>line.trim()).join(' ')
+    lines.splice(choiceLine)
+    lines.push(choices)
+  }
+  return lines
 }
 
 export const addEventListener = ({event, handler, element = window}: any) => {
@@ -188,9 +155,9 @@ export class Queue<T> {
   private limit: number
   /**
    * @param init_elmts initial elements in the buffer.
-   * @param limit if > 0, there is no limit. Defaults to 0.
-   *              If {@link init_elmts} is a Queue and {@link limit} = 0,
-   *              the limit is copied from the copied queue.
+   * @param limit maximum number of elements. If 0 or unset, no limit is
+   *              applied. If {@link init_elmts} is a Queue and
+   *              {@link limit} = 0, the limit is copied from the copied queue.
    */
   constructor(init_elmts: Iterable<T> = [], limit: number = 0) {
     this.buffer = Array.from(init_elmts)

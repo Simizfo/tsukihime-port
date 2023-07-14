@@ -1,21 +1,23 @@
 import { commands as graphicCommands } from "../layers/GraphicsLayer"
+import { Choice } from "../types"
 import { commands as audioCommands } from "./AudioManager"
 import { observe } from "./Observer"
 import Timer from "./timer"
-import { fetchScene } from "./utils"
+import { fetchFBlock, fetchScene } from "./utils"
 import { commands as variableCommands, getGameVariable, gameContext } from "./variables"
 
 type CommandHandler = {next: VoidFunction}
 type CommandProcessFunction = (arg: string, cmd: string, onFinish: VoidFunction)=>CommandHandler|void
 type CommandMap = Map<string, CommandProcessFunction|null>
 type TextCallback = (str:string)=>void
+type ChoicesCallback = (choices: Choice[])=>void
 
 let pendingText: string|undefined = undefined
 let pendingPage: boolean = false
-let pendingReturn: boolean = false
-let textCallback: TextCallback = (text:string)=> { pendingText = text }
+let pendingChoices: Choice[]|undefined = undefined
+let textCallback: TextCallback = (text)=> { pendingText = text }
 let newPageCallback: VoidFunction = ()=> { pendingPage = true }
-let returnCallback: VoidFunction = ()=> { pendingReturn = true }
+let choicesCallback: ChoicesCallback = (choices)=> { pendingChoices = choices }
 
 let sceneLines: Array<string> = []
 let currentCommand: CommandHandler|undefined
@@ -42,14 +44,13 @@ export const script = {
     }
   },
   /**
-   * Set the callback to call when the 'return' command has been reached in the script.
-   * The script will not automatically move to the next line.
+   * Set the callback to call when the 'select' command i reached
    */
-  set onReturn(callback: VoidFunction) {
-    returnCallback = callback
-    if (pendingReturn) {
-      callback()
-      pendingReturn = false
+  set onChoices(callback: (choices: Choice[])=>void) {
+    choicesCallback = callback
+    if (pendingChoices) {
+      callback(pendingChoices)
+      pendingChoices = undefined
     }
   },
   /**
@@ -77,12 +78,15 @@ const commands:CommandMap = new Map(Object.entries({
   '!w'        : processTimerCmd,
 
   'if'        : processIfCmd,
-  'skip'      : (n: string)=>{ gameContext.index += parseInt(n)-1 },
-  // return value prevents automatically processing the next line
-  'return'    : ()=> { returnCallback(); return {next:()=>{}} },
+  'skip'      : processScriptMvmt,
+  'goto'      : processScriptMvmt,
+  'gosub'     : processScriptMvmt,
+  'return'    : processScriptMvmt,
 
-  'gosub'     : null,
-  'goto'      : null,
+  'select'    : processChoices,
+
+  '*'         : null,
+  '!s'        : null,
 
   ...graphicCommands,
   ...audioCommands,
@@ -125,6 +129,44 @@ function processIfCmd(arg: string, _: string, onFinish: VoidFunction) {
   if (checkIfCondition(condition))
     return processLine(arg.substring(index+1), onFinish)
 
+}
+
+function processScriptMvmt(arg: string, cmd: string) {
+  arg = arg.trim()
+  switch (cmd) {
+    case 'skip' :
+      gameContext.index += parseInt(arg)-1;
+      return;
+    case 'goto' :
+      if (/^\*f\d+a?$/.test(arg)) {
+        gameContext.label = arg.substring(1)
+        gameContext.index = 0
+      }
+      return {next:()=>{}}; // prevent processing next line
+    case 'gosub' :
+      if (/^\*s\d+a?$/.test(arg)) {
+        //TODO ask skip if already read
+        gameContext.label = arg.substring(1)
+        gameContext.index = 0
+      }
+      return {next:()=>{}}; // prevent processing next line
+    case 'return' :
+      onSceneEnd();
+      return {next:()=>{}}; // prevent processing next line
+  }
+}
+
+function processChoices(arg: string) {
+  const choices: Choice[] = []
+  const tokens = arg.split(',')
+  for (let i = 0; i < tokens.length; i+= 2) {
+    choices.push({
+      str: tokens[i].trim().substring(1), // remove '`'
+      label: tokens[i+1].trim().substring(1) // remove '*'
+    })
+  }
+  choicesCallback(choices)
+  return {next:()=>{}}; // prevent processing next line
 }
 
 function processText(text: string, cmd:string, onFinish: VoidFunction) {
@@ -216,7 +258,7 @@ export function processLine(line: string, onFinish: VoidFunction) {
     }
   }
   if (!commands.has(cmd)) {
-    const {scene, index} = gameContext
+    const {label: scene, index} = gameContext
     console.error(`unknown command scene ${scene}:${index}: ${line}`)
   }
 
@@ -235,6 +277,7 @@ function incrementLineIndex() {
   currentCommand = undefined
   gameContext.index++
 }
+
 /**
  * Executed when {@link gameContext.index} is modified,
  * or when the scene is loaded.
@@ -249,33 +292,47 @@ function processCurrentLine() {
     let line = sceneLines[gameContext.index]
     console.log(`Processing line ${gameContext.index}: ${line}`)
     processLine(line, incrementLineIndex)
-  } else if (sceneLines?.length == 0 ?? true){
-    console.error(`Cannot process line ${gameContext.index}: scene not loaded`)
-  } else { // index > sceneLines.length
-    console.error(`Reached end of file`)
+  } else if (sceneLines?.length > 0 && gameContext.index > sceneLines.length) {
+    onSceneEnd()
   }
 }
 
 /**
- * Executed when {@link gameContext.scene} is modified.
- * loads the scene and starts the execution of lines.
- * {@link gameContext.index} is not modified. to start a scene from the beginning,
- * set {@link gameContext.scene} to 0.
- * @param sceneNumber number of the scene to load.
+ * Executed when {@link gameContext.label} is modified.
+ * Loads the scene or script block and starts the execution of lines.
+ * {@link gameContext.index} is not modified.
+ * To start from line 0, set {@link gameContext.index} to 0.
+ * @param label id of the scene or block to load.
  */
-function loadScene(sceneNumber: number) {
-  console.log(`loading scene ${sceneNumber}.`)
+async function loadLabel(label: string) {
+  console.log(`load label ${label}`)
   sceneLines = []
-  if (sceneNumber > 0) {
-    fetchScene(sceneNumber).then(lines=>{
-      sceneLines = lines
-      console.log(`scene ${sceneNumber} loaded. ${sceneLines.length} lines.`)
-      processCurrentLine()
-    })
+  if (/^s\d+a?$/.test(label)) {
+    label = label.substring(1)
+    console.log(`load scene ${label}`)
+    sceneLines = await fetchScene(label)
+    processCurrentLine()
+  } else if (/^f\d+a?$/.test(label)) {
+    console.log(`load block ${label}`)
+    label = label.substring(1)
+    sceneLines = await fetchFBlock(label)
+    processCurrentLine()
+  } else if (/^skip\d+a?$/.test(label)) {
+    console.log(`load block ${label}`)
+    sceneLines = await fetchFBlock(label)
+    processCurrentLine()
+  } else {
+    throw Error(`unknown label ${label}`)
   }
 }
 
-observe(gameContext, 'scene', loadScene)
-observe(gameContext, 'index', processCurrentLine)
+async function onSceneEnd() {
+  console.log(`ending ${gameContext.label}`)
+  if (/^s\d+a?$/.test(gameContext.label)) {
+    gameContext.label = `skip${gameContext.label.substring(1)}`
+    gameContext.index = 0;
+  }
+}
 
-//###   SET HERE FOR DEBUG PURPOSE   ###
+observe(gameContext, 'label', loadLabel)
+observe(gameContext, 'index', processCurrentLine)
