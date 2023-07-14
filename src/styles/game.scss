@@ -168,17 +168,18 @@ body {
             height: 100%;
             max-width: 600px;
             margin: 0 auto;
+            gap : 2em;
         }
-        button {
-            background: linear-gradient(90deg, #255094 0%, rgb(10 104 171) 100%);
+        .choice {
+            background: linear-gradient(90deg, #255094 0%, rgb(10, 104, 171) 50%, #255094 101%);
             clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
             border: 0;
             padding: .6em 1em;
-            margin: 1em;
-            max-width: 90%;
             font-size: 1.2em;
             cursor: pointer;
             transition: all 0.2s ease-in-out;
+            color: #fff;
+            border-radius: 0;
 
             &:hover {
                 filter: brightness(1.1);
