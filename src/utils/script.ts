@@ -106,8 +106,8 @@ function checkIfCondition(condition: string) {
   const expression = condition.split(' ').map(token=> {
     let index
     //search for '%' or '$' that start variables
-    while((index = token.search(/%\$/)) != -1) {
-      const stopIndex = token.substring(index+1).search(/\W/)
+    while((index = token.search(/[%\$]/)) != -1) {
+      const stopIndex = token.substring(index+1).search(/\W/)+index+1
       // replace the variable by its value
       token = token.substring(0, index)
             + getGameVariable(token.substring(index, stopIndex))
