@@ -128,7 +128,7 @@ export const temp = { // temporaty variables (do not need to be saved)
 
 //___________________________________commands___________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-const completion = {
+const completion = new Proxy({
   get ark_good()    { return settings.completedScenes.includes("53a") ? 1 : 0 },
   get ark_true()    { return settings.completedScenes.includes("52a") ? 1 : 0 },
   get ciel_good()   { return settings.completedScenes.includes("308") ? 1 : 0 },
@@ -143,7 +143,7 @@ const completion = {
   get akiha()  { return this.akiha_good  + this.akiha_true },
   get hisui()  { return this.hisui_good  + this.hisui_true },
   get kohaku() { return this.kohaku_true }
-}
+}, {set: ()=> true }) // setter prevents error when trying to write the values
 
 const flagsProxy = new Proxy({}, {
   get(_, flag: string) {
