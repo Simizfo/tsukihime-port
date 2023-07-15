@@ -48,7 +48,6 @@ body {
                 bottom: 0;
                 height: 100%;
                 display: flex;
-
             }
 
             &.l { justify-self: left; }
@@ -168,21 +167,20 @@ body {
             height: 100%;
             max-width: 600px;
             margin: 0 auto;
-            gap : 2em;
+            gap: 1.4em;
         }
         .choice {
-            background: linear-gradient(90deg, #255094 0%, rgb(10, 104, 171) 50%, #255094 101%);
-            clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
+            background: linear-gradient(90deg, #092e69 0%, rgb(10, 104, 171) 50%, #092e69 101%);
+            clip-path: polygon(2% 0%, 100% 0%, 98% 100%, 0% 100%);
             border: 0;
-            padding: .6em 1em;
+            padding: .5em 1em;
             font-size: 1.2em;
             cursor: pointer;
             transition: all 0.2s ease-in-out;
             color: #fff;
-            border-radius: 0;
 
             &:hover {
-                filter: brightness(1.1);
+                filter: brightness(1.2);
             }
         }
     }
@@ -334,7 +332,7 @@ body {
                                                 hsla(217, 79%, 28%, 0.8) 90%,
                                                 hsla(205, 89%, 35%, 0) 100%);
             align-self: center;
-            padding: 1em 2em;
+            padding: 1em 4em;
             margin: 0 auto;
 
             .title {
@@ -345,14 +343,16 @@ body {
                 display: flex;
                 gap: 1em;
                 justify-content: space-evenly;
-                font-size: 1.2em;
+                font-size: 1.3em;
 
                 button {
                     all: unset;
+                    transition: var(--transition);
 
                     &:hover {
                         cursor: pointer;
                         color: rgb(10 164 171);
+                        text-shadow: 1px 0 5px rgb(14 79 187), 1px 0 6px rgba(28, 147, 147, 0.5215686275);
                     }
                 }
             }
