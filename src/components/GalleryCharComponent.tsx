@@ -12,7 +12,7 @@ type Props = {
 const GalleryCharComponent = ({ character, selected, handleSelected }: Props) => {
 
   return (
-    <button className={`gallery-char-item ${character === selected ? "selected" : ""}`}
+    <button className={`menu-btn gallery-char-item ${character === selected ? "selected" : ""}`}
       onClick={() => handleSelected(character)}>
       <span>{character}</span>
     </button>

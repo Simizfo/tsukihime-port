@@ -65,22 +65,25 @@ main {
     overflow-x: hidden;
     margin: auto 0;
 }
-.back-button {
+
+.menu-btn {
     color: var(--text-color);
-    text-shadow: 0 0 5px black;
     background-color: #0a2f85;
-    border-block: 1px solid #51c7ff;
+    border-block: 2px solid transparent;
     padding: 0.2em 1.4em;
     clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
     box-shadow: inset 0 0 20px black;
-    align-self: flex-start;
-    margin-top: 1em;
-    transition: .2s;
+    transition: all .2s ease-out;
     font-style: italic;
 
     &:hover {
-        cursor: pointer;
         color: var(--text-color);
-        text-shadow: 0 0 5px #0fbbd5;
+        border-color: #51c7ff;
+        box-shadow: inset 0 0 20px #0fbbd5;
     }
+}
+
+.back-button {
+    align-self: flex-start;
+    margin-top: 1em;
 }
