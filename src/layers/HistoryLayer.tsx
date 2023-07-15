@@ -1,14 +1,14 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
-import { addEventListener, convertText } from "../utils/utils";
-import { displayMode } from '../utils/variables';
+import { Stack, addEventListener, convertText } from "../utils/utils";
+import { SaveState, displayMode, loadSaveState } from '../utils/variables';
 import { observe, unobserve } from '../utils/Observer';
+import { Page } from '../types';
 
 type Props = {
-  pages: Iterable<string>,
-  text: string,
+  pages: Stack<Page>,
 }
 
-const HistoryLayer = ({ pages, text }: Props) => {
+const HistoryLayer = ({ pages }: Props) => {
   const [ display, setDisplay ] = useState(displayMode.history)
   const historyRef = useRef<HTMLDivElement>(null)
 
@@ -71,30 +71,27 @@ const HistoryLayer = ({ pages, text }: Props) => {
     }
   }, [display])
 
+  function onClick(i: number, saveState: SaveState) {
+    setDisplay(false)
+    pages.trimTop(pages.length-i)
+    loadSaveState(saveState)
+  }
+
   return (
     <div className={`box box-history ${display ? "show" : ""}`}>
       <div className="box-text" id="history" ref={historyRef}>
         <div className="text-container">
           {/* lignes des pages précédentes */}
-          {Array.from(pages, (page, i) =>
+          {pages.map(({text, saveState: saveState}, i) =>
             <Fragment key={i}>
               {i > 0 && <hr/>}
-              {page.split('\n').map((line, i)=>
+              <button onClick={onClick.bind(null,i, saveState)}>[Charger]</button>
+              {text.split('\n').map((line, i)=>
                 <Fragment key={i}>
                   {i > 0 && <br/>}
                   {convertText(line)}
                 </Fragment>
               )}
-            </Fragment>
-          )}
-
-          <hr />
-
-          {/* lignes de la page actuelle */}
-          {text.split('\n').map((line, i)=>
-            <Fragment key={i}>
-              {i > 0 && <br/>}
-              {convertText(line)}
             </Fragment>
           )}
         </div>

@@ -21,6 +21,8 @@ let choicesCallback: ChoicesCallback = (choices)=> { pendingChoices = choices }
 
 let sceneLines: Array<string> = []
 let currentCommand: CommandHandler|undefined
+let newPage = true
+let lastPageIndex = 0
 
 export const script = {
   /**
@@ -36,7 +38,7 @@ export const script = {
   /**
    * Set the callback to call when the text page has ended
    */
-  set onPage(callback: VoidFunction) {
+  set onPageStart(callback: VoidFunction) {
     newPageCallback = callback
     if (pendingPage) {
       callback()
@@ -214,7 +216,7 @@ function processText(text: string, cmd:string, onFinish: VoidFunction) {
   // at every call of script.next.
   const next = ()=> {
     if (text.startsWith('\\')) {
-      newPageCallback()
+      newPage = true
       onFinish()
     } else if (text.length > 0) {
       index = text.search(/@|\\|\n|$/)
@@ -224,6 +226,11 @@ function processText(text: string, cmd:string, onFinish: VoidFunction) {
         index ++
 
       text = text.substring(index)
+      if (newPage) {
+        newPage = false
+        lastPageIndex = gameContext.index
+        newPageCallback()
+      }
       textCallback(token)
     } else {
       onFinish()
@@ -300,8 +307,8 @@ function incrementLineIndex() {
  */
 function processCurrentLine() {
   if (sceneLines?.length > 0 && gameContext.index < sceneLines.length) {
-    if (gameContext.index == 0)
-      newPageCallback()
+    if (gameContext.index == 0 || lastPageIndex >= gameContext.index)
+      newPage = true // next text command will call onPageStart callback
 
     let line = sceneLines[gameContext.index]
     console.log(`Processing line ${gameContext.index}: ${line}`)

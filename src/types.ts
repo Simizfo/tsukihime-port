@@ -1,4 +1,5 @@
 import { IMAGES_FOLDERS, TEXT_SPEED } from "./utils/constants"
+import { SaveState } from "./utils/variables"
 
 export type Line = {
   line: string,
@@ -6,7 +7,10 @@ export type Line = {
   read?: boolean,
 }
 
-export type Page = Line[]
+export type Page = {
+  saveState: SaveState,
+  text: string
+}
 
 export type Choice = {
   str: string,

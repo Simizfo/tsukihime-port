@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import '../styles/game.scss';
 import { motion } from 'framer-motion'
 import HistoryLayer from '../layers/HistoryLayer';
-import { Queue, objectMatch } from '../utils/utils';
+import { Stack, objectMatch } from '../utils/utils';
 import ChoicesLayer from '../layers/ChoicesLayer';
 import TextLayer from '../layers/TextLayer';
 import MenuLayer from '../layers/MenuLayer';
@@ -10,10 +10,11 @@ import { HISTORY_MAX_PAGES } from '../utils/constants';
 import KeyMap from '../utils/KeyMap';
 
 import script from '../utils/script';
-import { SCREEN, displayMode, exportSave, gameContext, loadSave } from '../utils/variables';
+import { SCREEN, displayMode, createSaveState, exportSave, gameContext, loadSave } from '../utils/variables';
 import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
 import { FaArrowLeft } from 'react-icons/fa';
 import SkipLayer from '../layers/SkipLayer';
+import { Page } from '../types';
 
 const keyMap = new KeyMap({
   "next":     [()=> objectMatch(displayMode, {menu: false, choices: false, history: false}),
@@ -89,7 +90,7 @@ const Window = () => {
    * - `"none"`: current command is not text-related (last text-command has ended)
    */
   const textState = useRef<"running"|"idle"|"none">("none")
-  const history = useRef<Queue<string>>(new Queue([], HISTORY_MAX_PAGES))
+  const history = useRef<Stack<Page>>(new Stack([], HISTORY_MAX_PAGES))
 
   useEffect(()=> {
     gameContext.label = 's29';
@@ -98,19 +99,21 @@ const Window = () => {
 
   useEffect(function() {
     script.onText = function(str:string) {
+      if (history.current.length == 0)
+        history.current.push({saveState: createSaveState(), text: ""})
       //keep fast-forward if previous text did not end with '@' or '\'
       const trimmed = text.trim()
       const lastChar = trimmed.charAt(trimmed.length-1)
       if (['@','\\'].includes(lastChar))
         setFastForward(false)
-      setText(text+str)
+      history.current.top.text += str
+      setText(history.current.top.text)
       textState.current = "running"
     }
-    script.onPage = function(){
+    script.onPageStart = function(){
       setFastForward(false)
-      if (text) { //TODO: allow empty pages
-        history.current?.push(text)
-        //TODO: include some context in the history: copy variables, active sounds and graphics
+      if (text) { //TODO: allow empty pages?
+        history.current.push({saveState: createSaveState(), text: ""})
       }
       setText("")
     }
@@ -167,7 +170,7 @@ const Window = () => {
       exit={{scale: 1.5, opacity: 0}}
       transition={{duration: 0.5}}
       onContextMenu={onContextMenu}>
-      <HistoryLayer pages={history.current} text={text??""} />
+      <HistoryLayer pages={history.current} />
 
       <GraphicsLayer onClick={next} />
 

@@ -227,24 +227,24 @@ export const commands = {
 //__________________________________save-state__________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-type SaveState = {context: typeof gameContext, progress: typeof progress}
+export type SaveState = {context: typeof gameContext, progress: typeof progress}
 
 const saveStates = new Map<number|string, SaveState>()
 
-export function createSaveState(id: number|string, store=true) {
+export function createSaveState(id: number|string|undefined = undefined) {
   const ss: SaveState = {
     context: structuredClone(gameContext),
     progress: structuredClone(progress)}
-  if (store)
+  if (id != undefined)
     saveStates.set(id, ss)
   return ss
 }
-export function loadSaveState(ss: any|SaveState) {
-  if (ss.constructor != Object)
-    ss = saveStates.get(ss)
+export function loadSaveState(ss: number|string|SaveState) {
+  if (ss.constructor == Number || ss.constructor == String)
+    ss = saveStates.get(ss) as SaveState
   if (ss) {
-    overrideAttributes(gameContext, ss.context, false)
-    overrideAttributes(progress, ss.progress, false)
+    overrideAttributes(gameContext, (ss as SaveState).context, false)
+    overrideAttributes(progress, (ss as SaveState).progress, false)
   }
 }
 
