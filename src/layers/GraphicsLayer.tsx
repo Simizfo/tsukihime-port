@@ -69,52 +69,62 @@ function processImageCmd(arg: string, cmd: string, onFinish: VoidFunction) {
 
   type = type?.replace('%', '')
 
-  setSprite(pos as SpritePos, image)
-
-  const {effect, duration} = getTransition(type)
-  transition.effect = effect
-  transition.duration = duration
-  transition.pos = pos as SpritePos|'a'
+  let change = setSprite(pos as SpritePos, image)
 
   if (cmd == 'bg') {
-    clearAllSprites()
-    if ((image as string).includes('event/') &&
+    if(clearAllSprites())
+      change = true
+    if (change && (image as string).includes('event/') &&
         !settings.eventImages.includes(image)) {
       settings.eventImages.push(image as string)
     }
   }
 
-  if (duration > 0) {
-    displayMode.text = false
-    // Listen for the 'duration' to be set to 0
-    // The component sets it to 0 after completing the animation,
-    // and calling 'next' the command also sets it to 0
-    const callback = (duration: number)=> {
-      if (duration == 0) {
-        unobserve(transition, 'duration', callback)
-        onFinish()
+  // update transition only if sprites have been changed
+  if (change) {
+    const {effect, duration} = getTransition(type)
+    transition.effect = effect
+    transition.duration = duration
+    transition.pos = pos as SpritePos|'a'
+
+    if (duration > 0) {
+      displayMode.text = false
+      // Listen for the 'duration' to be set to 0
+      // The component sets it to 0 after completing the animation,
+      // and calling 'next' the command also sets it to 0
+      const callback = (duration: number)=> {
+        if (duration == 0) {
+          unobserve(transition, 'duration', callback)
+          onFinish()
+        }
       }
+      observe(transition, 'duration', callback)
+      return {next: ()=> {
+        transition.duration = 0
+      }}
     }
-    observe(transition, 'duration', callback)
-    return {next: ()=> {
-      transition.duration = 0
-    }}
   }
 }
 
 function clearAllSprites() {
-  gameContext.graphics.l = ""
-  gameContext.graphics.c = ""
-  gameContext.graphics.r = ""
+  const graphics = gameContext.graphics
+  const changed = (graphics.l != "" || graphics.c != "" || graphics.r != "")
+  graphics.l = ""
+  graphics.c = ""
+  graphics.r = ""
+  return changed
 }
 
-function setSprite(pos: SpritePos|'a', image: string) {
+function setSprite(pos: SpritePos|'a', image: string): boolean {
   if (pos == 'a') {
     if (image.length > 0)
       throw Error("Unexpected image parameter with 'a' position")
-    clearAllSprites()
-  } else if (['l', 'c', 'r', 'bg'].includes(pos)) {
-    gameContext.graphics[pos as 'c'|'l'|'r'|'bg'] = image
+    return clearAllSprites()
+  } else if (gameContext.graphics[pos as SpritePos] != image) {
+    gameContext.graphics[pos as SpritePos] = image
+    return true
+  } else {
+    return false
   }
 }
 const commands = {

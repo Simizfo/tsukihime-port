@@ -4,23 +4,22 @@ import { commands as audioCommands } from "./AudioManager"
 import { observe } from "./Observer"
 import Timer from "./timer"
 import { fetchFBlock, fetchScene } from "./utils"
-import { commands as variableCommands, getGameVariable, gameContext, settings, displayMode } from "./variables"
+import { commands as variableCommands, getGameVariable, gameContext, settings } from "./variables"
 
 type CommandHandler = {next: VoidFunction}
 type CommandProcessFunction = (arg: string, cmd: string, onFinish: VoidFunction)=>CommandHandler|void
 type CommandMap = Map<string, CommandProcessFunction|null>
 type TextCallback = (str:string)=>void
 type ChoicesCallback = (choices: Choice[])=>void
+type SkipCallback = (confirm:(skip: boolean)=>void)=>void
 
-let pendingText: string|undefined = undefined
-let pendingPage: boolean = false
-let pendingChoices: Choice[]|undefined = undefined
-let textCallback: TextCallback = (text)=> { pendingText = text }
-let newPageCallback: VoidFunction = ()=> { pendingPage = true }
-let choicesCallback: ChoicesCallback = (choices)=> { pendingChoices = choices }
+let textCallback: TextCallback = ()=> { throw Error(`script.onText not specified`) }
+let newPageCallback: VoidFunction = ()=> { throw Error(`script.onPageStart not specified`) }
+let choicesCallback: ChoicesCallback = ()=> { throw Error(`script.onChoices not specified`) }
+let skipCallback: SkipCallback = ()=> { throw Error(`script.onSkipPrompt not specified`) }
 
 let sceneLines: Array<string> = []
-let currentCommand: CommandHandler|undefined
+let currentCommand: CommandHandler | undefined
 let newPage = true
 let lastPageIndex = 0
 
@@ -30,30 +29,24 @@ export const script = {
    */
   set onText(callback: TextCallback) {
     textCallback = callback
-    if (pendingText) {
-      callback(pendingText)
-      pendingText = undefined
-    }
   },
   /**
    * Set the callback to call when the text page has ended
    */
   set onPageStart(callback: VoidFunction) {
     newPageCallback = callback
-    if (pendingPage) {
-      callback()
-      pendingPage = false
-    }
   },
   /**
    * Set the callback to call when the 'select' command i reached
    */
   set onChoices(callback: (choices: Choice[])=>void) {
     choicesCallback = callback
-    if (pendingChoices) {
-      callback(pendingChoices)
-      pendingChoices = undefined
-    }
+  },
+  /**
+   * Set the callback to call when a scene can be skipped
+   */
+  set onSkipPrompt(callback: (confirm:(skip: boolean)=>void)=>void) {
+    skipCallback = callback
   },
   /**
    * function to call to move to the next step of the current command.
@@ -157,15 +150,22 @@ function processScriptMvmt(arg: string, cmd: string) {
       } else if (arg == "*ending") {
         // ending is called from the scene. If necessary, set the scene
         // as completed before jumping to ending
-      }
-      if (/^\*s\d+a?$/.test(arg)) {
-        //TODO ask skip if already read
-        gameContext.label = arg.substring(1)
-        gameContext.index = 0
+      } else if (/^\*s\d+a?$/.test(arg)) {
+        arg = arg.substring(1)
+        if (settings.completedScenes.includes(arg)) {
+          console.log(`scene ${arg} already completed`)
+          skipCallback((skip)=>{
+            gameContext.label = skip ? `skip${arg.substring(1)}` : arg
+            gameContext.index = 0
+          })
+        } else {
+          gameContext.label = arg
+          gameContext.index = 0
+        }
+    
         return {next:()=>{}}; // prevent processing next line
-      } else {
-        return
       }
+      break
     case 'return' :
       onSceneEnd();
       return {next:()=>{}}; // prevent processing next line
@@ -288,6 +288,9 @@ export function processLine(line: string, onFinish: VoidFunction) {
   // it has been executed instantly and won't call the onFinish callback
   if (!currentCommand)
     onFinish()
+  else {
+    return currentCommand
+  }
 }
 
 /**
@@ -329,10 +332,6 @@ async function loadLabel(label: string) {
   console.log(`load label ${label}`)
   sceneLines = []
   if (/^s\d+a?$/.test(label)) {
-    if (settings.completedScenes.includes(label)) {
-      console.log(`scene ${label} already completed`)
-      displayMode.skip = true
-    }
     label = label.substring(1)
     console.log(`load scene ${label}`)
     sceneLines = await fetchScene(label)
@@ -351,7 +350,7 @@ async function loadLabel(label: string) {
   }
 }
 
-async function onSceneEnd() {
+function onSceneEnd() {
   const label = gameContext.label
   console.log(`ending ${label}`)
   if (/^s\d+a?$/.test(label)) {

@@ -1,12 +1,20 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { displayMode } from "../utils/variables"
 import { observe, unobserve } from "../utils/Observer"
+import script from "../utils/script"
 
 const SkipLayer = () => {
   const [display, setDisplay] = useState<boolean>(displayMode.skip)
+  const skipConfirm = useRef<(skip:boolean)=>void>()
 
   useEffect(()=> {
+
+    script.onSkipPrompt = (confirm: (skip: boolean)=>void)=> {
+      setDisplay(true)
+      skipConfirm.current = confirm
+    }
     observe(displayMode, 'skip', setDisplay)
+    observe(displayMode, 'skip', console.log.bind(console, "[SKIP]"))
     return ()=> {
       unobserve(displayMode, 'skip', setDisplay)
     }
@@ -17,14 +25,14 @@ const SkipLayer = () => {
       displayMode.skip = display
   }, [display])
   
-  const handleYes = () => {
-    //TODO: skip scene
+  function onSelection(skip: boolean) {
     setDisplay(false)
+    skipConfirm.current?.(skip)
+    skipConfirm.current = undefined
   }
+  const handleYes = onSelection.bind(null, true)
 
-  const handleNo = () => {
-    setDisplay(false)
-  }
+  const handleNo = onSelection.bind(null, false)
 
   return (
     <div id="skip-layer" className={`box ${display ? "show" : ""}`}>
