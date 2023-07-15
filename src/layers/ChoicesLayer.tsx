@@ -34,16 +34,18 @@ const ChoicesLayer = () => {
     }
   }, [])
 
+  const handleSelect = (choice: Choice) => {
+    console.log(choice)
+    gameContext.label = choice.label
+    gameContext.index = 0
+    displayMode.choices = false
+  }
+
   return display ? (
     <div className="box box-choices">
       <div className="choices-container">
         {choices.map((choice: Choice, i:any) =>
-          <button key={i} className="choice" onClick={() => {
-            console.log(choice)
-            gameContext.label = choice.label
-            gameContext.index = 0
-            displayMode.choices = false
-          }}>
+          <button key={i} className="choice" onClick={()=> handleSelect(choice)}>
             {choice.str}
           </button>
         )}

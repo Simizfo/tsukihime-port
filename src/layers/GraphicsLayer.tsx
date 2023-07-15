@@ -3,19 +3,13 @@ import { displayMode, gameContext, settings } from "../utils/variables";
 import { observe, unobserve } from "../utils/Observer";
 import Timer from "../utils/timer";
 
-
-export type Sprite = {
-  image: string,
-  type: string
-}
-
 type SpritePos = keyof typeof gameContext.graphics
 const POSITIONS: Array<SpritePos> = Object.keys(gameContext.graphics) as Array<SpritePos>
 
 type Transition = {
-  pos: SpritePos | 'a',
-  duration: number,
   effect: string,
+  duration: number,
+  pos: SpritePos | 'a',
   onFinish: VoidFunction|undefined
 }
 const transition: Transition = {
