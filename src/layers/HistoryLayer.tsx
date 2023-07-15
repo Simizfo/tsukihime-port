@@ -51,7 +51,7 @@ const HistoryLayer = ({ pages, text }: Props) => {
   useEffect(() => {
     //when scrolled to the bottom of history, hide history
     const handleScroll = (e: any) => {
-      const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight
+      const bottom = e.target.scrollHeight - Math.round(e.target.scrollTop) === e.target.clientHeight
       if (bottom) {
         setDisplay(false)
       }
