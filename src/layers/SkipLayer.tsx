@@ -18,13 +18,11 @@ const SkipLayer = () => {
   }, [display])
   
   const handleYes = () => {
-    displayMode.skip = false
     //TODO: skip scene
     setDisplay(false)
   }
 
   const handleNo = () => {
-    displayMode.skip = false
     setDisplay(false)
   }
 
