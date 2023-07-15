@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
-import { Stack, addEventListener, convertText } from "../utils/utils";
+import { addEventListener, convertText } from "../utils/utils";
+import Stack from "../utils/Stack";
 import { SaveState, displayMode, loadSaveState } from '../utils/variables';
 import { observe, unobserve } from '../utils/Observer';
 import { Page } from '../types';
@@ -85,7 +86,9 @@ const HistoryLayer = ({ pages }: Props) => {
           {pages.map(({text, saveState: saveState}, i) =>
             <Fragment key={i}>
               {i > 0 && <hr/>}
-              <button className="menu-btn" onClick={onClick.bind(null,i, saveState)}>Load</button>
+              {saveState &&
+                <button className="menu-btn" onClick={onClick.bind(null,i, saveState)}>Load</button>
+              }
               {text.split('\n').map((line, i)=>
                 <Fragment key={i}>
                   {i > 0 && <br/>}

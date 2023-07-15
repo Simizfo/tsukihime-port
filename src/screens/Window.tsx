@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import '../styles/game.scss';
 import { motion } from 'framer-motion'
 import HistoryLayer from '../layers/HistoryLayer';
-import { Stack, objectMatch } from '../utils/utils';
+import { objectMatch } from '../utils/utils';
+import Stack from "../utils/Stack";
 import ChoicesLayer from '../layers/ChoicesLayer';
 import TextLayer from '../layers/TextLayer';
 import MenuLayer from '../layers/MenuLayer';
