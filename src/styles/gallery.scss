@@ -34,14 +34,9 @@
         flex-direction: row;
 
         .gallery-char-item {
-            all: unset;
-            background-color: #0a2f85;
             position: relative;
-            clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
             transition: var(--transition);
             width: min(300px, 100%);
-            border-block: 2px solid transparent;
-            box-shadow: inset 0 0 20px black;
             padding: 0 18px;
 
             span {
@@ -52,12 +47,9 @@
                 min-width: 50%;
             }
 
-            &:hover {
-                cursor: pointer;
-            }
-
-            &.selected, &:hover {
-                border-block: 2px solid #51c7ff;
+            &.selected {
+                border-color: #51c7ff;
+                box-shadow: inset 0 0 20px #0fbbd5;
             }
         }
     }

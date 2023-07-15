@@ -97,7 +97,7 @@ const ConfigScreen = () => {
           </div>
         </main>
 
-        <Link to="/title" className="back-button">Back</Link>
+        <Link to="/title" className="menu-btn back-button">Back</Link>
       </div>
     </motion.div>
   )
