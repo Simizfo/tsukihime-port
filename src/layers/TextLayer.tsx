@@ -41,16 +41,18 @@ const TextLayer = memo(({ text, immediate = false, onFinish, ...props }: Props) 
 
   useEffect(()=> {
     const previous = previousText.join('\n') + newText
-    if (text.startsWith(previous)) {
-      setPreviousText((previous).split('\n'))
-      setNewText(text.substring(previous.length))
-    } else {
-      setPreviousText([])
-      setNewText(text)
+    if (previous != text) {
+      if (text.startsWith(previous)) {
+        setPreviousText((previous).split('\n'))
+        setNewText(text.substring(previous.length))
+      } else {
+        setPreviousText([])
+        setNewText(text)
+      }
+      if (!displayMode.text && text.length > 0)
+        displayMode.text = true
+      setCursor(0)
     }
-    if (!displayMode.text)
-      displayMode.text = true
-    setCursor(0)
   }, [text])
 
   useEffect(()=> {

@@ -95,14 +95,12 @@ const Window = () => {
   useEffect(()=> {
     gameContext.label = 's29';
     gameContext.index = 0;
-  }, [])
 
-  useEffect(function() {
     script.onText = function(str:string) {
       if (history.current.length == 0)
         throw Error("The history should have at least one page")
       //keep fast-forward if previous text did not end with '@' or '\'
-      const trimmed = text.trim()
+      const trimmed = history.current.top.text.trim()
       const lastChar = trimmed.charAt(trimmed.length-1)
       if (['@','\\'].includes(lastChar))
         setFastForward(false)
@@ -117,7 +115,7 @@ const Window = () => {
       history.current.push({saveState: createSaveState(), text: ""})
       setText("")
     }
-  }, [text])
+  }, [])
   
   const onTextBreak = ()=> {
     const breakChar = text?.charAt(text.length-1)??""
