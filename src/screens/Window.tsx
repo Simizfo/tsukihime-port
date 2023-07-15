@@ -13,6 +13,7 @@ import script from '../utils/script';
 import { SCREEN, displayMode, exportSave, gameContext, loadSave } from '../utils/variables';
 import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
 import { FaArrowLeft } from 'react-icons/fa';
+import SkipLayer from '../layers/SkipLayer';
 
 const keyMap = new KeyMap({
   "next":     [()=> objectMatch(displayMode, {menu: false, choices: false, history: false}),
@@ -174,6 +175,8 @@ const Window = () => {
         onFinish={onTextBreak} onClick={next}/>
 
       <ChoicesLayer />
+
+      <SkipLayer />
 
       <button className="menu-button" onClick={toggleMenu}>
         <FaArrowLeft />

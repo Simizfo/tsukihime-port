@@ -319,6 +319,45 @@ body {
             }
         }
     }
+    #skip-layer {
+        z-index: -1;
+        background-color: #0006;
+        display: flex;
+
+        &.show {
+            z-index: 2;
+        }
+
+        .modal {
+            background: linear-gradient(90deg, hsla(205, 89%, 35%, 0) 0%,
+                                                hsla(217, 79%, 28%, 0.8) 10%,
+                                                hsla(217, 79%, 28%, 0.8) 90%,
+                                                hsla(205, 89%, 35%, 0) 100%);
+            align-self: center;
+            padding: 1em 2em;
+            margin: 0 auto;
+
+            .title {
+                margin-bottom: 1em;
+            }
+
+            .buttons {
+                display: flex;
+                gap: 1em;
+                justify-content: space-evenly;
+                font-size: 1.2em;
+
+                button {
+                    all: unset;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: rgb(10 164 171);
+                    }
+                }
+            }
+        }
+    }
 
     .menu-button {
         all: unset;

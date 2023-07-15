@@ -68,8 +68,8 @@ const MenuLayer = () => {
   }
 
   const quickSave = () => {
-    const saveState = createSaveState()
-    localStorage.setItem('game', JSON.stringify(saveState))
+    // const saveState = createSaveState()
+    // localStorage.setItem('game', JSON.stringify(saveState))
     alert('Game saved!')
   }
 
