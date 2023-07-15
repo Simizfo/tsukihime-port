@@ -20,8 +20,6 @@ let skipCallback: SkipCallback = ()=> { throw Error(`script.onSkipPrompt not spe
 
 let sceneLines: Array<string> = []
 let currentCommand: CommandHandler | undefined
-let newPage = true
-let lastPageIndex = 0
 
 export const script = {
   /**
@@ -58,6 +56,10 @@ export const script = {
   }
 }
 export default script
+
+function isScene(label: string): boolean {
+  return /^\*?s\d+a?$/.test(label)
+}
 
 //##############################################################################
 //#                                  COMMANDS                                  #
@@ -150,7 +152,7 @@ function processScriptMvmt(arg: string, cmd: string) {
       } else if (arg == "*ending") {
         // ending is called from the scene. If necessary, set the scene
         // as completed before jumping to ending
-      } else if (/^\*s\d+a?$/.test(arg)) {
+      } else if (isScene(arg)) {
         arg = arg.substring(1)
         if (settings.completedScenes.includes(arg)) {
           console.log(`scene ${arg} already completed`)
@@ -216,7 +218,6 @@ function processText(text: string, cmd:string, onFinish: VoidFunction) {
   // at every call of script.next.
   const next = ()=> {
     if (text.startsWith('\\')) {
-      newPage = true
       onFinish()
     } else if (text.length > 0) {
       index = text.search(/@|\\|\n|$/)
@@ -226,11 +227,6 @@ function processText(text: string, cmd:string, onFinish: VoidFunction) {
         index ++
 
       text = text.substring(index)
-      if (newPage) {
-        newPage = false
-        lastPageIndex = gameContext.index
-        newPageCallback()
-      }
       textCallback(token)
     } else {
       onFinish()
@@ -309,14 +305,16 @@ function incrementLineIndex() {
  * in the scene file
  */
 function processCurrentLine() {
-  if (sceneLines?.length > 0 && gameContext.index < sceneLines.length) {
-    if (gameContext.index == 0 || lastPageIndex >= gameContext.index)
-      newPage = true // next text command will call onPageStart callback
+  const index = gameContext.index
+  if (sceneLines?.length > 0 && index < sceneLines.length) {
+    if (isScene(gameContext.label)
+        && ( index == 0 || sceneLines[index-1].endsWith('\\')))
+      newPageCallback()
 
-    let line = sceneLines[gameContext.index]
-    console.log(`Processing line ${gameContext.index}: ${line}`)
+    let line = sceneLines[index]
+    console.log(`Processing line ${index}: ${line}`)
     processLine(line, incrementLineIndex)
-  } else if (sceneLines?.length > 0 && gameContext.index > sceneLines.length) {
+  } else if (sceneLines?.length > 0 && index > sceneLines.length) {
     onSceneEnd()
   }
 }

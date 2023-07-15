@@ -100,7 +100,7 @@ const Window = () => {
   useEffect(function() {
     script.onText = function(str:string) {
       if (history.current.length == 0)
-        history.current.push({saveState: createSaveState(), text: ""})
+        throw Error("The history should have at least one page")
       //keep fast-forward if previous text did not end with '@' or '\'
       const trimmed = text.trim()
       const lastChar = trimmed.charAt(trimmed.length-1)
@@ -110,11 +110,11 @@ const Window = () => {
       setText(history.current.top.text)
       textState.current = "running"
     }
-    script.onPageStart = function(){
+    script.onPageStart = function() {
       setFastForward(false)
-      if (text) { //TODO: allow empty pages?
-        history.current.push({saveState: createSaveState(), text: ""})
-      }
+      if (history.current.top?.text.length == 0)
+        history.current.pop() // remove empty pages from history
+      history.current.push({saveState: createSaveState(), text: ""})
       setText("")
     }
   }, [text])
