@@ -66,18 +66,21 @@ main {
     margin: auto 0;
 }
 .back-button {
-    border-bottom: 1px solid;
     color: var(--text-color);
     text-shadow: 0 0 5px black;
-    background-color: #0000004d;
-    border: 1px solid #51c7ff;
+    background-color: #0a2f85;
+    border-block: 1px solid #51c7ff;
     padding: 0.2em 1.4em;
     clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
     box-shadow: inset 0 0 20px black;
-    align-self: flex-end;
+    align-self: flex-start;
     margin-top: 1em;
+    transition: .2s;
+    font-style: italic;
 
     &:hover {
         cursor: pointer;
+        color: var(--text-color);
+        text-shadow: 0 0 5px #0fbbd5;
     }
 }
