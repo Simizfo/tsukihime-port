@@ -85,7 +85,7 @@ const HistoryLayer = ({ pages }: Props) => {
           {pages.map(({text, saveState: saveState}, i) =>
             <Fragment key={i}>
               {i > 0 && <hr/>}
-              <button onClick={onClick.bind(null,i, saveState)}>[Charger]</button>
+              <button className="menu-btn" onClick={onClick.bind(null,i, saveState)}>Load</button>
               {text.split('\n').map((line, i)=>
                 <Fragment key={i}>
                   {i > 0 && <br/>}
