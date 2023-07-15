@@ -255,7 +255,7 @@ export class Stack<T> {
   }
 
   /**
-   * Remove and return the oldest element in the queue
+   * Remove and return the most recent element in the stack
    * @returns the removed item
    */
   pop(): T|undefined {
