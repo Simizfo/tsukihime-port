@@ -253,12 +253,14 @@ export function loadSaveState(ss: SaveStateId|SaveState, history: Stack<Page>) {
   if (ss.constructor == Number || ss.constructor == String)
     ss = saveStates.get(ss) as SaveState
   if (ss) {
+    let index = 0
     for (let i=0; i < history.length; i++) {
       if (ss == history.get(i).saveState) {
-        history.trimTop(history.length - i)
+        index = i
         break
       }
     }
+    history.trimTop(history.length - index)
     overrideAttributes(gameContext, (ss as SaveState).context, false)
     overrideAttributes(progress, (ss as SaveState).progress, false)
     return true
