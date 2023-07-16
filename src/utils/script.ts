@@ -166,7 +166,8 @@ function splitText(text: string) {
   let index = 0
   while (text.length > 0) {
     index = text.search(/@|\\|!\w|$/)
-    instructions.push({cmd:'`',arg: text.substring(0, index)})
+    if (index > 0)
+      instructions.push({cmd:'`',arg: text.substring(0, index)})
     text = text.substring(index)
     switch (text.charAt(0)) {
       case '@' :
