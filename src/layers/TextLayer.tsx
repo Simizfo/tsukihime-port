@@ -70,6 +70,8 @@ const TextLayer = memo(({...props}: Props) => {
   const [ immediate, setImmediate ] = useState<boolean>(false)
   const [ previousText, setPreviousText ] = useState<string[]>([]) // lines to display entirely
   const [ newText, setNewText ] = useState<string>("") // line to display gradually
+  const [ visibleText, setVisibleText ] = useState<string>("")
+  const [ hiddenText, setHiddenText ] = useState<string>("")
   const [ cursor, setCursor ] = useState<number>(0) // position of the cursor on the last line.
   const [ glyph, setGlyph ] = useState<string>('') // id of the animated glyph to display at end of line
 
@@ -134,6 +136,8 @@ const TextLayer = memo(({...props}: Props) => {
   useEffect(()=> {
     //if last character is '@' or '\', display the appropriate image
     if (cursor >= newText.length) {
+      setVisibleText(newText)
+      setHiddenText("")
       switch(newText.charAt(newText.length-1))
       {
         case '@' : setGlyph('moon'); break
@@ -142,6 +146,8 @@ const TextLayer = memo(({...props}: Props) => {
       }
     } else {
       setGlyph('')
+      setVisibleText(newText.substring(0, cursor))
+      setHiddenText(newText.substring(cursor))
     }
   }, [cursor])
 
@@ -156,7 +162,7 @@ const TextLayer = memo(({...props}: Props) => {
             {convertText(line)}
           </Fragment>)}
         <span>
-          {convertText(newText.substring(0, cursor))}
+          {convertText(visibleText)}{convertText(hiddenText, {style:{visibility: 'hidden'}})}
           {glyph.length > 0 &&
             <img src={icons[glyph]} alt={glyph} id={glyph} className="cursor" />
           }

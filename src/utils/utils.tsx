@@ -70,7 +70,7 @@ export const addEventListener = ({event, handler, element = window}: any) => {
   return () => element.removeEventListener(event, handler)
 }
 
-export function convertText(text: string, key: any = undefined): JSX.Element {
+export function convertText(text: string, {...props}: {[key:string]:any} = {}): JSX.Element {
 
   const nodes: Array<JSX.Element|string> = []
   if ( text.length > 0 && text != "br") {
@@ -94,10 +94,7 @@ export function convertText(text: string, key: any = undefined): JSX.Element {
     if (text.length > 0)
       nodes.push(text)
   }
-  if (key !== undefined)
-    return <span key={key}>{...nodes}</span>
-  else
-    return <span>{...nodes}</span>
+  return <span {...props}>{...nodes}</span>
 }
 
 export function objectMatch(toTest: {[key:PropertyKey]: any}, minKeys: {[key:PropertyKey]: any}, useSymbols=true): boolean {
