@@ -2,9 +2,10 @@ import { useEffect, useRef, useState } from "react"
 import { addEventListener } from "../utils/utils"
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 import { IoClose } from "react-icons/io5"
-import { SCREEN, createSaveState, displayMode, loadSaveState, settings } from "../utils/variables"
+import { SCREEN, displayMode, quickLoad, quickSave, settings } from "../utils/variables"
 import { observe, unobserve } from "../utils/Observer"
 import { useNavigate } from "react-router-dom"
+import script from "../utils/script"
 
 /**
  * TODO
@@ -67,19 +68,6 @@ const MenuLayer = () => {
     displayMode.menu = false
   }
 
-  const quickSave = () => {
-    // const saveState = createSaveState()
-    // localStorage.setItem('game', JSON.stringify(saveState))
-    alert('Game saved!')
-  }
-
-  const quickLoad = () => {
-    const saveState = localStorage.getItem('game')
-    if (saveState) {
-      loadSaveState(JSON.parse(saveState))
-    }
-  }
-
   const volume = () => {
     console.log("volume : ", settings.volume.master)
     settings.volume.master = (settings.volume.master > 0 ? 0 : 1)
@@ -96,10 +84,10 @@ const MenuLayer = () => {
           <button onClick={historyMode}>
             History
           </button>
-          <button onClick={quickSave}>
+          <button onClick={quickSave.bind(null, script.history)}>
             Quick save
           </button>
-          <button onClick={quickLoad}>
+          <button onClick={quickLoad.bind(null, script.history)}>
             Quick load
           </button>
           <button onClick={title}>

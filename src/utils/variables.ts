@@ -1,4 +1,6 @@
+import { Page } from "../types"
 import { observe, observeChildren } from "./Observer"
+import Stack from "./Stack"
 import { IMAGES_FOLDERS, TEXT_SPEED } from "./constants"
 import { objectMatch, overrideAttributes, requestFilesFromUser, textFileUserDownload } from "./utils"
 
@@ -228,24 +230,49 @@ export const commands = {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 export type SaveState = {context: typeof gameContext, progress: typeof progress}
+type SaveStateId = number|string
 
-const saveStates = new Map<number|string, SaveState>()
+const saveStates = new Map<SaveStateId, SaveState>()
 
-export function createSaveState(id: number|string|undefined = undefined) {
+export function createSaveState() {
   const ss: SaveState = {
     context: structuredClone(gameContext),
     progress: structuredClone(progress)}
-  if (id != undefined)
-    saveStates.set(id, ss)
   return ss
 }
-export function loadSaveState(ss: number|string|SaveState) {
+
+export function storeSaveState(id: SaveStateId, ss:SaveState) {
+  saveStates.set(id, ss)
+}
+
+export function listSaveStates(): IterableIterator<[SaveStateId, SaveState]> {
+  return saveStates.entries()
+}
+
+export function loadSaveState(ss: SaveStateId|SaveState, history: Stack<Page>) {
   if (ss.constructor == Number || ss.constructor == String)
     ss = saveStates.get(ss) as SaveState
   if (ss) {
+    for (let i=0; i < history.length; i++) {
+      if (ss == history.get(i).saveState) {
+        history.trimTop(history.length - i)
+        break
+      }
+    }
     overrideAttributes(gameContext, (ss as SaveState).context, false)
     overrideAttributes(progress, (ss as SaveState).progress, false)
+    return true
   }
+  return false
+}
+
+export function quickSave(history: Stack<Page>) {
+  if (history.top?.saveState)
+    storeSaveState('quick', history.top.saveState)
+}
+
+export function quickLoad(history: Stack<Page>) {
+  loadSaveState('quick', history)
 }
 
 export function exportSave() {

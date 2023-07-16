@@ -7,7 +7,7 @@ import { observe } from "./Observer"
 import Stack from "./Stack"
 import { HISTORY_MAX_PAGES } from "./constants"
 import { commands as timerCommands } from "./timer"
-import { fetchFBlock, fetchScene, objectMatch } from "./utils"
+import { fetchFBlock, fetchScene } from "./utils"
 import { commands as variableCommands, getGameVariable, gameContext, settings, createSaveState } from "./variables"
 
 type CommandHandler = {next: VoidFunction}
@@ -267,8 +267,9 @@ async function processCurrentLine() {
   if (currentCommand) {
     // Index has been changed by outside this function.
     // Skip remaining instructions in the previous line.
+    // Resolve the promise of the ongoing command.
     lineSkipped = true
-    skipCommand?.() // Resolve the promise of the ongoing command.
+    skipCommand?.()
     // Process the current line after aborting the previous line
     setTimeout(processCurrentLine, 0)
     return

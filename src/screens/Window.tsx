@@ -9,7 +9,7 @@ import MenuLayer from '../layers/MenuLayer';
 import KeyMap from '../utils/KeyMap';
 
 import script from '../utils/script';
-import { SCREEN, displayMode, createSaveState, gameContext, loadSaveState } from '../utils/variables';
+import { SCREEN, displayMode, gameContext, quickSave, quickLoad } from '../utils/variables';
 import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
 import { FaArrowLeft } from 'react-icons/fa';
 import SkipLayer from '../layers/SkipLayer';
@@ -56,8 +56,8 @@ const Window = () => {
       case "history"  : toggleHistory(); break
       case "graphics" : toggleGraphics(); break
       case "menu"     : toggleMenu(); break
-      case "q_save"   : createSaveState('quick'); break
-      case "q_load"   : loadSaveState('quick'); break;
+      case "q_save"   : quickSave(script.history); break
+      case "q_load"   : quickLoad(script.history); break;
       case "bg_move"  : moveBg(args[0]); break
     }
   })

@@ -71,10 +71,9 @@ const HistoryLayer = (props: Props) => {
     }
   }, [display])
 
-  function onClick(i: number, saveState: SaveState) {
+  function onClick(saveState: SaveState) {
     setDisplay(false)
-    script.history.trimTop(script.history.length-i)
-    loadSaveState(saveState)
+    loadSaveState(saveState, script.history)
   }
   const {className, ...otherProps} = props
   return (
@@ -86,7 +85,7 @@ const HistoryLayer = (props: Props) => {
             <Fragment key={i}>
               {i > 0 && <hr/>}
               {saveState &&
-                <button className="menu-btn" onClick={onClick.bind(null,i, saveState)}>Load</button>
+                <button className="menu-btn" onClick={onClick.bind(null,saveState)}>Load</button>
               }
               {text.split('\n').map((line, i)=>
                 <Fragment key={i}>
