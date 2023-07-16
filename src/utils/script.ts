@@ -8,7 +8,7 @@ import Stack from "./Stack"
 import { HISTORY_MAX_PAGES } from "./constants"
 import { commands as timerCommands } from "./timer"
 import { fetchFBlock, fetchScene } from "./utils"
-import { commands as variableCommands, getGameVariable, gameContext, settings, createSaveState } from "./variables"
+import { commands as variableCommands, getGameVariable, gameContext, settings, createSaveState, displayMode, SCREEN } from "./variables"
 
 type CommandHandler = {next: VoidFunction}
 type CommandProcessFunction = (arg: string, cmd: string, onFinish: VoidFunction)=>CommandHandler|void
@@ -85,24 +85,43 @@ const commands:CommandMap = new Map(Object.entries({
   '!s'        : null,
 }))
 
+// (%var|n)(op)(%var|n)
+const opRegexp = /(?<lhs>(%\w+|\d+))(?<op>[=!><]+)(?<rhs>(%\w+|\d+))/
 function checkIfCondition(condition: string) {
-  // make the expression evaluable by replacing
-  // variable names by their values
-  const expression = condition.split(' ').map(token=> {
-    let index
-    //search for '%' or '$' that start variables
-    while((index = token.search(/[%\$]/)) != -1) {
-      const stopIndex = token.substring(index+1).search(/\W/)+index+1
-      // replace the variable by its value
-      token = token.substring(0, index)
-            + getGameVariable(token.substring(index, stopIndex))
-            + token.substring(stopIndex)
+  let value = true
+  for (const [i, token] of condition.split(' ').entries()) {
+    if (i % 2 == 0) {
+      const match = opRegexp.exec(token)
+      if (match) {
+        let {lhs, op, rhs} = match.groups as any;
+        if (lhs.charAt(0) == '%')
+          lhs = getGameVariable(lhs) as number
+        else lhs = parseInt(lhs)
+        if (rhs.charAt(0) == '%')
+          rhs = getGameVariable(rhs) as number
+        else rhs = parseInt(rhs)
+        switch (op) {
+          case '==' : value = (lhs == rhs); break
+          case '!=' : value = (lhs != rhs); break
+          case '<'  : value = (lhs <  rhs); break
+          case '>'  : value = (lhs >  rhs); break
+          case '<=' : value = (lhs <= rhs); break
+          case '>=' : value = (lhs >= rhs); break
+          default : throw Error (`unknown operator ${op} in condition ${condition}`)
+        }
+      } else
+        throw Error(`Unable to parse expression "${token}" in condition ${condition}`)
+    } else if (token == "&&") {
+      if (!value)
+        return false
+    } else if (token == "||") {
+      if (value)
+        return true
+    } else {
+      throw Error(`Unable to parse operator "${token}" in condition ${condition}`)
     }
-    return token
-  }).join(' ')
-  // transform the expression into an executable function, and return the result
-  const f = new Function("return " + expression)
-  return f()
+  }
+  return value
 }
 
 function processIfCmd(arg: string, _: string, onFinish: VoidFunction) {
@@ -166,7 +185,8 @@ function splitText(text: string) {
   let index = 0
   while (text.length > 0) {
     index = text.search(/@|\\|!\w|$/)
-    instructions.push({cmd:'`',arg: text.substring(0, index)})
+    if (index > 0)
+      instructions.push({cmd:'`',arg: text.substring(0, index)})
     text = text.substring(index)
     switch (text.charAt(0)) {
       case '@' :
@@ -188,7 +208,7 @@ function splitText(text: string) {
 }
 
 //##############################################################################
-//#                                 OBSERVERS                                  #
+//#                            EXECUTE SCRIPT LINES                            #
 //##############################################################################
 
 /**
@@ -259,11 +279,16 @@ export async function processLine(line: string) {
 
 /**
  * Executed when {@link gameContext.index} is modified,
- * or when the scene is loaded.
+ * when the scene is loaded, or when the screen changes.
  * Calls the execution of the command at the current line index
  * in the scene file
  */
 async function processCurrentLine() {
+  if (displayMode.screen != SCREEN.WINDOW)
+    return // not in the right screeen
+  else if (sceneLines?.length == 0)
+    return // scene not loaded
+  
   if (currentCommand) {
     // Index has been changed by outside this function.
     // Skip remaining instructions in the previous line.
@@ -277,20 +302,23 @@ async function processCurrentLine() {
 
   const {index, label} = gameContext
   const lines = sceneLines
-  if (lines?.length > 0 && index < lines.length) {
+  if (index < lines.length) {
     if (isScene(label) && (index == 0 || lines[index-1].endsWith('\\')))
       onPageBreak()
 
     let line = sceneLines[index]
     console.log(`Processing line ${index}: ${line}`)
     await processLine(line);
-    if (gameContext.index != index || gameContext.label != label)
+    if (gameContext.index != index || gameContext.label != label) {
+      // the context has been changed while processing the line.
+      // processCurrentLine() will be called again by the observer.
+      // The index should not be incremented
       lineSkipped = false
-    else {
+    } else {
       gameContext.index++
     }
     
-  } else if (sceneLines?.length > 0 && index > sceneLines.length) {
+  } else {
     onSceneEnd()
   }
 }
@@ -304,24 +332,16 @@ async function processCurrentLine() {
  */
 async function loadLabel(label: string) {
   console.log(`load label ${label}`)
-  sceneLines = []
-  if (/^s\d+a?$/.test(label)) {
-    label = label.substring(1)
-    console.log(`load scene ${label}`)
-    sceneLines = await fetchScene(label)
-    processCurrentLine()
-  } else if (/^f\d+a?$/.test(label)) {
-    console.log(`load block ${label}`)
-    label = label.substring(1)
+  sceneLines = [] // set to empty to prevent execution of previous scene
+  if (/^s\d+a?$/.test(label))
+    sceneLines = await fetchScene(label.substring(1))
+  else if (/^f\d+a?$/.test(label))
+    sceneLines = await fetchFBlock(label.substring(1))
+  else if (/^skip\d+a?$/.test(label))
     sceneLines = await fetchFBlock(label)
-    processCurrentLine()
-  } else if (/^skip\d+a?$/.test(label)) {
-    console.log(`load block ${label}`)
-    sceneLines = await fetchFBlock(label)
-    processCurrentLine()
-  } else {
+  else
     throw Error(`unknown label ${label}`)
-  }
+  processCurrentLine()
 }
 
 function onSceneEnd() {
@@ -338,3 +358,4 @@ function onSceneEnd() {
 
 observe(gameContext, 'label', loadLabel)
 observe(gameContext, 'index', processCurrentLine)
+observe(displayMode, 'screen', processCurrentLine)

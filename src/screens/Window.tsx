@@ -1,18 +1,21 @@
 import { useEffect, useRef } from 'react';
-import '../styles/game.scss';
-import { motion } from 'framer-motion'
-import HistoryLayer from '../layers/HistoryLayer';
-import { objectMatch } from '../utils/utils';
-import ChoicesLayer from '../layers/ChoicesLayer';
-import TextLayer from '../layers/TextLayer';
-import MenuLayer from '../layers/MenuLayer';
-import KeyMap from '../utils/KeyMap';
-
-import script from '../utils/script';
-import { SCREEN, displayMode, gameContext, quickSave, quickLoad } from '../utils/variables';
-import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
 import { FaArrowLeft } from 'react-icons/fa';
+import { motion } from 'framer-motion'
+import '../styles/game.scss';
+import HistoryLayer from '../layers/HistoryLayer';
+import ChoicesLayer from '../layers/ChoicesLayer';
+import MenuLayer from '../layers/MenuLayer';
+import TextLayer from '../layers/TextLayer';
+import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
+import KeyMap from '../utils/KeyMap';
+import script from '../utils/script';
+import { objectMatch } from '../utils/utils';
+import { SCREEN, displayMode, gameContext, quickSave, quickLoad } from '../utils/variables';
 import SkipLayer from '../layers/SkipLayer';
+
+//##############################################################################
+//#                                KEY MAPPING                                 #
+//##############################################################################
 
 const keyMap = new KeyMap({
   "next":     [()=> objectMatch(displayMode, {menu: false, choices: false, history: false}),
@@ -33,24 +36,7 @@ const keyMap = new KeyMap({
   "bg_move":  [()=> objectMatch(displayMode, {menu: false, history: false}),
               {key: "ArrowUp", ctrlKey: true, repeat: false, [KeyMap.args]: "up"},
               {key: "ArrowDown", ctrlKey: true, repeat: false, [KeyMap.args]: "down"}]
-})
-
-const Window = () => {
-
-//##############################################################################
-//#                                   HOOKS                                    #
-//##############################################################################
-
-  const rootElmtRef = useRef(null)
-
-  useEffect(()=> {
-    displayMode.screen = SCREEN.WINDOW
-  }, [])
-
-//_________________________________Key Mapping__________________________________
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-  keyMap.setCallback((action, _event: KeyboardEvent, ...args)=> {
+}, (action, _evt, ...args)=> {
     switch(action) {
       case "next"     : next(); break
       case "history"  : toggleHistory(); break
@@ -60,46 +46,53 @@ const Window = () => {
       case "q_load"   : quickLoad(script.history); break;
       case "bg_move"  : moveBg(args[0]); break
     }
-  })
+})
+
+//##############################################################################
+//#                              ACTION FUNCTIONS                              #
+//##############################################################################
+
+function next() {
+  if (objectMatch(displayMode, {choices: false, menu: false, history: false})) {
+    if (!displayMode.text && script.currentLine.startsWith('`')) // text has been hidden manually
+      toggleGraphics()
+    else
+      script.next()
+  }
+}
+
+function toggleMenu() {
+  displayMode.menu = !displayMode.menu
+}
+
+function toggleGraphics() {
+  displayMode.text = !displayMode.text
+}
+
+function toggleHistory() {
+  displayMode.text = !displayMode.text
+  displayMode.history = !displayMode.history
+}
+
+//##############################################################################
+//#                                 COMPONENT                                  #
+//##############################################################################
+
+const Window = () => {
+
+  const rootElmtRef = useRef(null)
 
   useEffect(()=> {
+    displayMode.screen = SCREEN.WINDOW
+
+    gameContext.label = 's29'
+    gameContext.index = 0
+
     keyMap.enable(document, "keydown", {
       capture: false // default if bubble. set to true to change to capture
     })
     return keyMap.disable.bind(keyMap, document, "keydown")
   }, [])
-
-
-//##############################################################################
-//#                              SCENE PROCESSING                              #
-//##############################################################################
-
-  useEffect(()=> {
-    gameContext.label = 's29'
-    gameContext.index = 0
-  }, [])
-
-  function next() {
-    if (objectMatch(displayMode, {choices: false, menu: false, history: false})) {
-      if (!displayMode.text && script.currentLine.startsWith('`')) // text has been hidden manually
-        toggleGraphics()
-      else
-        script.next()
-    }
-  }
-
-  function toggleMenu() {
-    displayMode.menu = !displayMode.menu
-  }
-
-  function toggleGraphics() {
-    displayMode.text = !displayMode.text
-  }
-
-  function toggleHistory() {
-    displayMode.text = !displayMode.text
-    displayMode.history = !displayMode.history
-  }
 
   const onContextMenu = (evt: React.MouseEvent) => {
     if (!displayMode.history) {
