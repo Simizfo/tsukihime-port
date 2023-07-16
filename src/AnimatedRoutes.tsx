@@ -6,6 +6,7 @@ import TitleMenuScreen from './screens/TitleMenuScreen';
 import GalleryScreen from './screens/GalleryScreen';
 import ConfigScreen from './screens/ConfigScreen';
 import { AnimatePresence } from 'framer-motion';
+import SavesScreen from "./screens/SavesScreen";
 
 const AnimatedRoutes = () => {
   const location = useLocation()
@@ -19,6 +20,8 @@ const AnimatedRoutes = () => {
           <Route path="/window" element={<Window />} />
           <Route path="/gallery" element={<GalleryScreen />} />
           <Route path="/config" element={<ConfigScreen />} />
+          <Route path="/save" element={<SavesScreen variant="save" />} />
+          <Route path="/load" element={<SavesScreen variant="load" />} />
         </Routes>
       </AnimatePresence>
     </div>

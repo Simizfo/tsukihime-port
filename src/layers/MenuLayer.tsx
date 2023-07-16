@@ -4,7 +4,7 @@ import { FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 import { IoClose } from "react-icons/io5"
 import { SCREEN, displayMode, quickLoad, quickSave, settings } from "../utils/variables"
 import { observe, unobserve } from "../utils/Observer"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import script from "../utils/script"
 
 /**
@@ -90,6 +90,9 @@ const MenuLayer = () => {
           <button onClick={quickLoad.bind(null, script.history)}>
             Quick load
           </button>
+          <Link to="/save">
+            Saves
+          </Link>
           <button onClick={title}>
             Title
           </button>
