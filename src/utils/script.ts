@@ -1,45 +1,31 @@
+import { commands as choiceCommands } from "../layers/ChoicesLayer"
 import { commands as graphicCommands } from "../layers/GraphicsLayer"
-import { Choice } from "../types"
+import { commands as textCommands } from "../layers/TextLayer"
+import { Page } from "../types"
 import { commands as audioCommands } from "./AudioManager"
 import { observe } from "./Observer"
-import Timer from "./timer"
-import { fetchFBlock, fetchScene } from "./utils"
-import { commands as variableCommands, getGameVariable, gameContext, settings } from "./variables"
+import Stack from "./Stack"
+import { HISTORY_MAX_PAGES } from "./constants"
+import { commands as timerCommands } from "./timer"
+import { fetchFBlock, fetchScene, objectMatch } from "./utils"
+import { commands as variableCommands, getGameVariable, gameContext, settings, createSaveState } from "./variables"
 
 type CommandHandler = {next: VoidFunction}
 type CommandProcessFunction = (arg: string, cmd: string, onFinish: VoidFunction)=>CommandHandler|void
 type CommandMap = Map<string, CommandProcessFunction|null>
-type TextCallback = (str:string)=>void
-type ChoicesCallback = (choices: Choice[])=>void
-type SkipCallback = (confirm:(skip: boolean)=>void)=>void
 
-let textCallback: TextCallback = ()=> { throw Error(`script.onText not specified`) }
-let newPageCallback: VoidFunction = ()=> { throw Error(`script.onPageStart not specified`) }
-let choicesCallback: ChoicesCallback = ()=> { throw Error(`script.onChoices not specified`) }
+type SkipCallback = (confirm:(skip: boolean)=>void)=>void
 let skipCallback: SkipCallback = ()=> { throw Error(`script.onSkipPrompt not specified`) }
 
 let sceneLines: Array<string> = []
 let currentCommand: CommandHandler | undefined
+let skipCommand: VoidFunction | undefined
+let lineSkipped: boolean = false
+const BLOCK_CMD = {next: ()=>{}}
+
+const history = new Stack<Page>([], HISTORY_MAX_PAGES)
 
 export const script = {
-  /**
-   * Set the callback to call when text must be displayed in the game
-   */
-  set onText(callback: TextCallback) {
-    textCallback = callback
-  },
-  /**
-   * Set the callback to call when the text page has ended
-   */
-  set onPageStart(callback: VoidFunction) {
-    newPageCallback = callback
-  },
-  /**
-   * Set the callback to call when the 'select' command i reached
-   */
-  set onChoices(callback: (choices: Choice[])=>void) {
-    choicesCallback = callback
-  },
   /**
    * Set the callback to call when a scene can be skipped
    */
@@ -53,6 +39,14 @@ export const script = {
   next(): void {
     if (currentCommand)
       currentCommand.next()
+  },
+
+  get currentLine() {
+    return sceneLines[gameContext.index]
+  },
+
+  get history() {
+    return history
   }
 }
 export default script
@@ -61,18 +55,25 @@ function isScene(label: string): boolean {
   return /^\*?s\d+a?$/.test(label)
 }
 
+function onPageBreak(createSS=true) {
+  if (history.top?.text.length == 0)
+    history.pop() // remove empty pages from history
+  history.push({ saveState: createSS ? createSaveState() : undefined, text: ""})
+}
+
+
 //##############################################################################
 //#                                  COMMANDS                                  #
 //##############################################################################
 
 const commands:CommandMap = new Map(Object.entries({
-  '`'         : processText,
-  '\\'        : processText,
-  'br'        : processText,
 
-  'resettimer': null, // all 'waittimer' are immediately after 'resettimer'
-  'waittimer' : processTimerCmd,
-  '!w'        : processTimerCmd,
+  ...textCommands,
+  ...graphicCommands,
+  ...audioCommands,
+  ...timerCommands,
+  ...variableCommands,
+  ...choiceCommands,
 
   'if'        : processIfCmd,
   'skip'      : processScriptMvmt,
@@ -80,22 +81,9 @@ const commands:CommandMap = new Map(Object.entries({
   'gosub'     : processScriptMvmt,
   'return'    : processScriptMvmt,
 
-  'select'    : processChoices,
-
   '*'         : null,
   '!s'        : null,
-
-  ...graphicCommands,
-  ...audioCommands,
-  ...variableCommands,
 }))
-
-function processTimerCmd(arg: string, _: string, onFinish: VoidFunction) {
-  const time_to_wait = parseInt(arg)
-  const timer = new Timer(time_to_wait, onFinish)
-  timer.start()
-  return {next: timer.skip.bind(timer)}
-}
 
 function checkIfCondition(condition: string) {
   // make the expression evaluable by replacing
@@ -124,21 +112,21 @@ function processIfCmd(arg: string, _: string, onFinish: VoidFunction) {
     throw Error(`no separation between condition and command: "if ${arg}"`)
   const condition = arg.substring(0, index)
   if (checkIfCondition(condition))
-    return processLine(arg.substring(index+1), onFinish)
+    processLine(arg.substring(index+1)).then(onFinish)
 
 }
 
 function processScriptMvmt(arg: string, cmd: string) {
-  arg = arg.trim()
+  arg = arg?.trim()
   switch (cmd) {
     case 'skip' :
-      gameContext.index += parseInt(arg)-1;
+      gameContext.index += parseInt(arg);
       return;
     case 'goto' :
       if (/^\*f\d+a?$/.test(arg)) {
         gameContext.label = arg.substring(1)
         gameContext.index = 0
-        return {next:()=>{}}; // prevent processing next line
+        return BLOCK_CMD // prevent processing next line
       } else if (arg == "*endofplay") {
         //TODO end session, return to title screen
         return
@@ -164,76 +152,39 @@ function processScriptMvmt(arg: string, cmd: string) {
           gameContext.label = arg
           gameContext.index = 0
         }
-    
-        return {next:()=>{}}; // prevent processing next line
+        return BLOCK_CMD // prevent processing next line
       }
       break
     case 'return' :
       onSceneEnd();
-      return {next:()=>{}}; // prevent processing next line
+      return BLOCK_CMD // prevent processing next line
   }
 }
 
-function processChoices(arg: string) {
-  const choices: Choice[] = []
-  const tokens = arg.split(/`,|(?<=\*\w+),/)
-  for (let i = 0; i < tokens.length; i+= 2) {
-    choices.push({
-      str: tokens[i].trim().substring(1), // remove '`'
-      label: tokens[i+1].trim().substring(1) // remove '*'
-    })
-  }
-  choicesCallback(choices)
-  return {next:()=>{}}; // prevent processing next line
-}
-
-function processText(text: string, cmd:string, onFinish: VoidFunction) {
-  // special cases : 'br' and '\' command are transformed into text
-  if (cmd == "br")
-    text = "\n"
-  else if (cmd == '\\')
-    text = "\\"
-  
-  // make sure the text line ends with a '\n'
-  if (!text.endsWith('\n'))
-    text = text+'\n'
-  
-  // split the text on inline timers.
-  const inlineTimerIndex = text.search('!w');
-  if (inlineTimerIndex >= 0)
-  {
-    const endIndex = text.indexOf(' ', inlineTimerIndex)
-    const textAfter = text.substring(endIndex)
-    const inlineTimer = text.substring(inlineTimerIndex, endIndex)
-    // once the text before the timer is processed,
-    // execute the timer, and then process the remaining text.
-    onFinish = processLine.bind(null, inlineTimer,
-        processLine.bind(null, `\`${textAfter}`, onFinish))
-    text = text.substring(0, inlineTimerIndex)
-  }
-  
-  let index
-  // the text is split into tokens at all '@' and '\'.
-  // tokens are sent one at a time to the script.onText
-  // at every call of script.next.
-  const next = ()=> {
-    if (text.startsWith('\\')) {
-      onFinish()
-    } else if (text.length > 0) {
-      index = text.search(/@|\\|\n|$/)
-      const breakChar = text.charAt(index)
-      let token = text.substring(0, index+1)
-      if (breakChar != '\\')
-        index ++
-
-      text = text.substring(index)
-      textCallback(token)
-    } else {
-      onFinish()
+function splitText(text: string) {
+  const instructions = new Array<{ cmd:string, arg:string }>()
+  let index = 0
+  while (text.length > 0) {
+    index = text.search(/@|\\|!\w|$/)
+    instructions.push({cmd:'`',arg: text.substring(0, index)})
+    text = text.substring(index)
+    switch (text.charAt(0)) {
+      case '@' :
+      case '\\' :
+        instructions.push({cmd: text.charAt(0), arg:""})
+        text = text.substring(1)
+        break
+      case '!' : // !w<time>
+        const argIndex = text.search(/\d|\s|$/)
+        const endIndex = text.search(/\s|$/)
+        instructions.push({
+          cmd: text.substring(0, argIndex),
+          arg: text.substring(argIndex, endIndex)})
+        text = text.substring(endIndex)
+        break
     }
   }
-  next()
-  return { next }
+  return instructions
 }
 
 //##############################################################################
@@ -248,54 +199,62 @@ function processText(text: string, cmd:string, onFinish: VoidFunction) {
  * @param line the script line to process
  * @param onFinish callback function called when the line has been processed
  */
-export function processLine(line: string, onFinish: VoidFunction) {
-  let cmd, args, i
+export async function processLine(line: string) {
+  const instructions = new Array<{cmd:string,arg:string}>()
+  const endPageBreak = line.endsWith('\\');
+
+  if (endPageBreak) // '\\' will be added as an individual command at the end
+    line = line.substring(0, line.length-1)
+  
   if (line.startsWith('`')) {
     // following space (if present) is part of the argument
-    cmd = '`'
-    args = line.substring(1)
+    line = line.substring(1)
+    if (!endPageBreak)
+      line += '\n'
+    instructions.push(...splitText(line.substring(1)))
+  } else if (line.startsWith('!')) {
+    instructions.push(...splitText(line)) // '!w' are handled as inline commands
   } else {
-    if (line.startsWith('!')) {
-      // argument is not separated from the command name by a space
-      i = line.search(/\d|$/)
-    } else {
-      i = line.indexOf(' ')
-    }
-    // split the line into [cmd, arguments]
-    if (i == -1)
-      i = line.length
-    cmd = line.substring(0, i)
-    args = line.substring(i+1)
-    // if the line ends with a '\' and is not a text command,
-    // execute the '\' command separately
-    if (args.endsWith('\\')) {
-      args = args.substring(0, args.length-1)
-      //when the first command finishes, execute the '\\' command
-      onFinish = processLine.bind(null, '\\', onFinish)
-    }
-  }
-  if (!commands.has(cmd)) {
-    const {label: scene, index} = gameContext
-    console.error(`unknown command scene ${scene}:${index}: ${line}`)
+    let index = line.indexOf(' ')
+    if (index == -1)
+      index = line.length
+    instructions.push({
+      cmd: line.substring(0,index),
+      arg: line.substring(index+1)
+    })
   }
 
-  currentCommand = commands.get(cmd)?.(args, cmd, onFinish) as typeof currentCommand
-  // if the command does not return a CommandHandler,
-  // it has been executed instantly and won't call the onFinish callback
-  if (!currentCommand)
-    onFinish()
-  else {
-    return currentCommand
+  if (endPageBreak)
+    instructions.push({cmd:'\\',arg:''})
+  
+  for (const [i, {cmd, arg}] of instructions.entries()) {
+    if (lineSkipped) {
+      break
+    }
+    const command = commands.get(cmd)
+    if (command) {
+      await new Promise<void>(resolve=> {
+        currentCommand = command(arg, cmd, resolve) as typeof currentCommand
+        if (currentCommand)
+          skipCommand = resolve
+        else
+          resolve()
+      })
+      currentCommand = undefined
+      skipCommand = undefined
+      // add history pages after executing '\'.
+      // TODO allow loading those pages. To prevent error, they cannot be loaded
+      if (cmd == '\\' && i < instructions.length) {
+        onPageBreak(false)
+      }
+    }
+    else if (!commands.has(cmd)) {
+      const {label: scene, index} = gameContext
+      console.error(`unknown command ${scene}:${index}: ${line}`)
+      debugger
+    }
   }
-}
-
-/**
- * Default callback for script lines.
- * Move to next script line.
- */
-function incrementLineIndex() {
-  currentCommand = undefined
-  gameContext.index++
+  return currentCommand
 }
 
 /**
@@ -304,16 +263,32 @@ function incrementLineIndex() {
  * Calls the execution of the command at the current line index
  * in the scene file
  */
-function processCurrentLine() {
-  const index = gameContext.index
-  if (sceneLines?.length > 0 && index < sceneLines.length) {
-    if (isScene(gameContext.label)
-        && ( index == 0 || sceneLines[index-1].endsWith('\\')))
-      newPageCallback()
+async function processCurrentLine() {
+  if (currentCommand) {
+    // Index has been changed by outside this function.
+    // Skip remaining instructions in the previous line.
+    lineSkipped = true
+    skipCommand?.() // Resolve the promise of the ongoing command.
+    // Process the current line after aborting the previous line
+    setTimeout(processCurrentLine, 0)
+    return
+  }
+
+  const {index, label} = gameContext
+  const lines = sceneLines
+  if (lines?.length > 0 && index < lines.length) {
+    if (isScene(label) && (index == 0 || lines[index-1].endsWith('\\')))
+      onPageBreak()
 
     let line = sceneLines[index]
     console.log(`Processing line ${index}: ${line}`)
-    processLine(line, incrementLineIndex)
+    await processLine(line);
+    if (gameContext.index != index || gameContext.label != label)
+      lineSkipped = false
+    else {
+      gameContext.index++
+    }
+    
   } else if (sceneLines?.length > 0 && index > sceneLines.length) {
     onSceneEnd()
   }

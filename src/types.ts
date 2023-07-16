@@ -1,7 +1,7 @@
 import { SaveState } from "./utils/variables"
 
 export type Page = {
-  saveState: SaveState,
+  saveState: SaveState|undefined,
   text: string
 }
 

@@ -6,10 +6,54 @@ import { TEXT_SPEED } from "../utils/constants"
 import { convertText } from "../utils/utils"
 import { displayMode, settings } from "../utils/variables"
 import { observe, unobserve } from "../utils/Observer"
+import script from "../utils/script"
 
 const icons: {[key: string]: string} = {
   "moon": moonIcon,
   "page": pageIcon
+}
+
+const scriptInterface: {
+  text: string,
+  fastForward: boolean,
+  onFinish: VoidFunction|undefined
+} = {
+  text: "",
+  fastForward: false,
+  onFinish: undefined
+}
+
+function appendText(text: string) {
+  script.history.top.text += text
+  scriptInterface.text = script.history.top.text
+}
+
+export const commands = {
+  'br' : appendText.bind(null, "\n"),
+  '@'  : (_arg:string, _cmd: string, onFinish: VoidFunction)=> {
+    appendText("@")
+    return { next: onFinish }
+  },
+  '\\' : (_arg:string, _cmd: string, onFinish: VoidFunction)=> {
+    appendText("\\")
+    return { next: onFinish }
+  },
+  '`'  : (text:string, _: string, onFinish: VoidFunction)=> {
+    appendText(text)
+    if (text == '\n') // line breaks an be displayed instantly
+      return;
+    
+    scriptInterface.onFinish = ()=> {
+      scriptInterface.onFinish = undefined,
+      scriptInterface.fastForward = false
+      onFinish()
+    }
+    return {
+      next: () => {
+        scriptInterface.fastForward = true;
+      }
+    }
+  }
 }
 
 //##############################################################################
@@ -17,25 +61,29 @@ const icons: {[key: string]: string} = {
 //##############################################################################
 
 type Props = {
-  text: string, // text to display
-  immediate: boolean, // immediately display the full text
-  onFinish: VoidFunction, // function to call when reaching '@', '\' or '\n'
   [key: string] : any // other properties to apply to the root 'div' element of the component
 }
 
-const TextLayer = memo(({ text, immediate = false, onFinish, ...props }: Props) => {
+const TextLayer = memo(({...props}: Props) => {
 
+  const [ text, setText ] = useState<string>("")
+  const [ immediate, setImmediate ] = useState<boolean>(false)
   const [ previousText, setPreviousText ] = useState<string[]>([]) // lines to display entirely
   const [ newText, setNewText ] = useState<string>("") // line to display gradually
   const [ cursor, setCursor ] = useState<number>(0) // position of the cursor on the last line.
   const [ glyph, setGlyph ] = useState<string>('') // id of the animated glyph to display at end of line
 
   const [ display, setDisplay ] = useState<boolean>(displayMode.text)
+  
 
   useEffect(()=> {
     observe(displayMode, 'text', setDisplay)
+    observe(scriptInterface, "text", setText)
+    observe(scriptInterface, 'fastForward', setImmediate)
     return ()=> {
       unobserve(displayMode, 'text', setDisplay)
+      unobserve(scriptInterface, "text", setText)
+      unobserve(scriptInterface, 'fastForward', setImmediate)
     }
   }, [])
 
@@ -60,7 +108,7 @@ const TextLayer = memo(({ text, immediate = false, onFinish, ...props }: Props) 
       const textSpeed = settings.textSpeed
       if (immediate || textSpeed == TEXT_SPEED.instant) {
         setCursor(newText.length)
-        onFinish()
+        scriptInterface.onFinish?.()
       } else {
         let index = 0
         // gradually display next characters
@@ -71,7 +119,7 @@ const TextLayer = memo(({ text, immediate = false, onFinish, ...props }: Props) 
           setCursor(index)
           if (index >= newText.length) {
             timer.cancel()
-            onFinish()
+            scriptInterface.onFinish?.()
           }
         }, true)
         timer.start()
@@ -79,7 +127,7 @@ const TextLayer = memo(({ text, immediate = false, onFinish, ...props }: Props) 
         return timer.cancel.bind(timer)
       }
     } else if (previousText.length > 0) {
-      onFinish()
+      scriptInterface.onFinish?.()
     }
   }, [previousText, newText, immediate])
 

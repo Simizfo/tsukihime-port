@@ -2,13 +2,32 @@ import { useEffect, useState } from "react"
 import { Choice } from "../types"
 import { displayMode, gameContext } from "../utils/variables"
 import { observe, unobserve } from "../utils/Observer"
-import script from "../utils/script"
 
 const choicesContainer: {choices: Choice[]} = {
   choices: []
 }
 
-script.onChoices = (choices: Choice[])=> {
+
+//##############################################################################
+//#                                  COMMANDS                                  #
+//##############################################################################
+
+export const commands = {
+  'select': (arg: string)=> {
+    const choices: Choice[] = []
+    const tokens = arg.split(/`,|(?<=\*\w+),/)
+    for (let i = 0; i < tokens.length; i+= 2) {
+      choices.push({
+        str: tokens[i].trim().substring(1), // remove '`'
+        label: tokens[i+1].trim().substring(1) // remove '*'
+      })
+    }
+    onChoices(choices)
+    return {next:()=>{}}; // prevent processing next line
+  }
+}
+
+function onChoices(choices: Choice[]) {
   if (choices.length > 1) {
     choicesContainer.choices = choices
     displayMode.choices = true;
@@ -20,6 +39,10 @@ script.onChoices = (choices: Choice[])=> {
     console.error("no choice after scene", gameContext.label)
   }
 }
+
+//##############################################################################
+//#                                 COMPONENT                                  #
+//##############################################################################
 
 const ChoicesLayer = () => {
   const [display, setDisplay] = useState<boolean>(displayMode.choices)

@@ -1,21 +1,18 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import '../styles/game.scss';
 import { motion } from 'framer-motion'
 import HistoryLayer from '../layers/HistoryLayer';
 import { objectMatch } from '../utils/utils';
-import Stack from "../utils/Stack";
 import ChoicesLayer from '../layers/ChoicesLayer';
 import TextLayer from '../layers/TextLayer';
 import MenuLayer from '../layers/MenuLayer';
-import { HISTORY_MAX_PAGES } from '../utils/constants';
 import KeyMap from '../utils/KeyMap';
 
 import script from '../utils/script';
-import { SCREEN, displayMode, createSaveState, exportSave, gameContext, loadSave } from '../utils/variables';
+import { SCREEN, displayMode, createSaveState, gameContext, loadSaveState } from '../utils/variables';
 import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
 import { FaArrowLeft } from 'react-icons/fa';
 import SkipLayer from '../layers/SkipLayer';
-import { Page } from '../types';
 
 const keyMap = new KeyMap({
   "next":     [()=> objectMatch(displayMode, {menu: false, choices: false, history: false}),
@@ -31,16 +28,14 @@ const keyMap = new KeyMap({
   "menu":     [
               {key: "Escape", repeat: false, [KeyMap.condition]: ()=>(displayMode.menu || !displayMode.history)},
               {key: "Backspace", repeat: false, [KeyMap.condition]: ()=>displayMode.menu}],
-  "save":     {key: "S", ctrlKey: true},
-  "load":     {key: "O", ctrlKey: true},
+  "q_save":   {key: "S", repeat: false},
+  "q_load":   {key: "L", repeat: false},
   "bg_move":  [()=> objectMatch(displayMode, {menu: false, history: false}),
               {key: "ArrowUp", ctrlKey: true, repeat: false, [KeyMap.args]: "up"},
               {key: "ArrowDown", ctrlKey: true, repeat: false, [KeyMap.args]: "down"}]
 })
 
 const Window = () => {
-  const [text, setText] = useState<string>("") //text on current page
-  const [fastForward, setFastForward] = useState<boolean>(false)
 
 //##############################################################################
 //#                                   HOOKS                                    #
@@ -57,19 +52,13 @@ const Window = () => {
 
   keyMap.setCallback((action, _event: KeyboardEvent, ...args)=> {
     switch(action) {
-      case "next" : next(); break
-      case "history": toggleHistory(); break
-      case "graphics": toggleGraphics(); break
-      case "menu" : toggleMenu(); break
-      case "save" :
-        exportSave();
-        return true // prevent default behaviour of Ctrl+S
-      case "load" :
-        loadSave();
-        return true // prevent default behaviour of Ctrl+O
-      case "bg_move" :
-        moveBg(args[0])
-        break
+      case "next"     : next(); break
+      case "history"  : toggleHistory(); break
+      case "graphics" : toggleGraphics(); break
+      case "menu"     : toggleMenu(); break
+      case "q_save"   : createSaveState('quick'); break
+      case "q_load"   : loadSaveState('quick'); break;
+      case "bg_move"  : moveBg(args[0]); break
     }
   })
 
@@ -85,59 +74,17 @@ const Window = () => {
 //#                              SCENE PROCESSING                              #
 //##############################################################################
 
-  /**
-   * - `"running"`: the text is progressively being displayed
-   * - `"idle"`: hit a '@' or '\', and waiting for user to move to next
-   * - `"none"`: current command is not text-related (last text-command has ended)
-   */
-  const textState = useRef<"running"|"idle"|"none">("none")
-  const history = useRef<Stack<Page>>(new Stack([], HISTORY_MAX_PAGES))
-
   useEffect(()=> {
-    gameContext.label = 's29';
-    gameContext.index = 0;
-
-    script.onText = function(str:string) {
-      if (history.current.length == 0)
-        throw Error("The history should have at least one page")
-      //keep fast-forward if previous text did not end with '@' or '\'
-      const trimmed = history.current.top.text.trim()
-      const lastChar = trimmed.charAt(trimmed.length-1)
-      if (['@','\\'].includes(lastChar))
-        setFastForward(false)
-      history.current.top.text += str
-      setText(history.current.top.text)
-      textState.current = "running"
-    }
-    script.onPageStart = function() {
-      setFastForward(false)
-      if (history.current.top?.text.length == 0)
-        history.current.pop() // remove empty pages from history
-      history.current.push({saveState: createSaveState(), text: ""})
-      setText("")
-    }
+    gameContext.label = 's29'
+    gameContext.index = 0
   }, [])
-  
-  const onTextBreak = ()=> {
-    const breakChar = text?.charAt(text.length-1)??""
-    if (!['\\','@'].includes(breakChar)) {
-      textState.current = "none"
-      script.next()
-    } else {
-      textState.current = "idle"
-    }
-  }
 
   function next() {
     if (objectMatch(displayMode, {choices: false, menu: false, history: false})) {
-      if (!displayMode.text && textState.current == "idle") // text has been hidden manually
+      if (!displayMode.text && script.currentLine.startsWith('`')) // text has been hidden manually
         toggleGraphics()
-      else if (textState.current != 'running') {
+      else
         script.next()
-        textState.current = "none"
-      } else {
-        setFastForward(true)
-      }
     }
   }
 
@@ -169,14 +116,13 @@ const Window = () => {
       exit={{scale: 1.5, opacity: 0}}
       transition={{duration: 0.5}}
       onContextMenu={onContextMenu}>
-      <HistoryLayer pages={history.current} />
-
       <GraphicsLayer onClick={next} />
 
-      <TextLayer text={text??""} immediate={fastForward}
-        onFinish={onTextBreak} onClick={next}/>
+      <TextLayer onClick={next}/>
 
       <ChoicesLayer />
+
+      <HistoryLayer />
 
       <SkipLayer />
 

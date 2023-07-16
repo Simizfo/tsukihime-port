@@ -89,8 +89,8 @@ export const displayMode : {
 export const gameContext = {
 //_____________________________position in scenario_____________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  label: '', // scene id
-  index: 0,
+  label: '', // script block label
+  index: 0, // line index in the labeled script block. +0.5 if '\' inside line
 //_______________________________audio, graphics________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   audio: {

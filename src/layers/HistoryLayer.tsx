@@ -1,15 +1,14 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { addEventListener, convertText } from "../utils/utils";
-import Stack from "../utils/Stack";
 import { SaveState, displayMode, loadSaveState } from '../utils/variables';
 import { observe, unobserve } from '../utils/Observer';
-import { Page } from '../types';
+import script from '../utils/script';
 
 type Props = {
-  pages: Stack<Page>,
+  [key: string] : any // other properties to apply to the root 'div' element of the component
 }
 
-const HistoryLayer = ({ pages }: Props) => {
+const HistoryLayer = (props: Props) => {
   const [ display, setDisplay ] = useState(displayMode.history)
   const historyRef = useRef<HTMLDivElement>(null)
 
@@ -17,7 +16,7 @@ const HistoryLayer = ({ pages }: Props) => {
     //on mouse wheel up display history
     const handleWheel = (e: WheelEvent) => {
       if (e.deltaY < 0 && !display && !displayMode.menu) {
-        const it = pages[Symbol.iterator]()
+        const it = script.history[Symbol.iterator]()
         if (!it.next().done) // at least one element in the iterator
           setDisplay(true)
       }
@@ -74,16 +73,16 @@ const HistoryLayer = ({ pages }: Props) => {
 
   function onClick(i: number, saveState: SaveState) {
     setDisplay(false)
-    pages.trimTop(pages.length-i)
+    script.history.trimTop(script.history.length-i)
     loadSaveState(saveState)
   }
-
+  const {className, ...otherProps} = props
   return (
-    <div className={`box box-history ${display ? "show" : ""}`}>
+    <div className={`box box-history ${display ? "show " : ""}${className}`} {...otherProps}>
       <div className="box-text" id="history" ref={historyRef}>
         <div className="text-container">
           {/* lignes des pages précédentes */}
-          {pages.map(({text, saveState: saveState}, i) =>
+          {script.history.map(({text, saveState}, i) =>
             <Fragment key={i}>
               {i > 0 && <hr/>}
               {saveState &&

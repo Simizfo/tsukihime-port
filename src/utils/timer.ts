@@ -59,3 +59,16 @@ export default class Timer {
     }
   }
 }
+
+export const commands = {
+  'resettimer': null, // all 'waittimer' are immediately after 'resettimer'
+  'waittimer' : processTimerCmd,
+  '!w'        : processTimerCmd,
+}
+
+function processTimerCmd(arg: string, _: string, onFinish: VoidFunction) {
+  const time_to_wait = parseInt(arg)
+  const timer = new Timer(time_to_wait, onFinish)
+  timer.start()
+  return {next: timer.skip.bind(timer)}
+}
