@@ -8,7 +8,7 @@ import Stack from "./Stack"
 import { HISTORY_MAX_PAGES } from "./constants"
 import { commands as timerCommands } from "./timer"
 import { fetchFBlock, fetchScene } from "./utils"
-import { commands as variableCommands, getGameVariable, gameContext, settings, createSaveState } from "./variables"
+import { commands as variableCommands, getGameVariable, gameContext, settings, createSaveState, displayMode, SCREEN } from "./variables"
 
 type CommandHandler = {next: VoidFunction}
 type CommandProcessFunction = (arg: string, cmd: string, onFinish: VoidFunction)=>CommandHandler|void
@@ -208,7 +208,7 @@ function splitText(text: string) {
 }
 
 //##############################################################################
-//#                                 OBSERVERS                                  #
+//#                            EXECUTE SCRIPT LINES                            #
 //##############################################################################
 
 /**
@@ -279,11 +279,16 @@ export async function processLine(line: string) {
 
 /**
  * Executed when {@link gameContext.index} is modified,
- * or when the scene is loaded.
+ * when the scene is loaded, or when the screen changes.
  * Calls the execution of the command at the current line index
  * in the scene file
  */
 async function processCurrentLine() {
+  if (displayMode.screen != SCREEN.WINDOW)
+    return // not in the right screeen
+  else if (sceneLines?.length == 0)
+    return // scene not loaded
+  
   if (currentCommand) {
     // Index has been changed by outside this function.
     // Skip remaining instructions in the previous line.
@@ -297,20 +302,23 @@ async function processCurrentLine() {
 
   const {index, label} = gameContext
   const lines = sceneLines
-  if (lines?.length > 0 && index < lines.length) {
+  if (index < lines.length) {
     if (isScene(label) && (index == 0 || lines[index-1].endsWith('\\')))
       onPageBreak()
 
     let line = sceneLines[index]
     console.log(`Processing line ${index}: ${line}`)
     await processLine(line);
-    if (gameContext.index != index || gameContext.label != label)
+    if (gameContext.index != index || gameContext.label != label) {
+      // the context has been changed while processing the line.
+      // processCurrentLine() will be called again by the observer.
+      // The index should not be incremented
       lineSkipped = false
-    else {
+    } else {
       gameContext.index++
     }
     
-  } else if (sceneLines?.length > 0 && index > sceneLines.length) {
+  } else {
     onSceneEnd()
   }
 }
@@ -324,24 +332,16 @@ async function processCurrentLine() {
  */
 async function loadLabel(label: string) {
   console.log(`load label ${label}`)
-  sceneLines = []
-  if (/^s\d+a?$/.test(label)) {
-    label = label.substring(1)
-    console.log(`load scene ${label}`)
-    sceneLines = await fetchScene(label)
-    processCurrentLine()
-  } else if (/^f\d+a?$/.test(label)) {
-    console.log(`load block ${label}`)
-    label = label.substring(1)
+  sceneLines = [] // set to empty to prevent execution of previous scene
+  if (/^s\d+a?$/.test(label))
+    sceneLines = await fetchScene(label.substring(1))
+  else if (/^f\d+a?$/.test(label))
+    sceneLines = await fetchFBlock(label.substring(1))
+  else if (/^skip\d+a?$/.test(label))
     sceneLines = await fetchFBlock(label)
-    processCurrentLine()
-  } else if (/^skip\d+a?$/.test(label)) {
-    console.log(`load block ${label}`)
-    sceneLines = await fetchFBlock(label)
-    processCurrentLine()
-  } else {
+  else
     throw Error(`unknown label ${label}`)
-  }
+  processCurrentLine()
 }
 
 function onSceneEnd() {
@@ -358,3 +358,4 @@ function onSceneEnd() {
 
 observe(gameContext, 'label', loadLabel)
 observe(gameContext, 'index', processCurrentLine)
+observe(displayMode, 'screen', processCurrentLine)
