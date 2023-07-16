@@ -85,24 +85,43 @@ const commands:CommandMap = new Map(Object.entries({
   '!s'        : null,
 }))
 
+// (%var|n)(op)(%var|n)
+const opRegexp = /(?<lhs>(%\w+|\d+))(?<op>[=!><]+)(?<rhs>(%\w+|\d+))/
 function checkIfCondition(condition: string) {
-  // make the expression evaluable by replacing
-  // variable names by their values
-  const expression = condition.split(' ').map(token=> {
-    let index
-    //search for '%' or '$' that start variables
-    while((index = token.search(/[%\$]/)) != -1) {
-      const stopIndex = token.substring(index+1).search(/\W/)+index+1
-      // replace the variable by its value
-      token = token.substring(0, index)
-            + getGameVariable(token.substring(index, stopIndex))
-            + token.substring(stopIndex)
+  let value = true
+  for (const [i, token] of condition.split(' ').entries()) {
+    if (i % 2 == 0) {
+      const match = opRegexp.exec(token)
+      if (match) {
+        let {lhs, op, rhs} = match.groups as any;
+        if (lhs.charAt(0) == '%')
+          lhs = getGameVariable(lhs) as number
+        else lhs = parseInt(lhs)
+        if (rhs.charAt(0) == '%')
+          rhs = getGameVariable(rhs) as number
+        else rhs = parseInt(rhs)
+        switch (op) {
+          case '==' : value = (lhs == rhs); break
+          case '!=' : value = (lhs != rhs); break
+          case '<'  : value = (lhs <  rhs); break
+          case '>'  : value = (lhs >  rhs); break
+          case '<=' : value = (lhs <= rhs); break
+          case '>=' : value = (lhs >= rhs); break
+          default : throw Error (`unknown operator ${op} in condition ${condition}`)
+        }
+      } else
+        throw Error(`Unable to parse expression "${token}" in condition ${condition}`)
+    } else if (token == "&&") {
+      if (!value)
+        return false
+    } else if (token == "||") {
+      if (value)
+        return true
+    } else {
+      throw Error(`Unable to parse operator "${token}" in condition ${condition}`)
     }
-    return token
-  }).join(' ')
-  // transform the expression into an executable function, and return the result
-  const f = new Function("return " + expression)
-  return f()
+  }
+  return value
 }
 
 function processIfCmd(arg: string, _: string, onFinish: VoidFunction) {
