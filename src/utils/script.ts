@@ -18,6 +18,7 @@ type SkipCallback = (confirm:(skip: boolean)=>void)=>void
 let skipCallback: SkipCallback = ()=> { throw Error(`script.onSkipPrompt not specified`) }
 
 let sceneLines: Array<string> = []
+let lastLine = {label: "", index: 0}
 let currentCommand: CommandHandler | undefined
 let skipCommand: VoidFunction | undefined
 let lineSkipped: boolean = false
@@ -290,6 +291,9 @@ async function processCurrentLine() {
     return // scene not loaded
   
   if (currentCommand) {
+    if (lastLine.index == gameContext.index &&
+        lastLine.label == gameContext.label)
+      return
     // Index has been changed by outside this function.
     // Skip remaining instructions in the previous line.
     // Resolve the promise of the ongoing command.
@@ -302,6 +306,8 @@ async function processCurrentLine() {
 
   const {index, label} = gameContext
   const lines = sceneLines
+  lastLine.index = index
+  lastLine.label = label
   if (index < lines.length) {
     if (isScene(label) && (index == 0 || lines[index-1].endsWith('\\')))
       onPageBreak()
