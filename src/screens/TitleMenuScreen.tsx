@@ -39,8 +39,8 @@ const TitleMenuScreen = () => {
           Start
         </Link>
 
-        <Link to="/" className="menu-item">
-          Quick load
+        <Link to="/load" className="menu-item">
+          Load
         </Link>
 
         <Link to="/config" className="menu-item">

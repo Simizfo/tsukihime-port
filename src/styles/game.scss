@@ -265,7 +265,24 @@ body {
             }
         }
     }
+    .box-save {
+        z-index: -1;
+        opacity: 0;
+        transition: var(--transition);
+        transition-property: opacity, z-index;
 
+        &.show {
+            z-index: 100;
+            opacity: 1;
+            background: #000000d6;
+            backdrop-filter: blur(2px);
+        }
+
+        #saves-layout {
+            position: absolute;
+            inset: 0;
+        }
+    }
     .box-history {
         z-index: -1;
         opacity: 0;

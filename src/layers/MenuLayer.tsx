@@ -59,6 +59,16 @@ const MenuLayer = () => {
     displayMode.history = true
   }
 
+  const saveMode = () => {
+    displayMode.menu = false
+    displayMode.save = true
+  }
+
+  const loadMode = () => {
+    displayMode.menu = false
+    displayMode.load = true
+  }
+
   const title = () => {
     navigate(SCREEN.TITLE)
     displayMode.menu = false
@@ -90,9 +100,12 @@ const MenuLayer = () => {
           <button onClick={quickLoad.bind(null, script.history)}>
             Quick load
           </button>
-          <Link to="/save">
-            Saves
-          </Link>
+          <button onClick={saveMode}>
+            Save
+          </button>
+          <button onClick={loadMode}>
+            Load
+          </button>
           <button onClick={title}>
             Title
           </button>

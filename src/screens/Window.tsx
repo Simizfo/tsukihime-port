@@ -12,6 +12,7 @@ import script from '../utils/script';
 import { objectMatch } from '../utils/utils';
 import { SCREEN, displayMode, gameContext, quickSave, quickLoad } from '../utils/variables';
 import SkipLayer from '../layers/SkipLayer';
+import SavesLayer from '../layers/SavesLayer';
 
 //##############################################################################
 //#                                KEY MAPPING                                 #
@@ -116,6 +117,8 @@ const Window = () => {
       <ChoicesLayer />
 
       <HistoryLayer />
+
+      <SavesLayer />
 
       <SkipLayer />
 

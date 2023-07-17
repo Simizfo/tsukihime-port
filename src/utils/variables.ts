@@ -73,6 +73,8 @@ export const displayMode : {
   text: boolean,
   choices: boolean,
   skip: boolean,
+  save: boolean,
+  load: boolean,
   bgAlignment: 'top'|'center'|'bottom'
 } = {
   screen: SCREEN.TITLE,
@@ -81,6 +83,8 @@ export const displayMode : {
   text: true,
   choices: false,
   skip: false,
+  save: false,
+  load: false,
   bgAlignment: 'center'
 }
 
