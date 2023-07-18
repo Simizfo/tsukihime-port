@@ -40,13 +40,22 @@ const SavesLayer = () => {
   
   return (
     <div className={`box box-save ${displaySave || displayLoad ? "show" : ""}`}>
-      {displaySave &&
-      <SavesLayout variant={"save"} />
-      }
+      <div className="page-content">
+        {displaySave &&
+        <SavesLayout variant={"save"} />
+        }
 
-      {displayLoad &&
-      <SavesLayout variant={"load"} />
-      }
+        {displayLoad &&
+        <SavesLayout variant={"load"} />
+        }
+
+        <button className="menu-btn back-button" onClick={() => {
+          setDisplaySave(false)
+          setDisplayLoad(false)
+        }}>
+          Back
+        </button>
+      </div>
     </div>
   )
 }

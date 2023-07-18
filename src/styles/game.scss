@@ -273,13 +273,7 @@ body {
         &.show {
             z-index: 100;
             opacity: 1;
-            background: rgba(8, 36, 90, 0.72);
-            backdrop-filter: blur(3px);
-        }
-
-        #saves-layout {
-            position: absolute;
-            inset: 0;
+            backdrop-filter: blur(2px);
         }
     }
     .box-history {

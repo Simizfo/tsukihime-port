@@ -21,7 +21,8 @@ const SavesLayout = ({variant}: Props) => {
         {/* TODO map */}
         <button className="save-container">
           <img src="./image_x2/event/his_e02b.webp" />
-          <div>
+          
+          <div className="deta">
             <div className="date">
               <b>2023/07/17</b> 19:48
             </div>
@@ -32,7 +33,7 @@ const SavesLayout = ({variant}: Props) => {
         </button>
       </div>
 
-      <div className="deta">
+      <div className="info">
         <img src="./image_x2/event/his_e02b.webp" />
 
         Affinités<br />

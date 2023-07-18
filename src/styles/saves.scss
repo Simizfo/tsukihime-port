@@ -15,8 +15,8 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 1em;
-    width: min(100%, 860px);
     margin: 0 auto;
+    flex: 1;
 
     .saves {
         display: flex;
@@ -33,7 +33,7 @@
             flex-direction: row;
             gap: .2em;
             color: #000;
-            transition: all .2s ease-out;
+            transition: all .4s ease-out;
             display: flex;
             gap: 1em;
 
@@ -51,18 +51,23 @@
                 border-radius: 4px;
             }
 
-            .date {
-                color: #031989;
-                b {
-                    font-family: UbuntuBold;
+            .deta {
+                min-width: 0;
+
+                .date {
+                    color: #031989;
+                    b {
+                        font-family: UbuntuBold;
+                    }
                 }
-            }
-            .line {
-                font-family: UbuntuItalic;
-                font-style: italic;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
+                .line {
+                    font-family: UbuntuItalic;
+                    font-style: italic;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 90%;
+                }
             }
 
             &:hover {
@@ -73,7 +78,14 @@
         }
     }
 
-    .deta {
+    .info {
         background-color: #fff;
+    }
+
+    @media screen and (max-width: 860px) {
+        grid-template-columns: 1fr;
+        .info { // will have to find a good way to display it
+            display: none;
+        }
     }
 }
