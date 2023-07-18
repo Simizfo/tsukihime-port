@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from "react"
 import { addEventListener } from "../utils/utils"
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 import { IoClose } from "react-icons/io5"
-import { SCREEN, displayMode, quickLoad, quickSave, settings } from "../utils/variables"
+import { SCREEN, displayMode, settings } from "../utils/variables"
+import { quickLoad, quickSave } from "../utils/savestates"
 import { observe, unobserve } from "../utils/Observer"
 import { Link, useNavigate } from "react-router-dom"
 import script from "../utils/script"
@@ -94,10 +95,10 @@ const MenuLayer = () => {
           <button onClick={historyMode}>
             History
           </button>
-          <button onClick={quickSave.bind(null, script.history)}>
+          <button onClick={quickSave}>
             Quick save
           </button>
-          <button onClick={quickLoad.bind(null, script.history)}>
+          <button onClick={quickLoad}>
             Quick load
           </button>
           <button onClick={saveMode}>

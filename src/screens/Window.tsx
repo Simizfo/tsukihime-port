@@ -10,7 +10,8 @@ import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
 import KeyMap from '../utils/KeyMap';
 import script from '../utils/script';
 import { objectMatch } from '../utils/utils';
-import { SCREEN, displayMode, gameContext, quickSave, quickLoad } from '../utils/variables';
+import { SCREEN, displayMode, gameContext } from '../utils/variables';
+import { quickSave, quickLoad } from "../utils/savestates";
 import SkipLayer from '../layers/SkipLayer';
 import SavesLayer from '../layers/SavesLayer';
 
@@ -47,8 +48,8 @@ const keyMap = new KeyMap({
       case "history"  : toggleHistory(); break
       case "graphics" : toggleGraphics(); break
       case "menu"     : toggleMenu(); break
-      case "q_save"   : quickSave(script.history); break
-      case "q_load"   : quickLoad(script.history); break;
+      case "q_save"   : quickSave(); break
+      case "q_load"   : quickLoad(); break;
       case "load"     : toggleLoad(); break
       case "save"     : toggleSave(); break
       case "bg_move"  : moveBg(args[0]); break

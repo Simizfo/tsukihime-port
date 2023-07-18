@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { addEventListener, convertText, objectMatch } from "../utils/utils";
-import { SaveState, displayMode, loadSaveState } from '../utils/variables';
+import { displayMode } from '../utils/variables';
+import { SaveState, loadSaveState } from "../utils/savestates";
 import { observe, unobserve } from '../utils/Observer';
 import script from '../utils/script';
 
@@ -73,7 +74,7 @@ const HistoryLayer = (props: Props) => {
 
   function onClick(saveState: SaveState) {
     setDisplay(false)
-    loadSaveState(saveState, script.history)
+    loadSaveState(saveState)
   }
   const {className, ...otherProps} = props
   return (

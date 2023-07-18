@@ -1,4 +1,4 @@
-import { SaveState } from "./utils/variables"
+import { SaveState } from "./utils/savestates"
 
 export type Page = {
   saveState: SaveState|undefined,

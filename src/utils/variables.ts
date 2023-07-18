@@ -1,8 +1,6 @@
-import { Page } from "../types"
 import { observe, observeChildren } from "./Observer"
-import Stack from "./Stack"
 import { IMAGES_FOLDERS, TEXT_SPEED } from "./constants"
-import { objectMatch, overrideAttributes, requestFilesFromUser, textFileUserDownload } from "./utils"
+import { objectMatch, overrideAttributes } from "./utils"
 
 //##############################################################################
 //#                           APP-RELATED VARIABLES                            #
@@ -27,7 +25,7 @@ const defaultsSettings = {
 }
 
 // load from file
-let savedSettings = (()=>{
+const savedSettings = (()=>{
   const result = structuredClone(defaultsSettings)
   const fileContent = localStorage.getItem(SETTINGS_STORAGE_KEY)
   if (fileContent && fileContent.length > 0)
@@ -229,126 +227,6 @@ export const commands = {
   'sub': processVarCmd,
   'inc': processVarCmd,
   'dec': processVarCmd,
-}
-
-//__________________________________save-state__________________________________
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-const SAVE_STATES_STORAGE_KEY = "savestates"
-
-export type SaveState = {context: typeof gameContext, progress: typeof progress}
-type SaveStateId = number|string
-
-const saveStates = new Map<SaveStateId, SaveState>()
-{
-  const restored = localStorage.getItem(SAVE_STATES_STORAGE_KEY)
-  if (restored) {
-    for (const [id, ss] of JSON.parse(restored)) {
-      saveStates.set(id, ss as SaveState)
-    }
-  }
-}
-
-export function createSaveState() {
-  const ss: SaveState = {
-    context: structuredClone(gameContext),
-    progress: structuredClone(progress)
-  }
-  return ss
-}
-/**
- * Store the savestate in a map with the specified id.
- * If a previous savestate has the same id, the new one replaces it.
- * @param id unique id of the savestate in the map
- * @param ss savestate to store
- */
-export function storeSaveState(id: SaveStateId, ss: SaveState) {
-  saveStates.set(id, ss)
-  localStorage.setItem(SAVE_STATES_STORAGE_KEY, JSON.stringify(
-      Array.from(saveStates.entries())))
-}
-
-/**
- * Delete from the savestate map the savesate with the specified id
- * @param id unique id of the savestate in the map
- */
-export function deleteSaveState(id: SaveStateId) {
-  saveStates.delete(id)
-  localStorage.setItem(SAVE_STATES_STORAGE_KEY, JSON.stringify(
-      Array.from(saveStates.entries())))
-}
-
-/**
- * Store the last savestate from the history into the savestate map,
- * with the specified id.
- * @param id unique id of the savestate in the map
- * @param history stack of pages from which the last savestate will be stored
- */
-export function storeLastSaveState(id: SaveStateId, history: Stack<Page>) {
-  const ss = history.top?.saveState;
-  if (!ss)
-    return false;
-  storeSaveState(id, ss);
-  return true
-}
-
-export function loadSaveState(ss: SaveStateId|SaveState, history: Stack<Page>) {
-  if (ss.constructor == Number || ss.constructor == String)
-    ss = saveStates.get(ss) as SaveState
-  if (ss) {
-    let index = 0
-    for (let i=0; i < history.length; i++) {
-      if (ss == history.get(i).saveState) {
-        index = i
-        break
-      }
-    }
-    history.trimTop(history.length - index)
-    overrideAttributes(gameContext, (ss as SaveState).context, false)
-    overrideAttributes(progress, (ss as SaveState).progress, false)
-    return true
-  }
-  return false
-}
-
-export const quickSave = storeLastSaveState.bind(null, 'quick')
-export const quickLoad = loadSaveState.bind(null, 'quick')
-
-export function listSaveStates(): IterableIterator<[SaveStateId, SaveState]> {
-  return saveStates.entries()
-}
-
-//_________________________________global save__________________________________
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-export function exportSave() {
-  const content = JSON.stringify({
-    settings: savedSettings,
-    saveStates: Object.fromEntries(saveStates.entries())
-  })
-  const date = new Date()
-  const dateString = `${date.getFullYear()}${date.getMonth()}${date.getDate()}`
-  textFileUserDownload(content, `tsukihime_save_${dateString}.thsave`)
-}
-
-export async function loadSave(save:string|undefined=undefined) {
-  if (!save) {
-    const file = await requestFilesFromUser({accept: ".thsave"}) as File|null
-    if (!file)
-      return // canceled by user
-    save = await new Promise(resolve=> {
-      const reader = new FileReader()
-      reader.readAsText(file)
-      reader.onload = (evt)=> { resolve(evt.target?.result as string)}
-    })
-    if (!save)
-      return;
-  }
-  const content = JSON.parse(save);
-  overrideAttributes(settings, content.settings, false);
-  saveStates.clear()
-  for (const [id, ss] of Object.entries(content.saveStates)) {
-    saveStates.set(id, ss as SaveState)
-  }
 }
 
 //##############################################################################

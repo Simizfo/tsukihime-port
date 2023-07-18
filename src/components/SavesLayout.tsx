@@ -1,6 +1,5 @@
 import { FaPlusCircle } from "react-icons/fa"
-import { listSaveStates, storeLastSaveState } from "../utils/variables"
-import script from "../utils/script"
+import { listSaveStates, storeLastSaveState } from "../utils/savestates"
 
 type Props = {
   variant: "save" | "load"
@@ -10,7 +9,7 @@ const SavesLayout = ({variant}: Props) => {
   const saves = listSaveStates()
   console.log(saves)
   const createSave = () => {
-    storeLastSaveState(new Date().getTime(), script.history)
+    storeLastSaveState(new Date().getTime())
   }
 
   const handleAction = () => {

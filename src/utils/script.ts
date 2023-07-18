@@ -8,7 +8,8 @@ import Stack from "./Stack"
 import { HISTORY_MAX_PAGES } from "./constants"
 import { commands as timerCommands } from "./timer"
 import { fetchFBlock, fetchScene } from "./utils"
-import { commands as variableCommands, getGameVariable, gameContext, settings, createSaveState, displayMode, SCREEN } from "./variables"
+import { commands as variableCommands, getGameVariable, gameContext, settings, displayMode, SCREEN } from "./variables"
+import { createSaveState } from "./savestates"
 
 type CommandHandler = {next: VoidFunction}
 type CommandProcessFunction = (arg: string, cmd: string, onFinish: VoidFunction)=>CommandHandler|void
