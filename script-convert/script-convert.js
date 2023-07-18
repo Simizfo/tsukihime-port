@@ -67,23 +67,90 @@ function replacePipeByEllipsis(scriptLines) {
     return scriptLines
 }
 
+// split texts with '\' in the middle, split instructions with ':'
+const colonRegexp = /^\S([^"`:]*"[^"`]*")*[^"`:]*:/
+function splitInstructions(scriptLines) {
+    const result = [];
+    let match
+    for (let line of scriptLines) {
+
+        if (line.length == 0)
+            result.push(line)
+        
+        while (line.length > 0) {
+            if (line.startsWith(('`'))) {
+                let index = line.search(/\\(?!$)/); // '\' before end of line
+                if (index == -1) {
+                    result.push(line);
+                    break;
+                } else {
+                    result.push(line.substring(0, index+1));
+                    line = `\`${line.substring(index+1)}`;
+                }
+            } else if (match = line.match(colonRegexp)) {
+                const index = match[0].length-1;
+                result.push(line.substring(0, index).trimEnd());
+                line = line.substring(index+1).trimStart();
+            } else {
+                result.push(line)
+                break
+            }
+        }
+    }
+    return result;
+}
+
+const ignoredLabels = [
+    'imagemode', 'gameopt', 'option',
+    'endinglist', 'gamestart_menu',
+    'regard_check', 'endofplay',
+    'checks', ];
+const ignoredLabelRegexps = [
+    //tsukihime
+    /^[a-z]+_gallery(_check)?$/,
+    /^[a-z]+_effectspeed$/,
+    /^gallery\d?$/, /^eggs\d?$/,
+    /^title/, /^next\d?$/,
+    /^\d{4,}$/, /^debug/,
+    //kt
+    /^mp_play/, /^musicplayer/
+    ];
 //write a txt file in folder "scenes" for each scene
 //a scene is defined by a line that starts with *s and is followed by a number
 function writeScenes(scriptLines, dir) {
-    const regex = /^\*(s(?<scene>\d+a?)|(?<op>openn?ing)|(?<ed>ending))/;
-    let scene = [];
-    let sceneId = '0';
-    scriptLines.forEach((line) => {
-        if (regex.test(line)) {
-            fs.writeFileSync(`${dir}/scene${sceneId}.txt`, scene.join('\n'));
-            scene = [];
-            // Extract the next scene id
-            const groups = line.match(regex).groups
-            sceneId = groups['scene'] ?? groups['op'] ?? groups['ed'];
+    let sceneId = undefined;
+    const logicFileLines = [];
+    let scene = logicFileLines;
+    for (const line of scriptLines) {
+        if (line.startsWith('*')) {
+            const label = line.substring(1)
+            if (m = label.match(/^s(?<id>\d+a?)$/)) { // scenes
+                sceneId = `scene${m.groups.id}`
+                scene = []
+            } else if (["openning", "ending", "eclipse"].includes(label)
+                    || label.startsWith("mm")) { // easter eggs
+                sceneId = label
+                scene = []
+            } else if (ignoredLabels.includes(label)
+                    || ignoredLabelRegexps.some(re=>re.test(label))) {
+                sceneId = undefined
+                scene = undefined
+            } else if (!sceneId) {
+                scene = logicFileLines
+                scene?.push(line)
+            }
+        } else if (sceneId && (line == "return" || line.startsWith("goto"))) {
+            scene.push(line)
+            if (line.startsWith("goto"))
+                scene.push("return")
+            fs.writeFileSync(`${dir}/${sceneId}.txt`, scene.join('\n'));
+            sceneId = undefined
+            scene = logicFileLines
         } else {
-            scene.push(line);
+            scene?.push(line)
         }
-    });
+    }
+    fs.writeFileSync(`${dir}/scene0.txt`, logicFileLines.join('\n').trimEnd());
 }
 
 function main() {
@@ -99,8 +166,10 @@ function main() {
         lines = filterLines(lines, /^(?!;)/); // remove comments
         lines = filterLines(lines, /^(?!numalias )/); // remove num aliases
         lines = filterLines(lines, /^(?!effect )/); // remove effects aliases
+        lines = splitInstructions(lines)
         lines = extractStrAliasJson(lines, `stralias${suffix}.json`)
         lines = replacePipeByEllipsis(lines)
+        lines = splitInstructions(lines)
         writeScenes(lines, dir)
     }
 }
