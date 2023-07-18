@@ -5,12 +5,12 @@ import { IMAGES_FOLDERS, TEXT_SPEED } from "./constants"
 import { objectMatch, overrideAttributes, requestFilesFromUser, textFileUserDownload } from "./utils"
 
 //##############################################################################
-//#                          ENGINE-RELATED VARIABLES                          #
+//#                           APP-RELATED VARIABLES                            #
 //##############################################################################
 
 //___________________________________settings___________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+const SETTINGS_STORAGE_KEY = "settings"
 const defaultsSettings = {
   imagesFolder: IMAGES_FOLDERS.image_x2,
   eventImages: new Array<string>(),
@@ -22,13 +22,14 @@ const defaultsSettings = {
     track: 1,
     se: 1,
   },
-  completedScenes: new Array<string>(), // list of scenes that have been completed
+  // list of scenes that have been completed
+  completedScenes: new Array<string>(),
 }
 
 // load from file
 let savedSettings = (()=>{
   const result = structuredClone(defaultsSettings)
-  const fileContent = localStorage.getItem('permanent')
+  const fileContent = localStorage.getItem(SETTINGS_STORAGE_KEY)
   if (fileContent && fileContent.length > 0)
     overrideAttributes(result, JSON.parse(fileContent), false)
   return result
@@ -40,7 +41,7 @@ function saveSettings() {
   if (!objectMatch(savedSettings, settings, false)) {
     settings.completedScenes.sort()
     overrideAttributes(savedSettings, settings, false)
-    localStorage.setItem('permanent', JSON.stringify(savedSettings))
+    localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(savedSettings))
   }
 }
 
@@ -232,11 +233,20 @@ export const commands = {
 
 //__________________________________save-state__________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+const SAVE_STATES_STORAGE_KEY = "savestates"
 
 export type SaveState = {context: typeof gameContext, progress: typeof progress}
 type SaveStateId = number|string
 
 const saveStates = new Map<SaveStateId, SaveState>()
+{
+  const restored = localStorage.getItem(SAVE_STATES_STORAGE_KEY)
+  if (restored) {
+    for (const [id, ss] of JSON.parse(restored)) {
+      saveStates.set(id, ss as SaveState)
+    }
+  }
+}
 
 export function createSaveState() {
   const ss: SaveState = {
@@ -245,8 +255,34 @@ export function createSaveState() {
   }
   return ss
 }
-export const storeSaveState = saveStates.set.bind(saveStates)
+/**
+ * Store the savestate in a map with the specified id.
+ * If a previous savestate has the same id, the new one replaces it.
+ * @param id unique id of the savestate in the map
+ * @param ss savestate to store
+ */
+export function storeSaveState(id: SaveStateId, ss: SaveState) {
+  saveStates.set(id, ss)
+  localStorage.setItem(SAVE_STATES_STORAGE_KEY, JSON.stringify(
+      Array.from(saveStates.entries())))
+}
 
+/**
+ * Delete from the savestate map the savesate with the specified id
+ * @param id unique id of the savestate in the map
+ */
+export function deleteSaveState(id: SaveStateId) {
+  saveStates.delete(id)
+  localStorage.setItem(SAVE_STATES_STORAGE_KEY, JSON.stringify(
+      Array.from(saveStates.entries())))
+}
+
+/**
+ * Store the last savestate from the history into the savestate map,
+ * with the specified id.
+ * @param id unique id of the savestate in the map
+ * @param history stack of pages from which the last savestate will be stored
+ */
 export function storeLastSaveState(id: SaveStateId, history: Stack<Page>) {
   const ss = history.top?.saveState;
   if (!ss)

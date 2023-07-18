@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
-import { addEventListener, convertText } from "../utils/utils";
+import { addEventListener, convertText, objectMatch } from "../utils/utils";
 import { SaveState, displayMode, loadSaveState } from '../utils/variables';
 import { observe, unobserve } from '../utils/Observer';
 import script from '../utils/script';
@@ -15,7 +15,7 @@ const HistoryLayer = (props: Props) => {
   useEffect(() => {
     //on mouse wheel up display history
     const handleWheel = (e: WheelEvent) => {
-      if (e.deltaY < 0 && !display && !displayMode.menu && !displayMode.save && !displayMode.load) {
+      if (e.deltaY < 0 && !display && objectMatch(displayMode, {menu:false, save:false, load: false})) {
         const it = script.history[Symbol.iterator]()
         if (!it.next().done) // at least one element in the iterator
           setDisplay(true)
