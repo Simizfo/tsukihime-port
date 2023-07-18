@@ -7,13 +7,16 @@ import { observe, unobserve } from '../utils/Observer';
 const SavesLayer = () => {
   const [displaySave, setDisplaySave] = useState<boolean>(displayMode.save)
   const [displayLoad, setDisplayLoad] = useState<boolean>(displayMode.load)
+  const [title, setTitle] = useState<string>(displaySave ? "Save" : "Load")
 
   useEffect(() => {
     displayMode.save = displaySave
+    if (displaySave) setTitle("Save")
   }, [displaySave])
 
   useEffect(() => {
     displayMode.load = displayLoad
+    if (displayLoad) setTitle("Load")
   }, [displayLoad])
 
   useEffect(()=> {
@@ -41,6 +44,7 @@ const SavesLayer = () => {
   return (
     <div className={`box box-save ${displaySave || displayLoad ? "show" : ""}`}>
       <div className="page-content">
+        <h2 className="page-title">{title}</h2>
         {displaySave &&
         <SavesLayout variant={"save"} />
         }

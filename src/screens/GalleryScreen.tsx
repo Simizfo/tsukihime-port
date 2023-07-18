@@ -69,6 +69,7 @@ const GalleryScreen = () => {
       animate={{opacity: 1}}
       exit={{opacity: 0}}>
       <div className="page-content">
+        <h2 className="page-title">Gallery</h2>
         <main>
           <div className="gallery-char-container">
             <GalleryCharComponent

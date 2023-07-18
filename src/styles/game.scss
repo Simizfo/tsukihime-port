@@ -275,6 +275,17 @@ body {
             opacity: 1;
             backdrop-filter: blur(2px);
         }
+
+        h2 {
+            font-size: 3em;
+            margin-block: 0;
+            font-family: Inria Serif;
+            font-weight: 700;
+            background: linear-gradient(180deg, #9CC1D4 0%, #65ADC7 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
     .box-history {
         z-index: -1;

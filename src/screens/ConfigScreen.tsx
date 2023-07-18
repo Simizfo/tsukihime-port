@@ -54,6 +54,7 @@ const ConfigScreen = () => {
       animate={{opacity: 1}}
       exit={{opacity: 0}}>
       <div className="page-content">
+        <h2 className="page-title">Config</h2>
         <main>
           <div>
             Volume: {settings.volume.master}

@@ -11,6 +11,7 @@ const LoadScreen = () => {
       animate={{opacity: 1}}
       exit={{opacity: 0}}>
       <div className="page-content">
+        <h2 className="page-title">Load</h2>
         <main>
           <SavesLayout variant="load" />
         </main>
