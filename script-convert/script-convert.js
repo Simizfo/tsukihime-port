@@ -68,7 +68,7 @@ function replacePipeByEllipsis(scriptLines) {
 }
 
 // split texts with '\' in the middle, split instructions with ':'
-const colonRegexp = /^\S([^"`:]*"[^"`]*")*[^"`:]*:/
+const colonRegexp = /^\s?\w([^"`:]*"[^"`]*")*[^"`:]*:/
 function splitInstructions(scriptLines) {
     const result = [];
     let match
@@ -129,8 +129,12 @@ function writeScenes(scriptLines, dir) {
                 scene = []
             } else if (["openning", "ending", "eclipse"].includes(label)
                     || label.startsWith("mm")) { // easter eggs
-                sceneId = label
-                scene = []
+                if (label.endsWith("click")) { // ignore '*xxxclick' labels
+                    scene.push(line)
+                } else {
+                    sceneId = label
+                    scene = []
+                }
             } else if (ignoredLabels.includes(label)
                     || ignoredLabelRegexps.some(re=>re.test(label))) {
                 sceneId = undefined
@@ -166,10 +170,9 @@ function main() {
         lines = filterLines(lines, /^(?!;)/); // remove comments
         lines = filterLines(lines, /^(?!numalias )/); // remove num aliases
         lines = filterLines(lines, /^(?!effect )/); // remove effects aliases
-        lines = splitInstructions(lines)
         lines = extractStrAliasJson(lines, `stralias${suffix}.json`)
-        lines = replacePipeByEllipsis(lines)
         lines = splitInstructions(lines)
+        lines = replacePipeByEllipsis(lines)
         writeScenes(lines, dir)
     }
 }

@@ -1,0 +1,72 @@
+bg "image\bg\bg_40c.jpg",%type_crossfade_mid
+` After eating dinner by myself in the large dining room, Kohaku-san treats my wounds and I go back to my room.@
+` Akiha didn't make it back in time for dinner.@ Her lesson was apparently going to last a while, so she was going to eat away from home.@
+` It's past ten at night now.@
+` It's a bit too early, but since I'm exhausted, I should sleep early tonight--\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w3000
+
+` ………… My body is exhausted.@
+` But, I can't fall into a deep sleep.@
+` The wounds all around my body sting and wake up my mind as it tries to sleep.@
+br
+` I look at the clock as I lie in bed.@
+` It's past three o'clock in the morning----already five hours of unsatisfactory rest.@
+`"……… Damn it, I can't sleep."@
+` Not being able to sleep when I want to… it's like torture.\
+
+` Tick, tick, tick.@ The sound of the clock's second hand gets on my nerves.@
+br
+` Tick, tick, tick, tick, tick, creak, tick, tick, tick, tick----
+br
+`"Eh--?"@
+` I think I heard something mixed in with the ticking.@
+` It sounded like the door opening, but who would be coming at this hour?\
+
+` Tap, tap, tap.@
+br
+` No, there's no mistake.@
+` Someone came into the room and is coming near me.@
+`"----"@
+` Who is it?@ …… If someone was to come this late at night, it would be---\
+
+!s0
+` 1. Arihiko
+` 2. Ciel-sensei
+` 3. A cat is fine, too.
+` 4. Sacchin
+` 5. Kinoko Nasu
+` 6. Seo Akira
+br
+br
+`@
+!sd
+br
+br
+` ……A cat is fine, too.\
+textoff
+play "*5"
+lsp 8,":a;image\tachi\RAN_T08.PNG",240,0
+print %type_bcartain_slw
+repaint
+`"Hey there, Shiki.@ Are you in the mood for cat scratch fever?"@
+br
+br
+trap *mmcatendclick
+`  !!!!!!!!!!!
+!w2500
+trap off
+*mmcatendclick
+textclear
+textoff
+csp -1
+bg "image\bg\ima_11.jpg"
+print %type_crossfade_mid
+repaint
+bg "image\event\CATEND.JPG",%type_crossfade_slw
+click
+playstop
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+return

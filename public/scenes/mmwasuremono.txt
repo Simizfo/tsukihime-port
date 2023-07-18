@@ -1,0 +1,76 @@
+bg "image\bg\bg_29b.jpg",%type_nowaitdisp
+ld c,":a;image\tachi\stk_t04.jpg",%type_crossfade_fst
+play "*6"
+
+`"Ah---"@
+` Yumizuka's body trembles.@
+` Breathing painfully, she falls to the ground.\
+cl c,%type_lshutter_fst
+
+` A choking sound.@
+bg "image\event\stk_e02.jpg",%type_lshutter_fst
+` Sitting on the ground, Yumizuka coughs heavily, and she spits out a lump of blood.@
+`"---Yumizuka!?"\
+
+` This time, I do rush near her.@
+`"Yumizuka, are you okay?@ Yumizuka…!"@
+` I put my hand on her heaving shoulder.@
+`"Ah---"@
+` I feel a chill.@
+` Even through her clothes, I can feel the coldness of her body.\
+
+`"Stupid, you're freezing!@ What are you doing out in the open on a night like this!"@
+`"---Shiki, kun…"@
+` Her voice is hollow as she says my name.@
+` Yumizuka collapses against me.@
+br
+` As she pants, her warm breath brushes my skin.\
+
+`"Yumi… zuka?"@
+`"It's okay if you don't like me, Shiki-kun.@
+trap *mmwasuremonoclick
+` Because, I really didn't understand you at all until
+trap off
+*mmwasuremonoclick
+stop
+textclear
+textoff
+lsp 12,":a;image\tachi\DOORBACK.PNG",20,45
+lsp 11,":a;image\tachi\DOORFRNT.PNG",0,45
+print %type_crossfade_fst
+repaint
+wave "wave\WA3A.WAV"
+wait 50
+for %mmcounter=0 to 19
+ msp 11,-10,0,0
+ print %type_nowaitdisp
+ repaint
+ wait 35
+next
+wait 600
+lsp 10,":a;image\tachi\ari_t05.jpg",0,0
+print %type_crossfade_fst
+repaint
+wait 2200
+stop
+wave "wave\WA3B.WAV"
+lsp 10,":a;image\tachi\ari_t03.jpg",0,0
+print %type_crossfade_fst
+repaint
+wait 6300
+stop
+wave "wave\WA3C.WAV"
+lsp 10,":a;image\tachi\ari_t04.jpg",0,0
+print %type_crossfade_fst
+repaint
+wait 1800
+csp 10
+print %type_rcartain_fst
+repaint
+csp -1
+repaint
+wait 1000
+stop
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+return
