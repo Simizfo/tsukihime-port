@@ -1,0 +1,253 @@
+
+bg "image\bg\bg_06a.jpg",%type_crossfade_mid
+
+` …… Class has started already.@
+` Which class was it?@ I can't remember today's fifth period lesson.@
+br
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+wave se0
+bg "image\bg\bg_06a.jpg",%type_crossfade_fst
+
+
+` Even though I look at the blackboard and stare at the marks left behind by the teacher's chalk, I still don't know what class this is.@
+br
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+wave se0
+bg "image\bg\bg_06a.jpg",%type_crossfade_fst
+
+br
+` I can't read it.@
+` The letters start to flow like water and mix together like some sort of hallucination.@
+br
+wave se0
+\
+
+`"Ugh…………"@
+` I feel like I'm going to throw up.@
+` Dizziness.@ My mind starts to slide away.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+wave se0
+bg "image\bg\bg_06a.jpg",%type_crossfade_fst
+
+` Click, click.@
+`    Tremble, tremble.@
+`     Creak, creak.@
+`      Wobble,  wobble.@
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+wave se0
+bg "image\bg\bg_06a.jpg",%type_crossfade_fst
+\
+
+` Those noises stick out.\
+` Incompatibility.@
+` Where is that inconsistency coming from?@
+
+wave se0
+
+` I can't settle this feeling of something being out of place throughout my body.@
+` It fills me to the brim.@
+` As if my bones are sliding out of place in their joints.@
+
+wave se0
+
+` Yes, since my joints are out of place, it causes the unnatural feeling.@ My corpse is burning unseen smoke and crumbling away.\
+
+br
+br
+br
+br
+br
+br
+br
+` Click, click.@ Tremble, tremble.@ Creak, creak.@ Wobble, wobble.\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+wave se0
+bg "image\bg\bg_06a.jpg",%type_crossfade_fst
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+` I fall from my chair.@
+` A girl screams.@
+` I hear the footsteps of the teacher running to me.@
+` I…
+` Even though I've completely passed out, I calmly watch myself from far away.\
+
+!w3000
+
+
+` …… What follows is like always.@
+` Collapsed from my anemia, I was carried to the clinic where I slept until I recovered.@
+` Since I had a fever of over 38 degrees Celsius past seven o'clock, the school's closing time, the nurse called my house for someone to pick me up and went home.@
+br
+` And this resulted in…\
+
+play "*1"
+
+bg "image\bg\bg_10c.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\koha_t01b.jpg",%type_crossfade_fst
+
+`"Are you okay, Shiki-san?@ You still have a fever, so please do not hesitate to lean on my shoulder."@
+br
+` ----Yeah, that's how it is.\
+
+`"…… No, I'm alright.@ I can at least walk, so please don't worry."@
+` Stepping away from Kohaku-san, I attempt to bluff my way out of it.@
+` …… Geez.@ It's embarrassing enough for Kohaku-san to come pick me up.@ The day I lean on her shoulders too, I'll die.\
+
+
+`"Oh that's not good, forcing yourself like that.@ It isn't your fault that your body is weak, Shiki-san.@ So you can ask for help a little.@
+` I won't tell Akiha-sama or Hisui-chan, so it's okay to depend on me for now."@
+` With a gentle smile, she takes my hand.\
+
+`"Ah…… yes, sorry."@
+` Blushing furiously, I meekly do as she says.@
+` …… Certainly I might collapse if I continue to be stubborn.\
+
+`"There is a car waiting outside, so please hold on until then."@
+cl c,%type_lshutter_mid
+` Pulling my hand, Kohaku-san starts to walk.@
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_10c.jpg",%type_crossfade_fst
+
+
+`"Ah----"@
+` …… This isn't good.@ Just walking makes me incredibly dizzy.@
+` I depend upon Kohaku-san to lead me to the stairwell as I hold onto my consciousness.\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w1000
+playstop
+
+bg "image\bg\bg_07b.jpg",%type_nowaitdisp
+bg "image\bg\bg_11c.jpg",%type_crossfade_mid
+
+
+` Hu----h?@
+` Why----am I going up… to… the second… floor?\
+
+`"Um…… Kohaku-san… this… isn't… the right way."@
+` I call out to her.@
+` There's no response.@ No, not only that----I don't feel her hand, or even see her.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_11c.jpg",%type_crossfade_fst
+play "*6"
+
+`"Kohaku…… san?"@
+` I use all of my foggy consciousness to look around me.@
+` There's no one in the hallway.@
+` Only the moonlight streaming from the window is vivid.\
+
+wave se0
+
+
+`"--------"@
+` It comes suddenly.@
+
+wave se0
+
+`"Ah------"@
+` The sound of my heartbeat.@
+` And a chill that races up my spine.\
+
+waveloop se1
+wave se7
+
+` Thump.@ Tap.\
+br
+wave se7
+
+` Thump.@ Tap.@
+br
+
+wave se7
+` Thump.@ Tap.@
+br
+` Thump.@ Tap.@ Thump.@ Tap.@ Thump.@ Tap.@ Tap.@ Tap.@ Tap.@ Tap.\
+
+` In the darkness, the footsteps draw closer.@
+br
+` ---This is.@
+br
+` This is similar to the fear I felt from that one time.\
+
+`"Kohaku, san……!"@
+` I call her name.@ Not to call for help, but to tell her to escape, I frantically call her name.\
+
+`"Kohaku-san, Kohaku-san, Kohaku-san……!"@
+` Where is she?@ I don't see her anywhere.@
+` The footsteps are near me now.@
+br
+` At least…
+` I want Kohaku-san to escape here unharmed.\
+
+`"It's useless Shiki.@ She's already done."@
+` …… I hear a voice.@
+` In the darkness in front of me is
+ld c,":a;image\tachi\roa_t04a.jpg",%type_crossfade_mid
+` the bandaged man who tried to kill me that night.\
+
+`"------Ah."@
+` …… Why is it…?@
+` I feel like I know this person's face.\
+
+`"You sure aren't lucky.@ If knew it was like this, I wouldn't have waited for you in front of the mansion."@
+br
+` …… The footsteps draw closer.@
+br
+`"Ka…… aah."@
+` I try to move.@
+` But I can only totter along.@
+` I guess I pushed my body too hard every day.@ It seems like my body, at the very last moment, broke down.\
+
+`"This is the end, so I'll tell you.@ This is my lair now."@
+bg "image\bg\ima_11b.jpg",%type_crossfade_mid
+
+` I hear a stabbing sound.@
+` In his hands, a knife.@ The silver blade pierces directly into my heart.\
+
+wavestop
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+monocro #0000ff
+
+bg "image\bg\ima_18.jpg",%type_nowaitdisp
+playstop
+
+` ----I collapse to the ground.@
+` I feel death working its way from my very fingertips.@
+` My mind fades away, drop by drop.\
+
+` In that process.@
+` With my fading mind, I look up at the sky.@
+` I have nowhere else to look, so I just look there.@
+br
+` The blue moon is in the night sky.@
+` …… How stupid.@
+` I'm about to die, but I…
+` I am charmed by such an ordinary thing.\
+
+monocro off
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+` When is this memory from?@
+` In a forest like a black veil.@
+` On that terrible night.@
+` Just like this, I was staring only at the moon----
+
+!w2000
+\
+
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+return

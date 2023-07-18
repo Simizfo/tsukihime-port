@@ -1,287 +1,95 @@
 
-!w2000
+mov $phasebg,"image\bg\ima_10.jpg"
+mov $phasetitle_a,":a;image\word\PARK_13A.PNG"
+mov $phasetitle_b,":a;image\word\epi.jpg"
+gosub *left_phase
 
 
-bg "image\bg\bg_23a.jpg",%type_lcartain_mid
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
 
-` I start walking from the mansion atop the hill towards school.@
-` Like any other day, the morning is wrapped in tranquility.@
+play "*2"
+
+`"Shiki-sama, it is morning.@ Please wake up."@
 br
-` Autumn is almost over and winter is close by.@
-` Perhaps when this vague season in between the heat of summer and the chill of winter changes,
-` maybe this transparent feeling will also change.\
-
-bg "image\bg\bg_24a.jpg",%type_lcartain_mid
-
-
-` I see more figures of students in uniforms the closer I get to school.@
-` Today is Saturday so most of them are smiling as they walk along the road.@
-` Once I pass this intersection, I'll reach the front gate.@
-` It will soon be a month since I came back to the Tohno mansion.@
-` I've already become well used to this route by now.@
+` …… I hear a familiar voice.\
 br
-` The traffic light turns red and I stand in front of the crosswalk.@
+`"Shiki-sama…… Please wake up.@ If you are late like yesterday, you will break your promise with Akiha-sama."@
 br
-`"…………"@
-` Every time I stop here, I remember.\
+` …… A voice partly tense, partly relaxed.\
 
-` That one time.@
-` At this intersection, Arcueid was waiting for Tohno Shiki back then as she sat on the guardrail, just like she is doing now.@
+`"Shiki-sama.@ Is it okay?@ Akiha-sama will end up scolding you again."@
 br
-`"-----Eh?"@
+` …… No, it's not okay at all.@
 br
-` I say without even thinking.@
-` Between the cars rushing by, a scene unfolds just like before.\
+`"…… I'm up.@ I'm up, so hold on."@
+` Still under the sheets, I respond as I slowly open my eyes.\
 
-bg "image\bg\ima_10.jpg",%type_lshutter_mid
-bg "image\event\ark_e02.jpg",%type_lshutter_mid
+bg "image\bg\bg_40a.jpg",%type_crossfade_mid
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
 
-
-`"-----Wha……"@
-` She's there.\
-
-` Dressed in white, with golden hair down to her shoulders.@
-` Long, slender eyebrows over crimson eyes.@
-` ---Her figure I could never mistake for anyone else no matter what.@ This figure that has already vanished long ago.\
-
-`"--------"@
-` The light turns green.@
-` The students around me start moving.@
-` In the midst of it.@
-` I am the only one who stands still and she is the only one who notices I am here.\
-
-bg "image\bg\bg_24a.jpg",%type_lshutter_mid
-
-play "*3"
-
-
-` She has her typical smile as she crosses the intersection.@
-`"------"@
-` I can't speak.@
-` I'm so overwhelmed with emotion I don't even know what to do.@
+`"Good morning, Shiki-sama."@
+`"Ah, mornin'."@
+` I give a sleepy greeting in response and put on my glasses.@
+` It's past seven in the morning.@
+` Hisui came at her usual time and managed to wake me.@
 br
-` ---Even if, this is just some sort of bad illusion,
-` I'm so happy just to see her again I could cry.\
-
-ld c,":a;image\tachi\ark_t01a.jpg",%type_lshutter_mid
-`"Hello.@ Are you heading to school, Student-san?"@
-` …… I can't believe it.@
-` The illusion even has her voice down perfectly.@
-
-ld c,":a;image\tachi\ark_t01b.jpg",%type_crossfade_fst
-
-`"Shiki?@ Hey, why are you so quiet?@ Don't tell me you forgot about me?"@
-` Those red eyes looking up at me…
-` …… There's no way I could forget.@
-` But, at the same time, there's no way she can be here, alive.\
-
-`"------"@
-` I can't speak.@
-` She wrinkles her eyebrows together and glares at me like an angry cat.@
-
-ld c,":a;image\tachi\ark_t16.jpg",%type_crossfade_fst
-
-`"Geez, what gives.@ I put up with not going to see you and was waiting here so long.@ …… Don't tell me, you're angry, Shiki?"@
-`"U------"@
-` …… I just can't believe it.@
-` This isn't an illusion in front of me.@ It really is-----\
-
-`"…… Ar…… cueid……?"@
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"Yes it's me.@ ------Thank goodness.@ I thought you became a vegetable after fighting Roa.@ I really was worried you know."@
-`"----"@
-br
-` --Wait a minute.@
-br
-` Um----I'm so confused, what do I say?@ What should I be happy about?@ Is there something I need to do?@
-` I----really am just so overwhelmed I don't know.\
-
-ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst
-
-`"Shiki……?@ Hey, you're acting funny.@ Your mouth is wide open, and so are your eyes.@
-` …… Well, it's kind of interesting for me so I'll keep watching."@
-`"----Ar, cueid."@
-`"That's what I mean.@ …… Geez, you keep just saying my name.@ We finally managed to meet again, so can't you find anything more fitting to say?"\
-br
-` ----Yeah, there's no mistake.@
-` There's only one person who could say such ridiculous things.\
-
-`"…… Why?"@
-`"Hm?@ I can't hear you, please say it a little louder."@
-` She tells me c'mon, c'mon as she points her ear closer to me.@
-`"----Why are you still alive!?"@
-` I scream and voice my feelings as loud as I can.\
-
-ld c,":a;image\tachi\ark_t12.jpg",%type_lshutter_fst
-`"Ow----Not so loud, Shiki."@
-`"You…… don't say 'not so loud'!@ Why are you alive……!\
-`"I----thought you were gone, that I would never see you, that I would always------"@
-` regret it.@ But why?@
-` This cheerfully, as if we only said goodbye yesterday, how can she greet me so simply……!?\
-
-ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
-
-`"Oh, I see.@ I never did tell you, Shiki."@
-` Arcueid drops a fist to her other hand in realization.@
-`"…… Yeah, I never did tell you my reason for pursuing Roa.@ He stole some of my power.@
-` In order to take it back,I pursued him but you completely destroyed him, right?@ And the power that was freed from Roa returned to me and I managed to come back to life."@
-`"Y----you never told me about that!"@
-`"No, I didn't.@ It didn't really concern you."@
-`"Y----"@
-` You, why did----\
-
-
-`"Anyway, I revived, but I could barely resist the vampiric impulse inside of me.@
-` I probably would have done something terrible if I went to see you, so I slept until I regained my power.@
-` Because of that I was able to return to normal, but it took seven days to suppress my impulse."\
-`"Eh----then, then you're really okay now, Arcueid……?"@
-
-ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_fst
-
-
-`"Of course!@ If I wasn't, I wouldn't be here."@
-` She flashes me a full smile.@
-` Arcueid takes my hand.\
-
-ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
-
-`"You know, Shiki.@ While I was asleep, I was really looking forward to meeting again like this.@
-` Because once I did, we could go around and do so many things.@
-` I was thinking it would be so nice to get better even just a little quicker."@
-` Arcueid looks at me with a pure, unadulterated smile.\
-
-`"------"@
-` I'm speechless.@
-` Not in a bad way----I'm just… so happy.@
-` Being able to see her smile again, all the things we can do from now on,
-` how I told Senpai that my wish was never to leave Arcueid alone again…
-` Not one----not one of them was lost.\
-
-`"------"@
-` There's so many things I want to say and tell her right now.@
-` But, right now I'll just speak honestly from the heart.@
-br
-`"----Welcome back.@ I've… been waiting for a long time."@
-` I squeeze her hand in return, and briefly tell her just that.@
-` She looks a little bewildered at first.@
-ld c,":a;image\tachi\ark_t14.jpg",%type_crossfade_fst
-
-`"…… Yeah."@
-` Saying that, she looks away in embarrassment.\
-
-`"…… Arcueid?"@
-` I call out to her.@
-` After a brief pause, she faces me with a full smile.@
-
-ld c,":a;image\tachi\ark_t09.jpg",%type_crossfade_fst
-
-`"Yes, I'm back.@ I'm glad you were still yourself, Shiki."@
-`"------"@
-` My chest tightens.@
-` If this wasn't right on the way to school, I would embrace and kiss her.@ Her smile is just so adorable.\
-
-ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
-
-`"Alright, let's go Shiki.@ You're going to take me to many places, right?"@
-
+`"I will prepare your breakfast.@ After changing, please head towards the dining room."@
 cl c,%type_lshutter_mid
 
-` Arcueid releases my hand and jumps like a rabbit.@
-` …… She's so radiant I can barely look at her directly.\
+` Hisui disappears from the room after a bow.\
 
-`"But, um----where?"@
+` I give a big yawn.@
+` After a nice stretch, I get up from bed.@
+` I change into my school uniform and cast a glance at my desk.@
+` …… On top is the knife I will not ever use again.\
 
-ld c,":a;image\tachi\ark_t08.jpg",%type_crossfade_fst
-
-`"Anywhere.@ Somewhere you think is fun, Shiki."@
-` Smiling, Arcueid replies like it's nothing.@
-` But, that's a little troubling.@
-`"…… Um, you know, I do have school."@
-ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
-
-`"Hey.@ Can't you at least spend a day with me today?"@
-` Arcueid looks dissatisfied.\
-
-`"…… Uh."@
-` …… Evidently, I'm extremely weak against that face of hers.@
-` …… Well, even if I went to school like this, I wouldn't be able to concentrate there, and more than anything else----I want to be with Arcueid.\
-
-`"…… Hm, you're right.@ Who cares about boring reputation.@
-` Okay, Arcueid.@ I will indulge your selfishness for the day, my princess."@
-`"Yay!"@
-cl c,%type_lshutter_mid
-
-` Bump.@
-` She suddenly presses her body up against mine.\
-
-
-bg "image\bg\ima_10.jpg",%type_lshutter_fst
-bg "image\event\ark_f03.jpg",%type_lshutter_fst
-
-`"Hey, Shiki.@ That night, what you were talking about with Ciel, your feelings haven't changed?"@
-` She looks up imploringly at me as she asks.@
-`"…… My feelings that night----what do you mean?"@
-`"About you saying you loved me."@
-`"------!"@
-` I start to splutter.@
-` It's too embarrassing for her to ask me this question when she's this close to me.\
-
-`"…… Oh, I forgot.@ You shouldn't eavesdrop, Arcueid."@
-`"I can't help it if I overheard.@ Anyway, c'mon, answer me.@ Your words that night, they haven't changed?"@
+` The curtains sway in the wind.@
+` Hisui must have opened the window; the sky is refreshingly clear.@
+` It's just a little cold, though.@
 br
-` ----Idiot.@
-` I don't even need to say that.@
-br
-`"…… Yeah, they haven't changed.@ I can't make any guarantees, but they'll probably never change."@
-` I'm so embarrassed I look up at the sky and answer.\
+` I approach the window to close it.\
 
-` Arcueid wraps her arms around mine.@
-`"Oh.@ Then you should prepare yourself, Shiki."@
-`"Prepare?@ Prepare for what?"@
-` I can't help but let a tinge of uneasiness creep in my voice.@
-` She holds onto my arms and speaks with a smile.\
+bg "image\bg\ima_03.jpg",%type_lshutter_mid
+
 
 br
 br
 br
 br
 br
-`"Because you promised to be with me forever.@
-` Didn't I say so when we first met?@
-` I'll have you take responsibility for me."@
-
-\
-
-` Then she starts to walk, still holding onto my arm.\
-` She's as energetic as a little child urging me to hurry up to get to a playground.@
 br
-`"Oh---I see.@ Certainly I would have to prepare."@
-` Speaking to no one in particular, I start to walk with her.\
+` ---As it turned out,
+` I ended up waking in my own room.\
 
-` I head towards some random place, going against the flow of students going to school.@
-` Where to?@
-` Well, there's no place we can't go.@
-` The sunlight really suits this princess of the moon accompanying me.\
+` It seems Senpai carried me here.@ Fortunately, Akiha and the others didn't know I left.@
+` It's been one week since that night.@
+` Tohno Shiki's life hasn't changed a bit from what it was before.\
 
-` ---The weather is a perfect blue sky.@
+` My relationship with Akiha is a bit uneasy at times, but of course we're brother and sister.@
+` Except for that passageway being repaired, the school has not changed at all.@
 br
-` Hand in hand, we walk towards a new beginning for the two of us.\
+` …… No, it did change.@
+` At school, there's no senpai called Ciel anywhere, nor does anyone remember her.@
+` The instances of serial murders haven't occurred once since then.@ Since there's been no official arrest, the city streets are still relatively empty at night, but it'll probably return to normal in a month.\
+
+` As for me,
+` I carry an unfillable void in my heart, but I continue on as I did before.@
+` …… or rather, I can bear it all.@
+` At times, I get overwhelmed when I am assailed by memories, but I don't think I'll go insane or anything for now.@
+br
+` Some day.@
+` Will I go crazy after not being able to bear these memories, or will I just return to living normally after getting used to them?\
+
+` Perhaps it's about a fifty-fifty chance.@
+` ---But until then,
+` even if it is a little girlish, I keep the final promise I made with her every day.@
+br
+`"----Autumn is drawing to a close, isn't it?"@
+br
+` The blue sky outside is enough to take my breath away.@
+` Taking a large, deep breath, I shut the window.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
 playstop
-bg "image\bg\ima_11.jpg",%type_crossfade_mid
-
-resettimer
-waittimer 4000
-
-
-cl a,%type_waitdisp
-bg "image\word\end.jpg",%type_crossfade_slw
-
-resettimer
-waittimer 3000
-
-mov %rockending, 1
-
-gosub *ending
 
 return

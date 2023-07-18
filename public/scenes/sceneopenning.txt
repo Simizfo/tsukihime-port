@@ -1,0 +1,276 @@
+setwindow 18,18, 36,21, 17,17, 0, 4, 22, 1, 1, #ffffff, 0, 0, 639, 479
+windoweffect 1
+setcursor 0,":c;icon\0.bmp",0,0
+setcursor 1,":c;icon\0.bmp",0,0
+autoclick 1500
+
+play "*9"
+
+br
+br
+br
+br
+br
+br
+br
+` -------Suddenly, I awaken with a start.\
+
+br
+br
+br
+br
+br
+`                   The night is pitch black.@
+`               And no one else is in the house.\
+br
+br
+br
+br
+br
+br
+`                It's scary, being alone in the dark.@
+`              So to find everyone, I head out into the garden.\
+
+bg "image\bg\ima_02.jpg",%type_crossfade_mid
+!w1000
+
+br
+br
+br
+br
+br
+`                Our mansion's gardens are vast fields of green.@
+`              Surrounded by a thick, dense forest.@
+`                With the trees blanketing out the light,
+`               almost like a massive curtain.\
+
+br
+br
+br
+br
+br
+`              Like a stage in a theater somewhere.@
+`              The curtain of trees opens with a swishing sound.@
+`                             Excitement fills me, 
+`               anticipating the beginning of the grand play.\
+
+br
+br
+br
+br
+br
+`               In the distance, I hear the sound of echoes,
+`               beyond the black curtain of trees.@
+`                           Inside the forest,
+`             the sounds of everyone happily playing around.\
+br
+br
+br
+br
+br
+br
+`                 The curtain doesn't open yet.@
+`                    Unable to restrain myself, 
+`              I wander into the darkness of the forest.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+
+br
+br
+br
+br
+`                           Darkness surrounds me… 
+`                      A blackness so deep, it's suffocating…
+`   Not even the calming rays of the moonlight can reach this deep.\
+
+
+br
+br
+br
+br
+br
+`                          The air is cold…
+`                     A winter's chill so deep,
+`                  my eyes feel like they'll freeze.\
+
+br
+br
+br
+br
+br
+`          For a brief moment, I thought I heard someone call my name,
+`                so I walk even deeper into the forest.\
+br
+br
+br
+br
+br
+`                 After passing through the veil of trees,
+`           I find everyone waiting for me in the forest clearing.@
+`                           But, something is wrong… 
+`                          Everyone is lying on the ground…
+`               …… Everyone is lying on the ground…… in pieces…\
+br
+br
+br
+br
+br
+br
+br
+`                   The clearing is bathed in red.\
+
+br
+br
+br
+` ---I don't understand.\
+
+br
+br
+br
+br
+br
+br
+` A stranger approaches.@ 
+`                 The look on his face says he wants to rip me apart…\
+
+br
+br
+br
+br
+br
+` ---I don't understand at all…\
+
+
+br
+br
+br
+br
+br
+br
+`      But, someone else, someone I don't know… steps in front of me,
+`                               and is torn apart in my place.\
+
+br
+br
+br
+br
+br
+br
+br
+` ---I'm just a kid, so, I really don't understand.@
+\
+
+bg "image\bg\ima_13b.jpg",%type_crossfade_fst
+
+br
+br
+br
+br
+br
+`                  A splash.@
+`               Something warm and wet hits my face.@
+`                   It's red…
+`               A red liquid, red like a tomato.\
+
+br
+br
+br
+br
+br
+`                The person that was torn apart,
+`               that person I called "mom",
+`             never called my name again.\
+
+br
+br
+br
+br
+br
+br
+br
+br
+br
+` -----I really don't understand.\
+
+br
+br
+br
+br
+br
+br
+`                  But it is just so cruel…
+`             I wanted to cry, I just felt like crying.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+br
+br
+br
+br
+br
+br
+`                    Warm crimson blurs my vision.@
+`                     Seeping into my eyes.@
+`                     But it doesn't bother me at all.@
+`                  The lonely moon floats above me,
+`                        bearing witness in the night sky.\
+
+
+bg "image\bg\ima_01.jpg",%type_crossfade_slw
+
+br
+br
+br
+br
+br
+br
+`                  It's strange.@
+`            Why didn't I realize until now?\
+
+br
+br
+br
+br
+br
+br
+br
+` ---Such a cold, horrible nightmare.\
+
+
+br
+br
+br
+br
+br
+br
+br
+`              Yes---I didn't realize it.\
+br
+br
+br
+br
+br
+br
+br
+`                That tonight…\
+br
+br
+br
+br
+br
+br
+br
+`           The moon is so------beautiful----\
+
+playstop
+
+
+setwindow 18,18, 36,21, 17,17, 0, 4, 22, 1, 1, #aaaaaa, 0, 0, 639, 479
+windoweffect 10,300
+setcursor 0,":l/3,160,2;icon\cursor0.bmp",0,0
+setcursor 1,":l/3,160,2;icon\cursor1.bmp",0,0
+autoclick 0
+
+return

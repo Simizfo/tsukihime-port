@@ -1,0 +1,1060 @@
+
+if %clear_ark_true>0 lsp 30,"image\endlist\arktrue.png",24,88
+if %clear_ark_good>0 lsp 31,"image\endlist\arkgood.png",240,120
+if %clear_ciel_true>0 lsp 32,"image\endlist\cieltrue.png",104,160
+if %clear_ciel_good>0 lsp 33,"image\endlist\cielgood.png",200,200
+if %clear_akiha_true>0 lsp 34,"image\endlist\akihatrue.png",248,232
+if %clear_akiha_good>0 lsp 35,"image\endlist\akihagood.png",160,272
+if %clear_hisui_true>0 lsp 36,"image\endlist\hisuitrue.png",208,304
+if %clear_hisui_good>0 lsp 37,"image\endlist\hisuigood.png",80,344
+if %clear_kohaku_true>0 lsp 38,"image\endlist\kohakutrue.png",152,384
+
+bg "image\endlist\endlist.png",%type_crossfade_mid
+
+btndef "image\endlist\return.png"
+btn 1,304,440,40,25,0,0
+
+btnwait %buttonno
+
+if %buttonno==0 skip -2
+
+csp -1
+
+return
+
+*option
+bg "image\option\option.png",%type_crossfade_mid
+
+btndef "image\option\optionbtn.png"
+btn 1,0,136,288,33,0,0
+btn 2,168,208,256,33,0,33
+btn 3,368,264,272,41,0,66
+btn 4,296,432,48,33,0,107
+
+btnwait %buttonno
+
+if %buttonno==0 skip -2
+if %buttonno==-1 return
+
+if %buttonno==1 gosub *gallery:mov %buttonno,0
+if %buttonno==2 gosub *endinglist:mov %buttonno,0
+if %buttonno==3 gosub *gameopt:mov %buttonno,0
+
+if %buttonno==4 return
+
+goto *option
+
+*gallery
+
+if %clear_hisui>0 goto *gallery2
+
+*gallery1
+bg "image\gallery\gallery1.png",%type_crossfade_mid
+
+btndef "image\gallery\gallerybtn1.png"
+btn 1,72,16,296,201,0,217
+btn 2,16,160,184,217,0,0
+btn 3,248,264,264,201,0,418
+btn 4,416,48,184,201,0,619
+btn 5,32,432,40,33,0,820
+
+btnwait %buttonno
+
+if %buttonno==0 skip -2
+if %buttonno==-1 return
+
+if %buttonno==1 gosub *ark_gallery:mov %buttonno,0
+if %buttonno==2 gosub *akiha_gallery:mov %buttonno,0
+if %buttonno==3 gosub *hisui_gallery:mov %buttonno,0
+if %buttonno==4 gosub *ciel_gallery:mov %buttonno,0
+
+if %buttonno==5 return
+
+goto *gallery1
+
+*gallery2
+
+bg "image\gallery\gallery2.png",%type_crossfade_mid
+
+btndef "image\gallery\gallerybtn2.png"
+btn 1,72,16,296,201,0,217
+btn 2,144,264,240,201,0,619
+btn 3,16,160,184,217,0,0
+btn 4,416,48,184,201,0,418
+btn 5,384,264,240,201,0,820
+btn 6,32,432,40,33,0,1021
+
+btnwait %buttonno
+
+if %buttonno==0 skip -2
+if %buttonno==-1 return
+
+if %buttonno==1 gosub *ark_gallery:mov %buttonno,0
+if %buttonno==2 gosub *hisui_gallery:mov %buttonno,0
+if %buttonno==3 gosub *akiha_gallery:mov %buttonno,0
+if %buttonno==4 gosub *ciel_gallery:mov %buttonno,0
+if %buttonno==5 gosub *kohaku_gallery:mov %buttonno,0
+
+if %buttonno==6 return
+
+goto *gallery2
+
+*gameopt
+
+if %effectskip==1 lsp 30,":c;image\gameopt\effectok.jpg",496,176
+if %sceneskip==1 lsp 31,":c;image\gameopt\sceneok.jpg",496,240
+
+bg "image\gameopt\gameopt.png",%type_crossfade_mid
+
+btndef "image\gameopt\gameoptbtn.png"
+btn 1,88,184,272,25,0,0
+btn 2,72,248,288,33,0,25
+btn 3,296,432,48,33,0,58
+
+btnwait %buttonno
+
+if %buttonno==0 skip -2
+
+csp -1
+
+if %buttonno==-1 return
+
+if %buttonno!=1 skip 3
+if %effectskip!=1 mov %effectskip,1:skip 2
+if %effectskip==1 mov %effectskip,0
+
+if %buttonno!=2 skip 3
+if %sceneskip!=1 mov %sceneskip,1:skip 2
+if %sceneskip==1 mov %sceneskip,0
+
+if %effectskip==1 gosub *velocity_effectspeed
+if %effectskip==0 gosub *normal_effectspeed
+
+if %buttonno==3 return
+
+goto *gameopt
+
+*normal_effectspeed
+mov %type_waitdisp,waitdisp
+mov %type_nowaitdisp,nowaitdisp
+mov %type_lshutter_fst,lshutter_fst
+mov %type_lshutter_mid,lshutter_mid
+mov %type_lshutter_slw,lshutter_slw
+mov %type_rshutter_fst,rshutter_fst
+mov %type_rshutter_mid,rshutter_mid
+mov %type_rshutter_slw,rshutter_slw
+mov %type_tshutter_fst,tshutter_fst
+mov %type_tshutter_mid,tshutter_mid
+mov %type_tshutter_slw,tshutter_slw
+mov %type_bshutter_fst,bshutter_fst
+mov %type_bshutter_mid,bshutter_mid
+mov %type_bshutter_slw,bshutter_slw
+mov %type_lcartain_fst,lcartain_fst
+mov %type_lcartain_mid,lcartain_mid
+mov %type_lcartain_slw,lcartain_slw
+mov %type_rcartain_fst,rcartain_fst
+mov %type_rcartain_mid,rcartain_mid
+mov %type_rcartain_slw,rcartain_slw
+mov %type_tcartain_fst,tcartain_fst
+mov %type_tcartain_mid,tcartain_mid
+mov %type_tcartain_slw,tcartain_slw
+mov %type_bcartain_fst,bcartain_fst
+mov %type_bcartain_mid,bcartain_mid
+mov %type_bcartain_slw,bcartain_slw
+mov %type_crossfade_fst,crossfade_fst
+mov %type_crossfade_mid,crossfade_mid
+mov %type_crossfade_slw,crossfade_slw
+mov %type_lscroll_fst,lscroll_fst
+mov %type_lscroll_mid,lscroll_mid
+mov %type_lscroll_slw,lscroll_slw
+mov %type_rscroll_fst,rscroll_fst
+mov %type_rscroll_mid,rscroll_mid
+mov %type_rscroll_slw,rscroll_slw
+mov %type_tscroll_fst,tscroll_fst
+mov %type_tscroll_mid,tscroll_mid
+mov %type_tscroll_slw,tscroll_slw
+mov %type_bscroll_fst,bscroll_fst
+mov %type_bscroll_mid,bscroll_mid
+mov %type_bscroll_slw,bscroll_slw
+mov %type_rmaskcross_fst,rmaskcross_fst
+mov %type_rmaskcross_mid,rmaskcross_mid
+mov %type_rmaskcross_slw,rmaskcross_slw
+mov %type_lmaskcross_fst,lmaskcross_fst
+mov %type_lmaskcross_mid,lmaskcross_mid
+mov %type_lmaskcross_slw,lmaskcross_slw
+windoweffect 10,300
+return
+
+*velocity_effectspeed
+mov %type_waitdisp,waitdisp
+mov %type_nowaitdisp,nowaitdisp
+mov %type_lshutter_fst,nowaitdisp
+mov %type_lshutter_mid,nowaitdisp
+mov %type_lshutter_slw,nowaitdisp
+mov %type_rshutter_fst,nowaitdisp
+mov %type_rshutter_mid,nowaitdisp
+mov %type_rshutter_slw,nowaitdisp
+mov %type_tshutter_fst,nowaitdisp
+mov %type_tshutter_mid,nowaitdisp
+mov %type_tshutter_slw,nowaitdisp
+mov %type_bshutter_fst,nowaitdisp
+mov %type_bshutter_mid,nowaitdisp
+mov %type_bshutter_slw,nowaitdisp
+mov %type_lcartain_fst,nowaitdisp
+mov %type_lcartain_mid,nowaitdisp
+mov %type_lcartain_slw,nowaitdisp
+mov %type_rcartain_fst,nowaitdisp
+mov %type_rcartain_mid,nowaitdisp
+mov %type_rcartain_slw,nowaitdisp
+mov %type_tcartain_fst,nowaitdisp
+mov %type_tcartain_mid,nowaitdisp
+mov %type_tcartain_slw,nowaitdisp
+mov %type_bcartain_fst,nowaitdisp
+mov %type_bcartain_mid,nowaitdisp
+mov %type_bcartain_slw,nowaitdisp
+mov %type_crossfade_fst,nowaitdisp
+mov %type_crossfade_mid,nowaitdisp
+mov %type_crossfade_slw,nowaitdisp
+mov %type_lscroll_fst,nowaitdisp
+mov %type_lscroll_mid,nowaitdisp
+mov %type_lscroll_slw,nowaitdisp
+mov %type_rscroll_fst,nowaitdisp
+mov %type_rscroll_mid,nowaitdisp
+mov %type_rscroll_slw,nowaitdisp
+mov %type_tscroll_fst,nowaitdisp
+mov %type_tscroll_mid,nowaitdisp
+mov %type_tscroll_slw,nowaitdisp
+mov %type_bscroll_fst,nowaitdisp
+mov %type_bscroll_mid,nowaitdisp
+mov %type_bscroll_slw,nowaitdisp
+mov %type_rmaskcross_fst,nowaitdisp
+mov %type_rmaskcross_mid,nowaitdisp
+mov %type_rmaskcross_slw,nowaitdisp
+mov %type_lmaskcross_fst,nowaitdisp
+mov %type_lmaskcross_mid,nowaitdisp
+mov %type_lmaskcross_slw,nowaitdisp
+windoweffect 1
+return
+
+
+
+
+
+
+
+
+*ark_gallery_check
+
+if %4012==0 return
+
+add %4020,%4012
+
+*ark_gallery
+
+if %4020>4 mov %4020,1
+if %4020<1 mov %4020,4
+
+notif %4020==1 skip 13
+mov $4000,"image\gallery\ark\ark1.png"
+mov $4010,"image\gallery\ark\ark1btn.png"
+mov $4001,"image\event\ark_e01.jpg"
+mov $4002,"image\event\ark_e02.jpg"
+mov $4003,"image\event\ark_e03.jpg"
+mov $4004,"image\event\ark_e04.jpg"
+mov $4005,"image\event\ark_e04b.jpg"
+mov $4006,"image\event\ark_e08.jpg"
+mov $4007,"image\event\ark_e09.jpg"
+mov $4008,"image\event\ark_e05a.jpg"
+mov $4009,"image\event\ark_e05b.jpg"
+
+notif %4020==2 skip 13
+mov $4000,"image\gallery\ark\ark2.png"
+mov $4010,"image\gallery\ark\ark2btn.png"
+mov $4001,"image\event\ark_e06a.jpg"
+mov $4002,"image\event\ark_e06b.jpg"
+mov $4003,"image\event\ark_e07.jpg"
+mov $4004,"image\event\ark_f01.jpg"
+mov $4005,"image\event\ark_f02.jpg"
+mov $4006,"image\event\ark_f03.jpg"
+mov $4007,"image\event\nero_e04.jpg"
+mov $4008,"image\bg\cmo_06b.jpg"
+mov $4009,""
+
+notif %4020==3 skip 13
+mov $4000,"image\gallery\ark\ark3.png"
+mov $4010,"image\gallery\ark\ark3btn.png"
+mov $4001,"image\event\ark_h01.jpg"
+mov $4002,"image\event\ark_h02.jpg"
+mov $4003,"image\event\ark_h03.jpg"
+mov $4004,"image\event\ark_h04.jpg"
+mov $4005,"image\event\ark_h05.jpg"
+mov $4006,"image\event\ark_h06.jpg"
+mov $4007,"image\event\ark_h07.jpg"
+mov $4008,"image\event\ark_h08.jpg"
+mov $4009,"image\event\ark_h09.jpg"
+
+notif %4020==4 skip 13
+mov $4000,"image\gallery\ark\ark4.png"
+mov $4010,"image\gallery\ark\ark4btn.png"
+mov $4001,"image\event\ark_h10.jpg"
+mov $4002,"image\event\ark_h11.jpg"
+mov $4003,"image\event\ark_h12.jpg"
+mov $4004,"image\event\ark_h13.jpg"
+mov $4005,""
+mov $4006,""
+mov $4007,""
+mov $4008,""
+mov $4009,""
+
+mov %4025,%4020
+
+gosub *imagemode
+
+goto *ark_gallery_check
+
+
+*ciel_gallery_check
+
+if %4012==0 return
+
+add %4021,%4012
+
+*ciel_gallery
+
+if %4021>4 mov %4021,1
+if %4021<1 mov %4021,4
+
+notif %4021==1 skip 13
+mov $4000,"image\gallery\ciel\ciel1.png"
+mov $4010,"image\gallery\ciel\ciel1btn.png"
+mov $4001,"image\event\cel_e01.jpg"
+mov $4002,"image\event\cel_e02a.jpg"
+mov $4003,"image\event\cel_e02b.jpg"
+mov $4004,"image\event\cel_e03a.jpg"
+mov $4005,"image\event\cel_e03b.jpg"
+mov $4006,"image\event\cel_e04.jpg"
+mov $4007,"image\event\cel_e05a.jpg"
+mov $4008,"image\event\cel_e05b.jpg"
+mov $4009,"image\event\cel_e09.jpg"
+
+notif %4021==2 skip 13
+mov $4000,"image\gallery\ciel\ciel2.png"
+mov $4010,"image\gallery\ciel\ciel2btn.png"
+mov $4001,"image\event\cel_e06b.jpg"
+mov $4002,"image\event\cel_e07b.jpg"
+mov $4003,"image\event\cel_e08.jpg"
+mov $4004,"image\event\cel_f01.jpg"
+mov $4005,"image\event\cel_f02.jpg"
+mov $4006,"image\bg\cmo_01.jpg"
+mov $4007,"image\bg\cmo_02.jpg"
+mov $4008,"image\bg\cmo_03.jpg"
+mov $4009,"image\bg\cmo_04a.jpg"
+
+notif %4021==3 skip 13
+mov $4000,"image\gallery\ciel\ciel3.png"
+mov $4010,"image\gallery\ciel\ciel3btn.png"
+mov $4001,"image\event\cel_h01.jpg"
+mov $4002,"image\event\cel_h02.jpg"
+mov $4003,"image\event\cel_h03a.jpg"
+mov $4004,"image\event\cel_h04a.jpg"
+mov $4005,"image\event\cel_h05a.jpg"
+mov $4006,"image\event\cel_h06a.jpg"
+mov $4007,"image\event\cel_h07a.jpg"
+mov $4008,"image\event\cel_h08a.jpg"
+mov $4009,"image\event\cel_h11a.jpg"
+
+notif %4021==4 skip 13
+mov $4000,"image\gallery\ciel\ciel4.png"
+mov $4010,"image\gallery\ciel\ciel4btn.png"
+mov $4001,"image\event\cel_h09a.jpg"
+mov $4002,"image\event\cel_h10.jpg"
+mov $4003,""
+mov $4004,""
+mov $4005,""
+mov $4006,""
+mov $4007,""
+mov $4008,""
+mov $4009,""
+
+mov %4025,%4021
+
+gosub *imagemode
+
+goto *ciel_gallery_check
+
+
+*akiha_gallery_check
+
+if %4012==0 return
+
+add %4022,%4012
+
+*akiha_gallery
+
+if %4022>4 mov %4022,1
+if %4022<1 mov %4022,4
+
+notif %4022==1 skip 13
+mov $4000,"image\gallery\aki\aki1.png"
+mov $4010,"image\gallery\aki\aki1btn.png"
+mov $4001,"image\event\aki_e01.jpg"
+mov $4002,"image\event\aki_e01b.jpg"
+mov $4003,"image\event\aki_e07a.jpg"
+mov $4004,"image\event\aki_e07b.jpg"
+mov $4005,"image\event\aki_e02.jpg"
+mov $4006,"image\event\aki_e03.jpg"
+mov $4007,"image\event\aki_e09.jpg"
+mov $4008,"image\event\aki_e08.jpg"
+mov $4009,"image\event\aki_e04.jpg"
+
+notif %4022==2 skip 13
+mov $4000,"image\gallery\aki\aki2.png"
+mov $4010,"image\gallery\aki\aki2btn.png"
+mov $4001,"image\event\aki_e05a.jpg"
+mov $4002,"image\event\aki_e06.jpg"
+mov $4003,"image\event\aki_f01.jpg"
+mov $4004,"image\event\aki_f02.jpg"
+mov $4005,"image\event\stk_e01a.jpg"
+mov $4006,"image\event\stk_e01b.jpg"
+mov $4007,"image\event\stk_e01c.jpg"
+mov $4008,"image\event\stk_e02.jpg"
+mov $4009,"image\event\stk_e03.jpg"
+
+notif %4022==3 skip 13
+mov $4000,"image\gallery\aki\aki3.png"
+mov $4010,"image\gallery\aki\aki3btn.png"
+mov $4001,"image\event\aki_h14.jpg"
+mov $4002,"image\event\aki_h15.jpg"
+mov $4003,"image\event\aki_h01.jpg"
+mov $4004,"image\event\aki_h02.jpg"
+mov $4005,"image\event\aki_h03.jpg"
+mov $4006,"image\event\aki_h04.jpg"
+mov $4007,"image\event\aki_h05.jpg"
+mov $4008,"image\event\aki_h06.jpg"
+mov $4009,"image\event\aki_h07.jpg"
+
+notif %4022==4 skip 13
+mov $4000,"image\gallery\aki\aki4.png"
+mov $4010,"image\gallery\aki\aki4btn.png"
+mov $4001,"image\event\aki_h08.jpg"
+mov $4002,"image\event\aki_h09.jpg"
+mov $4003,"image\event\aki_h10.jpg"
+mov $4004,"image\event\aki_h11.jpg"
+mov $4005,"image\event\aki_h12.jpg"
+mov $4006,"image\event\aki_h13.jpg"
+mov $4007,""
+mov $4008,""
+mov $4009,""
+
+mov %4025,%4022
+
+gosub *imagemode
+
+goto *akiha_gallery_check
+
+
+*hisui_gallery_check
+
+if %4012==0 return
+
+add %4023,%4012
+
+*hisui_gallery
+
+if %4023>4 mov %4023,1
+if %4023<1 mov %4023,4
+
+notif %4023==1 skip 13
+mov $4000,"image\gallery\his\his1.png"
+mov $4010,"image\gallery\his\his1btn.png"
+mov $4001,"image\event\his_e01.jpg"
+mov $4002,"image\event\his_e01b.jpg"
+mov $4003,"image\event\his_e02.jpg"
+mov $4004,"image\event\his_e02b.jpg"
+mov $4005,"image\event\his_e08.jpg"
+mov $4006,"image\event\his_e03.jpg"
+mov $4007,"image\event\his_e04.jpg"
+mov $4008,"image\event\his_e05.jpg"
+mov $4009,"image\event\his_e09.jpg"
+
+notif %4023==2 skip 13
+mov $4000,"image\gallery\his\his2.png"
+mov $4010,"image\gallery\his\his2btn.png"
+mov $4001,"image\event\his_e06.jpg"
+mov $4002,"image\event\his_e07a.jpg"
+mov $4003,"image\event\his_e07b.jpg"
+mov $4004,"image\event\his_f01.jpg"
+mov $4005,"image\event\his_f02.jpg"
+mov $4006,"image\event\his_f03.jpg"
+mov $4007,"image\event\hal_e01.jpg"
+mov $4008,""
+mov $4009,""
+
+notif %4023==3 skip 13
+mov $4000,"image\gallery\his\his3.png"
+mov $4010,"image\gallery\his\his3btn.png"
+mov $4001,"image\event\his_h16.jpg"
+mov $4002,"image\event\his_h15.jpg"
+mov $4003,"image\event\his_h01.jpg"
+mov $4004,"image\event\his_h02.jpg"
+mov $4005,"image\event\his_h03.jpg"
+mov $4006,"image\event\his_h04a.jpg"
+mov $4007,"image\event\his_h04b.jpg"
+mov $4008,"image\event\his_h12.jpg"
+mov $4009,"image\event\his_h13.jpg"
+
+notif %4023==4 skip 13
+mov $4000,"image\gallery\his\his4.png"
+mov $4010,"image\gallery\his\his4btn.png"
+mov $4001,"image\event\his_h05.jpg"
+mov $4002,"image\event\his_h06.jpg"
+mov $4003,"image\event\his_h06b.jpg"
+mov $4004,"image\event\his_h07.jpg"
+mov $4005,"image\event\his_h08.jpg"
+mov $4006,"image\event\his_h09.jpg"
+mov $4007,"image\event\his_h10.jpg"
+mov $4008,"image\event\his_h11.jpg"
+mov $4009,"image\event\his_h14.jpg"
+
+mov %4025,%4023
+
+gosub *imagemode
+
+goto *hisui_gallery_check
+
+
+*kohaku_gallery_check
+
+if %4012==0 return
+
+add %4024,%4012
+
+*kohaku_gallery
+
+if %4024>4 mov %4024,1
+if %4024<1 mov %4024,4
+
+notif %4024==1 skip 13
+mov $4000,"image\gallery\koha\koha1.png"
+mov $4010,"image\gallery\koha\koha1btn.png"
+mov $4001,"image\event\koha_e01a.jpg"
+mov $4002,"image\event\koha_e01b.jpg"
+mov $4003,"image\event\koha_e02.jpg"
+mov $4004,"image\event\koha_e03.jpg"
+mov $4005,"image\event\koha_e04.jpg"
+mov $4006,"image\event\koha_e05.jpg"
+mov $4007,"image\event\koha_e06.jpg"
+mov $4008,"image\event\koha_e07.jpg"
+mov $4009,"image\event\koha_e08.jpg"
+
+notif %4024==2 skip 13
+mov $4000,"image\gallery\koha\koha2.png"
+mov $4010,"image\gallery\koha\koha2btn.png"
+mov $4001,"image\event\koha_f01.jpg"
+mov $4002,"image\event\ao_01.jpg"
+mov $4003,"image\event\ao_02.jpg"
+mov $4004,""
+mov $4005,""
+mov $4006,""
+mov $4007,""
+mov $4008,""
+mov $4009,""
+
+notif %4024==3 skip 13
+mov $4000,"image\gallery\koha\koha3.png"
+mov $4010,"image\gallery\koha\koha3btn.png"
+mov $4001,"image\event\koha_h10.jpg"
+mov $4002,"image\event\koha_h11.jpg"
+mov $4003,"image\event\koha_h01.jpg"
+mov $4004,"image\event\koha_h02.jpg"
+mov $4005,"image\event\koha_h03.jpg"
+mov $4006,"image\event\koha_h04.jpg"
+mov $4007,"image\event\koha_h05.jpg"
+mov $4008,"image\event\koha_h06b.jpg"
+mov $4009,"image\event\koha_h07.jpg"
+
+notif %4024==4 skip 13
+mov $4000,"image\gallery\koha\koha4.png"
+mov $4010,"image\gallery\koha\koha4btn.png"
+mov $4001,"image\event\koha_h08.jpg"
+mov $4002,""
+mov $4003,""
+mov $4004,""
+mov $4005,""
+mov $4006,""
+mov $4007,""
+mov $4008,""
+mov $4009,""
+
+mov %4025,%4024
+
+gosub *imagemode
+
+goto *kohaku_gallery_check
+
+*imagemode
+
+cmp %4031,$4001,""
+cmp %4032,$4002,""
+cmp %4033,$4003,""
+cmp %4034,$4004,""
+cmp %4035,$4005,""
+cmp %4036,$4006,""
+cmp %4037,$4007,""
+cmp %4038,$4008,""
+cmp %4039,$4009,""
+
+notif %4031==0 && fchk $4001 lsp 0,":c;image\gallery\notreg.png",60,15
+notif %4032==0 && fchk $4002 lsp 1,":c;image\gallery\notreg.png",240,15
+notif %4033==0 && fchk $4003 lsp 2,":c;image\gallery\notreg.png",420,15
+notif %4034==0 && fchk $4004 lsp 3,":c;image\gallery\notreg.png",60,150
+notif %4035==0 && fchk $4005 lsp 4,":c;image\gallery\notreg.png",240,150
+notif %4036==0 && fchk $4006 lsp 5,":c;image\gallery\notreg.png",420,150
+notif %4037==0 && fchk $4007 lsp 6,":c;image\gallery\notreg.png",60,285
+notif %4038==0 && fchk $4008 lsp 7,":c;image\gallery\notreg.png",240,285
+notif %4039==0 && fchk $4009 lsp 8,":c;image\gallery\notreg.png",420,285
+
+if %4025==1 lsp 9,":a;image\gallery\1-4p.jpg",300,420
+if %4025==2 lsp 9,":a;image\gallery\2-4p.jpg",300,420
+if %4025==3 lsp 9,":a;image\gallery\3-4p.jpg",300,420
+if %4025==4 lsp 9,":a;image\gallery\4-4p.jpg",300,420
+
+bg $4000,%type_crossfade_fst
+
+btndef $4010
+if %4031!=0 && fchk $4001 btn 4001,60,15,160,120,0,0
+if %4032!=0 && fchk $4002 btn 4002,240,15,160,120,160,0
+if %4033!=0 && fchk $4003 btn 4003,420,15,160,120,320,0
+if %4034!=0 && fchk $4004 btn 4004,60,150,160,120,0,120
+if %4035!=0 && fchk $4005 btn 4005,240,150,160,120,160,120
+if %4036!=0 && fchk $4006 btn 4006,420,150,160,120,320,120
+if %4037!=0 && fchk $4007 btn 4007,60,285,160,120,0,240
+if %4038!=0 && fchk $4008 btn 4008,240,285,160,120,160,240
+if %4039!=0 && fchk $4009 btn 4009,420,285,160,120,320,240
+
+btn 1,524,412,44,48,0,360
+btn 2,568,412,44,48,44,360
+btn 3,32,424,44,28,0,409
+
+btnwait %4011
+
+if %4011==-1 csp -1:mov %4012,0:return
+
+if %4011==1 csp -1:mov %4012,-1:return
+if %4011==2 csp -1:mov %4012,1:return
+if %4011==3 csp -1:mov %4012,0:return
+
+if %4011<=0 skip -11
+
+csp -1
+
+bg $%4011,%type_crossfade_fst
+
+btndef ""
+btnwait %4011
+
+goto *imagemode
+
+
+*eclipse
+
+
+playstop
+
+bg "image\bg\ima_10.jpg",crossfade_slw
+!w2000
+
+br
+br
+br
+br
+br
+br
+br
+
+` ------Suddenly, I wake up.\
+
+bg "image\bg\ima_21.jpg",crossfade_fst
+
+
+
+` A vast night.@
+` In the midst of a grassy field that extends as far as the eye can see, I stare blankly at the moon.@
+` There is no one else here.@
+` No signs of human presence; no sounds from any animals.@
+` Maybe it's because I've pushed myself too hard these past couple of days.@
+` I just wanted to lie down quietly and be alone, but it seems I fell asleep.\
+
+
+` It was a bright darkness.@
+` Probably because the moon is hanging so low.@
+` The grassy field that looked like a black sea last night is bright, like some sort of a stage.@
+` A clearing illuminated by sharp, sharp moonlight.@
+br
+` I thought it was like a theater somewhere.@
+br
+` Only, there are no curtains around.@
+` This field that sweeps far and wide is devoid of any curtains of trees, nor is there an audience or stage crew.\
+
+
+` There's nothing here.@
+` The only things here are the moonlight and the white darkness.@
+` The wind does not blow and the grass does not even sway.@
+!w1000
+br
+` ----How quiet.@
+br
+` I laugh quietly as it feels like all the commotion until yesterday was just a joke.@
+` No, if you talk about jokes,
+` then my life until now was so happy that, looking back at it, it seems like it was just an illusion.\
+
+
+` A lot of things have happened.@
+` There were a lot of amazing things that occurred, and my life changed pace quite often.@
+
+` The expected, and the unexpected.@
+br
+` Everything was illusory.@
+` Looking back, it seems that no matter how trivial things seemed, all those coincidences built on each other.@
+` The days were only a repetition of each other, but no two days were quite the same.@
+` Then, that means…
+` Perhaps each and every one of them was an irreplaceable moment I can never return to.\
+
+
+` I recall many things that happened.@
+` The memories are so nostalgic, it makes me smile.@
+` Just the thought of the new experiences awaiting me in the future, different from those of my past, makes me dizzy.@
+br
+` Truly a mix of emotions.@ Happiness, excitement, and enough worries to give me a headache.@
+br
+
+bg "image\bg\ima_10.jpg",crossfade_fst
+
+` ------Thump.@
+br
+` My heart beats loudly once.\
+
+
+` What comes after is my usual anemia.@
+` The dizziness continues for a while, but eventually disappears.\
+
+` Even though the wound on my chest healed, my anemia didn't go away.@
+` It seems like my fragile health wasn't caused by the wound on my chest alone.@
+br
+` …… Well, of course.@
+` Being able to perceive the shape of death means I stand much closer to death than others.@
+` To be honest, I never thought about living a long life, like ordinary people.\
+
+
+` Thump.@ The sound of my heart beating.@
+` It's not like me to think of this, but I wonder just how long I can keep running through time.@
+` The conclusion is rather uninteresting.@
+br
+` Because, even if it stops tomorrow, or in a few decades, still----\
+
+`"Hey you.@ It's dangerous just lying around like that."@
+br
+` ----And.@
+br
+` I hear a familiar voice.\
+
+play "*8"
+
+
+bg "image\event\ao_01.jpg",lshutter_fst
+
+
+
+`"Eh…?"@
+`"What do you mean, 'eh'?@ You have an awful lot of free time on your hands if you can just sleep around here in the middle of the night.@ I was this close to kicking you, so you better watch out."@
+` She says this grumpily while carrying a trunk in one hand.\
+
+`"Oh…?@ Kicked?@ And by who?"@
+` I lift myself up.@
+`"Isn't it obvious, stupid?@ You and I are the only ones here, so who else could it be but me?"@
+` She declares this confidently as she folds her arms.@
+`"Ha-------"@
+` Stifling the laughter spilling out of me, I gaze up at her and the moon.\
+
+`"I can't believe it… I somehow felt that I'd meet you, but I didn't think that day would be today."@
+`"What a coincidence.@ I didn't expect to see you here, either.@
+` I heard you were here, but we never did meet up, did we?@ So I was thinking that it was our fate this time not to meet.@ Although…"@
+`"If we did see each other, it would have caused trouble, right?"@
+`"Right.@ I am a member of the Association, after all.@ We're not quite on good terms with The Church."@
+` She laughs without any hint of guilt.@
+` It really is hard holding back my laughter.@
+` It makes me happy that this person hasn't changed one bit since that day we met.\
+
+`"And, since I ran out of things to do, I was going to leave here tomorrow.@
+` See, this incident was partially my fault, you know?@ So, I stopped by here for a final check, and I almost ended up kicking some ordinary person."@
+`"Then… we were fated to meet.@ To be honest, I felt we would meet up again."@
+` I smile.@
+`"You're right.@ I welcome this sort of fate."@
+` She flashes me an identical smile in return.\
+
+br
+br
+br
+br
+br
+br
+`"Long time no see.@ You've grown up, Shiki."@
+`"Yes.@ You seem to be doing well too, Sensei."@
+br
+` Returning her plain greeting, I look back at Sensei with serious eyes.\
+
+
+bg "image\bg\ima_10.jpg",crossfade_fst
+
+!w1000
+bg "image\bg\ima_21.jpg",crossfade_fst
+
+
+
+` We sit in the field of grass and talk.@
+` We talk about senseless things, just like the old days.@
+` It was only briefly that we talked about what had happened and what we were going to do in the future.\
+
+`"It's about time.@ I don't plan on staying here long.@ I'm leaving before dawn, so we'll have to part here."@
+` Saying that, Sensei stands up.@
+` I try to stand up with her… but I collapse.\
+
+`"…… Shiki?"@
+` I can hear her voice.@
+` I take a few deep breaths and stand back up.@
+`"…… Dang.@ It seems like no sleep or rest until last night just hit me."@
+`"Looks like it.@ That dizziness is your biggest weakness.@
+` You don't look like you have any injuries.@ Is your body alright?"@
+`"Yeah, thanks.@ Unlike you, I have a normal body."@
+`"Hmm… If you say so."@
+` She glances at me meaningfully, then looks directly into my eyes.\
+
+
+`"----Shiki… You know you're not going to last much longer?"@
+br
+` Her clear words.@
+`"---------"@
+` I'm surprised.@
+` It's not that I'm surprised by her words, but rather, I never thought she would say them.\
+
+`"----Well, yeah… I kind of know about it already."@
+`"Is that so?@ But you seem pretty calm.@
+` Even now, you strain your body over something that has nothing to do with you.@
+` I would have a hard time believing it, but are you really not afraid of dying?"@
+` She stares at me, somewhat peeved.\
+
+`"No way.@ I think I'm more afraid of death than most people."@
+br
+` But… that's something in the future.@
+` It may be tomorrow or next year, but I can't think about the future too much.@
+br
+`"I can't think about the future too much.@ I prioritize what I want to be doing now."\
+
+
+`"I see, so you can see your own death as well.@ That's why you're more afraid of death than others.@
+` That makes sense… Even for me, I'd be shivering if I could see the thirteen steps to the gallows."@
+`"No, it's not like that.@ It's not like I can clearly sense when I'll die."\
+
+`"It's almost the same thing.@ Let's see… can I ask you something, for reference?@
+` You ended up with a body weaker than those of others.@ It would only be natural to curse it and fear your life.@
+` Hey, Shiki.@ Don't you find it difficult living life with such a body?"@
+` Sensei looks at me openly, yet with unreadable eyes.@
+` Those are the eyes of a magus, her side of which I'm not familiar with.\
+
+`"---Isn't that right…?@ You can no longer have 'normal' happiness like everyone else.@ As long as you have that body of yours, all that awaits is suffering."@
+`"-----That may be so… but…"@
+` I think it's not that bad.@
+`"But, I'm probably happy.@
+` Because up until now was a lot of fun.@ So, it'll probably be fun in the future, too."@
+`"-------------"@
+` The sound of her gasping.@
+` With a large sigh, she changes back to her usual self.\
+
+`"Shiki."@
+` She seems sad as she calls my name.@
+`"To be honest, I do feel some regret.@
+` I feel like I said something to you that I shouldn't have back then."@
+` I look straight into her eyes.@
+` It's different from before… Back then I had to look up to see her eyes, but now she is looking up into mine.\
+
+`"God doesn't give excessive power without reason.@ And I told you that if you have that power, there has to be some meaning to it.@
+` But, you know, it's up to the individual to decide what that meaning may be.@ There's no room for anyone else, especially something as ambiguous as a god, to interfere.@
+` So it would have been alright if you did nothing.@
+` Even if you denied those eyes of yours and did nothing, it still would have been alright.@
+` I'm regretting my words, because… you could have lead a normal life more suitable for you, as Shiki."@
+`"……………… Sensei."\
+
+`"Didn't I tell you earlier that you should live your life with an honest heart?@ You really did, Shiki.@
+` But, that's something difficult to do.@
+` It would have been easier for you to stray from your path a little, because your eyes draw you to disaster.@
+` …… Isn't it ironic that a killer more skilled than anyone else also hates killing more than anyone else?@
+` If you lived a normal life, or had your heart deviated from the true path, you wouldn't have had to go through so much pain."\
+
+`"Yeah… that may be true, now that you mention it.@ If I gave up, it may have been a little easier.@
+` But, that has no meaning.@ It would have only made things a little easier, and to start out with, I never thought of it as particularly painful.@
+` You have the wrong idea, Sensei.@ Everything I did, I did because I wanted to.@ It's not like I'm a saint or anything.@
+` I like myself just the way I am.@
+` That's why… I was glad that you told me back then to become an adult by living just the way I was.@
+` Sensei.@ I don't regret anything, so there's no reason for you to regret anything either."\
+
+
+` I really feel that from the bottom of my heart, and I smile at her.@
+` As if dazzled by a radiant light, she narrows her eyes, then closes them briefly.\
+
+`"-----I see……
+` Man, it seems you really have become a wonderful young fellow."@
+` Her hand reaches for her trunk.\
+
+`"Yeah, you're fine just the way you are, Shiki.@
+` …… My world is full of devious individuals, so associating with someone like you balances things out.@ It might be hard on you, but if you don't mind, then I guess it's alright."@
+br
+` With a "see you," Sensei turns her back to me.\
+
+`"-------------"@
+` I can't stop her, and there's no reason to.@
+` I can feel that this really is the last time.@
+` …… All I can remember is the one thing I forgot to say.@
+br
+` That day.@
+` In an ocean of grass, an important friend who had spoken with me, who was about to disappear.\
+
+`"-------------"@
+` There's no wind.@
+` The grass does not sway and the only thing that changes is her figure, which gets farther away.@
+` She didn't turn around suddenly back then, and she won't now.\
+
+`"------Sensei."@
+br
+` I call out to stop her.@
+` She halts in her tracks.@
+`"What?"@
+` She doesn't turn around.@ Only her voice drifts to me.\
+
+`"-------------"@
+` I know what I must say.@
+` The words I've always wanted to say.@
+` It's just that… if I say these words, I really won't be able to see her ever again.@
+` But still---I have to say them.\
+
+` She told me, "All I'm saying is live true to yourself, and become a man in the manner that you think is right."@
+` She also taught me that it is important to accept my mistakes, and to be able to apologize for them.\
+
+` That's why.@
+` That's why I have to say it.@
+br
+br
+br
+br
+`"----Thank you.@ I'm glad I met you, Sensei."\
+
+` …… That's what I felt as a child.@
+` Those words were the ones from the bottom of my heart that I once could not say, because I was filled with the sadness of parting.\
+
+
+
+` From behind, it seems Sensei is surprised.@
+` She stands there, lowers her head, and turns toward me with her usual expression.\
+bg "image\bg\ima_10.jpg",lshutter_fst
+
+bg "image\event\ao_02.jpg",lshutter_fst
+
+!w2000
+`"----Take care, Shiki… Let's meet again if we are fated to do so."@
+` She says this as if it was nothing, and the wind suddenly gusts.@
+` Swooosh.@
+` It rustles through the swaying grass, and the moon's light disappears.\
+
+
+bg "image\bg\ima_10.jpg",crossfade_fst
+
+
+` After that,
+` as if abducted by the wind, she disappears.\
+playstop
+
+
+bg "image\bg\ima_21.jpg",crossfade_fst
+
+play "*7"
+
+`"--------------"@
+` For some strange reason, I'm not shedding any tears.@
+` I feel sad, and I don't want to part.@
+` But not shedding tears also means that I've grown up since then.\
+
+` The grassy field becomes silent once more.@
+` Gazing up, it looks like the moon is about to vanish from the sky.@
+` All things pass by, just like the moon disappearing.@
+` And yet, after a long time, there may be the chance to meet again.@
+br
+` And so, tonight's moon disappears.\
+
+
+`"----Well then…"@
+` I close my eyes just once, as if lowering the curtains.@
+` In the sky, dawn is drawing closer.@
+` Just like the moon that has just fallen,
+` for the time being, the curtains are lowered on the long story for Tohno Shiki----\
+
+
+bg "image\bg\ima_10.jpg",crossfade_fst
+
+bg "image\bg\ima_01.jpg",crossfade_mid
+
+
+br
+br
+br
+br
+br
+br
+br
+` The heavens soar high above.@
+` I look up, while embraced by the clear, brisk night air.\
+
+br
+br
+br
+br
+` All things are uncertain, just like a waking dream.@
+` The past is all an illusion.@
+` It doesn't leave behind a tangible form, and even the most vivid of memories are really just transient.@
+` Yet, I believe that the moon's image will never fade away.\
+
+bg "image\bg\ima_10.jpg",crossfade_mid
+
+br
+br
+br
+br
+br
+br
+br
+` Even that is fragile.@
+br
+` Even though I know it will end one day, I don't care.\
+
+
+br
+br
+br
+br
+` The memories continue on.@
+` I'm sure that even the end will be a happy one.@
+br
+` ----The lunar eclipse is far away.@
+br
+` Everyone races through their remaining time, and passes on.@
+!w5000
+\
+
+playstop
+
+cl a,%type_waitdisp
+bg "image\word\fin.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+
+goto *title2

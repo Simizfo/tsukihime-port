@@ -1,0 +1,316 @@
+
+
+bg "image\bg\bg_06f.jpg",%type_crossfade_mid
+
+
+` Classes end and the classroom empties, but I won't leave until the sun sets completely.@
+br
+` The red classroom.@
+` The burning sunset spreads outside the window.@
+` The sun flushes red as it sinks deep in the sky.@
+`"------"@
+` I'll always be waiting here.@
+` I'll remember my unforgettable promise; I'll continue waiting here forever.\
+
+bg "image\bg\ima_07.jpg",%type_crossfade_fst
+
+
+br
+` There's still one promise I haven't been able to fulfill.@
+br
+`"When this is all over----when we're done defeating this vampire… Before we part, can't we do something like this just once more?"@
+br
+` Back then, she tilted her head to the side in confusion.\
+
+`"So----I really was wondering, what would happen if we were to meet again without any responsibilities… if we just met for no particular reason."@
+br
+` …… When I said those words,
+` I was only thinking about her.\
+
+`"----If you're too busy, then it's okay.@ I only thought of it just now, anyway."@
+br
+` …… Just…
+` Not as two people cooperating,
+` but as two friends who got along, not doing anything in particular.@
+` If we could create some normal memories like that,\
+br
+` I knew she would be happy.\
+
+
+br
+br
+br
+br
+` Okay----!@ When everything's over, let's come here again, Shiki!@
+` It won't have any meaning, but I'm sure it will be really, really fun!@---
+!w2000
+br
+` After her eyes widened in surprise, she nodded.@
+` In the classroom bathed by the sunset,
+` Arcueid smiled and made that promise with me.\
+
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+
+
+` ---I remember that promise.@
+` ---I remember that smile.@
+br
+` ---I remember everything.@
+br
+` I can't forget.@
+` I won't forget.@
+` I'll always, always remember the promise we made in the room ablaze with the sunset to meet here again----\
+
+
+bg "image\bg\bg_06f.jpg",%type_crossfade_mid
+
+
+`"……………"@
+` The sun sinks further.@
+` These hours until the vermillion fades completely,
+` the quiet time until the crimson sky disappears.@
+br
+` This eternal, fleeting instant of a world standing still.@
+br
+` Maybe I am already crazy.@
+` Even though I'm waiting for someone who will never come, my heart is horribly calm.\
+
+!w5000
+
+br
+` ---Clatter.@
+br
+` The sound of something touching a desk.@
+` I look.@
+` A window is open.@
+` I realize that,
+` painted in red sunlight, she is standing by the window.\
+
+bg "image\event\ark_f01.jpg",%type_crossfade_fst
+play "*7"
+
+
+` She doesn't move at all, but she's there.@
+` She's right in front of me;
+` she's not an illusion.@
+` But, I feel like there is a distance which can never be spanned between us.@ "------"@
+` I can't speak.@
+` But, I feel so terribly calm now.\
+
+`"…… Geez.@ I really was planning on disappearing, Shiki, but you'd just wait forever.@ I couldn't just leave you alone like that, so I came here."@
+` She smiles bashfully.@
+`"…… Well, you know.@ I did say I was never going to break a promise with you again."@
+`"That's true.@ Thanks for keeping that promise."\
+
+`"But, I'm sorry.@ It seems this time that I'm the one who won't be able to keep it."@
+`"…… Why?"@
+` …… I'm surprised myself.@
+` I ask her this in a truly gentle voice, without any anger at all.\
+
+`"…… Yeah, I never did tell you my reason for pursuing Roa.@
+` Actually, a long time ago, I once drank human blood.@ At that time, the human stole some of my powers and became an incredibly strong Dead Apostle.@
+` In the end, he ended up killing all the other True Ancestors except for me."@
+br
+` ---Then, that means…
+br
+`"…… You mean, Roa?"\
+
+`"Yes.@ Until that time, I never knew about the vampiric impulse.@ The other True Ancestors also believed I did not have it.@
+` But, it was too late.@ Until then----I didn't even know I was a vampire.@
+` So----I didn't even know it was something I shouldn't do."@
+` …… I see.@
+` Never having been taught anything extra, she wasn't even taught she was the same as those she killed.\
+
+`"Because of just one mistake, I destroyed everyone.@ …… So I won't drink human blood again.@
+` But, a True Ancestor that has drank blood once cannot remain sane without doing it again."@
+`"----"@
+`"…… I can only be here because you completely "killed" Roa.@
+` Even though I annihilated him so many times, it was only his flesh and not his soul.@
+` But you killed his existence completely, Shiki.@ So----the power he stole returned to me and I somehow managed to revive."\
+
+`"---That----doesn't……"@
+br
+`"But, that's all I can do.@ I can no longer resist the vampiric impulse inside of me.@ So----"@
+br
+`"---That---doesn't, matter."@
+br
+`"…… Shiki, I can't see you again.@ Sorry for breaking our promise."@
+br
+` …… That doesn't matter to me.@
+` I just---want you to be by my side, that's all.\
+
+`"…… You can keep your promise."@
+`"Shiki……?"@
+`"Drink my blood.@ If you do--you can keep your promise."\
+
+!w3000
+
+` Time passes by.@
+` Neither of us says anything.@
+` And after a truly maddening silence…\
+
+`"----I see.@ But, I can't.@ I don't need your blood, Shiki."@
+`"Why?@ Is my blood not good?@ Do you have a reason for not drinking it?"@
+` She nods.@
+
+bg "image\event\ark_f02.jpg",%type_crossfade_fst
+
+`"I like you, so I won't."@
+` She smiles like a flower blooming triumphantly.\
+
+`"………………"@
+` I suck in a large amount of air,
+` and just try to suppress this feeling.@
+br
+` I want to stop her.@
+` I want to stop her.@
+` I want to stop her.@
+` I want to stop her.@
+br
+` ----Even if I have to kill her, I want to stop her.@
+br
+` But, her smile is just too gorgeous.@
+` I can't selfishly bring myself to ruin it.\
+
+`"--Goodbye.@ I really am grateful for everything, Shiki."@
+`"………………"@
+` My throat trembles, and no sound comes out.@
+br
+` But still----I have to say goodbye.@
+br
+`"…… I'm, a liar."@
+`"Why?@ You kept your promise, Shiki."@
+`"----Just a worthless liar.@
+` I…… said I would make you happy."@
+` Yes, I vowed to.\
+
+bg "image\event\ark_f01.jpg",%type_crossfade_fst
+
+
+`"…… No, not at all.@
+` I will sleep from now on, but I will always be dreaming of you.@ I enjoyed our time together so much, I will always be dreaming about it."@
+`"------"@
+`"It won't have any meaning, but I'm sure it will be really, really fun.@
+` So Shiki, I really am happy.@ You really did make me happy."\
+
+`"Damn…………"@
+` My throat is filled up.@
+` I don't----I don't want such a…\
+
+
+`"…… You really are kind, Shiki.@ Yeah, I knew coming here to say goodbye was a good thing.@
+` I love you, Shiki.@ Your honesty, how you are always spaced out, how I'm the only one you yell at, how you always look forward to the future… I love all of you.@
+` So please, keep living like that, okay?"@
+` For just an instant,
+` she smiles sadly.@
+br
+` She waves her hand, and as if fading into the sunset itself, she disappears before my very eyes.\
+
+bg "image\bg\bg_06f.jpg",%type_crossfade_slw
+
+
+`"………………"@
+br
+` I grit my teeth, trying to hold it in.@
+` She was smiling until the very end, so at least I didn't want to cry.@
+br
+` ---The classroom is empty.@
+br
+`"……… I see.@ You, really did keep your promise."@
+br
+` In this classroom.@
+` Our promise to meet again in the classroom as the sun set.@ She definitely kept it.\
+
+` …… There are some things I lost, but it is now over.@
+` The curtain has fallen cleanly over the time I knew her, the time I ran through with her.@
+br
+` Come to think of it, a farewell is always there.@
+` In our case, our farewell was only early.@
+` Thinking of it that way, this was a really satisfying farewell.@
+` She was still alive, and she told… me… she's… still… happy…\
+
+`"…… No……!@ Not like this, this isn't----what I wanted……!"@
+br
+` ---Right.@
+br
+` More---
+` I wanted to be with her more.\
+` I wanted to talk with her more.@
+` I wanted to feel the warmth of her body more.@
+` More----I wanted to see her smile more.\
+
+` Always.@
+` Not like this, but always----I wanted to make her happy.@
+` But, she…
+` Smiling to the end, she left me behind, telling me to live.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+`"…… That stupid…… idiot……"@
+br
+` That was her final wish.@
+` With a smile, she told me no matter how hard it is----even if I have to deceive myself right now, until I can finally see it all as simply a memory, to keep looking forward to the future and live.@
+`"Tch…………!"@
+` There's no way I can do that.@
+` I---I don't have the slightest confidence to live like that.\
+
+`"------"@
+` Still, so that she can see a happy dream,
+` I have to at least grant her wish.\
+
+!w3000
+
+bg "image\bg\bg_06g.jpg",%type_crossfade_mid
+
+
+br
+`"………… Ah."@
+br
+` I realize the sun has long since sank.@
+` The crimson sky is painted over in a dark blue.@
+br
+` The dark night sky.@
+` The spiral wisps of clouds and a bright, white moon.@
+br
+` ---They are all that's left.@
+` But, an extremely beautiful memory.\
+
+`"--------"@
+br
+` *sigh*@
+` I exhale slowly, as if praying.@
+` She may no longer be here,
+` but I have to say what I forgot to say earlier.@
+br
+`"Goodbye.@ …… I had a lot of fun too."@
+br
+` Those extremely late words of farewell echo through the classroom.\
+
+
+bg "image\bg\ima_01.jpg",%type_crossfade_mid
+
+` Only the glass-like moon hangs in the night sky.@
+` The distant blue moon looking as if it would shatter if touched.@
+br
+` For a long time---until dawn, I keep looking up at it.\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+playstop
+
+
+resettimer
+waittimer 5000
+
+cl a,%type_waitdisp
+bg "image\word\fin.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+mov %rockending, 0
+
+gosub *ending
+
+return
