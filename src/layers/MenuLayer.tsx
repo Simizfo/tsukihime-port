@@ -5,8 +5,7 @@ import { IoClose } from "react-icons/io5"
 import { SCREEN, displayMode, settings } from "../utils/variables"
 import { quickLoad, quickSave } from "../utils/savestates"
 import { observe, unobserve } from "../utils/Observer"
-import { Link, useNavigate } from "react-router-dom"
-import script from "../utils/script"
+import { Link } from "react-router-dom"
 
 /**
  * TODO
@@ -16,7 +15,6 @@ import script from "../utils/script"
  * - charger
  */
 const MenuLayer = () => {
-  const navigate = useNavigate()
   const menuRef = useRef<HTMLDivElement>(null)
   const [display, setDisplay] = useState<boolean>(displayMode.menu)
   const [mute, setMute] = useState<boolean>(settings.volume.master == 0)
@@ -70,11 +68,6 @@ const MenuLayer = () => {
     displayMode.load = true
   }
 
-  const title = () => {
-    navigate(SCREEN.TITLE)
-    displayMode.menu = false
-  }
-
   const closeMenu = () => {
     displayMode.menu = false
   }
@@ -107,9 +100,9 @@ const MenuLayer = () => {
           <button onClick={loadMode}>
             Load
           </button>
-          <button onClick={title}>
+          <Link to={SCREEN.TITLE}>
             Title
-          </button>
+          </Link>
           <div className="action-icons">
             <button onClick={volume}>
               {mute ? <FaVolumeMute /> : <FaVolumeUp />}
