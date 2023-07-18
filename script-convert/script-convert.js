@@ -75,7 +75,6 @@ function writeScenes(scriptLines, dir) {
     let sceneId = '0';
     scriptLines.forEach((line) => {
         if (regex.test(line)) {
-            //console.log(sceneId, scene.length)
             fs.writeFileSync(`${dir}/scene${sceneId}.txt`, scene.join('\n'));
             scene = [];
             // Extract the next scene id
@@ -97,15 +96,10 @@ function main() {
         createDir(dir)
         let script = fs.readFileSync(file, 'utf8');
         let lines = script.split(/\r?\n/);
-        console.log(lines.length)
         lines = filterLines(lines, /^(?!;)/); // remove comments
-        console.log(lines.length)
         lines = filterLines(lines, /^(?!numalias )/); // remove num aliases
-        console.log(lines.length)
         lines = filterLines(lines, /^(?!effect )/); // remove effects aliases
-        console.log(lines.length)
         lines = extractStrAliasJson(lines, `stralias${suffix}.json`)
-        console.log(lines.length)
         lines = replacePipeByEllipsis(lines)
         writeScenes(lines, dir)
     }
