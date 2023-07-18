@@ -241,16 +241,18 @@ const saveStates = new Map<SaveStateId, SaveState>()
 export function createSaveState() {
   const ss: SaveState = {
     context: structuredClone(gameContext),
-    progress: structuredClone(progress)}
+    progress: structuredClone(progress)
+  }
   return ss
 }
+export const storeSaveState = saveStates.set.bind(saveStates)
 
-export function storeSaveState(id: SaveStateId, ss:SaveState) {
-  saveStates.set(id, ss)
-}
-
-export function listSaveStates(): IterableIterator<[SaveStateId, SaveState]> {
-  return saveStates.entries()
+export function storeLastSaveState(id: SaveStateId, history: Stack<Page>) {
+  const ss = history.top?.saveState;
+  if (!ss)
+    return false;
+  storeSaveState(id, ss);
+  return true
 }
 
 export function loadSaveState(ss: SaveStateId|SaveState, history: Stack<Page>) {
@@ -272,14 +274,15 @@ export function loadSaveState(ss: SaveStateId|SaveState, history: Stack<Page>) {
   return false
 }
 
-export function quickSave(history: Stack<Page>) {
-  if (history.top?.saveState)
-    storeSaveState('quick', history.top.saveState)
+export const quickSave = storeLastSaveState.bind(null, 'quick')
+export const quickLoad = loadSaveState.bind(null, 'quick')
+
+export function listSaveStates(): IterableIterator<[SaveStateId, SaveState]> {
+  return saveStates.entries()
 }
 
-export function quickLoad(history: Stack<Page>) {
-  loadSaveState('quick', history)
-}
+//_________________________________global save__________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 export function exportSave() {
   const content = JSON.stringify({
@@ -312,7 +315,10 @@ export async function loadSave(save:string|undefined=undefined) {
   }
 }
 
-//###   PUT IN GLOBAL FOR DEBUG   ###
+//##############################################################################
+//#                                   DEBUG                                    #
+//##############################################################################
+
 declare global {
   interface Window {
     [key: string]: any;
