@@ -11,15 +11,32 @@ const SavesLayout = ({variant}: Props) => {
 
   return (
     <div id="saves-layout">
-      {variant === "save" &&
-      <button className="saves-container create" onClick={handleSave}>
-        <FaPlusCircle />
-      </button>
-      }
+      <div className="saves">
+        {variant === "save" &&
+        <button className="save-container create" onClick={handleSave}>
+          <FaPlusCircle />
+        </button>
+        }
 
-      {/* TODO map */}
-      <div className="saves-container">
-        Saved on 2023-07-17 19:48
+        {/* TODO map */}
+        <button className="save-container">
+          <img src="./image_x2/event/his_e02b.webp" />
+          <div>
+            <div className="date">
+              <b>2023/07/17</b> 19:48
+            </div>
+            <div className="line">
+              test test test test test test test test test test test test test test test test test test test test test test test test test test test test test 
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <div className="deta">
+        <img src="./image_x2/event/his_e02b.webp" />
+
+        Affinités<br />
+        <button className="affinity">Export save</button>
       </div>
     </div>
   )

@@ -1,6 +1,5 @@
 @use 'transitions' as *;
 
-//import from asset font
 @font-face {
     font-family: 'Ubuntu';
     src: url('../assets/fonts/Ubuntu-Regular.ttf');
@@ -274,8 +273,8 @@ body {
         &.show {
             z-index: 100;
             opacity: 1;
-            background: #000000d6;
-            backdrop-filter: blur(2px);
+            background: rgba(8, 36, 90, 0.72);
+            backdrop-filter: blur(3px);
         }
 
         #saves-layout {
