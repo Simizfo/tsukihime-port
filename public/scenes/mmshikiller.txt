@@ -1,0 +1,376 @@
+playstop
+setwindow 18,18, 36,21, 17,17, 0, 4, 22, 1, 1, #aaaaaa, 0, 0, 639, 479
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\BG_58.JPG",%type_bcartain_mid
+
+` I've had difficulty sleeping these past few days.@ Even though everything has been settled with Roa, and turned out almost too well with Arcueid.@
+` I shouldn't be having such restless nights anymore.@ All I can think of is…\
+
+bg "image\bg\cmo_20.jpg",%type_lshutter_fst
+` That day underneath the tree…@ I asked Hisui to tell Kohaku to meet me there after lunch.@
+` At the appointed time, I was relaxing underneath the tree, doing my best to unwind from the recent havoc in my life.@
+` 
+` With the conclusion of that mess, my biggest stress left and I began to notice the inconsistencies in my life at the Tohno Mansion.@
+` I took a look through the old man's diary and pieced some other things together and--she was coming.@
+` 
+` I got up, brushing the grass off of my clothes, and stood to face Kohaku as she approached. She wore that bright, cheerful smile almost like a uniform.\
+
+ld c,":a;image\tachi\koha_t02b.jpg",%type_bcartain_fst
+`"Shiki-san, it's strange for you to call me all the way out here to tell me something.@ I hope this is some wonderful secret we'll have to keep out here by the tree."@
+` I held out the white ribbon that girl gave me so long ago.@
+ld c,":a;image\tachi\koha_t13.jpg",%type_crossfade_fst
+` 
+`"Ah, no… I don't think it should have to be anything like that.@ I just thought I should give you back your ribbon.@ I'm really sorry it took me so long to notice…@ It was really inconsiderate of me, but I was having a pretty bad week.@
+` I was always thinking of this ribbon and the girl by the window, and how I left her alone in that mansion.@
+` 
+` More than anything else, this ribbon was really why I came back to the mansion. I had to give it back to you."\
+
+ld c,":a;image\tachi\koha_t14.jpg",%type_crossfade_fst
+wave "wave\mmglass.ogg" 
+
+`"So…@ You knew that my entire life since that fateful day has been a cruel facade.@ And you want to shatter it.@ Just like that?"@
+`"Uh, no, I'm just giving you back a damn ribbon.@ Keep on smiling."@
+ld c,":a;image\tachi\koha_t19.jpg",%type_crossfade_fst
+` 
+`"I will attempt to do that.@ Please don't look at me."\
+
+cl c,%type_lshutter_fst
+` Kohaku walked slowly back to the house after that.@ I watched through the window as she opened one of the kitchen drawers and slammed her hand in it.
+wave se4
+` \
+
+ld c,":a;image\tachi\koha_t11.jpg",%type_lshutter_fst
+` Then she walked back out to me without saying a word.@
+`"I'm sorry Shiki-san, I would like to continue our conversation but… I seem to have hurt my hand somehow.@ I should go repair the doll now."\
+
+cl c,%type_crossfade_fst
+` Kohaku slithered off to the house after that.@
+` 
+` I thought she would have been happy that I finally remembered who she was.@ I kinda knew what she'd been through from reading that bastard's diary.@
+` I still like her, of course, she's a nice kid…@ I guess I'm really a little dense when it comes to women.\
+
+` Still, that smile she gave me before she left stirred something in the back of my head I hadn't felt since the last fight with SHIKI.@ That rushing of blood and my throat starting to dry…@ Just like when my blood screams at me to silence some inhuman demon.\
+
+bg "image\bg\cmo_05b.jpg",%type_lshutter_fst
+
+` Oh well, I won't be too bothered by it.@ Even though she gave me such a bone-chilling smile, Kohaku is such a nice and happy person.@ I'm sure she'll be alright, and today's weather is so good.\
+` 
+` 
+` 
+` 
+` 
+` 
+` Mmm. I should go out with Arcueid tonight, maybe go see a vampire movie.\
+
+bg "image\bg\BG_34B.JPG",%type_lshutter_slw
+play "*3"
+` Dinner evolved into a drinking party that night.@
+ld l,":a;image\tachi\aki_t26.jpg",%type_lshutter_fst
+` So rather than retiring to my room early and sneaking out, I enjoyed the evening with Akiha taking one shot after another.@
+` 
+ld r,":a;image\tachi\his_t11.jpg",%type_rshutter_fst
+` Hisui, nursing a single glass of wine.@
+` 
+ld c,":a;image\tachi\koha_t03.jpg",%type_tcartain_fst
+` And Kohaku, serving us.\
+
+cl l,%type_rshutter_fst
+cl r,%type_lshutter_fst
+
+`"Shiki-san, you shouldn't be so modest in front of your dear family like this.@ Please have another drink."@
+`"Ahh, no Kohaku-san, please.@ My doctor told me to be careful when I'm drinking.@ I've already had much more than I usually do."@
+ld c, ":a;image\tachi\koha_t04.jpg",%type_crossfade_fst
+` 
+`"Shiki-san! I talked with your doctor at length about your condition.@ I've also been carefully monitoring your intake today, so feel at ease and drink until I say you can stop."\
+
+cl c,%type_lshutter_mid
+` I am scared of getting drunk, but I would feel worse denying such a straightforward request.@ I acquiesce and drink much more than I usually would.@
+` 
+` Hisui curls up on the sofa shortly after finishing her glass of wine.@ Kohaku takes Akiha once she passes out, and I end up innocently taking Hisui back to my room.\
+
+bg "image\bg\bg_34a.jpg",%type_lshutter_slw
+` The next morning, after this totally moe-moe talk with Hisui, I head to the sitting room.@ For once, Akiha is nowhere to be found.@
+ld c,":a;image\tachi\koha_t01a.jpg",%type_lshutter_fst
+` 
+`"Good-morning, Shiki-san.@ Did you have fun last night?"@
+` 
+`"Hm, yeah, mostly.@ It was a little scary, but I guess we all ended up having fun, so it's alright.@ Where's Akiha?"@
+ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+` 
+`"After such a long night, Akiha couldn't help but sleep in this morning.@ I'm sorry you can't see her, Shiki-san."\
+
+ld c,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
+`"Hee hee, Shiki-san.@ Did anything fun happen last night with Hisui after the party?"@
+` 
+`"Um, no. She was unconscious the whole time."@
+` I honestly reply, but… maybe that was the wrong way to say it.@ I think she's getting the wrong idea.\
+
+ld c,":a;image\tachi\koha_t04.jpg",%type_crossfade_fst
+`"Come now, Shiki-san.@ I know a FILTHY MALE took my pure DEAR SISTER to his room and spent HOURS alone with her."@
+` 
+`"Uh, Kohaku?"@
+ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+` Kohaku continued grinning, her eyes a little wider than normal.@
+` 
+`"You know what, Shiki?@ Maybe I should make you an extra special breakfast for being so nice to Hisui-chan."\
+
+playstop
+` I gulped air.@
+` Something inside me was telling me either to run, now; or to cut out 'its' throat.@
+`"Um… No thanks, Kohaku.@ I'm kinda late so I should just hurry to get to class."@
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+` 
+` She talked right over me when I started to object.@ "Well then, why don't you just wait in the sitting room for a moment and I'll make you a quick cup of tea to help wake you up."@
+wave se0
+` My fingers twitched.@ For no apparent reason, I wished I hadn't left my knife on my nightstand.\
+
+`"I'm… sorry, Kohaku-san.@ I really must be going."@
+ld c,":a;image\tachi\koha_t09.jpg",%type_crossfade_fst
+` She went blank for a second, then smiled.@
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+` 
+`"O--kaay! Yes!@ Oh, before I forget, Akiha-sama said she wanted to see you in the garden, though."@
+cl c,%type_tcartain_fst
+` Before I could respond, she darted past me, back towards her side of the mansion, as if on some sort of mission.\
+
+bg "image\bg\bg_33a.jpg",%type_lshutter_mid
+wait 500
+bg "image\bg\bg_42a.jpg",%type_lshutter_fst
+` I went to the garden only to find it empty.@ I wasn't that shocked, didn't Kohaku say that Akiha was sleeping in…?@ I turned back toward the mansion to see Hisui bounding down the steps, with my bag in her hand.@
+ld c,":a;image\tachi\his_t19.jpg",%type_lshutter_fst
+`"Shiki-sa---ma. You almost forgot your bag!"@
+ld c,":a;image\tachi\his_t16b.jpg",%type_crossfade_fst
+` 
+` I smiled awkwardly and took the bag from her.@
+`"Thanks, Hisui. You're the greatest."\
+
+cl c,%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+` The day went well until third period when I had to get a history book out of my bag.@
+` 
+` I couldn't remember filling my bag with syringes and pictures of my old man with the eyes cut out…@ I didn't feel any immediate effects, so I just decided to wait it out and stay at school.@
+` 
+` Kohaku is such a kidder, though.@ Whenever I have trouble sleeping, she always brings me medication and sings quiet songs in my ear until I fall asleep.\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+wait 500
+wave se4
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+wait 250
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+wait 250
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+wait 2000
+bg "image\bg\BG_40a.JPG",%type_bcartain_mid
+` I've had difficulty sleeping these past few days.@ Even though everything has been settled with Roa, and turned out almost too well with Arcueid.@
+` I shouldn't be having such restless nights anymore.@
+` 
+` ……I can't remember the last time I saw Hisui or Akiha.\
+
+bg "image\bg\BG_34a.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\koha_t01a.jpg",%type_lshutter_fst
+` Automatically, I came to the sitting room, and the only person inside is Kohaku.@
+`"Good morning, Kohaku. Akiha is still feeling bad?"@
+` 
+`"Yes, I'm sorry to say she had so much fun with the party last night that you just can't see her this morning."@
+` The party…@ Yeah, I guess it was last night.@ I have a bit of a hangover, for that matter.\
+
+ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+`"Shiki-san, it's time for you to eat breakfast before you go to school.@ I've already set it out for you in the dining room."@
+`"Ah. Right, thanks, Kohaku.@ You're the greatest."@
+ld c,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
+` 
+`"No no, you're welcome……"\
+
+cl c,%type_crossfade_slw
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+wait 8000
+bg "image\bg\ima_11.jpg",%type_lshutter_fst
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+wait 500
+
+bg "image\bg\BG_06b.jpg",%type_bcartain_mid
+` After an uneventful day at school, I packed up and headed for home.\
+bg "image\bg\BG_33b.jpg",%type_crossfade_fst
+` I am pretty thirsty so I head to the kitchen after dropping my bag off in my room.\
+
+bg "image\bg\BG_35.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+` I enter the kitchen to find her in the midst of preparing dinner.@
+`"Good afternoon, Kohaku."@
+` 
+`"Ah, welcome home, Shiki-san.@ Dinner will be ready soon."@
+`"Thanks, I just came in to grab a drink before I started doing my homework."\
+
+cl c,%type_crossfade_fst
+` I walked over to the fridge and got a soda, popped the top and took a sip before turning back around.@
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+`"Hey, Kohaku-san, remember how we always used to play around in the garden, you, Akiha and myself?@ Man. I sure wish Hisui could have come down and played with us."@
+` 
+`"Oh, well, I always remembered just watching you."@ She smiled.\
+
+`"Wow.@ Man…@ Okay, that is an odd response…@ did you mean anything by that?@ Oh- wait, hey, remember the time that the old man-"@
+` She vehemently shook her head, and went back to chopping up vaguely-phallic carrots as if she were a force possessed.@
+` 
+`"I'm sorry, Shiki-san, we don't talk about Makihisa-sama much around here."@ I was honestly confused.@
+` 
+`"But-"@
+` She set the knife down and began to shake her finger at me, an expression of concern spreading across her face…\
+ld c,":a;image\tachi\koha_t04.jpg",%type_crossfade_fst
+` Unfortunately, it looked as if she had cut herself pretty bad putting the knife down.@ I closed my eyes and felt the crimson droplets spray across my face as she said…\
+
+cl c,%type_crossfade_fst
+bg "image\bg\ima_13b.jpg",%type_crossfade_fst
+` Something…@ I couldn't understand.@ The red drops, filling my vision, turning my mind to a snowy white field in the dead of winter.@
+bg "image\bg\ima_13.jpg",%type_crossfade_slw
+\
+bg "image\bg\BG_35.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\koha_t07.jpg",%type_crossfade_fst
+` I snapped back to attention.@ Kohaku-san was staring at her finger as blood slowly pulsed out of the wound.@
+`"It's okay, right?@ I mean, if it's not my hand, and it just belongs to a doll, it doesn't hurt, right?@ That's right.@ This hand is not mine, it is an object that belongs to a doll."\
+
+` I squeezed my eyes shut and quickly wiped the specks of blood off of the lenses of my glasses.@ I was, for the first time, truly speechless.@
+` 
+` What the ---- had she just said?@
+` Honestly, that was like…@ I remembered back to when I was in middle school…@ A lunatic had escaped from the asylum in the neighboring province.@
+` He appeared on the street one night, covered in rags and newspaper scraps, screaming at the top of his lungs about how aliens implanted his brain into a different body, and how it had made him immortal.@
+` 
+` This was, well, completely different, but it still gave me the same vibe.\
+
+`"Maybe…@ you should…@ go put a bandage on it?"@
+` She looked up, grinning in a way that I instantly didn't like.@
+`"Huh?@ Oh…@ Of course.@ I will go to repair the doll now.@ Thank you, Shiki-san.@ You were always so kind, I am glad that I'm speaking to you now, at least."\
+
+cl c,%type_crossfade_slw
+
+` I was honestly confused.@ My veins began to pump ice-water, and I was suddenly very worried about Kohaku.@ But just then, as she turned to head out into the hall, she tripped.@
+` 
+` That beautiful ass, delicately covered by that kimono, quickly turned my blood to fire.@
+` 
+` Yeah.@
+` That's why I was here…\
+
+`"Kohaku-san, you're pretty alright, you know that?"@ I suddenly wanted a cigarette.@ She grinned absentmindedly, got up and skittered out of the room.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+wait 1000
+bg "image\bg\ima_11.jpg",%type_lshutter_fst
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+wait 500
+bg "image\bg\bg_29b.jpg",%type_crossfade_mid
+ld c,":a;image\tachi\stk_t08.jpg",%type_crossfade_mid
+
+play "*4"
+` Yumizuka slapped my hand aside and my knife skittered across the park.@ She cornered me, her bloodshot eyes glittering in the night.@
+`"Finally, Shiki.@ You'll be like me!"@
+` 
+` I gasped and prepared for the inevitable…@
+cl c,%type_bcartain_fst
+playstop
+wave "wave\chainsaw.ogg"
+` Until the sound of a motor cut into my senses like a knife.\
+wave se4
+` 
+` Something hit me with a thud and collapsed at my feet.@
+` 
+`I squeezed open an eye to see Yumizuka's torso lying in front of me, her legs having… stopped a meter back.@
+` 
+`"What in hell just happened!?"@
+` 
+` Suddenly, I heard a giggle.@ "Kohaku-san?"\
+
+ld c,":a;image\tachi\koha_t01E.jpg",%type_crossfade_fst
+
+` Kohaku-san came out from behind a tree, the motorized hedge trimmer in her hands.@
+`"Akiha-sama asked me to come see why you were out so late, Shiki-san.@ Is everything okay?"@
+`
+` She gave me a cheerful smile, the blood spatters covering half her face and turning her kimono into a gory display of organs and bonechips.\
+
+`"Damn, Kohaku.@ You're like…@ Like some sort of porcelain war god."@
+ld c,":a;image\tachi\koha_t01E1.jpg",%type_crossfade_fst
+` 
+` She tilted her head and gave me the same pure, serene smile that she had for every occasion.@
+`"Thank you, Shiki-san!@ May we return to the mansion, though?@ I must sharpen the blades on this trimmer for tomorrow…"\
+
+`"I- uh… thanks for killing that chick for me.@ I don't think it will be all that bad if you miss trimming the hedges for a week."@
+` 
+` 
+` I was lying.@
+` I knew Akiha would be PISSED if those shrubberies were out of order, but I owed Kohaku one and would stand up for her.\
+`"Thank you, Shiki-san.@ You were always so kind."\
+
+cl c,%type_crossfade_slw
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+wait 1000
+bg "image\bg\ima_11.jpg",%type_lshutter_fst
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+wait 500
+
+bg "image\bg\bg_41.jpg",%type_crossfade_mid
+ld c,":a;image\tachi\his_t25.jpg",%type_crossfade_fst
+`"What are you doing, Shiki-sama!?"@
+` 
+`"We already went over this, Hisui.@ Uh, and please don't call me -sama.@ Well, unless we're… heh heh, you know."@
+` I blushed and continued putting on the tie.@
+` 
+`"Anyways, I'm going to try to bring back Koha--er, Nanaya's memories by making her think about the past.@ How do I look?"\
+ld c,":a;image\tachi\his_t21b.jpg",%type_crossfade_fst
+` Hisui-san bit her lip and balled her hands into fists.@ "You look very much like Makihisa-sama, Shiki-san, but…@ This is a very mean thing to do!"@
+` 
+` I winked.@ "Nonsense.@ We'll bring Kohaku back, Hisui.@ Now put on this kimono and ribbon, we're going to do a little roleplaying when we get into her room."\
+
+cl c,%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+wait 750
+bg "image\bg\ima_14.jpg",%type_crossfade_fst
+wave se5
+wait 250
+bg "image\bg\ima_12.jpg",%type_crossfade_fst
+wave se4
+wait 250
+bg "image\bg\bg_51.jpg",%type_crossfade_slw
+
+` I woke up in the hospital seven days later.@ Kohaku, er, Nanaya, claimed it was a nervous impulse.@ I didn't think anyone could throw a dinner fork across a room with that much accuracy.@
+` 
+` 
+` I felt my new eye-patch and sighed.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+wait 1000
+bg "image\bg\ima_11.jpg",%type_lshutter_fst
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+wait 500
+
+bg "image\bg\bg_40d.jpg",%type_crossfade_mid
+
+`"Kohaku-san, why are you dressed up as Hisui, staplegunning me to my bed with my pyjamas?"@
+ld c,":a;image\tachi\his_t29.jpg",%type_crossfade_fst
+` 
+` Kohaku-san merely stared at me blankly.@ "I'm not Kohaku, I'm Hisui, Shiki-sama!@ I'm somewhat offended that you don't recogni--@
+`   …wait, but I don't tell you when I'm mad, do I?@ Oh bother, you made me break character, Shiki-san!"@
+` 
+` A mild grin broke out over her face, somehow out of place with the French maid uniform.\
+
+`"Uh, Kohaku-san, you're horribly, horribly insane, aren't you?"@
+` 
+` She nodded her head, each shake punctuated by a 'pock' of the staple gun.@
+`"Why didn't I… notice this before?"@
+` 
+` Kohaku-san stopped at my question, tilting her head and looking intently at the ceiling for a second.@
+`"Maybe it's because you're so daft, Shiki-san!@ That's why I like you."@
+` She giggled and reached into a black doctor's bag.@ I began to quietly cry.\
+
+` 
+`"Hisui-chan is so strange around you, I just can't gauge what I should be like!@ That's why, I'm going to dissect your brain!@ That way, I'll surely know how a person's brain works!"\
+
+cl c,%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+` The next day she raked all of the leaves in the garden into a pile on the patio and immolated herself on it.@
+` 
+` Honestly, if I had feelings about her, I guess I would've been crushed.@ But… she was really starting to creep me out, so it was probably for the best.\
+
+`"Oh, Arc, remind me to call the locksmith on the way back from school.@ Hisui locked herself in her room again while sobbing uncontrollably this morning, and I don't want to keep killing the locks."\
+bg "image\bg\ima_11.jpg",%type_lshutter_fst
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+wait 1500
+return

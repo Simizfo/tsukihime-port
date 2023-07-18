@@ -1,0 +1,87 @@
+stop
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+setwindow 18,18, 36,21, 17,17, 0, 4, 22, 1, 1, #aaaaaa, 0, 0, 639, 479
+bg "image\bg\bg_06a.jpg",%type_crossfade_mid
+textoff
+wave "wave\SE_BELL.WAV"
+play "*3"
+ld c,":a;image\tachi\osiete.png",%type_lcartain_mid
+wait 1000
+cl c,%type_lcartain_mid
+ld r,":a;image\tachi\CEL_X01.PNG",%type_tshutter_mid
+texton
+` Joyeux Noel!@
+` This corner is for the poor Tohno-kun, who just cannot let go of what's been happening recently.@
+` It is time for "Teach me, Ciel-sensei!"@
+br
+` …… Oh, no.@ This won't do at all, Tohno-kun.@
+` Don't you know what day it is?@ It is December 25th, Christmas Day!@
+` We miss you too, but today you should be spending time with family and friends, celebrating Christmas.\
+ld l,":a;image\tachi\ark_t30.jpg",%type_crossfade_fst
+`"Nyaa, what is this?@ Shiki should go playing with me instead."@
+br
+` Oh……@ Happy birthday, Arcueid-san.@
+`"There's nothing happy if you keep thieving Shiki away!"\
+ld l,":a;image\tachi\nero_t02a.jpg",%type_lshutter_mid
+`"A joyous day of birth, Princess of the True Ancestors."@
+br
+` Ah, Professor Nrvnqsr.@ Welcome to this special class.@ We were just discussing the merits of celebrating a national holiday with friends and family.@
+`"Celebration is merely a byproduct of a need for companionship and shared emotion.@ If there is no such need, a celebration is not necessary."@
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+`"Nonsense!@ It's my birthday so Shiki should take me out on a date or something!"@
+br
+` He wouldn't do that, you're too old for him now.@
+ld l,":a;image\tachi\ark_t31b.jpg",%type_crossfade_fst
+repaint
+ld l,":a;image\tachi\ark_t31a.jpg",%type_crossfade_fst
+repaint
+ld l,":a;image\tachi\ark_t31b.jpg",%type_crossfade_fst
+`"Be quiet!@ Crazy woman!@ Four eyes!@ Stupid hat!"\
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+wave se9
+quakey 1,50
+!w1000
+ld c,":a;image\tachi\nero_t02a.jpg",%type_rcartain_fst
+`"…………………"@
+`"Unyaaaaaaaaa she's attacking!@ Protect me!"@
+ld r,":a;image\tachi\CEL_X01.PNG",%type_crossfade_fst
+br
+` Denied.@ Come out and pay attention to class.@
+cl r,%type_lshutter_mid
+ld l,":a;image\tachi\ark_t30.jpg",%type_rshutter_mid
+`"………… Go to The Church if you like Christmas so much……"\
+cl a,%type_crossfade_mid
+
+ld l,":a;image\tachi\ari_t01.jpg",%type_tshutter_mid
+`"Ha, you're popular as always, Tohno.@ Shouldn't you be at home, keeping your beautiful sister company?"@
+ld r,":a;image\tachi\CEL_X01.PNG",%type_tshutter_mid
+` Huh……?@ Ah, Merry Christmas, Inui-kun.@ How did you get here?@
+ld l,":a;image\tachi\ari_t05.jpg",%type_crossfade_fst
+`"Merry Christmas, Senpai.@ The door was open, so I thought I'd see what you guys were up to and…… Whoa!\
+ld r,":a;image\tachi\nero_t02a.jpg",%type_rshutter_mid
+ld l,":a;image\tachi\ari_t04.jpg",%type_crossfade_mid
+` H……… Huge……"@
+cl a,%type_tshutter_fst
+ld c,":a;image\tachi\nero_t02a.jpg",%type_tshutter_fst
+br
+`"Well then, I shall be on my way.@ Good health to you, Princess.@ May we meet again soon.\
+
+cl a,%type_crossfade_fst
+ld r,":a;image\tachi\CEL_X01.PNG",%type_rcartain_fst
+` Very well then, that should be enough for today's lesson.@ Tohno-kun, consider what I said.@ Today should be a special day, and if it isn't, you should be doing something to change that.@
+ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+`"…… They should do something to change your violent nature."@
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+wave se9
+quakey 1,100
+!w500
+ld c,":a;image\tachi\CEL_X01.PNG",%type_rcartain_fst
+
+` Class dismissed.@ Merry Christmas, Tohno-kun!\
+cl a,%type_lshutter_fst
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+stop
+play "*8"
+return

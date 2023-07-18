@@ -1,0 +1,158 @@
+playstop
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+bg "image\bg\cmo_20.jpg",%type_bcartain_mid
+play "*2"
+
+` I finally decided that I would return the ribbon.@ It took weeks after settling things with Arcueid and Ciel to weave my way through all the lies being told at the Tohno mansion.@
+` 
+` I think I finally, really recovered all of my childhood memories, so I'm ready to give this ribbon back to that very special girl.\
+` I told Akiha to meet me underneath the tree.@
+
+ld c,":a;image\tachi\aki_t08b.jpg",%type_lshutter_fst
+
+`"What is it Nii-san?@ You left that strange note to meet you out here underneath this tree, didn't you?"@
+`"That's right…@ Akiha, I'm sorry it took me so long to notice, but I finally realized everything… I should give this back to you.@ This is really why I came back."\
+` I'm really laying it on pretty thick with that line, but it seemed pretty good to me while I was rehearsing most of the morning.\
+
+playstop
+ld c,":a;image\tachi\aki_t15b.jpg",%type_crossfade_fst
+wave "wave\mmwind.ogg"
+
+`"…"@
+`"……"@
+
+ld c,":a;image\tachi\aki_t20b.jpg",%type_crossfade_fst
+
+`"……………"\
+`"You…@ you…@
+` She'll kill us both for this.@ I'm… I'm going to start staying at the school's dorm again.@ I suggest you stay with that idiot friend of yours…"@
+
+ld c,":a;image\tachi\aki_t23b.jpg",%type_crossfade_fst
+` 
+`"I won't expect to see you again, Nii-san.@ You really brought this on yourself though."\
+
+cl c,%type_rshutter_fst
+
+` I don't really understand what she's saying.@ I would've thought she'd be happy I returned that stupid ribbon.@ Why would you give a little boy a ribbon anyway?@ Was I gonna put it on my pink mechazoid or what?@
+` 
+` Oh well, I should be getting to school too.\
+
+bg "image\bg\bg_06b.jpg",%type_lshutter_mid
+play "*3"
+
+` School is pretty uneventful.@ I manage to avoid a confrontation with Arcueid and Ciel, so I just go straight home.\
+
+bg "image\bg\bg_33b.jpg",%type_lshutter_mid
+
+` Hisui is waiting for me just like normal when I return home.@
+
+ld c,":a;image\tachi\his_t16.jpg",%type_lshutter_mid
+
+`"Welcome home, Shiki-san."@
+
+ld c,":a;image\tachi\his_t18.jpg",%type_crossfade_fst
+
+`"Yeah, I'm home, Hisu--"@
+` 
+` I step over the threshold into the lobby and trip.@ I throw out my free hand to stop my fall, but it only finds purchase on a child's rollerskate.@
+` Why is this here?@ It's like an American cartoon.@
+` 
+` I can't stop myself and fall face-first into a puddle of bleach.\
+
+ld c,":a;image\tachi\his_t19.jpg",%type_crossfade_fst
+
+`"Oh, Shiki-sama.@ What a horrible fall you had.@ Are you hurt?"@
+` 
+` I cough, choke, and almost inhale a mouthful of bleach before I can right my body.@
+`"Ow…"@
+
+ld c,":a;image\tachi\his_t16.jpg",%type_crossfade_fst
+
+`"I am deeply sorry, Shiki-sama."@
+ld c,":a;image\tachi\his_t19.jpg",%type_crossfade_fst
+`"I was cleaning the lobby just before you came home.@ I cannot apologize enough for this error."\
+
+`"Ah, no, it's my fault for spacing out all the time.@ I shouldn't have tripped.@ I hope I didn't get in your way."@
+` I am standing again and holding my nose.@ The front of my uniform is already turning white, and it feels like my face is on fire.@ Can you really clean house with this?\
+
+ld c,":a;image\tachi\his_t18.jpg",%type_crossfade_fst
+
+`"I will be able to recover my work somehow.@ Please retire to your room until I call you to dinner this evening.@ I do not want you getting in the way any more today."@
+` 
+`  That was really cold, even for Hisui, but I feel so bad that I just pick up my now white bag and go up to my room.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+` I'm finally able to peacefully eat a meal in the mansion.@ With Akiha staying at the dorm, I don't have to worry about table manners or any of that stuff that I'm not too good at.@
+` Dinner is good, and Hisui serves me as normal.\
+bg "image\bg\bg_40c.jpg",%type_tcartain_fst
+ld c,":a;image\tachi\his_t18.jpg",%type_lshutter_fst
+`"Shiki-sama, would you like another drink?"@
+` 
+`"Thanks, Hisui.@ It doesn't seem to matter how much water I drink, I'm still thirsty."@
+ld c,":a;image\tachi\his_t19.jpg",%type_crossfade_fst
+`"It certainly is mysterious, Shiki-sama."\
+playstop
+` At that, my body decides it is time to go to sleep, and I can barely manage to fall onto my bed.\
+cl c,%type_crossfade_slw
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+wait 500
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+wait 2000
+bg "image\bg\ima_02.jpg",%type_crossfade_mid
+` I see a dream…@
+` That grassy clearing in a forest in the dark of night.@ The light of the full moon that cannot pierce the canopy of the trees' boughs.@
+` 
+` In that clearing, there are hundreds of men: samurai, ninja, farmers, priests.@ They have familiar bone structures, or eyes, or ears.@ And a noise.@ A noise so loud I think my head might break.\
+` Laughter.@ Laughing.@ They're all… laughing at something incredibly funny.@ They can't stop.@ It's maddening.@ They're laughing… at me?\
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+wait 250
+wave se4
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+wait 250
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+wait 250
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+` I'm tied down to something.@ My head is restrained -- I cannot move a single inch.@
+` 
+` I groan, and open my eyes to see Kohaku.\
+ld c,":a;image\tachi\koha_t02b.jpg",%type_lshutter_fst
+`"You're awake? Shiki-san, welcome to…"@ She pauses for effect.@ "The Magical Tohno Underground Kingdom!"@
+` 
+` ………@
+` 
+` I sit silently for a few seconds.@ "Uh, what? That isn't in this game."@
+` 
+` Kohaku-san stops smiling and looks off into space.\
+`"You're so bad, Shiki-san.@ You can't even suspend disbelief for a minute!@ --I was going to catch Akiha-sama too, but she was too smart.@ Still, she has to come back to the house some time.@
+` 
+` And when she does, there's no way she can evade all of my traps!"\
+` I am awestruck for a second.@ "T-traps?"@
+` 
+` She grins, wholly without malice.@ Suddenly, I realize I couldn't see any emotion in it at all.@
+`"Of course.@ Pit traps, snare traps…@ aaaaaanyways…"@ She drawles the last word out like a bored schoolkid.\
+`"I've got you, Shiki-san!@ And since Akiha-sama ruined my plans by not being present, there's only one thing to do!"@
+` 
+` She runs her bare fingers across my uniform, her hands, like albino spiders, nimbly opening my shirt and exposing my chest.@ My heart begins to beat quicker with that gentle touch, my mind frozen with a mix of confusion and fear.\
+cl c,%type_crossfade_fst
+bg "image\event\mmpaint.jpg",%type_crossfade_slw
+`"Which one do you want?@ It's a love potion and an aphrodesiac.@ One for you, and one for me!@ We'll be happy forever!"@
+` 
+` 
+` I sit, jaw agape, for several long seconds.@ "Kohaku-san, you know there's no such thing as a love potion!@ Besides…"@ My mind races.@
+` 
+` Arcueid, Yumizuka, even Senpai…@ How could I live with so many girls without my almost heroic lack of interest!?\
+` She cuts me off.@ "Fine, Shiki-san.@ You called my bluff, they're just filled with paint.@ Ohhhh well.@ I call dibs on the pink one!@ You first!"@
+` 
+` A needle point presses against my chest, over my heart.@
+` 
+` 
+` My mind@
+`          swept clean of thought@
+`  burns with fear.\
+wave se4
+`The needle penetrates.@ This is the end of Tohno Shiki.\
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+return

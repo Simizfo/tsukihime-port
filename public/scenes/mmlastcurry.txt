@@ -1,0 +1,100 @@
+play "*4"
+bg "image\bg\bg_02a.jpg",%type_lshutter_mid
+ld c,":a;image\tachi\cel_t06c.jpg",%type_crossfade_fst
+`"-------"@
+` A chill runs through me.@
+` The air suddenly becomes saturated with a murderous intent.@
+`"Wha--What are you, saying, Senpai……!?"@
+br
+`"…… I can't spend any more time with you.@ Please just die already."\
+
+` ---I fall forward.@
+br
+` I felt from before that if I turned and ran, my heart would be shot from behind.@
+br
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_02a.jpg",%type_nowaitdisp
+wave se11
+`"Hya----!"@
+` Her sword flies past my head.@
+` It seems really slow.@
+` I evade her attack, move right beside her, and----\
+
+bg "image\bg\ima_14.jpg",%type_lshutter_fst
+wave se5
+`"-----Gah!"@
+` The instant I tried to run forward, Senpai's movement changed drastically.@
+` In an instant, with a speed that makes her seem to have literally disappeared, she swings her weapon horizontally.\
+
+` The rush of the wind fills my ears---and for some reason, I am standing many meters away from her.@
+bg "image\bg\bg_02a.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\cel_t06c.jpg",%type_crossfade_fst
+`"-------"@
+` She clicks her tongue and glares at me.@
+cl c,%type_crossfade_fst
+
+` Instantly,
+` her body, explodes.\
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+br
+` ----No, that's not right.@
+` She crouches down low to the ground---almost like a lizard, and runs up towards me in a flash.@
+br
+` She closes the distance of six meters in a flash.\
+
+` She's not in my vision at all.@
+` Her whole body is below my knee-height, and explodes upward from there.@
+br
+` A thud.@
+br
+` From right beneath me, her bayonet accurately shoots directly for my throat.\
+
+bg "image\bg\bg_02a.jpg",%type_lshutter_fst
+wave se4
+quakey 4,500
+wave se9
+`"Ga----ah!"@
+` I gasp.@
+` Pain, is there pain?@ Yes, I can still feel pain.@
+br
+`"Ha-----ugh."@
+` Conscious, am I conscious?@ Alright, I still have that.@
+br
+`"A, aaaaaa…………!"@
+` My body.@ My body----is not okay.\
+
+bg "image\bg\ima_13.jpg",%type_lshutter_fst
+` A dripping sound.@
+` It's coming from my left shoulder.@
+` Looking at it, it's already a waterfall of blood, which pours straight down.@
+` Just now.@
+` The bayonet didn't hit my throat, but my left shoulder.\
+
+bg "image\bg\bg_02a.jpg",%type_lshutter_fst
+
+`"A, Aa, Aaaaaaah!"@
+` It hurts.@
+` It hurts so much the word pain doesn't come close to describing it.@
+br
+`"Haa, aaa, aggggg------!"@
+` But, I'm alive.@
+` Still, I'm alive.\
+
+` My body.@ My body is away from her again.\
+
+ld c,":a;image\tachi\cel_t06c.jpg",%type_crossfade_fst
+cl c,%type_crossfade_fst
+stop
+` Her figure plunges low again.@
+br
+` ---She's coming.@
+br
+` Even though I know she's going to run towards me again, it's hard for me to even see her.\
+
+` In my last living moment I can hear her scream……@
+br
+br
+`"You'll pay for eating that last helping of Curry!!"\
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+!w1500
+return

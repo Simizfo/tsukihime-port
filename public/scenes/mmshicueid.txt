@@ -1,0 +1,101 @@
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_25a.jpg",%type_crossfade_mid
+wave se0
+`"Gah----"@
+` Splitting headache.@ I can't think……@ 
+` My vision blurs.@ I can see the "lines" everywhere.@ My head feels like it will explode.@
+br
+` …………………………………@
+` Looking all around me like a madman, I wander through the city.\
+
+bg "image\bg\bg_30a.jpg",%type_rcartain_mid
+wave se0
+` ………@
+bg "image\bg\bg_24a.jpg",%type_rcartain_mid
+wave se0
+` ………………@
+bg "image\bg\bg_23a.jpg",%type_rcartain_mid
+wave se0
+`"Agh------@ Wh… where are they?"@
+` I check my pockets again, but I can't find them.@
+`"Crap……@ I can't stand this much longer!"@
+br
+` I stagger through the streets like a drunken fool.@ I can hear people laughing at me, but I ignore them, focusing on finding my glasses.@
+bg "image\bg\bg_27a.jpg",%type_lshutter_mid
+br
+br
+`"Shit……@ How did I lose something that important?"\
+
+bg "image\bg\bg_28a.jpg",%type_lcartain_mid
+` ………………………\
+bg "image\bg\bg_29a.jpg",%type_lcartain_mid
+
+` It looks like I somehow ended up in the park.@
+`"……… Was I even here today?"@
+` The pain still attacks me.@
+` It doesn't look like it'll stop.@
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+br
+br
+` Until I see her.\
+
+wave se0
+br
+` ---Thump.@
+br
+` My pulse races.@
+` My veins and arteries spring into action.@
+` My nerves split, one after the other.@ My spinal cord goes berserk, as if it is about to leap out of my back.\
+
+wave se0
+br
+` ----Thump.@
+br
+` I-I can't breathe.@
+` My fingertips tremble.@ The blood isn't reaching them.@
+` My whole body feels cold, like I'm freezing to death.\
+
+wave se0
+br
+` ----THUMP.@
+br
+` My heart beats in a rush, urging me to hurry up.@
+`"Ah--ah!"@
+` I can stand it no longer and unintelligible words escape my mouth.\
+
+wave se0
+` -----I can't think.@ That woman……@
+br
+br
+` Golden hair and red eyes.@
+` Her clothes are white, as if they are a symbol of herself.@
+br
+` And on her face……\
+wait 2000
+bg "image\event\egg_e01.jpg",%type_rcartain_slw
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+`                               "Konnichiwa."
+click
+textclear
+playstop
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+return

@@ -1,0 +1,123 @@
+playstop
+bg "image\bg\bg_41.jpg",%type_crossfade_slw
+waveloop se10
+
+` So I took to keeping a diary like my old man.@
+` I cut a few snippets out of my old man's to give it some character and a starting point.@
+` 
+` January 4th, 199X --
+` 
+` Had a rather heavy case of dementia today, so I planted my stiffy inside Kohaku and watched some TV.@ She didn't seem that happy about it… or happy about anything really.@ Oh well.@
+` Oh!@ 3rd quarter results came out today, looks like I saved a mint by pulling out of Yakazuki Manufacturing.
+` 
+`   --Makihisa\
+` January 7th, 199X --
+` 
+` She sure loves scribbling in that diary of hers.@ Also, had to hide all of the letter openers today.@ She keeps looking at them funny.
+` 
+`   --Makihisa\
+bg "image\bg\cmo_15.jpg",%type_crossfade_slw
+` November 3rd, 200X --
+` 
+` Had another alley dream last night.@ Remember to tell gardener to kill Kohaku's 'flowerbed' and salt the earth.@
+` 
+` Possibly related: There was a murder in town last night.
+` 
+`   --Shiki\
+` November 4th, 200X --
+` 
+` Break from school today.@ Gardener was mowing, so I sat back in my room and watched Kohaku gather up the grass clippings for compost.@ Was going fine until the lawnmower swerved around one of those decorative stones, right into where Kohaku was raking…@
+` 
+` I heard the buzzing sound from where I was; mentally prepared for the worst.@
+` 
+` The gardener jumped off of the lawnmower, screaming and hollering.@ Kohaku merely dropped the rake and stared at the stump where her foot had been, then balanced unsteadily on the remaining one as the gardener began to empty his stomach into a nearby bush.\
+` To make things worse, Hisui came in right while it was happening…@ Changing the sheets or something.@
+` 
+` I nodded to her, still watching like a voyeur.@ By then, the gardener was screaming into a cell phone…@ Kohaku meanwhile wobbled like a girl playing hopscotch, trying to pick up the rake at her foot without losing balance.@ Naturally, Hisui asked what I was looking at.@
+` 
+` I tried to shrug it off, told her Kohaku just lost a foot to the mower.@ Hisui went pale, so then I had to try to calm her down.\
+` Looked back out the window, said something like,
+` 
+`"Uh, it's being taken care of.@ Besides, you know.@ She doesn't let little things like that get in the way of her cheerful outlook."@
+` No response.@
+` 
+` I looked back to see Hisui passed out on the bed in shock.@
+` 
+` Honestly, it's like it was her own damn foot.@ I mean, Kohaku wouldn't let a little thing like having a foot lopped off distract her from her true purpose.@
+` At least it'll make it harder for her to pretend to be Hisui…@ I can already imagine it, "Hisui, chop off your foot. Please? It's the only way I can protect you."
+` 
+`   --Shiki\
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+` December 10th, 200X --
+` 
+` New gardener has worse luck than the previous one…@ Kohaku lost her other foot to the lawnmower yesterday.@ Seemed generally unphased and genial, even when pressured.@
+` She didn't even say anything about it until I slipped on the puddle of gore coming back from school…@
+` 
+` Gave her a piggy-back ride to the hospital, since she's the only one with a license.@
+` 
+` Related: Need to buy new slacks.@ Current pair has blood running down the legs.\
+` 
+` Had the strangest conversation when I questioned her, too:@
+`"No, Shiki-sama.@ This is nothing.@ The doll is just a little… damaged."@
+` The entire time, she balanced precariously on her prosthetic and pushed the leaves around the garden with that damned broom.@ Have to admit, though……@ She's getting good at sweeping again.\
+` 
+`"Uhhhh… Right, uhm…@ You remember when I used to carry His--uh… you… around on piggy back when we were kids?@ You always thought it was so fun to just let me run around with her on my back like that.@ Do you want to try it, Kohaku?@ For old times sake?"@
+` 
+`"Oh, I do remember that thing you just said!@ Let's try it!@ Please?"@
+`
+` ………@
+` 
+` Was nostalgic, though……@ Reminded me of of playing 'hospital' at the Arima house.@ Everyone would pick me up, throw me in the car, and drive to the hospital as fast as they could.
+` 
+`   --Shiki\
+` December 17th, 200X --
+` 
+` Woke up covered in blood in the alleyway again.@ Wasn't naked this time, so I must have done something to please Kohaku.@ Was slightly hard making it back to the mansion last time while wearing nothing but a copy of the Sunday Times.@
+` 
+` The new gardener quit.@ Requesting worker's comp.@ Flowerbed remains.@
+` 
+` Reminder: Ask Akiha if the Tohno Family has any strong military connections.@ After seeing what happened to that gardener, maybe napalm from a fast moving military airplane would be a safer method to get rid of those flowers.
+` 
+`   --Shiki\
+` January 4th, 200X --
+` 
+` Personal note: Stop accepting drugs from 'Hisui'.@ I can't tell the damn difference between them.@ Maybe if I could get Kohaku's contacts I would stand a chance, but she keeps hiding them all over…@
+` And then she only gives me that freaky grin AFTER I've taken the offered drug.@ That glassy-eyed expression turns my spine to ice and makes my testicles recede into my body for fear.
+` 
+`   --Shiki\
+` January 5th, 200X --
+` 
+` Had another 'alleyway' dream, woke up in Akiha's room without clothes and covered head to toe in blood.@ Mostly sure that none of it was mine.@ Can't for the life of me figure out how Kohaku got the Morning Glory to me this time.
+` 
+`   --Shiki\
+bg "image\bg\bg_41.jpg",%type_crossfade_fst
+` (Reed Warbler Shiki diary)
+` Month X Day x --
+` 
+` Walked in for nightly feeding to find Akiha sitting on Kohaku's stomach, chewing on one of her arms.@ I guess I shouldn't have gone to get that transfusion today.@ I can only assume that they've been that way since Kohaku went in this morning to comb Akiha's hair.@ Swatted her back with a broom, then gave her a stern talking-to as she drank about a pint out of my jugular.@
+` Upon regaining consciousness, Kohaku said something about a doll again, apologized profusely and then scuttled off like a cockroach.@
+` 
+` And everyone thinks *I'm* strange.
+` 
+`   --Shiki\
+` Month X Day x --
+` 
+` Late for the feeding again.@ Kohaku had taken cover in the closet.@ Akiha was banging on it half-heartedly, growling, and trying to figure out how to open it.@ She had the cutest primal expression on her face.@
+` Like, "How I get in. Blood in there."@
+` Kohaku called from the closet, "Oh, Shiki-san, it's okay.@ It's only been a few hours!"@ Must remember to dock her pay for loitering around like that…@
+` 
+` Reminder: Find out if we even *pay* Hisui and Kohaku.
+` 
+`   --Shiki\
+` Month X Day x --
+` 
+` Woke up late today, Hisui was worried about Kohaku and had not seen her since morning duty with Akiha.@ Stumbled out of bed and over to the detached building to find Akiha knocking on the closet door.@
+` Called for Kohaku, only to get an apology for not having breakfast ready, spoken from inside the closet.@ Distracted Akiha with a cowbell and sent Kohaku back to the manor.@
+` 
+` Reminder: Talk to Kohaku about morning duties, Akiha's hair was a positive mess again.
+` 
+`   --Shiki\
+wavestop
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+!w2000
+return

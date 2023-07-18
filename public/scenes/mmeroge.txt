@@ -1,0 +1,86 @@
+bg "image\bg\bg_33a.jpg",%type_lcartain_mid
+ld c,":a;image\tachi\koha_t03.jpg",%type_lshutter_fst
+play "*3"
+`"Huh?@ Weren't you with Akiha?"@
+`"Lady Akiha goes to school by car.@ Since I had something to give you this morning, I stayed behind."@
+`"Something to give me?"@
+`"Yes.@ This came from the Arima family yesterday."@
+` Kohaku-san smiles.\
+
+`"Eh?@ But, I have all my luggage already.@ The things I used while I was at the Arimas' house all belonged to them, so all I've got are my own clothes…"@
+`"Really?@ But this was sent here, nonetheless…"@
+` Kohaku-san hands me a small wooden box.@
+` It's not heavy at all.\
+
+`"…… Kohaku-san, I've never seen this before."@
+`"Well… apparently it was left to you by your departed father.@ It was to be given to you in the will."@
+`"…… By my old man?"@
+` …… I can't feel anything about that.@
+` What's the old man who expelled me from this mansion eight years ago doing leaving me things?\
+
+`"Oh well.@ Kohaku-san, please take it to my room for me."@
+ld c,":a;image\tachi\koha_t09.jpg",%type_crossfade_fst
+`"------"@
+` Kohaku-san is staring intently at the wooden box.@
+` She seems almost like a child who wants a toy.@
+br
+` Staaaaare.@
+br
+` No, she is a child.\
+
+`"…… I get it.@ You want to know what's inside, right?"@
+ld c,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+`"Oh, not at all.@ I merely wondered for a moment."@
+` …… Like I said, you do wonder what's inside.@
+`"Alright, let's open it.@ One, two… three!"@
+` With a dry sound, the wooden box opens.@
+` Inside, there is----a computer game.\
+
+`"…… It's… a computer game."@
+` With bright and gaudy packaging, it has finger marks all over it.@
+` …… The old man must have really hated me to leave me a piece of junk like this.\
+
+`"No, Shiki-san.@ It's an eroge!"@
+` Kohaku-san takes the case out of the box.@
+`"See, isn't it one of those dating games?@ One, two… three!"@
+` With a "pachink!", she opens up the case.@
+` …… I see, it certainly is an eroge.@ Wait, an eroge!?\
+
+`"It's old, but it seems pretty fun.@ I guess it takes place during the year and era written on the back."@
+` Kohaku-san closes the case and hands it over.@
+cl c,%type_crossfade_fst
+` Certainly, there's a number written on the case.@
+` The character 'seven', and under it, the character 'night'.\
+
+ld l,":a;image\tachi\his_t01.jpg",%type_nowaitdisp
+`"Nee-san, there is no era by that name.@ It just says 'Nanatsu-yoru'."@
+`"!"@
+` Surprised, I turn around.@
+` Hisui, who had been silent until now, was looking at the game over my shoulder.\
+
+`"Y, you surprised me… Hisui, you should say something.@ You don't have to look over my shoulder like that, you know.@ If you want to see it, I'll show it to you."@
+ld l,":a;image\tachi\his_t02.jpg",%type_crossfade_fst
+`"Ah---"@
+br
+` Hisui's cheeks suddenly become a little redder.\
+
+`"P-please excuse me.@ Uh---That game looked so beautiful that I could not help myself."@
+`"Beautiful?@ You really think it's beautiful?@ It looks kind of beat up to me."@
+ld l,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+`"---Not at all.@ The cover art is masterful.@ I think it is an eroge with its own proper storyline."@
+`"Really?@ It looks to me like a piece of junk…"\
+
+` But since Hisui seems so convinced, I begin to feel the same thing.@
+` …… Hmmm.@ In its own way, I guess it's not such a bad inheritance.\
+
+ld r,":a;image\tachi\koha_t02.jpg",%type_nowaitdisp
+`"'Seven nights'…?@ Maybe that's the name of this eroge?"@
+`"Maybe…@ I think I can imagine what would be happening during those seven nights."@
+` I skim the back of the case.@ Apparently, it's about a lot of imouto and some guy named "TakaJun".@
+` At any rate, it's obvious that it's an antique.@
+`"Well, I believe in taking what's given to me…"\
+cl c,%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+playstop
+!w1000
+return

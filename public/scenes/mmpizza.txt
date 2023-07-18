@@ -1,0 +1,133 @@
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+!w3000
+waveloop se10
+
+` ---Ah, I've come here again.@
+br
+` The dark basement.@ The smell of mold emanating from the darkness.@
+` …… The school's, probably the gym's basement.@
+` The dispersed celluloid mannequin.@ No, the pieces of half eaten people.@
+br
+` He's.@
+` Even though it's this early, it has brought yet another doll.\
+
+` *pant*----*pant*----*pant*----
+` The animalistic breathing.@
+` *pant*----*pant*----*pant*----!@
+bg "image\bg\ima_13.jpg",%type_nowaitdisp
+
+` The figure bites into the doll.@
+` The feeling of teeth breaking the skin.@
+` The fat of the abdomen is not exactly what you can call grade-A meat.@
+` The hot blood sticking to the throat.@
+br
+` ---I feel a chill.@
+` All these sensations are completely transmitted to me.\
+
+`"Y, y y y y you again, Shiki!"@
+` It screams.@
+
+`"Damn it, damn it, damn it, damn it, damn it-----!"@
+` It acts as a child throwing a tantrum.@
+` Breaking all the desks, and pulling off pieces of concrete from the floor.@
+
+br
+`"I'll kill you, I'll kill you, I'll kill you…… !"@
+br
+` Saying so.@
+` It thrusts a knife in its own hand.\
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\ima_13.jpg",%type_nowaitdisp
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\ima_13.jpg",%type_nowaitdisp
+
+br
+` ------Gi----!?@
+br
+` The pain of the knife is transmitted to my own hand.\
+
+`"Just you watch, I will kill you---"@
+` He then takes the leg of a broken desk and impales his own leg.@
+br
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\ima_13.jpg",%type_nowaitdisp
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\ima_13b.jpg",%type_nowaitdisp
+
+` ----Ga---.@
+br
+`"And I'll take back what you stole-----"@
+` Using his own claws, he rips open his stomach and starts to pull out his intestines.\
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\ima_13b.jpg",%type_nowaitdisp
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\ima_13b.jpg",%type_nowaitdisp
+
+br
+` ---The, pain.@
+br
+` Pain.@ Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain, Pain Pain----------!!!"\
+
+`"These fingers, this skin, even these eyes!"@
+` He pushes in his eyes.@
+br
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\ima_13b.jpg",%type_nowaitdisp
+
+br
+` ---I start to go crazy.@
+br
+` A dream.@ If this is a dream, please, wake up!@
+` It hurts.@ I'd rather.@ Die.@
+` This pain is enough to kill me from shock, but I am not dying.\
+
+`"Your voice, your position, all of it is mine, it was all originally mine---!@
+` Just you wait, I will kill you, I will come soon……!"@
+br
+` Screaming.@
+` It takes a knife,
+br
+!w750
+`      brings it to it's head,
+br
+!w750
+`      aims for the brain,
+br
+!w750
+`      and stabs deeply.\
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\ima_12b.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\ima_13b.jpg",%type_nowaitdisp
+bg "image\bg\ima_12b.jpg",%type_nowaitdisp
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_40b.jpg",%type_nowaitdisp
+wavestop
+play "*6"
+
+`"AAAAAAAAAAAAAAAA!"@
+` In the middle of the ultimate pain, I wake up.@
+`"Ahhh----ghaa, aagh, aghhh----!"@
+` A dream.@ That was a dream.@
+`"G…!"@
+` But my body is hurting everywhere.@
+` Hand, thigh, eyes, skull.@
+` They all hurt.@
+` The pain I received during my dream, I have brought it back into reality.\
+
+`"A----hh!"@
+` But my body still can't move.@
+` Even though I feel like there is a hole ripped in my palm, I still can't move my body.@
+`"Ah-------ah."@
+` At least if I could move---I could thrash around and maybe reduce some of the agony, but I can't even do that.\
+br
+br
+` ----That's it.@
+playstop
+wave se4
+br
+`"No more large greasy pizzas before bed!"\
+
+return

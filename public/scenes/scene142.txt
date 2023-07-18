@@ -593,7 +593,8 @@ br
 ` But---are you okay by yourself?@
 br
 ` Those words float in the back of my head.@
-` …… There's something wrong with me.\ Feeling guilty about letting her face danger all by herself.@ There really has to be something wrong with me.\
+` …… There's something wrong with me.\
+` Feeling guilty about letting her face danger all by herself.@ There really has to be something wrong with me.\
 
 `"………………"@
 ld c,":a;image\tachi\ark_t11.jpg",%type_crossfade_fst

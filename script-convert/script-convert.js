@@ -143,7 +143,7 @@ function writeScenes(scriptLines, dir) {
             scene.push(line)
             if (line.startsWith("goto"))
                 scene.push("return")
-            fs.writeFileSync(`${dir}/${sceneId}.txt`, scene.join('\n'));
+            fs.writeFileSync(`${dir}/${sceneId}.txt`, scene.join('\n')+"\n");
             sceneId = undefined
             scene = logicFileLines
         } else {

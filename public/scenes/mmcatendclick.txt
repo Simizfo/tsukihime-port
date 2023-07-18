@@ -1,0 +1,12 @@
+textclear
+textoff
+csp -1
+bg "image\bg\ima_11.jpg"
+print %type_crossfade_mid
+repaint
+bg "image\event\CATEND.JPG",%type_crossfade_slw
+click
+playstop
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+return

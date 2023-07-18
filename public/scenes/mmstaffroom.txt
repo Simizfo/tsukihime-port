@@ -1,0 +1,169 @@
+stop
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_08a.jpg",%type_crossfade_mid
+setwindow 18,18, 36,21, 17,17, 0, 4, 22, 1, 1, #aaaaaa, 0, 0, 639, 479
+play "*3"
+ld c,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+` Welcome to the mirror moon staffroom!@ You have found your way into one of the secret places in Tsukihime.@ In this room you can get a glimpse of the localization process that brought this popular game to the English-speaking audience.@
+` You can probably find a detailed history of the project online somewhere, so instead of going into technical details, we will try to show you what really happened.\
+br
+` The following scenes are based on true events, but names and places have been changed to protect the people involved.\
+cl a,%type_tshutter_fst
+
+` First, we started translating the script.\
+br
+ld c,":a;image\tachi\ark_t20b.jpg",%type_crossfade_mid
+`"Gah----@ No more……@ Eroscenes…!"@
+cl a,%type_tshutter_fst
+ld l,":a;image\tachi\aki_t28.jpg",%type_tshutter_mid
+`"Hahaha……@ Hahahaha!!!@ Make it stop, I can't take any more of this!"@
+ld r,":a;image\tachi\stk_t04.jpg",%type_rshutter_fst
+`"Uwaaah……@ Wait--@ We cannot stop.@ We----"\
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_08a.jpg",%type_nowaitdisp
+wave se9
+quakey 1,100
+ld c,":a;image\tachi\hal_t03.jpg",%type_rcartain_fst
+`"Heh… Heheh--Hehehahaha!@ Haahahahahahaha!!"@
+br
+cl a,%type_crossfade_fst
+ld c,":a;image\tachi\his_t04.jpg",%type_tshutter_mid
+`"Uhm…@ Everyone, shouldn't we be……"@
+ld c,":a;image\tachi\his_t05.jpg",%type_crossfade_fst
+`"………………"\
+cl a,%type_rcartain_mid
+` As you can see, we were all going a little crazy over Nasu's writing style.@ It was bad, but it could have been worse.@ We found that out the hard way when we started editing the translations.\
+br
+textoff
+lsp 18,":a;image\tachi\ark_t30.jpg",-90,0
+print %type_tshutter_mid
+`"I'm going to edit this part like this-nya."@
+textoff
+lsp 14,":a;image\tachi\ark_t30.jpg",400,0
+print %type_crossfade_mid
+`"And I'll edit the same script this way."@
+textoff
+lsp 16,":a;image\tachi\ark_t30.jpg",100,0
+print %type_lshutter_mid
+`"Nyaaa, how about we do it like this instead?"@
+textoff
+lsp 15,":a;image\tachi\ark_t30.jpg",275,0
+print %type_rshutter_fst
+`"I'm changing that back and re-editing it again!"@
+textoff
+lsp 13,":a;image\tachi\ark_t30.jpg",350,4
+print %type_tshutter_fst
+`"But this needs to change-nya, it just doesn't sound nyatural……"\
+
+textoff
+wait 1
+msp 15,-20,0,0
+print %type_crossfade_fst
+msp 15,-20,0,0
+print %type_crossfade_fst
+msp 15,-20,0,0
+print %type_crossfade_fst
+`"You're standing in front of me, I can't see-nya!!"@
+textoff
+lsp 10,":a;image\tachi\ark_t30.jpg",280,8
+print %type_bshutter_mid
+`"This part has not been proofed enyough."@
+textoff
+lsp 12,":a;image\tachi\ark_t30.jpg",0,4
+print %type_lcartain_fst
+`"I'll edit it more."@
+textoff
+lsp 9,":a;image\tachi\ark_t30.jpg",-150,6
+print %type_tshutter_mid
+`"Who changed this script? It's all wrong!"@
+textoff
+lsp 11,":a;image\tachi\ark_t30.jpg",420,6
+print %type_lcartain_fst
+`"No this part needs to change!"@
+textoff
+wait 500
+lsp 8,":a;image\tachi\RAN_T08.PNG",240,0
+print %type_bcartain_mid
+`"What are you guys doingnya?"\
+
+
+textoff
+lsp 17,":a;image\tachi\ark_t30.jpg",0,-165
+wait 250
+print %type_crossfade_fst
+`"Nya-nya nyaaaaaa~!"@
+textoff
+lsp 20,":a;image\tachi\ark_t31b.jpg",240,-220
+print %type_rshutter_mid
+br
+br
+`"It needs to be rewritten-nya!"\
+csp -1
+
+ld c,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+` As you can see there was very little organization at this time, with people coming and going and doing varying amounts of work of varying quality.@
+` This caused very long delays and a lot of work was done for nothing.@ We wanted a script with one style and one quality, so we had to rewrite everything to one format. We chose to bring back the entire script as close to the Japanese original as possible.@
+br
+` We learned from this chaos that having many people working on one project at the same time did not work for us, so in our next project we chose to have only one translator and one editor.@ So far, it appears to be working a lot better!\
+cl a,%type_crossfade_fst
+` But after the rewrite was finished, a lot of work still remained.@ When we started the beta project---\
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+playstop
+wavestop
+monocro #000000
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+setwindow 10,10, 40,40, 16,14, 0, 2, 22, 0, 0, #aaaaaa, 0, 0, 639, 479
+!s0
+monocro #0000FF
+
+`A problem has been detected and Windows has been shut down to prevent damage
+`to your computer.
+br
+`The problem seems to be caused by the following file: ONSCRIPTER.EXE
+br
+`BETA SOMETHING ERROR HAPPENS
+br
+`If this is the first time you've seen this Stop error screen,
+`restart your computer. If this screen appears again, follow
+`these steps:
+br
+`Check to make sure the latest script release is properly installed.
+`If you have the latest script installed, read the beta project
+`instructions for the first time and see what you are doing wrong.
+br
+`If problems continue, try to ignore the problem and maybe it will
+`go away. Ciel-sensei may also have a tip or two to spare, so try to
+`lure her out with some curry-pan (tm) and ask. If all else fails,
+`report the problem to us. There is no need to try to recreate the
+`problem, we've got plenty of them already.
+br
+`Technical Information (all hex is ascii):
+br
+` *** STOP: 0x6861696C (0x41726375 0x65696442 0x72756E65 0x73747564)
+br
+
+` ***  ONSCRIPTER.EXE - Address 4D65727279 base at 586D6173
+!w5000
+click
+setwindow 18,18, 36,21, 17,17, 0, 4, 22, 1, 1, #aaaaaa, 0, 0, 639, 479
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+monocro off
+
+bg "image\bg\bg_08a.jpg",%type_crossfade_mid
+play "*3"
+` Ah---Aheheh, well……@ Let's just forget about all that as quickly as possible, alright?@
+ld c,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+` At this point we were almost finished, but there was one more milestone to reach……@
+br
+` And that is what you are seeing now!@ Having most of the raw materials ready, we still had to work for more than a month making everything ready for release.@
+` Just about everything in the project took us longer than we expected, but in the end it came together quite well.@ Please enjoy the result to the fullest.\
+br
+` And that concludes today's lesson.@ There is another secret hidden in Tsukihime, but to find it you will need to play through the entire game first.@ Good luck, if you ever get stuck in a dead end, join us in class again and we'll see if we can help you out.@
+br
+` Congratulations, mirror moon!@ After three long years, the English translation of Tsukihime is finished and released!@ Thank you for your hard work, we hope you will continue to work with us so patiently in the future.\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+stop
+!w2000
+play "*8"
+return

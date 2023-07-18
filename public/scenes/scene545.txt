@@ -1,0 +1,53 @@
+
+
+
+
+
+bg "image\bg\bg_06b.jpg",%type_nowaitdisp
+play "*9"
+
+
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld c,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+
+` You have reached Kohaku's True Ending.@ Well done.@
+` There is only one ending for Kohaku-san.@
+` If you have come this far, you should understand that Kohaku-san's story is the propman of "Tsukihime", the story to tie up all the remaining events.\
+
+` Thank you so much for all your hard work.@
+` After a long time, their stories have ended.\
+
+
+` ------But, please wait.@
+br
+` There is still one person remaining.@
+` Yes, that is this story's main character.@
+` His story is not over yet.@
+` In the heavens is the cold, round moon.@
+` But even that moon cannot be eternally the same.@
+br
+` After the end of all stories,
+` the story of Tohno Shiki is waiting to be finished there-----\
+
+
+
+
+
+
+
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+
+
+
+
+return

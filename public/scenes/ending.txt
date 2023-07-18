@@ -1,0 +1,120 @@
+mov %staffrollwait,5600
+mov %mmstaffrollwait,4300
+
+play "*10"
+
+setwindow 18,18, 36,21, 17,17, 0, 4, 22, 1, 1, #ffffff, 0, 0, 639, 479
+setcursor 0,":c;icon\0.bmp",0,0
+setcursor 1,":c;icon\0.bmp",0,0
+
+bg "image\word\ed_01.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_02.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_03.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_04.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_05.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_06.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_07.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_08.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_09.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_10.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_11.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_12.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_13.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_14.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_15.png",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_16.png",%type_crossfade_mid
+delay %staffrollwait
+
+delay 2000
+
+bg "image\word\mmcred_01.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\mmcred_02.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\mmcred_03.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\mmcred_04.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\mmcred_05.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\mmcred_06.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\mmcred_07.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\mmcred_08.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\mmcred_09.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\mmcred_10.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\mmcred_11.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\mmcred_12.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\mmcred_13.png",%type_crossfade_mid
+delay 8600
+
+bg "image\word\mmcred_14.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\mmcred_15.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\mmcred_16.png",%type_crossfade_mid
+delay %mmstaffrollwait
+
+bg "image\word\ed_17.jpg",%type_crossfade_slw
+delay 21500
+
+playstop
+click
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+
+
+setwindow 18,18, 36,21, 17,17, 0, 4, 22, 1, 1, #aaaaaa, 0, 0, 639, 479
+setcursor 0,":l/3,160,2;icon\cursor0.bmp",0,0
+setcursor 1,":l/3,160,2;icon\cursor1.bmp",0,0
+return

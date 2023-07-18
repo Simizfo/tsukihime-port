@@ -678,7 +678,8 @@ br
 br
 br
 br
-` *pant*----\*pant*----*pant*---
+` *pant*----\
+`*pant*----*pant*---
 
 ` …… Certainly, my body is completely different than before.@
 ` Even though I'm breathing hard from exertion, for the first time in days I can move as freely as I want to.\
@@ -1862,7 +1863,8 @@ bg "image\bg\bg_06c.jpg",%type_lshutter_fst
 ` She's still warm.@ Her breathing is weak but it isn't stopped.@ …… I can only see a few "lines" on her body.@
 ` I let out a sigh of relief.@
 ` I place her down on the floor.@
-` ---Thank goodness.\ If anything happened…… thank goodness she is safe.@
+` ---Thank goodness.\
+` If anything happened…… thank goodness she is safe.@
 
 `"Nii-san----what, was that just now----"@
 ` …… Her voice is shaking.@

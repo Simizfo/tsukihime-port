@@ -1500,7 +1500,8 @@ br
 ` The footsteps get even louder.@
 ` I sense the enemy coming closer.@
 ` All the time, someone's voice echoes in my brain.@
-` Slice her apart.@ Slice her apart.\ Slice her apart.@ Slice her apart.@ Slice her apart.\
+` Slice her apart.@ Slice her apart.\
+` Slice her apart.@ Slice her apart.@ Slice her apart.\
 
 `"U----"@
 br
