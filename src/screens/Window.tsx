@@ -19,22 +19,26 @@ import SavesLayer from '../layers/SavesLayer';
 //##############################################################################
 
 const keyMap = new KeyMap({
-  "next":     [()=> objectMatch(displayMode, {menu: false, choices: false, history: false}),
+  "next":     [()=> objectMatch(displayMode, {menu: false, choices: false, history: false, load: false, save: false}),
               {key: "Enter", repeat: false},
               {key: "Control", repeat: true},
               {key: "ArrowDown", repeat: false},
               {key: "ArrowRight", repeat: false}],
-  "history":  [()=> objectMatch(displayMode, {text: true, menu: false, history: false}),
+  "history":  [()=> objectMatch(displayMode, {text: true, menu: false, history: false, load: false, save: false}),
               {key: "ArrowUp", repeat: false},
               {key: "ArrowLeft", repeat: false},
               {key: "H", repeat: false}],
-  "graphics": {code: "Space", repeat: false, [KeyMap.condition]: ()=>objectMatch(displayMode, {menu: false, history: false})},
+  "graphics": {code: "Space", repeat: false, [KeyMap.condition]: ()=>objectMatch(displayMode, {menu: false, history: false, load: false, save: false})},
   "menu":     [
-              {key: "Escape", repeat: false, [KeyMap.condition]: ()=>(displayMode.menu || !displayMode.history)},
+              {key: "Escape", repeat: false, [KeyMap.condition]: ()=>(displayMode.menu || !displayMode.history) && !displayMode.load && !displayMode.save},
               {key: "Backspace", repeat: false, [KeyMap.condition]: ()=>displayMode.menu}],
   "q_save":   {key: "S", repeat: false},
   "q_load":   {key: "L", repeat: false},
-  "bg_move":  [()=> objectMatch(displayMode, {menu: false, history: false}),
+  "load":     [()=> objectMatch(displayMode, {menu: false, history: false, load: false, save: false}),
+              {key: "A", repeat: false}],
+  "save":     [()=> objectMatch(displayMode, {menu: false, history: false, load: false, save: false}),
+              {key: "Z", repeat: false}],
+  "bg_move":  [()=> objectMatch(displayMode, {menu: false, history: false, load: false, save: false}),
               {key: "ArrowUp", ctrlKey: true, repeat: false, [KeyMap.args]: "up"},
               {key: "ArrowDown", ctrlKey: true, repeat: false, [KeyMap.args]: "down"}]
 }, (action, _evt, ...args)=> {
@@ -45,6 +49,8 @@ const keyMap = new KeyMap({
       case "menu"     : toggleMenu(); break
       case "q_save"   : quickSave(script.history); break
       case "q_load"   : quickLoad(script.history); break;
+      case "load"     : toggleLoad(); break
+      case "save"     : toggleSave(); break
       case "bg_move"  : moveBg(args[0]); break
     }
 })
@@ -73,6 +79,14 @@ function toggleGraphics() {
 function toggleHistory() {
   displayMode.text = !displayMode.text
   displayMode.history = !displayMode.history
+}
+
+function toggleSave() {
+  displayMode.save = !displayMode.save
+}
+
+function toggleLoad() {
+  displayMode.load = !displayMode.load
 }
 
 //##############################################################################

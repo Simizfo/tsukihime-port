@@ -1,26 +1,41 @@
 import { FaPlusCircle } from "react-icons/fa"
+import { listSaveStates, storeSaveState } from "../utils/variables"
 
 type Props = {
   variant: "save" | "load"
 }
 
 const SavesLayout = ({variant}: Props) => {
-  const handleSave = () => {
-    console.log("save")
+  const saves = listSaveStates()
+  console.log(saves)
+  const createSave = () => {
+    // storeSaveState(new Date().getTime(), history.top.saveState)
+  }
+
+  const handleAction = () => {
+    if (variant === "save") {
+      if (confirm("Are you sure you want to overwrite this save?")) {
+        //TODO overwrite
+      }
+    }
+
+    if (variant === "load") {
+      //TODO load
+    }
   }
 
   return (
     <div id="saves-layout">
       <div className="saves">
         {variant === "save" &&
-        <button className="save-container create" onClick={handleSave}>
+        <button className="save-container create" onClick={createSave}>
           <FaPlusCircle />
         </button>
         }
 
         {/* TODO map */}
-        <button className="save-container">
-          <img src="./image_x2/event/his_e02b.webp" />
+        <button className="save-container" onClick={handleAction}>
+          <img src="./image/event/his_e02b.jpg" />
           
           <div className="deta">
             <div className="date">
