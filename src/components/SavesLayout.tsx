@@ -1,5 +1,6 @@
 import { FaPlusCircle } from "react-icons/fa"
 import { listSaveStates, storeLastSaveState } from "../utils/savestates"
+import SaveComponent from "./SaveComponent"
 
 type Props = {
   variant: "save" | "load"
@@ -46,6 +47,10 @@ const SavesLayout = ({variant}: Props) => {
             </div>
           </div>
         </button>
+
+        {Array.from(saves).map(([key, value]) => (
+          <SaveComponent key={key} element={value} handleAction={handleAction} />
+        ))}
       </div>
 
       <div className="info">
