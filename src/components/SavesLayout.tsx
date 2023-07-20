@@ -1,9 +1,10 @@
 import { FaPlusCircle } from "react-icons/fa"
 import { QUICK_SAVE_ID, SaveState, listSaveStates, loadSaveState, storeLastSaveState } from "../utils/savestates"
 //import SaveComponent from "./SaveComponent"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { graphicsElement } from "../layers/GraphicsLayer"
 import { displayMode } from "../utils/variables"
+import { convertText } from "../utils/utils"
 
 type Props = {
   variant: "save" | "load"
@@ -13,7 +14,7 @@ function saveElement(id: string|number, saveState: SaveState,
                      props: {[key:string]:any}) {
   const date = new Date(saveState.date as number)
   return (
-    <button className="save-container" key={id} quick-save={id==QUICK_SAVE_ID}
+    <button className="save-container" key={id} {...(id==QUICK_SAVE_ID ? {'quick-save':''} : {})}
             {...props}>
       {graphicsElement("bg", saveState.context.graphics.bg)}
       <div className="deta">
@@ -21,7 +22,7 @@ function saveElement(id: string|number, saveState: SaveState,
           <b>{date.toLocaleDateString()}</b> {date.toLocaleTimeString()}
         </div>
         <div className="line">
-          {saveState.text ?? ""}
+          {convertText(saveState.text ?? "")}
         </div>
       </div>
     </button>
