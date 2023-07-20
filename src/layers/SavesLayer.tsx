@@ -21,14 +21,9 @@ const SavesLayer = () => {
 
   useEffect(()=> {
     observe(displayMode, 'save', setDisplaySave)
-    return ()=> {
-      unobserve(displayMode, 'save', setDisplaySave)
-    }
-  }, [])
-
-  useEffect(()=> {
     observe(displayMode, 'load', setDisplayLoad)
     return ()=> {
+      unobserve(displayMode, 'save', setDisplaySave)
       unobserve(displayMode, 'load', setDisplayLoad)
     }
   }, [])
@@ -40,7 +35,7 @@ const SavesLayer = () => {
     }
     return addEventListener({event: 'contextmenu', handler: handleContextMenu})
   })
-  
+
   return (
     <div className={`box box-save ${displaySave || displayLoad ? "show" : ""}`}>
       <div className="page-content">

@@ -11,10 +11,13 @@ const STORAGE_KEY = "savestates"
 export type SaveState = {
   context: typeof gameContext;
   progress: typeof progress;
-  text?: string
+  text?: string;
+  date?: number;
 }
 
-type SaveStateId = number | string
+type SaveStateId = number
+
+export const QUICK_SAVE_ID: SaveStateId = 0
 
 const saveStates = new Map<SaveStateId, SaveState>()
 
@@ -60,6 +63,8 @@ export function createSaveState() {
  * @param ss savestate to store.
  */
 export function storeSaveState(id: SaveStateId, ss: SaveState) {
+  if (!ss.date)
+    ss.date = Date.now()
   saveStates.set(id, ss)
   updateLocalStorage()
 }
@@ -125,13 +130,13 @@ export function loadSaveState(ss: SaveStateId | SaveState) {
  * Stores the last savestate of the script's history in the savestate map
  * with the id 'quick".
  */
-export const quickSave = storeLastSaveState.bind(null, 'quick')
+export const quickSave = storeLastSaveState.bind(null, QUICK_SAVE_ID)
 
 /**
  * Loads the savestate with the id 'quick' from the script's history,
  * and restores the context and progress from it.
  */
-export const quickLoad = loadSaveState.bind(null, 'quick')
+export const quickLoad = loadSaveState.bind(null, QUICK_SAVE_ID)
 
 /**
  * Creates an iterator of key-value pairs from the stored savestates,
@@ -139,8 +144,8 @@ export const quickLoad = loadSaveState.bind(null, 'quick')
  * is the savestate itself.
  * @returns the created iterator.
  */
-export function listSaveStates(): IterableIterator<[SaveStateId, SaveState]> {
-  return saveStates.entries()
+export function listSaveStates(): Array<[SaveStateId, SaveState]> {
+  return Array.from(saveStates.entries())
 }
 
 //##############################################################################

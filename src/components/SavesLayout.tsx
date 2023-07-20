@@ -1,27 +1,55 @@
 import { FaPlusCircle } from "react-icons/fa"
-import { listSaveStates, storeLastSaveState } from "../utils/savestates"
-import SaveComponent from "./SaveComponent"
+import { QUICK_SAVE_ID, SaveState, listSaveStates, loadSaveState, storeLastSaveState } from "../utils/savestates"
+//import SaveComponent from "./SaveComponent"
+import { useState } from "react"
+import { graphicsElement } from "../layers/GraphicsLayer"
+import { displayMode } from "../utils/variables"
 
 type Props = {
   variant: "save" | "load"
 }
 
+function saveElement(id: string|number, saveState: SaveState,
+                     props: {[key:string]:any}) {
+  const date = new Date(saveState.date as number)
+  return (
+    <button className="save-container" key={id} quick-save={id==QUICK_SAVE_ID}
+            {...props}>
+      {graphicsElement("bg", saveState.context.graphics.bg)}
+      <div className="deta">
+        <div className="date">
+          <b>{date.toLocaleDateString()}</b> {date.toLocaleTimeString()}
+        </div>
+        <div className="line">
+          {saveState.text ?? ""}
+        </div>
+      </div>
+    </button>
+  )
+}
+
 const SavesLayout = ({variant}: Props) => {
-  const saves = listSaveStates()
+  const [saves, setSaves] = useState<Array<[number,SaveState]>>(listSaveStates())
+  const [focusedSave, setFocusedSave] = useState<SaveState|null>(null)
+
   console.log(saves)
+
   const createSave = () => {
     storeLastSaveState(new Date().getTime())
+    setSaves(listSaveStates())
   }
 
-  const handleAction = () => {
+  const handleAction = (id:number) => {
     if (variant === "save") {
       if (confirm("Are you sure you want to overwrite this save?")) {
-        //TODO overwrite
+        storeLastSaveState(id)
       }
     }
 
     if (variant === "load") {
-      //TODO load
+      loadSaveState(id)
+      displayMode.save = false
+      displayMode.load = false
     }
   }
 
@@ -34,27 +62,14 @@ const SavesLayout = ({variant}: Props) => {
         </button>
         }
 
-        {/* TODO map */}
-        <button className="save-container" onClick={handleAction}>
-          <img src="./image/event/his_e02b.jpg" />
-          
-          <div className="deta">
-            <div className="date">
-              <b>2023/07/17</b> 19:48
-            </div>
-            <div className="line">
-              test test test test test test test test test test test test test test test test test test test test test test test test test test test test test 
-            </div>
-          </div>
-        </button>
-
-        {Array.from(saves).map(([key, value]) => (
-          <SaveComponent key={key} element={value} handleAction={handleAction} />
+        {saves.map(([id, ss]) => saveElement(id, ss, {
+          onMouseEnter: setFocusedSave.bind(null, ss),
+          onClick: handleAction.bind(null, id)}
         ))}
       </div>
 
       <div className="info">
-        <img src="./image_x2/event/his_e02b.webp" />
+        {graphicsElement("bg", focusedSave?.context.graphics.bg ?? "notreg")}
 
         Affinités<br />
         <button className="affinity">Export save</button>

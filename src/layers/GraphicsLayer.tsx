@@ -160,17 +160,17 @@ function getTransition(type: string, skipTransition = false) {
   }
   return {effect, duration}
 }
+
 function imgUrl(img: string) {
   const folder: string = settings.imagesFolder
   const extension = folder === 'image' && !img.includes("tachi") ? 'jpg' : 'webp'
   return `${folder}/${img}.${extension}`
 }
 
-function createImg(pos: SpritePos,
-                   image = gameContext.graphics[pos],
-                   _attrs: {[key:string]: any} = {}) {
+export function graphicsElement(pos: SpritePos, image: string,
+                                _attrs: {[key:string]: any} = {}) {
 
-  image = image||"#00000000"
+  image = image || ((pos=="bg") ? "#000000" : "#00000000")
   let {className, ...attrs} = _attrs
   className = (className?+className+" ":"")+pos
   if (image.startsWith('#')) {
@@ -264,7 +264,7 @@ export const GraphicsLayer = memo(function({...props}: {[key: string]: any}) {
   return (
     <div className="box box-graphics" {...props} >
       {(duration == 0) ? // no animation => display all sprites without effect
-        POSITIONS.map((pos)=> createImg(pos, currImages[pos], {
+        POSITIONS.map((pos)=> graphicsElement(pos, currImages[pos], {
           key: currImages[pos]||pos,
           ...(pos == 'bg' ? {'bg-align': bgAlign} : {})
         }))
@@ -272,11 +272,11 @@ export const GraphicsLayer = memo(function({...props}: {[key: string]: any}) {
                               // only animate fade-in of the background
                               // on top of all previous sprites unanimated
         <>
-        {POSITIONS.map((pos)=> createImg(pos, prevImages[pos], {
+        {POSITIONS.map((pos)=> graphicsElement(pos, prevImages[pos], {
           key: prevImages[pos]||pos,
           ...(pos == 'bg' ? {'bg-align': bgAlign} : {})
         }))}
-        {createImg('bg', currImages.bg, {
+        {graphicsElement('bg', currImages.bg, {
           key: currImages.bg||'bg',
           'bg-align': bgAlign,
           'fade-in': effect,
@@ -293,7 +293,7 @@ export const GraphicsLayer = memo(function({...props}: {[key: string]: any}) {
             {currImages[pos] && prevImages[pos] && effect=="crossfade" &&
               // add an opaque background to the image to prevent the background
               // from being visible by transparency
-              createImg(pos, prevImages[pos], {
+              graphicsElement(pos, prevImages[pos], {
                 key: `mask${prevImages[pos]}`,
                 'for-mask': "",
                 style: {
@@ -301,14 +301,14 @@ export const GraphicsLayer = memo(function({...props}: {[key: string]: any}) {
                   '--to-image': `url(${imgUrl(currImages[pos])})`
                 }
               })}
-            {createImg(pos, prevImages[pos], {
+            {graphicsElement(pos, prevImages[pos], {
               key: prevImages[pos]||pos,
               'fade-out': effect,
               style: {'--transition-time': `${duration}ms`},
             })}
             </>
           }
-          {createImg(pos, currImages[pos], {
+          {graphicsElement(pos, currImages[pos], {
             key: currImages[pos]||pos,
             ...((pos != 'bg' && ([pos, 'a'].includes(trans_pos))) ? {
               'fade-in': effect,
