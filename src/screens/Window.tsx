@@ -119,7 +119,7 @@ const Window = () => {
 
   return (
     <motion.div
-      className="window" ref={rootElmtRef}
+      className="page window" ref={rootElmtRef}
       initial={{opacity: 0}}
       animate={{opacity: 1}}
       exit={{scale: 1.5, opacity: 0}}
