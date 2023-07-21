@@ -1,6 +1,5 @@
 import { FaPlusCircle } from "react-icons/fa"
 import { QUICK_SAVE_ID, SaveState, listSaveStates, loadSaveState, storeLastSaveState } from "../utils/savestates"
-//import SaveComponent from "./SaveComponent"
 import { useEffect, useState } from "react"
 import { graphicsElement } from "../layers/GraphicsLayer"
 import { displayMode } from "../utils/variables"

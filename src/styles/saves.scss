@@ -15,7 +15,6 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 1em;
-    margin: 0 auto;
     flex: 1;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -48,6 +47,7 @@
 
             .deta {
                 min-width: 0;
+                width: 100%;
 
                 .date {
                     color: #031989;
@@ -62,7 +62,7 @@
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    width: 90%;
+                    max-width: 440px;
                 }
             }
 
