@@ -34,6 +34,7 @@ body {
     .box-graphics {
         z-index: 0;
         display: grid;
+        grid-template-columns: 1fr 3fr 2fr 3fr 1fr;
 
         img {
             position: absolute;
@@ -41,14 +42,14 @@ body {
             height: inherit;
             object-fit: cover;
             &.l, &.c, &.r {
-                bottom: 0;
-                height: 100%;
-                display: flex;
+                width: 100%;
+                position: relative;
+                overflow: visible;
             }
 
-            &.l { justify-self: left; }
-            &.c { justify-self: center; }
-            &.r { justify-self: right; }
+            &.l { grid-column: 2; }
+            &.c { grid-column: 3; }
+            &.r { grid-column: 4; }
 
             &.bg {
                 position: absolute;
@@ -74,7 +75,7 @@ body {
         text-shadow: #000 1px 1px 1px, #000 -1px 1px 1px, #000 -1px -1px 1px, #000 1px -1px 1px;
         line-height: 1.6em;
         letter-spacing: 1px;
-        font-size: clamp(.82em, min(2.5vw, 3.6vh), 1.15em);
+        font-size: clamp(.82em, min(2.5vw, 3.6vh), 1.25em);
         opacity: 1;
         transition: var(--transition);
         transition-property: opacity, z-index;
