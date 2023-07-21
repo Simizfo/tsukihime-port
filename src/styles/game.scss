@@ -36,16 +36,24 @@ body {
         display: grid;
         grid-template-columns: 1fr 3fr 2fr 3fr 1fr;
 
-        * {
-            position: absolute;
-            overflow: hidden;
-            height: inherit;
+        div {
+            height: 100%;
+            width: 100%;
             object-fit: cover;
+
             &.l, &.c, &.r {
-                width: 100%;
                 position: relative;
                 overflow: visible;
                 grid-row: 1;
+                display: grid;
+
+                img {
+                    position: absolute;
+                    bottom: 0;
+                    justify-self: center;
+                    height: inherit;
+                    object-fit: cover;
+                }
             }
 
             &.l { grid-column: 2; }
@@ -54,14 +62,21 @@ body {
 
             &.bg {
                 position: absolute;
+                overflow: hidden;
                 inset: 0;
                 display: block;
                 width: inherit;
-                transition: object-position var(--transition-time) ease-out;
 
-                &[bg-align="top"] { object-position: top; }
-                &[bg-align="center"] { object-position: center; }
-                &[bg-align="bottom"] { object-position: bottom; }
+                img {
+                    width: inherit;
+                    height: inherit;
+                    object-fit: cover;
+                    transition: object-position var(--transition-time) ease-out;
+
+                    &[bg-align="top"] { object-position: top; }
+                    &[bg-align="center"] { object-position: center; }
+                    &[bg-align="bottom"] { object-position: bottom; }
+                }
             }
         }
     }

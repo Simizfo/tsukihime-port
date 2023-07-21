@@ -171,27 +171,19 @@ export function graphicsElement(pos: SpritePos, image: string,
                                 _attrs: {[key:string]: any} = {}) {
 
   image = image || ((pos=="bg") ? "#000000" : "#00000000")
-  let {className, ...attrs} = _attrs
-  className = (className?+className+" ":"")+pos
-  if (image.startsWith('#')) {
-    return (
-      <div
-        style={{ background: image }}
-        className={className}
-        {...attrs}
-      />
-    )
-  }
-  else {
-    return (
-      <img
-        src={imgUrl(image)}
-        alt={`[[sprite:${image}]]`}
-        className={className}
-        {...attrs}
-      />
-    )
-  }
+  const {key, ...attrs} = _attrs
+  const isColor = image.startsWith('#')
+  return (
+    <div
+      {...(isColor ? {style:{ background: image }} : {})}
+      key={key}
+      className={pos}>
+      {!isColor &&
+        <img src={imgUrl(image)} alt={`[[sprite:${image}]]`}
+          {...attrs}
+        />}
+    </div>
+  )
 }
 
 //##############################################################################
@@ -293,10 +285,13 @@ export const GraphicsLayer = memo(function({...props}: {[key: string]: any}) {
           }
           {graphicsElement(pos, currImages[pos], {
             key: currImages[pos]||pos,
-            ...((pos != 'bg' && ([pos, 'a'].includes(trans_pos))) ? {
+            ...(pos == 'bg' ? {
+              'bg-align': bgAlign
+            } : [pos, 'a'].includes(trans_pos) ? {
               'fade-in': effect,
               style: {'--transition-time': `${duration}ms`},
-            } : {})})}
+            } : {})
+          })}
         </Fragment>)
       }
     </div>

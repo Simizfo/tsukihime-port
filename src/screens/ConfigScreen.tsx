@@ -63,7 +63,7 @@ const ConfigScreen = () => {
           </div>
 
           <div>
-            Quality:
+            Quality:&nbsp;
             <select
               value={imagesFolder}
               onChange={(e) => updateImagesFolder(e.target.value)}>
@@ -73,7 +73,7 @@ const ConfigScreen = () => {
           </div>
 
           <div>
-            Text speed:
+            Text speed:&nbsp;
             <select
               value={textSpeed}
               onChange={(e) => updateTextSpeed(parseInt(e.target.value))}>
@@ -85,7 +85,7 @@ const ConfigScreen = () => {
           </div>
 
           <div>
-            Blur gallery thumbnails:
+            Blur gallery thumbnails:&nbsp;
             <input
               type="checkbox"
               checked={galleryBlur}

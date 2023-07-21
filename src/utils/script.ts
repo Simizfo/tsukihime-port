@@ -233,7 +233,7 @@ export async function processLine(line: string) {
     line = line.substring(1)
     if (!endPageBreak)
       line += '\n'
-    instructions.push(...splitText(line.substring(1)))
+    instructions.push(...splitText(line))
   } else if (line.startsWith('!')) {
     instructions.push(...splitText(line)) // '!w' are handled as inline commands
   } else {
