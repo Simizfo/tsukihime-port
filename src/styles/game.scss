@@ -27,13 +27,12 @@ body {
     font-family: Ubuntu, sans-serif;
 
     .box {
-        width: inherit;
-        height: inherit;
+        width: 100%;
+        height: 100%;
         position: absolute;
     }
     .box-graphics {
         z-index: 0;
-        overflow: hidden;
         display: grid;
 
         img {

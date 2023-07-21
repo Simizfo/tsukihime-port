@@ -12,18 +12,20 @@ const AnimatedRoutes = () => {
   const location = useLocation()
 
   return (
-    <div className="root-page">
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Navigate to="/title" />} />
-          <Route path="/title" element={<TitleMenuScreen />} />
-          <Route path="/window" element={<Window />} />
-          <Route path="/gallery" element={<GalleryScreen />} />
-          <Route path="/config" element={<ConfigScreen />} />
-          <Route path="/load" element={<LoadScreen />} />
-          <Route path="/load" element={<LoadScreen />} />
-        </Routes>
-      </AnimatePresence>
+    <div className="root-view">
+      <div className="view">
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Navigate to="/title" />} />
+            <Route path="/title" element={<TitleMenuScreen />} />
+            <Route path="/window" element={<Window />} />
+            <Route path="/gallery" element={<GalleryScreen />} />
+            <Route path="/config" element={<ConfigScreen />} />
+            <Route path="/load" element={<LoadScreen />} />
+            <Route path="/load" element={<LoadScreen />} />
+          </Routes>
+        </AnimatePresence>
+      </div>
     </div>
   )
 }
