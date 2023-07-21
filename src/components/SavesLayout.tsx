@@ -16,7 +16,10 @@ function saveElement(id: string|number, saveState: SaveState,
   return (
     <button className="save-container" key={id} {...(id==QUICK_SAVE_ID ? {'quick-save':''} : {})}
             {...props}>
-      {graphicsElement("bg", saveState.context.graphics.bg)}
+      <div className="graphics">{
+        Object.entries(saveState.context.graphics).map(([pos, image])=>
+          image && graphicsElement(pos as any, image))
+      }</div>
       <div className="deta">
         <div className="date">
           <b>{date.toLocaleDateString()}</b> {date.toLocaleTimeString()}
@@ -83,7 +86,10 @@ const SavesLayout = ({variant}: Props) => {
       </div>
 
       <div className="info">
-        {graphicsElement("bg", focusedSave?.context.graphics.bg ?? "notreg")}
+      <div className="graphics">{
+        Object.entries(focusedSave?.context.graphics??{bg:"notreg"}).map(([pos, image])=>
+          image && graphicsElement(pos as any, image))
+      }</div>
 
         Affinités<br />
         <button className="affinity">Export save</button>

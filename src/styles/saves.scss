@@ -18,6 +18,7 @@
     margin: 0 auto;
     flex: 1;
     overflow-y: scroll;
+    overflow-x: hidden;
 
     .saves {
         display: flex;
@@ -45,15 +46,6 @@
                 font-size: 1.4em;
             }
 
-            img {
-                display: block;
-                max-width: 100%;
-                height: 100%;
-                aspect-ratio: 4/3;
-                object-fit: contain;
-                border-radius: 4px;
-            }
-
             .deta {
                 min-width: 0;
 
@@ -74,6 +66,10 @@
                 }
             }
 
+            .graphics {
+                height: 100%;
+            }
+
             &:hover {
                 cursor: pointer;
                 background: linear-gradient(180deg, #1224C3 0%, #0E7CAB 100%);
@@ -84,10 +80,53 @@
 
     .info {
         background-color: #fff;
+        .graphics {
+            width: 100%;
+            height: unset;
+        }
+    }
 
-        img {
-            display: block;
-            max-width: 100%;
+    .graphics {
+        position: relative;
+        display: grid;
+        aspect-ratio: 4/3;
+        grid-template-columns: 1fr 3fr 2fr 3fr 1fr;
+
+        div {
+            height: 100%;
+            width: 100%;
+
+            &.l, &.c, &.r {
+                position: relative;
+                overflow: visible;
+                grid-row: 1;
+                display: grid;
+
+                img {
+                    position: absolute;
+                    bottom: 0;
+                    justify-self: center;
+                    height: inherit;
+                    object-fit: cover;
+                }
+            }
+
+            &.l { grid-column: 2; }
+            &.c { grid-column: 3; }
+            &.r { grid-column: 4; }
+
+            &.bg {
+                position: absolute;
+                overflow: hidden;
+                inset: 0;
+                display: block;
+                width: inherit;
+
+                img {
+                    width: inherit;
+                    height: inherit;
+                }
+            }
         }
     }
 
