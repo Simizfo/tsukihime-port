@@ -25,6 +25,7 @@ const defaultsSettings = {
   galleryBlur: true,
   warnHScenes: false, // [not implemented]
   // other settings
+  skipDisclaimer: false,
   volume: {
     master: 10,
     track: 10,

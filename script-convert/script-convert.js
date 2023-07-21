@@ -76,7 +76,7 @@ function splitInstructions(scriptLines) {
 
         if (line.length == 0)
             result.push(line)
-        
+
         while (line.length > 0) {
             if (line.startsWith(('`'))) {
                 let index = line.search(/\\(?!$)/); // '\' before end of line
@@ -85,7 +85,10 @@ function splitInstructions(scriptLines) {
                     break;
                 } else {
                     result.push(line.substring(0, index+1));
-                    line = `\`${line.substring(index+1)}`;
+                    line = line.substring(index+1);
+                    if (!line.startsWith(' '))
+                        line = ' '+line
+                    line = '`'+line;
                 }
             } else if (match = line.match(colonRegexp)) {
                 const index = match[0].length-1;
@@ -101,12 +104,14 @@ function splitInstructions(scriptLines) {
 }
 
 const ignoredLabels = [
+    'define', 'start',
     'imagemode', 'gameopt', 'option',
     'endinglist', 'gamestart_menu',
-    'regard_check', 'endofplay',
-    'checks', ];
+    'regard_update', 'regard_check',
+    'endofplay', 'checks', ];
 const ignoredLabelRegexps = [
     //tsukihime
+    /^terms/,
     /^[a-z]+_gallery(_check)?$/,
     /^[a-z]+_effectspeed$/,
     /^gallery\d?$/, /^eggs\d?$/,
@@ -124,9 +129,13 @@ function writeScenes(scriptLines, dir) {
     for (const line of scriptLines) {
         if (line.startsWith('*')) {
             const label = line.substring(1)
-            if (m = label.match(/^s(?<id>\d+a?)$/)) { // scenes
-                sceneId = `scene${m.groups.id}`
-                scene = []
+            if (m = label.match(/^se?(?<id>\d+a?)$/)) { // scenes
+                if (sceneId != `scene${m.groups.id}`) {
+                    if (sceneId)
+                        console.log(sceneId, m.groups.id)
+                    sceneId = `scene${m.groups.id}`
+                    scene = []
+                }
             } else if (["openning", "ending", "eclipse"].includes(label)
                     || label.startsWith("mm")) { // easter eggs
                 if (label.endsWith("click")) { // ignore '*xxxclick' labels
