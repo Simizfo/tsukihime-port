@@ -29,15 +29,28 @@ function saveElement(id: string|number, saveState: SaveState,
   )
 }
 
+// sort savestates quick save first, then from most recent to oldest
+function compareSaveStates([id1, ss1]: [number, SaveState], [id2, ss2]: [number, SaveState]) {
+  return id1 == QUICK_SAVE_ID ? -1
+      : id2 == QUICK_SAVE_ID ? 1
+      : (ss2.date ?? 0) - (ss1.date ?? 0)
+}
+
 const SavesLayout = ({variant}: Props) => {
-  const [saves, setSaves] = useState<Array<[number,SaveState]>>(listSaveStates())
+
+  const [saves, setSaves] = useState<Array<[number,SaveState]>>([])
   const [focusedSave, setFocusedSave] = useState<SaveState|null>(null)
 
-  console.log(saves)
+  function updateSavesList() {
+    setSaves(listSaveStates().sort(compareSaveStates))
+  }
+  useEffect(()=> {
+    updateSavesList()
+  }, [])
 
-  const createSave = () => {
+  function createSave() {
     storeLastSaveState(new Date().getTime())
-    setSaves(listSaveStates())
+    updateSavesList()
   }
 
   const handleAction = (id:number) => {
