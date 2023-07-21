@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { displayMode } from "../utils/variables"
-import { observe, unobserve } from "../utils/Observer"
+import { useObserver } from "../utils/Observer"
 import script from "../utils/script"
 
 const SkipLayer = () => {
@@ -13,18 +13,15 @@ const SkipLayer = () => {
       setDisplay(true)
       skipConfirm.current = confirm
     }
-    observe(displayMode, 'skip', setDisplay)
-    observe(displayMode, 'skip', console.log.bind(console, "[SKIP]"))
-    return ()=> {
-      unobserve(displayMode, 'skip', setDisplay)
-    }
   }, [])
+
+  useObserver(setDisplay, displayMode, 'skip')
 
   useEffect(()=> {
     if (display != displayMode.skip)
       displayMode.skip = display
   }, [display])
-  
+
   function onSelection(skip: boolean) {
     setDisplay(false)
     skipConfirm.current?.(skip)

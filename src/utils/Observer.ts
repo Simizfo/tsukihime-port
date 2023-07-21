@@ -1,3 +1,5 @@
+import { useEffect } from "react"
+
 type ObserverCallback<T=any> = (value: T)=>void
 type Observable = {[key: PropertyKey]: any}
 type PropertyObserver = {
@@ -47,7 +49,7 @@ class PropertiesObserver {
                 throw Error(`property ${property.toString()} is not a direct property of object ${this.parent}`)
             if (!(descriptor.configurable && (descriptor.writable??true)))
                 throw Error(`property ${property.toString()} of ${this.parent} must be configurable and writable to be observed`)
-            
+
             // Replace current property descriptor
             const onValueChange = this.onValueChange
             const observer = {
@@ -116,7 +118,7 @@ export function observe<T extends Observable, T1 extends ObservableContainer<T>>
 
 /**
  * Stops Listening for changes of the property.
- * 
+ *
  * All parameters must be the same as when calling the `observe` function
  */
 export function unobserve<T extends Observable, T1 extends ObservableContainer<T>>(object: T|T1, property: keyof T, callback: ObserverCallback): boolean {
@@ -165,14 +167,14 @@ class ObservableContainer<T extends Object> {
     }
 }
 
-export function observeChildren<T extends Object>(parent: T, attr: keyof typeof parent, callback: (prop: PropertyKey, value: any)=>void) {
+export function observeChildren<T extends Object>(parent: T, attr: keyof T, callback: (prop: PropertyKey, value: any)=>void) {
     if (!(callbacksSymbol in parent[attr])) {
         parent[attr] = new ObservableContainer(parent[attr]) as any
     }
     const callbacks = parent[attr][callbacksSymbol as keyof ObservableContainer<T>] as Array<(prop: PropertyKey, val: any)=>void>
     callbacks.push(callback)
 }
-export function unobserveChildren<T extends Object>(parent: Object, attr: keyof typeof parent, callback: (prop: keyof T, value: any)=>void): boolean {
+export function unobserveChildren<T extends Object>(parent: T, attr: keyof T, callback: (prop: PropertyKey, value: any)=>void): boolean {
     const callbacks = parent[attr][callbacksSymbol as keyof ObservableContainer<T>] as Array<(prop: keyof T, val: any)=>void>
     const index = callbacks?.indexOf(callback)??-1
     if (index == -1)
@@ -181,4 +183,17 @@ export function unobserveChildren<T extends Object>(parent: Object, attr: keyof 
     if (callbacks.length == 0)
         parent[attr] = parent[attr][hiddenObjSymbol as keyof ObservableContainer<T>]
     return true
+}
+
+export function useObserver<T extends Observable, T1 extends ObservableContainer<T>>(callback:ObserverCallback, object: T|T1, property: keyof T) {
+    useEffect(()=> {
+        observe(object, property, callback)
+        return unobserve.bind(null, object, property, callback) as VoidFunction
+    }, [])
+}
+export function useChildrenObserver<T extends Object>(callback: (prop: PropertyKey, value: any)=>void, parent: T, attr: keyof T) {
+    useEffect(()=> {
+        observeChildren(parent, attr, callback)
+        return unobserveChildren.bind(null, parent, attr as any, callback) as VoidFunction
+    }, [])
 }

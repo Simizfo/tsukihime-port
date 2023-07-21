@@ -163,7 +163,7 @@ function processScriptMvmt(arg: string, cmd: string) {
         // as completed before jumping to ending
       } else if (isScene(arg)) {
         arg = arg.substring(1)
-        if (settings.completedScenes.includes(arg)) {
+        if (settings.enableSceneSkip && settings.completedScenes.includes(arg)) {
           console.log(`scene ${arg} already completed`)
           skipCallback((skip)=>{
             gameContext.label = skip ? `skip${arg.substring(1)}` : arg
@@ -227,7 +227,7 @@ export async function processLine(line: string) {
 
   if (endPageBreak) // '\\' will be added as an individual command at the end
     line = line.substring(0, line.length-1)
-  
+
   if (line.startsWith('`')) {
     // following space (if present) is part of the argument
     line = line.substring(1)
@@ -248,7 +248,7 @@ export async function processLine(line: string) {
 
   if (endPageBreak)
     instructions.push({cmd:'\\',arg:''})
-  
+
   for (const [i, {cmd, arg}] of instructions.entries()) {
     if (lineSkipped) {
       break
@@ -290,7 +290,7 @@ async function processCurrentLine() {
     return // not in the right screeen
   else if (sceneLines?.length == 0)
     return // scene not loaded
-  
+
   if (currentCommand) {
     if (lastLine.index == gameContext.index &&
         lastLine.label == gameContext.label)
@@ -324,7 +324,7 @@ async function processCurrentLine() {
     } else {
       gameContext.index++
     }
-    
+
   } else {
     onSceneEnd()
   }

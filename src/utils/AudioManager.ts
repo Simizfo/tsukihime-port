@@ -136,7 +136,7 @@ class AudioManager {
     }
     this.trackNode = await this.createABSource(name, loop);
     this.trackNode.connect(this.trackGainNode);
-
+    this.context.resume();
     this.trackNode.start();
     this.trackNode.onended = ()=> {
       if (this.trackNode) {
@@ -177,6 +177,7 @@ class AudioManager {
     this.seNode = await this.createABSource(name, loop);
     this.seNode.connect(this.seGainNode);
 
+    this.context.resume();
     this.seNode.start();
     this.seNode.onended = ()=> {
       if (this.seNode) {
@@ -293,12 +294,12 @@ observe(displayMode, 'screen', (screen)=> {
   }
 })
 
-audio.masterVolume = settings.volume.master
-audio.trackVolume = settings.volume.track
-audio.seVolume = settings.volume.se
-observe(settings.volume, 'master' , (v)=>{audio.masterVolume = v})
-observe(settings.volume, 'track'  , (v)=>{audio.trackVolume = v})
-observe(settings.volume, 'se'     , (v)=>{audio.seVolume = v})
+audio.masterVolume = Math.max(0,settings.volume.master/10)
+audio.trackVolume = Math.max(0,settings.volume.track/10)
+audio.seVolume = Math.max(0,settings.volume.se/10)
+observe(settings.volume, 'master', (v)=>{audio.masterVolume = v<=0 ? 0 : v/10})
+observe(settings.volume, 'track' , (v)=>{audio.trackVolume = v<=0 ? 0 : v/10})
+observe(settings.volume, 'se'    , (v)=>{audio.seVolume = v<=0 ? 0 : v/10})
 
 //___________________________________commands___________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

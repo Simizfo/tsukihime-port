@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef, memo, Fragment } from "react";
 import { displayMode, gameContext, settings } from "../utils/variables";
-import { observe, unobserve } from "../utils/Observer";
+import { observe, unobserve, useChildrenObserver, useObserver } from "../utils/Observer";
 import Timer from "../utils/timer";
 
 type SpritePos = keyof typeof gameContext.graphics
@@ -209,35 +209,18 @@ export const GraphicsLayer = memo(function({...props}: {[key: string]: any}) {
 //__________________________listen for sprite changes___________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  useEffect(()=> {
-
-    const imageCallback = ()=> {
-      setCurrImages({...gameContext.graphics})
+  useObserver(setBgAlign, displayMode, 'bgAlignment')
+  useObserver((duration: number)=> {
+    if (duration == 0) { // skipped the on-going animation, or animation has ended
+      setPrevImages({...gameContext.graphics})
+      timer.current?.cancel()
+      timer.current == null
     }
+  }, transition, 'duration')
 
-    const animCallback = (duration: number)=> {
-      if (duration == 0) { // skipped the on-going animation, or animation has ended
-        setPrevImages({...gameContext.graphics})
-        timer.current?.cancel()
-        timer.current == null
-      }
-    }
-
-    for(const pos of POSITIONS)
-      observe(gameContext.graphics, pos, imageCallback)
-
-    observe(displayMode, 'bgAlignment', setBgAlign)
-    observe(transition, 'duration', animCallback)
-
-    return ()=> {
-      for (const pos of POSITIONS)
-        unobserve(gameContext.graphics, pos, imageCallback)
-
-      unobserve(displayMode, 'bgAlignment', setBgAlign)
-      unobserve(transition, 'duration', animCallback)
-    }
-
-  }, [])
+  useChildrenObserver((_pos, _img)=> {
+    setCurrImages({...gameContext.graphics})
+  }, gameContext, "graphics")
 
 //__________________________________animations__________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

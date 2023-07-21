@@ -2,7 +2,7 @@ import { Fragment, useEffect, useRef, useState } from 'react';
 import { addEventListener, convertText, objectMatch } from "../utils/utils";
 import { displayMode } from '../utils/variables';
 import { SaveState, loadSaveState } from "../utils/savestates";
-import { observe, unobserve } from '../utils/Observer';
+import { useObserver } from '../utils/Observer';
 import script from '../utils/script';
 
 type Props = {
@@ -26,12 +26,7 @@ const HistoryLayer = (props: Props) => {
     return addEventListener({event: 'wheel', handler: handleWheel})
   })
 
-  useEffect(()=> {
-    observe(displayMode, 'history', setDisplay)
-    return ()=> {
-      unobserve(displayMode, 'history', setDisplay)
-    }
-  }, [])
+  useObserver(setDisplay, displayMode, 'history')
 
   useEffect(()=> {
     if (display != displayMode.history)

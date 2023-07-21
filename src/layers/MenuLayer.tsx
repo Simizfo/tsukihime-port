@@ -4,9 +4,8 @@ import { FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 import { IoClose } from "react-icons/io5"
 import { SCREEN, displayMode, settings } from "../utils/variables"
 import { quickLoad, quickSave } from "../utils/savestates"
-import { observe, unobserve } from "../utils/Observer"
-import { Link, useNavigate } from "react-router-dom"
-import script from "../utils/script"
+import { useObserver } from "../utils/Observer"
+import { useNavigate } from "react-router-dom"
 
 /**
  * TODO
@@ -19,24 +18,19 @@ const MenuLayer = () => {
   const navigate = useNavigate()
   const menuRef = useRef<HTMLDivElement>(null)
   const [display, setDisplay] = useState<boolean>(displayMode.menu)
-  const [mute, setMute] = useState<boolean>(settings.volume.master == 0)
+  const [mute, setMute] = useState<boolean>(settings.volume.master < 0)
 
-  useEffect(()=> {
-    const callback = ()=> {
-      setDisplay(displayMode.menu)
-      setMute(settings.volume.master == 0)
-      if (!displayMode.menu) {
-        if (menuRef.current?.contains(document.activeElement))
-          (document.activeElement as HTMLElement).blur?.();
-      }
+  useObserver((display: boolean)=> {
+    setDisplay(display)
+    if (!display) {
+      if (menuRef.current?.contains(document.activeElement))
+        (document.activeElement as HTMLElement).blur?.();
     }
-    observe(displayMode, 'menu', callback)
-    observe(settings.volume, 'master', callback)
-    return ()=> {
-      unobserve(displayMode, 'menu', callback)
-      unobserve(settings.volume, 'master', callback)
-    }
-  }, [])
+  }, displayMode, 'menu')
+
+  useObserver((volume: number)=> {
+    setMute(volume < 0)
+  }, settings.volume, 'master')
 
   useEffect(() => {
     //if a left click is made outside the menu, hide it
@@ -80,9 +74,7 @@ const MenuLayer = () => {
   }
 
   const volume = () => {
-    console.log("volume : ", settings.volume.master)
-    settings.volume.master = (settings.volume.master > 0 ? 0 : 1)
-    console.log("volume : ", settings.volume.master)
+    settings.volume.master = - settings.volume.master
   }
 
   return (

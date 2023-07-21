@@ -50,8 +50,8 @@ function restoreSaveStates(keyValuePairs: IterableIterator<[SaveStateId, SaveSta
  */
 export function createSaveState() {
   const ss: SaveState = {
-    context: structuredClone(gameContext),
-    progress: structuredClone(progress)
+    context: overrideAttributes({}, gameContext, false) as typeof gameContext,
+    progress: overrideAttributes({}, progress, false) as typeof progress
   }
   return ss
 }

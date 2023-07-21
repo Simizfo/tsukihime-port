@@ -24,7 +24,7 @@ async function fetchBlock(label: string):Promise<string[]> {
 
   let end = script.substring(start).search(/^\*(?!skip)/m)
   end = (end == -1) ? script.length : start + end
-  
+
   return script.substring(start, end)
       .split(/\r?\n/)
       .filter(line=>line.length>0)
@@ -42,7 +42,7 @@ export async function fetchFBlock(label: string): Promise<string[]> {
   }
   const lines = (await fetchBlock(`f${label}`)).filter(
       line=>!ignoredFBlockLines.includes(line))
-  
+
   // find 'gosub *sXXX'
   let sceneLine = lines.findIndex(line=>/^gosub\s+\*s\d/.test(line))
   if (sceneLine >= 0) {
@@ -136,6 +136,7 @@ export function overrideAttributes(dest: {[key: PropertyKey]: any}, src: {[key: 
       dest[p] = src[p]
     }
   }
+  return dest
 }
 
 export function isDigit(str: string, index: number = 0) {

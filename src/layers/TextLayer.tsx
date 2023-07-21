@@ -5,7 +5,7 @@ import Timer from "../utils/timer"
 import { TEXT_SPEED } from "../utils/constants"
 import { convertText } from "../utils/utils"
 import { displayMode, settings } from "../utils/variables"
-import { observe, unobserve } from "../utils/Observer"
+import { useObserver } from "../utils/Observer"
 import script from "../utils/script"
 
 const icons: {[key: string]: string} = {
@@ -28,21 +28,32 @@ function appendText(text: string) {
   scriptInterface.text = script.history.top.text
 }
 
+function onBreakChar(_: string, cmd: string, onFinish: VoidFunction) {
+  appendText(cmd)
+  let delay = 0
+  switch(cmd) {
+    case '@' : delay = settings.autoClickDelay; break
+    case '\\' : delay = settings.nextPageDelay; break
+    default : throw Error(`unknown break char ${cmd}`)
+  }
+  if (delay > 0) {
+    const timer = new Timer(delay, onFinish)
+    timer.start()
+    return { next: timer.skip.bind(timer) }
+  } else {
+    return { next: onFinish }
+  }
+}
+
 export const commands = {
   'br' : appendText.bind(null, "\n"),
-  '@'  : (_arg:string, _cmd: string, onFinish: VoidFunction)=> {
-    appendText("@")
-    return { next: onFinish }
-  },
-  '\\' : (_arg:string, _cmd: string, onFinish: VoidFunction)=> {
-    appendText("\\")
-    return { next: onFinish }
-  },
+  '@'  : onBreakChar,
+  '\\' : onBreakChar,
   '`'  : (text:string, _: string, onFinish: VoidFunction)=> {
     appendText(text)
-    if (text == '\n') // line breaks an be displayed instantly
+    if (text == '\n') // line breaks are displayed instantly
       return;
-    
+
     scriptInterface.onFinish = ()=> {
       scriptInterface.onFinish = undefined,
       scriptInterface.fastForward = false
@@ -70,24 +81,24 @@ const TextLayer = memo(({...props}: Props) => {
   const [ immediate, setImmediate ] = useState<boolean>(false)
   const [ previousText, setPreviousText ] = useState<string[]>([]) // lines to display entirely
   const [ newText, setNewText ] = useState<string>("") // line to display gradually
-  const [ visibleText, setVisibleText ] = useState<string>("")
-  const [ hiddenText, setHiddenText ] = useState<string>("")
+  const [ visibleText, setVisibleText ] = useState<string>("") // part of the last line that is displayed
+  const [ hiddenText, setHiddenText ] = useState<string>("") // part of the last line not yet displayed
   const [ cursor, setCursor ] = useState<number>(0) // position of the cursor on the last line.
   const [ glyph, setGlyph ] = useState<string>('') // id of the animated glyph to display at end of line
 
   const [ display, setDisplay ] = useState<boolean>(displayMode.text)
-  
 
-  useEffect(()=> {
-    observe(displayMode, 'text', setDisplay)
-    observe(scriptInterface, "text", setText)
-    observe(scriptInterface, 'fastForward', setImmediate)
-    return ()=> {
-      unobserve(displayMode, 'text', setDisplay)
-      unobserve(scriptInterface, "text", setText)
-      unobserve(scriptInterface, 'fastForward', setImmediate)
-    }
-  }, [])
+  useObserver(setDisplay, displayMode, 'text')
+  useObserver(setText, scriptInterface, 'text')
+  useObserver(setImmediate, scriptInterface, 'fastForward')
+
+  useObserver((_opacity: number)=> {
+    //TODO
+  }, settings, "textPanelOpacity")
+
+  useObserver((_font: string)=> {
+    //TODO
+  }, settings, "font")
 
   useEffect(()=> {
     const previous = previousText.join('\n') + newText

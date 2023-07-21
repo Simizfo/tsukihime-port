@@ -10,17 +10,28 @@ import { objectMatch, overrideAttributes } from "./utils"
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 const SETTINGS_STORAGE_KEY = "settings"
 const defaultsSettings = {
-  imagesFolder: IMAGES_FOLDERS.image_x2,
-  eventImages: new Array<string>(),
+  // scene settings
   textSpeed: TEXT_SPEED.normal,
-  galleryBlur: true,
+  autoClickDelay: 0,
+  nextPageDelay: 0,
   enableSceneSkip: true, // ask to skip scenes
+  preventUnreadSkip: false, // [not implemented]
+  // graphics settings
+  font: "Ubuntu", // [not implemented]
+  textPanelOpacity: 0.5, // [not implemented]
+  imagesFolder: IMAGES_FOLDERS.image_x2,
+  fixedRatio: 0, // [not implemented]
+  // H-related settings
+  galleryBlur: true,
+  warnHScenes: false, // [not implemented]
+  // other settings
   volume: {
-    master: 1,
-    track: 1,
-    se: 1,
+    master: 10,
+    track: 10,
+    se: 10,
   },
-  // list of scenes that have been completed
+  // saved progress
+  eventImages: new Array<string>(),
   completedScenes: new Array<string>(),
 }
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import SavesLayout from "../components/SavesLayout"
 import { displayMode } from "../utils/variables"
 import { addEventListener } from "../utils/utils"
-import { observe, unobserve } from '../utils/Observer';
+import { useObserver } from '../utils/Observer';
 
 const SavesLayer = () => {
   const [displaySave, setDisplaySave] = useState<boolean>(displayMode.save)
@@ -19,14 +19,8 @@ const SavesLayer = () => {
     if (displayLoad) setTitle("Load")
   }, [displayLoad])
 
-  useEffect(()=> {
-    observe(displayMode, 'save', setDisplaySave)
-    observe(displayMode, 'load', setDisplayLoad)
-    return ()=> {
-      unobserve(displayMode, 'save', setDisplaySave)
-      unobserve(displayMode, 'load', setDisplayLoad)
-    }
-  }, [])
+  useObserver(setDisplaySave, displayMode, "save")
+  useObserver(setDisplayLoad, displayMode, "load")
 
   useEffect(() => {
     const handleContextMenu = (_e: MouseEvent) => {

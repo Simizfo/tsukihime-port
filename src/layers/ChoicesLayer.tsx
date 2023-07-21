@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Choice } from "../types"
 import { displayMode, gameContext } from "../utils/variables"
-import { observe, unobserve } from "../utils/Observer"
+import { useObserver } from "../utils/Observer"
 
 const choicesContainer: {choices: Choice[]} = {
   choices: []
@@ -48,14 +48,8 @@ const ChoicesLayer = () => {
   const [display, setDisplay] = useState<boolean>(displayMode.choices)
   const [choices, setChoices] = useState<Choice[]>([])
 
-  useEffect(()=> {
-    observe(displayMode, 'choices', setDisplay)
-    observe(choicesContainer, 'choices', setChoices)
-    return ()=> {
-      unobserve(displayMode, 'choices', setDisplay)
-      unobserve(choicesContainer, 'choices', setChoices)
-    }
-  }, [])
+  useObserver(setDisplay, displayMode, 'choices')
+  useObserver(setChoices, choicesContainer, 'choices')
 
   const handleSelect = (choice: Choice) => {
     console.log(choice)

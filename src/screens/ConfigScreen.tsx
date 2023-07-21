@@ -3,21 +3,21 @@ import { useEffect, useState } from 'react'
 import '../styles/config.scss'
 import { IMAGES_FOLDERS, TEXT_SPEED } from '../utils/constants'
 import { SCREEN, displayMode, settings } from '../utils/variables'
-import { observe, unobserve } from '../utils/Observer'
+import { useObserver } from '../utils/Observer'
 import { motion } from 'framer-motion'
 
 const ConfigScreen = () => {
-  
+
   const [volume, setVolume] = useState(settings.volume.master)
   const [imagesFolder, setImagesFolder] = useState(settings.imagesFolder)
   const [textSpeed, setTextSpeed] = useState(settings.textSpeed)
   const [galleryBlur, setGalleryBlur] = useState(settings.galleryBlur)
 
-  
+
   useEffect(()=> {
     displayMode.screen = SCREEN.CONFIG
   }, [])
-  
+
   const updateVolume = (vol: number) => {
     settings.volume.master = vol
   }
@@ -34,18 +34,10 @@ const ConfigScreen = () => {
     settings.galleryBlur = blur
   }
 
-  useEffect(()=> {
-    observe(settings.volume, 'master', setVolume)
-    observe(settings, 'imagesFolder', setImagesFolder)
-    observe(settings, 'textSpeed', setTextSpeed)
-    observe(settings, 'galleryBlur', setGalleryBlur)
-    return ()=> {
-      unobserve(settings.volume, 'master', setVolume)
-      unobserve(settings, 'imagesFolder', setImagesFolder)
-      unobserve(settings, 'textSpeed', setTextSpeed)
-      unobserve(settings, 'galleryBlur', setGalleryBlur)
-    }
-  }, [])
+  useObserver(setVolume, settings.volume, 'master')
+  useObserver(setImagesFolder, settings, 'imagesFolder')
+  useObserver(setTextSpeed, settings, 'textSpeed')
+  useObserver(setGalleryBlur, settings, 'galleryBlur')
 
   return (
     <motion.div
@@ -57,18 +49,21 @@ const ConfigScreen = () => {
         <h2 className="page-title">Config</h2>
         <main>
           <div>
-            Volume: {settings.volume.master}
+            Volume: {Math.abs(volume)}
             <input
               type="range"
               min="0"
               max="10"
               step={1}
-              value={volume}
-              onChange={(e) => updateVolume(parseInt(e.target.value))} />
+              value={Math.abs(volume)}
+              onChange={(e) => {
+                const sign = Math.sign(volume)
+                updateVolume(sign * parseInt(e.target.value))
+              }} />
           </div>
 
           <div>
-            Quality: 
+            Quality:
             <select
               value={imagesFolder}
               onChange={(e) => updateImagesFolder(e.target.value)}>
