@@ -15,7 +15,7 @@ const AnimatedRoutes = () => {
     <div className="page">
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Navigate to="/window" />} /> {/* nav to title latter in prod */}
+          <Route path="/" element={<Navigate to="/title" />} />
           <Route path="/title" element={<TitleMenuScreen />} />
           <Route path="/window" element={<Window />} />
           <Route path="/gallery" element={<GalleryScreen />} />
