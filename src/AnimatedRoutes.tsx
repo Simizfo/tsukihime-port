@@ -12,8 +12,8 @@ const AnimatedRoutes = () => {
   const location = useLocation()
 
   return (
-    <div className="root-view">
-      <div className="view">
+    <div id="root-view">
+      <div id="view">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Navigate to="/title" />} />
