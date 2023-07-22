@@ -1,6 +1,6 @@
 import script from "./script";
 import { overrideAttributes, requestFilesFromUser, textFileUserDownload } from "./utils";
-import { gameContext, progress, settings } from "./variables";
+import { defaultGameContext, defaultProgress, gameContext, progress, settings } from "./variables";
 
 //##############################################################################
 //#                                 SAVESTATES                                 #
@@ -148,6 +148,18 @@ export function listSaveStates(): Array<[SaveStateId, SaveState]> {
   return Array.from(saveStates.entries())
 }
 
+export function getLastSave(): SaveState {
+  return Array.from(saveStates.values()).reduce(
+    (ss1, ss2)=>(ss1.date ?? 0) > (ss2.date ?? 0) ? ss1 : ss2)
+}
+
+export function blankSaveState() : SaveState {
+  return {
+    context: defaultGameContext,
+    progress: defaultProgress
+  }
+}
+
 //##############################################################################
 //#                                 SAVE FILES                                 #
 //##############################################################################
@@ -165,7 +177,10 @@ type exportSaveFileOptions = {
  * @param saveStateFilter array of save-state ids to export. Empty array:
  *        save-states are omitted. Default : all saves are exported.
  */
-export function exportSaveFile({omitSettings= false, saveStateFilter= undefined}: exportSaveFileOptions) {
+export function exportSaveFile({
+      omitSettings= false,
+      saveStateFilter= undefined
+    }: exportSaveFileOptions = {}) {
   const content = JSON.stringify({
     ...(!omitSettings ? {
       settings: overrideAttributes({}, settings, false)
@@ -181,6 +196,10 @@ export function exportSaveFile({omitSettings= false, saveStateFilter= undefined}
   textFileUserDownload(content, `tsukihime_save_${dateString}.thsave`)
 }
 
+type loadSaveFileOptions = {
+  ignoreSettings?: boolean,
+  ignoreSaveStates?: boolean
+}
 /**
  * Restores settings and savestates from one or multiple files requested
  * to the user or from the specified stringified JSON. Settings can be ignored
@@ -193,8 +212,9 @@ export function exportSaveFile({omitSettings= false, saveStateFilter= undefined}
  *        in the save file. Default: false
  */
 export async function loadSaveFile(save: string | undefined = undefined, {
-  ignoreSettings = true, ignoreSaveStates = true
-}): Promise<boolean> {
+      ignoreSettings = true,
+      ignoreSaveStates = true
+    }: loadSaveFileOptions = {}): Promise<boolean> {
   if (!save) {
     let files = await requestFilesFromUser({ multiple: true, accept: ".thsave" })
     if (!files)

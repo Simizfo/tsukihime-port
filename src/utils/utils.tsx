@@ -139,6 +139,16 @@ export function overrideAttributes(dest: {[key: PropertyKey]: any}, src: {[key: 
   return dest
 }
 
+export function deepFreeze<T extends {[key: PropertyKey]: any}>(object: T): Readonly<T> {
+  const props = Reflect.ownKeys(object)
+  for (const p of props) {
+    const value = object[p]
+    if (value && ["object", "function"].includes(typeof value))
+      deepFreeze(value)
+  }
+  return Object.freeze(object)
+}
+
 export function isDigit(str: string, index: number = 0) {
   const char = str.charAt(index)
   return char >= '0' && char <= '9'

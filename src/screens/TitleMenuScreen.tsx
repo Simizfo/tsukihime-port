@@ -6,6 +6,8 @@ import ParticlesComponent from '../components/ParticlesComponent'
 import { SCREEN, displayMode, gameContext } from '../utils/variables'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
+import { blankSaveState, getLastSave, loadSaveFile, loadSaveState } from '../utils/savestates'
+import script from '../utils/script'
 
 const TitleMenuScreen = () => {
   const navigate = useNavigate()
@@ -18,6 +20,27 @@ const TitleMenuScreen = () => {
   useEffect(()=> {
     displayMode.screen = SCREEN.TITLE
   }, [])
+
+  function newGame() {
+    loadSaveState(blankSaveState())
+    navigate(SCREEN.WINDOW)
+  }
+  
+  async function continueGame() {
+    
+    // restart from beginning of last visisted page ...
+    let lastSave = script.history.top?.saveState
+                // or from last saved game
+                ?? getLastSave()
+                // or ask user to provide save file(s).
+                // Also retrieve settings from the save file(s)
+                ?? await loadSaveFile().then(getLastSave)
+    if (lastSave) {
+      loadSaveState(lastSave)
+      navigate(SCREEN.WINDOW)
+    }
+  }
+
   return (
     <motion.div
       className="page" id="title-menu"
@@ -35,13 +58,11 @@ const TitleMenuScreen = () => {
         }} />
 
       <nav className="menu">
-        <button className='menu-item' onClick={()=>{
-          gameContext.label = 's20'
-          gameContext.index = 0
-          navigate(SCREEN.WINDOW)
-        }}>Start</button>
+        <button className='menu-item' onClick={newGame}>New Game</button>
+        <button className='menu-item' onClick={continueGame}>Continue</button>
 
         {
+        
         // TODO add a "Resume" button that just navigates to Window
         // and only available if a game is already running
         }

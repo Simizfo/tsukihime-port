@@ -346,7 +346,7 @@ async function loadLabel(label: string) {
     sceneLines = await fetchFBlock(label.substring(1))
   else if (/^skip\d+a?$/.test(label))
     sceneLines = await fetchFBlock(label)
-  else
+  else if (label != "")
     throw Error(`unknown label ${label}`)
   processCurrentLine()
 }

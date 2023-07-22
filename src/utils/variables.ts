@@ -1,6 +1,6 @@
 import { observe, observeChildren } from "./Observer"
 import { IMAGES_FOLDERS, TEXT_SPEED } from "./constants"
-import { objectMatch, overrideAttributes } from "./utils"
+import { deepFreeze, objectMatch, overrideAttributes } from "./utils"
 
 //##############################################################################
 //#                           APP-RELATED VARIABLES                            #
@@ -108,7 +108,7 @@ export const gameContext = {
 //_____________________________position in scenario_____________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   label: '', // script block label
-  index: 0, // line index in the labeled script block. +0.5 if '\' inside line
+  index: 0, // line index in the labeled script block.
 //_______________________________audio, graphics________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   audio: {
@@ -141,6 +141,9 @@ export const temp = { // temporaty variables (do not need to be saved)
   rockending: -1, // written, but never read in the script.
   flushcount: 0,  //used in for loops in the script
 }
+
+export const defaultGameContext = deepFreeze(structuredClone(gameContext));
+export const defaultProgress = deepFreeze(structuredClone(progress));
 
 //##############################################################################
 //#                                 FUNCTIONS                                  #
