@@ -149,17 +149,32 @@ export function listSaveStates(): Array<[SaveStateId, SaveState]> {
 }
 
 //##############################################################################
-//#                                GLOBAL SAVE                                 #
+//#                                 SAVE FILES                                 #
 //##############################################################################
-
+type exportSaveFileOptions = {
+  omitSettings?: boolean,
+  saveStateFilter?: SaveStateId[]
+}
 /**
  * Export the settings and savestates to a json file and lets the user
- * download it.
+ * download it. The settings can be omitted using the parameter
+ * {@link omitSettings}, and the save-states to be exported can be filtered
+ * by providing an array of ids in the parameter {@link saveStateFilter}.
+ * @param exportSettings true if the settings must be omitted in the save file.
+ *        Default: false
+ * @param saveStateFilter array of save-state ids to export. Empty array:
+ *        save-states are omitted. Default : all saves are exported.
  */
-export function exportGlobalSave() {
+export function exportSaveFile({omitSettings= false, saveStateFilter= undefined}: exportSaveFileOptions) {
   const content = JSON.stringify({
-    settings: overrideAttributes({}, settings, false),
-    saveStates: listSaveStates()
+    ...(!omitSettings ? {
+      settings: overrideAttributes({}, settings, false)
+    } : {}),
+    ...(!saveStateFilter ? {
+      saveStates: listSaveStates()
+    } : saveStateFilter.length > 0 ? {
+      saveStates: listSaveStates().filter(([id,_ss])=>saveStateFilter.includes(id))
+    } : {})
   });
   const date = new Date()
   const dateString = `${date.getFullYear()}${date.getMonth()}${date.getDate()}`
@@ -167,25 +182,49 @@ export function exportGlobalSave() {
 }
 
 /**
- * Restores settings and savestates from a file requested to the user,
- * or from the specified stringified JSON.
+ * Restores settings and savestates from one or multiple files requested
+ * to the user or from the specified stringified JSON. Settings can be ignored
+ * using the parameter {@link ignoreSettings}, and save-states can be ignored
+ * using the parameter {@link ignoreSaveStates}.
  * @param save stringified JSON, or undefined to ask the user for it.
+ * @param ignoreSettings true if the settings must be ignored
+ *        in the save file. Default: false
+ * @param ignoreSaveStates true if the save-states must be ignored
+ *        in the save file. Default: false
  */
-export async function loadGlobalSave(save: string | undefined = undefined) {
+export async function loadSaveFile(save: string | undefined = undefined, {
+  ignoreSettings = true, ignoreSaveStates = true
+}): Promise<boolean> {
   if (!save) {
-    const file = await requestFilesFromUser({ accept: ".thsave" }) as File | null
-    if (!file)
-      return; // canceled by user
-    save = await new Promise(resolve => {
-      const reader = new FileReader()
-      reader.readAsText(file)
-      reader.onload = (evt) => { resolve(evt.target?.result as string); }
-    });
-    if (!save)
-      return
+    let files = await requestFilesFromUser({ multiple: true, accept: ".thsave" })
+    if (!files)
+      return false; // canceled by user
+    if (files instanceof File)
+      files = [files]
+    let success = true
+    for (const file of files) {
+      success &&= await new Promise<string>((resolve,reject) => {
+        const reader = new FileReader()
+        reader.readAsText(file)
+        reader.onload = (evt) => {
+          if (evt.target?.result?.constructor == String)
+            resolve(evt.target.result)
+          else
+            reject(`cannot read save file ${file.name}`)
+        }
+      }).then(
+        (text)=>loadSaveFile(text, {ignoreSettings, ignoreSaveStates}),
+        (errorMsg)=> {
+        throw Error(errorMsg)
+      });
+    }
+    return success
+  } else {
+    const content = JSON.parse(save)
+    if (ignoreSettings && content.settings)
+      overrideAttributes(settings, content.settings, false)
+    if (ignoreSaveStates && content.saveStates)
+      restoreSaveStates(content.saveStates)
+    return true
   }
-  const content = JSON.parse(save)
-  overrideAttributes(settings, content.settings, false)
-  clearSaveStates()
-  restoreSaveStates(content.saveStates)
 }

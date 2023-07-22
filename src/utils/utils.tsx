@@ -164,7 +164,7 @@ export function textFileUserDownload(text: string, fileName: string) {
  * See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
  * for more details on the {@link multiple} and {@link accept} parameters
  */
-export function requestFilesFromUser({ multiple = false, accept = '' }): Promise<File|FileList|null> {
+export function requestFilesFromUser({ multiple = false, accept = '' }): Promise<File|File[]|null> {
 	return new Promise(((resolve) => {
 		const input = document.createElement('input');
 		input.setAttribute("type", "file");
@@ -176,7 +176,7 @@ export function requestFilesFromUser({ multiple = false, accept = '' }): Promise
 			input.toggleAttribute("multiple", true);
 
 		input.addEventListener("change", ()=> {
-			resolve(input.files);
+			resolve(input.files as File|File[]|null);
 		})
 		input.click();
 	}));

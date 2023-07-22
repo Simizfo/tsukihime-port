@@ -1,5 +1,5 @@
 import { FaPlusCircle } from "react-icons/fa"
-import { QUICK_SAVE_ID, SaveState, listSaveStates, loadSaveState, storeLastSaveState } from "../utils/savestates"
+import { QUICK_SAVE_ID, SaveState, exportSaveFile, listSaveStates, loadSaveFile as loadSaveFiles, loadSaveState, storeLastSaveState } from "../utils/savestates"
 import { useEffect, useState } from "react"
 import { graphicsElement } from "../layers/GraphicsLayer"
 import { displayMode } from "../utils/variables"
@@ -53,6 +53,18 @@ const SavesLayout = ({variant}: Props) => {
   function createSave() {
     storeLastSaveState(new Date().getTime())
     updateSavesList()
+  }
+
+  function importSaves() {
+    loadSaveFiles(undefined, { ignoreSettings: false })
+      .then(updateSavesList)
+  }
+
+  function exportSaves(...ids: number[]) {
+    if (ids.length == 0)
+      exportSaveFile({ omitSettings: false})
+    else
+      exportSaveFile({ omitSettings: false, saveStateFilter: ids})
   }
 
   const handleAction = (id:number) => {
