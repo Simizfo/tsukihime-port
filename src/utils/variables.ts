@@ -76,6 +76,7 @@ export enum SCREEN {
   WINDOW = "/window",
   GALLERY = "/gallery",
   CONFIG = "/config",
+  LOAD = "/load"
 }
 export const displayMode : {
   screen: SCREEN,

@@ -100,9 +100,13 @@ const Window = () => {
 
   useEffect(()=> {
     displayMode.screen = SCREEN.WINDOW
-
-    gameContext.label = 's29'
-    gameContext.index = 0
+    //TODO wait for screen transition animation to end before starting the script
+    if (gameContext.label == '') {
+      if (!quickLoad()) {
+        gameContext.label = 's20';
+        gameContext.index = 0;
+      }
+    }
 
     keyMap.enable(document, "keydown", {
       capture: false // default if bubble. set to true to change to capture

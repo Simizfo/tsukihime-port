@@ -1,14 +1,14 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import tsukiLogo from "../assets/game/menus/tsukihime-logo.webp"
-// import { audio } from "../utils/AudioManager"
 import '../styles/title-menu.scss'
 import ParticlesComponent from '../components/ParticlesComponent'
-import { SCREEN, displayMode } from '../utils/variables'
+import { SCREEN, displayMode, gameContext } from '../utils/variables'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 
 const TitleMenuScreen = () => {
-
+  const navigate = useNavigate()
   // useEffect(() => {
   //   if (!audio.isSoundKnown("menuTheme")) {
   //     audio.setSoundFileUrl("menuTheme", "CD/track08.mp3"),
@@ -35,19 +35,26 @@ const TitleMenuScreen = () => {
         }} />
 
       <nav className="menu">
-        <Link to="/window" className="menu-item">
-          Start
-        </Link>
+        <button className='menu-item' onClick={()=>{
+          gameContext.label = 's20'
+          gameContext.index = 0
+          navigate(SCREEN.WINDOW)
+        }}>Start</button>
 
-        <Link to="/load" className="menu-item">
+        {
+        // TODO add a "Resume" button that just navigates to Window
+        // and only available if a game is already running
+        }
+
+        <Link to={SCREEN.LOAD} className="menu-item">
           Load
         </Link>
 
-        <Link to="/config" className="menu-item">
+        <Link to={SCREEN.CONFIG} className="menu-item">
           Config
         </Link>
 
-        <Link to="/gallery" className="menu-item">
+        <Link to={SCREEN.GALLERY} className="menu-item">
           Gallery
         </Link>
       </nav>
