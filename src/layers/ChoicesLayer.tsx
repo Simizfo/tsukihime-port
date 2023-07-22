@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Choice } from "../types"
-import { displayMode, gameContext } from "../utils/variables"
+import { SCREEN, displayMode, gameContext } from "../utils/variables"
 import { useObserver } from "../utils/Observer"
 
 const choicesContainer: {choices: Choice[]} = {
@@ -50,6 +50,10 @@ const ChoicesLayer = () => {
 
   useObserver(setDisplay, displayMode, 'choices')
   useObserver(setChoices, choicesContainer, 'choices')
+  useObserver((screen)=> {
+    if (screen != SCREEN.WINDOW)
+      displayMode.choices = false // 'select' will be re-processed
+  }, displayMode, 'screen')
 
   const handleSelect = (choice: Choice) => {
     console.log(choice)
