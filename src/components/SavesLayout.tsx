@@ -2,8 +2,9 @@ import { FaPlusCircle } from "react-icons/fa"
 import { QUICK_SAVE_ID, SaveState, exportSaveFile, listSaveStates, loadSaveFile as loadSaveFiles, loadSaveState, storeLastSaveState } from "../utils/savestates"
 import { useEffect, useState } from "react"
 import { graphicsElement } from "../layers/GraphicsLayer"
-import { displayMode } from "../utils/variables"
+import { SCREEN, displayMode } from "../utils/variables"
 import { convertText } from "../utils/utils"
+import { useNavigate } from "react-router-dom"
 
 type Props = {
   variant: "save" | "load"
@@ -40,6 +41,7 @@ function compareSaveStates([id1, ss1]: [number, SaveState], [id2, ss2]: [number,
 
 const SavesLayout = ({variant}: Props) => {
 
+  const navigate = useNavigate()
   const [saves, setSaves] = useState<Array<[number,SaveState]>>([])
   const [focusedSave, setFocusedSave] = useState<SaveState|null>(null)
 
@@ -76,6 +78,10 @@ const SavesLayout = ({variant}: Props) => {
 
     if (variant === "load") {
       loadSaveState(id)
+      if (displayMode.screen != SCREEN.WINDOW)
+        //TODO avoid going back to default scene in Window.tsx
+        navigate(SCREEN.WINDOW)
+      
       displayMode.save = false
       displayMode.load = false
     }
