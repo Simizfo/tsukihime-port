@@ -1,149 +1,4 @@
 
-*define
-
-versionstr "Tsukihime English v1.2","Copyright (C) 2000,2001 TYPE-MOON All Rights Reserved."
-
-
-caption "Tsukihime - Translated by mirror moon"
-
-
-
-nsa
-
-
-
-
-
-
-
-
-
-
-windoweffect 10,300
-
-effectblank 50
-
-
-clickstr ``, 2
-
-
-selectcolor #ffffff,#aaaaaa
-
-menusetwindow 18,18,2,0,0,1,#cccccc
-
-menuselectcolor #ffffff,#aaaaaa,#aaaaaa
-
-rmenu `Display Image`, windowerase, `Recollection`, lookback, `Progress to Next Choice`, skip, `Create a save game (Save)`, save, `Restore a saved game (Load)`, load, `Return to title`, reset
-
-savenumber 20
-
-savename " ¡`Save  game`¡ ","¡ `Load  game` ¡",`Memory`
-
-
-
-lookbackbutton "icon\uoncur.bmp", "icon\uoffcur.bmp", "icon\doncur.bmp", "icon\doffcur.bmp"
-
-lookbackcolor #ffffd0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-globalon
-
-filelog
-
-
-game
-
-
-
-*start
-
-!sd
-
-mov %debugmode,0
-
-setcursor 0,":l/3,160,2;icon\cursor0.bmp",0,0
-setcursor 1,":l/3,160,2;icon\cursor1.bmp",0,0
-
-
-setwindow 18,18, 36,21, 17,17, 0, 4, 22, 1, 1, #aaaaaa, 0, 0, 639, 479
-
-if %agreedtoterms==1 goto *termsagree
-`This English translation is intended to be used with legitimate copies of Tsukihime.@ Revolve Translations and mirror moon do not endorse the use of this English patch with illegal copies of the game.@ By using this translation you agree to the following three conditions:@
-br
-`- You will NOT distribute any part of this translation together with an illegal copy of Tsukihime, or any part thereof.@
-`- You also will NOT use any part of this translation to help stimulate, promote or encourage the distribution of illegal copies of Tsukihime, or any parts thereof.@
-`- You also will NOT modify or redistribute any part of this software without previous written consent from mirror moon.@
-br
-br
-!s0
-trap *termsagreeclick
-`Do you agree to these terms?
-trap off
-*termsagreeclick
-select `Yes, I agree to all three terms.`, *termsagree,
-	`No, I do not agree to all three terms.`, *termsdisagree
-
-*termsdisagree
-!sd
-end
-
-*termsagree
-!sd
-mov %agreedtoterms,1
-
-
-bg "image\word\type_moon.jpg",%type_crossfade_mid
-wait 1200
-bg "image\bg\ima_10.jpg",%type_crossfade_mid
-bg "image\word\mirrormoon.png",%type_crossfade_mid
-wait 1700
-
-bg #000000,%type_crossfade_mid
-
-if %execution_cnt<=0 gosub *normal_effectspeed
-if %execution_cnt<=0 gosub *openning
-if %execution_cnt>0 skip 6
-mov %4020,1
-mov %4021,1
-mov %4022,1
-mov %4023,1
-mov %4024,1
-
-inc %execution_cnt
-
-if %debugmode!=1 skip 15
-lsp 0,":c;image\debug\ark.jpg",532,384
-lsp 1,":c;image\debug\ciel.jpg",532,400
-lsp 2,":c;image\debug\aki.jpg",532,416
-lsp 3,":c;image\debug\hisui.jpg",532,432
-lsp 4,":c;image\debug\koha.jpg",532,448
-
-lsp 10,p0,624,384
-lsp 11,p0,624,400
-lsp 12,p0,624,416
-lsp 13,p0,624,432
-lsp 14,p0,624,448
-
-windoweffect 10,300
-
-goto *title
-
 *f20
 gosub *regard_update
 !sd
@@ -160,7 +15,7 @@ skip 3
 *skip20
 return
 select `1. There's only a few minutes until homeroom. I have to head there right away.`, *f21,
-	`2. || I'm curious, so I'll go take a look.`, *f22
+	`2. …… I'm curious, so I'll go take a look.`, *f22
 
 *f21
 gosub *regard_update
@@ -789,8 +644,8 @@ selgosub `1. Skip`, *skip183,
 skip 3
 *skip183
 return
-select `1. || Return to the mansion.`, *f186,
-	`2. || Still wait.`, *f184
+select `1. …… Return to the mansion.`, *f186,
+	`2. …… Still wait.`, *f184
 
 *f184
 gosub *regard_update
@@ -807,8 +662,8 @@ selgosub `1. Skip`, *skip184,
 skip 3
 *skip184
 return
-select `1. || Still wait.`, *f185,
-	`2. || Return to the mansion.`, *f186
+select `1. …… Still wait.`, *f185,
+	`2. …… Return to the mansion.`, *f186
 
 *f185
 gosub *regard_update
@@ -825,8 +680,8 @@ selgosub `1. Skip`, *skip185,
 skip 3
 *skip185
 return
-select `1. || Still wait.`, *f187,
-	`2. || Return to the mansion.`, *f186
+select `1. …… Still wait.`, *f187,
+	`2. …… Return to the mansion.`, *f186
 
 *f186
 gosub *regard_update
@@ -934,7 +789,7 @@ skip 3
 *skip189
 return
 select `1. Rush to the same alley as last night.`, *f190,
-	`2. || Wait here in the park.`, *f191,
+	`2. …… Wait here in the park.`, *f191,
 	`3. Go to Arcueid's room.`, *f192
 
 *f190
@@ -1418,7 +1273,7 @@ skip 3
 *skip292
 return
 select `1. No, I have to turn Kohaku-san away.`, *f293,
-	`2. || I'll just have her leave the food in here.`, *f294
+	`2. …… I'll just have her leave the food in here.`, *f294
 
 *f293
 gosub *regard_update
@@ -1470,8 +1325,8 @@ selgosub `1. Skip`, *skip295,
 skip 3
 *skip295
 return
-select `1. || I can't let her see me like this.`, *f296,
-	`2. || But still, I want to hear her voice.`, *f297
+select `1. …… I can't let her see me like this.`, *f296,
+	`2. …… But still, I want to hear her voice.`, *f297
 
 *f296
 gosub *regard_update
@@ -1560,8 +1415,8 @@ skip 3
 *skip299
 return
 if %flgJ>=1 goto *f300
-select `1. || Take off my glasses.`, *f301,
-	`2. || Don't take off my glasses.`, *f302
+select `1. …… Take off my glasses.`, *f301,
+	`2. …… Don't take off my glasses.`, *f302
 
 *f300
 gosub *regard_update
@@ -1756,8 +1611,8 @@ selgosub `1. Skip`, *skip378,
 skip 3
 *skip378
 return
-select `1. || Stop.`, *f380,
-	`2. || I won't let his words trick me.`, *f379
+select `1. …… Stop.`, *f380,
+	`2. …… I won't let his words trick me.`, *f379
 
 *f379
 gosub *regard_update
@@ -1810,8 +1665,8 @@ selgosub `1. Skip`, *skip380,
 skip 3
 *skip380
 return
-select `1. || Chase after Akiha.`, *f381,
-	`2. || I can't do it.`, *f509
+select `1. …… Chase after Akiha.`, *f381,
+	`2. …… I can't do it.`, *f509
 
 *f381
 gosub *regard_update
@@ -1829,8 +1684,8 @@ skip 3
 *skip381
 return
 if %akiha_regard<9 goto *f382
-select `1. || Keep my promise.`, *f382,
-	`2. || I can't do that.`, *f383
+select `1. …… Keep my promise.`, *f382,
+	`2. …… I can't do that.`, *f383
 
 *f509
 gosub *regard_update
@@ -1919,8 +1774,8 @@ selgosub `1. Skip`, *skip383,
 skip 3
 *skip383
 return
-select `1. || Give Akiha back this life.`, *f385,
-	`2. || I can't do that.`, *f384
+select `1. …… Give Akiha back this life.`, *f385,
+	`2. …… I can't do that.`, *f384
 
 *f384
 gosub *regard_update
@@ -2311,7 +2166,7 @@ skip 3
 *skip405
 return
 select `1. Unlock the door.`, *f407,
-	`2. || Why did I lock the door in the first place?`, *f406
+	`2. …… Why did I lock the door in the first place?`, *f406
 *f406
 gosub *regard_update
 !sd
@@ -2573,7 +2428,7 @@ selgosub `1. Skip`, *skip419,
 skip 3
 *skip419
 return
-select `1. || Go look outside.`, *f420,
+select `1. …… Go look outside.`, *f420,
 	`2. Just go back to my room.`, *f421
 
 *f420
@@ -2731,8 +2586,8 @@ selgosub `1. Skip`, *skip427,
 skip 3
 *skip427
 return
-select `1. || Kill her before she notices me.`, *f429,
-	`2. || Wait until she walks by and attack her from behind.`, *f428
+select `1. …… Kill her before she notices me.`, *f429,
+	`2. …… Wait until she walks by and attack her from behind.`, *f428
 
 *f428
 gosub *regard_update
@@ -3204,7 +3059,7 @@ skip 3
 *skip206
 return
 select `1. Ask about Yumizuka Satsuki.`, *f207,
-	`2. || Just sit silently.`, *f208
+	`2. …… Just sit silently.`, *f208
 
 *f207
 gosub *regard_update
@@ -3294,7 +3149,7 @@ skip 3
 *skip210
 return
 select `1. Ciel-senpai is right.`, *f209a,
-	`2. || No, I really don't feel well.`, *f212
+	`2. …… No, I really don't feel well.`, *f212
 
 *f212
 gosub *regard_update
@@ -3597,7 +3452,7 @@ selgosub `1. Skip`, *skip75,
 skip 3
 *skip75
 return
-select `1. || I'll cooperate.`, *f76,
+select `1. …… I'll cooperate.`, *f76,
 	`2. No, I won't cooperate.`, *f77,
 	`3. Escape somehow.`, *f78
 
@@ -3690,7 +3545,7 @@ skip 3
 *skip80
 return
 select `1. I should be escaping after all.`, *f84,
-	`2. || Still, I can't leave her alone.`, *f81
+	`2. …… Still, I can't leave her alone.`, *f81
 
 *f81
 gosub *regard_update
@@ -3708,8 +3563,8 @@ skip 3
 *skip81
 return
 inc %ark_regard
-select `1. || Fine, but just for a little bit.`, *f82,
-	`2. || No. I have a bad feeling about it.`, *f83
+select `1. …… Fine, but just for a little bit.`, *f82,
+	`2. …… No. I have a bad feeling about it.`, *f83
 
 *f82
 gosub *regard_update
@@ -4356,7 +4211,7 @@ skip 3
 *skip97
 return
 select `1. Dash towards Nrvnqsr.`, *f101,
-	`2. || No, it's still too early.`, *f99
+	`2. …… No, it's still too early.`, *f99
 
 *f98
 gosub *regard_update
@@ -4392,7 +4247,7 @@ skip 3
 *skip99
 return
 select `1. Dash towards Nrvnqsr.`, *f101,
-	`2. || It's still too early.`, *f100
+	`2. …… It's still too early.`, *f100
 
 *f100
 gosub *regard_update
@@ -4589,7 +4444,7 @@ skip 3
 return
 inc %flgH
 select `1. Ask her why she transferred to this school.`, *f326,
-	`2. || I should introduce Arihiko.`, *f327,
+	`2. …… I should introduce Arihiko.`, *f327,
 	`3. Was she pretending to be naive until just now?`, *f328
 
 *f414
@@ -4838,7 +4693,7 @@ selgosub `1. Skip`, *skip112,
 skip 3
 *skip112
 return
-select `1. || Go into the city and look for her.`, *f113,
+select `1. …… Go into the city and look for her.`, *f113,
 	`2. Space out in the classroom.`, *f114,
 	`3. Just return to the mansion and rest.`, *f115
 
@@ -5113,7 +4968,7 @@ selgosub `1. Skip`, *skip222,
 skip 3
 *skip222
 return
-select `1. || No, that had to have been someone else.`, *f223,
+select `1. …… No, that had to have been someone else.`, *f223,
 	`2. Ask about last night.`, *f224
 
 *f223
@@ -5327,7 +5182,7 @@ skip 3
 *skip325
 return
 select `1. Ask her why she transferred to this school.`, *f326,
-	`2. || I should introduce Arihiko.`, *f327,
+	`2. …… I should introduce Arihiko.`, *f327,
 	`3. Was she pretending to be naive until just now?`, *f328
 
 *f326
@@ -7204,7 +7059,7 @@ skip 3
 *skip353
 return
 select `1. Still, I can at least say good morning to Akiha.`, *f354,
-	`2. || I can't. Let's go back to my room.`, *f355
+	`2. …… I can't. Let's go back to my room.`, *f355
 
 *f354
 gosub *regard_update
@@ -7294,7 +7149,7 @@ skip 3
 return
 if %flgO>=1 goto *f360
 select `1. Talk to Ciel about last night.`, *f358half,
-	`2. || That would just be a waste of my time.`, *f360
+	`2. …… That would just be a waste of my time.`, *f360
 
 *f358half
 goto *f359
@@ -7439,8 +7294,8 @@ selgosub `1. Skip`, *skip402,
 skip 3
 *skip402
 return
-select `1. || Just this isn't enough at all.`, *f404,
-	`2. || I can move again, so I should just thank her.`, *f403
+select `1. …… Just this isn't enough at all.`, *f404,
+	`2. …… I can move again, so I should just thank her.`, *f403
 
 *f159
 gosub *regard_update
@@ -7457,7 +7312,7 @@ selgosub `1. Skip`, *skip159,
 skip 3
 *skip159
 return
-select `1. || Do as Akiha says.`, *f160,
+select `1. …… Do as Akiha says.`, *f160,
 	`2. No, I have to push myself to see Arcueid.`, *f161
 
 *f160
@@ -7564,7 +7419,7 @@ skip 3
 *skip361
 return
 if %flgO>=1 goto *f364
-select `1. || Go and determine my own fate.`, *f362,
+select `1. …… Go and determine my own fate.`, *f362,
 	`2. No, I'll stay in the mansion.`, *f364
 
 *f162
@@ -7582,8 +7437,8 @@ selgosub `1. Skip`, *skip162,
 skip 3
 *skip162
 return
-select `1. || It can't be helped. I'll go with Arcueid.`, *f163,
-	`2. || It can be helped. I should go to school.`, *f167
+select `1. …… It can't be helped. I'll go with Arcueid.`, *f163,
+	`2. …… It can be helped. I should go to school.`, *f167
 
 *f163
 gosub *regard_update
@@ -7691,7 +7546,7 @@ skip 3
 return
 select `1. Go for the usual, take her to the movie theater.`, *f169,
 	`2. She'll probably like somewhere such as a back alley, right?`, *f170,
-	`3. || I don't really know, so let's go to the park for now.`, *f171
+	`3. …… I don't really know, so let's go to the park for now.`, *f171
 
 *f169
 gosub *regard_update
@@ -7869,7 +7724,7 @@ skip 3
 return
 select `1. Go to Arcueid's apartment.`, *f179,
 	`2. Look in the commercial district.`, *f180,
-	`3. || The school, perhaps?`, *f500
+	`3. …… The school, perhaps?`, *f500
 
 *f179
 gosub *regard_update
@@ -7921,7 +7776,7 @@ skip 3
 *skip180
 return
 select `1. I can't do something she doesn't want.`, *f181,
-	`2. I just| want her, that's all.`, *f182
+	`2. I just… want her, that's all.`, *f182
 
 *f500
 gosub *regard_update
@@ -8082,7 +7937,7 @@ skip 3
 *skip277
 return
 select `1. Space out here in the classroom.`, *f278,
-	`2. || Go eat some lunch.`, *f279
+	`2. …… Go eat some lunch.`, *f279
 
 *f278
 gosub *regard_update
@@ -8117,7 +7972,7 @@ skip 3
 *skip279
 return
 select `1. I guess so.`, *f280,
-	`2. || No, it does matter.`, *f281
+	`2. …… No, it does matter.`, *f281
 
 *f280
 gosub *regard_update
@@ -8223,8 +8078,8 @@ selgosub `1. Skip`, *skip362,
 skip 3
 *skip362
 return
-select `1. || I have to live.`, *f501,
-	`2. || I can't do it.`, *f363
+select `1. …… I have to live.`, *f501,
+	`2. …… I can't do it.`, *f363
 
 *f501
 gosub *regard_update
@@ -8365,69 +8220,4 @@ setwindow 18,18, 36,21, 17,17, 0, 4, 22, 1, 1, #aaaaaa, 0, 0, 639, 479
 windoweffect 10, 300
 setcursor 0,":l/3,160,2;icon\cursor0.bmp",0,0
 setcursor 1,":l/3,160,2;icon\cursor1.bmp",0,0
-return
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*regard_update
-if %debugmode!=1 return
-csp 10
-mov %regard,%ark_regard
-mov %spno,10
-mov %ypos,384
-gosub *regard_check
-csp 11
-mov %regard,%ciel_regard
-mov %spno,11
-mov %ypos,400
-gosub *regard_check
-csp 12
-mov %regard,%akiha_regard
-mov %spno,12
-mov %ypos,416
-gosub *regard_check
-csp 13
-mov %regard,%hisui_regard
-mov %spno,13
-mov %ypos,432
-gosub *regard_check
-csp 14
-mov %regard,%kohaku_regard
-mov %spno,14
-mov %ypos,448
-gosub *regard_check
-print nowaitdisp
 return

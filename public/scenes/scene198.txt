@@ -202,7 +202,7 @@ waveloop se1
 ` the knife still embedded in my chest.@
 ` Strangely, there is no blood or even pain.@
 ` My body just gets colder.\
-`My consciousness drifts away.@
+` My consciousness drifts away.@
 ` My control over my body… everything starts to fade away.\
 
 ld c,":a;image\tachi\roa_t04c.jpg",%type_crossfade_fst

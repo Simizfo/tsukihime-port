@@ -253,7 +253,7 @@ monocro off
 br
 br
 `"Ah------\
-`Ah."@
+` Ah."@
 br
 br
 ` Yes.@ I want all of it.@

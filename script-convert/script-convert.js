@@ -58,11 +58,21 @@ function extractStrAliasJson(scriptLines, fileName) {
 
 //replace each | by a …
 function replacePipeByEllipsis(scriptLines) {
+    let index, endIndex
     for (let [i, line] of scriptLines.entries()) {
-        if (line.startsWith('`') && line.includes('|')) {
-            line = line.replaceAll('|', '…')
-            scriptLines[i] = line
+        index = line.indexOf('`')
+        while (index >= 0) {
+            endIndex = line.indexOf('`', index+1)
+            if (endIndex == -1)
+                endIndex = line.length
+            if (line.includes('|')) {
+                line = line.substring(0,index+1)
+                     + line.substring(index+1,endIndex).replaceAll('|', '…')
+                     + line.substring(endIndex)
+            }
+            index = line.indexOf('`', endIndex+1)
         }
+        scriptLines[i] = line
     }
     return scriptLines
 }

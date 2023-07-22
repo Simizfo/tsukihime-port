@@ -1285,7 +1285,7 @@ bg "image\bg\ima_05.jpg",%type_lshutter_mid
 ` …… It's only a matter of time before she catches up.@
 br
 ` -----\
-`Well then.@
+` Well then.@
 br
 ` Before that, I have to find a versatile and effective way to calm Ciel down.@
 ` Because from now on,
