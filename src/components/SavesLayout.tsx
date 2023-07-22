@@ -17,7 +17,7 @@ function saveElement(id: string|number, saveState: SaveState,
             {...props}>
       <div className="graphics">{
         Object.entries(saveState.context.graphics).map(([pos, image])=>
-          image && graphicsElement(pos as any, image))
+          image && graphicsElement(pos as any, image, {key: pos}))
       }</div>
       <div className="deta">
         <div className="date">
@@ -99,7 +99,7 @@ const SavesLayout = ({variant}: Props) => {
       <div className="info">
       <div className="graphics">{
         Object.entries(focusedSave?.context.graphics??{bg:"notreg"}).map(([pos, image])=>
-          image && graphicsElement(pos as any, image))
+          image && graphicsElement(pos as any, image, {key: pos}))
       }</div>
 
         Affinités<br />
