@@ -5,7 +5,7 @@ import { Page } from "../types"
 import { commands as audioCommands } from "./AudioManager"
 import { observe } from "./Observer"
 import Stack from "./Stack"
-import { HISTORY_MAX_PAGES } from "./constants"
+import { HISTORY_MAX_PAGES, H_SCENES } from "./constants"
 import { commands as timerCommands } from "./timer"
 import { fetchFBlock, fetchScene } from "./utils"
 import { commands as variableCommands, getGameVariable, gameContext, settings, displayMode, SCREEN } from "./variables"
@@ -95,7 +95,7 @@ function checkIfCondition(condition: string) {
     if (i % 2 == 0) {
       const match = opRegexp.exec(token)
       if (match) {
-        let {lhs, op, rhs} = match.groups as any;
+        let {lhs, op, rhs} = match.groups as any
         if (lhs.charAt(0) == '%')
           lhs = getGameVariable(lhs) as number
         else lhs = parseInt(lhs)
@@ -141,8 +141,8 @@ function processScriptMvmt(arg: string, cmd: string) {
   arg = arg?.trim()
   switch (cmd) {
     case 'skip' :
-      gameContext.index += parseInt(arg);
-      return;
+      gameContext.index += parseInt(arg)
+      return
     case 'goto' :
       if (/^\*f\d+a?$/.test(arg)) {
         gameContext.label = arg.substring(1)
@@ -162,22 +162,12 @@ function processScriptMvmt(arg: string, cmd: string) {
         // ending is called from the scene. If necessary, set the scene
         // as completed before jumping to ending
       } else if (isScene(arg)) {
-        arg = arg.substring(1)
-        if (settings.enableSceneSkip && settings.completedScenes.includes(arg)) {
-          console.log(`scene ${arg} already completed`)
-          skipCallback((skip)=>{
-            gameContext.label = skip ? `skip${arg.substring(1)}` : arg
-            gameContext.index = 0
-          })
-        } else {
-          gameContext.label = arg
-          gameContext.index = 0
-        }
+        startScene(arg.substring(1))
         return BLOCK_CMD // prevent processing next line
       }
       break
     case 'return' :
-      onSceneEnd();
+      onSceneEnd()
       return BLOCK_CMD // prevent processing next line
   }
 }
@@ -223,7 +213,7 @@ function splitText(text: string) {
  */
 export async function processLine(line: string) {
   const instructions = new Array<{cmd:string,arg:string}>()
-  const endPageBreak = line.endsWith('\\');
+  const endPageBreak = line.endsWith('\\')
 
   if (endPageBreak) // '\\' will be added as an individual command at the end
     line = line.substring(0, line.length-1)
@@ -315,7 +305,7 @@ async function processCurrentLine() {
 
     let line = sceneLines[index]
     console.log(`Processing line ${index}: ${line}`)
-    await processLine(line);
+    await processLine(line)
     if (gameContext.index != index || gameContext.label != label) {
       // the context has been changed while processing the line.
       // processCurrentLine() will be called again by the observer.
@@ -359,7 +349,30 @@ function onSceneEnd() {
     if (!settings.completedScenes.includes(label))
       settings.completedScenes.push(label)
     gameContext.label = `skip${label.substring(1)}`
-    gameContext.index = 0;
+    gameContext.index = 0
+  }
+}
+
+function warnHScene(callback: VoidFunction) {
+  alert("You are about to read an H-scene. Beware of your surroundings.")
+  callback()
+}
+
+function startScene(label: string) {
+  if (settings.enableSceneSkip && settings.completedScenes.includes(label)) {
+    console.log(`scene ${label} already completed`)
+    skipCallback((skip)=>{
+      gameContext.label = skip ? `skip${label.substring(1)}` : label
+      gameContext.index = 0
+    })
+  } else if (settings.warnHScenes && H_SCENES.includes(label)) {
+    warnHScene(()=> {
+      gameContext.label = label
+      gameContext.index = 0
+    })
+  } else {
+    gameContext.label = label
+    gameContext.index = 0
   }
 }
 

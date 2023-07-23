@@ -1,8 +1,10 @@
 import straliasJson from '../assets/game/stralias.json'
 import numaliasJson from '../assets/game/numalias.json'
+import hScenes from '../assets/game/h_scenes.json'
 
 export const STRALIAS_JSON = JSON.parse(JSON.stringify(straliasJson))
 export const NUMALIAS_JSON = JSON.parse(JSON.stringify(numaliasJson))
+export const H_SCENES = JSON.parse(JSON.stringify(hScenes))
 
 export enum IMAGES_FOLDERS {
   image = "image",
