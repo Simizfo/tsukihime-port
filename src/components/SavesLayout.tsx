@@ -103,13 +103,15 @@ const SavesLayout = ({variant}: Props) => {
       </div>
 
       <div className="info">
-      <div className="graphics">{
-        Object.entries(focusedSave?.context.graphics??{bg:"notreg"}).map(([pos, image])=>
-          image && graphicsElement(pos as any, image, {key: pos}))
-      }</div>
+        <div className="graphics">
+          {Object.entries(focusedSave?.context.graphics??{bg:"notreg"}).map(([pos, image])=>
+            image && graphicsElement(pos as any, image, {key: pos}))
+          }
+        </div>
 
-        Affinités<br />
-        <button className="affinity">Export save</button>
+        <div className="deta">
+          <button className="export">Export save</button>
+        </div>
       </div>
     </div>
   )

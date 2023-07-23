@@ -85,7 +85,7 @@ const ConfigScreen = () => {
           </div>
 
           <div>
-            Blur gallery thumbnails:&nbsp;
+            Blur adult thumbnails:&nbsp;
             <input
               type="checkbox"
               checked={galleryBlur}

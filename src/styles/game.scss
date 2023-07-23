@@ -228,9 +228,8 @@
             menu {
                 all: unset;
                 height: min(100%, 600px);
-                width: 100%;
                 display: flex;
-                gap: 1em;
+                row-gap: min(1em, 2vh);
                 flex-direction: column;
                 font-size: 1.2em;
             }
@@ -272,19 +271,8 @@
         &.show {
             z-index: 100;
             opacity: 1;
-            backdrop-filter: blur(2px);
+            backdrop-filter: blur(1px);
             background-color: rgb(9 23 49 / 88%);
-        }
-
-        h2 {
-            font-size: 3em;
-            margin-block: 0;
-            font-family: Inria Serif;
-            font-weight: 700;
-            background: linear-gradient(180deg, #9CC1D4 0%, #65ADC7 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
     }
     .box-history {
