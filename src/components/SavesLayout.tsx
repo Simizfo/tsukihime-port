@@ -64,9 +64,9 @@ const SavesLayout = ({variant}: Props) => {
 
   function exportSaves(...ids: number[]) {
     if (ids.length == 0)
-      exportSaveFile({ omitSettings: false})
+      exportSaveFile({ omitSettings: true})
     else
-      exportSaveFile({ omitSettings: false, saveStateFilter: ids})
+      exportSaveFile({ omitSettings: true, saveStateFilter: ids})
   }
 
   const handleAction = (id:number) => {
