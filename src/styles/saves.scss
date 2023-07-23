@@ -14,21 +14,22 @@
         flex-direction: column;
         gap: .4em;
         overflow-x: hidden;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        background-color: rgba(0, 0, 0, 0.3098039216);
+        padding: 1em;
 
         .save-container {
-            background: #D9D9D9;
-            box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.25) inset;
+            background: #030312;
             display: flex;
             flex-direction: row;
-            color: #000;
-            transition: all .4s ease-out;
-            display: flex;
+            transition: all .2s ease-out;
+            min-height: 100px;
 
             &.create {
                 justify-content: center;
                 align-items: center;
                 font-size: 1.4em;
-                padding: 1em;
             }
 
             .deta {
@@ -37,15 +38,17 @@
                 width: 100%;
 
                 .date {
-                    color: #031989;
-                    font-size: larger;
+                    display: flex;
+                    column-gap: .6em;
+                    flex-flow: wrap;
                 }
                 .line {
                     font-style: italic;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    max-width: 46ch;
+                    max-width: 50ch;
+                    color: #9d9d9d;
                 }
             }
 
@@ -55,7 +58,6 @@
 
             &:hover {
                 cursor: pointer;
-                background: linear-gradient(180deg, #1224C3 0%, #0E7CAB 100%);
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 29px 0px rgba(3, 193, 235, 0.88) inset;
             }
         }
@@ -63,10 +65,10 @@
 
     .info {
         overflow: hidden;
-        background-image: linear-gradient(180deg, #00000000 0%, rgba(14, 14, 79, 0.568627451) 20%, rgba(14, 14, 79, 0.568627451) 80%, #00000000 100%);
+        background-image: linear-gradient(180deg, #00000000 0%, #030312 20%, #030312 80%, #00000000 100%);
 
         .graphics {
-            width: 100%;
+            max-width: 100%;
             height: unset;
         }
     }
@@ -117,8 +119,11 @@
 
     @media screen and (max-width: 860px) {
         grid-template-columns: 1fr;
-        .info { // will have to find a good way to display it
-            display: none;
+        grid-template-rows: 1fr 3fr;
+
+        .info {
+            grid-row: 1;
+            display: flex;
         }
     }
 }

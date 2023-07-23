@@ -7,14 +7,6 @@
     --transition: all var(--transition-time) ease-out;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-}
-
 .window {
     color: var(--text-color);
     display: flex;
@@ -283,7 +275,7 @@ body {
             z-index: 100;
             opacity: 1;
             backdrop-filter: blur(2px);
-            background-color: #00001ec4;
+            background-color: rgb(9 23 49 / 88%);
         }
 
         h2 {
