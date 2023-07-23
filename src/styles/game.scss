@@ -69,6 +69,7 @@
     }
     .box-text {
         z-index: 2;
+        opacity: 1;
         user-select: none;
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%,
                                                  rgba(0, 0, 0, 0.5) 10%,
@@ -79,10 +80,9 @@
         letter-spacing: 1px;
         font-size: clamp(.9em, min(2.5vw, 3.6vh), 1.25em);
         line-height: clamp(1.4em, min(3.5vw, 4.5vh), 1.6em);
-        opacity: 1;
+        overflow-x: hidden;
         transition: var(--transition);
         transition-property: opacity, z-index;
-        overflow-x: hidden;
 
         &.hide {
             z-index: -1;
@@ -269,8 +269,6 @@
         z-index: -1;
         opacity: 0;
         transition: var(--transition);
-        transition-property: opacity, z-index;
-
         &.show {
             z-index: 100;
             opacity: 1;
@@ -293,7 +291,6 @@
         z-index: -1;
         opacity: 0;
         transition: var(--transition);
-        transition-property: opacity, z-index;
         &.show {
             z-index: 100;
             opacity: 1;
