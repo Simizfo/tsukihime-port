@@ -195,9 +195,9 @@ export function exportSaveFile({
       saveStates: listSaveStates().filter(([id,_ss])=>saveStateFilter.includes(id))
     } : {})
   });
-  const date = new Date()
-  const dateString = `${date.getFullYear()}${date.getMonth()}${date.getDate()}`
-  textFileUserDownload(content, `tsukihime_save_${dateString}.thsave`)
+  const date = new Date(listSaveStates().filter(([id,_ss])=>saveStateFilter?.includes(id))[0][1].date as number)
+  const dateString = `${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, '0')}${date.getDate()}`
+  textFileUserDownload(content, `tsukihime_${dateString}.thsave`)
 }
 
 type loadSaveFileOptions = {
