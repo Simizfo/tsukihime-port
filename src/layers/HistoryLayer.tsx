@@ -16,6 +16,8 @@ const HistoryLayer = (props: Props) => {
   useEffect(() => {
     //on mouse wheel up display history
     const handleWheel = (e: WheelEvent) => {
+      if (e.ctrlKey)
+        return
       if (e.deltaY < 0 && !display && objectMatch(displayMode, {menu:false, save:false, load: false})) {
         const it = script.history[Symbol.iterator]()
         if (!it.next().done) // at least one element in the iterator
