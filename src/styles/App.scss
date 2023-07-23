@@ -1,7 +1,4 @@
-@font-face {
-    font-family: 'UbuntuBold';
-    src: url('../assets/fonts/Ubuntu-Bold.ttf');
-}
+@import url(fonts.scss);
 
 #root-view {
     height: 100vh;
@@ -10,6 +7,8 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    --font: "Ubuntu";
+    font-family: var(--font), sans-serif;
 }
 #view {
     width: 100%;

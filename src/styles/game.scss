@@ -1,9 +1,6 @@
 @use 'transitions' as *;
 
-@font-face {
-    font-family: 'Ubuntu';
-    src: url('../assets/fonts/Ubuntu-Regular.ttf');
-}
+@import url(fonts.scss);
 
 :root {
     --text-color: #e7e7e7;
@@ -24,7 +21,7 @@ body {
     color: var(--text-color);
     display: flex;
     font-size: 1.1em;
-    font-family: Ubuntu, sans-serif;
+    font-family: var(--font), sans-serif;
 
     .box {
         width: 100%;

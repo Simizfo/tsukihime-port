@@ -1,11 +1,4 @@
-@font-face {
-    font-family: 'UbuntuItalic';
-    src: url('../assets/fonts/Ubuntu-Italic.ttf');
-}
-@font-face {
-    font-family: 'UbuntuBold';
-    src: url('../assets/fonts/Ubuntu-Bold.ttf');
-}
+@import url(fonts.scss);
 
 #saves {
 
@@ -49,11 +42,10 @@
                     color: #031989;
                     font-size: larger;
                     b {
-                        font-family: UbuntuBold;
+                        font-weight: bold;
                     }
                 }
                 .line {
-                    font-family: UbuntuItalic;
                     font-style: italic;
                     white-space: nowrap;
                     overflow: hidden;
