@@ -109,7 +109,7 @@ const observerSymbol = Symbol("Observer")
  * @param property the property to observe in the object. Must be the object's own property, configurable and writable
  * @param callback the function to call when the property has changed
  */
-export function observe<T extends Observable, T1 extends ObservableContainer<T>>(object: T|T1, property: keyof T, callback: ObserverCallback) {
+export function observe<T extends Observable, T1 extends ObservableContainer<T>, P extends keyof T>(object: T|T1, property: P, callback: ObserverCallback<T[P]>) {
     if (!(observerSymbol in object)) {
         (object as any)[observerSymbol] = new PropertiesObserver(object)
     }
@@ -185,10 +185,10 @@ export function unobserveChildren<T extends Object>(parent: T, attr: keyof T, ca
     return true
 }
 
-export function useObserver<T extends Observable, T1 extends ObservableContainer<T>>(callback:ObserverCallback, object: T|T1, property: keyof T) {
+export function useObserver<T extends Observable, T1 extends ObservableContainer<T>, P extends keyof T>(callback:ObserverCallback, object: T|T1, property: P) {
     useEffect(()=> {
-        observe(object, property, callback)
-        return unobserve.bind(null, object, property, callback) as VoidFunction
+        observe(object as T, property, callback)
+        return unobserve.bind(null, object as T, property, callback) as VoidFunction
     }, [])
 }
 export function useChildrenObserver<T extends Object>(callback: (prop: PropertyKey, value: any)=>void, parent: T, attr: keyof T) {

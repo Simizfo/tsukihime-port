@@ -1,5 +1,6 @@
 import { observe, observeChildren } from "./Observer"
 import { IMAGES_FOLDERS, TEXT_SPEED } from "./constants"
+import Timer from "./timer"
 import { deepFreeze, objectMatch, overrideAttributes } from "./utils"
 
 //##############################################################################
@@ -47,7 +48,10 @@ const savedSettings = (()=>{
 // deep-copy savedSettings
 export const settings = structuredClone(savedSettings)
 
+const savePostPoneTimer = new Timer(0, saveSettings)
+
 function saveSettings() {
+  savePostPoneTimer.cancel()
   if (!objectMatch(savedSettings, settings, false)) {
     settings.completedScenes.sort()
     overrideAttributes(savedSettings, settings, false)
@@ -55,18 +59,20 @@ function saveSettings() {
   }
 }
 
-function onCompletionChange() {
-  settings.completedScenes.sort()
-  saveSettings()
+function postPoneSaveSettings() {
+  if (!savePostPoneTimer.started) {
+    savePostPoneTimer.start()
+  }
 }
 
-observe(settings, 'imagesFolder'   , saveSettings)
-observe(settings, 'textSpeed'      , saveSettings)
-observe(settings, 'galleryBlur'    , saveSettings)
-observe(settings, 'enableSceneSkip', saveSettings)
-observeChildren(settings, 'eventImages'    , saveSettings)
-observeChildren(settings, 'volume'         , saveSettings)
-observeChildren(settings, 'completedScenes', onCompletionChange)
+for (const key of Reflect.ownKeys(settings)) {
+  const k = key as keyof typeof settings
+  if (typeof settings[k] == "object")
+    observeChildren(settings, k, postPoneSaveSettings)
+  else {
+    observe(settings, k, postPoneSaveSettings)
+  }
+}
 
 //_________________________________display mode_________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

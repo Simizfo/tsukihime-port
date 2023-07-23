@@ -13,6 +13,9 @@ export default class Timer {
     this.loop = loop
     this.callback = callback
   }
+  get started() {
+    return this.timeout != 0
+  }
 
   start() {
     this.timestamp = Date.now()
