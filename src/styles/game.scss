@@ -84,9 +84,9 @@ body {
                                                  rgba(0, 0, 0, 0.2) 100%);
         padding: 6% 10%;
         text-shadow: #000 1px 1px 1px, #000 -1px 1px 1px, #000 -1px -1px 1px, #000 1px -1px 1px;
-        line-height: 1.6em;
         letter-spacing: 1px;
-        font-size: clamp(.82em, min(2.5vw, 3.6vh), 1.25em);
+        font-size: clamp(.9em, min(2.5vw, 3.6vh), 1.25em);
+        line-height: clamp(1.4em, min(3.5vw, 4.5vh), 1.6em);
         opacity: 1;
         transition: var(--transition);
         transition-property: opacity, z-index;
