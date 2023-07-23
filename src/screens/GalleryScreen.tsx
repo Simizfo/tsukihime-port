@@ -14,40 +14,17 @@ const GalleryScreen = () => {
   const [selected, setSelected] = useState<CHARACTERS>(CHARACTERS.arcueid)
   const [images, setImages] = useState<string[]>([])
 
-  useEffect(() => {
-    handleSelected(CHARACTERS.arcueid)
-  }, [])
-
-  const handleSelected = (selectedChar: CHARACTERS) => {
+  useEffect(()=> {
     let imagesTmp: string[] = []
-
-    switch (selectedChar) {
-      case CHARACTERS.arcueid:
-        setSelected(CHARACTERS.arcueid)
-        imagesTmp = GALLERY_IMAGES.arcueid
-        break
-      case CHARACTERS.ciel:
-        setSelected(CHARACTERS.ciel)
-        imagesTmp = GALLERY_IMAGES.ciel
-        break
-      case CHARACTERS.akiha:
-        setSelected(CHARACTERS.akiha)
-        imagesTmp = GALLERY_IMAGES.akiha
-        break
-      case CHARACTERS.kohaku:
-        setSelected(CHARACTERS.kohaku)
-        imagesTmp = GALLERY_IMAGES.kohaku
-        break
-      case CHARACTERS.hisui:
-        setSelected(CHARACTERS.hisui)
-        imagesTmp = GALLERY_IMAGES.hisui
-        break
-      case CHARACTERS.others:
-        setSelected(CHARACTERS.others)
-        imagesTmp = GALLERY_IMAGES.others
-        break
+    switch(selected) {
+      case CHARACTERS.arcueid: imagesTmp = GALLERY_IMAGES.arcueid; break
+      case CHARACTERS.ciel   : imagesTmp = GALLERY_IMAGES.ciel   ; break
+      case CHARACTERS.akiha  : imagesTmp = GALLERY_IMAGES.akiha  ; break
+      case CHARACTERS.kohaku : imagesTmp = GALLERY_IMAGES.kohaku ; break
+      case CHARACTERS.hisui  : imagesTmp = GALLERY_IMAGES.hisui  ; break
+      case CHARACTERS.others : imagesTmp = GALLERY_IMAGES.others ; break
+      default : throw Error(`unknown character ${selected}`)
     }
-
     imagesTmp = imagesTmp.map((image) => {
       const extension = settings.imagesFolder === IMAGES_FOLDERS.image ? 'jpg' : 'webp'
       if (!settings.eventImages.includes(`event/${image}`)) {
@@ -60,7 +37,7 @@ const GalleryScreen = () => {
     setImages(imagesTmp)
 
     document.querySelector('.gallery-container')?.scrollTo(0, 0)
-  }
+  }, [selected] )
 
   return (
     <motion.div
@@ -72,35 +49,13 @@ const GalleryScreen = () => {
         <h2 className="page-title">Gallery</h2>
         <main>
           <div className="gallery-char-container">
-            <GalleryCharComponent
-              character={CHARACTERS.arcueid}
-              selected={selected}
-              handleSelected={handleSelected} />
-
-            <GalleryCharComponent
-              character={CHARACTERS.ciel}
-              selected={selected}
-              handleSelected={handleSelected} />
-
-            <GalleryCharComponent
-              character={CHARACTERS.akiha}
-              selected={selected}
-              handleSelected={handleSelected} />
-
-            <GalleryCharComponent
-              character={CHARACTERS.kohaku}
-              selected={selected}
-              handleSelected={handleSelected} />
-
-            <GalleryCharComponent
-              character={CHARACTERS.hisui}
-              selected={selected}
-              handleSelected={handleSelected} />
-
-            <GalleryCharComponent
-              character={CHARACTERS.others}
-              selected={selected}
-              handleSelected={handleSelected} />
+            {Object.values(CHARACTERS).map(character=>
+              <GalleryCharComponent
+                key={character}
+                character={character}
+                selected={selected==character}
+                handleSelected={setSelected}/>
+            )}
           </div>
 
           <Fancybox className='gallery-container'

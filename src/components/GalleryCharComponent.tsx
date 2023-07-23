@@ -2,18 +2,21 @@ import { CHARACTERS } from "../utils/constants"
 
 type Props = {
   character: CHARACTERS,
-  selected: CHARACTERS,
+  selected: boolean,
   handleSelected: (selectedChar: CHARACTERS) => void
+  [key:string]: any,
 }
 
 /**
  * Character selector in gallery
  */
-const GalleryCharComponent = ({ character, selected, handleSelected }: Props) => {
+const GalleryCharComponent = ({ character, selected, handleSelected, ...props }: Props) => {
 
+  let {className, ...otherProps} = props
+  className = `menu-btn gallery-char-item ${selected ? "selected" : ""} ${className??""}`
   return (
-    <button className={`menu-btn gallery-char-item ${character === selected ? "selected" : ""}`}
-      onClick={() => handleSelected(character)}>
+    <button className={className} {...otherProps}
+      onClick={handleSelected.bind(null,character)}>
       <span>{character}</span>
     </button>
   )
