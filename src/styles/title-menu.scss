@@ -17,7 +17,7 @@
 
     .menu {
         display: flex;
-        padding: 2em 0;
+        padding-block: 2em;
         min-height: 20vh;
         margin-top: auto;
         font-size: 1.3em;
@@ -25,7 +25,7 @@
         text-transform: uppercase;
         letter-spacing: 0.2em;
         flex-direction: row;
-        gap: 0.8em;
+        gap: 1.4em;
         justify-content: space-evenly;
         flex-wrap: wrap;
         width: min(800px, 100%);
@@ -45,6 +45,13 @@
                 color: rgb(10 164 171);
                 text-shadow: 1px 0 5px rgb(14 79 187), 1px 0 6px rgba(28, 147, 147, 0.5215686275);
             }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .menu {
+            flex-direction: column;
+            gap: 0.6em;
         }
     }
 }

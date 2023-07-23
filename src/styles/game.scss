@@ -1,7 +1,5 @@
 @use 'transitions' as *;
 
-@import url(fonts.scss);
-
 :root {
     --text-color: #e7e7e7;
     --read-text-color: #c5e1ff;
@@ -101,7 +99,7 @@ body {
 
         .text-container {
             width: min(100%, 660px);
-            margin: 0 auto;
+            margin-inline: auto;
         }
 
         span {
@@ -176,7 +174,7 @@ body {
             justify-content: center;
             height: 100%;
             max-width: 600px;
-            margin: 0 auto;
+            margin-inline: auto;
             gap: 1.4em;
         }
         .choice {
@@ -319,7 +317,7 @@ body {
             height: calc(100% - 40px);
             padding-bottom: 30vh;
             inset: 0;
-            margin: 0 auto;
+            margin-inline: auto;
             border-radius: 5px;
         }
         footer {
@@ -366,7 +364,7 @@ body {
                                                 hsla(205, 89%, 35%, 0) 100%);
             align-self: center;
             padding: 1em 4em;
-            margin: 0 auto;
+            margin-inline: auto;
 
             .title {
                 margin-bottom: 1em;

@@ -61,12 +61,6 @@ const TitleMenuScreen = () => {
         <button className='menu-item' onClick={newGame}>New Game</button>
         <button className='menu-item' onClick={continueGame}>Continue</button>
 
-        {
-        
-        // TODO add a "Resume" button that just navigates to Window
-        // and only available if a game is already running
-        }
-
         <Link to={SCREEN.LOAD} className="menu-item">
           Load
         </Link>

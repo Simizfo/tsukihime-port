@@ -1,4 +1,4 @@
-@import url(fonts.scss);
+@use 'fonts.scss';
 
 #root-view {
     height: 100vh;
@@ -23,7 +23,7 @@
 }
 .page-content {
     max-width: 1280px;
-    margin: 0 auto;
+    margin-inline: auto;
     padding: 2em;
     height: inherit;
     width: inherit;
