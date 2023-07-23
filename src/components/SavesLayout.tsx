@@ -1,5 +1,5 @@
 import { FaPlusCircle } from "react-icons/fa"
-import { QUICK_SAVE_ID, SaveState, exportSaveFile, listSaveStates, loadSaveFile as loadSaveFiles, loadSaveState, storeLastSaveState } from "../utils/savestates"
+import { QUICK_SAVE_ID, SaveState, exportSaveFile, getSaveState, listSaveStates, loadSaveFile as loadSaveFiles, loadSaveState, storeLastSaveState } from "../utils/savestates"
 import { useEffect, useState } from "react"
 import { graphicsElement } from "../layers/GraphicsLayer"
 import { SCREEN, displayMode } from "../utils/variables"
@@ -43,7 +43,7 @@ const SavesLayout = ({variant}: Props) => {
 
   const navigate = useNavigate()
   const [saves, setSaves] = useState<Array<[number,SaveState]>>([])
-  const [focusedSave, setFocusedSave] = useState<SaveState|null>(null)
+  const [focusedId, setFocusedSave] = useState<number>()
 
   function updateSavesList() {
     setSaves(listSaveStates().sort(compareSaveStates))
@@ -86,6 +86,7 @@ const SavesLayout = ({variant}: Props) => {
       displayMode.load = false
     }
   }
+  const focusedSave = focusedId != undefined ? getSaveState(focusedId) : undefined
 
   return (
     <div id="saves-layout">
@@ -97,7 +98,7 @@ const SavesLayout = ({variant}: Props) => {
         }
 
         {saves.map(([id, ss]) => saveElement(id, ss, {
-          onMouseEnter: setFocusedSave.bind(null, ss),
+          onMouseEnter: setFocusedSave.bind(null, id),
           onClick: handleAction.bind(null, id)}
         ))}
       </div>
@@ -108,10 +109,11 @@ const SavesLayout = ({variant}: Props) => {
             image && graphicsElement(pos as any, image, {key: pos}))
           }
         </div>
-
-        <div className="deta">
-          <button className="export">Export save</button>
-        </div>
+        {focusedId != undefined &&
+          <div className="deta">
+            <button className="export" onClick={()=>exportSaves(focusedId)}>Export save</button>
+          </div>
+        }
       </div>
     </div>
   )

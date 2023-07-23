@@ -100,6 +100,10 @@ export function clearSaveStates() {
   updateLocalStorage()
 }
 
+export function getSaveState(id: SaveStateId) {
+  return saveStates.get(id)
+}
+
 /**
  * Restore the context and progress from the specified savestate.
  * If the savestate is stored in the script's history, all pages
