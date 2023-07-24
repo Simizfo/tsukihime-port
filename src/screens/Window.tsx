@@ -11,7 +11,7 @@ import KeyMap from '../utils/KeyMap';
 import script from '../utils/script';
 import { objectMatch } from '../utils/utils';
 import { SCREEN, displayMode, gameContext } from '../utils/variables';
-import { quickSave, quickLoad } from "../utils/savestates";
+import { quickSave, quickLoad, loadSaveState } from "../utils/savestates";
 import SkipLayer from '../layers/SkipLayer';
 import SavesLayer from '../layers/SavesLayer';
 
@@ -25,6 +25,9 @@ const keyMap = new KeyMap({
               {key: "Control", repeat: true},
               {key: "ArrowDown", repeat: false},
               {key: "ArrowRight", repeat: false}],
+  "page_nav": [()=> objectMatch(displayMode, {text: true, menu: false, history: false, load: false, save: false}),
+              {key: "PageUp", [KeyMap.args]: "prev"},
+              {key: "PageDown", [KeyMap.args]: "next"}],
   "history":  [()=> objectMatch(displayMode, {text: true, menu: false, history: false, load: false, save: false}),
               {key: "ArrowUp", repeat: false},
               {key: "ArrowLeft", repeat: false},
@@ -45,6 +48,7 @@ const keyMap = new KeyMap({
 }, (action, _evt, ...args)=> {
     switch(action) {
       case "next"     : next(); break
+      case "page_nav" : page_nav(args[0]); break
       case "history"  : toggleHistory(); break
       case "graphics" : toggleGraphics(); break
       case "menu"     : toggleMenu(); break
@@ -66,6 +70,19 @@ function next() {
       toggleGraphics()
     else
       script.next()
+  }
+}
+
+function page_nav(direction: string) {
+  switch (direction) {
+    case "prev":
+      let ss = script.history.get(-2)?.saveState
+      if (ss)
+        loadSaveState(ss)
+      break
+    case "next":
+      //TODO fast-forward to next '\\' or end of scene.
+      break;
   }
 }
 
