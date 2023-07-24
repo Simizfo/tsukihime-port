@@ -49,12 +49,18 @@ export const script = {
 
   get history() {
     return history
+  },
+
+  moveTo(label: string, index: number = -1) {
+    gameContext.label = label
+    gameContext.index = index
   }
 }
 export default script
 
 function isScene(label: string): boolean {
-  return /^\*?s\d+a?$/.test(label)
+  //TODO create a list of unique scene names (e.g., openning, eclipse)
+  return /^\*?s\d+a?$/.test(label) || ["openning"].includes(label)
 }
 
 function onPageBreak(createSS=true) {
@@ -82,6 +88,11 @@ const commands:CommandMap = new Map(Object.entries({
   'goto'      : processScriptMvmt,
   'gosub'     : processScriptMvmt,
   'return'    : processScriptMvmt,
+  
+  'setwindow' : null,
+  'windoweffect' : null,
+  'setcursor' : null,
+  'autoclick' : null,
 
   '*'         : null,
   '!s'        : null,
@@ -145,8 +156,7 @@ function processScriptMvmt(arg: string, cmd: string) {
       return
     case 'goto' :
       if (/^\*f\d+a?$/.test(arg)) {
-        gameContext.label = arg.substring(1)
-        gameContext.index = 0
+        script.moveTo(arg.substring(1), 0)
         return BLOCK_CMD // prevent processing next line
       } else if (arg == "*endofplay") {
         //TODO end session, return to title screen
@@ -162,7 +172,7 @@ function processScriptMvmt(arg: string, cmd: string) {
         // ending is called from the scene. If necessary, set the scene
         // as completed before jumping to ending
       } else if (isScene(arg)) {
-        startScene(arg.substring(1))
+        script.moveTo(arg.substring(1))
         return BLOCK_CMD // prevent processing next line
       }
       break
@@ -276,14 +286,17 @@ export async function processLine(line: string) {
  * in the scene file
  */
 async function processCurrentLine() {
-  if (displayMode.screen != SCREEN.WINDOW)
-    return // not in the right screeen
-  else if (sceneLines?.length == 0)
-    return // scene not loaded
+  const {index, label} = gameContext
+  const lines = sceneLines
+  if (index < 0 || // no valid line index
+      label.length == 0 || // no specified scene
+      lines.length == 0 || // scene not loaded
+      displayMode.screen != SCREEN.WINDOW) // not in the right screen
+    return
 
   if (currentCommand) {
-    if (lastLine.index == gameContext.index &&
-        lastLine.label == gameContext.label)
+    if (lastLine.index == index &&
+        lastLine.label == label)
       return
     // Index has been changed by outside this function.
     // Skip remaining instructions in the previous line.
@@ -295,8 +308,6 @@ async function processCurrentLine() {
     return
   }
 
-  const {index, label} = gameContext
-  const lines = sceneLines
   lastLine.index = index
   lastLine.label = label
   if (index < lines.length) {
@@ -320,6 +331,23 @@ async function processCurrentLine() {
   }
 }
 
+async function fetchSceneLines() {
+  const label = gameContext.label
+  let fetchedLines: string[]|undefined
+  if (/^(f|skip)\d+a?$/.test(label))
+    fetchedLines = await fetchFBlock(label)
+  else if (label != "") {
+    fetchedLines = await fetchScene(label)
+  }
+  if (fetchedLines == undefined)
+    throw Error(`error while fetching lines for label ${label}`)
+  // check if context was changed while fetching the file
+  if (label == gameContext.label) {
+    sceneLines = fetchedLines
+    processCurrentLine()
+  }
+}
+
 /**
  * Executed when {@link gameContext.label} is modified.
  * Loads the scene or script block and starts the execution of lines.
@@ -330,26 +358,22 @@ async function processCurrentLine() {
 async function loadLabel(label: string) {
   console.log(`load label ${label}`)
   sceneLines = [] // set to empty to prevent execution of previous scene
-  if (/^s\d+a?$/.test(label))
-    sceneLines = await fetchScene(label.substring(1))
-  else if (/^f\d+a?$/.test(label))
-    sceneLines = await fetchFBlock(label.substring(1))
-  else if (/^skip\d+a?$/.test(label))
-    sceneLines = await fetchFBlock(label)
-  else if (label != "")
-    throw Error(`unknown label ${label}`)
-  processCurrentLine()
+  if (gameContext.index == -1) {
+    onSceneStart()
+  } else {
+    fetchSceneLines()
+  }
 }
 
-function onSceneEnd() {
-  const label = gameContext.label
+function onSceneEnd(label = gameContext.label) {
   console.log(`ending ${label}`)
   if (/^s\d+a?$/.test(label)) {
     // add scene to completed scenes
     if (!settings.completedScenes.includes(label))
       settings.completedScenes.push(label)
-    gameContext.label = `skip${label.substring(1)}`
-    gameContext.index = 0
+    script.moveTo(`skip${label.substring(1)}`)
+  } else if (label == "openning") {
+    script.moveTo('s20')
   }
 }
 
@@ -358,21 +382,28 @@ function warnHScene(callback: VoidFunction) {
   callback()
 }
 
-function startScene(label: string) {
+function onSceneStart() {
+  const label = gameContext.label
   if (settings.enableSceneSkip && settings.completedScenes.includes(label)) {
-    console.log(`scene ${label} already completed`)
-    skipCallback((skip)=>{
-      gameContext.label = skip ? `skip${label.substring(1)}` : label
-      gameContext.index = 0
+    skipCallback(async skip=> {
+      if (skip)
+        onSceneEnd(label)
+      else {
+        // check if context was changed while asking user
+        if (label == gameContext.label) {
+          gameContext.index = 0
+          fetchSceneLines()
+        }
+      }
     })
   } else if (settings.warnHScenes && H_SCENES.includes(label)) {
     warnHScene(()=> {
-      gameContext.label = label
       gameContext.index = 0
+      fetchSceneLines()
     })
   } else {
-    gameContext.label = label
     gameContext.index = 0
+    fetchSceneLines()
   }
 }
 

@@ -3,12 +3,16 @@ const LOGIC_FILE = 'scene0.txt'
 /*
  * Fetch and split the script into lines
  */
-export async function fetchScene(sceneId: string):Promise<string[]> {
-  const script = await fetch(`./scenes/scene${sceneId}.txt`)
-      .then(script=>script.text())
+export async function fetchScene(sceneId: string):Promise<string[]|undefined> {
+  if (/^s\d+a?$/.test(sceneId))
+    sceneId = `scene${sceneId.substring(1)}`
+  const script = await fetch(`./scenes/${sceneId}.txt`)
+      .then(
+        (response)=> response.ok ? response.text() : undefined,
+        (_failErr)=> undefined)
 
   //split data on \n
-  const result = script.split(/\r?\n/).filter(line=>line.length > 0)
+  const result = script?.split(/\r?\n/).filter(line=>line.length > 0)
 
   return result
 }
@@ -38,9 +42,10 @@ const ignoredFBlockLines= [
 export async function fetchFBlock(label: string): Promise<string[]> {
   const afterScene = /^skip\d+a?$/.test(label)
   if (afterScene) {
-    label = label.substring(4) // after 'skip'
+    // extract block label from skip label after 'skip'
+    label = `f${label.substring(4)}` 
   }
-  const lines = (await fetchBlock(`f${label}`)).filter(
+  const lines = (await fetchBlock(label)).filter(
       line=>!ignoredFBlockLines.includes(line))
 
   // find 'gosub *sXXX'

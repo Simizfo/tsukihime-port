@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Choice } from "../types"
 import { SCREEN, displayMode, gameContext } from "../utils/variables"
 import { useObserver } from "../utils/Observer"
+import script from "../utils/script"
 
 const choicesContainer: {choices: Choice[]} = {
   choices: []
@@ -57,8 +58,7 @@ const ChoicesLayer = () => {
 
   const handleSelect = (choice: Choice) => {
     console.log(choice)
-    gameContext.label = choice.label
-    gameContext.index = 0
+    script.moveTo(choice.label)
     displayMode.choices = false
   }
 

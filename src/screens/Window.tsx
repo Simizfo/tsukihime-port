@@ -119,10 +119,7 @@ const Window = () => {
     displayMode.screen = SCREEN.WINDOW
     //TODO wait for screen transition animation to end before starting the script
     if (gameContext.label == '') {
-      if (!quickLoad()) {
-        gameContext.label = 's20';
-        gameContext.index = 0;
-      }
+      script.moveTo('openning')
     }
 
     keyMap.enable(document, "keydown", {
