@@ -1,3 +1,4 @@
+import { ViewRatio } from "../types"
 import { observe, observeChildren } from "./Observer"
 import { IMAGES_FOLDERS, TEXT_SPEED } from "./constants"
 import Timer from "./timer"
@@ -21,7 +22,7 @@ const defaultsSettings = {
   font: "Ubuntu", // [not implemented]
   textPanelOpacity: 0.5, // [not implemented]
   imagesFolder: IMAGES_FOLDERS.image_x2,
-  fixedRatio: 0, // [not implemented]
+  fixedRatio: ViewRatio.unconstrained, // [not implemented]
   // H-related settings
   galleryBlur: true,
   warnHScenes: false, // [not implemented]
@@ -38,7 +39,7 @@ const defaultsSettings = {
 }
 
 // load from file
-const savedSettings = (()=>{
+const savedSettings = (()=> {
   const result = structuredClone(defaultsSettings)
   const fileContent = localStorage.getItem(SETTINGS_STORAGE_KEY)
   if (fileContent && fileContent.length > 0)

@@ -5,6 +5,7 @@ import { IMAGES_FOLDERS, TEXT_SPEED } from '../utils/constants'
 import { SCREEN, displayMode, settings } from '../utils/variables'
 import { useObserver } from '../utils/Observer'
 import { motion } from 'framer-motion'
+import { ViewRatio } from '../types'
 
 const ConfigScreen = () => {
 
@@ -12,7 +13,6 @@ const ConfigScreen = () => {
   const [imagesFolder, setImagesFolder] = useState(settings.imagesFolder)
   const [textSpeed, setTextSpeed] = useState(settings.textSpeed)
   const [galleryBlur, setGalleryBlur] = useState(settings.galleryBlur)
-
 
   useEffect(()=> {
     displayMode.screen = SCREEN.CONFIG
@@ -32,6 +32,10 @@ const ConfigScreen = () => {
 
   const updateGalleryBlur = (blur: boolean)=> {
     settings.galleryBlur = blur
+  }
+
+  const updateFixedRatio = (ratio: ViewRatio) => {
+    settings.fixedRatio = ratio
   }
 
   useObserver(setVolume, settings.volume, 'master')
@@ -70,6 +74,18 @@ const ConfigScreen = () => {
               <option value={IMAGES_FOLDERS.image}>640x480 (original)</option>
               <option value={IMAGES_FOLDERS.image_x2}>1280x960</option>
             </select>
+          </div>
+
+          <div>
+            Display ratio:&nbsp;
+            <select
+              value={settings.fixedRatio}
+              onChange={(e) => updateFixedRatio(e.target.value as ViewRatio)}>
+              <option value={ViewRatio.unconstrained}>Unconstrained</option>
+              <option value={ViewRatio.fourByThree}>4/3</option>
+              <option value={ViewRatio.sixteenByNine}>16/9</option>
+            </select>
+            (doesn't apply on portrait)
           </div>
 
           <div>

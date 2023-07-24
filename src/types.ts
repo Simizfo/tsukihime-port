@@ -20,3 +20,9 @@ export type Sprite = {
   image: string,
   type: string
 }
+
+export enum ViewRatio {
+  unconstrained = "",
+  fourByThree = "4/3",
+  sixteenByNine = "16/9",
+}

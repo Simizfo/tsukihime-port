@@ -11,8 +11,11 @@
     font-family: var(--font), sans-serif;
 }
 #view {
-    width: 100%;
+    --width: 100%;
+    width: var(--width);
     height: 100%;
+    --ratio: initial;
+    aspect-ratio: var(--ratio);
     overflow: hidden;
     box-shadow: 0 4px 3em rgb(0 0 0 / 60%);
 }

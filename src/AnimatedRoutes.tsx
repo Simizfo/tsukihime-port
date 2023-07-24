@@ -7,9 +7,10 @@ import GalleryScreen from './screens/GalleryScreen';
 import ConfigScreen from './screens/ConfigScreen';
 import { AnimatePresence } from 'framer-motion';
 import LoadScreen from "./screens/LoadScreen";
-import { observe, useObserver } from "./utils/Observer";
+import { useObserver } from "./utils/Observer";
 import { settings } from "./utils/variables";
 import { useState } from "react";
+import { ViewRatio } from "./types";
 
 
 const AnimatedRoutes = () => {
@@ -17,22 +18,23 @@ const AnimatedRoutes = () => {
   const [style, setStyle] = useState<{[key:string]: any}>({
     "--font": settings.font
   })
+  const [viewStyle, setViewStyle] = useState<{[key:string]: any}>()
 
-  useObserver((font)=> {
+  useObserver(font => {
     setStyle({...style, '--font': font})
   }, settings, "font")
 
-  useObserver((ratio)=> {
-    if (ratio == 0) {
-      //TODO aspect ratio not constrained
+  useObserver(ratio => {
+    if (ratio == ViewRatio.unconstrained) {
+      setViewStyle({...viewStyle, '--ratio': "initial", '--width': "100%"})
     } else {
-      //TODO constrain aspect ratio
+      setViewStyle({...viewStyle, '--ratio': `${ratio}`, '--width': "initial"})
     }
   }, settings, "fixedRatio")
 
   return (
     <div id="root-view" style={style}>
-      <div id="view">
+      <div id="view" style={viewStyle}>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Navigate to="/title" />} />
