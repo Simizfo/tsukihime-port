@@ -10,20 +10,15 @@ const SkipLayer = () => {
   useEffect(()=> {
 
     script.onSkipPrompt = (confirm: (skip: boolean)=>void)=> {
-      setDisplay(true)
+      displayMode.skip = true
       skipConfirm.current = confirm
     }
   }, [])
 
   useObserver(setDisplay, displayMode, 'skip')
 
-  useEffect(()=> {
-    if (display != displayMode.skip)
-      displayMode.skip = display
-  }, [display])
-
   function onSelection(skip: boolean) {
-    setDisplay(false)
+    displayMode.skip = false
     skipConfirm.current?.(skip)
     skipConfirm.current = undefined
   }

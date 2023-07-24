@@ -360,20 +360,21 @@ async function loadLabel(label: string) {
   sceneLines = [] // set to empty to prevent execution of previous scene
   if (gameContext.index == -1) {
     onSceneStart()
-  } else {
+  } else if (label != "") {
     fetchSceneLines()
   }
 }
 
 function onSceneEnd(label = gameContext.label) {
   console.log(`ending ${label}`)
-  if (/^s\d+a?$/.test(label)) {
+  if (isScene(label)) {
     // add scene to completed scenes
     if (!settings.completedScenes.includes(label))
       settings.completedScenes.push(label)
-    script.moveTo(`skip${label.substring(1)}`)
-  } else if (label == "openning") {
-    script.moveTo('s20')
+    if (/^s\d+a?$/.test(label))
+      script.moveTo(`skip${label.substring(1)}`)
+    else if (label == "openning")
+      script.moveTo('s20')
   }
 }
 
@@ -409,4 +410,17 @@ function onSceneStart() {
 
 observe(gameContext, 'label', loadLabel)
 observe(gameContext, 'index', processCurrentLine)
-observe(displayMode, 'screen', processCurrentLine)
+observe(displayMode, 'screen', (screen)=> {
+  if (screen == SCREEN.WINDOW)
+    processCurrentLine()
+  else {
+    //clear values not in gameContext
+    currentCommand = undefined
+  }
+})
+
+//##############################################################################
+//#                                   DEBUG                                    #
+//##############################################################################
+
+window.script = script;
