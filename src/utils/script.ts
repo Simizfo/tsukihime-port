@@ -213,7 +213,7 @@ function splitText(text: string) {
  */
 export async function processLine(line: string) {
   const instructions = new Array<{cmd:string,arg:string}>()
-  const endPageBreak = line.endsWith('\\')
+  const endPageBreak = line.endsWith('\\') && line.length > 1
 
   if (endPageBreak) // '\\' will be added as an individual command at the end
     line = line.substring(0, line.length-1)

@@ -175,7 +175,9 @@ const TextLayer = memo(({...props}: Props) => {
         <span>
           {convertText(visibleText)}{convertText(hiddenText, {style:{visibility: 'hidden'}})}
           {glyph.length > 0 &&
-            <img src={icons[glyph]} alt={glyph} id={glyph} className="cursor" />
+            // enclose glyph in zero-width space. Ensure the proper line height
+            // if the glyph is the only character on its line
+            <>&#8203;<img src={icons[glyph]} alt={glyph} id={glyph} className="cursor" />&#8203;</>
           }
         </span>
       </div>
