@@ -149,8 +149,8 @@ export const temp = { // temporaty variables (do not need to be saved)
   flushcount: 0,  //used in for loops in the script
 }
 
-export const defaultGameContext = deepFreeze(structuredClone(gameContext));
-export const defaultProgress = deepFreeze(structuredClone(progress));
+export const defaultGameContext = deepFreeze(structuredClone(gameContext))
+export const defaultProgress = deepFreeze(structuredClone(progress))
 
 //##############################################################################
 //#                                 FUNCTIONS                                  #
@@ -190,10 +190,14 @@ const flagsProxy = new Proxy({}, {
   }
 })
 
-function getVarLocation(name: string): [any, string] {
-  if (!['$','%'].includes(name.charAt(0)))
-    throw Error(`Ill-formed variable name in 'mov' command: "${name}"`)
-  name = name.substring(1)
+type numVarName = `%${string}`
+type strVarName = `$${string}`
+type varName = numVarName | strVarName
+
+function getVarLocation(fullName: varName): [any, string] {
+  if (!['$','%'].includes(fullName.charAt(0)))
+    throw Error(`Ill-formed variable name in 'mov' command: "${fullName}"`)
+  let name = fullName.substring(1)
   let parent
   if (name in temp) {
     parent = temp
@@ -214,24 +218,27 @@ function getVarLocation(name: string): [any, string] {
   }
   return [parent, name]
 }
-
-
-export function getGameVariable(name: string): number|string {
+export function getGameVariable(name: numVarName): number;
+export function getGameVariable(name: strVarName): string;
+export function getGameVariable(name: varName) : number|string
+export function getGameVariable(name: varName) {
   const [parent, attrName] = getVarLocation(name)
   return parent[attrName as keyof typeof parent]
 }
 
-export function setGameVariable(name: string, value: string|number) {
+export function setGameVariable(name: numVarName, value: number): void;
+export function setGameVariable(name: strVarName, value: string): void;
+export function setGameVariable(name: varName, value: number|string): void
+export function setGameVariable(name: varName, value: number|string) {
   if (name.charAt(0) == '%')
     value = +value // convert to number if the value is a string
-  const [parent, attrName] = getVarLocation(name);
-
-  (parent[attrName as keyof typeof parent] as string|number) = value
+  const [parent, attrName] = getVarLocation(name)
+  parent[attrName as keyof typeof parent] = value
 }
 
 export function processVarCmd(arg: string, cmd: string) {
-  const [name, v] = arg.split(',')
-  let currVal = getGameVariable(name);
+  const [name, v] = arg.split(',') as [varName, string]
+  let currVal = getGameVariable(name)
   if (currVal === null && cmd != 'mov')
     throw Error(`Reading undefined variable. [${cmd} ${arg}]`)
 
@@ -258,7 +265,7 @@ export const commands = {
 
 declare global {
   interface Window {
-    [key: string]: any;
+    [key: string]: any
   }
 }
 window.settings = settings

@@ -12,7 +12,8 @@ import { commands as variableCommands, getGameVariable, gameContext, settings, d
 import { createSaveState } from "./savestates"
 
 type CommandHandler = {next: VoidFunction}
-type CommandProcessFunction = (arg: string, cmd: string, onFinish: VoidFunction)=>CommandHandler|void
+type CommandProcessFunction =
+    ((arg: string, cmd: string, onFinish: VoidFunction)=>CommandHandler|void)
 type CommandMap = Map<string, CommandProcessFunction|null>
 
 type SkipCallback = (confirm:(skip: boolean)=>void)=>void
@@ -23,7 +24,8 @@ let lastLine = {label: "", index: 0}
 let currentCommand: CommandHandler | undefined
 let skipCommand: VoidFunction | undefined
 let lineSkipped: boolean = false
-const BLOCK_CMD = {next: ()=>{}}
+
+const BLOCK_CMD = {next: ()=>{}} // prevent proceeding to next line
 
 const history = new Stack<Page>([], HISTORY_MAX_PAGES)
 
@@ -84,11 +86,12 @@ const commands:CommandMap = new Map(Object.entries({
   ...choiceCommands,
 
   'if'        : processIfCmd,
-  'skip'      : processScriptMvmt,
-  'goto'      : processScriptMvmt,
-  'gosub'     : processScriptMvmt,
-  'return'    : processScriptMvmt,
-  
+  'goto'      : processGoto,
+  'gosub'     : processGosub,
+
+  'skip'      : (n: string)=> { gameContext.index += parseInt(n) },
+  'return'    : ()=> { onSceneEnd(); return BLOCK_CMD },
+
   'setwindow' : null,
   'windoweffect' : null,
   'setcursor' : null,
@@ -105,89 +108,74 @@ function checkIfCondition(condition: string) {
   for (const [i, token] of condition.split(' ').entries()) {
     if (i % 2 == 0) {
       const match = opRegexp.exec(token)
-      if (match) {
-        let {lhs, op, rhs} = match.groups as any
-        if (lhs.charAt(0) == '%')
-          lhs = getGameVariable(lhs) as number
-        else lhs = parseInt(lhs)
-        if (rhs.charAt(0) == '%')
-          rhs = getGameVariable(rhs) as number
-        else rhs = parseInt(rhs)
-        switch (op) {
-          case '==' : value = (lhs == rhs); break
-          case '!=' : value = (lhs != rhs); break
-          case '<'  : value = (lhs <  rhs); break
-          case '>'  : value = (lhs >  rhs); break
-          case '<=' : value = (lhs <= rhs); break
-          case '>=' : value = (lhs >= rhs); break
-          default : throw Error (`unknown operator ${op} in condition ${condition}`)
-        }
-      } else
-        throw Error(`Unable to parse expression "${token}" in condition ${condition}`)
-    } else if (token == "&&") {
-      if (!value)
-        return false
-    } else if (token == "||") {
-      if (value)
-        return true
+      if (!match) throw Error(
+        `Unable to parse expression "${token}" in condition ${condition}`)
+
+      let {_lhs, op, _rhs} = match.groups as any
+      const lhs = _lhs.startsWith("%")? getGameVariable(_lhs) : parseInt(_lhs)
+      const rhs = _rhs.startsWith("%")? getGameVariable(_rhs) : parseInt(_rhs)
+
+      switch (op) {
+        case '==' : value = (lhs == rhs); break
+        case '!=' : value = (lhs != rhs); break
+        case '<'  : value = (lhs <  rhs); break
+        case '>'  : value = (lhs >  rhs); break
+        case '<=' : value = (lhs <= rhs); break
+        case '>=' : value = (lhs >= rhs); break
+        default : throw Error (
+          `unknown operator ${op} in condition ${condition}`)
+      }
     } else {
-      throw Error(`Unable to parse operator "${token}" in condition ${condition}`)
+      switch (token) {
+        case "&&" : if (!value) return false; break
+        case "||" : if (value) return true; break
+        default : throw Error(
+          `Unable to parse operator "${token}" in condition ${condition}`)
+      }
     }
   }
   return value
 }
 
 function processIfCmd(arg: string, _: string, onFinish: VoidFunction) {
-
   let index = arg.search(/ [a-z]/)
   if (index == -1)
     throw Error(`no separation between condition and command: "if ${arg}"`)
   const condition = arg.substring(0, index)
   if (checkIfCondition(condition))
     processLine(arg.substring(index+1)).then(onFinish)
-
 }
 
-function processScriptMvmt(arg: string, cmd: string) {
-  arg = arg?.trim()
-  switch (cmd) {
-    case 'skip' :
-      gameContext.index += parseInt(arg)
-      return
-    case 'goto' :
-      if (/^\*f\d+a?$/.test(arg)) {
-        script.moveTo(arg.substring(1), 0)
-        return BLOCK_CMD // prevent processing next line
-      } else if (arg == "*endofplay") {
-        //TODO end session, return to title screen
-        return
-      } else {
-        return
-      }
-    case 'gosub' :
-      if (arg == "*right_phase" || arg == "*left_phase") {
-        //TODO process right_pahse, with vars temp.phase_bg,
-        // temp.phase_title_a, temp.phase_title_b
-      } else if (arg == "*ending") {
-        // ending is called from the scene. If necessary, set the scene
-        // as completed before jumping to ending
-      } else if (isScene(arg)) {
-        script.moveTo(arg.substring(1))
-        return BLOCK_CMD // prevent processing next line
-      }
-      break
-    case 'return' :
-      onSceneEnd()
-      return BLOCK_CMD // prevent processing next line
+function processGoto(arg: string) {
+  if (/^\*f\d+a?$/.test(arg)) {
+    script.moveTo(arg.substring(1), 0)
+    return BLOCK_CMD // prevent processing next line
+  } else if (arg == "*endofplay") {
+    //TODO end session, return to title screen
+  }
+}
+
+function processGosub(arg: string) {
+  if (arg == "*right_phase" || arg == "*left_phase") {
+    //TODO process right_phase, with vars temp.phase_bg,
+    // temp.phase_title_a, temp.phase_title_b
+  } else if (arg == "*ending") {
+    // ending is called from the scene. If necessary, set the scene
+    // as completed before jumping to ending
+  } else if (isScene(arg)) {
+    script.moveTo(arg.substring(1))
+    return BLOCK_CMD
   }
 }
 
 function splitText(text: string) {
   const instructions = new Array<{ cmd:string, arg:string }>()
   let index = 0
+  // replace spaces with en-spaces at the beginning of the line
   while (text.charCodeAt(index) == 0x20)
     index++
   text = "\u2002".repeat(index) + text.substring(index)
+  // split tokens at every '@', '\', '!xxx'
   while (text.length > 0) {
     index = text.search(/@|\\|!\w|$/)
     if (index > 0)
@@ -253,25 +241,19 @@ export async function processLine(line: string) {
     instructions.push({cmd:'\\',arg:''})
 
   for (const [i, {cmd, arg}] of instructions.entries()) {
-    if (lineSkipped) {
+    if (lineSkipped)
       break
-    }
     const command = commands.get(cmd)
     if (command) {
       await new Promise<void>(resolve=> {
         currentCommand = command(arg, cmd, resolve) as typeof currentCommand
         if (currentCommand)
-          skipCommand = resolve
+          skipCommand = resolve // if the command must be skipped at some point
         else
           resolve()
       })
       currentCommand = undefined
       skipCommand = undefined
-      // add history pages after executing '\'.
-      // TODO allow loading those pages. To prevent error, they cannot be loaded
-      if (cmd == '\\' && i < instructions.length) {
-        onPageBreak(false)
-      }
     }
     else if (!commands.has(cmd)) {
       const {label: scene, index} = gameContext
@@ -318,7 +300,7 @@ async function processCurrentLine() {
       onPageBreak()
 
     let line = sceneLines[index]
-    console.log(`Processing line ${index}: ${line}`)
+    console.log(`${label}:${index}: ${line}`)
     await processLine(line)
     if (gameContext.index != index || gameContext.label != label) {
       // the context has been changed while processing the line.
@@ -328,7 +310,6 @@ async function processCurrentLine() {
     } else {
       gameContext.index++
     }
-
   } else {
     onSceneEnd()
   }
@@ -336,12 +317,12 @@ async function processCurrentLine() {
 
 async function fetchSceneLines() {
   const label = gameContext.label
-  let fetchedLines: string[]|undefined
-  if (/^(f|skip)\d+a?$/.test(label))
-    fetchedLines = await fetchFBlock(label)
-  else if (label != "") {
+  let fetchedLines: string[]|undefined = undefined
+  if (isScene(label))
     fetchedLines = await fetchScene(label)
-  }
+  else if (/^(f|skip)\d+a?$/.test(label))
+    fetchedLines = await fetchFBlock(label)
+
   if (fetchedLines == undefined)
     throw Error(`error while fetching lines for label ${label}`)
   // check if context was changed while fetching the file
@@ -361,11 +342,10 @@ async function fetchSceneLines() {
 async function loadLabel(label: string) {
   console.log(`load label ${label}`)
   sceneLines = [] // set to empty to prevent execution of previous scene
-  if (gameContext.index == -1) {
+  if (gameContext.index == -1)
     onSceneStart()
-  } else if (label != "") {
+  else if (label != "")
     fetchSceneLines()
-  }
 }
 
 function onSceneEnd(label = gameContext.label) {
@@ -426,4 +406,4 @@ observe(displayMode, 'screen', (screen)=> {
 //#                                   DEBUG                                    #
 //##############################################################################
 
-window.script = script;
+window.script = script
