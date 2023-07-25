@@ -5,13 +5,16 @@ import script from "../utils/script"
 
 const SkipLayer = () => {
   const [display, setDisplay] = useState<boolean>(displayMode.skip)
+  const [sceneTitle, setSceneTitle] = useState<string>()
   const skipConfirm = useRef<(skip:boolean)=>void>()
 
   useEffect(()=> {
 
-    script.onSkipPrompt = (confirm: (skip: boolean)=>void)=> {
+    script.onSkipPrompt = (title: string|undefined,
+                           confirm: (skip: boolean)=>void)=> {
       displayMode.skip = true
       skipConfirm.current = confirm
+      setSceneTitle(title)
     }
   }, [])
 
@@ -30,7 +33,10 @@ const SkipLayer = () => {
     <div id="skip-layer" className={`box ${display ? "show" : ""}`}>
       <div className="modal">
         <div className="title">
-          You have already seen this scene.<br />
+          You have already seen
+          {sceneTitle ? <> the scene <span className="scene-title">{sceneTitle}</span></>
+          : <> this scene</>
+          }.<br />
           Do you want to skip it?
         </div>
 

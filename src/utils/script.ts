@@ -5,7 +5,7 @@ import { Page } from "../types"
 import { commands as audioCommands } from "./AudioManager"
 import { observe } from "./Observer"
 import Stack from "./Stack"
-import { HISTORY_MAX_PAGES, H_SCENES } from "./constants"
+import { HISTORY_MAX_PAGES, SCENE_ATTRS } from "./constants"
 import { commands as timerCommands } from "./timer"
 import { fetchFBlock, fetchScene } from "./utils"
 import { commands as variableCommands, getGameVariable, gameContext, settings, displayMode, SCREEN } from "./variables"
@@ -16,7 +16,7 @@ type CommandProcessFunction =
     ((arg: string, cmd: string, onFinish: VoidFunction)=>CommandHandler|void)
 type CommandMap = Map<string, CommandProcessFunction|null>
 
-type SkipCallback = (confirm:(skip: boolean)=>void)=>void
+type SkipCallback = (sceneTitle: string|undefined, confirm:(skip: boolean)=>void)=>void
 let skipCallback: SkipCallback = ()=> { throw Error(`script.onSkipPrompt not specified`) }
 
 let sceneLines: Array<string> = []
@@ -33,7 +33,7 @@ export const script = {
   /**
    * Set the callback to call when a scene can be skipped
    */
-  set onSkipPrompt(callback: (confirm:(skip: boolean)=>void)=>void) {
+  set onSkipPrompt(callback: SkipCallback) {
     skipCallback = callback
   },
   /**
@@ -369,7 +369,7 @@ function warnHScene(callback: VoidFunction) {
 function onSceneStart() {
   const label = gameContext.label
   if (settings.enableSceneSkip && settings.completedScenes.includes(label)) {
-    skipCallback(async skip=> {
+    skipCallback(SCENE_ATTRS[label]?.title, async skip=> {
       if (skip)
         onSceneEnd(label)
       else {
@@ -380,7 +380,7 @@ function onSceneStart() {
         }
       }
     })
-  } else if (settings.warnHScenes && H_SCENES.includes(label)) {
+  } else if (settings.warnHScenes && SCENE_ATTRS[label]?.h) {
     warnHScene(()=> {
       gameContext.index = 0
       fetchSceneLines()

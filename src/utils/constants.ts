@@ -1,10 +1,11 @@
 import straliasJson from '../assets/game/stralias.json'
 import numaliasJson from '../assets/game/numalias.json'
-import hScenes from '../assets/game/h_scenes.json'
+import sceneAttrs from '../assets/game/scene_attrs.json'
 
 export const STRALIAS_JSON = JSON.parse(JSON.stringify(straliasJson))
 export const NUMALIAS_JSON = JSON.parse(JSON.stringify(numaliasJson))
-export const H_SCENES = JSON.parse(JSON.stringify(hScenes))
+export const SCENE_ATTRS : {[key:string]: {title?:string, h?:boolean}}
+                         = JSON.parse(JSON.stringify(sceneAttrs))
 
 export enum IMAGES_FOLDERS {
   image = "image",
