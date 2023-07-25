@@ -15,10 +15,12 @@ const icons: {[key: string]: string} = {
 
 const scriptInterface: {
   text: string,
+  glyph: string|undefined,
   fastForward: boolean,
   onFinish: VoidFunction|undefined
 } = {
   text: "",
+  glyph: undefined,
   fastForward: false,
   onFinish: undefined
 }
@@ -26,14 +28,20 @@ const scriptInterface: {
 function appendText(text: string) {
   script.history.top.text += text
   scriptInterface.text = script.history.top.text
+  scriptInterface.glyph = undefined
 }
 
 function onBreakChar(_: string, cmd: string, onFinish: VoidFunction) {
-  appendText(cmd)
   let delay = 0
   switch(cmd) {
-    case '@' : delay = settings.autoClickDelay; break
-    case '\\' : delay = settings.nextPageDelay; break
+    case '@' :
+      scriptInterface.glyph = "moon"
+      delay = settings.autoClickDelay
+      break
+    case '\\' :
+      scriptInterface.glyph = "page"
+      delay = settings.nextPageDelay
+      break
     default : throw Error(`unknown break char ${cmd}`)
   }
   if (delay > 0) {
@@ -81,8 +89,6 @@ const TextLayer = memo(({...props}: Props) => {
   const [ immediate, setImmediate ] = useState<boolean>(false)
   const [ previousText, setPreviousText ] = useState<string[]>([]) // lines to display entirely
   const [ newText, setNewText ] = useState<string>("") // line to display gradually
-  const [ visibleText, setVisibleText ] = useState<string>("") // part of the last line that is displayed
-  const [ hiddenText, setHiddenText ] = useState<string>("") // part of the last line not yet displayed
   const [ cursor, setCursor ] = useState<number>(0) // position of the cursor on the last line.
   const [ glyph, setGlyph ] = useState<string>('') // id of the animated glyph to display at end of line
 
@@ -91,14 +97,13 @@ const TextLayer = memo(({...props}: Props) => {
   useObserver(setDisplay, displayMode, 'text')
   useObserver(setText, scriptInterface, 'text')
   useObserver(setImmediate, scriptInterface, 'fastForward')
-
-  useObserver((_opacity: number)=> {
-    //TODO
-  }, settings, "textPanelOpacity")
-
-  useObserver((_font: string)=> {
-    //TODO
-  }, settings, "font")
+  useObserver((glyph)=> {
+    if (glyph) {
+      setPreviousText(scriptInterface.text.split('\n'))
+      setNewText("")
+    }
+    setGlyph(glyph)
+  }, scriptInterface, 'glyph')
 
   useEffect(()=> {
     const previous = previousText.join('\n') + newText
@@ -144,26 +149,9 @@ const TextLayer = memo(({...props}: Props) => {
     }
   }, [previousText, newText, immediate])
 
-  useEffect(()=> {
-    //if last character is '@' or '\', display the appropriate image
-    if (cursor >= newText.length) {
-      setVisibleText(newText)
-      setHiddenText("")
-      switch(newText.charAt(newText.length-1))
-      {
-        case '@' : setGlyph('moon'); break
-        case '\\' : setGlyph('page'); break
-        default : setGlyph(''); break
-      }
-    } else {
-      setGlyph('')
-      setVisibleText(newText.substring(0, cursor))
-      setHiddenText(newText.substring(cursor))
-    }
-  }, [cursor])
-
   const {className, ...remaining_props} = props
-
+  const visibleText = newText.substring(0, cursor)
+  const hiddenText = newText.substring(cursor)
   return (
     <div className={`box box-text ${!display ? "hide ":""}${className||''}`} {...remaining_props}>
       <div className="text-container">
@@ -173,12 +161,14 @@ const TextLayer = memo(({...props}: Props) => {
             {convertText(line)}
           </Fragment>)}
         <span>
-          {convertText(visibleText)}{convertText(hiddenText, {style:{visibility: 'hidden'}})}
-          {glyph.length > 0 &&
-            // enclose glyph in zero-width space. Ensure the proper line height
-            // if the glyph is the only character on its line
-            <>&#8203;<img src={icons[glyph]} alt={glyph} id={glyph} className="cursor" />&#8203;</>
-          }
+          {glyph ? <>
+            &#8203;
+            <img src={icons[glyph]} alt={glyph} id={glyph} className="cursor" />
+            &#8203;
+          </> : <>
+            {convertText(visibleText)}
+            {convertText(hiddenText, {style:{visibility: 'hidden'}})}
+          </>}
         </span>
       </div>
     </div>

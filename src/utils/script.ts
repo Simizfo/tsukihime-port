@@ -185,6 +185,9 @@ function processScriptMvmt(arg: string, cmd: string) {
 function splitText(text: string) {
   const instructions = new Array<{ cmd:string, arg:string }>()
   let index = 0
+  while (text.charCodeAt(index) == 0x20)
+    index++
+  text = "\u2002".repeat(index) + text.substring(index)
   while (text.length > 0) {
     index = text.search(/@|\\|!\w|$/)
     if (index > 0)
