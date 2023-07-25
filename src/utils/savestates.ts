@@ -122,7 +122,7 @@ export function loadSaveState(ss: SaveStateId | SaveState) {
         break
       }
     }
-    script.history.trimTop(history.length - index)
+    script.history.trimTop(script.history.length - index)
     overrideAttributes(gameContext, (ss as SaveState).context, false)
     overrideAttributes(progress, (ss as SaveState).progress, false)
     return true
