@@ -83,9 +83,9 @@ const HistoryLayer = (props: Props) => {
             <Fragment key={i}>
               {i > 0 && <hr/>}
               {saveState &&
-                <button className="menu-btn" onClick={onClick.bind(null,saveState)}>Load</button>
+                <button className="menu-btn load" onClick={onClick.bind(null,saveState)}>Load</button>
               }
-              {text.split('\n').map((line, i)=>
+              {text.split('\n').map((line, i) =>
                 <Fragment key={i}>
                   {i > 0 && <br/>}
                   {convertText(line)}

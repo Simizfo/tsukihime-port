@@ -90,7 +90,7 @@
         }
 
         .text-container {
-            width: min(100%, 660px);
+            width: min(100%, 670px);
             margin-inline: auto;
         }
 
@@ -110,6 +110,13 @@
             margin: 1.4em 0;
             width: 120%;
             margin-left: -10%;
+        }
+        .load {
+            display: block;
+            margin: .4em;
+            padding: 0 .8em;
+            font-size: .8em;
+            text-shadow: none;
         }
         .cursor {
             width: 20px;
@@ -336,11 +343,12 @@
 
         .modal {
             background: linear-gradient(90deg, hsla(205, 89%, 35%, 0) 0%,
-                                                hsla(217, 79%, 28%, 0.8) 10%,
-                                                hsla(217, 79%, 28%, 0.8) 90%,
+                                                hsla(217, 79%, 28%, 1) 6%,
+                                                hsla(217, 79%, 28%, 1) 94%,
                                                 hsla(205, 89%, 35%, 0) 100%);
             align-self: center;
-            padding: 1em 4em;
+            padding: 1em 3em;
+            width: min(600px, 100%);
             margin-inline: auto;
 
             .title {
