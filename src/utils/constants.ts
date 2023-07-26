@@ -4,8 +4,25 @@ import sceneAttrs from '../assets/game/scene_attrs.json'
 
 export const STRALIAS_JSON = JSON.parse(JSON.stringify(straliasJson))
 export const NUMALIAS_JSON = JSON.parse(JSON.stringify(numaliasJson))
-export const SCENE_ATTRS : {[key:string]: {title?:string, h?:boolean}}
-                         = JSON.parse(JSON.stringify(sceneAttrs))
+enum RouteName {ark='ark',cel='cel',aki='aki',his='his',koha='koha'}
+export const SCENE_ATTRS : {
+  routes: {
+    [key in RouteName]: {
+      [key:`${number}${'a'|'b'}`]: string
+    }
+  },
+  scenes: {
+    [key : `s${number}${'a'|''}`]: ({
+      title: string,
+    } | {
+      r: (RouteName | { flg: string, "0": RouteName, "1": RouteName }),
+      d: `${number}${'a'|'b'}`
+      s?: string,
+    }) & {
+      h?: boolean
+    }
+  }
+ } = JSON.parse(JSON.stringify(sceneAttrs))
 
 export enum IMAGES_FOLDERS {
   image = "image",

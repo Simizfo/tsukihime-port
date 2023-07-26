@@ -71,6 +71,29 @@ function onPageBreak(createSS=true) {
   history.push({ saveState: createSS ? createSaveState() : undefined, text: ""})
 }
 
+function getSceneName(label: `s${number}${'a'|''}`): string|undefined {
+  const attrs = SCENE_ATTRS.scenes[label]
+  if (!attrs)
+    return undefined
+  if ("title" in attrs)
+    return attrs.title
+  else {
+    const {r, d, s} = attrs
+    let route: keyof typeof SCENE_ATTRS.routes
+    if (typeof r == "object" && 'flg' in r) {
+      if (getGameVariable(`%flg${r.flg}`))
+        route = r["1"]
+      else 
+        route = r["0"]
+    } else {
+      route = r
+    }
+    let sceneName = SCENE_ATTRS.routes[route][d]
+    if (s)
+      sceneName += " - " + s
+    return sceneName
+  }
+}
 
 //##############################################################################
 //#                                  COMMANDS                                  #
@@ -367,9 +390,9 @@ function warnHScene(callback: VoidFunction) {
 }
 
 function onSceneStart() {
-  const label = gameContext.label
+  const label = gameContext.label as keyof typeof SCENE_ATTRS.scenes
   if (settings.enableSceneSkip && settings.completedScenes.includes(label)) {
-    skipCallback(SCENE_ATTRS[label]?.title, async skip=> {
+    skipCallback(getSceneName(label), async skip=> {
       if (skip)
         onSceneEnd(label)
       else {
@@ -380,7 +403,7 @@ function onSceneStart() {
         }
       }
     })
-  } else if (settings.warnHScenes && SCENE_ATTRS[label]?.h) {
+  } else if (settings.warnHScenes && SCENE_ATTRS.scenes[label]?.h) {
     warnHScene(()=> {
       gameContext.index = 0
       fetchSceneLines()
