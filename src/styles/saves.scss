@@ -25,6 +25,7 @@
             flex-direction: row;
             transition: all .2s ease-out;
             min-height: 100px;
+            overflow: hidden;
 
             &.create {
                 justify-content: center;
@@ -73,6 +74,7 @@
             width: 100%;
             height: 100%;
             position: absolute;
+            filter: brightness(0.8);
         }
 
         .deta {
@@ -141,10 +143,15 @@
 
     @media screen and (max-width: 860px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 3fr;
+        grid-template-rows: 1fr 4fr;
 
         .info {
             grid-row: 1;
+
+            .deta {
+                flex: initial;
+                margin-left: auto;
+            }
         }
     }
 }
