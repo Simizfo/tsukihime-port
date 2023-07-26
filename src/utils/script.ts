@@ -80,17 +80,19 @@ function getSceneName(label: `s${number}${'a'|''}`): string|undefined {
   else {
     const {r, d, s} = attrs
     let route: keyof typeof SCENE_ATTRS.routes
-    if (typeof r == "object" && 'flg' in r) {
-      if (getGameVariable(`%flg${r.flg}`))
-        route = r["1"]
-      else 
-        route = r["0"]
-    } else {
+    if (typeof r == "object" && 'flg' in r)
+      route = r[(getGameVariable(`%flg${r.flg}`)) ? "1" : "0"]
+    else
       route = r
-    }
+    
     let sceneName = SCENE_ATTRS.routes[route][d]
-    if (s)
-      sceneName += " - " + s
+    if (s) {
+      sceneName += " - "
+      if (typeof s == "object" && 'flg' in s)
+        sceneName += s[(getGameVariable(`%flg${s.flg}`)) ? "1" : "0"]
+      else
+        sceneName += s
+    }
     return sceneName
   }
 }

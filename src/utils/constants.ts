@@ -17,7 +17,7 @@ export const SCENE_ATTRS : {
     } | {
       r: (RouteName | { flg: string, "0": RouteName, "1": RouteName }),
       d: `${number}${'a'|'b'}`
-      s?: string,
+      s?: (string | { flg: string, "0": string, "1": string }),
     }) & {
       h?: boolean
     }
