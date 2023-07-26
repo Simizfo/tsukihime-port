@@ -13,11 +13,16 @@
         a {
             overflow: hidden;
             height: max-content;
+
+            &:hover img {
+                transform: scale(1.1);
+            }
         }
         img {
             display: block;
             aspect-ratio: 4/3;
             width: 100%;
+            transition: .2s ease-out;
         }
         .h img {
             filter: blur(12px);
