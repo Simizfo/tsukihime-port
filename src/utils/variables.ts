@@ -1,4 +1,4 @@
-import { ViewRatio } from "../types"
+import { ViewRatio, NumVarName, StrVarName, VarName, LabelName } from "../types"
 import { observe, observeChildren } from "./Observer"
 import { IMAGES_FOLDERS, TEXT_SPEED } from "./constants"
 import Timer from "./timer"
@@ -22,7 +22,7 @@ const defaultsSettings = {
   font: "Ubuntu", // [not implemented]
   textPanelOpacity: 0.5, // [not implemented]
   imagesFolder: IMAGES_FOLDERS.image_x2,
-  fixedRatio: ViewRatio.unconstrained, // [not implemented]
+  fixedRatio: ViewRatio.unconstrained,
   // H-related settings
   galleryBlur: true,
   warnHScenes: false, // [not implemented]
@@ -114,7 +114,7 @@ export const displayMode : {
 export const gameContext = {
 //_____________________________position in scenario_____________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  label: '', // script block label
+  label: '' as LabelName|'', // script block label
   index: 0, // line index in the labeled script block.
 //_______________________________audio, graphics________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -190,11 +190,7 @@ const flagsProxy = new Proxy({}, {
   }
 })
 
-type numVarName = `%${string}`
-type strVarName = `$${string}`
-type varName = numVarName | strVarName
-
-function getVarLocation(fullName: varName): [any, string] {
+function getVarLocation(fullName: VarName): [any, string] {
   if (!['$','%'].includes(fullName.charAt(0)))
     throw Error(`Ill-formed variable name in 'mov' command: "${fullName}"`)
   let name = fullName.substring(1)
@@ -218,18 +214,18 @@ function getVarLocation(fullName: varName): [any, string] {
   }
   return [parent, name]
 }
-export function getGameVariable(name: numVarName): number;
-export function getGameVariable(name: strVarName): string;
-export function getGameVariable(name: varName) : number|string
-export function getGameVariable(name: varName) {
+export function getGameVariable(name: NumVarName): number;
+export function getGameVariable(name: StrVarName): string;
+export function getGameVariable(name: VarName) : number|string
+export function getGameVariable(name: VarName) {
   const [parent, attrName] = getVarLocation(name)
   return parent[attrName as keyof typeof parent]
 }
 
-export function setGameVariable(name: numVarName, value: number): void;
-export function setGameVariable(name: strVarName, value: string): void;
-export function setGameVariable(name: varName, value: number|string): void
-export function setGameVariable(name: varName, value: number|string) {
+export function setGameVariable(name: NumVarName, value: number): void;
+export function setGameVariable(name: StrVarName, value: string): void;
+export function setGameVariable(name: VarName, value: number|string): void
+export function setGameVariable(name: VarName, value: number|string) {
   if (name.charAt(0) == '%')
     value = +value // convert to number if the value is a string
   const [parent, attrName] = getVarLocation(name)
@@ -237,7 +233,7 @@ export function setGameVariable(name: varName, value: number|string) {
 }
 
 export function processVarCmd(arg: string, cmd: string) {
-  const [name, v] = arg.split(',') as [varName, string]
+  const [name, v] = arg.split(',') as [VarName, string]
   let currVal = getGameVariable(name)
   if (currVal === null && cmd != 'mov')
     throw Error(`Reading undefined variable. [${cmd} ${arg}]`)

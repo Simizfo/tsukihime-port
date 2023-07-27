@@ -26,3 +26,15 @@ export enum ViewRatio {
   fourByThree = "4/3",
   sixteenByNine = "16/9",
 }
+
+export type RouteName = 'aki'|'ark'|'cel'|'his'|'koha'
+export type RouteDayName = `${number}${'a'|'b'}`
+
+export type SceneName = `s${number}${'a'|''}` |
+  "openning" | "ending" | "eclipse" | `mm${string}`
+export type LabelName = SceneName |
+  `f${number}${'a'|''}` | `skip${number}${'a'|''}`
+
+export type NumVarName = `%${string}`
+export type StrVarName = `$${string}`
+export type VarName = NumVarName | StrVarName

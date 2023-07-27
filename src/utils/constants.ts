@@ -1,22 +1,22 @@
 import straliasJson from '../assets/game/stralias.json'
 import numaliasJson from '../assets/game/numalias.json'
 import sceneAttrs from '../assets/game/scene_attrs.json'
+import { RouteDayName, RouteName, SceneName } from '../types'
 
 export const STRALIAS_JSON = JSON.parse(JSON.stringify(straliasJson))
 export const NUMALIAS_JSON = JSON.parse(JSON.stringify(numaliasJson))
-enum RouteName {ark='ark',cel='cel',aki='aki',his='his',koha='koha'}
 export const SCENE_ATTRS : {
   routes: {
     [key in RouteName]: {
-      [key:`${number}${'a'|'b'}`]: string
+      [key:RouteDayName]: string
     }
   },
   scenes: {
-    [key : `s${number}${'a'|''}`]: ({
+    [key in SceneName]: ({
       title: string,
     } | {
       r: (RouteName | { flg: string, "0": RouteName, "1": RouteName }),
-      d: `${number}${'a'|'b'}`
+      d: RouteDayName
       s?: (string | { flg: string, "0": string, "1": string }),
     }) & {
       h?: boolean
@@ -49,7 +49,7 @@ export const HISTORY_MAX_PAGES = 20
 
 export const GALLERY_IMAGES = {
   arcueid: [
-    "ark_e01", "ark_e02", "ark_e03", "ark_e04", "ark_e04b", "ark_e05a", "ark_e05b", "ark_e06a", "ark_e06b", "ark_e07", "ark_e08", "ark_e09", "ark_e10", 
+    "ark_e01", "ark_e02", "ark_e03", "ark_e04", "ark_e04b", "ark_e05a", "ark_e05b", "ark_e06a", "ark_e06b", "ark_e07", "ark_e08", "ark_e09", "ark_e10",
     "ark_f01", "ark_f02", "ark_f03",
     "ark_h01", "ark_h02", "ark_h03", "ark_h04", "ark_h05", "ark_h06", "ark_h07", "ark_h08", "ark_h09", "ark_h10", "ark_h11", "ark_h12", "ark_h13"
   ],
@@ -61,7 +61,7 @@ export const GALLERY_IMAGES = {
   akiha: [
     "aki_e01", "aki_e01b", "aki_e02", "aki_e03", "aki_e04", "aki_e04b", "aki_e05a", "aki_e05b", "aki_e06", "aki_e07a", "aki_e07b", "aki_e08", "aki_e09",
     "aki_f01", "aki_f02",
-    "aki_h01", "aki_h02", "aki_h03", "aki_h04", "aki_h05", "aki_h06", "aki_h07", "aki_h08", "aki_h09", "aki_h10", "aki_h11", "aki_h12", "aki_h13", "aki_h14", "aki_h15", 
+    "aki_h01", "aki_h02", "aki_h03", "aki_h04", "aki_h05", "aki_h06", "aki_h07", "aki_h08", "aki_h09", "aki_h10", "aki_h11", "aki_h12", "aki_h13", "aki_h14", "aki_h15",
   ],
   kohaku: [
     "koha_e01a", "koha_e01b", "koha_e02", "koha_e03", "koha_e04", "koha_e05", "koha_e06", "koha_e07", "koha_e08",

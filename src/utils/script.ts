@@ -1,7 +1,7 @@
 import { commands as choiceCommands } from "../layers/ChoicesLayer"
 import { commands as graphicCommands } from "../layers/GraphicsLayer"
 import { commands as textCommands } from "../layers/TextLayer"
-import { Page } from "../types"
+import { LabelName, Page, SceneName } from "../types"
 import { commands as audioCommands } from "./AudioManager"
 import { observe } from "./Observer"
 import Stack from "./Stack"
@@ -53,7 +53,7 @@ export const script = {
     return history
   },
 
-  moveTo(label: string, index: number = -1) {
+  moveTo(label: LabelName|'', index: number = -1) {
     gameContext.label = label
     gameContext.index = index
   }
@@ -71,7 +71,7 @@ function onPageBreak(createSS=true) {
   history.push({ saveState: createSS ? createSaveState() : undefined, text: ""})
 }
 
-function getSceneName(label: `s${number}${'a'|''}`): string|undefined {
+function getSceneName(label: SceneName): string|undefined {
   const attrs = SCENE_ATTRS.scenes[label]
   if (!attrs)
     return undefined
@@ -84,7 +84,7 @@ function getSceneName(label: `s${number}${'a'|''}`): string|undefined {
       route = r[(getGameVariable(`%flg${r.flg}`)) ? "1" : "0"]
     else
       route = r
-    
+
     let sceneName = SCENE_ATTRS.routes[route][d]
     if (s) {
       sceneName += " - "
@@ -173,7 +173,7 @@ function processIfCmd(arg: string, _: string, onFinish: VoidFunction) {
 
 function processGoto(arg: string) {
   if (/^\*f\d+a?$/.test(arg)) {
-    script.moveTo(arg.substring(1), 0)
+    script.moveTo(arg.substring(1) as LabelName, 0)
     return BLOCK_CMD // prevent processing next line
   } else if (arg == "*endofplay") {
     //TODO end session, return to title screen
@@ -188,7 +188,7 @@ function processGosub(arg: string) {
     // ending is called from the scene. If necessary, set the scene
     // as completed before jumping to ending
   } else if (isScene(arg)) {
-    script.moveTo(arg.substring(1))
+    script.moveTo(arg.substring(1) as SceneName)
     return BLOCK_CMD
   }
 }
@@ -380,9 +380,12 @@ function onSceneEnd(label = gameContext.label) {
     if (!settings.completedScenes.includes(label))
       settings.completedScenes.push(label)
     if (/^s\d+a?$/.test(label))
-      script.moveTo(`skip${label.substring(1)}`)
+      script.moveTo(`skip${label.substring(1)}` as LabelName)
     else if (label == "openning")
       script.moveTo('s20')
+    else {
+      //TODO back to title
+    }
   }
 }
 
