@@ -232,7 +232,7 @@ export function setGameVariable(name: VarName, value: number|string) {
   parent[attrName as keyof typeof parent] = value
 }
 
-export function processVarCmd(arg: string, cmd: string) {
+function processVarCmd(arg: string, cmd: string) {
   const [name, v] = arg.split(',') as [VarName, string]
   let currVal = getGameVariable(name)
   if (currVal === null && cmd != 'mov')

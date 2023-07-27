@@ -5,9 +5,9 @@ import { objectsEqual } from "./utils"
 
 export type KeyMapCallback = (action: any, event: KeyboardEvent, ...args: any) => boolean|void
 export type KeyMapCondition = (action: any, event: KeyboardEvent, ...args: any) => boolean
-export type KeyMapMapping = {
-  [key: string]: KeymapKeyFilter|Array<KeymapKeyFilter|KeyMapCondition>
-}
+export type KeyMapMapping = Record<string,
+  KeymapKeyFilter|Array<KeymapKeyFilter|KeyMapCondition>
+>
 
 type KeymapKeyFilter = ({
     code: string

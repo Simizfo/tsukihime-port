@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Choice } from "../types"
+import { Choice, LabelName } from "../types"
 import { SCREEN, displayMode, gameContext } from "../utils/variables"
 import { useObserver } from "../utils/Observer"
 import script from "../utils/script"
@@ -20,7 +20,7 @@ export const commands = {
     for (let i = 0; i < tokens.length; i+= 2) {
       choices.push({
         str: tokens[i].trim().substring(1), // remove '`'
-        label: tokens[i+1].trim().substring(1) // remove '*'
+        label: tokens[i+1].trim().substring(1) as LabelName // remove '*'
       })
     }
     onChoices(choices)

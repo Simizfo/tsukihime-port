@@ -73,7 +73,7 @@ function next() {
   }
 }
 
-function page_nav(direction: string) {
+function page_nav(direction: "prev"|"next") {
   switch (direction) {
     case "prev":
       let ss = script.history.get(-2)?.saveState

@@ -26,7 +26,7 @@ const transition: Transition = {
 /**
  * Move background up or down
  */
-export function moveBg(direction: string) {
+export function moveBg(direction: "up"|"down") {
   const positions: Array<typeof displayMode.bgAlignment>
       = ["top", "center", "bottom"]
   let index = positions.indexOf(displayMode.bgAlignment)
@@ -168,7 +168,7 @@ function imgUrl(img: string) {
 }
 
 export function graphicsElement(pos: SpritePos, image: string,
-                                _attrs: {[key:string]: any} = {}) {
+                                _attrs: Record<string, any> = {}) {
 
   image = image || ((pos=="bg") ? "#000000" : "#00000000")
   const {key, ...attrs} = _attrs
@@ -190,7 +190,7 @@ export function graphicsElement(pos: SpritePos, image: string,
 //#                                 COMPONENT                                  #
 //##############################################################################
 
-export const GraphicsLayer = memo(function({...props}: {[key: string]: any}) {
+export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
 
   const [bgAlign, setBgAlign] = useState<'top'|'center'|'bottom'>(displayMode.bgAlignment)
 

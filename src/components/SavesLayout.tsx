@@ -6,12 +6,8 @@ import { SCREEN, displayMode } from "../utils/variables"
 import { convertText } from "../utils/utils"
 import { useNavigate } from "react-router-dom"
 
-type Props = {
-  variant: "save" | "load"
-}
-
-function saveElement(id: string|number, saveState: SaveState,
-                     props: {[key:string]:any}) {
+function saveElement(id: number, saveState: SaveState,
+                     props: Record<string, any>) {
   const date = new Date(saveState.date as number)
   return (
     <button className="save-container" key={id} {...(id==QUICK_SAVE_ID ? {'quick-save':''} : {})}
@@ -39,6 +35,9 @@ function compareSaveStates([id1, ss1]: [number, SaveState], [id2, ss2]: [number,
       : (ss2.date ?? 0) - (ss1.date ?? 0)
 }
 
+type Props = {
+  variant: "save" | "load"
+}
 const SavesLayout = ({variant}: Props) => {
 
   const navigate = useNavigate()
@@ -81,7 +80,7 @@ const SavesLayout = ({variant}: Props) => {
       if (displayMode.screen != SCREEN.WINDOW)
         //TODO avoid going back to default scene in Window.tsx
         navigate(SCREEN.WINDOW)
-      
+
       displayMode.save = false
       displayMode.load = false
     }

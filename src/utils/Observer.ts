@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 
 type ObserverCallback<T=any> = (value: T)=>void
-type Observable = {[key: PropertyKey]: any}
+type Observable = Record<PropertyKey, any>
 type PropertyObserver = {
     originalDesciptor: PropertyDescriptor,
     hasChanged: boolean,

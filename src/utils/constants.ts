@@ -1,27 +1,21 @@
 import straliasJson from '../assets/game/stralias.json'
 import numaliasJson from '../assets/game/numalias.json'
 import sceneAttrs from '../assets/game/scene_attrs.json'
-import { RouteDayName, RouteName, SceneName } from '../types'
+import { Digit, RouteDayName, RouteName, SceneName, UcLetter } from '../types'
 
 export const STRALIAS_JSON = JSON.parse(JSON.stringify(straliasJson))
 export const NUMALIAS_JSON = JSON.parse(JSON.stringify(numaliasJson))
 export const SCENE_ATTRS : {
-  routes: {
-    [key in RouteName]: {
-      [key:RouteDayName]: string
-    }
-  },
-  scenes: {
-    [key in SceneName]: ({
-      title: string,
-    } | {
-      r: (RouteName | { flg: string, "0": RouteName, "1": RouteName }),
+  routes: Record<RouteName, Record<RouteDayName, string>>,
+  scenes: Record<SceneName, ({
+    title: string,
+  } | {
+      r: (RouteName | { flg: UcLetter|Digit, "0": RouteName, "1": RouteName }),
       d: RouteDayName
-      s?: (string | { flg: string, "0": string, "1": string }),
-    }) & {
-      h?: boolean
-    }
-  }
+      s?: (string | { flg: UcLetter|Digit, "0": string, "1": string }),
+  }) & {
+    h?: boolean
+  }>
  } = JSON.parse(JSON.stringify(sceneAttrs))
 
 export enum IMAGES_FOLDERS {

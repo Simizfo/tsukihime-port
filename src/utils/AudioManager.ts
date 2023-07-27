@@ -305,9 +305,9 @@ observe(settings.volume, 'se'    , (v)=>{audio.seVolume = v<=0 ? 0 : v/10})
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 export const commands = {
-  'play'    : (arg:string)=> { gameContext.audio.track = arg },
+  'play'    : (arg: string)=>{ gameContext.audio.track = arg },
   'playstop': ()=>           { gameContext.audio.track = "" },
-  'wave'    : (arg:string)=> { audio.playSE(arg) },
+  'wave'    : (arg: string)=>{ audio.playSE(arg) },
   'waveloop': (arg: string)=>{ gameContext.audio.looped_se = arg },
   'wavestop': ()=>           { gameContext.audio.looped_se = "" },
 }

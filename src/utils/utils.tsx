@@ -43,7 +43,7 @@ export async function fetchFBlock(label: string): Promise<string[]> {
   const afterScene = /^skip\d+a?$/.test(label)
   if (afterScene) {
     // extract block label from skip label after 'skip'
-    label = `f${label.substring(4)}` 
+    label = `f${label.substring(4)}`
   }
   const lines = (await fetchBlock(label)).filter(
       line=>!ignoredFBlockLines.includes(line))
@@ -75,7 +75,7 @@ export const addEventListener = ({event, handler, element = window}: any) => {
   return () => element.removeEventListener(event, handler)
 }
 
-export function convertText(text: string, {...props}: {[key:string]:any} = {}): JSX.Element {
+export function convertText(text: string, props: Record<string, any> = {}): JSX.Element {
 
   const nodes: Array<JSX.Element|string> = []
   if ( text.length > 0 && text != "br") {
@@ -102,7 +102,7 @@ export function convertText(text: string, {...props}: {[key:string]:any} = {}): 
   return <span {...props}>{...nodes}</span>
 }
 
-export function objectMatch(toTest: {[key:PropertyKey]: any}, minKeys: {[key:PropertyKey]: any}, useSymbols=true): boolean {
+export function objectMatch(toTest: Record<PropertyKey, any>, minKeys: Record<PropertyKey, any>, useSymbols=true): boolean {
   const props = [
       ...Object.getOwnPropertyNames(minKeys),
       ...(useSymbols ? Object.getOwnPropertySymbols(minKeys) : [])]
@@ -121,11 +121,11 @@ export function objectMatch(toTest: {[key:PropertyKey]: any}, minKeys: {[key:Pro
 	return true;
 }
 
-export function objectsEqual(obj1: {[key:PropertyKey]: any}, obj2: {[key:PropertyKey]: any}, useSymbols=true) {
+export function objectsEqual(obj1: Record<PropertyKey, any>, obj2: Record<PropertyKey, any>, useSymbols=true) {
 	return objectMatch(obj1, obj2, useSymbols) && objectMatch(obj2, obj1, useSymbols)
 }
 
-export function overrideAttributes(dest: {[key: PropertyKey]: any}, src: {[key: PropertyKey]: any}, useSymbols=true) {
+export function overrideAttributes(dest: Record<PropertyKey, any>, src: Record<PropertyKey, any>, useSymbols=true) {
   const props = [
     ...Object.getOwnPropertyNames(src),
     ...(useSymbols ? Object.getOwnPropertySymbols(src) : [])]
@@ -144,7 +144,7 @@ export function overrideAttributes(dest: {[key: PropertyKey]: any}, src: {[key: 
   return dest
 }
 
-export function deepFreeze<T extends {[key: PropertyKey]: any}>(object: T): Readonly<T> {
+export function deepFreeze<T extends Record<PropertyKey, any>>(object: T): Readonly<T> {
   const props = Reflect.ownKeys(object)
   for (const p of props) {
     const value = object[p]

@@ -71,7 +71,7 @@ function onPageBreak(createSS=true) {
   history.push({ saveState: createSS ? createSaveState() : undefined, text: ""})
 }
 
-function getSceneName(label: SceneName): string|undefined {
+function getSceneTitle(label: SceneName): string|undefined {
   const attrs = SCENE_ATTRS.scenes[label]
   if (!attrs)
     return undefined
@@ -364,7 +364,7 @@ async function fetchSceneLines() {
  * To start from line 0, set {@link gameContext.index} to 0.
  * @param label id of the scene or block to load.
  */
-async function loadLabel(label: string) {
+async function loadLabel(label: LabelName|"") {
   console.log(`load label ${label}`)
   sceneLines = [] // set to empty to prevent execution of previous scene
   if (gameContext.index == -1)
@@ -397,7 +397,7 @@ function warnHScene(callback: VoidFunction) {
 function onSceneStart() {
   const label = gameContext.label as keyof typeof SCENE_ATTRS.scenes
   if (settings.enableSceneSkip && settings.completedScenes.includes(label)) {
-    skipCallback(getSceneName(label), async skip=> {
+    skipCallback(getSceneTitle(label), async skip=> {
       if (skip)
         onSceneEnd(label)
       else {

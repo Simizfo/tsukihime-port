@@ -15,10 +15,10 @@ import { ViewRatio } from "./types";
 
 const AnimatedRoutes = () => {
   const location = useLocation()
-  const [style, setStyle] = useState<{[key:string]: any}>({
+  const [style, setStyle] = useState<Record<string, any>>({
     "--font": settings.font
   })
-  const [viewStyle, setViewStyle] = useState<{[key:string]: any}>()
+  const [viewStyle, setViewStyle] = useState<Record<string, any>>()
 
   useObserver(font => {
     setStyle({...style, '--font': font})
