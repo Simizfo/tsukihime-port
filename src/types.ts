@@ -34,8 +34,8 @@ export type UcLetter = 'A'|'B'|'C'|'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'
       |'L'|'M'|'N'|'O'|'P'|'Q'|'R'|'S'|'T'|'U'|'V'|'W'|'X'|'Y'|'Z'
 export type Letter = LcLetter|UcLetter
 
-export type RouteName = 'aki'|'ark'|'cel'|'his'|'koha'
-export type RouteDayName = `${number}${'a'|'b'}`
+export type RouteName = 'aki'|'ark'|'cel'|'his'|'koha'|'others'
+export type RouteDayName = `${number}${'a'|'b'}`|'pro'|'epi'|'end'|'fin'
 
 export type SceneName = `s${number}${'a'|''}` |
   "openning" | "ending" | "eclipse" | `mm${string}`

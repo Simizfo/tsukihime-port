@@ -1,4 +1,20 @@
 {
+  "days": [
+    "",
+    "1st day | October 21 (Thur.)",
+    "2nd day | October 22 (Fri.)",
+    "3rd day | October 23 (Sat.)",
+    "4th day | October 24 (Sun.)",
+    "5th day | October 25 (Mon.)",
+    "6th day | October 26 (Tue.)",
+    "7th day | October 27 (Wed.)",
+    "8th day | October 28 (Thur.)",
+    "9th day | October 29 (Fri.)",
+    "10th day | October 30 (Sat.)",
+    "11th day | October 1 (Sun.)",
+    "12th day | October 2 (Mon.)",
+    "13th day | October 3 (Tue.)"
+  ],
   "routes": {
     "aki" : {
       "03a": "3/ Inversion/Reactionary Impulse III",
@@ -71,6 +87,12 @@
       "10a": "10/ Imprisoning Hair",
       "11a": "11/ Nanaya",
       "12a": "Dream at a Sunny Place"
+    },
+    "others": {
+      "pro": "Prologue",
+      "epi": "Epilogue",
+      "end": "END",
+      "fin": "Fin"
     }
   },
   "scenes": {

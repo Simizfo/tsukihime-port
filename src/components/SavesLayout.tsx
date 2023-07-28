@@ -1,7 +1,7 @@
 import { FaPlusCircle } from "react-icons/fa"
 import { QUICK_SAVE_ID, SaveState, exportSaveFile, getSaveState, listSaveStates, loadSaveFile as loadSaveFiles, loadSaveState, storeLastSaveState } from "../utils/savestates"
 import { useEffect, useState } from "react"
-import { graphicsElement } from "../layers/GraphicsLayer"
+import { graphicElement, graphicElements } from "../layers/GraphicsLayer"
 import { SCREEN, displayMode } from "../utils/variables"
 import { convertText } from "../utils/utils"
 import { useNavigate } from "react-router-dom"
@@ -13,8 +13,7 @@ function saveElement(id: number, saveState: SaveState,
     <button className="save-container" key={id} {...(id==QUICK_SAVE_ID ? {'quick-save':''} : {})}
             {...props}>
       <div className="graphics">{
-        Object.entries(saveState.context.graphics).map(([pos, image])=>
-          image && graphicsElement(pos as any, image, {key: pos}))
+          graphicElements(saveState.context.graphics)
       }</div>
       <div className="deta">
         <div className="date">
@@ -104,9 +103,7 @@ const SavesLayout = ({variant}: Props) => {
 
       <div className="info">
         <div className="graphics">
-          {Object.entries(focusedSave?.context.graphics??{bg:"notreg"}).map(([pos, image])=>
-            image && graphicsElement(pos as any, image, {key: pos}))
-          }
+          {graphicElements(focusedSave?.context.graphics??{bg:"notreg"})}
         </div>
         {focusedId != undefined &&
           <div className="deta">

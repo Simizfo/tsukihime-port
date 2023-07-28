@@ -1,4 +1,4 @@
-import { ViewRatio, NumVarName, StrVarName, VarName, LabelName } from "../types"
+import { ViewRatio, NumVarName, StrVarName, VarName, LabelName, RouteName, RouteDayName } from "../types"
 import { observe, observeChildren } from "./Observer"
 import { IMAGES_FOLDERS, TEXT_SPEED } from "./constants"
 import Timer from "./timer"
@@ -116,6 +116,11 @@ export const gameContext = {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   label: '' as LabelName|'', // script block label
   index: 0, // line index in the labeled script block.
+  phase: {
+    route: "" as RouteName|"",
+    routeDay: "" as RouteDayName|"",
+    day: 0,
+  },
 //_______________________________audio, graphics________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   audio: {

@@ -2,6 +2,9 @@ import { useEffect, useState, useRef, memo, Fragment } from "react";
 import { displayMode, gameContext, settings } from "../utils/variables";
 import { observe, unobserve, useChildrenObserver, useObserver } from "../utils/Observer";
 import Timer from "../utils/timer";
+import { RouteDayName, RouteName } from "../types";
+import { SCENE_ATTRS } from "../utils/constants";
+import script from "../utils/script";
 
 type SpritePos = keyof typeof gameContext.graphics
 const POSITIONS: Array<SpritePos> = Object.keys(gameContext.graphics) as Array<SpritePos>
@@ -37,35 +40,22 @@ export function moveBg(direction: "up"|"down") {
 //_______________________________script commands________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-function processImageCmd(arg: string, cmd: string, onFinish: VoidFunction) {
-  const args = arg.split(',')
-  let pos:string = 'bg',
-      image:string = '',
-      type:string = ''
-
-  switch(cmd) {
-    case 'bg': [image, type] = args; break
-    case 'ld': [pos, image, type] = args; break
-    case 'cl': [pos, type] = args; break
-    default : throw Error(`unknown image command ${cmd} ${arg}`)
+function extractImage(image: string) {
+  if (image.startsWith('"') && image.endsWith('"')) {
+    // remove ':a;', 'image/', '"', '.jpg'
+    image = image.replace(/:a;|image[\/\\]|"|\.jpg/g, '')
+                 .replace('\\', '/')
+  } else if (!image.startsWith('#') && !image.startsWith('$')) { // not image nor color
+    throw Error(`cannot extract image from "${image}"`)
   }
+  return image
+}
 
-  // get image
-  if (image) {
-    if (image.startsWith('"') && image.endsWith('"')) {
-      // remove ':a;', 'image/', '"', '.jpg'
-      image = image.replace(/:a;|image[\/\\]|"|\.jpg/g, '')
-                   .replace('\\', '/')
-    } else if (!image.startsWith('#')) { // not image nor color
-      throw Error(`Ill-formed arguments for [${cmd} ${arg}]`)
-    }
-  }
-
-  type = type?.replace('%', '')
+function applyChange(pos: SpritePos, image: string, type: string, onFinish: VoidFunction) {
 
   let change = setSprite(pos as SpritePos, image)
 
-  if (cmd == 'bg') {
+  if (pos == 'bg') {
     if(clearAllSprites())
       change = true
     if (change && (image as string).includes('event/') &&
@@ -98,6 +88,26 @@ function processImageCmd(arg: string, cmd: string, onFinish: VoidFunction) {
       }}
     }
   }
+}
+
+function processImageCmd(arg: string, cmd: string, onFinish: VoidFunction) {
+  const args = arg.split(',')
+  let pos:string = 'bg',
+      image:string = '',
+      type:string = ''
+
+  switch(cmd) {
+    case 'bg': [image, type] = args; break
+    case 'ld': [pos, image, type] = args; break
+    case 'cl': [pos, type] = args; break
+    default : throw Error(`unknown image command ${cmd} ${arg}`)
+  }
+  // get image
+  if (image)
+    image = extractImage(image)
+  type = type?.replace('%', '')
+
+  return applyChange(pos as SpritePos, image, type, onFinish)
 }
 
 function clearAllSprites() {
@@ -134,6 +144,13 @@ export {
   commands
 }
 
+function phaseTitle(route: RouteName, routeDay: RouteDayName) {
+  return SCENE_ATTRS.routes[route][routeDay]
+}
+function dayTitle(day: number) {
+  return SCENE_ATTRS.days[day]
+}
+
 //_______________________________component tools________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -167,23 +184,49 @@ function imgUrl(img: string) {
   return `${folder}/${img}.${extension}`
 }
 
-export function graphicsElement(pos: SpritePos, image: string,
+export function graphicElement(pos: SpritePos, image: string,
                                 _attrs: Record<string, any> = {}) {
 
   image = image || ((pos=="bg") ? "#000000" : "#00000000")
   const {key, ...attrs} = _attrs
   const isColor = image.startsWith('#')
+  const isPhaseText = image.startsWith('$')
+  let phaseTitle
+  let dayTitle
+  if (isPhaseText) {
+    let [route, routeDay, day] = image.substring(1).split('|')
+    phaseTitle = SCENE_ATTRS.routes[route as RouteName]
+                                   [routeDay as RouteDayName]
+    if (day)
+      dayTitle = SCENE_ATTRS.days[parseInt(day)]
+  }
   return (
     <div
       {...(isColor ? {style:{ background: image }} : {})}
       key={key}
       className={pos}>
-      {!isColor &&
+      {isPhaseText ?
+        <div {...attrs}>
+          <span className="phase-title">{phaseTitle}</span><br/>
+          {dayTitle && <span className="phase-day">{dayTitle}</span>}
+        </div>
+      : !isColor &&
         <img src={imgUrl(image)} alt={`[[sprite:${image}]]`}
           {...attrs}
-        />}
+        />
+      }
     </div>
   )
+}
+
+export function graphicElements(images: Partial<Record<SpritePos, string>>,
+                          attrs?: Partial<Record<SpritePos, Record<string,any>>>|
+                                  ((pos:SpritePos)=>Record<string,any>)) {
+  return POSITIONS.map((pos)=> images[pos] && graphicElement(pos,
+    images[pos] as string, {
+      key: images[pos]||pos,
+      ...(typeof attrs == 'function' ? attrs(pos) : attrs?.[pos] ?? {})
+    }))
 }
 
 //##############################################################################
@@ -239,36 +282,26 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
   return (
     <div className="box box-graphics" {...props} >
       {(duration == 0) ? // no animation => display all sprites without effect
-        POSITIONS.map((pos)=> graphicsElement(pos, currImages[pos], {
-          key: currImages[pos]||pos,
-          ...(pos == 'bg' ? {'bg-align': bgAlign} : {})
-        }))
-      : (trans_pos == "bg") ? // special case for background animation :
-                              // only animate fade-in of the background
-                              // on top of all previous sprites unanimated
+        graphicElements(currImages, {bg: {'bg-align': bgAlign}})
+      : (trans_pos == "bg") ? // bg animation fade-in new bg over prev. sprites
         <>
-        {POSITIONS.map((pos)=> graphicsElement(pos, prevImages[pos], {
-          key: prevImages[pos]||pos,
-          ...(pos == 'bg' ? {'bg-align': bgAlign} : {})
-        }))}
-        {graphicsElement('bg', currImages.bg, {
+        {graphicElements(prevImages, {bg: {'bg-align': bgAlign}})}
+        {graphicElement('bg', currImages.bg, {
           key: currImages.bg||'bg',
           'bg-align': bgAlign,
           'fade-in': effect,
           style: {'--transition-time': `${duration}ms`},
         })}
         </>
-      : POSITIONS.map((pos)=> // animation of characters: for the animated
-                              // characters, display the new sprite on top of
-                              // the previous sprite. Non-animated sprites
-                              // only have their current sprite displayed
+      : POSITIONS.map((pos)=> // sprite animation: changed sprite fades-in above
+                              // previous sprite. Others displayed noramlly.
         <Fragment key={pos}>
           {(pos != 'bg' && ([pos, 'a'].includes(trans_pos))) &&
             <>
             {currImages[pos] && prevImages[pos] && effect=="crossfade" &&
               // add an opaque background to the image to prevent the background
               // from being visible by transparency
-              graphicsElement(pos, prevImages[pos], {
+              graphicElement(pos, prevImages[pos], {
                 key: `mask${prevImages[pos]}`,
                 'for-mask': "",
                 style: {
@@ -276,14 +309,14 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
                   '--to-image': `url(${imgUrl(currImages[pos])})`
                 }
               })}
-            {graphicsElement(pos, prevImages[pos], {
+            {prevImages[pos] && graphicElement(pos, prevImages[pos], {
               key: prevImages[pos]||pos,
               'fade-out': effect,
               style: {'--transition-time': `${duration}ms`},
             })}
             </>
           }
-          {graphicsElement(pos, currImages[pos], {
+          {graphicElement(pos, currImages[pos], {
             key: currImages[pos]||pos,
             ...(pos == 'bg' ? {
               'bg-align': bgAlign

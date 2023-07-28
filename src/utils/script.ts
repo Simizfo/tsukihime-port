@@ -1,19 +1,19 @@
 import { commands as choiceCommands } from "../layers/ChoicesLayer"
 import { commands as graphicCommands } from "../layers/GraphicsLayer"
 import { commands as textCommands } from "../layers/TextLayer"
-import { LabelName, Page, SceneName } from "../types"
+import { LabelName, Page, RouteDayName, RouteName, SceneName } from "../types"
 import { commands as audioCommands } from "./AudioManager"
 import { observe } from "./Observer"
 import Stack from "./Stack"
 import { HISTORY_MAX_PAGES, SCENE_ATTRS } from "./constants"
 import { commands as timerCommands } from "./timer"
-import { fetchFBlock, fetchScene } from "./utils"
+import { fetchFBlock, fetchScene, overrideAttributes } from "./utils"
 import { commands as variableCommands, getGameVariable, gameContext, settings, displayMode, SCREEN } from "./variables"
 import { createSaveState } from "./savestates"
-
+type Instruction = {cmd: string, arg: string}
 type CommandHandler = {next: VoidFunction}
 type CommandProcessFunction =
-    ((arg: string, cmd: string, onFinish: VoidFunction)=>CommandHandler|void)
+    ((arg: string, cmd: string, onFinish: VoidFunction)=>CommandHandler|Instruction[]|void)
 type CommandMap = Map<string, CommandProcessFunction|null>
 
 type SkipCallback = (sceneTitle: string|undefined, confirm:(skip: boolean)=>void)=>void
@@ -97,6 +97,41 @@ function getSceneTitle(label: SceneName): string|undefined {
   }
 }
 
+const routePhaseRegexp = /word\\P(?<route>[A-Z]+)_(?<rDay>\d+[AB])/
+const ignoredPhaseRegexp = /(?<ignored>bg\\.*)/
+const dayPhaseRegexp = /word\\day_(?<day>\w+)/
+const rawScenePhaseRegexp = /word\\(?<scene>\w+)/
+
+function processPhase(dir: "l"|"r") {
+  const phaseTitle_a = getGameVariable("$phasetitle_a")
+  const phaseTitle_b = getGameVariable("$phasetitle_b")
+  const phaseBg = getGameVariable("$phasebg")
+  {
+    let {route = "", rDay = "", day = "", ignored = "", scene = ""} = {
+      ...(phaseTitle_a.match(routePhaseRegexp)?.groups ??
+          phaseTitle_a.match(ignoredPhaseRegexp)?.groups ?? {}),
+      ...(phaseTitle_b.match(dayPhaseRegexp)?.groups ??
+          phaseTitle_b.match(rawScenePhaseRegexp)?.groups ?? {})
+    }
+    if (!(route && rDay && day) && !(ignored && scene))
+      throw Error(`Cannot parse phase imgs ${phaseTitle_a} or ${phaseTitle_b}`)
+    gameContext.phase.route = (route.toLowerCase() as RouteName) || "others",
+    gameContext.phase.routeDay = (rDay.toLowerCase() as RouteDayName) || scene,
+    gameContext.phase.day = parseInt(day) || 0
+  }
+  const route = gameContext.phase.route
+  const rDay = gameContext.phase.routeDay
+  const day = gameContext.phase.day
+  const invDir = dir=='l'?'r':'l';
+  return [
+    ...extractInstructions(`bg ${phaseBg},%type_${dir}cartain_fst`),
+    ...extractInstructions(`ld ${dir},$${route}|${rDay},%type_${invDir}cartain_fst`),
+    ...(day ? extractInstructions(`ld ${dir},$${route}|${rDay}|${day},%type_${invDir}cartain_fst`) : []),
+    {cmd: "click", arg: ""},
+    ...extractInstructions(`bg #000000,%type_crossfade_fst`)
+  ];
+}
+
 //##############################################################################
 //#                                  COMMANDS                                  #
 //##############################################################################
@@ -116,6 +151,7 @@ const commands:CommandMap = new Map(Object.entries({
 
   'skip'      : (n: string)=> { gameContext.index += parseInt(n) },
   'return'    : ()=> { onSceneEnd(); return BLOCK_CMD },
+  'click'     : (_arg,_, onFinish)=> ({ next: onFinish }), // wait user action
 
   'setwindow' : null,
   'windoweffect' : null,
@@ -162,13 +198,13 @@ function checkIfCondition(condition: string) {
   return value
 }
 
-function processIfCmd(arg: string, _: string, onFinish: VoidFunction) {
+function processIfCmd(arg: string, _: string) {
   let index = arg.search(/ [a-z]/)
   if (index == -1)
     throw Error(`no separation between condition and command: "if ${arg}"`)
   const condition = arg.substring(0, index)
   if (checkIfCondition(condition))
-    processLine(arg.substring(index+1)).then(onFinish)
+    return extractInstructions(arg.substring(index+1))
 }
 
 function processGoto(arg: string) {
@@ -179,11 +215,10 @@ function processGoto(arg: string) {
     //TODO end session, return to title screen
   }
 }
-
-function processGosub(arg: string) {
+function processGosub(arg: string, _: string) {
   if (arg == "*right_phase" || arg == "*left_phase") {
-    //TODO process right_phase, with vars temp.phase_bg,
-    // temp.phase_title_a, temp.phase_title_b
+    //display phase transition
+    return processPhase((arg == "*left_phase") ? "l" : "r")
   } else if (arg == "*ending") {
     // ending is called from the scene. If necessary, set the scene
     // as completed before jumping to ending
@@ -228,16 +263,7 @@ function splitText(text: string) {
 //##############################################################################
 //#                            EXECUTE SCRIPT LINES                            #
 //##############################################################################
-
-/**
- * Execute the script line. Extract the command name and arguments from the line,
- * and calls the appropriate function to process it.
- * Update currentCommand. When a line must be split into multiple commands,
- * use this function to process all sub-commands
- * @param line the script line to process
- * @param onFinish callback function called when the line has been processed
- */
-export async function processLine(line: string) {
+function extractInstructions(line: string) {
   const instructions = new Array<{cmd:string,arg:string}>()
   const endPageBreak = line.endsWith('\\') && line.length > 1
 
@@ -264,18 +290,38 @@ export async function processLine(line: string) {
 
   if (endPageBreak)
     instructions.push({cmd:'\\',arg:''})
-
-  for (const [i, {cmd, arg}] of instructions.entries()) {
+  
+  return instructions
+}
+/**
+ * Execute the script line. Extract the command name and arguments from the line,
+ * and calls the appropriate function to process it.
+ * Update currentCommand. When a line must be split into multiple commands,
+ * use this function to process all sub-commands
+ * @param line the script line to process
+ * @param onFinish callback function called when the line has been processed
+ */
+export async function processLine(line: string) {
+  const instructions = extractInstructions(line)
+  for (let i=0; i< instructions.length; i++) {
+    const {cmd, arg} = instructions[i]
     if (lineSkipped)
       break
     const command = commands.get(cmd)
     if (command) {
       await new Promise<void>(resolve=> {
-        currentCommand = command(arg, cmd, resolve) as typeof currentCommand
-        if (currentCommand)
-          skipCommand = resolve // if the command must be skipped at some point
-        else
+        let commandResult = command(arg, cmd, resolve) as typeof currentCommand
+        if (Array.isArray(commandResult)) {
+          instructions.splice(i+1, 0, ...commandResult)
+          currentCommand = undefined
           resolve()
+        } else {
+          currentCommand = commandResult
+          if (commandResult)
+            skipCommand = resolve // if the command must be skipped at some point
+          else
+            resolve()
+        }
       })
       currentCommand = undefined
       skipCommand = undefined

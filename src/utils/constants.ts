@@ -6,6 +6,7 @@ import { Digit, RouteDayName, RouteName, SceneName, UcLetter } from '../types'
 export const STRALIAS_JSON = JSON.parse(JSON.stringify(straliasJson))
 export const NUMALIAS_JSON = JSON.parse(JSON.stringify(numaliasJson))
 export const SCENE_ATTRS : {
+  days: string[],
   routes: Record<RouteName, Record<RouteDayName, string>>,
   scenes: Record<SceneName, ({
     title: string,

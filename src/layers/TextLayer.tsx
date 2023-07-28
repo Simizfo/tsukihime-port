@@ -27,8 +27,14 @@ const scriptInterface: {
 
 function appendText(text: string) {
   script.history.top.text += text
-  scriptInterface.text = "" // forces the update of the text
-  scriptInterface.text = script.history.top.text
+  if (scriptInterface.text == script.history.top.text) {
+    scriptInterface.text = ""
+    setTimeout(()=> {
+      scriptInterface.text = script.history.top.text
+    }, 0)
+  } else {
+    scriptInterface.text = script.history.top.text
+  }
   scriptInterface.glyph = undefined
 }
 
