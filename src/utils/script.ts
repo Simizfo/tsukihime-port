@@ -126,7 +126,7 @@ function processPhase(dir: "l"|"r") {
   return [
     ...extractInstructions(`bg ${phaseBg},%type_${dir}cartain_fst`),
     ...extractInstructions(`ld ${dir},$${route}|${rDay},%type_${invDir}cartain_fst`),
-    ...(day ? extractInstructions(`ld ${dir},$${route}|${rDay}|${day},%type_${invDir}cartain_fst`) : []),
+    ...(day ? extractInstructions(`ld ${dir},$${route}|${rDay}|${day},%type_crossfade_fst`) : []),
     {cmd: "click", arg: ""},
     ...extractInstructions(`bg #000000,%type_crossfade_fst`)
   ];

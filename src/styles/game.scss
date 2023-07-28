@@ -21,7 +21,7 @@
     .box-graphics {
         z-index: 0;
         display: grid;
-        grid-template-columns: 1fr 3fr 2fr 3fr 1fr;
+        grid-template-columns: 50% 1fr 50%;
 
         div {
             height: 100%;
@@ -41,11 +41,43 @@
                     height: inherit;
                     object-fit: cover;
                 }
+                &.phase {
+                    font-style: italic;
+                    font-size: 150%;
+                    text-shadow: #000 1px 1px 1px, #000 -1px 1px 1px, #000 -1px -1px 1px, #000 1px -1px 1px;
+                    .phase-title {
+                        font-weight: bold;
+                        position: absolute;
+                    }
+                    .phase-day {
+                        position: absolute;
+                    }
+                }
             }
 
-            &.l { grid-column: 2; }
-            &.c { grid-column: 3; }
-            &.r { grid-column: 4; }
+            &.l { grid-column: 1; }
+            &.c { grid-column: 2; }
+            &.r { grid-column: 3; }
+            &.l.phase {
+                text-align: left;
+                padding-left: 1rem;
+                padding-top: 2rem;
+            }
+            &.r.phase {
+                position: relative;
+                text-align: right;
+                margin-right: 1rem;
+                margin-bottom: 2rem;
+                overflow: visible;
+                .phase-title {
+                    right: 1rem;
+                    bottom: calc(2.5em + 2rem);
+                }
+                .phase-day {
+                    right: 1rem;
+                    top: calc(100% - 2.5em - 2rem);
+                }
+            }
 
             &.bg {
                 position: absolute;

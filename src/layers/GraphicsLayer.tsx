@@ -200,17 +200,17 @@ export function graphicElement(pos: SpritePos, image: string,
     if (day)
       dayTitle = SCENE_ATTRS.days[parseInt(day)]
   }
+  const className = `${pos} ${isPhaseText ? 'phase' : ''}`
   return (
     <div
-      {...(isColor ? {style:{ background: image }} : {})}
       key={key}
-      className={pos}>
-      {isPhaseText ?
-        <div {...attrs}>
+      className={className}
+      {...(isColor ? {style:{ background: image }} : 
+           isPhaseText ? attrs : {})}>
+      {isPhaseText ? <>
           <span className="phase-title">{phaseTitle}</span><br/>
           {dayTitle && <span className="phase-day">{dayTitle}</span>}
-        </div>
-      : !isColor &&
+      </> : !isColor &&
         <img src={imgUrl(image)} alt={`[[sprite:${image}]]`}
           {...attrs}
         />
@@ -298,7 +298,7 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
         <Fragment key={pos}>
           {(pos != 'bg' && ([pos, 'a'].includes(trans_pos))) &&
             <>
-            {currImages[pos] && prevImages[pos] && effect=="crossfade" &&
+            {currImages[pos]?.startsWith('"') && prevImages[pos]?.startsWith('"') && effect=="crossfade" &&
               // add an opaque background to the image to prevent the background
               // from being visible by transparency
               graphicElement(pos, prevImages[pos], {
