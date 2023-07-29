@@ -193,7 +193,7 @@ export function graphicElement(pos: SpritePos, image: string,
                                 _attrs: Record<string, any> = {}) {
 
   image = image || ((pos=="bg") ? "#000000" : "#00000000")
-  const {key, ...attrs} = _attrs
+  const {key, style, ...attrs} = _attrs
   const isColor = image.startsWith('#')
   const isPhaseText = image.startsWith('$')
   let _phaseTitle
@@ -209,8 +209,8 @@ export function graphicElement(pos: SpritePos, image: string,
     <div
       key={key}
       className={className}
-      {...(isColor ? {style:{ background: image }} :
-           isPhaseText ? attrs : {})}>
+      {...(isColor ? {style:{ background: image, ...style }} : {})}
+      {...(isPhaseText || isColor ? attrs : {})}>
       {isPhaseText ? <>
           <span className="phase-title">{_phaseTitle}</span><br/>
           {_dayTitle && <span className="phase-day">{_dayTitle}</span>}
