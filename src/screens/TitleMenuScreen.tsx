@@ -6,7 +6,7 @@ import ParticlesComponent from '../components/ParticlesComponent'
 import { SCREEN, displayMode } from '../utils/variables'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
-import { blankSaveState, getLastSave, loadSaveFile, loadSaveState } from '../utils/savestates'
+import { blankSaveState, getLastSave, hasSaveStates, loadSaveFile, loadSaveState } from '../utils/savestates'
 import history from '../utils/history'
 
 const TitleMenuScreen = () => {
@@ -58,8 +58,15 @@ const TitleMenuScreen = () => {
         }} />
 
       <nav className="menu">
-        <button className='menu-item' onClick={newGame}>New Game</button>
-        <button className='menu-item' onClick={continueGame}>Continue</button>
+        <button className='menu-item' onClick={newGame}>
+          New Game
+        </button>
+
+        {hasSaveStates() &&
+        <button className='menu-item' onClick={continueGame}>
+          Continue
+        </button>
+        }
 
         <Link to={SCREEN.LOAD} className="menu-item">
           Load

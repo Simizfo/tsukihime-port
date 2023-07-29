@@ -104,6 +104,10 @@ export function getSaveState(id: SaveStateId) {
   return saveStates.get(id)
 }
 
+export function hasSaveStates() {
+  return saveStates.size > 0;
+}
+
 /**
  * Restore the context and progress from the specified savestate.
  * If the savestate is stored in the script's history, all pages
