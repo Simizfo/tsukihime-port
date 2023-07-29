@@ -7,6 +7,7 @@ import { convertText } from "../utils/utils"
 import { displayMode, settings } from "../utils/variables"
 import { useObserver } from "../utils/Observer"
 import script from "../utils/script"
+import history from "../utils/history"
 
 const icons: Record<"moon"|"page", string> = {
   "moon": moonIcon,
@@ -25,16 +26,14 @@ const scriptInterface: {
   onFinish: undefined
 }
 
+history.addListener(()=> {
+  scriptInterface.text = ""
+  scriptInterface.glyph = undefined
+})
+
 function appendText(text: string) {
-  script.history.top.text += text
-  if (scriptInterface.text == script.history.top.text) {
-    scriptInterface.text = ""
-    setTimeout(()=> {
-      scriptInterface.text = script.history.top.text
-    }, 0)
-  } else {
-    scriptInterface.text = script.history.top.text
-  }
+  history.last.text += text
+  scriptInterface.text = history.last.text
   scriptInterface.glyph = undefined
 }
 
@@ -56,7 +55,10 @@ function onBreakChar(_: string, cmd: string, onFinish: VoidFunction) {
     timer.start()
     return { next: timer.skip.bind(timer) }
   } else {
-    return { next: onFinish }
+    return { next: ()=> {
+      scriptInterface.glyph = undefined
+      onFinish()
+    }}
   }
 }
 
@@ -159,8 +161,9 @@ const TextLayer = memo(({...props}: Props) => {
   const {className, ...remaining_props} = props
   const visibleText = newText.substring(0, cursor)
   const hiddenText = newText.substring(cursor)
+  const hide = !display || (previousText.length == 0 && newText.length == 0)
   return (
-    <div className={`box box-text ${!display ? "hide ":""}${className||''}`} {...remaining_props}>
+    <div className={`box box-text ${hide ? "hide ":""}${className||''}`} {...remaining_props}>
       <div className="text-container">
         {previousText.map((line, i)=>
           <Fragment key={i}>

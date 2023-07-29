@@ -3,7 +3,7 @@ import { addEventListener, convertText, objectMatch } from "../utils/utils";
 import { displayMode } from '../utils/variables';
 import { SaveState, loadSaveState } from "../utils/savestates";
 import { useObserver } from '../utils/Observer';
-import script from '../utils/script';
+import history from '../utils/history';
 
 type Props = {
   [key: string] : any // other properties to apply to the root 'div' element of the component
@@ -19,8 +19,7 @@ const HistoryLayer = (props: Props) => {
       if (e.ctrlKey)
         return
       if (e.deltaY < 0 && !display && objectMatch(displayMode, {menu:false, save:false, load: false})) {
-        const it = script.history[Symbol.iterator]()
-        if (!it.next().done) // at least one element in the iterator
+        if (!history.empty) // at least one element in the iterator
           setDisplay(true)
       }
       //TODO: scroll down: close if scroll past bottom
@@ -79,7 +78,7 @@ const HistoryLayer = (props: Props) => {
       <div className="box-text" id="history" ref={historyRef}>
         <div className="text-container">
           {/* lignes des pages précédentes */}
-          {script.history.map(({text, saveState}, i) =>
+          {Array.from(history, ({contentType, text, saveState}, i) =>
             <Fragment key={i}>
               {i > 0 && <hr/>}
               {saveState &&

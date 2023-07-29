@@ -1,6 +1,7 @@
 import { SaveState } from "./utils/savestates"
 
 export type Page = {
+  contentType: 'text'|'choice'|'skip'|'phase'
   saveState: SaveState|undefined,
   text: string
 }

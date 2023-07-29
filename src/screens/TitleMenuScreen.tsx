@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 import tsukiLogo from "../assets/game/menus/tsukihime-logo.webp"
 import '../styles/title-menu.scss'
 import ParticlesComponent from '../components/ParticlesComponent'
-import { SCREEN, displayMode, gameContext } from '../utils/variables'
+import { SCREEN, displayMode } from '../utils/variables'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import { blankSaveState, getLastSave, loadSaveFile, loadSaveState } from '../utils/savestates'
-import script from '../utils/script'
+import history from '../utils/history'
 
 const TitleMenuScreen = () => {
   const navigate = useNavigate()
@@ -25,11 +25,11 @@ const TitleMenuScreen = () => {
     loadSaveState(blankSaveState())
     navigate(SCREEN.WINDOW)
   }
-  
+
   async function continueGame() {
-    
+
     // restart from beginning of last visisted page ...
-    let lastSave = script.history.top?.saveState
+    let lastSave = history.last?.saveState
                 // or from last saved game
                 ?? getLastSave()
                 // or ask user to provide save file(s).

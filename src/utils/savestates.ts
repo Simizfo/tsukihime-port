@@ -1,6 +1,6 @@
-import script from "./script";
 import { overrideAttributes, requestFilesFromUser, textFileUserDownload } from "./utils";
 import { defaultGameContext, defaultProgress, gameContext, progress, settings } from "./variables";
+import history from './history';
 
 //##############################################################################
 //#                                 SAVESTATES                                 #
@@ -75,10 +75,10 @@ export function storeSaveState(id: SaveStateId, ss: SaveState) {
  * @param id unique id of the savestate in the map.
  */
 export function storeLastSaveState(id: SaveStateId) {
-  const ss = script.history.top?.saveState
+  const ss = history.last?.saveState
   if (!ss)
     return false
-  ss.text = script.history.top.text
+  ss.text = history.last.text
   storeSaveState(id, ss)
   return true
 }
@@ -112,17 +112,17 @@ export function getSaveState(id: SaveStateId) {
  * @returns true if the savestate has been loaded, false otherwise.
  */
 export function loadSaveState(ss: SaveStateId | SaveState) {
-  if (ss.constructor == Number || ss.constructor == String)
+  if (ss.constructor == Number)
     ss = saveStates.get(ss) as SaveState
   if (ss) {
     let index = 0
-    for (let i = 0; i < script.history.length; i++) {
-      if (ss == script.history.get(i).saveState) {
+    for (let i = 0; i < history.length; i++) {
+      if (ss == history.get(i).saveState) {
         index = i
         break
       }
     }
-    script.history.trimTop(script.history.length - index)
+    history.onSaveStateLoaded(ss as SaveState)
     overrideAttributes(gameContext, (ss as SaveState).context, false)
     overrideAttributes(progress, (ss as SaveState).progress, false)
     return true

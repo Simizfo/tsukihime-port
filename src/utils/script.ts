@@ -4,12 +4,11 @@ import { commands as textCommands } from "../layers/TextLayer"
 import { LabelName, Page, RouteDayName, RouteName, SceneName } from "../types"
 import { commands as audioCommands } from "./AudioManager"
 import { observe } from "./Observer"
-import Stack from "./Stack"
-import { HISTORY_MAX_PAGES, SCENE_ATTRS } from "./constants"
+import history from "./history"
+import { SCENE_ATTRS } from "./constants"
 import { commands as timerCommands } from "./timer"
-import { fetchFBlock, fetchScene, overrideAttributes } from "./utils"
-import { commands as variableCommands, getGameVariable, gameContext, settings, displayMode, SCREEN } from "./variables"
-import { createSaveState } from "./savestates"
+import { checkIfCondition, extractInstructions, fetchFBlock, fetchScene, getPhaseDetails, getSceneTitle, isScene } from "./scriptUtils"
+import { commands as variableCommands, gameContext, settings, displayMode, SCREEN } from "./variables"
 type Instruction = {cmd: string, arg: string}
 type CommandHandler = {next: VoidFunction}
 type CommandProcessFunction =
@@ -19,15 +18,15 @@ type CommandMap = Map<string, CommandProcessFunction|null>
 type SkipCallback = (sceneTitle: string|undefined, confirm:(skip: boolean)=>void)=>void
 let skipCallback: SkipCallback = ()=> { throw Error(`script.onSkipPrompt not specified`) }
 
+const pageChangeListeners = new Array<VoidFunction>()
+
 let sceneLines: Array<string> = []
 let lastLine = {label: "", index: 0}
 let currentCommand: CommandHandler | undefined
 let skipCommand: VoidFunction | undefined
 let lineSkipped: boolean = false
 
-const BLOCK_CMD = {next: ()=>{}} // prevent proceeding to next line
-
-const history = new Stack<Page>([], HISTORY_MAX_PAGES)
+const LOCK_CMD = {next: ()=>{}} // prevent proceeding to next line
 
 export const script = {
   /**
@@ -49,10 +48,6 @@ export const script = {
     return sceneLines[gameContext.index]
   },
 
-  get history() {
-    return history
-  },
-
   moveTo(label: LabelName|'', index: number = -1) {
     gameContext.label = label
     gameContext.index = index
@@ -60,73 +55,16 @@ export const script = {
 }
 export default script
 
-function isScene(label: string): boolean {
-  //TODO create a list of unique scene names (e.g., openning, eclipse)
-  return /^\*?s\d+a?$/.test(label) || ["openning"].includes(label)
-}
-
-function onPageBreak(createSS=true) {
-  if (history.top?.text.length == 0)
-    history.pop() // remove empty pages from history
-  history.push({ saveState: createSS ? createSaveState() : undefined, text: ""})
-}
-
-function getSceneTitle(label: SceneName): string|undefined {
-  const attrs = SCENE_ATTRS.scenes[label]
-  if (!attrs)
-    return undefined
-  if ("title" in attrs)
-    return attrs.title
-  else {
-    const {r, d, s} = attrs
-    let route: keyof typeof SCENE_ATTRS.routes
-    if (typeof r == "object" && 'flg' in r)
-      route = r[(getGameVariable(`%flg${r.flg}`)) ? "1" : "0"]
-    else
-      route = r
-
-    let sceneName = SCENE_ATTRS.routes[route][d]
-    if (s) {
-      sceneName += " - "
-      if (typeof s == "object" && 'flg' in s)
-        sceneName += s[(getGameVariable(`%flg${s.flg}`)) ? "1" : "0"]
-      else
-        sceneName += s
-    }
-    return sceneName
-  }
-}
-
-const routePhaseRegexp = /word\\P(?<route>[A-Z]+)_(?<rDay>\d+[AB])/
-const ignoredPhaseRegexp = /(?<ignored>bg\\.*)/
-const dayPhaseRegexp = /word\\day_(?<day>\w+)/
-const rawScenePhaseRegexp = /word\\(?<scene>\w+)/
-
 function processPhase(dir: "l"|"r") {
-  const phaseTitle_a = getGameVariable("$phasetitle_a")
-  const phaseTitle_b = getGameVariable("$phasetitle_b")
-  const phaseBg = getGameVariable("$phasebg")
-  {
-    let {route = "", rDay = "", day = "", ignored = "", scene = ""} = {
-      ...(phaseTitle_a.match(routePhaseRegexp)?.groups ??
-          phaseTitle_a.match(ignoredPhaseRegexp)?.groups ?? {}),
-      ...(phaseTitle_b.match(dayPhaseRegexp)?.groups ??
-          phaseTitle_b.match(rawScenePhaseRegexp)?.groups ?? {})
-    }
-    if (!(route && rDay && day) && !(ignored && scene))
-      throw Error(`Cannot parse phase imgs ${phaseTitle_a} or ${phaseTitle_b}`)
-    gameContext.phase.route = (route.toLowerCase() as RouteName) || "others",
-    gameContext.phase.routeDay = (rDay.toLowerCase() as RouteDayName) || scene,
-    gameContext.phase.day = parseInt(day) || 0
-  }
-  const route = gameContext.phase.route
-  const rDay = gameContext.phase.routeDay
-  const day = gameContext.phase.day
+  const {bg, route, routeDay, day} = getPhaseDetails()
+  gameContext.phase.route = route
+  gameContext.phase.routeDay = routeDay
+  gameContext.phase.day = day
   const invDir = dir=='l'?'r':'l';
   return [
-    ...extractInstructions(`bg ${phaseBg},%type_${dir}cartain_fst`),
-    ...extractInstructions(`ld ${dir},$${route}|${rDay},%type_${invDir}cartain_fst`),
-    ...(day ? extractInstructions(`ld ${dir},$${route}|${rDay}|${day},%type_crossfade_fst`) : []),
+    ...extractInstructions(`bg ${bg},%type_${dir}cartain_fst`),
+    ...extractInstructions(`ld ${dir},$${route}|${routeDay},%type_${invDir}cartain_fst`),
+    ...(day ? extractInstructions(`ld ${dir},$${route}|${routeDay}|${day},%type_crossfade_fst`) : []),
     {cmd: "click", arg: ""},
     ...extractInstructions(`bg #000000,%type_crossfade_fst`)
   ];
@@ -136,66 +74,33 @@ function processPhase(dir: "l"|"r") {
 //#                                  COMMANDS                                  #
 //##############################################################################
 
-const commands:CommandMap = new Map(Object.entries({
+let commands:CommandMap|undefined;
+function buildCommands() {
+  commands = new Map(Object.entries({
 
-  ...textCommands,
-  ...graphicCommands,
-  ...audioCommands,
-  ...timerCommands,
-  ...variableCommands,
-  ...choiceCommands,
+    ...textCommands,
+    ...graphicCommands,
+    ...audioCommands,
+    ...timerCommands,
+    ...variableCommands,
+    ...choiceCommands,
 
-  'if'        : processIfCmd,
-  'goto'      : processGoto,
-  'gosub'     : processGosub,
+    'if'        : processIfCmd,
+    'goto'      : processGoto,
+    'gosub'     : processGosub,
 
-  'skip'      : (n: string)=> { gameContext.index += parseInt(n) },
-  'return'    : ()=> { onSceneEnd(); return BLOCK_CMD },
-  'click'     : (_arg,_, onFinish)=> ({ next: onFinish }), // wait user action
+    'skip'      : (n: string)=> { gameContext.index += parseInt(n) },
+    'return'    : ()=> { onSceneEnd(); return LOCK_CMD },
+    'click'     : (_arg,_, onFinish)=> ({ next: onFinish }), // wait user action
 
-  'setwindow' : null,
-  'windoweffect' : null,
-  'setcursor' : null,
-  'autoclick' : null,
+    'setwindow' : null,
+    'windoweffect' : null,
+    'setcursor' : null,
+    'autoclick' : null,
 
-  '*'         : null,
-  '!s'        : null,
-}))
-
-// (%var|n)(op)(%var|n)
-const opRegexp = /(?<lhs>(%\w+|\d+))(?<op>[=!><]+)(?<rhs>(%\w+|\d+))/
-function checkIfCondition(condition: string) {
-  let value = true
-  for (const [i, token] of condition.split(' ').entries()) {
-    if (i % 2 == 0) {
-      const match = opRegexp.exec(token)
-      if (!match) throw Error(
-        `Unable to parse expression "${token}" in condition ${condition}`)
-
-      let {_lhs, op, _rhs} = match.groups as any
-      const lhs = _lhs.startsWith("%")? getGameVariable(_lhs) : parseInt(_lhs)
-      const rhs = _rhs.startsWith("%")? getGameVariable(_rhs) : parseInt(_rhs)
-
-      switch (op) {
-        case '==' : value = (lhs == rhs); break
-        case '!=' : value = (lhs != rhs); break
-        case '<'  : value = (lhs <  rhs); break
-        case '>'  : value = (lhs >  rhs); break
-        case '<=' : value = (lhs <= rhs); break
-        case '>=' : value = (lhs >= rhs); break
-        default : throw Error (
-          `unknown operator ${op} in condition ${condition}`)
-      }
-    } else {
-      switch (token) {
-        case "&&" : if (!value) return false; break
-        case "||" : if (value) return true; break
-        default : throw Error(
-          `Unable to parse operator "${token}" in condition ${condition}`)
-      }
-    }
-  }
-  return value
+    '*'         : null,
+    '!s'        : null,
+  })) as CommandMap
 }
 
 function processIfCmd(arg: string, _: string) {
@@ -210,11 +115,12 @@ function processIfCmd(arg: string, _: string) {
 function processGoto(arg: string) {
   if (/^\*f\d+a?$/.test(arg)) {
     script.moveTo(arg.substring(1) as LabelName, 0)
-    return BLOCK_CMD // prevent processing next line
+    return LOCK_CMD // prevent processing next line
   } else if (arg == "*endofplay") {
     //TODO end session, return to title screen
   }
 }
+
 function processGosub(arg: string, _: string) {
   if (arg == "*right_phase" || arg == "*left_phase") {
     //display phase transition
@@ -224,75 +130,14 @@ function processGosub(arg: string, _: string) {
     // as completed before jumping to ending
   } else if (isScene(arg)) {
     script.moveTo(arg.substring(1) as SceneName)
-    return BLOCK_CMD
+    return LOCK_CMD
   }
-}
-
-function splitText(text: string) {
-  const instructions = new Array<{ cmd:string, arg:string }>()
-  let index = 0
-  // replace spaces with en-spaces at the beginning of the line
-  while (text.charCodeAt(index) == 0x20)
-    index++
-  text = "\u2002".repeat(index) + text.substring(index)
-  // split tokens at every '@', '\', '!xxx'
-  while (text.length > 0) {
-    index = text.search(/@|\\|!\w|$/)
-    if (index > 0)
-      instructions.push({cmd:'`',arg: text.substring(0, index)})
-    text = text.substring(index)
-    switch (text.charAt(0)) {
-      case '@' :
-      case '\\' :
-        instructions.push({cmd: text.charAt(0), arg:""})
-        text = text.substring(1)
-        break
-      case '!' : // !w<time>
-        const argIndex = text.search(/\d|\s|$/)
-        const endIndex = text.search(/\s|$/)
-        instructions.push({
-          cmd: text.substring(0, argIndex),
-          arg: text.substring(argIndex, endIndex)})
-        text = text.substring(endIndex)
-        break
-    }
-  }
-  return instructions
 }
 
 //##############################################################################
 //#                            EXECUTE SCRIPT LINES                            #
 //##############################################################################
-function extractInstructions(line: string) {
-  const instructions = new Array<{cmd:string,arg:string}>()
-  const endPageBreak = line.endsWith('\\') && line.length > 1
 
-  if (endPageBreak) // '\\' will be added as an individual command at the end
-    line = line.substring(0, line.length-1)
-
-  if (line.startsWith('`')) {
-    // following space (if present) is part of the argument
-    line = line.substring(1)
-    if (!endPageBreak)
-      line += '\n'
-    instructions.push(...splitText(line))
-  } else if (line.startsWith('!')) {
-    instructions.push(...splitText(line)) // '!w' are handled as inline commands
-  } else {
-    let index = line.indexOf(' ')
-    if (index == -1)
-      index = line.length
-    instructions.push({
-      cmd: line.substring(0,index),
-      arg: line.substring(index+1)
-    })
-  }
-
-  if (endPageBreak)
-    instructions.push({cmd:'\\',arg:''})
-  
-  return instructions
-}
 /**
  * Execute the script line. Extract the command name and arguments from the line,
  * and calls the appropriate function to process it.
@@ -307,7 +152,11 @@ export async function processLine(line: string) {
     const {cmd, arg} = instructions[i]
     if (lineSkipped)
       break
-    const command = commands.get(cmd)
+
+    if (!commands)
+      buildCommands()
+
+    const command = commands?.get(cmd)
     if (command) {
       await new Promise<void>(resolve=> {
         let commandResult = command(arg, cmd, resolve) as typeof currentCommand
@@ -326,7 +175,7 @@ export async function processLine(line: string) {
       currentCommand = undefined
       skipCommand = undefined
     }
-    else if (!commands.has(cmd)) {
+    else if (!commands?.has(cmd)) {
       const {label: scene, index} = gameContext
       console.error(`unknown command ${scene}:${index}: ${line}`)
       debugger
@@ -368,7 +217,7 @@ async function processCurrentLine() {
   lastLine.label = label
   if (index < lines.length) {
     if (isScene(label) && (index == 0 || lines[index-1].endsWith('\\')))
-      onPageBreak()
+      history.onPageBreak()
 
     let line = sceneLines[index]
     console.log(`${label}:${index}: ${line}`)
@@ -441,7 +290,7 @@ function warnHScene(callback: VoidFunction) {
 }
 
 function onSceneStart() {
-  const label = gameContext.label as keyof typeof SCENE_ATTRS.scenes
+  const label = gameContext.label as SceneName
   if (settings.enableSceneSkip && settings.completedScenes.includes(label)) {
     skipCallback(getSceneTitle(label), async skip=> {
       if (skip)
