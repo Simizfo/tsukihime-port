@@ -1,4 +1,4 @@
-import { CHARACTERS } from "../utils/constants"
+import { CHARACTERS } from "../utils/gallery"
 
 type Props = {
   character: CHARACTERS,

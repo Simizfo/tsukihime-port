@@ -186,8 +186,7 @@ function getTransition(type: string, skipTransition = false) {
 
 function imgUrl(img: string) {
   const folder: string = settings.imagesFolder
-  const extension = folder === 'image' && !img.includes("tachi") ? 'jpg' : 'webp'
-  return `${folder}/${img}.${extension}`
+  return `${folder}/${img}.webp`
 }
 
 export function graphicElement(pos: SpritePos, image: string,
