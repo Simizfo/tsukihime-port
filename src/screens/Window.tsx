@@ -14,6 +14,7 @@ import { SCREEN, displayMode, gameContext } from '../utils/variables';
 import { quickSave, quickLoad, loadSaveState } from "../utils/savestates";
 import SkipLayer from '../layers/SkipLayer';
 import SavesLayer from '../layers/SavesLayer';
+import history from '../utils/history';
 
 //##############################################################################
 //#                                KEY MAPPING                                 #
@@ -76,7 +77,7 @@ function next() {
 function page_nav(direction: "prev"|"next") {
   switch (direction) {
     case "prev":
-      let ss = script.history.get(-2)?.saveState
+      let ss = history.get(-2)?.saveState
       if (ss)
         loadSaveState(ss)
       break
