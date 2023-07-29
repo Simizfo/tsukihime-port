@@ -51,7 +51,7 @@ const ConfigMainTab = () => {
         <div>Display ratio</div>
 
         <div className="config-btns">
-          <ConfigBtn text="Unconstrained"
+          <ConfigBtn text="Auto"
             active={settings.fixedRatio === ViewRatio.unconstrained}
             onClick={()=> updateFixedRatio(ViewRatio.unconstrained)} />
 
