@@ -7,8 +7,9 @@ import '../styles/gallery.scss'
 import { settings } from '../utils/variables'
 import { motion } from 'framer-motion'
 import { CHARACTERS, GALLERY_IMAGES } from '../utils/gallery'
+import { GalleryImg } from '../types'
 
-const defaultImg = `/${settings.imagesFolder}/notreg.webp`
+const defaultImg = `/image/notreg.webp`
 
 const GalleryScreen = () => {
   const [selected, setSelected] = useState<CHARACTERS>(CHARACTERS.arcueid)
@@ -25,9 +26,10 @@ const GalleryScreen = () => {
       case CHARACTERS.others : imagesTmp = GALLERY_IMAGES.others ; break
       default : throw Error(`unknown character ${selected}`)
     }
-    imagesTmp = imagesTmp.map(image => {
-      const src = settings.eventImages.includes(`event/${image}`)
-                  ? `/${settings.imagesFolder}/event/${image}.webp`
+    
+    imagesTmp = imagesTmp.map((image: GalleryImg) => {
+      const src = settings.eventImages.includes(`event/${image.img}`)
+                  ? `/${settings.imagesFolder}/event/${image.img}.webp`
                   : defaultImg
       return {
         ...image,
@@ -38,7 +40,7 @@ const GalleryScreen = () => {
     setImages(imagesTmp)
 
     document.querySelector('.gallery-container')?.scrollTo(0, 0)
-  }, [selected] )
+  }, [selected])
 
   return (
     <motion.div
@@ -50,11 +52,11 @@ const GalleryScreen = () => {
         <h2 className="page-title">Gallery</h2>
         <main>
           <div className="gallery-char-container">
-            {Object.values(CHARACTERS).map(character=>
+            {Object.values(CHARACTERS).map(character =>
               <GalleryCharComponent
                 key={character}
                 character={character}
-                selected={selected==character}
+                selected={selected == character}
                 handleSelected={setSelected}/>
             )}
           </div>
@@ -64,7 +66,7 @@ const GalleryScreen = () => {
               Thumbs: false,
               Toolbar: false,
             }}>
-            {images.map(image =>
+            {images.map((image: GalleryImg) =>
               <React.Fragment key={image.img}>
                 {image.src === defaultImg ?
                   <img src={image.src} alt="event" />

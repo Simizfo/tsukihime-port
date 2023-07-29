@@ -11,7 +11,6 @@ export type Choice = {
   label: LabelName,
 }
 
-//bg "image\bg\bg_05a.jpg",%type_lcartain_mid
 export type Background = {
   image: string,
   type: string,
@@ -46,3 +45,9 @@ export type LabelName = SceneName |
 export type NumVarName = `%${string}`
 export type StrVarName = `$${string}`
 export type VarName = NumVarName | StrVarName
+
+export type GalleryImg = {
+  img: string,
+  sensitive: boolean
+  src?: string
+}

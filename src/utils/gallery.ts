@@ -1,3 +1,5 @@
+import { GalleryImg } from "../types";
+
 export enum CHARACTERS {
   arcueid = "Arcueid",
   ciel = "Ciel",
@@ -188,11 +190,11 @@ export const GALLERY_IMAGES = {
 }
 
 // Function to find an image object in the GALLERY_IMAGES object based on a partial image name
-export function findImageObjectByName(imageName: string): any | undefined {
+export function findImageObjectByName(imageName: string): GalleryImg | undefined {
   for (const characterKey in GALLERY_IMAGES) {
     if (GALLERY_IMAGES.hasOwnProperty(characterKey)) {
       const characterImages = GALLERY_IMAGES[characterKey as keyof typeof GALLERY_IMAGES];
-      const foundImage = characterImages.find((imgObj: any) => imageName.includes(imgObj.img))
+      const foundImage = characterImages.find((imgObj: GalleryImg) => imageName.includes(imgObj.img))
       if (foundImage) {
         return foundImage
       }
