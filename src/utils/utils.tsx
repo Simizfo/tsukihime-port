@@ -5,29 +5,15 @@ export const addEventListener = ({event, handler, element = window}: any) => {
 
 export function convertText(text: string, props: Record<string, any> = {}): JSX.Element {
 
-  const nodes: Array<JSX.Element|string> = []
-  if ( text.length > 0 && text != "br") {
-    //remove '`', '@' and '\',
+  if (text == "br")
+    text = ""
+  else if ( text.length > 0) {
+    //remove '`', '@' and '\', EDIT : already removed by script parser
     //replace '|' with '…'
-    text = text.replace(/[`@\\]|(\!w\d+\b)/g, '')
-              .replace(/\|/g, '…')
-
-    //replace consecutive dashes with a continuous line
-    //TODO make text transparent in CSS, replace with straight line.
-    let m
-    while ((m = /-{2,}/g.exec(text)) !== null) {
-      if (m.index > 0)
-        nodes.push(text.substring(0, m.index))
-      const len = m[0].length
-      nodes.push(<span className="dash" dash-size={len}>
-          {"\u{2002}".repeat(len) /*en-dash-sized space*/}
-        </span>)
-      text = text.substring(m.index + len)
-    }
-    if (text.length > 0)
-      nodes.push(text)
+    text = text//.replace(/[`@\\]|(\!w\d+\b)/g, '')
+               .replaceAll('|', '…')
   }
-  return <span {...props}>{...nodes}</span>
+  return <span {...props}>{replaceDashes(text)}</span>
 }
 
 export function objectMatch(toTest: Record<PropertyKey, any>, minKeys: Record<PropertyKey, any>, useSymbols=true): boolean {
@@ -123,4 +109,78 @@ export function requestFilesFromUser({ multiple = false, accept = '' }): Promise
 		})
 		input.click();
 	}));
+}
+
+function bbcodeTagToJSX({tag: Tag, arg, content}: {tag: string, arg: string, content: JSX.Element[]}) {
+  switch(Tag) {
+    case 'b' :
+    case 'i' :
+    case 's' :
+    case 'sup' :
+    case 'sub' : return <Tag>{...content}</Tag>
+    case 'u' : return <span style={{textDecoration: "underline"}}>{...content}</span>
+    case 'size' : return <span style={{fontSize: arg}}>{...content}</span>
+    case 'color' : return <span style={{color: arg}}>{...content}</span>
+    case 'center':
+    case 'left':
+    case 'right': return <div style={{textAlign: Tag}}>{...content}</div>
+    case 'url': return <a href={arg}>{...content}</a>
+    default :
+      throw Error(`Unknown bbcode tag ${Tag}`)
+  }
+}
+
+function replaceDashes(text: string): JSX.Element {
+    const nodes: Array<JSX.Element|string> = []
+    //replace consecutive dashes with a continuous line
+    let m
+    while ((m = /-{2,}/g.exec(text)) !== null) {
+      if (m.index > 0)
+        nodes.push(text.substring(0, m.index))
+      const len = m[0].length
+      nodes.push(<span className="dash" dash-size={len}>
+          {"\u{2002}".repeat(len) /*en-dash-sized space*/}
+        </span>)
+      text = text.substring(m.index + len)
+    }
+    if (text.length > 0)
+      nodes.push(text)
+    return <>{...nodes}</>
+}
+
+//[/?<tag>=<arg>] not preceded by a '\'
+const bbcodeTagRegex = /(?<!\\)\[(?<tag>\/?\w+)(=(?<arg>[^\]]+))?\]/g
+/**
+ * convert text with BB code to JSX nodes
+ */
+export function parseBBcode(text: string): JSX.Element {
+  const nodes = [{tag:"", arg: "", content:[] as JSX.Element[]}]
+  let lastIndex = 0
+  let m
+  while(((m = bbcodeTagRegex.exec(text))) !== null) {
+    let {tag, arg} = m.groups ?? {}
+    const currNode = nodes[nodes.length-1]
+    const subText = text.substring(lastIndex, m.index)
+    currNode.content.push(replaceDashes(subText))
+    lastIndex = bbcodeTagRegex.lastIndex
+    if (tag.startsWith('/')) {
+      if (tag.substring(1) != currNode?.tag)
+        throw Error(`Unmatched [${tag}] in "${text}"`)
+      nodes.pop()
+      const prevNode = nodes[nodes.length-1]
+      prevNode.content.push(bbcodeTagToJSX(currNode))
+    } else {
+      nodes.push({tag, arg, content:[]})
+    }
+  }
+  if (lastIndex == 0) // no bbcode
+    return replaceDashes(text)
+  if (lastIndex < text.length) //
+    nodes[nodes.length-1].content.push(replaceDashes(text.substring(lastIndex)))
+  while (nodes.length > 1) {
+    const currNode = nodes.pop() as typeof nodes[0]
+    const prevNode = nodes[nodes.length-1]
+    prevNode.content.push(bbcodeTagToJSX(currNode))
+  }
+  return <>{...nodes[0].content}</>
 }

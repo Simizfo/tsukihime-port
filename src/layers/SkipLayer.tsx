@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { displayMode } from "../utils/variables"
 import { useObserver } from "../utils/Observer"
 import script from "../utils/script"
+import { parseBBcode } from "../utils/utils"
 
 const SkipLayer = () => {
   const [display, setDisplay] = useState<boolean>(displayMode.skip)
@@ -34,7 +35,8 @@ const SkipLayer = () => {
       <div className="modal">
         <div className="title">
           You have already seen
-          {sceneTitle ? <> the scene <span className="scene-title">{sceneTitle}</span></>
+          {sceneTitle ? <> the scene<br/><span className="scene-title">
+            {parseBBcode(sceneTitle)}</span></>
           : <> this scene</>
           }.<br />
           Do you want to skip it?

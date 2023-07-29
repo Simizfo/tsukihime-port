@@ -43,14 +43,9 @@
                     object-fit: cover;
                 }
                 &.phase {
-                    font-style: italic;
                     font-size: 150%;
                     text-shadow: #000 1px 1px 1px, #000 -1px 1px 1px, #000 -1px -1px 1px, #000 1px -1px 1px;
-                    .phase-title {
-                        font-weight: bold;
-                        position: absolute;
-                    }
-                    .phase-day {
+                    .phase-title, .phase-day {
                         position: absolute;
                     }
                 }
@@ -386,6 +381,7 @@
 
             .title {
                 margin-bottom: 1em;
+                text-align: center;
 
                 .scene-title {
                     font-style: italic;

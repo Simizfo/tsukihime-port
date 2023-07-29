@@ -5,6 +5,7 @@ import Timer from "../utils/timer";
 import { RouteDayName, RouteName } from "../types";
 import { SCENE_ATTRS } from "../utils/constants";
 import script from "../utils/script";
+import { parseBBcode } from "../utils/utils";
 
 type SpritePos = keyof typeof gameContext.graphics
 const POSITIONS: Array<SpritePos> = Object.keys(gameContext.graphics) as Array<SpritePos>
@@ -150,10 +151,10 @@ export {
 }
 
 function phaseTitle(route: RouteName, routeDay: RouteDayName) {
-  return SCENE_ATTRS.routes[route][routeDay]
+  return parseBBcode(SCENE_ATTRS.routes[route][routeDay])
 }
 function dayTitle(day: number) {
-  return SCENE_ATTRS.days[day]
+  return parseBBcode(SCENE_ATTRS.days[day])
 }
 
 //_______________________________component tools________________________________
@@ -196,14 +197,13 @@ export function graphicElement(pos: SpritePos, image: string,
   const {key, ...attrs} = _attrs
   const isColor = image.startsWith('#')
   const isPhaseText = image.startsWith('$')
-  let phaseTitle
-  let dayTitle
+  let _phaseTitle
+  let _dayTitle
   if (isPhaseText) {
     let [route, routeDay, day] = image.substring(1).split('|')
-    phaseTitle = SCENE_ATTRS.routes[route as RouteName]
-                                   [routeDay as RouteDayName]
+    _phaseTitle = phaseTitle(route as RouteName, routeDay as RouteDayName)
     if (day)
-      dayTitle = SCENE_ATTRS.days[parseInt(day)]
+      _dayTitle = dayTitle(parseInt(day))
   }
   const className = `${pos} ${isPhaseText ? 'phase' : ''}`
   return (
@@ -213,8 +213,8 @@ export function graphicElement(pos: SpritePos, image: string,
       {...(isColor ? {style:{ background: image }} :
            isPhaseText ? attrs : {})}>
       {isPhaseText ? <>
-          <span className="phase-title">{phaseTitle}</span><br/>
-          {dayTitle && <span className="phase-day">{dayTitle}</span>}
+          <span className="phase-title">{_phaseTitle}</span><br/>
+          {_dayTitle && <span className="phase-day">{_dayTitle}</span>}
       </> : !isColor &&
         <img src={imgUrl(image)} alt={`[[sprite:${image}]]`}
           {...attrs}
