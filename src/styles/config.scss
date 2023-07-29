@@ -5,6 +5,7 @@
         flex-direction: row;
         gap: .4em;
         padding-inline: 1em;
+        overflow-x: auto;
 
         button {
             padding: .4em 1.6em;
@@ -31,6 +32,8 @@
         display: flex;
         flex-direction: column;
         font-size: 1.2em;
+        overflow-x: hidden;
+        flex: 1;
 
         .config {
             display: grid;
@@ -45,19 +48,30 @@
             .config-btns {
                 display: flex;
                 gap: .4em;
-            }
-            .config-btn {
-                padding: .2em;
-                background-color: transparent;
-                transition: .2s ease-in-out;
-                border-radius: 8px;
-                text-transform: uppercase;
-                min-width: min(100px, 100%);
-                text-align: center;
-    
-                &:hover, &.active {
-                    background-color: #0f9696;
+                flex-wrap: wrap;
+
+                .config-btn {
+                    padding: .2em;
+                    background-color: transparent;
+                    transition: .2s ease-in-out;
+                    border-radius: 8px;
+                    text-transform: uppercase;
+                    min-width: min(100px, 100%);
+                    text-align: center;
+        
+                    &:hover, &.active {
+                        background-color: #0f9696;
+                    }
                 }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        section {
+            .config {
+                grid-template-columns: 1fr;
+                row-gap: 0.4em;
             }
         }
     }
