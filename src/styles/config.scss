@@ -1,3 +1,64 @@
 #config {
+    .pages {
+        border-bottom: 2px solid #0f9696;
+        display: flex;
+        flex-direction: row;
+        gap: .4em;
+        padding-inline: 1em;
+
+        button {
+            padding: .4em 1.6em;
+            background-color: transparent;
+            transition: .2s ease-in-out;
+            border-radius: 8px 8px 0 0;
+            font-size: 1.1em;
+            border: 2px solid transparent;
+            border-bottom: 0;
+
+            &:hover, &.active:hover {
+                background-color: #0f9696;
+            }
+
+            &.active {
+                border-color: #0f9696;
+                background-color: #06060673;
+            }
+        }
+    }
+
+    section {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2em;
+
+        .config {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            padding-block: 1em;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid;
+            }
+
+            .config-btns {
+                display: flex;
+                gap: .4em;
+            }
+            .config-btn {
+                padding: .2em;
+                background-color: transparent;
+                transition: .2s ease-in-out;
+                border-radius: 8px;
+                text-transform: uppercase;
+                min-width: min(100px, 100%);
+                text-align: center;
     
+                &:hover, &.active {
+                    background-color: #0f9696;
+                }
+            }
+        }
+    }
 }

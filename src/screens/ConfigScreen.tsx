@@ -7,8 +7,15 @@ import { useObserver } from '../utils/Observer'
 import { motion } from 'framer-motion'
 import { ViewRatio } from '../types'
 
+const enum Pages {
+  main,
+  adult,
+  advanced
+}
+
 const ConfigScreen = () => {
 
+  const [page, setPage] = useState(Pages.main)
   const [volume, setVolume] = useState(settings.volume.master)
   const [imagesFolder, setImagesFolder] = useState(settings.imagesFolder)
   const [textSpeed, setTextSpeed] = useState(settings.textSpeed)
@@ -52,61 +59,112 @@ const ConfigScreen = () => {
       <div className="page-content">
         <h2 className="page-title">Config</h2>
         <main>
-          <div>
-            Volume: {Math.abs(volume)}
-            <input
-              type="range"
-              min="0"
-              max="10"
-              step={1}
-              value={Math.abs(volume)}
-              onChange={(e) => {
-                const sign = Math.sign(volume)
-                updateVolume(sign * parseInt(e.target.value))
-              }} />
+          <div className="pages">
+            <PageBtn text="Main" active={page === Pages.main} onClick={() => setPage(Pages.main)} />
+
+            <PageBtn text="Adult" active={page === Pages.adult} onClick={() => setPage(Pages.adult)} />
+
+            <PageBtn text="Advanced" active={page === Pages.advanced} onClick={() => setPage(Pages.advanced)} />
           </div>
 
-          <div>
-            Quality:&nbsp;
-            <select
-              value={imagesFolder}
-              onChange={(e) => updateImagesFolder(e.target.value)}>
-              <option value={IMAGES_FOLDERS.image}>640x480 (original)</option>
-              <option value={IMAGES_FOLDERS.image_x2}>1280x960</option>
-            </select>
-          </div>
+          {page === Pages.main &&
+          <section>
+            <div className="config">
+              <div>Volume {Math.abs(volume)}</div>
 
-          <div>
-            Display ratio:&nbsp;
-            <select
-              value={settings.fixedRatio}
-              onChange={(e) => updateFixedRatio(e.target.value as ViewRatio)}>
-              <option value={ViewRatio.unconstrained}>Unconstrained</option>
-              <option value={ViewRatio.fourByThree}>4/3</option>
-              <option value={ViewRatio.sixteenByNine}>16/9</option>
-            </select>
-            (doesn't apply on portrait)
-          </div>
+              <div>
+                Low
+                <input
+                  type="range"
+                  min="0"
+                  max="10"
+                  step={1}
+                  value={Math.abs(volume)}
+                  onChange={(e) => {
+                    const sign = Math.sign(volume)
+                    updateVolume(sign * parseInt(e.target.value))
+                  }} />
+                High
+              </div>
+            </div>
 
-          <div>
-            Text speed:&nbsp;
-            <select
-              value={textSpeed}
-              onChange={(e) => updateTextSpeed(parseInt(e.target.value))}>
-              <option value={TEXT_SPEED.instant}>Instant</option>
-              <option value={TEXT_SPEED.fast}>Fast</option>
-              <option value={TEXT_SPEED.normal}>Medium</option>
-              <option value={TEXT_SPEED.slow}>Slow</option>
-            </select>
-          </div>
+            <div className="config">
+              <div>Display ratio</div>
 
-          <div>
-            Blur adult thumbnails:&nbsp;
-            <input
-              type="checkbox"
-              checked={galleryBlur}
-              onChange={(e) => updateGalleryBlur(e.target.checked)} />
-          </div>
+              <div className="config-btns">
+                <ConfigBtn text="Unconstrained"
+                  active={settings.fixedRatio === ViewRatio.unconstrained}
+                  onClick={()=> updateFixedRatio(ViewRatio.unconstrained)} />
+
+                <ConfigBtn text="4/3"
+                  active={settings.fixedRatio === ViewRatio.fourByThree}
+                  onClick={()=> updateFixedRatio(ViewRatio.fourByThree)} />
+
+                <ConfigBtn text="16/9"
+                  active={settings.fixedRatio === ViewRatio.sixteenByNine}
+                  onClick={()=> updateFixedRatio(ViewRatio.sixteenByNine)} />
+              </div>
+            </div>
+
+            <div className="config">
+              <div>Text display speed</div>
+
+              <div className="config-btns">
+                <ConfigBtn text="Slow"
+                  active={textSpeed === TEXT_SPEED.slow}
+                  onClick={()=> updateTextSpeed(TEXT_SPEED.slow)} />
+
+                <ConfigBtn text="Medium"
+                  active={textSpeed === TEXT_SPEED.normal}
+                  onClick={()=> updateTextSpeed(TEXT_SPEED.normal)} />
+
+                <ConfigBtn text="Fast"
+                  active={textSpeed === TEXT_SPEED.fast}
+                  onClick={()=> updateTextSpeed(TEXT_SPEED.fast)} />
+
+                <ConfigBtn text="Instant"
+                  active={textSpeed === TEXT_SPEED.instant}
+                  onClick={()=> updateTextSpeed(TEXT_SPEED.instant)} />
+              </div>
+            </div>
+          </section>
+          }
+
+          {page === Pages.adult &&
+          <section>
+            <div className="config">
+              <div>Blur thumbnails</div>
+
+              <div className="config-btns">
+                <ConfigBtn text="On"
+                  active={galleryBlur}
+                  onClick={()=> updateGalleryBlur(true)} />
+
+                <ConfigBtn text="Off"
+                  active={!galleryBlur}
+                  onClick={()=> updateGalleryBlur(false)} />
+              </div>
+            </div>
+          </section>
+          }
+
+          {page === Pages.advanced &&
+          <section>
+            <div className="config">
+              <div>Quality</div>
+              
+              <div className="config-btns">
+                <ConfigBtn text={`640\u00D7480`}
+                  active={imagesFolder === IMAGES_FOLDERS.image}
+                  onClick={()=> updateImagesFolder(IMAGES_FOLDERS.image)} />
+
+                <ConfigBtn text={`1280\u00D7960`}
+                  active={imagesFolder === IMAGES_FOLDERS.image_x2}
+                  onClick={()=> updateImagesFolder(IMAGES_FOLDERS.image_x2)} />
+              </div>
+            </div>
+          </section>
+          }
         </main>
 
         <Link to="/title" className="menu-btn back-button">Back</Link>
@@ -116,3 +174,17 @@ const ConfigScreen = () => {
 }
 
 export default ConfigScreen
+
+const PageBtn = (props: {text: string, active: boolean, onClick: ()=> void}) => (
+  <button className={`page-btn ${props.active ? 'active' : ''}`}
+    onClick={props.onClick}>
+    {props.text}
+  </button>
+)
+
+const ConfigBtn = (props: {text: string, active: boolean, onClick: ()=> void}) => (
+  <button className={`config-btn ${props.active ? 'active' : ''}`}
+    onClick={props.onClick}>
+    {props.text}
+  </button>
+)
