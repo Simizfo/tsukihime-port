@@ -20,6 +20,7 @@ const ConfigScreen = () => {
   const [imagesFolder, setImagesFolder] = useState(settings.imagesFolder)
   const [textSpeed, setTextSpeed] = useState(settings.textSpeed)
   const [galleryBlur, setGalleryBlur] = useState(settings.galleryBlur)
+  const [fixedRatio, setFixedRatio] = useState(settings.fixedRatio)
 
   useEffect(()=> {
     displayMode.screen = SCREEN.CONFIG
@@ -49,6 +50,7 @@ const ConfigScreen = () => {
   useObserver(setImagesFolder, settings, 'imagesFolder')
   useObserver(setTextSpeed, settings, 'textSpeed')
   useObserver(setGalleryBlur, settings, 'galleryBlur')
+  useObserver(setFixedRatio, settings, 'fixedRatio')
 
   return (
     <motion.div
@@ -60,11 +62,17 @@ const ConfigScreen = () => {
         <h2 className="page-title">Config</h2>
         <main>
           <div className="pages">
-            <PageBtn text="Main" active={page === Pages.main} onClick={() => setPage(Pages.main)} />
+            <PageBtn text="Main"
+              active={page === Pages.main}
+              onClick={() => setPage(Pages.main)} />
 
-            <PageBtn text="Adult" active={page === Pages.adult} onClick={() => setPage(Pages.adult)} />
+            <PageBtn text="Adult"
+              active={page === Pages.adult}
+              onClick={() => setPage(Pages.adult)} />
 
-            <PageBtn text="Advanced" active={page === Pages.advanced} onClick={() => setPage(Pages.advanced)} />
+            <PageBtn text="Advanced"
+              active={page === Pages.advanced}
+              onClick={() => setPage(Pages.advanced)} />
           </div>
 
           {page === Pages.main &&

@@ -18,7 +18,10 @@ const AnimatedRoutes = () => {
   const [style, setStyle] = useState<Record<string, any>>({
     "--font": settings.font
   })
-  const [viewStyle, setViewStyle] = useState<Record<string, any>>()
+  const [viewStyle, setViewStyle] = useState<Record<string, any>>({
+    "--ratio": settings.fixedRatio == ViewRatio.unconstrained ? "initial" : `${settings.fixedRatio}`,
+    "--width": settings.fixedRatio == ViewRatio.unconstrained ? "100%" : "initial"
+  })
 
   useObserver(font => {
     setStyle({...style, '--font': font})
