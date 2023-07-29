@@ -45,6 +45,11 @@ function extractImage(image: string) {
     // remove ':a;', 'image/', '"', '.jpg'
     image = image.replace(/:a;|image[\/\\]|"|\.jpg/g, '')
                  .replace('\\', '/')
+    switch (image) {
+      case "bg/ima_10"  : image = "#000000"; break
+      case "bg/ima_11"  : image = "#ffffff"; break
+      case "bg/ima_11b" : image = "#9c0120"; break;
+    }
   } else if (!image.startsWith('#') && !image.startsWith('$')) { // not image nor color
     throw Error(`cannot extract image from "${image}"`)
   }
@@ -205,7 +210,7 @@ export function graphicElement(pos: SpritePos, image: string,
     <div
       key={key}
       className={className}
-      {...(isColor ? {style:{ background: image }} : 
+      {...(isColor ? {style:{ background: image }} :
            isPhaseText ? attrs : {})}>
       {isPhaseText ? <>
           <span className="phase-title">{phaseTitle}</span><br/>
