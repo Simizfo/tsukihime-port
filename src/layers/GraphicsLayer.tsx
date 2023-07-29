@@ -6,6 +6,7 @@ import { RouteDayName, RouteName } from "../types";
 import { SCENE_ATTRS } from "../utils/constants";
 import script from "../utils/script";
 import { parseBBcode } from "../utils/utils";
+import { findImageObjectByName } from "../utils/gallery";
 
 type SpritePos = keyof typeof gameContext.graphics
 const POSITIONS: Array<SpritePos> = Object.keys(gameContext.graphics) as Array<SpritePos>
@@ -216,6 +217,7 @@ export function graphicElement(pos: SpritePos, image: string,
           {_dayTitle && <span className="phase-day">{_dayTitle}</span>}
       </> : !isColor &&
         <img src={imgUrl(image)} alt={`[[sprite:${image}]]`}
+          className={findImageObjectByName(image)?.sensitive && settings.galleryBlur ? "blur" : ""}
           {...attrs}
         />
       }
@@ -226,7 +228,7 @@ export function graphicElement(pos: SpritePos, image: string,
 export function graphicElements(images: Partial<Record<SpritePos, string>>,
                           attrs?: Partial<Record<SpritePos, Record<string,any>>>|
                                   ((pos:SpritePos)=>Record<string,any>)) {
-  return POSITIONS.map((pos)=> images[pos] && graphicElement(pos,
+  return POSITIONS.map(pos => images[pos] && graphicElement(pos,
     images[pos] as string, {
       key: images[pos]||pos,
       ...(typeof attrs == 'function' ? attrs(pos) : attrs?.[pos] ?? {})
@@ -297,7 +299,7 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
           style: {'--transition-time': `${duration}ms`},
         })}
         </>
-      : POSITIONS.map((pos)=> // sprite animation: changed sprite fades-in above
+      : POSITIONS.map(pos => // sprite animation: changed sprite fades-in above
                               // previous sprite. Others displayed noramlly.
         <Fragment key={pos}>
           {(pos != 'bg' && ([pos, 'a'].includes(trans_pos))) &&

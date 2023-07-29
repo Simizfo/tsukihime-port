@@ -186,3 +186,19 @@ export const GALLERY_IMAGES = {
     {img: "stk_e03", sensitive: false}
   ]  
 }
+
+// Function to find an image object in the GALLERY_IMAGES object based on a partial image name
+export function findImageObjectByName(imageName: string): any | undefined {
+  for (const characterKey in GALLERY_IMAGES) {
+    if (GALLERY_IMAGES.hasOwnProperty(characterKey)) {
+      const characterImages = GALLERY_IMAGES[characterKey as keyof typeof GALLERY_IMAGES];
+      const foundImage = characterImages.find((imgObj: any) => imageName.includes(imgObj.img))
+      if (foundImage) {
+        return foundImage
+      }
+    }
+  }
+
+  // Image not found
+  return undefined
+}

@@ -1,7 +1,7 @@
 import { FaPlusCircle } from "react-icons/fa"
 import { QUICK_SAVE_ID, SaveState, exportSaveFile, getSaveState, listSaveStates, loadSaveFile as loadSaveFiles, loadSaveState, storeLastSaveState } from "../utils/savestates"
 import { useEffect, useState } from "react"
-import { graphicElement, graphicElements } from "../layers/GraphicsLayer"
+import { graphicElements } from "../layers/GraphicsLayer"
 import { SCREEN, displayMode } from "../utils/variables"
 import { convertText } from "../utils/utils"
 import { useNavigate } from "react-router-dom"
@@ -12,9 +12,9 @@ function saveElement(id: number, saveState: SaveState,
   return (
     <button className="save-container" key={id} {...(id==QUICK_SAVE_ID ? {'quick-save':''} : {})}
             {...props}>
-      <div className="graphics">{
-          graphicElements(saveState.context.graphics)
-      }</div>
+      <div className="graphics">
+        {graphicElements(saveState.context.graphics)}
+      </div>
       <div className="deta">
         <div className="date">
           <b>{date.toLocaleDateString()}</b> {date.toLocaleTimeString()}
