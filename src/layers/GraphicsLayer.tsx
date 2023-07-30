@@ -217,7 +217,7 @@ export function graphicElement(pos: SpritePos, image: string,
           {_dayTitle && <span className="phase-day">{_dayTitle}</span>}
       </> : !isColor &&
         <img src={imgUrl(image)} alt={`[[sprite:${image}]]`}
-          className={findImageObjectByName(image)?.sensitive && settings.galleryBlur ? "blur" : ""}
+          className={findImageObjectByName(image)?.sensitive && settings.blurThumbnails ? "blur" : ""}
           {...attrs}
         />
       }

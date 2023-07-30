@@ -56,7 +56,7 @@ const keyMap = new KeyMap({
       case "graphics" : toggleGraphics(); break
       case "menu"     : toggleMenu(); break
       case "q_save"   : quickSave(); break
-      case "q_load"   : quickLoad(); break;
+      case "q_load"   : quickLoad(); break
       case "load"     : toggleLoad(); break
       case "save"     : toggleSave(); break
       case "bg_move"  : moveBg(args[0]); break

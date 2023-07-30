@@ -24,7 +24,7 @@ const defaultsSettings = {
   imagesFolder: IMAGES_FOLDERS.image_x2,
   fixedRatio: ViewRatio.unconstrained,
   // H-related settings
-  galleryBlur: true,
+  blurThumbnails: true,
   warnHScenes: false, // [not implemented]
   // other settings
   skipDisclaimer: false,

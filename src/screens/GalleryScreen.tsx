@@ -31,10 +31,7 @@ const GalleryScreen = () => {
       const src = settings.eventImages.includes(`event/${image.img}`)
                   ? `/${settings.imagesFolder}/event/${image.img}.webp`
                   : defaultImg
-      return {
-        ...image,
-        src: src
-      }
+      return {...image, src: src}
     })
 
     setImages(imagesTmp)
@@ -72,7 +69,7 @@ const GalleryScreen = () => {
                   <img src={image.src} alt="event" />
                 :
                   <a href={image.src} data-fancybox="gallery"
-                    className={image.sensitive && settings.galleryBlur ? 'h' : ''}>
+                    className={image.sensitive && settings.blurThumbnails ? 'blur' : ''}>
                     <img src={`/image/event/${image.img}.webp`} alt="event" />
                   </a>
                 }

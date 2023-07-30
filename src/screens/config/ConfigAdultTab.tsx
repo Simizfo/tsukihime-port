@@ -3,12 +3,12 @@ import { ConfigButtons, ResetBtn } from "../ConfigScreen"
 import { settings } from "../../utils/variables"
 
 const defaultConf = {
-  galleryBlur: true,
+  blurThumbnails: true,
 }
 
 const ConfigAdultTab = () => {
   const [conf, setConf] = useState({
-    galleryBlur: settings.galleryBlur,
+    blurThumbnails: settings.blurThumbnails,
   })
 
   useEffect(()=> {
@@ -28,7 +28,7 @@ const ConfigAdultTab = () => {
           { text: 'On', value: true },
           { text: 'Off', value: false },
         ]}
-        property="galleryBlur"
+        property="blurThumbnails"
         conf={conf}
         updateValue={updateValue}
       />
