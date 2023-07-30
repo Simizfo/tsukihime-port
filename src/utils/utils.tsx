@@ -184,3 +184,14 @@ export function parseBBcode(text: string): JSX.Element {
   }
   return <>{...nodes[0].content}</>
 }
+
+export function toggleFullscreen() {
+  if (isFullscreen())
+    document.exitFullscreen()
+  else
+    document.documentElement.requestFullscreen()
+}
+
+export function isFullscreen() {
+  return document.fullscreenElement !== null
+}

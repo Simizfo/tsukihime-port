@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { ConfigButtons, ResetBtn } from "../ConfigScreen"
 import { settings } from "../../utils/variables"
 import { IMAGES_FOLDERS } from "../../utils/constants"
+import { isFullscreen, toggleFullscreen } from "../../utils/utils"
 
 const defaultConf = {
   imagesFolder: IMAGES_FOLDERS.image_x2,
@@ -11,9 +12,7 @@ const ConfigAdvancedTab = () => {
   const [conf, setConf] = useState({
     imagesFolder: settings.imagesFolder,
   })
-  const [fullscreen, setFullscreen] = useState<boolean>(
-    document.fullscreenElement !== null
-  ) // don't save in settings
+  const [fullscreen, setFullscreen] = useState<boolean>(isFullscreen()) // don't save in settings
 
   useEffect(()=> {
     Object.assign(settings, conf)
@@ -24,9 +23,9 @@ const ConfigAdvancedTab = () => {
     value: typeof defaultConf[T]
   ) => setConf(prev => ({ ...prev, [key]: value }))
 
-  const toggleFullscreen = () => {
-    fullscreen ? document.exitFullscreen() : document.documentElement.requestFullscreen()
-    setFullscreen(prev=> !prev)
+  const toggleScreen = () => {
+    setFullscreen(!isFullscreen())
+    toggleFullscreen()
   }
 
   return (
@@ -50,7 +49,7 @@ const ConfigAdvancedTab = () => {
         ]}
         property="fullscreen"
         conf={{fullscreen}}
-        updateValue={toggleFullscreen}
+        updateValue={toggleScreen}
       />
 
       <ResetBtn onClick={() => setConf(defaultConf)} />

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { addEventListener } from "../utils/utils"
+import { addEventListener, isFullscreen, toggleFullscreen } from "../utils/utils"
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 import { IoClose } from "react-icons/io5"
 import { AiOutlineFullscreen, AiOutlineFullscreenExit } from "react-icons/ai"
@@ -20,7 +20,7 @@ const MenuLayer = () => {
   const menuRef = useRef<HTMLDivElement>(null)
   const [display, setDisplay] = useState<boolean>(displayMode.menu)
   const [mute, setMute] = useState<boolean>(settings.volume.master < 0)
-  const [fullscreen, setFullscreen] = useState<boolean>(false)
+  const [fullscreen, setFullscreen] = useState<boolean>(isFullscreen())
 
   useObserver((display: boolean)=> {
     setDisplay(display)
@@ -79,9 +79,9 @@ const MenuLayer = () => {
     settings.volume.master = - settings.volume.master
   }
 
-  const toggleFullscreen = () => {
-    fullscreen ? document.exitFullscreen() : document.documentElement.requestFullscreen()
-    setFullscreen(prev=> !prev)
+  const toggleScreen = () => {
+    setFullscreen(!isFullscreen())
+    toggleFullscreen()
   }
 
   return (
@@ -114,7 +114,7 @@ const MenuLayer = () => {
             <button onClick={toggleVolume}>
               {mute ? <FaVolumeMute /> : <FaVolumeUp />}
             </button>
-            <button onClick={toggleFullscreen}>
+            <button onClick={toggleScreen}>
               {fullscreen ? <AiOutlineFullscreenExit /> : <AiOutlineFullscreen />}
             </button>
             <button onClick={closeMenu}>
