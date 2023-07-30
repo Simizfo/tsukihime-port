@@ -105,7 +105,7 @@ export function getSaveState(id: SaveStateId) {
 }
 
 export function hasSaveStates() {
-  return saveStates.size > 0 || history.length > 0
+  return saveStates.size > 0 || !history.empty
 }
 
 /**

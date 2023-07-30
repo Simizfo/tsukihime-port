@@ -25,7 +25,7 @@ class History {
   }
 
   get empty(): boolean {
-    return this.pages.length > 0
+    return this.pages.length === 0
   }
 
   /**
