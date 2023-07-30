@@ -1,8 +1,4 @@
 #config {
-    --active: #0f9696;
-    --active-hover: #106666;
-    --focus: #3477de;
-
     .tabs {
         border-bottom: 2px solid var(--active);
         display: flex;
@@ -44,6 +40,7 @@
         font-size: 1.2em;
         overflow-x: hidden;
         flex: 1;
+        background-color: var(--menu-container);
 
         .config {
             display: grid;
