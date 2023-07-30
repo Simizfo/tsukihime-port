@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 import '../styles/config.scss'
 import { SCREEN, displayMode } from '../utils/variables'
 import { motion } from 'framer-motion'
@@ -7,14 +7,20 @@ import ConfigMainTab from './config/ConfigMainTab'
 import ConfigAdultTab from './config/ConfigAdultTab'
 import ConfigAdvancedTab from './config/ConfigAdvancedTab'
 
-const enum Pages {
-  main,
-  adult,
-  advanced
+enum Tabs {
+  main = "Main",
+  adult = "Adult",
+  advanced = "Advanced",
+}
+
+const tabComponents = {
+  [Tabs.main]: <ConfigMainTab />,
+  [Tabs.adult]: <ConfigAdultTab />,
+  [Tabs.advanced]: <ConfigAdvancedTab />,
 }
 
 const ConfigScreen = () => {
-  const [page, setPage] = useState(Pages.main)
+  const [tab, setTab] = useState(Tabs.main)
 
   useEffect(()=> {
     displayMode.screen = SCREEN.CONFIG
@@ -28,32 +34,17 @@ const ConfigScreen = () => {
       exit={{opacity: 0}}>
       <div className="page-content">
         <h2 className="page-title">Config</h2>
+        
         <main>
-          <div className="pages">
-            <PageBtn text="Main"
-              active={page === Pages.main}
-              onClick={() => setPage(Pages.main)} />
-
-            <PageBtn text="Adult"
-              active={page === Pages.adult}
-              onClick={() => setPage(Pages.adult)} />
-
-            <PageBtn text="Advanced"
-              active={page === Pages.advanced}
-              onClick={() => setPage(Pages.advanced)} />
+          <div className="tabs">
+            {Object.values(Tabs).map(tabBtn => 
+              <TabBtn key={tabBtn} text={tabBtn}
+                active={tabBtn === tab}
+                onClick={() => setTab(tabBtn)} />
+            )}
           </div>
 
-          {page === Pages.main &&
-          <ConfigMainTab />
-          }
-
-          {page === Pages.adult &&
-          <ConfigAdultTab />
-          }
-
-          {page === Pages.advanced &&
-          <ConfigAdvancedTab />
-          }
+          {tabComponents[tab]}
         </main>
 
         <Link to="/title" className="menu-btn back-button">Back</Link>
@@ -64,24 +55,35 @@ const ConfigScreen = () => {
 
 export default ConfigScreen
 
-const PageBtn = (props: {text: string, active: boolean, onClick: ()=> void}) => (
+const TabBtn = (props: {text: string, active: boolean, onClick: ()=> void}) => (
   <button className={`page-btn ${props.active ? 'active' : ''}`}
     onClick={props.onClick}>
     {props.text}
   </button>
 )
 
-interface ConfigButtonsProps {
-  title: string;
-  btns: { text: string; value: any }[];
-  property: string;
-  conf: any;
-  updateValue: (key: any, value: any) => void;
+interface ConfigLayoutProps {
+  title: string
+  children: ReactNode
 }
-export const ConfigButtons = ({title, btns, property, conf, updateValue}: ConfigButtonsProps) => (
+export const ConfigLayout = ({ title, children }: ConfigLayoutProps) => (
   <div className="config">
     <div>{title}</div>
 
+    {children}
+  </div>
+)
+
+interface ConfigButtonsProps {
+  title: string
+  btns: { text: string; value: any }[]
+  property: string
+  conf: any
+  updateValue: (key: any, value: any) => void
+}
+/** Display multiples options to choose from */
+export const ConfigButtons = ({title, btns, property, conf, updateValue}: ConfigButtonsProps) => (
+  <ConfigLayout title={title}>
     <div className="config-btns">
       {btns.map(btn => 
         <button
@@ -92,8 +94,8 @@ export const ConfigButtons = ({title, btns, property, conf, updateValue}: Config
         </button>
       )}
     </div>
-  </div>
-);
+  </ConfigLayout>
+)
 
 export const ResetBtn = ({onClick}: {onClick: ()=> void}) => (
   <div className="reset">

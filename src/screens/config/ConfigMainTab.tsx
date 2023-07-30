@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { ConfigButtons, ResetBtn } from "../ConfigScreen"
+import { ConfigButtons, ConfigLayout, ResetBtn } from "../ConfigScreen"
 import { settings } from "../../utils/variables"
 import { ViewRatio } from "../../types"
 import { TEXT_SPEED } from "../../utils/constants"
@@ -32,9 +32,7 @@ const ConfigMainTab = () => {
 
   return (
     <section>
-      <div className="config">
-        <div>Volume {Math.abs(conf.volume.master)}</div>
-
+      <ConfigLayout title={`Volume ${Math.abs(conf.volume.master)}`}>
         <div className="config-range">
           <span>Low</span>
           <input
@@ -49,7 +47,7 @@ const ConfigMainTab = () => {
             }} />
           <span>High</span>
         </div>
-      </div>
+      </ConfigLayout>
 
       <ConfigButtons
         title="Display ratio"
