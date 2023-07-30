@@ -31,19 +31,19 @@ const ConfigMainTab = () => {
       <div className="config">
         <div>Volume {Math.abs(volume)}</div>
 
-        <div>
-          Low
+        <div className="config-range">
+          <span>Low</span>
           <input
             type="range"
-            min="0"
-            max="10"
+            min={0}
+            max={10}
             step={1}
             value={Math.abs(volume)}
-            onChange={(e) => {
+            onChange={e => {
               const sign = Math.sign(volume)
               updateVolume(sign * parseInt(e.target.value))
             }} />
-          High
+          <span>High</span>
         </div>
       </div>
 
