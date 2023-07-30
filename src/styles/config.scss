@@ -1,6 +1,7 @@
 #config {
     --active: #0f9696;
     --active-hover: #106666;
+    --focus: #3477de;
 
     .tabs {
         border-bottom: 2px solid var(--active);
@@ -22,10 +23,16 @@
             &:hover, &.active:hover {
                 background-color: var(--active);
             }
+            &:focus-visible {
+                background-color: var(--focus);
+            }
 
             &.active {
                 border-color: var(--active);
                 background-color: #06060673;
+            }
+            &:focus-visible.active {
+                background-color: var(--focus);
             }
         }
     }
@@ -64,6 +71,9 @@
         
                     &:hover, &.active {
                         background-color: var(--active);
+                    }
+                    &:focus-visible {
+                        outline: 3px solid var(--focus);
                     }
                 }
             }

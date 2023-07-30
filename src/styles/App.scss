@@ -65,7 +65,7 @@ main {
     transition: all .2s ease-out;
     font-style: italic;
 
-    &:hover {
+    &:hover, &:focus-visible {
         color: var(--text-color);
         border-color: #51c7ff;
         box-shadow: inset 0 0 20px #0fbbd5;

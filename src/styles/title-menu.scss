@@ -40,7 +40,7 @@
             text-align: center;
             height: fit-content;
 
-            &:hover {
+            &:hover, &:focus-visible {
                 cursor: pointer;
                 color: rgb(10 164 171);
                 text-shadow: 1px 0 5px rgb(14 79 187), 1px 0 6px rgba(28, 147, 147, 0.5215686275);

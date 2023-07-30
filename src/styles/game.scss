@@ -214,7 +214,7 @@
             transition: all 0.2s ease-in-out;
             color: #fff;
 
-            &:hover {
+            &:hover, &:focus-visible {
                 filter: brightness(1.2);
             }
         }
@@ -278,7 +278,7 @@
                 display: flex;
                 align-items: center;
 
-                &:hover {
+                &:hover, &:focus-visible {
                     cursor: pointer;
                     color: rgb(10 164 171);
                     text-shadow: 1px 0 5px rgb(14 79 187), 1px 0 6px rgba(28, 147, 147, 0.5215686275);
@@ -351,7 +351,7 @@
                 display: flex;
                 margin-left: auto;
 
-                &:hover {
+                &:hover, &:focus-visible {
                     cursor: pointer;
                     color: rgb(10 164 171);
                     text-shadow: 1px 0 5px rgb(14 79 187), 1px 0 6px rgba(28, 147, 147, 0.5215686275);
@@ -399,7 +399,7 @@
                     all: unset;
                     transition: var(--transition);
 
-                    &:hover {
+                    &:hover, &:focus-visible {
                         cursor: pointer;
                         color: rgb(10 164 171);
                         text-shadow: 1px 0 5px rgb(14 79 187), 1px 0 6px rgba(28, 147, 147, 0.5215686275);
