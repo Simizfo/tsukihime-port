@@ -1,32 +1,39 @@
-import { useState } from "react"
-import { ConfigBtn } from "../ConfigScreen"
+import { useEffect, useState } from "react"
+import { ConfigButtons, ResetBtn } from "../ConfigScreen"
 import { settings } from "../../utils/variables"
-import { useObserver } from '../../utils/Observer'
+
+const defaultConf = {
+  galleryBlur: true,
+}
 
 const ConfigAdultTab = () => {
-  const [galleryBlur, setGalleryBlur] = useState(settings.galleryBlur)
+  const [conf, setConf] = useState({
+    galleryBlur: settings.galleryBlur,
+  })
 
-  const updateGalleryBlur = (blur: boolean)=> {
-    settings.galleryBlur = blur
-  }
+  useEffect(()=> {
+    Object.assign(settings, conf)
+  }, [conf])
 
-  useObserver(setGalleryBlur, settings, 'galleryBlur')
+  const updateValue = <T extends keyof typeof defaultConf>(
+    key: T,
+    value: typeof defaultConf[T]
+  ) => setConf(prev => ({ ...prev, [key]: value }))
 
   return (
     <section>
-      <div className="config">
-        <div>Blur thumbnails</div>
+      <ConfigButtons
+        title="Blur thumbnails"
+        btns={[
+          { text: 'On', value: true },
+          { text: 'Off', value: false },
+        ]}
+        property="galleryBlur"
+        conf={conf}
+        updateValue={updateValue}
+      />
 
-        <div className="config-btns">
-          <ConfigBtn text="On"
-            active={galleryBlur}
-            onClick={()=> updateGalleryBlur(true)} />
-
-          <ConfigBtn text="Off"
-            active={!galleryBlur}
-            onClick={()=> updateGalleryBlur(false)} />
-        </div>
-      </div>
+      <ResetBtn onClick={() => setConf(defaultConf)} />
     </section>
   )
 }

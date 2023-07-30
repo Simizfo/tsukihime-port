@@ -1,34 +1,41 @@
-import { useState } from "react"
-import { ConfigBtn } from "../ConfigScreen"
+import { useEffect, useState } from "react"
+import { ConfigButtons, ResetBtn } from "../ConfigScreen"
 import { settings } from "../../utils/variables"
-import { useObserver } from '../../utils/Observer'
 import { IMAGES_FOLDERS } from "../../utils/constants"
 
+const defaultConf = {
+  imagesFolder: IMAGES_FOLDERS.image_x2,
+}
+
 const ConfigAdvancedTab = () => {
-  const [imagesFolder, setImagesFolder] = useState(settings.imagesFolder)
+  const [conf, setConf] = useState({
+    imagesFolder: settings.imagesFolder,
+  })
 
-  const updateImagesFolder = (folder: string) => {
-    settings.imagesFolder = folder as IMAGES_FOLDERS
-  }
+  useEffect(()=> {
+    Object.assign(settings, conf)
+  }, [conf])
 
-  useObserver(setImagesFolder, settings, 'imagesFolder')
+  const updateValue = <T extends keyof typeof defaultConf>(
+    key: T,
+    value: typeof defaultConf[T]
+  ) => setConf(prev => ({ ...prev, [key]: value }))
 
   return (
     <section>
-    <div className="config">
-      <div>Quality</div>
-      
-      <div className="config-btns">
-        <ConfigBtn text={`640\u00D7480`}
-          active={imagesFolder === IMAGES_FOLDERS.image}
-          onClick={()=> updateImagesFolder(IMAGES_FOLDERS.image)} />
+      <ConfigButtons
+        title="Quality"
+        btns={[
+          { text: `640\u00D7480`, value: IMAGES_FOLDERS.image },
+          { text: `1280\u00D7960`, value: IMAGES_FOLDERS.image_x2 },
+        ]}
+        property="imagesFolder"
+        conf={conf}
+        updateValue={updateValue}
+      />
 
-        <ConfigBtn text={`1280\u00D7960`}
-          active={imagesFolder === IMAGES_FOLDERS.image_x2}
-          onClick={()=> updateImagesFolder(IMAGES_FOLDERS.image_x2)} />
-      </div>
-    </div>
-  </section>
+      <ResetBtn onClick={() => setConf(defaultConf)} />
+    </section>
   )
 }
 

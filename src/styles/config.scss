@@ -108,6 +108,11 @@
                 }
             }
         }
+
+        .reset {
+            margin-top: 2em;
+            align-self: flex-end;
+        }
     }
 
     @media (max-width: 768px) {

@@ -71,9 +71,32 @@ const PageBtn = (props: {text: string, active: boolean, onClick: ()=> void}) => 
   </button>
 )
 
-export const ConfigBtn = (props: {text: string, active: boolean, onClick: ()=> void}) => (
-  <button className={`config-btn ${props.active ? 'active' : ''}`}
-    onClick={props.onClick}>
-    {props.text}
-  </button>
+interface ConfigButtonsProps {
+  title: string;
+  btns: { text: string; value: any }[];
+  property: string;
+  conf: any;
+  updateValue: (key: any, value: any) => void;
+}
+export const ConfigButtons = ({title, btns, property, conf, updateValue}: ConfigButtonsProps) => (
+  <div className="config">
+    <div>{title}</div>
+
+    <div className="config-btns">
+      {btns.map(btn => 
+        <button
+          key={btn.text}
+          className={`config-btn ${conf[property] === btn.value ? 'active' : ''}`}
+          onClick={() => updateValue(property, btn.value)}>
+          {btn.text}
+        </button>
+      )}
+    </div>
+  </div>
+);
+
+export const ResetBtn = ({onClick}: {onClick: ()=> void}) => (
+  <div className="reset">
+    <button className="menu-btn reset" onClick={onClick}>Reset</button>
+  </div>
 )
