@@ -29,7 +29,7 @@ const defaultsSettings = {
   // other settings
   skipDisclaimer: false,
   volume: {
-    master: 10,
+    master: 5,
     track: 10,
     se: 10,
   },

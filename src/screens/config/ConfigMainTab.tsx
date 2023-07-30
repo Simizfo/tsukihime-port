@@ -6,7 +6,9 @@ import { TEXT_SPEED } from "../../utils/constants"
 
 const defaultConf = {
   volume: {
-    master: 1,
+    master: 5,
+    track: 10,
+    se: 10,
   },
   textSpeed: TEXT_SPEED.normal,
   fixedRatio: ViewRatio.unconstrained,
@@ -16,6 +18,8 @@ const ConfigMainTab = () => {
   const [conf, setConf] = useState({
     volume: {
       master: settings.volume.master,
+      track: settings.volume.track,
+      se: settings.volume.se,
     },
     textSpeed: settings.textSpeed,
     fixedRatio: settings.fixedRatio,
@@ -32,7 +36,7 @@ const ConfigMainTab = () => {
 
   return (
     <section>
-      <ConfigLayout title={`Volume ${Math.abs(conf.volume.master)}`}>
+      <ConfigLayout title={`Global volume ${Math.abs(conf.volume.master)}`}>
         <div className="config-range">
           <span>Low</span>
           <input
@@ -43,7 +47,41 @@ const ConfigMainTab = () => {
             value={Math.abs(conf.volume.master)}
             onChange={e => {
               const sign = (Object.is(Math.abs(conf.volume.master), conf.volume.master) ? 1 : -1)
-              updateValue('volume', { master: sign * parseInt(e.target.value) })
+              updateValue('volume', { ...conf.volume, master: sign * parseInt(e.target.value) })
+            }} />
+          <span>High</span>
+        </div>
+      </ConfigLayout>
+
+      <ConfigLayout title={`Music volume ${Math.abs(conf.volume.track)}`}>
+        <div className="config-range">
+          <span>Low</span>
+          <input
+            type="range"
+            min={0}
+            max={10}
+            step={1}
+            value={Math.abs(conf.volume.track)}
+            onChange={e => {
+              const sign = (Object.is(Math.abs(conf.volume.track), conf.volume.track) ? 1 : -1)
+              updateValue('volume', { ...conf.volume, track: sign * parseInt(e.target.value) })
+            }} />
+          <span>High</span>
+        </div>
+      </ConfigLayout>
+
+      <ConfigLayout title={`SFX volume ${Math.abs(conf.volume.se)}`}>
+        <div className="config-range">
+          <span>Low</span>
+          <input
+            type="range"
+            min={0}
+            max={10}
+            step={1}
+            value={Math.abs(conf.volume.se)}
+            onChange={e => {
+              const sign = (Object.is(Math.abs(conf.volume.se), conf.volume.se) ? 1 : -1)
+              updateValue('volume', { ...conf.volume, se: sign * parseInt(e.target.value) })
             }} />
           <span>High</span>
         </div>
