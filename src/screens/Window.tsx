@@ -23,7 +23,9 @@ import history from '../utils/history';
 const keyMap = new KeyMap({
   "next":     [()=> objectMatch(displayMode, {menu: false, choices: false, history: false, load: false, save: false}),
               {key: "Enter", repeat: false},
+              {key: "Enter", repeat: true},
               {key: "Control", repeat: true},
+              {key: "Meta", repeat: true},
               {key: "ArrowDown", repeat: false},
               {key: "ArrowRight", repeat: false}],
   "page_nav": [()=> objectMatch(displayMode, {text: true, menu: false, history: false, load: false, save: false}),
