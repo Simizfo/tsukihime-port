@@ -44,6 +44,12 @@ const MenuLayer = () => {
     return addEventListener({event: 'mousedown', handler: handleClick})
   })
 
+  useEffect(()=> {
+    return addEventListener({event: 'fullscreenchange', handler: ()=> {
+      setFullscreen(isFullscreen())
+    }})
+  }, [])
+
   const graphicMode = () => {
     displayMode.menu = false
     displayMode.history = false
@@ -79,11 +85,6 @@ const MenuLayer = () => {
     settings.volume.master = - settings.volume.master
   }
 
-  const toggleScreen = () => {
-    setFullscreen(!isFullscreen())
-    toggleFullscreen()
-  }
-
   return (
     <nav className={`box box-menu ${display ? "show" : ""}`}>
       <div className="menu-container" ref={menuRef}>
@@ -114,7 +115,7 @@ const MenuLayer = () => {
             <button onClick={toggleVolume}>
               {mute ? <FaVolumeMute /> : <FaVolumeUp />}
             </button>
-            <button onClick={toggleScreen}>
+            <button onClick={toggleFullscreen}>
               {fullscreen ? <AiOutlineFullscreenExit /> : <AiOutlineFullscreen />}
             </button>
             <button onClick={closeMenu}>

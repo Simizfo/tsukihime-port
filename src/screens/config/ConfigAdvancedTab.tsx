@@ -18,15 +18,16 @@ const ConfigAdvancedTab = () => {
     Object.assign(settings, conf)
   }, [conf])
 
+  useEffect(()=> {
+    return addEventListener({event: 'fullscreenchange', handler: ()=> {
+      setFullscreen(isFullscreen())
+    }})
+  }, [])
+
   const updateValue = <T extends keyof typeof defaultConf>(
     key: T,
     value: typeof defaultConf[T]
   ) => setConf(prev => ({ ...prev, [key]: value }))
-
-  const toggleScreen = () => {
-    setFullscreen(!isFullscreen())
-    toggleFullscreen()
-  }
 
   return (
     <section>
@@ -49,7 +50,7 @@ const ConfigAdvancedTab = () => {
         ]}
         property="fullscreen"
         conf={{fullscreen}}
-        updateValue={toggleScreen}
+        updateValue={toggleFullscreen}
       />
 
       <ResetBtn onClick={() => setConf(defaultConf)} />
