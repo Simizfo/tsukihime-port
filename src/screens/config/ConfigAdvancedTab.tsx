@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import { ConfigButtons, ResetBtn } from "../ConfigScreen"
-import { settings } from "../../utils/variables"
+import { defaultsSettings, settings } from "../../utils/variables"
 import { IMAGES_FOLDERS } from "../../utils/constants"
 import { isFullscreen, toggleFullscreen } from "../../utils/utils"
 
 const defaultConf = {
-  imagesFolder: IMAGES_FOLDERS.image_x2,
+  imagesFolder: defaultsSettings.imagesFolder,
 }
 
 const ConfigAdvancedTab = () => {

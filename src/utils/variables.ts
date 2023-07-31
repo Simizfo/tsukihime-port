@@ -11,7 +11,7 @@ import { deepFreeze, objectMatch, overrideAttributes } from "./utils"
 //___________________________________settings___________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 const SETTINGS_STORAGE_KEY = "settings"
-const defaultsSettings = {
+export const defaultsSettings = {
   // scene settings
   textSpeed: TEXT_SPEED.normal,
   autoClickDelay: 0,

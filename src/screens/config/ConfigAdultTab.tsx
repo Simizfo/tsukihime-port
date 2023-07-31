@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import { ConfigButtons, ResetBtn } from "../ConfigScreen"
-import { settings } from "../../utils/variables"
+import { defaultsSettings, settings } from "../../utils/variables"
 
 const defaultConf = {
-  blurThumbnails: true,
-  warnHScenes: false
+  blurThumbnails: defaultsSettings.blurThumbnails,
+  warnHScenes: defaultsSettings.warnHScenes,
 }
 
 const ConfigAdultTab = () => {

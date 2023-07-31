@@ -1,17 +1,13 @@
 import { useEffect, useState } from "react"
 import { ConfigButtons, ConfigLayout, ResetBtn } from "../ConfigScreen"
-import { settings } from "../../utils/variables"
+import { defaultsSettings, settings } from "../../utils/variables"
 import { ViewRatio } from "../../types"
 import { TEXT_SPEED } from "../../utils/constants"
 
 const defaultConf = {
-  volume: {
-    master: 5,
-    track: 10,
-    se: 10,
-  },
-  textSpeed: TEXT_SPEED.normal,
-  fixedRatio: ViewRatio.unconstrained,
+  volume: defaultsSettings.volume,
+  textSpeed: defaultsSettings.textSpeed,
+  fixedRatio: defaultsSettings.fixedRatio,
 }
 
 const ConfigMainTab = () => {
