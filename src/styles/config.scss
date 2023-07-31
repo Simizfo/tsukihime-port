@@ -48,7 +48,7 @@
             align-items: center;
             padding-block: 1em;
 
-            &:not(:last-child) {
+            &:not(:nth-last-child(2)) {
                 border-bottom: 1px solid;
             }
 
@@ -79,6 +79,7 @@
                 display: flex;
                 gap: .6em;
                 align-items: center;
+                padding: .2em;
 
                 input[type="range"] {
                     appearance: none;
@@ -120,7 +121,7 @@
         }
 
         .reset {
-            margin-top: 2em;
+            margin-top: 1em;
             align-self: flex-end;
         }
     }
