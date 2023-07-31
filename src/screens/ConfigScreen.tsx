@@ -34,10 +34,10 @@ const ConfigScreen = () => {
       exit={{opacity: 0}}>
       <div className="page-content">
         <h2 className="page-title">Config</h2>
-        
+
         <main>
           <div className="tabs">
-            {Object.values(Tabs).map(tabBtn => 
+            {Object.values(Tabs).map(tabBtn =>
               <TabBtn key={tabBtn} text={tabBtn}
                 active={tabBtn === tab}
                 onClick={() => setTab(tabBtn)} />
@@ -65,9 +65,10 @@ const TabBtn = (props: {text: string, active: boolean, onClick: ()=> void}) => (
 interface ConfigLayoutProps {
   title: string
   children: ReactNode
+  [key:string]:any
 }
-export const ConfigLayout = ({ title, children }: ConfigLayoutProps) => (
-  <div className="config">
+export const ConfigLayout = ({ title, children, ...props }: ConfigLayoutProps) => (
+  <div className="config" {...props}>
     <div>{title}</div>
 
     {children}
@@ -85,7 +86,7 @@ interface ConfigButtonsProps {
 export const ConfigButtons = ({title, btns, property, conf, updateValue}: ConfigButtonsProps) => (
   <ConfigLayout title={title}>
     <div className="config-btns">
-      {btns.map(btn => 
+      {btns.map(btn =>
         <button
           key={btn.text}
           className={`config-btn ${conf[property] === btn.value ? 'active' : ''}`}

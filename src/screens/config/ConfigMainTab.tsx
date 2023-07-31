@@ -1,91 +1,69 @@
 import { useEffect, useState } from "react"
 import { ConfigButtons, ConfigLayout, ResetBtn } from "../ConfigScreen"
-import { settings } from "../../utils/variables"
+import { defaultSettings, settings } from "../../utils/variables"
 import { ViewRatio } from "../../types"
 import { TEXT_SPEED } from "../../utils/constants"
-
-const defaultConf = {
-  volume: {
-    master: 5,
-    track: 10,
-    se: 10,
-  },
-  textSpeed: TEXT_SPEED.normal,
-  fixedRatio: ViewRatio.unconstrained,
-}
+import { deepAssign, negative } from "../../utils/utils"
+import { FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 
 const ConfigMainTab = () => {
-  const [conf, setConf] = useState({
-    volume: {
-      master: settings.volume.master,
-      track: settings.volume.track,
-      se: settings.volume.se,
-    },
-    textSpeed: settings.textSpeed,
-    fixedRatio: settings.fixedRatio,
-  })
+  const [conf, setConf] = useState(deepAssign({
+    // object only used for its structure. Values don't matter.
+    volume : undefined,
+    textSpeed: undefined,
+    fixedRatio: undefined
+  }, settings, {createMissing: false}))
 
   useEffect(()=> {
-    Object.assign(settings, conf)
+    deepAssign(settings, conf)
   }, [conf])
 
-  const updateValue = <T extends keyof typeof defaultConf>(
+  const updateValue = <T extends keyof typeof conf>(
     key: T,
-    value: typeof defaultConf[T]
+    value: typeof conf[T]
   ) => setConf(prev => ({ ...prev, [key]: value }))
+
+  const updateSubValue = <K extends keyof typeof conf, T extends keyof (typeof conf)[K]>(
+    key1: K,
+    key2: T,
+    value: typeof conf[K][T]
+  ) => setConf(prev=> {
+    const newConf = structuredClone(prev)
+    newConf[key1][key2] = value
+    return newConf
+  })
+
+  const volumeNames: {[key in keyof typeof conf.volume]: string} = {
+    'master': "Global volume",
+    'track': "Music volume",
+    'se': "SFX volume"
+  }
 
   return (
     <section>
-      <ConfigLayout title={`Global volume ${Math.abs(conf.volume.master)}`}>
-        <div className="config-range">
-          <span>Low</span>
-          <input
-            type="range"
-            min={0}
-            max={10}
-            step={1}
-            value={Math.abs(conf.volume.master)}
-            onChange={e => {
-              const sign = (Object.is(Math.abs(conf.volume.master), conf.volume.master) ? 1 : -1)
-              updateValue('volume', { ...conf.volume, master: sign * parseInt(e.target.value) })
-            }} />
-          <span>High</span>
-        </div>
-      </ConfigLayout>
-
-      <ConfigLayout title={`Music volume ${Math.abs(conf.volume.track)}`}>
-        <div className="config-range">
-          <span>Low</span>
-          <input
-            type="range"
-            min={0}
-            max={10}
-            step={1}
-            value={Math.abs(conf.volume.track)}
-            onChange={e => {
-              const sign = (Object.is(Math.abs(conf.volume.track), conf.volume.track) ? 1 : -1)
-              updateValue('volume', { ...conf.volume, track: sign * parseInt(e.target.value) })
-            }} />
-          <span>High</span>
-        </div>
-      </ConfigLayout>
-
-      <ConfigLayout title={`SFX volume ${Math.abs(conf.volume.se)}`}>
-        <div className="config-range">
-          <span>Low</span>
-          <input
-            type="range"
-            min={0}
-            max={10}
-            step={1}
-            value={Math.abs(conf.volume.se)}
-            onChange={e => {
-              const sign = (Object.is(Math.abs(conf.volume.se), conf.volume.se) ? 1 : -1)
-              updateValue('volume', { ...conf.volume, se: sign * parseInt(e.target.value) })
-            }} />
-          <span>High</span>
-        </div>
-      </ConfigLayout>
+      {(Object.keys(conf.volume) as Array<keyof typeof volumeNames>).map(key=>
+        <ConfigLayout key={key} title={`${volumeNames[key]} ${Math.abs(conf.volume[key])}`}>
+          <button onClick={()=>{
+              updateSubValue('volume', key, -conf.volume[key])
+          }}>
+            {negative(conf.volume[key]) ? <FaVolumeMute /> : <FaVolumeUp />}
+          </button>
+          <span className="config-range">
+            <span>Low</span>
+            <input
+              type="range"
+              min={0}
+              max={10}
+              step={1}
+              value={Math.abs(conf.volume[key])}
+              onChange={e => {
+                const sign = negative(conf.volume[key]) ? -1 : 1
+                updateSubValue('volume', key, sign * parseInt(e.target.value))
+              }} />
+            <span>High</span>
+          </span>
+        </ConfigLayout>
+      )}
 
       <ConfigButtons
         title="Display ratio"
@@ -112,7 +90,10 @@ const ConfigMainTab = () => {
         updateValue={updateValue}
       />
 
-      <ResetBtn onClick={() => setConf(defaultConf)} />
+      <ResetBtn onClick={() => {
+        const defaultConf = deepAssign(structuredClone(conf), defaultSettings, {createMissing: false})
+        setConf(defaultConf)
+      }} />
     </section>
   )
 }

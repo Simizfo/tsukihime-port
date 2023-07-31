@@ -1,25 +1,21 @@
 import { useEffect, useState } from "react"
 import { ConfigButtons, ResetBtn } from "../ConfigScreen"
-import { settings } from "../../utils/variables"
-
-const defaultConf = {
-  blurThumbnails: true,
-  warnHScenes: false
-}
+import { defaultSettings, settings } from "../../utils/variables"
+import { deepAssign } from "../../utils/utils"
 
 const ConfigAdultTab = () => {
-  const [conf, setConf] = useState({
-    blurThumbnails: settings.blurThumbnails,
-    warnHScenes: settings.warnHScenes,
-  })
+  const [conf, setConf] = useState(deepAssign({
+    blurThumbnails: undefined,
+    warnHScenes: undefined,
+  }, settings, {createMissing: false}))
 
   useEffect(()=> {
     Object.assign(settings, conf)
   }, [conf])
 
-  const updateValue = <T extends keyof typeof defaultConf>(
+  const updateValue = <T extends keyof typeof conf>(
     key: T,
-    value: typeof defaultConf[T]
+    value: typeof conf[T]
   ) => setConf(prev => ({ ...prev, [key]: value }))
 
   return (
@@ -46,7 +42,10 @@ const ConfigAdultTab = () => {
         updateValue={updateValue}
       />
 
-      <ResetBtn onClick={() => setConf(defaultConf)} />
+      <ResetBtn onClick={() => {
+        const defaultConf = deepAssign(structuredClone(conf), defaultSettings, {createMissing: false})
+        setConf(defaultConf)
+      }} />
     </section>
   )
 }

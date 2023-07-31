@@ -2,7 +2,7 @@ import { ViewRatio, NumVarName, StrVarName, VarName, LabelName, RouteName, Route
 import { observe, observeChildren } from "./Observer"
 import { IMAGES_FOLDERS, TEXT_SPEED } from "./constants"
 import Timer from "./timer"
-import { deepFreeze, objectMatch, overrideAttributes } from "./utils"
+import { deepFreeze, objectMatch, deepAssign } from "./utils"
 
 //##############################################################################
 //#                           APP-RELATED VARIABLES                            #
@@ -11,7 +11,7 @@ import { deepFreeze, objectMatch, overrideAttributes } from "./utils"
 //___________________________________settings___________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 const SETTINGS_STORAGE_KEY = "settings"
-const defaultsSettings = {
+export const defaultSettings = deepFreeze({
   // scene settings
   textSpeed: TEXT_SPEED.normal,
   autoClickDelay: 0,
@@ -36,14 +36,14 @@ const defaultsSettings = {
   // saved progress
   eventImages: new Array<string>(),
   completedScenes: new Array<string>(),
-}
+})
 
 // load from file
 const savedSettings = (()=> {
-  const result = structuredClone(defaultsSettings)
+  const result = structuredClone(defaultSettings)
   const fileContent = localStorage.getItem(SETTINGS_STORAGE_KEY)
   if (fileContent && fileContent.length > 0)
-    overrideAttributes(result, JSON.parse(fileContent), false)
+    deepAssign(result, JSON.parse(fileContent))
   return result
 })()
 // deep-copy savedSettings
@@ -55,7 +55,7 @@ function saveSettings() {
   savePostPoneTimer.cancel()
   if (!objectMatch(savedSettings, settings, false)) {
     settings.completedScenes.sort()
-    overrideAttributes(savedSettings, settings, false)
+    deepAssign(savedSettings, settings)
     localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(savedSettings))
   }
 }

@@ -1,21 +1,19 @@
 import { useEffect, useState } from "react"
 import { ConfigButtons, ResetBtn } from "../ConfigScreen"
-import { settings } from "../../utils/variables"
+import { defaultSettings, settings } from "../../utils/variables"
 import { IMAGES_FOLDERS } from "../../utils/constants"
-import { isFullscreen, toggleFullscreen } from "../../utils/utils"
-
-const defaultConf = {
-  imagesFolder: IMAGES_FOLDERS.image_x2,
-}
+import { addEventListener, deepAssign, isFullscreen, toggleFullscreen } from "../../utils/utils"
 
 const ConfigAdvancedTab = () => {
-  const [conf, setConf] = useState({
-    imagesFolder: settings.imagesFolder,
-  })
+
+  const [conf, setConf] = useState(deepAssign({
+    imagesFolder: undefined,
+  }, settings, {createMissing: false}))
+
   const [fullscreen, setFullscreen] = useState<boolean>(isFullscreen()) // don't save in settings
 
   useEffect(()=> {
-    Object.assign(settings, conf)
+    deepAssign(settings, conf)
   }, [conf])
 
   useEffect(()=> {
@@ -24,9 +22,9 @@ const ConfigAdvancedTab = () => {
     }})
   }, [])
 
-  const updateValue = <T extends keyof typeof defaultConf>(
+  const updateValue = <T extends keyof typeof conf>(
     key: T,
-    value: typeof defaultConf[T]
+    value: typeof conf[T]
   ) => setConf(prev => ({ ...prev, [key]: value }))
 
   return (
@@ -53,7 +51,10 @@ const ConfigAdvancedTab = () => {
         updateValue={toggleFullscreen}
       />
 
-      <ResetBtn onClick={() => setConf(defaultConf)} />
+      <ResetBtn onClick={() => {
+        const defaultConf = deepAssign(structuredClone(conf), defaultSettings, {createMissing: false})
+        setConf(defaultConf)
+      }} />
     </section>
   )
 }

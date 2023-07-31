@@ -1,20 +1,8 @@
-export const addEventListener = ({event, handler, element = window}: any) => {
-  element.addEventListener(event, handler)
-  return () => element.removeEventListener(event, handler)
-}
+import { RecursivePartial } from "../types"
 
-export function convertText(text: string, props: Record<string, any> = {}): JSX.Element {
-
-  if (text == "br")
-    text = ""
-  else if ( text.length > 0) {
-    //remove '`', '@' and '\', EDIT : already removed by script parser
-    //replace '|' with '…'
-    text = text//.replace(/[`@\\]|(\!w\d+\b)/g, '')
-               .replaceAll('|', '…')
-  }
-  return <span {...props}>{replaceDashes(text)}</span>
-}
+//##############################################################################
+//#                            OBJECTS MANIPULATION                            #
+//##############################################################################
 
 export function objectMatch(toTest: Record<PropertyKey, any>, minKeys: Record<PropertyKey, any>, useSymbols=true): boolean {
   const props = [
@@ -39,20 +27,47 @@ export function objectsEqual(obj1: Record<PropertyKey, any>, obj2: Record<Proper
 	return objectMatch(obj1, obj2, useSymbols) && objectMatch(obj2, obj1, useSymbols)
 }
 
-export function overrideAttributes(dest: Record<PropertyKey, any>, src: Record<PropertyKey, any>, useSymbols=true) {
-  const props = [
-    ...Object.getOwnPropertyNames(src),
-    ...(useSymbols ? Object.getOwnPropertySymbols(src) : [])]
+const primitiveTypes = [String, Number, BigInt, Symbol, Boolean, null, undefined]
 
-  for (const p of props) {
-    if (src[p]?.constructor == Object) { // deep-copy objects
-      if (dest[p]?.constructor != Object)
-        dest[p] = {}
-      overrideAttributes(dest[p], src[p], useSymbols)
-    } else if (src[p]?.constructor == Array) { // copy arrays
-      dest[p] = src[p].slice(0, src[p].length)
-    } else { // use same value/ref for other attributes
-      dest[p] = src[p]
+export function deepAssign<Td extends Record<string,any>, Ts extends Td>(dest: Td, src: Readonly<Ts>,
+  opts?: {createMissing?: true, morphTypes?: true}): Ts; // Td ⊂ Ts
+export function deepAssign<Td extends Record<string, any>, Ts = RecursivePartial<Td>>(dest: Td, src: Readonly<Ts>,
+  opts?: {createMissing?: true, morphTypes?: true}): Td; // Td ⊃ Ts
+export function deepAssign<Td extends Record<string,any>, Ts extends Record<string, any>>(dest: Td, src: Readonly<Ts>,
+  opts: {createMissing: false, morphTypes: false}): Td; // only update values
+export function deepAssign<Td extends Record<string,any>, Ts extends Record<keyof Td, Ts[keyof Td]>>(dest: Td, src: Readonly<Ts>,
+  opts: {createMissing: false, morphTypes?: true}): {[K in keyof Td] : Ts[K]}; // update values and types
+
+export function deepAssign<Td extends Record<string,any>, Ts extends Record<string, any>>(dest: Td, src: Readonly<Ts>,
+  opts?: {createMissing?: boolean, morphTypes?: boolean}): Record<string, any>
+
+export function deepAssign<Td extends Record<string,any>, Ts extends Record<string, any>>(dest: Td, src: Readonly<Ts>,
+    {createMissing = true, morphTypes = true} = {}): Record<string, any> {
+  for (const p of Object.getOwnPropertyNames(src)) {
+    let create = false
+    let exists = Object.hasOwn(dest, p)
+    if (!exists)
+      create = createMissing
+    else
+      create = morphTypes && src[p]?.constructor != dest[p]?.constructor
+    if (create) {
+      if (primitiveTypes.includes(src[p]?.constructor))
+        (dest as any)[p] = src[p]
+      else if (src[p].constructor == Object)
+        (dest as any)[p] = deepAssign({}, src[p])
+      else if (src[p].constructor == Array)
+        (dest as any)[p] = src[p].slice(0, src[p].length)
+      else
+        throw Error(`cannot deep-assign ${p as string}:${src[p].constructor}`)
+    } else if (exists) {
+      if (primitiveTypes.includes(src[p].constructor)) {
+        (dest as any)[p] = src[p]
+      } else if (src[p].constructor == Object)
+        deepAssign(dest[p], src[p] as any, {createMissing, morphTypes})
+      else if (src[p].constructor == Array)
+        dest[p].splice(0, dest[p].length, ...(src[p] as Array<any>))
+      else
+        throw Error(`cannot deep-assign ${p as string}:${src[p].constructor}`)
     }
   }
   return dest
@@ -68,47 +83,21 @@ export function deepFreeze<T extends Record<PropertyKey, any>>(object: T): Reado
   return Object.freeze(object)
 }
 
-export function isDigit(str: string, index: number = 0) {
-  const char = str.charAt(index)
-  return char >= '0' && char <= '9'
-}
+//##############################################################################
+//#                              TEXT CONVERSION                               #
+//##############################################################################
 
-/**
- * Let the user download the text in a text file
- * @param text content of the file to download
- * @param fileName default name of the file
- */
-export function textFileUserDownload(text: string, fileName: string) {
-	let element = document.createElement('a');
-	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-	element.setAttribute('download', fileName);
-	element.style.display = 'none';
-	document.body.appendChild(element);
-	element.click();
-	document.body.removeChild(element);
-}
+export function convertText(text: string, props: Record<string, any> = {}): JSX.Element {
 
-/**
- * requests one or multiple files from the user
- * See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
- * for more details on the {@link multiple} and {@link accept} parameters
- */
-export function requestFilesFromUser({ multiple = false, accept = '' }): Promise<File|File[]|null> {
-	return new Promise(((resolve) => {
-		const input = document.createElement('input');
-		input.setAttribute("type", "file");
-
-		if (accept?.length > 0)
-			input.setAttribute("accept", accept);
-
-		if (multiple)
-			input.toggleAttribute("multiple", true);
-
-		input.addEventListener("change", ()=> {
-			resolve(input.files as File|File[]|null);
-		})
-		input.click();
-	}));
+  if (text == "br")
+    text = ""
+  else if ( text.length > 0) {
+    //remove '`', '@' and '\', EDIT : already removed by script parser
+    //replace '|' with '…'
+    text = text//.replace(/[`@\\]|(\!w\d+\b)/g, '')
+               .replaceAll('|', '…')
+  }
+  return <span {...props}>{replaceDashes(text)}</span>
 }
 
 function bbcodeTagToJSX({tag: Tag, arg, content}: {tag: string, arg: string, content: JSX.Element[]}) {
@@ -183,6 +172,62 @@ export function parseBBcode(text: string): JSX.Element {
     prevNode.content.push(bbcodeTagToJSX(currNode))
   }
   return <>{...nodes[0].content}</>
+}
+
+//##############################################################################
+//#                                   OTHERS                                   #
+//##############################################################################
+
+export const addEventListener = ({event, handler, element = window}: any) => {
+  element.addEventListener(event, handler)
+  return () => element.removeEventListener(event, handler)
+}
+
+export function isDigit(str: string, index: number = 0) {
+  const char = str.charAt(index)
+  return char >= '0' && char <= '9'
+}
+
+export function negative(n: number) {
+  return !Object.is(Math.abs(n), n)
+}
+
+/**
+ * Let the user download the text in a text file
+ * @param text content of the file to download
+ * @param fileName default name of the file
+ */
+export function textFileUserDownload(text: string, fileName: string) {
+	let element = document.createElement('a');
+	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+	element.setAttribute('download', fileName);
+	element.style.display = 'none';
+	document.body.appendChild(element);
+	element.click();
+	document.body.removeChild(element);
+}
+
+/**
+ * requests one or multiple files from the user
+ * See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
+ * for more details on the {@link multiple} and {@link accept} parameters
+ */
+export function requestFilesFromUser({ multiple = false, accept = '' }): Promise<File|File[]|null> {
+	return new Promise(((resolve) => {
+		const input = document.createElement('input');
+		input.setAttribute("type", "file");
+
+		if (accept?.length > 0)
+			input.setAttribute("accept", accept);
+
+		if (multiple)
+			input.toggleAttribute("multiple", true);
+
+		input.addEventListener("change", ()=> {
+			resolve(input.files as File|File[]|null);
+		})
+		input.click();
+	}));
 }
 
 export function toggleFullscreen() {

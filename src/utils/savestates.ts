@@ -1,4 +1,4 @@
-import { overrideAttributes, requestFilesFromUser, textFileUserDownload } from "./utils";
+import { deepAssign, requestFilesFromUser, textFileUserDownload } from "./utils";
 import { defaultGameContext, defaultProgress, gameContext, progress, settings } from "./variables";
 import history from './history';
 
@@ -50,8 +50,8 @@ function restoreSaveStates(keyValuePairs: IterableIterator<[SaveStateId, SaveSta
  */
 export function createSaveState() {
   const ss: SaveState = {
-    context: overrideAttributes({}, gameContext, false) as typeof gameContext,
-    progress: overrideAttributes({}, progress, false) as typeof progress
+    context: deepAssign({}, gameContext) as typeof gameContext,
+    progress: deepAssign({}, progress) as typeof progress
   }
   return ss
 }
@@ -127,8 +127,8 @@ export function loadSaveState(ss: SaveStateId | SaveState) {
       }
     }
     history.onSaveStateLoaded(ss as SaveState)
-    overrideAttributes(gameContext, (ss as SaveState).context, false)
-    overrideAttributes(progress, (ss as SaveState).progress, false)
+    deepAssign(gameContext, (ss as SaveState).context)
+    deepAssign(progress, (ss as SaveState).progress)
     return true
   }
   return false
@@ -191,7 +191,7 @@ export function exportSaveFile({
     }: exportSaveFileOptions = {}) {
   const content = JSON.stringify({
     ...(!omitSettings ? {
-      settings: overrideAttributes({}, settings, false)
+      settings: deepAssign({}, settings)
     } : {}),
     ...(!saveStateFilter ? {
       saveStates: listSaveStates()
@@ -250,7 +250,7 @@ export async function loadSaveFile(save: string | undefined = undefined, {
   } else {
     const content = JSON.parse(save)
     if (ignoreSettings && content.settings)
-      overrideAttributes(settings, content.settings, false)
+      deepAssign(settings, content.settings)
     if (ignoreSaveStates && content.saveStates)
       restoreSaveStates(content.saveStates)
     return true
