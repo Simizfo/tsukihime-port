@@ -43,12 +43,7 @@ const ConfigMainTab = () => {
     <section>
       {(Object.keys(conf.volume) as Array<keyof typeof volumeNames>).map(key=>
         <ConfigLayout key={key} title={`${volumeNames[key]} ${Math.abs(conf.volume[key])}`}>
-          <button onClick={()=>{
-              updateSubValue('volume', key, -conf.volume[key])
-          }}>
-            {negative(conf.volume[key]) ? <FaVolumeMute /> : <FaVolumeUp />}
-          </button>
-          <span className="config-range">
+          <div className="config-range">
             <span>Low</span>
             <input
               type="range"
@@ -61,7 +56,11 @@ const ConfigMainTab = () => {
                 updateSubValue('volume', key, sign * parseInt(e.target.value))
               }} />
             <span>High</span>
-          </span>
+
+            <button onClick={()=> updateSubValue('volume', key, -conf.volume[key])}>
+              {negative(conf.volume[key]) ? <FaVolumeMute /> : <FaVolumeUp />}
+            </button>
+          </div>
         </ConfigLayout>
       )}
 
