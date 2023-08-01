@@ -1,6 +1,8 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import tsukiLogo from "../assets/game/menus/tsukihime-logo.webp"
+import tsukiR from "../assets/game/menus/Tsukihime_blue_glass_cover.webp"
+import { HiOutlineInformationCircle } from 'react-icons/hi'
 import '../styles/title-menu.scss'
 import ParticlesComponent from '../components/ParticlesComponent'
 import { SCREEN, displayMode } from '../utils/variables'
@@ -8,15 +10,12 @@ import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import { blankSaveState, getLastSave, hasSaveStates, loadSaveFile, loadSaveState } from '../utils/savestates'
 import history from '../utils/history'
+import Modal from 'react-modal';
 
 const TitleMenuScreen = () => {
   const navigate = useNavigate()
-  // useEffect(() => {
-  //   if (!audio.isSoundKnown("menuTheme")) {
-  //     audio.setSoundFileUrl("menuTheme", "CD/track08.mp3"),
-  //     audio.playTrack("menuTheme", true)
-  //   }
-  // }, [])
+  const [show, setShow] = useState(false)
+
   useEffect(()=> {
     displayMode.screen = SCREEN.TITLE
   }, [])
@@ -27,9 +26,8 @@ const TitleMenuScreen = () => {
   }
 
   async function continueGame() {
-
     // restart from beginning of last visisted page ...
-    let lastSave = history.last?.saveState
+    const lastSave = history.last?.saveState
                 // or from last saved game
                 ?? getLastSave()
                 // or ask user to provide save file(s).
@@ -49,6 +47,49 @@ const TitleMenuScreen = () => {
       exit={{opacity: 0}}>
 
       <ParticlesComponent />
+      <button className="info-icon" onClick={()=>setShow(true)}>
+        <HiOutlineInformationCircle/>
+      </button>
+
+      <Modal
+        isOpen={show}
+        shouldCloseOnOverlayClick={true}
+        onRequestClose={()=>setShow(false)}
+        closeTimeoutMS={200}
+        className="modal"
+        overlayClassName="overlay"
+        ariaHideApp={false}
+      >
+        <div className='title-modal'>
+          <div className='links'>
+            <div>
+              This is the original story, published on 2000 by Type-Moon.<br />
+              This is a fan-made port of the original game which can't be purchased anymore.
+            </div>
+
+            <div>
+              English translation: <a href="http://mirrormoon.org/projects/complete/tsukihime/" target="_blank">mirror moon</a>
+            </div>
+
+            <div>
+              Project available on <a href="https://github.com/requinDr/tsukihime-port" target="_blank">Github</a>
+            </div>
+          </div>
+
+          <div className='tsuki-remake'>
+            <img src={tsukiR} alt="tsukihime logo" className="logo"/>
+
+            <span>Support by buying <a href="http://typemoon.com/products/tsukihime/" target="_blank">
+              Tsukime - A piece of blue glass moon
+            </a></span>
+          </div>
+        </div>
+
+        <button className='menu-btn close-btn' onClick={()=>setShow(false)}>
+          close
+        </button>
+      </Modal>
+
       <motion.img src={tsukiLogo} alt="tsukihime logo" className="logo"
         initial={{ opacity: 0, scale: 0.6 }}
         animate={{ opacity: 1, scale: 1 }}
