@@ -4,7 +4,7 @@ import { defaultSettings, settings } from "../../utils/variables"
 import { ViewRatio } from "../../types"
 import { TEXT_SPEED } from "../../utils/constants"
 import { deepAssign, negative } from "../../utils/utils"
-import { FaMinus, FaPlus, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
+import { FaMinus, FaPlus, FaVolumeMute, FaVolumeOff, FaVolumeUp } from "react-icons/fa"
 
 const ConfigMainTab = () => {
   const [conf, setConf] = useState(deepAssign({
@@ -46,7 +46,7 @@ const ConfigMainTab = () => {
       {(Object.keys(conf.volume) as Array<keyof typeof volumeNames>).map(key=>
         <ConfigLayout key={key} title={`${volumeNames[key]} ${Math.abs(conf.volume[key])}`}>
           <div className="config-range">
-            <FaMinus />
+          <span><FaVolumeOff /></span>
             <input
               type="range"
               disabled={negative(conf.volume[key])}
@@ -58,10 +58,11 @@ const ConfigMainTab = () => {
                 const sign = negative(conf.volume[key]) ? -1 : 1
                 updateSubValue('volume', key, sign * parseInt(e.target.value))
               }} />
-            <FaPlus />
+            <span><FaVolumeUp /></span>
 
-            <button onClick={()=> updateSubValue('volume', key, -conf.volume[key])}>
-              {negative(conf.volume[key]) ? <FaVolumeMute /> : <FaVolumeUp />}
+            <button className="mute"
+              onClick={()=> updateSubValue('volume', key, -conf.volume[key])}>
+              {negative(conf.volume[key]) ? <FaVolumeMute aria-label="mute" /> : <FaVolumeUp aria-label="unmute" />}
             </button>
           </div>
         </ConfigLayout>
@@ -94,7 +95,7 @@ const ConfigMainTab = () => {
 
       <ConfigLayout title={`Auto-play text delay: ${(conf.autoClickDelay/1000).toFixed(1)}s`}>
         <div className="config-range">
-          <FaMinus />
+        <span><FaMinus /></span>
           <input
             type="range"
             min={0}
@@ -104,13 +105,13 @@ const ConfigMainTab = () => {
             onChange={e => {
               updateValue('autoClickDelay', parseInt(e.target.value))
             }} />
-          <FaPlus />
+          <span><FaPlus /></span>
         </div>
       </ConfigLayout>
 
       <ConfigLayout title={`Auto-play page delay: ${(conf.nextPageDelay/1000).toFixed(1)}s`}>
         <div className="config-range">
-          <FaMinus />
+        <span><FaMinus /></span>
           <input
             type="range"
             min={0}
@@ -120,7 +121,7 @@ const ConfigMainTab = () => {
             onChange={e => {
               updateValue('nextPageDelay', parseInt(e.target.value))
             }} />
-          <FaPlus />
+          <span><FaPlus /></span>
         </div>
       </ConfigLayout>
 
