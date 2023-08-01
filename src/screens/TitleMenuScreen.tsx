@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom'
 import { blankSaveState, getLastSave, hasSaveStates, loadSaveFile, loadSaveState } from '../utils/savestates'
 import history from '../utils/history'
 import Modal from 'react-modal';
+import { APP_VERSION } from '../utils/constants'
 
 const TitleMenuScreen = () => {
   const navigate = useNavigate()
@@ -47,9 +48,16 @@ const TitleMenuScreen = () => {
       exit={{opacity: 0}}>
 
       <ParticlesComponent />
-      <button className="info-icon" onClick={()=>setShow(true)}>
+      <motion.button className="info-icon" onClick={()=>setShow(true)}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: 0.6,
+          duration: 1,
+        }} >
+      
         <HiOutlineInformationCircle/>
-      </button>
+      </motion.button>
 
       <Modal
         isOpen={show}
@@ -63,8 +71,8 @@ const TitleMenuScreen = () => {
         <div className='title-modal'>
           <div className='links'>
             <div>
-              This is the original story, published on 2000 by Type-Moon.<br />
-              This is a fan-made port of the original game which can't be purchased anymore.
+              This is a fan-made port of the original game published on 2000 by Type-Moon,
+              which can't be purchased anymore.
             </div>
 
             <div>
@@ -72,14 +80,15 @@ const TitleMenuScreen = () => {
             </div>
 
             <div>
-              Project available on <a href="https://github.com/requinDr/tsukihime-port" target="_blank">Github</a>
+              Project available on <a href="https://github.com/requinDr/tsukihime-port" target="_blank">Github</a><br />
+              v{APP_VERSION}
             </div>
           </div>
 
           <div className='tsuki-remake'>
             <img src={tsukiR} alt="tsukihime logo" className="logo"/>
 
-            <span>Support by buying <a href="http://typemoon.com/products/tsukihime/" target="_blank">
+            <span>Support by buying the remake <a href="http://typemoon.com/products/tsukihime/" target="_blank">
               Tsukime - A piece of blue glass moon
             </a></span>
           </div>
