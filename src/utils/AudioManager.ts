@@ -294,12 +294,22 @@ observe(displayMode, 'screen', (screen)=> {
   }
 })
 
-audio.masterVolume = Math.max(0,settings.volume.master/10)
-audio.trackVolume = Math.max(0,settings.volume.track/10)
-audio.seVolume = Math.max(0,settings.volume.se/10)
-observe(settings.volume, 'master', (v)=>{audio.masterVolume = v<=0 ? 0 : v/10})
-observe(settings.volume, 'track' , (v)=>{audio.trackVolume = v<=0 ? 0 : v/10})
-observe(settings.volume, 'se'    , (v)=>{audio.seVolume = v<=0 ? 0 : v/10})
+function settingToGain(value: number) {
+  if (value <= 0)
+    return 0
+  const valueRange = 10 // from 0 to 10. 0 => no sound.
+  const dbRange = 25 // from -25dB to 0dB. -25 not used (volume=0 => no sound).
+  const normalizedValue = value/valueRange
+  const dB = normalizedValue*dbRange - dbRange
+  return Math.pow(10, dB/20)
+}
+
+audio.masterVolume = settingToGain(settings.volume.master)
+audio.trackVolume = settingToGain(settings.volume.track)
+audio.seVolume = settingToGain(settings.volume.se)
+observe(settings.volume, 'master', (v)=>{audio.masterVolume = settingToGain(v)})
+observe(settings.volume, 'track' , (v)=>{audio.trackVolume = settingToGain(v)})
+observe(settings.volume, 'se'    , (v)=>{audio.seVolume = settingToGain(v)})
 
 //___________________________________commands___________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
