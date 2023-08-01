@@ -77,15 +77,15 @@
 
             .config-range {
                 display: flex;
-                gap: .4em;
+                gap: .6em;
                 align-items: center;
                 padding: .2em;
 
                 input[type="range"] {
                     appearance: none;
                     width: min(320px, 100%);
-                    height: 8px;
-                    background: #808486;
+                    height: 1px;
+                    background: #225975;
                     cursor: pointer;
                     border: 0;
                     border-radius: 8px;
@@ -120,7 +120,7 @@
                 .mute {
                     display: flex;
                     transition: .2s ease-in-out;
-                    margin-left: .6em;
+                    margin-left: .8em;
                     border: 1px solid;
                     border-radius: 4px;
                     padding: 0.2em;
