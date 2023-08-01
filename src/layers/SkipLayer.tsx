@@ -32,7 +32,7 @@ const SkipLayer = () => {
 
   return (
     <div id="skip-layer" className={`box ${display ? "show" : ""}`}>
-      <div className="modal">
+      <div className="skip-modal">
         <div className="title">
           You have already seen
           {sceneTitle ? <> the scene<br/><span className="scene-title">

@@ -73,45 +73,47 @@
     }
 }
 
-.title-modal {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3em;
-    font-size: 1.1em;
-    max-height: 60vh;
-    overflow-y: auto;
-
-    .links {
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-
-        & > div {
-            border-radius: 6px;
-            padding: 1em;
-            background-color: #00000066;
-        }
-    }
-    .tsuki-remake {
-        display: flex;
-        flex-direction: column;
-        gap: .6em;
-
-        img {
-            display: block;
-            max-width: 240px;
-            max-height: 80%;
-            object-fit: contain;
-        }
-    }
-}
-@media screen and (max-width: 768px) {
+.overlay {
     .title-modal {
-        grid-template-columns: 1fr;
-        gap: 1em;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3em;
+        font-size: 1.1em;
+        max-height: 60vh;
+        overflow-y: auto;
 
-        .tsuki-remake {
-            flex-direction: row;
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            & > div {
+                border-radius: 6px;
+                padding: 1em;
+                background-color: #00000066;
+            }
         }
-    }    
+        .tsuki-remake {
+            display: flex;
+            flex-direction: column;
+            gap: .6em;
+
+            img {
+                display: block;
+                max-width: 240px;
+                max-height: 80%;
+                object-fit: contain;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .title-modal {
+            grid-template-columns: 1fr;
+            gap: 1em;
+
+            .tsuki-remake {
+                flex-direction: row;
+            }
+        }    
+    }
 }
