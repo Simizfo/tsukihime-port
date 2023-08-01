@@ -7,6 +7,7 @@ import { SCREEN, displayMode, settings } from "../utils/variables"
 import { quickLoad, quickSave } from "../utils/savestates"
 import { useObserver } from "../utils/Observer"
 import { useNavigate } from "react-router-dom"
+import script from "../utils/script"
 
 /**
  * TODO
@@ -72,6 +73,11 @@ const MenuLayer = () => {
     displayMode.load = true
   }
 
+  const autoPlay = () => {
+    displayMode.menu = false
+    script.autoPlay = true
+  }
+
   const title = () => {
     navigate(SCREEN.TITLE)
     displayMode.menu = false
@@ -106,6 +112,9 @@ const MenuLayer = () => {
           </button>
           <button onClick={loadMode}>
             Load
+          </button>
+          <button onClick={autoPlay}>
+            Auto play
           </button>
           <button onClick={title}>
             Title

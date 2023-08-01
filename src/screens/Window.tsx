@@ -96,8 +96,6 @@ function page_nav(direction: "prev"|"next") {
 
 function toggleAutoPlay() {
   script.autoPlay = !script.autoPlay;
-  if (script.autoPlay)
-    script.next() // initiate the auto execution. TODO make it not necessary
 }
 
 function toggleMenu() {

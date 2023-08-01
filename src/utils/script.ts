@@ -47,6 +47,9 @@ export const script = {
 
   set autoPlay(enable: boolean) {
     autoPlay = enable
+    if (enable && typeof currentCommand?.autoPlayDelay == "number") {
+      makeAutoPlay()
+    }
   },
 
   get autoPlay() {
@@ -160,23 +163,20 @@ function processClick(arg: string, _: string, onFinish: VoidFunction) {
  * @param commandResult
  * @param onFinish
  */
-function processCommandResult(commandResult: CommandHandler,
-                              onFinish: VoidFunction) {
-  currentCommand = commandResult
-  if (autoPlay && typeof commandResult.autoPlayDelay == "number") {
-    const next = commandResult.next.bind(commandResult)
-    const timer = new Timer(commandResult.autoPlayDelay, ()=> {
-      if (autoPlay) // check if 'autoPlay' changed while the timer was running
-        next()
-    })
-    timer.start()
-    currentCommand.next = timer.skip.bind(timer)
-    skipCommand = ()=> {
-      timer.cancel()
-      onFinish()
-    }
-  } else {
-    skipCommand = onFinish // if the command must be skipped at some point
+function makeAutoPlay() {
+  if (!currentCommand || typeof currentCommand.autoPlayDelay != "number")
+    return
+  const next = currentCommand.next.bind(currentCommand)
+  const timer = new Timer(currentCommand.autoPlayDelay, ()=> {
+    if (autoPlay) // check if 'autoPlay' changed while the timer was running
+      next()
+  })
+  timer.start()
+  currentCommand.next = timer.skip.bind(timer)
+  const onFinish = skipCommand
+  skipCommand = ()=> {
+    timer.cancel()
+    onFinish?.()
   }
 }
 /**
@@ -205,7 +205,10 @@ export async function processLine(line: string) {
           currentCommand = undefined
           resolve()
         } else if (commandResult) {
-          processCommandResult(commandResult, resolve)
+          currentCommand = commandResult
+          skipCommand = resolve // if the command must be skipped at some point
+          if (autoPlay && typeof commandResult.autoPlayDelay == "number")
+            makeAutoPlay()
         } else
           resolve()
       })
