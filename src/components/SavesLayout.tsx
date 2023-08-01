@@ -1,17 +1,20 @@
-import { FaPlusCircle } from "react-icons/fa"
-import { QUICK_SAVE_ID, SaveState, exportSaveFile, getSaveState, listSaveStates, loadSaveFile as loadSaveFiles, loadSaveState, storeLastSaveState } from "../utils/savestates"
+import { FaPlusCircle, FaTrash } from "react-icons/fa"
+import { QUICK_SAVE_ID, SaveState, deleteSaveState, exportSaveFile, getSaveState, listSaveStates, loadSaveFile as loadSaveFiles, loadSaveState, storeLastSaveState } from "../utils/savestates"
 import { useEffect, useState } from "react"
 import { graphicElements } from "../layers/GraphicsLayer"
 import { SCREEN, displayMode } from "../utils/variables"
 import { convertText } from "../utils/utils"
 import { useNavigate } from "react-router-dom"
+import { SCENE_ATTRS } from "../utils/constants"
+import { LabelName, SceneName } from "../types"
+import { getSceneTitle } from "../utils/scriptUtils"
 
-function saveElement(id: number, saveState: SaveState,
+function saveElement(id: number, saveState: SaveState, onAction: (a:'select'|'delete')=>void,
                      props: Record<string, any>) {
   const date = new Date(saveState.date as number)
   return (
-    <button className="save-container" key={id} {...(id==QUICK_SAVE_ID ? {'quick-save':''} : {})}
-            {...props}>
+    <div className="save-container" key={id} {...(id==QUICK_SAVE_ID ? {'quick-save':''} : {})}
+            onClick={onAction.bind(null, 'select')} {...props}>
       <div className="graphics">
         {graphicElements(saveState.context.graphics)}
       </div>
@@ -23,7 +26,8 @@ function saveElement(id: number, saveState: SaveState,
           {convertText(saveState.text ?? "")}
         </div>
       </div>
-    </button>
+      <FaTrash style={{position:'absolute', top: 0, right: 0}} onClick={onAction.bind(null, 'delete')}/>
+    </div>
   )
 }
 
@@ -32,6 +36,19 @@ function compareSaveStates([id1, ss1]: [number, SaveState], [id2, ss2]: [number,
   return id1 == QUICK_SAVE_ID ? -1
       : id2 == QUICK_SAVE_ID ? 1
       : (ss2.date ?? 0) - (ss1.date ?? 0)
+}
+
+function phaseTitle(saveState: SaveState) {
+  const context = saveState.context
+  const phase = context.phase
+  if (phase.route == "" || phase.routeDay == "") {
+    return getSceneTitle(context.label as SceneName) ?? ""
+  }
+  return SCENE_ATTRS.routes[phase.route][phase.routeDay]
+}
+
+function phaseDay(saveState: SaveState) {
+  return SCENE_ATTRS.days[saveState.context.phase.day]
 }
 
 type Props = {
@@ -67,23 +84,26 @@ const SavesLayout = ({variant}: Props) => {
       exportSaveFile({ omitSettings: true, saveStateFilter: ids})
   }
 
-  const handleAction = (id:number) => {
-    if (variant === "save") {
-      if (confirm("Are you sure you want to overwrite this save?")) {
-        storeLastSaveState(id)
+  const handleAction = (id: number, action: 'select'|'delete') => {
+    if (action == 'delete') {
+      if (confirm("Are you sure you want to delete this save ?")) {
+        deleteSaveState(id)
       }
     }
-
-    if (variant === "load") {
+    else if (variant == "save") {
+      if (confirm("Are you sure you want to overwrite this save?")) {
+        storeLastSaveState(id)
+        updateSavesList()
+      }
+    } else {
       loadSaveState(id)
       if (displayMode.screen != SCREEN.WINDOW)
-        //TODO avoid going back to default scene in Window.tsx
         navigate(SCREEN.WINDOW)
-
       displayMode.save = false
       displayMode.load = false
     }
   }
+
   const focusedSave = focusedId != undefined ? getSaveState(focusedId) : undefined
 
   return (
@@ -95,9 +115,8 @@ const SavesLayout = ({variant}: Props) => {
         </button>
         }
 
-        {saves.map(([id, ss]) => saveElement(id, ss, {
-          onMouseEnter: setFocusedSave.bind(null, id),
-          onClick: handleAction.bind(null, id)}
+        {saves.map(([id, ss]) => saveElement(id, ss, handleAction.bind(null, id), {
+          onMouseEnter: setFocusedSave.bind(null, id)}
         ))}
       </div>
 
@@ -105,11 +124,13 @@ const SavesLayout = ({variant}: Props) => {
         <div className="graphics">
           {graphicElements(focusedSave?.context.graphics??{bg:"notreg"})}
         </div>
-        {focusedId != undefined &&
+        {focusedId != undefined && <>
+          <div style={{alignSelf: 'flex-start'}}>{phaseTitle(focusedSave as SaveState)}</div>
+          <div style={{alignSelf: 'flex-start'}}>{phaseDay(focusedSave as SaveState)}</div>
           <div className="deta">
             <button className="export" onClick={()=>exportSaves(focusedId)}>Export save</button>
           </div>
-        }
+        </>}
       </div>
     </div>
   )
