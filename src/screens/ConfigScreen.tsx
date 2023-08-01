@@ -6,17 +6,20 @@ import { motion } from 'framer-motion'
 import ConfigMainTab from './config/ConfigMainTab'
 import ConfigAdultTab from './config/ConfigAdultTab'
 import ConfigAdvancedTab from './config/ConfigAdvancedTab'
+import ConfigControlsTab from './config/ConfigControlsTab'
 
 enum Tabs {
   main = "Main",
   adult = "Adult",
   advanced = "Advanced",
+  controls = "Controls",
 }
 
 const tabComponents = {
   [Tabs.main]: <ConfigMainTab />,
   [Tabs.adult]: <ConfigAdultTab />,
   [Tabs.advanced]: <ConfigAdvancedTab />,
+  [Tabs.controls]: <ConfigControlsTab />,
 }
 
 const ConfigScreen = () => {
