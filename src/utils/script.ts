@@ -324,12 +324,12 @@ function onSceneEnd(label = gameContext.label) {
   }
 }
 
-function warnHScene(callback: VoidFunction) {
+function warnHScene() {
   toast('You are about to read an H-scene. Beware of your surroundings.', {
     autoClose: 6000,
+
     toastId: "hscene-warning",
   })
-  callback()
 }
 
 function onSceneStart() {
@@ -346,12 +346,9 @@ function onSceneStart() {
         }
       }
     })
-  } else if (settings.warnHScenes && SCENE_ATTRS.scenes[label]?.h) {
-    warnHScene(()=> {
-      gameContext.index = 0
-      fetchSceneLines()
-    })
   } else {
+    if (settings.warnHScenes && SCENE_ATTRS.scenes[label]?.h)
+      warnHScene()
     gameContext.index = 0
     fetchSceneLines()
   }
