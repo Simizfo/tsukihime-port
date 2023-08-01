@@ -44,12 +44,11 @@ const ConfigMainTab = () => {
   return (
     <section>
       {(Object.keys(conf.volume) as Array<keyof typeof volumeNames>).map(key=>
-        <ConfigLayout key={key} title={`${volumeNames[key]} ${Math.abs(conf.volume[key])}`}>
+        <ConfigLayout key={key} title={volumeNames[key]}>
           <div className="config-range">
           <span className="icon"><FaVolumeOff /></span>
             <input
               type="range"
-              disabled={negative(conf.volume[key])}
               min={0}
               max={10}
               step={1}
