@@ -3,6 +3,7 @@ import { ConfigButtons, ResetBtn } from "../ConfigScreen"
 import { defaultSettings, settings } from "../../utils/variables"
 import { IMAGES_FOLDERS } from "../../utils/constants"
 import { addEventListener, deepAssign, isFullscreen, toggleFullscreen } from "../../utils/utils"
+import { clearSaveStates } from "../../utils/savestates"
 
 const ConfigAdvancedTab = () => {
 
@@ -50,6 +51,18 @@ const ConfigAdvancedTab = () => {
         conf={{fullscreen}}
         updateValue={toggleFullscreen}
       />
+      <button onClick={() => {
+        if (confirm("This will delete all saves, reset all settings and progress. Are you sure ?")) {
+          clearSaveStates()
+          deepAssign(settings, defaultSettings)
+          setTimeout(()=> {
+            localStorage.clear()
+            alert("All data have been deleted. If you leave this website without making any change"+
+                  " to the settings and without starting a new game, no data will remain stored"+
+                  " on your computer")
+          }, 10) // leave room for asynchronous callbacks (if any) to complete
+        }
+      }}>Erase all data</button>
 
       <ResetBtn onClick={() => {
         const defaultConf = deepAssign(structuredClone(conf), defaultSettings, {createMissing: false})
