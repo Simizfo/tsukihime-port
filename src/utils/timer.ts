@@ -1,3 +1,5 @@
+import { NumVarName } from "../types"
+import { getGameVariable } from "./variables"
 
 export default class Timer {
   private time: number
@@ -66,11 +68,14 @@ export default class Timer {
 export const commands = {
   'resettimer': null, // all 'waittimer' are immediately after 'resettimer'
   'waittimer' : processTimerCmd,
+  'delay'     : processTimerCmd,
   '!w'        : processTimerCmd,
 }
 
 function processTimerCmd(arg: string, _: string, onFinish: VoidFunction) {
-  const time_to_wait = parseInt(arg)
+  const time_to_wait = arg.startsWith('%') ?
+      getGameVariable(arg as NumVarName)
+      : parseInt(arg)
   const timer = new Timer(time_to_wait, onFinish)
   timer.start()
   return {next: timer.skip.bind(timer)}

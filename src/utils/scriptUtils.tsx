@@ -147,7 +147,7 @@ export function checkIfCondition(condition: string) {
       if (!match) throw Error(
         `Unable to parse expression "${token}" in condition ${condition}`)
 
-      let {_lhs, op, _rhs} = match.groups as any
+      let {lhs: _lhs, op, rhs: _rhs} = match.groups as any
       const lhs = _lhs.startsWith("%")? getGameVariable(_lhs) : parseInt(_lhs)
       const rhs = _rhs.startsWith("%")? getGameVariable(_rhs) : parseInt(_rhs)
 
