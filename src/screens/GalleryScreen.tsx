@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import GalleryCharComponent from '../components/GalleryCharComponent'
 import Fancybox from "../components/Fancybox"
 import '../styles/gallery.scss'
 import { settings } from '../utils/variables'
 import { motion } from 'framer-motion'
 import { CHARACTERS, GALLERY_IMAGES } from '../utils/gallery'
 import { GalleryImg } from '../types'
+import TabBtn from '../components/TabBtn'
 
 const defaultImg = `/image/notreg.webp`
 
@@ -48,13 +48,11 @@ const GalleryScreen = () => {
       <div className="page-content">
         <h2 className="page-title">Gallery</h2>
         <main>
-          <div className="gallery-char-container">
+          <div className="tabs">
             {Object.values(CHARACTERS).map(character =>
-              <GalleryCharComponent
-                key={character}
-                character={character}
-                selected={selected == character}
-                handleSelected={setSelected}/>
+              <TabBtn key={character} text={character}
+                active={selected === character}
+                onClick={() => setSelected(character)} />
             )}
           </div>
 

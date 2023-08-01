@@ -7,6 +7,7 @@ import ConfigMainTab from './config/ConfigMainTab'
 import ConfigAdultTab from './config/ConfigAdultTab'
 import ConfigAdvancedTab from './config/ConfigAdvancedTab'
 import ConfigControlsTab from './config/ConfigControlsTab'
+import TabBtn from '../components/TabBtn'
 
 enum Tabs {
   main = "Main",
@@ -58,12 +59,6 @@ const ConfigScreen = () => {
 
 export default ConfigScreen
 
-const TabBtn = (props: {text: string, active: boolean, onClick: ()=> void}) => (
-  <button className={`page-btn ${props.active ? 'active' : ''}`}
-    onClick={props.onClick}>
-    {props.text}
-  </button>
-)
 
 interface ConfigLayoutProps {
   title: string
