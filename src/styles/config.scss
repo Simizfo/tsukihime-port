@@ -114,8 +114,8 @@
                         }
                     }
                 }
-                span {
-                    display: contents;
+                .icon {
+                    display: flex;
                 }
                 .mute {
                     display: flex;

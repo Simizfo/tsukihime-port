@@ -46,7 +46,7 @@ const ConfigMainTab = () => {
       {(Object.keys(conf.volume) as Array<keyof typeof volumeNames>).map(key=>
         <ConfigLayout key={key} title={`${volumeNames[key]} ${Math.abs(conf.volume[key])}`}>
           <div className="config-range">
-          <span><FaVolumeOff /></span>
+          <span className="icon"><FaVolumeOff /></span>
             <input
               type="range"
               disabled={negative(conf.volume[key])}
@@ -58,7 +58,7 @@ const ConfigMainTab = () => {
                 const sign = negative(conf.volume[key]) ? -1 : 1
                 updateSubValue('volume', key, sign * parseInt(e.target.value))
               }} />
-            <span><FaVolumeUp /></span>
+            <span className="icon"><FaVolumeUp /></span>
 
             <button className="mute"
               onClick={()=> updateSubValue('volume', key, -conf.volume[key])}>
@@ -95,7 +95,7 @@ const ConfigMainTab = () => {
 
       <ConfigLayout title={`Auto-play text delay: ${(conf.autoClickDelay/1000).toFixed(1)}s`}>
         <div className="config-range">
-        <span><FaMinus /></span>
+        <span className="icon"><FaMinus /></span>
           <input
             type="range"
             min={0}
@@ -105,13 +105,13 @@ const ConfigMainTab = () => {
             onChange={e => {
               updateValue('autoClickDelay', parseInt(e.target.value))
             }} />
-          <span><FaPlus /></span>
+          <span className="icon"><FaPlus /></span>
         </div>
       </ConfigLayout>
 
       <ConfigLayout title={`Auto-play page delay: ${(conf.nextPageDelay/1000).toFixed(1)}s`}>
         <div className="config-range">
-        <span><FaMinus /></span>
+        <span className="icon"><FaMinus /></span>
           <input
             type="range"
             min={0}
@@ -121,7 +121,7 @@ const ConfigMainTab = () => {
             onChange={e => {
               updateValue('nextPageDelay', parseInt(e.target.value))
             }} />
-          <span><FaPlus /></span>
+          <span className="icon"><FaPlus /></span>
         </div>
       </ConfigLayout>
 
