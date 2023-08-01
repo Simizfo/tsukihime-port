@@ -9,6 +9,7 @@ import { SCENE_ATTRS } from "./constants"
 import Timer, { commands as timerCommands } from "./timer"
 import { checkIfCondition, extractInstructions, fetchFBlock, fetchScene, getPhaseDetails, getSceneTitle, isScene } from "./scriptUtils"
 import { commands as variableCommands, gameContext, settings, displayMode, SCREEN } from "./variables"
+import { toast } from "react-toastify"
 type Instruction = {cmd: string, arg: string}
 type CommandHandler = {next: VoidFunction, autoPlayDelay?: number}
 type CommandProcessFunction =
@@ -324,7 +325,10 @@ function onSceneEnd(label = gameContext.label) {
 }
 
 function warnHScene(callback: VoidFunction) {
-  alert("You are about to read an H-scene. Beware of your surroundings.")
+  toast('You are about to read an H-scene. Beware of your surroundings.', {
+    autoClose: 6000,
+    toastId: "hscene-warning",
+  })
   callback()
 }
 

@@ -1,6 +1,7 @@
 import { deepAssign, requestFilesFromUser, textFileUserDownload } from "./utils";
 import { defaultGameContext, defaultProgress, gameContext, progress, settings } from "./variables";
 import history from './history';
+import { toast } from "react-toastify";
 
 //##############################################################################
 //#                                 SAVESTATES                                 #
@@ -138,7 +139,22 @@ export function loadSaveState(ss: SaveStateId | SaveState) {
  * Stores the last savestate of the script's history in the savestate map
  * with the id 'quick".
  */
-export const quickSave = storeLastSaveState.bind(null, QUICK_SAVE_ID)
+export const quickSave = () => {
+  const qs = storeLastSaveState.bind(null, QUICK_SAVE_ID)
+
+  if (qs()) {
+    toast('Progress has been saved', {
+      autoClose: 1400,
+      toastId: "qs-toast",
+    })
+  } else {
+    toast("Couldn't save progress", {
+      autoClose: 2400,
+      toastId: "qs-toast",
+      type: "warning"
+    })
+  }
+}
 
 /**
  * Loads the savestate with the id 'quick' from the script's history,

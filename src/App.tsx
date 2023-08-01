@@ -1,4 +1,3 @@
-import './styles/App.scss'
 import { BrowserRouter } from "react-router-dom";
 import AnimatedRoutes from './AnimatedRoutes';
 import { StrictMode } from 'react';

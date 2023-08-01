@@ -11,6 +11,9 @@ import { useObserver } from "./utils/Observer";
 import { settings } from "./utils/variables";
 import { useState } from "react";
 import { ViewRatio } from "./types";
+import { Slide, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import './styles/App.scss'
 
 
 const AnimatedRoutes = () => {
@@ -39,6 +42,10 @@ const AnimatedRoutes = () => {
     <div id="root-view" style={style}>
       <div id="view" style={viewStyle}>
         <AnimatePresence mode="wait">
+          <ToastContainer
+            transition={Slide}
+            position="bottom-right"
+            theme="dark" />
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Navigate to="/title" />} />
             <Route path="/title" element={<TitleMenuScreen />} />
