@@ -135,12 +135,17 @@ class History {
     this.pages.splice(0, quantity)
   }
 
-  onSaveStateLoaded(saveState: SaveState) {
+  /**
+   * Trims the history up to the loaded save-state. If the save-state is not
+   * in the history, the history is cleared.
+   * @param saveState loaded save-state.
+   * @returns true if the save-state was in the history, false otherwise.
+   */
+  onSaveStateLoaded(saveState: SaveState): boolean {
     let i = this.pages.findLastIndex(page=>page.saveState == saveState)
-    if (i == -1)
-      i = 0
     this.trimLasts(this.pages.length - i)
     this.onChange()
+    return i >= 0
   }
 
   /**

@@ -2,6 +2,7 @@ import { deepAssign, requestFilesFromUser, textFileUserDownload } from "./utils"
 import { defaultGameContext, defaultProgress, gameContext, progress, settings } from "./variables";
 import history from './history';
 import { toast } from "react-toastify";
+import { FaSave } from "react-icons/fa"
 
 //##############################################################################
 //#                                 SAVESTATES                                 #
@@ -117,16 +118,23 @@ export function hasSaveStates() {
  * @returns true if the savestate has been loaded, false otherwise.
  */
 export function loadSaveState(ss: SaveStateId | SaveState) {
-  if (ss.constructor == Number)
+  if (ss.constructor == Number) {
     ss = saveStates.get(ss) as SaveState
-  if (ss) {
-    let index = 0
-    for (let i = 0; i < history.length; i++) {
-      if (ss == history.get(i).saveState) {
-        index = i
-        break
-      }
+    if (ss) {
+      toast("Progress restored", {
+        icon: FaSave,
+        autoClose: 1400,
+        toastId: 'ql-toast'
+      })
+    } else {
+      toast("Could not restore progress", {
+        autoClose: 2400,
+        toastId: 'ql-toast',
+        type: "warning"
+      })
     }
+  }
+  if (ss) {
     history.onSaveStateLoaded(ss as SaveState)
     deepAssign(gameContext, (ss as SaveState).context)
     deepAssign(progress, (ss as SaveState).progress)
@@ -140,10 +148,9 @@ export function loadSaveState(ss: SaveStateId | SaveState) {
  * with the id 'quick".
  */
 export const quickSave = () => {
-  const qs = storeLastSaveState.bind(null, QUICK_SAVE_ID)
-
-  if (qs()) {
+  if (storeLastSaveState(QUICK_SAVE_ID)) {
     toast('Progress has been saved', {
+      icon: FaSave,
       autoClose: 1400,
       toastId: "qs-toast",
     })
@@ -160,7 +167,22 @@ export const quickSave = () => {
  * Loads the savestate with the id 'quick' from the script's history,
  * and restores the context and progress from it.
  */
-export const quickLoad = loadSaveState.bind(null, QUICK_SAVE_ID)
+export const quickLoad = ()=> {
+  if (loadSaveState(QUICK_SAVE_ID)) {
+    toast("Progress restored", {
+      icon: FaSave,
+      autoClose: 1400,
+      toastId: 'ql-toast'
+    })
+  } else {
+    toast("Could not restore progress", {
+      autoClose: 2400,
+      toastId: 'ql-toast',
+      type: "warning"
+    })
+  }
+
+}
 
 /**
  * Creates an iterator of key-value pairs from the stored savestates,
