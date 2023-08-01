@@ -4,14 +4,16 @@ import { defaultSettings, settings } from "../../utils/variables"
 import { ViewRatio } from "../../types"
 import { TEXT_SPEED } from "../../utils/constants"
 import { deepAssign, negative } from "../../utils/utils"
-import { FaVolumeMute, FaVolumeUp } from "react-icons/fa"
+import { FaMinus, FaPlus, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 
 const ConfigMainTab = () => {
   const [conf, setConf] = useState(deepAssign({
     // object only used for its structure. Values don't matter.
     volume : undefined,
     textSpeed: undefined,
-    fixedRatio: undefined
+    fixedRatio: undefined,
+    autoClickDelay: undefined,
+    nextPageDelay: undefined,
   }, settings, {createMissing: false}))
 
   useEffect(()=> {
@@ -44,9 +46,10 @@ const ConfigMainTab = () => {
       {(Object.keys(conf.volume) as Array<keyof typeof volumeNames>).map(key=>
         <ConfigLayout key={key} title={`${volumeNames[key]} ${Math.abs(conf.volume[key])}`}>
           <div className="config-range">
-            <span>Low</span>
+            <FaMinus />
             <input
               type="range"
+              disabled={negative(conf.volume[key])}
               min={0}
               max={10}
               step={1}
@@ -55,7 +58,7 @@ const ConfigMainTab = () => {
                 const sign = negative(conf.volume[key]) ? -1 : 1
                 updateSubValue('volume', key, sign * parseInt(e.target.value))
               }} />
-            <span>High</span>
+            <FaPlus />
 
             <button onClick={()=> updateSubValue('volume', key, -conf.volume[key])}>
               {negative(conf.volume[key]) ? <FaVolumeMute /> : <FaVolumeUp />}
@@ -88,6 +91,38 @@ const ConfigMainTab = () => {
         conf={conf}
         updateValue={updateValue}
       />
+
+      <ConfigLayout title={`Auto-play text delay: ${(conf.autoClickDelay/1000).toFixed(1)}s`}>
+        <div className="config-range">
+          <FaMinus />
+          <input
+            type="range"
+            min={0}
+            max={3000}
+            step={100}
+            value={conf.autoClickDelay}
+            onChange={e => {
+              updateValue('autoClickDelay', parseInt(e.target.value))
+            }} />
+          <FaPlus />
+        </div>
+      </ConfigLayout>
+
+      <ConfigLayout title={`Auto-play page delay: ${(conf.nextPageDelay/1000).toFixed(1)}s`}>
+        <div className="config-range">
+          <FaMinus />
+          <input
+            type="range"
+            min={0}
+            max={3000}
+            step={100}
+            value={conf.nextPageDelay}
+            onChange={e => {
+              updateValue('nextPageDelay', parseInt(e.target.value))
+            }} />
+          <FaPlus />
+        </div>
+      </ConfigLayout>
 
       <ResetBtn onClick={() => {
         const defaultConf = deepAssign(structuredClone(conf), defaultSettings, {createMissing: false})

@@ -28,6 +28,8 @@ const keyMap = new KeyMap({
               {key: "Meta", repeat: true},
               {key: "ArrowDown", repeat: false},
               {key: "ArrowRight", repeat: false}],
+  "auto_play":[()=> objectMatch(displayMode, {text: true, menu: false, choices: false, history: false, load: false, save: false}),
+              {key: "E", repeat: false}],
   "page_nav": [()=> objectMatch(displayMode, {text: true, menu: false, history: false, load: false, save: false}),
               {key: "PageUp", [KeyMap.args]: "prev"},
               {key: "PageDown", [KeyMap.args]: "next"}],
@@ -51,6 +53,7 @@ const keyMap = new KeyMap({
 }, (action, _evt, ...args)=> {
     switch(action) {
       case "next"     : next(); break
+      case "auto_play": toggleAutoPlay(); break
       case "page_nav" : page_nav(args[0]); break
       case "history"  : toggleHistory(); break
       case "graphics" : toggleGraphics(); break
@@ -73,6 +76,7 @@ function next() {
       toggleGraphics()
     else
       script.next()
+    script.autoPlay = false
   }
 }
 
@@ -87,27 +91,39 @@ function page_nav(direction: "prev"|"next") {
       //TODO fast-forward to next '\\' or end of scene.
       break;
   }
+  script.autoPlay = false
+}
+
+function toggleAutoPlay() {
+  script.autoPlay = !script.autoPlay;
+  if (script.autoPlay)
+    script.next() // initiate the auto execution. TODO make it not necessary
 }
 
 function toggleMenu() {
   displayMode.menu = !displayMode.menu
+  script.autoPlay = false
 }
 
 function toggleGraphics() {
   displayMode.text = !displayMode.text
+  script.autoPlay = false
 }
 
 function toggleHistory() {
   displayMode.text = !displayMode.text
   displayMode.history = !displayMode.history
+  script.autoPlay = false
 }
 
 function toggleSave() {
   displayMode.save = !displayMode.save
+  script.autoPlay = false
 }
 
 function toggleLoad() {
   displayMode.load = !displayMode.load
+  script.autoPlay = false
 }
 
 //##############################################################################

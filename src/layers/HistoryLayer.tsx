@@ -4,6 +4,7 @@ import { displayMode } from '../utils/variables';
 import { SaveState, loadSaveState } from "../utils/savestates";
 import { useObserver } from '../utils/Observer';
 import history from '../utils/history';
+import script from '../utils/script';
 
 type Props = {
   [key: string] : any // other properties to apply to the root 'div' element of the component
@@ -21,6 +22,7 @@ const HistoryLayer = (props: Props) => {
       if (e.deltaY < 0 && !display && objectMatch(displayMode, {menu:false, save:false, load: false})) {
         if (!history.empty) // at least one element in the iterator
           setDisplay(true)
+        script.autoPlay = false
       }
       //TODO: scroll down: close if scroll past bottom
     }

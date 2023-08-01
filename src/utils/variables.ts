@@ -14,8 +14,8 @@ const SETTINGS_STORAGE_KEY = "settings"
 export const defaultSettings = deepFreeze({
   // scene settings
   textSpeed: TEXT_SPEED.normal,
-  autoClickDelay: 0,
-  nextPageDelay: 0,
+  autoClickDelay: 500,
+  nextPageDelay: 2500,
   enableSceneSkip: true, // ask to skip scenes
   preventUnreadSkip: false, // [not implemented]
   // graphics settings

@@ -6,11 +6,11 @@ import { commands as audioCommands } from "./AudioManager"
 import { observe } from "./Observer"
 import history from "./history"
 import { SCENE_ATTRS } from "./constants"
-import { commands as timerCommands } from "./timer"
+import Timer, { commands as timerCommands } from "./timer"
 import { checkIfCondition, extractInstructions, fetchFBlock, fetchScene, getPhaseDetails, getSceneTitle, isScene } from "./scriptUtils"
 import { commands as variableCommands, gameContext, settings, displayMode, SCREEN } from "./variables"
 type Instruction = {cmd: string, arg: string}
-type CommandHandler = {next: VoidFunction}
+type CommandHandler = {next: VoidFunction, autoPlayDelay?: number}
 type CommandProcessFunction =
     ((arg: string, cmd: string, onFinish: VoidFunction)=>CommandHandler|Instruction[]|void)
 type CommandMap = Map<string, CommandProcessFunction|null>
@@ -25,6 +25,7 @@ let lastLine = {label: "", index: 0}
 let currentCommand: CommandHandler | undefined
 let skipCommand: VoidFunction | undefined
 let lineSkipped: boolean = false
+let autoPlay: boolean = false
 
 const LOCK_CMD = {next: ()=>{}} // prevent proceeding to next line
 
@@ -42,6 +43,14 @@ export const script = {
   next(): void {
     if (currentCommand)
       currentCommand.next()
+  },
+
+  set autoPlay(enable: boolean) {
+    autoPlay = enable
+  },
+
+  get autoPlay() {
+    return autoPlay
   },
 
   get currentLine() {
@@ -65,7 +74,7 @@ function processPhase(dir: "l"|"r") {
     ...extractInstructions(`bg ${bg},%type_${dir}cartain_fst`),
     ...extractInstructions(`ld ${dir},$${route}|${routeDay},%type_${invDir}cartain_fst`),
     ...(day ? extractInstructions(`ld ${dir},$${route}|${routeDay}|${day},%type_crossfade_fst`) : []),
-    {cmd: "click", arg: ""},
+    {cmd: "click", arg: Math.max(500, settings.nextPageDelay).toString()},
     ...extractInstructions(`bg #000000,%type_crossfade_fst`)
   ];
 }
@@ -76,7 +85,7 @@ function processPhase(dir: "l"|"r") {
 
 let commands:CommandMap|undefined;
 function buildCommands() {
-  commands = new Map(Object.entries({
+  commands = new Map(Object.entries<CommandProcessFunction|null>({
 
     ...textCommands,
     ...graphicCommands,
@@ -91,15 +100,13 @@ function buildCommands() {
 
     'skip'      : (n: string)=> { gameContext.index += parseInt(n) },
     'return'    : ()=> { onSceneEnd(); return LOCK_CMD },
-    'click'     : (_arg,_, onFinish)=> ({ next: onFinish }), // wait user action
+    'click'     : processClick,
 
-    'setwindow' : null,
-    'windoweffect' : null,
-    'setcursor' : null,
-    'autoclick' : null,
-
-    '*'         : null,
-    '!s'        : null,
+    ...Object.fromEntries([ // ignored commands
+      'setwindow', 'windoweffect',
+      'setcursor', 'autoclick',
+      '*', '!s',
+    ].map(cmd=>[cmd, null]))
   })) as CommandMap
 }
 
@@ -134,15 +141,48 @@ function processGosub(arg: string, _: string) {
   }
 }
 
+function processClick(arg: string, _: string, onFinish: VoidFunction) {
+  if (arg.length > 0) {
+    // inserted a delay in the `click` argument. (Not standard Nscripter).
+    const delay = parseInt(arg)
+    return { next: onFinish, autoPlayDelay: delay }
+  } else {
+    return { next: onFinish }
+  }
+}
+
 //##############################################################################
 //#                            EXECUTE SCRIPT LINES                            #
 //##############################################################################
-
+/**
+ * Exclusively used by the {@link processLine} function to handle
+ * command results
+ * @param commandResult
+ * @param onFinish
+ */
+function processCommandResult(commandResult: CommandHandler,
+                              onFinish: VoidFunction) {
+  currentCommand = commandResult
+  if (autoPlay && typeof commandResult.autoPlayDelay == "number") {
+    const next = commandResult.next.bind(commandResult)
+    const timer = new Timer(commandResult.autoPlayDelay, ()=> {
+      if (autoPlay) // check if 'autoPlay' changed while the timer was running
+        next()
+    })
+    timer.start()
+    currentCommand.next = timer.skip.bind(timer)
+    skipCommand = ()=> {
+      timer.cancel()
+      onFinish()
+    }
+  } else {
+    skipCommand = onFinish // if the command must be skipped at some point
+  }
+}
 /**
  * Execute the script line. Extract the command name and arguments from the line,
  * and calls the appropriate function to process it.
- * Update currentCommand. When a line must be split into multiple commands,
- * use this function to process all sub-commands
+ * Update currentCommand.
  * @param line the script line to process
  * @param onFinish callback function called when the line has been processed
  */
@@ -159,18 +199,15 @@ export async function processLine(line: string) {
     const command = commands?.get(cmd)
     if (command) {
       await new Promise<void>(resolve=> {
-        let commandResult = command(arg, cmd, resolve) as typeof currentCommand
+        let commandResult = command(arg, cmd, resolve)
         if (Array.isArray(commandResult)) {
           instructions.splice(i+1, 0, ...commandResult)
           currentCommand = undefined
           resolve()
-        } else {
-          currentCommand = commandResult
-          if (commandResult)
-            skipCommand = resolve // if the command must be skipped at some point
-          else
-            resolve()
-        }
+        } else if (commandResult) {
+          processCommandResult(commandResult, resolve)
+        } else
+          resolve()
       })
       currentCommand = undefined
       skipCommand = undefined
@@ -181,7 +218,6 @@ export async function processLine(line: string) {
       debugger
     }
   }
-  return currentCommand
 }
 
 /**

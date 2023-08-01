@@ -50,16 +50,10 @@ function onBreakChar(_: string, cmd: string, onFinish: VoidFunction) {
       break
     default : throw Error(`unknown break char ${cmd}`)
   }
-  if (delay > 0) {
-    const timer = new Timer(delay, onFinish)
-    timer.start()
-    return { next: timer.skip.bind(timer) }
-  } else {
-    return { next: ()=> {
-      scriptInterface.glyph = undefined
-      onFinish()
-    }}
-  }
+  return { next: ()=> {
+    scriptInterface.glyph = undefined
+    onFinish()
+  }, autoPlayDelay: delay}
 }
 
 export const commands = {
@@ -137,7 +131,7 @@ const TextLayer = memo(({...props}: Props) => {
         setCursor(newText.length)
         scriptInterface.onFinish?.()
       } else {
-        let index = 0
+        let index = newText.search(/\S|$/)
         // gradually display next characters
         const timer = new Timer(textSpeed, ()=> {
           index++
