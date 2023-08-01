@@ -3,6 +3,8 @@ import numaliasJson from '../assets/game/numalias.json'
 import sceneAttrs from '../assets/game/scene_attrs.json'
 import { Digit, RouteDayName, RouteName, SceneName, UcLetter } from '../types'
 
+export const APP_VERSION = import.meta.env.VITE_VERSION
+
 export const STRALIAS_JSON = JSON.parse(JSON.stringify(straliasJson))
 export const NUMALIAS_JSON = JSON.parse(JSON.stringify(numaliasJson))
 export const SCENE_ATTRS : {
