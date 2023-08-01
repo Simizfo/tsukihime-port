@@ -80,7 +80,7 @@ export function storeLastSaveState(id: SaveStateId) {
   const ss = history.last?.saveState
   if (!ss)
     return false
-  ss.text = history.last.text
+  ss.text = history.last.text.trim()
   storeSaveState(id, ss)
   return true
 }
