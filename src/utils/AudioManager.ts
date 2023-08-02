@@ -274,14 +274,9 @@ function loopSE(name: string) {
   else
     audio.stopSE()
 }
-observe(gameContext.audio, 'track', (name)=> {
-  if (displayMode.screen == SCREEN.WINDOW)
-    playTrack(name)
-})
-observe(gameContext.audio, 'looped_se', (name)=> {
-  if (displayMode.screen == SCREEN.WINDOW)
-    loopSE(name)
-})
+const windowFilter = { filter: () => displayMode.screen == SCREEN.WINDOW }
+observe(gameContext.audio, 'track', playTrack, windowFilter)
+observe(gameContext.audio, 'looped_se', loopSE, windowFilter)
 
 observe(displayMode, 'screen', (screen)=> {
   if (screen == SCREEN.WINDOW) {

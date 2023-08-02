@@ -83,13 +83,8 @@ function applyChange(pos: SpritePos, image: string, type: string, onFinish: Void
       // Listen for the 'duration' to be set to 0
       // The component sets it to 0 after completing the animation,
       // and calling 'next' the command also sets it to 0
-      const callback = (duration: number)=> {
-        if (duration == 0) {
-          unobserve(transition, 'duration', callback)
-          onFinish()
-        }
-      }
-      observe(transition, 'duration', callback)
+      observe(transition, 'duration', onFinish,
+              { filter: (d)=> d == 0, once: true })
       return {next: ()=> {
         transition.duration = 0
       }}
@@ -251,13 +246,12 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   useObserver(setBgAlign, displayMode, 'bgAlignment')
-  useObserver((duration: number)=> {
-    if (duration == 0) { // skipped the on-going animation, or animation has ended
-      setPrevImages({...gameContext.graphics})
-      timer.current?.cancel()
-      timer.current == null
-    }
-  }, transition, 'duration')
+  useObserver(()=> {
+    // animation finished or skipped
+    setPrevImages({...gameContext.graphics})
+    timer.current?.cancel()
+    timer.current == null
+  }, transition, 'duration', { filter: (d)=>d==0 })
 
   useChildrenObserver((_pos, _img)=> {
     setCurrImages({...gameContext.graphics})
