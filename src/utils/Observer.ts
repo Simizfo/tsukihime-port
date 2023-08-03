@@ -175,6 +175,17 @@ const hiddenObjSymbol = Symbol("hidden object")
 class ObservableContainer<T extends Object> {
     constructor(obj: T) {
         const callbacks : Array<ChildrenListener<T>> = []
+        const modifs: [(keyof T), T[keyof T]][] = []
+        let microtaskQueued = false
+        const notify = ()=> {
+            microtaskQueued = false
+            for (const [key, value] of modifs) {
+                for (const {callback, filter} of callbacks) {
+                    if (filter?.(key as keyof T, value) ?? true)
+                        callback(key as keyof T, value)
+                }
+            }
+        }
         return new Proxy(obj, {
             //...Reflect,
             get(target, key: PropertyKey, receiver) {
@@ -187,10 +198,10 @@ class ObservableContainer<T extends Object> {
             set(target, key: PropertyKey, value, receiver) {
                 const diff = value != Reflect.get(target, key, receiver)
                 const result = Reflect.set(target, key, value, receiver)
-                if (diff && result && typeof key != 'symbol') {
-                    for (const {callback, filter} of callbacks) {
-                        if (filter?.(key as keyof T, value) ?? true)
-                            callback(key as keyof T, value)
+                if (diff && result) {
+                    modifs.push([key as keyof T, value])
+                    if (!microtaskQueued) {
+                        queueMicrotask(notify)
                     }
                 }
                 return result
