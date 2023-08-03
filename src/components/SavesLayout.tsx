@@ -1,4 +1,4 @@
-import { FaPlusCircle, FaTrash } from "react-icons/fa"
+import { FaDownload, FaPlusCircle, FaTrash } from "react-icons/fa"
 import { QUICK_SAVE_ID, SaveState, deleteSaveState, exportSaveFile, getSaveState, listSaveStates, loadSaveFile as loadSaveFiles, loadSaveState, storeLastSaveState } from "../utils/savestates"
 import { useEffect, useState } from "react"
 import { graphicElements } from "../layers/GraphicsLayer"
@@ -126,13 +126,15 @@ const SavesLayout = ({variant}: Props) => {
         {focusedId != undefined &&
           <div className="deta">
             <div>{parseBBcode(phaseTitle(focusedSave as SaveState))}</div>
-            <div>{phaseDay(focusedSave as SaveState)}</div>
+            <div>{parseBBcode(phaseDay(focusedSave as SaveState))}</div>
 
             <div className="actions">
-              <button className="delete" onClick={handleAction.bind(null, focusedId, 'delete')}>
+              <button onClick={handleAction.bind(null, focusedId, 'delete')}>
                 <FaTrash />
               </button>
-              <button className="export" onClick={()=>exportSaves(focusedId)}>Export save</button>
+              <button onClick={()=>exportSaves(focusedId)}>
+                <FaDownload />
+              </button>
             </div>
           </div>
         }

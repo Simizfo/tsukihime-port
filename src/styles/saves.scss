@@ -93,14 +93,13 @@
             .actions {
                 align-self: flex-end;
                 display: flex;
-                gap: 6px;
 
                 button {
-                    border: 1px solid;
-                    border-radius: 4px;
-                    padding: 2px;
+                    padding: 2px 6px;
                     font-size: .8em;
                     opacity: .8;
+                    display: flex;
+                    align-items: center;
 
                     &:hover {
                         cursor: pointer;
@@ -109,9 +108,8 @@
                     }
                 }
 
-                .delete {
-                    display: flex;
-                    align-items: center;
+                button:not(:last-of-type) {
+                    border-right: 1px solid grey;
                 }
             }
         }
