@@ -142,9 +142,23 @@ $size: 25px;
 *[fade-in="tcartain"] { @include shutter('ti', (0 0), (0 $size)); }
 
 
-[fade-out="bshutter"],
-[fade-out="bcartain"] { @include shutter('bo', (0 $size), (0 0)); }
+*[fade-out="bshutter"],
+*[fade-out="bcartain"] { @include shutter('bo', (0 $size), (0 0)); }
 
-[fade-in="bshutter"],
-[fade-in="bcartain"] { @include shutter('bi', (0 $size*2), (0 $size)); }
+*[fade-in="bshutter"],
+*[fade-in="bcartain"] { @include shutter('bi', (0 $size*2), (0 $size)); }
 
+
+*.quake {
+  animation-duration: var(--quake-time);
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  @keyframes quake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(calc(-1 * var(--quake-x)), calc(-1 * var(--quake-y))); }
+    75% { transform: translate(var(--quake-x), var(--quake-y)); }
+    100% { transform: translate(0, 0); }
+  }
+  animation-name: quake;
+}

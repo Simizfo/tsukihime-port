@@ -1,27 +1,22 @@
-import { useEffect, useState, useRef, memo, Fragment } from "react";
+import { useState, memo, Fragment } from "react";
 import { displayMode, gameContext, settings } from "../utils/variables";
-import { observe, unobserve, useChildrenObserver, useObserver } from "../utils/Observer";
-import Timer from "../utils/timer";
+import { observe, useChildrenObserver, useObserver } from "../utils/Observer";
 import { RouteDayName, RouteName } from "../types";
 import { SCENE_ATTRS } from "../utils/constants";
-import script from "../utils/script";
 import { parseBBcode } from "../utils/utils";
 import { findImageObjectByName } from "../utils/gallery";
 
 type SpritePos = keyof typeof gameContext.graphics
 const POSITIONS: Array<SpritePos> = Object.keys(gameContext.graphics) as Array<SpritePos>
 
-type Transition = {
-  effect: string,
-  duration: number,
-  pos: SpritePos | 'a',
-  onFinish: VoidFunction|undefined
-}
-const transition: Transition = {
+const transition = {
   effect: "",
   duration: 0,
-  pos: "a",
-  onFinish : undefined,
+  pos: "a" as SpritePos|'a',
+}
+const quakeEffect = {
+  x: 0, y: 0,
+  duration: 0,
 }
 
 //##############################################################################
@@ -133,13 +128,35 @@ function setSprite(pos: SpritePos|'a', image: string): boolean {
     return false
   }
 }
+
+function processQuake(arg: string, cmd: string, onFinish: VoidFunction) {
+  const [ampl, duration] = arg.split(',').map(x=>parseInt(x))
+  switch(cmd) {
+    case 'quakex' : quakeEffect.x = ampl; break
+    case 'quakey' : quakeEffect.y = ampl; break
+  }
+  quakeEffect.duration = duration;
+  observe(quakeEffect, "duration", ()=> {
+    quakeEffect.x = 0
+    quakeEffect.y = 0
+    onFinish()
+  }, { filter: (d: number)=> d == 0, once: true })
+  return { next: ()=> { quakeEffect.duration = 0 } }
+}
+
+function processMonocro(color: string) {
+  if (color == "off")
+    color = ""
+  gameContext.monochrome = color
+}
+
 const commands = {
   'bg' : processImageCmd,
   'ld' : processImageCmd,
   'cl' : processImageCmd,
-  'quakex'    : null, //TODO : vertical shake effect
-  'quakey'    : null, //TODO : horizontal shake effect
-  'monocro'   : null, //TODO : fade screen to monochrome
+  'quakex'  : processQuake, //TODO : vertical shake effect
+  'quakey'  : processQuake, //TODO : horizontal shake effect
+  'monocro' : processMonocro, //TODO : fade screen to monochrome
 }
 
 export {
@@ -214,6 +231,7 @@ export function graphicElement(pos: SpritePos, image: string,
         <img src={imgUrl(image)} alt={`[[sprite:${image}]]`}
           className={findImageObjectByName(image)?.sensitive && settings.blurThumbnails ? "blur" : ""}
           {...attrs}
+          style={style}
         />
       }
     </div>
@@ -240,7 +258,8 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
 
   const [prevImages, setPrevImages] = useState<typeof gameContext.graphics>({...gameContext.graphics})
   const [currImages, setCurrImages] = useState<typeof gameContext.graphics>({...gameContext.graphics})
-  const timer = useRef<Timer|null>(null)
+  const [quake, setQuake] = useState<boolean>()
+  const [monoChrome, setMonoChrome] = useState<string>("")
 
 //__________________________listen for sprite changes___________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -249,38 +268,49 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
   useObserver(()=> {
     // animation finished or skipped
     setPrevImages({...gameContext.graphics})
-    timer.current?.cancel()
-    timer.current == null
   }, transition, 'duration', { filter: (d)=>d==0 })
+
+  useObserver(setMonoChrome, gameContext, "monochrome")
+  useObserver((d)=> {
+    setQuake(d != 0)
+  }, quakeEffect, 'duration')
 
   useChildrenObserver((_pos, _img)=> {
     setCurrImages({...gameContext.graphics})
+    if (transition.duration == 0)
+      setPrevImages({...gameContext.graphics})
   }, gameContext, "graphics")
 
 //__________________________________animations__________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+  const onQuakeEnd = ()=> {
+    quakeEffect.duration = 0
+  }
   const onAnimationEnd = ()=> {
     transition.duration = 0
-    timer.current = null
   }
-
-  useEffect(()=> {
-    const {duration} = transition
-    if (duration > 0) {
-      //displayMode.text = false
-      timer.current = new Timer(duration, onAnimationEnd)
-      timer.current.start()
-    } else {
-      onAnimationEnd()
-    }
-  }, [currImages])
 
 //____________________________________render____________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   const {pos: trans_pos, duration, effect} = transition
+  let style, className;
+  ({style, className, ...props} = props);
+  style = {
+    ...style,
+    ...(monoChrome ? {background: monoChrome} : {}),
+    ...(quake ? {
+      '--quake-x': `${quakeEffect.x}pt`,
+      '--quake-y': `${quakeEffect.y}pt`,
+      '--quake-time': `${quakeEffect.duration}ms`
+    } : {})
+  }
+  const classList = className?.trim().split("") ?? []
+  classList.push('box', 'box-graphics')
+  if (quake) classList.push('quake')
+  if (monoChrome) classList.push("monochrome")
   return (
-    <div className="box box-graphics" {...props} >
+    <div className={classList.join(' ')} {...props} style={style} onAnimationEnd={onQuakeEnd}>
+
       {(duration == 0) ? // no animation => display all sprites without effect
         graphicElements(currImages, {bg: {'bg-align': bgAlign}})
       : (trans_pos == "bg") ? // bg animation fade-in new bg over prev. sprites
@@ -290,6 +320,7 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
           key: currImages.bg||'bg',
           'bg-align': bgAlign,
           'fade-in': effect,
+          onAnimationEnd: onAnimationEnd,
           style: {'--transition-time': `${duration}ms`},
         })}
         </>
@@ -313,6 +344,7 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
               key: prevImages[pos]||pos,
               'fade-out': effect,
               style: {'--transition-time': `${duration}ms`},
+              onAnimationEnd: onAnimationEnd,
             })}
             </>
           }
@@ -323,6 +355,7 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
             } : [pos, 'a'].includes(trans_pos) ? {
               'fade-in': effect,
               style: {'--transition-time': `${duration}ms`},
+              onAnimationEnd: onAnimationEnd,
             } : {})
           })}
         </Fragment>)

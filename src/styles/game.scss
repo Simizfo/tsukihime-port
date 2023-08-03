@@ -93,6 +93,12 @@
                 }
             }
         }
+        &.monochrome {
+            div {
+                mix-blend-mode: multiply;
+                filter: grayscale(1);
+            }
+        }
     }
     .box-text {
         z-index: 2;
