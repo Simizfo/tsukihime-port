@@ -3,7 +3,7 @@ import { QUICK_SAVE_ID, SaveState, deleteSaveState, exportSaveFile, getSaveState
 import { useEffect, useState } from "react"
 import { graphicElements } from "../layers/GraphicsLayer"
 import { SCREEN, displayMode } from "../utils/variables"
-import { convertText } from "../utils/utils"
+import { convertText, parseBBcode } from "../utils/utils"
 import { useNavigate } from "react-router-dom"
 import { SCENE_ATTRS } from "../utils/constants"
 import { LabelName, SceneName } from "../types"
@@ -26,7 +26,6 @@ function saveElement(id: number, saveState: SaveState, onAction: (a:'select'|'de
           {convertText(saveState.text ?? "")}
         </div>
       </div>
-      <FaTrash style={{position:'absolute', top: 0, right: 0}} onClick={onAction.bind(null, 'delete')}/>
     </div>
   )
 }
@@ -126,9 +125,15 @@ const SavesLayout = ({variant}: Props) => {
         </div>
         {focusedId != undefined &&
           <div className="deta">
-            <div>{phaseTitle(focusedSave as SaveState)}</div>
+            <div>{parseBBcode(phaseTitle(focusedSave as SaveState))}</div>
             <div>{phaseDay(focusedSave as SaveState)}</div>
-            <button className="export" onClick={()=>exportSaves(focusedId)}>Export save</button>
+
+            <div className="actions">
+              <button className="delete" onClick={handleAction.bind(null, focusedId, 'delete')}>
+                <FaTrash />
+              </button>
+              <button className="export" onClick={()=>exportSaves(focusedId)}>Export save</button>
+            </div>
           </div>
         }
       </div>

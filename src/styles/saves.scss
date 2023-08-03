@@ -90,18 +90,28 @@
             display: flex;
             flex-direction: column;
 
-            .export {
-                border: 1px solid;
+            .actions {
                 align-self: flex-end;
-                border-radius: 4px;
-                padding: 2px;
-                font-size: .8em;
-                opacity: .8;
+                display: flex;
+                gap: 6px;
 
-                &:hover {
-                    cursor: pointer;
-                    color: #0fbbd5;
-                    opacity: 1;
+                button {
+                    border: 1px solid;
+                    border-radius: 4px;
+                    padding: 2px;
+                    font-size: .8em;
+                    opacity: .8;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: #0fbbd5;
+                        opacity: 1;
+                    }
+                }
+
+                .delete {
+                    display: flex;
+                    align-items: center;
                 }
             }
         }
