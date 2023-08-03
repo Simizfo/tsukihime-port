@@ -82,16 +82,26 @@
             z-index: 0;
             align-self: flex-end;
             background-color: rgb(11 25 33 / 97%);
-            padding: 1em;
+            padding: .8em;
             border-radius: 8px;
-            margin: 0.4em;
+            margin: .4em;
             flex: 1;
             border: 2px solid #fff;
+            display: flex;
+            flex-direction: column;
 
             .export {
+                border: 1px solid;
+                align-self: flex-end;
+                border-radius: 4px;
+                padding: 2px;
+                font-size: .8em;
+                opacity: .8;
+
                 &:hover {
                     cursor: pointer;
                     color: #0fbbd5;
+                    opacity: 1;
                 }
             }
         }

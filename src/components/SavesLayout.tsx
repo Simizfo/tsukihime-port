@@ -124,13 +124,13 @@ const SavesLayout = ({variant}: Props) => {
         <div className="graphics">
           {graphicElements(focusedSave?.context.graphics??{bg:"notreg"})}
         </div>
-        {focusedId != undefined && <>
-          <div style={{alignSelf: 'flex-start'}}>{phaseTitle(focusedSave as SaveState)}</div>
-          <div style={{alignSelf: 'flex-start'}}>{phaseDay(focusedSave as SaveState)}</div>
+        {focusedId != undefined &&
           <div className="deta">
+            <div>{phaseTitle(focusedSave as SaveState)}</div>
+            <div>{phaseDay(focusedSave as SaveState)}</div>
             <button className="export" onClick={()=>exportSaves(focusedId)}>Export save</button>
           </div>
-        </>}
+        }
       </div>
     </div>
   )
