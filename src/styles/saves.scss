@@ -28,10 +28,13 @@
             min-height: 100px;
             overflow: hidden;
 
-            &.create {
+            &.create, &.import {
                 justify-content: center;
                 align-items: center;
                 font-size: 1.4em;
+            }
+            &.import {
+                border: 2px dashed var(--active);
             }
 
             .deta {

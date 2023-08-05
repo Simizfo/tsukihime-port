@@ -1,12 +1,13 @@
-import { FaDownload, FaPlusCircle, FaTrash } from "react-icons/fa"
-import { QUICK_SAVE_ID, SaveState, deleteSaveState, exportSaveFile, getSaveState, listSaveStates, loadSaveFile as loadSaveFiles, loadSaveState, storeLastSaveState } from "../utils/savestates"
 import { useEffect, useState } from "react"
+import { FaDownload, FaPlusCircle, FaTrash } from "react-icons/fa"
+import { BsFileEarmarkArrowUp } from "react-icons/bs"
+import { QUICK_SAVE_ID, SaveState, deleteSaveState, exportSaveFile, getSaveState, listSaveStates, loadSaveFile as loadSaveFiles, loadSaveState, storeLastSaveState } from "../utils/savestates"
 import { graphicElements } from "../layers/GraphicsLayer"
 import { SCREEN, displayMode } from "../utils/variables"
 import { convertText, parseBBcode } from "../utils/utils"
 import { useNavigate } from "react-router-dom"
 import { SCENE_ATTRS } from "../utils/constants"
-import { LabelName, SceneName } from "../types"
+import { SceneName } from "../types"
 import { getSceneTitle } from "../utils/scriptUtils"
 
 function saveElement(id: number, saveState: SaveState, onAction: (a:'select'|'delete')=>void,
@@ -111,6 +112,12 @@ const SavesLayout = ({variant}: Props) => {
         {variant === "save" &&
         <button className="save-container create" onClick={createSave}>
           <FaPlusCircle />
+        </button>
+        }
+
+        {variant === "load" &&
+        <button className="save-container import" onClick={importSaves}>
+          <BsFileEarmarkArrowUp />
         </button>
         }
 
