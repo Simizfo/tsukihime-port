@@ -9,7 +9,7 @@ import { CHARACTERS, GALLERY_IMAGES } from '../utils/gallery'
 import { GalleryImg } from '../types'
 import TabBtn from '../components/TabBtn'
 
-const defaultImg = `/image/notreg.webp`
+const defaultImg = `${import.meta.env.BASE_URL}image/notreg.webp`
 
 const GalleryScreen = () => {
   const [selected, setSelected] = useState<CHARACTERS>(CHARACTERS.arcueid)
@@ -68,7 +68,7 @@ const GalleryScreen = () => {
                 :
                   <a href={image.src} data-fancybox="gallery"
                     className={image.sensitive && settings.blurThumbnails ? 'blur' : ''}>
-                    <img src={`/image/event/${image.img}.webp`} alt="event" />
+                    <img src={`${import.meta.env.BASE_URL}image/event/${image.img}.webp`} alt="event" />
                   </a>
                 }
               </React.Fragment>
