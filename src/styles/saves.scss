@@ -70,6 +70,7 @@
         background-image: linear-gradient(180deg, #00000000 0%, #030312 20%, #030312 80%, #00000000 100%);
         display: flex;
         position: relative;
+        min-width: 220px;
 
         .graphics {
             width: 100%;
@@ -86,7 +87,7 @@
             border-radius: 8px;
             margin: .4em;
             flex: 1;
-            border: 2px solid #fff;
+            border: 2px solid #000;
             display: flex;
             flex-direction: column;
 
@@ -164,9 +165,9 @@
         }
     }
 
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 720px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 4fr;
+        grid-template-rows: 120px 1fr;
 
         .info {
             grid-row: 1;
@@ -174,6 +175,11 @@
             .deta {
                 flex: initial;
                 margin-left: auto;
+                align-self: auto;
+
+                .actions {
+                    margin-top: auto;
+                }
             }
         }
     }
