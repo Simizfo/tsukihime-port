@@ -6,7 +6,7 @@ function App() {
 
   return (
     <StrictMode>
-      <BrowserRouter basename="/tsukidev">
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <AnimatedRoutes />
       </BrowserRouter>
     </StrictMode>

@@ -9,5 +9,5 @@ export default defineConfig({
   define: {
     'process.env': {}
   },
-  base: '/tsukidev/'
+  base: process.env.NODE_ENV === 'production' ? '/tsukidev/' : '/'
 });
