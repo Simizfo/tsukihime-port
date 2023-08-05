@@ -115,11 +115,13 @@ const SavesLayout = ({variant}: Props) => {
         </button>
         }
 
-        {variant === "load" &&
-        <button className="save-container import" onClick={importSaves}>
+        {variant === "load" && <>
+        <label htmlFor="import" className="save-container import">
           <BsFileEarmarkArrowUp />
-        </button>
-        }
+        </label>
+        <input type="file" id="import" onChange={importSaves}
+          accept=".thsave" style={{display: "none"}}/>
+        </>}
 
         {saves.map(([id, ss]) => saveElement(id, ss, handleAction.bind(null, id), {
           onMouseEnter: setFocusedSave.bind(null, id)}
