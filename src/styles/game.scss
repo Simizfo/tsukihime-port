@@ -261,17 +261,20 @@
             height: 100%;
             width: $width;
             transition: all var(--panel-trans-time) ease-out;
-            padding: 6vh 1.4em;
             display: flex;
             align-items: center;
+            padding-block: 1.4em;
 
             menu {
                 all: unset;
                 height: min(100%, 600px);
+                flex: 1;
                 display: flex;
-                row-gap: min(1em, 2vh);
+                row-gap: .8em;
                 flex-direction: column;
                 font-size: 1.2em;
+                padding: 1.2em;
+                overflow-y: auto;
             }
 
             button, a {
@@ -292,8 +295,9 @@
             }
             .action-icons {
                 display: flex;
-                gap: 10px;
+                justify-content: space-around;
                 margin-top: auto;
+                padding-top: 1em;
 
                 button {
                     border: 1px solid;
