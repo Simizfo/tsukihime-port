@@ -8,5 +8,6 @@ export default defineConfig({
   plugins: [react(), viteTsconfigPaths(), svgrPlugin()],
   define: {
     'process.env': {}
-  }
+  },
+  base: '/tsukidev/'
 });

@@ -6,7 +6,7 @@ function App() {
 
   return (
     <StrictMode>
-      <BrowserRouter>
+      <BrowserRouter basename="/tsukidev">
         <AnimatedRoutes />
       </BrowserRouter>
     </StrictMode>
