@@ -15,6 +15,7 @@ import SkipLayer from '../layers/SkipLayer';
 import SavesLayer from '../layers/SavesLayer';
 import history from '../utils/history';
 import { HiMenu } from 'react-icons/hi';
+import GestureHandler from '../utils/touch';
 
 //##############################################################################
 //#                                KEY MAPPING                                 #
@@ -82,7 +83,8 @@ function next() {
 function page_nav(direction: "prev"|"next") {
   switch (direction) {
     case "prev":
-      let ss = history.get(-2)?.saveState
+      let page = history.get(history.length < 2 ? -1 : -2)
+      let ss = page?.saveState
       if (ss)
         loadSaveState(ss)
       break
@@ -130,6 +132,22 @@ function toggleLoad() {
 const Window = () => {
 
   const rootElmtRef = useRef(null)
+  useEffect(()=> {
+    const swipeHandler = new GestureHandler(rootElmtRef.current, {
+      swipeTrigDistance: 50,
+      onSwipe: (direction)=> {
+        if (objectMatch(displayMode, {history: false, menu: false})) {
+          switch(direction) {
+            case "left" : toggleMenu(); return true
+            case "down" : toggleHistory(); return true
+            case "right" : page_nav("prev"); return true
+            case "up" : toggleGraphics(); return true
+          }
+        }
+      }
+    })
+    return swipeHandler.disable.bind(swipeHandler)
+  }, [rootElmtRef])
 
   useEffect(()=> {
     displayMode.screen = SCREEN.WINDOW
