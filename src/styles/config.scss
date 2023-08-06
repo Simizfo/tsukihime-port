@@ -131,6 +131,14 @@
                     }
                 }
             }
+
+            .erase {
+                color: #e90000;
+    
+                &.config-btn:hover, &.config-btn:focus-visible {
+                    background-color: rgb(255 0 0 / 28%);
+                }
+            }
         }
 
         .reset {

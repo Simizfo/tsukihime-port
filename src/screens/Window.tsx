@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import { FaArrowLeft } from 'react-icons/fa';
 import { motion } from 'framer-motion'
 import '../styles/game.scss';
 import HistoryLayer from '../layers/HistoryLayer';
@@ -15,6 +14,7 @@ import { quickSave, quickLoad, loadSaveState } from "../utils/savestates";
 import SkipLayer from '../layers/SkipLayer';
 import SavesLayer from '../layers/SavesLayer';
 import history from '../utils/history';
+import { HiMenu } from 'react-icons/hi';
 
 //##############################################################################
 //#                                KEY MAPPING                                 #
@@ -172,7 +172,7 @@ const Window = () => {
       <SkipLayer />
 
       <button className="menu-button" onClick={toggleMenu}>
-        <FaArrowLeft />
+        <HiMenu />
       </button>
       <MenuLayer />
     </motion.div>

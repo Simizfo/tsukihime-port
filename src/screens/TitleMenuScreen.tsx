@@ -83,6 +83,10 @@ const TitleMenuScreen = () => {
               Project available on <a href="https://github.com/requinDr/tsukihime-port" target="_blank">Github</a><br />
               v{APP_VERSION}
             </div>
+
+            <div>
+              No data collected, everything is stored on your browser.
+            </div>
           </div>
 
           <div className='tsuki-remake'>

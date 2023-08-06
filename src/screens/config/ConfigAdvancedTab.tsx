@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { ConfigButtons, ResetBtn } from "../ConfigScreen"
+import { ConfigButtons, ConfigLayout, ResetBtn } from "../ConfigScreen"
 import { defaultSettings, settings } from "../../utils/variables"
 import { IMAGES_FOLDERS } from "../../utils/constants"
 import { addEventListener, deepAssign, isFullscreen, toggleFullscreen } from "../../utils/utils"
@@ -28,6 +28,19 @@ const ConfigAdvancedTab = () => {
     value: typeof conf[T]
   ) => setConf(prev => ({ ...prev, [key]: value }))
 
+  const eraseData = () => {
+    if (confirm("This will delete all saves, reset all settings and progress. Are you sure?")) {
+      clearSaveStates()
+      deepAssign(settings, defaultSettings)
+      setTimeout(()=> {
+        localStorage.clear()
+        alert("All data have been deleted. If you leave this website without making any change"+
+              " to the settings and without starting a new game, no data will remain stored"+
+              " on your computer")
+      }, 10) // leave room for asynchronous callbacks (if any) to complete
+    }
+  }
+
   return (
     <section>
       <ConfigButtons
@@ -51,18 +64,15 @@ const ConfigAdvancedTab = () => {
         conf={{fullscreen}}
         updateValue={toggleFullscreen}
       />
-      <button onClick={() => {
-        if (confirm("This will delete all saves, reset all settings and progress. Are you sure ?")) {
-          clearSaveStates()
-          deepAssign(settings, defaultSettings)
-          setTimeout(()=> {
-            localStorage.clear()
-            alert("All data have been deleted. If you leave this website without making any change"+
-                  " to the settings and without starting a new game, no data will remain stored"+
-                  " on your computer")
-          }, 10) // leave room for asynchronous callbacks (if any) to complete
-        }
-      }}>Erase all data</button>
+
+      <ConfigLayout title="Erase all data">
+        <div className="config-btns">
+          <button className="config-btn erase"
+            onClick={eraseData}>
+              Erase
+          </button>
+        </div>
+      </ConfigLayout>
 
       <ResetBtn onClick={() => {
         const defaultConf = deepAssign(structuredClone(conf), defaultSettings, {createMissing: false})

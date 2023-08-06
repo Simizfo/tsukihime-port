@@ -298,6 +298,7 @@
                 justify-content: space-around;
                 margin-top: auto;
                 padding-top: 1em;
+                font-size: 1.1em;
 
                 button {
                     border: 1px solid;
@@ -427,7 +428,7 @@
         .menu-button {
             display: flex;
             position: absolute;
-            z-index: 2;
+            z-index: 3;
             bottom: 4px;
             right: 0;
             opacity: .5;
