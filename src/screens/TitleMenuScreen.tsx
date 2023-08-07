@@ -103,13 +103,15 @@ const TitleMenuScreen = () => {
         </button>
       </Modal>
 
-      <motion.img src={tsukiLogo} alt="tsukihime logo" className="logo"
-        initial={{ opacity: 0, scale: 0.6 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 0.8,
-          ease: [0, 0.71, 0.2, 1.01]
-        }} />
+      <div className="logo">
+        <motion.img src={tsukiLogo} alt="tsukihime logo"
+          initial={{ opacity: 0, scale: 0.6 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            ease: [0, 0.71, 0.2, 1.01]
+          }} />
+      </div>
 
       <nav className="menu">
         <button className='menu-item' onClick={newGame}>
