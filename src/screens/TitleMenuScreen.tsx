@@ -76,7 +76,7 @@ const TitleMenuScreen = () => {
             </div>
 
             <div>
-              English translation: <a href="http://mirrormoon.org/projects/complete/tsukihime/" target="_blank">mirror moon</a>
+              English translation by <a href="http://mirrormoon.org/projects/complete/tsukihime/" target="_blank">mirror moon</a>
             </div>
 
             <div>

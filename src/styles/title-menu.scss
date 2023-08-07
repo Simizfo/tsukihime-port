@@ -27,7 +27,8 @@
         top: 1em;
         font-size: 1.4em;
         transition: var(--transition);
-        padding: 0.4em;
+        margin: .2em;
+        padding: .2em;
         border-radius: 50%;
         display: flex;
 
@@ -47,7 +48,8 @@
         text-transform: uppercase;
         letter-spacing: .2em;
         flex-direction: row;
-        gap: 1.4em;
+        row-gap: .6em;
+        column-gap: 1.4em;
         justify-content: space-evenly;
         width: min(800px, 100%);
         align-items: flex-end;
@@ -71,7 +73,6 @@
     @media (max-width: 768px) {
         .menu {
             flex-direction: column;
-            gap: .6em;
             align-items: center;
         }
     }
@@ -92,13 +93,16 @@
 }
 
 .overlay {
+    .modal {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
     .title-modal {
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 3em;
         font-size: 1.1em;
-        max-height: 60vh;
-        overflow-y: auto;
 
         .links {
             display: flex;
@@ -119,12 +123,14 @@
             img {
                 display: block;
                 max-width: 240px;
+                width: 100%;
                 max-height: 80%;
                 object-fit: contain;
             }
         }
     }
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: 520px) {
         .title-modal {
             grid-template-columns: 1fr;
             gap: 1em;
