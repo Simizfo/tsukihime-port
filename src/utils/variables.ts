@@ -16,6 +16,7 @@ export const defaultSettings = deepFreeze({
   textSpeed: TEXT_SPEED.normal,
   autoClickDelay: 500,
   nextPageDelay: 2500,
+  fastForwardDelay: 5,
   enableSceneSkip: true, // ask to skip scenes
   preventUnreadSkip: false, // [not implemented]
   // graphics settings

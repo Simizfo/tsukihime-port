@@ -19,6 +19,8 @@ type CommandMap = Map<string, CommandProcessFunction|null>
 type SkipCallback = (sceneTitle: string|undefined, confirm:(skip: boolean)=>void)=>void
 let skipCallback: SkipCallback = ()=> { throw Error(`script.onSkipPrompt not specified`) }
 
+type FastForwardStopCondition = (line:string, index: number, label: string)=>boolean
+
 const pageChangeListeners = new Array<VoidFunction>()
 
 let sceneLines: Array<string> = []
@@ -27,6 +29,8 @@ let currentCommand: CommandHandler | undefined
 let skipCommand: VoidFunction | undefined
 let lineSkipped: boolean = false
 let autoPlay: boolean = false
+let fastForwardDelay: number = 0
+let fastForwardStopCondition: FastForwardStopCondition|undefined = undefined
 
 const LOCK_CMD = {next: ()=>{}} // prevent proceeding to next line
 
@@ -48,7 +52,7 @@ export const script = {
 
   set autoPlay(enable: boolean) {
     autoPlay = enable
-    if (enable && typeof currentCommand?.autoPlayDelay == "number") {
+    if (enable) {
       makeAutoPlay()
     }
   },
@@ -61,9 +65,19 @@ export const script = {
     return sceneLines[gameContext.index]
   },
 
+  getOffsetLine(offset: number) {
+    return sceneLines[gameContext.index+offset]
+  },
+
   moveTo(label: LabelName|'', index: number = -1) {
     gameContext.label = label
     gameContext.index = index
+  },
+
+  fastForward(condition: FastForwardStopCondition, delay = settings.fastForwardDelay) {
+    fastForwardDelay = delay
+    fastForwardStopCondition = condition
+      makeAutoPlay()
   }
 }
 export default script
@@ -158,22 +172,22 @@ function processClick(arg: string, _: string, onFinish: VoidFunction) {
 //##############################################################################
 //#                            EXECUTE SCRIPT LINES                            #
 //##############################################################################
-/**
- * Exclusively used by the {@link processLine} function to handle
- * command results
- * @param commandResult
- * @param onFinish
- */
+
 function makeAutoPlay() {
-  if (!currentCommand || typeof currentCommand.autoPlayDelay != "number")
+  const cmd = currentCommand
+  if (!cmd)
+    return;
+  const fastForward = fastForwardStopCondition != undefined
+  if (!fastForward && typeof cmd.autoPlayDelay != "number")
     return
-  const next = currentCommand.next.bind(currentCommand)
-  const timer = new Timer(currentCommand.autoPlayDelay, ()=> {
-    if (autoPlay) // check if 'autoPlay' changed while the timer was running
+  const next = cmd?.next.bind(cmd)
+  const delay = fastForward ? fastForwardDelay : cmd.autoPlayDelay as number
+  const timer = new Timer(delay, ()=> {
+    if (autoPlay || fastForwardStopCondition)
       next()
   })
   timer.start()
-  currentCommand.next = timer.skip.bind(timer)
+  cmd.next = ()=> { timer.cancel(); next() }
   const onFinish = skipCommand
   skipCommand = ()=> {
     timer.cancel()
@@ -208,8 +222,9 @@ export async function processLine(line: string) {
         } else if (commandResult) {
           currentCommand = commandResult
           skipCommand = resolve // if the command must be skipped at some point
-          if (autoPlay && typeof commandResult.autoPlayDelay == "number")
+          if (autoPlay || fastForwardStopCondition)
             makeAutoPlay()
+
         } else
           resolve()
       })
@@ -260,9 +275,12 @@ async function processCurrentLine() {
                     (index == 0 || lines[index-1].endsWith('\\'))
     if (newPage)
       history.onPageBreak()
-
     let line = sceneLines[index]
     console.log(`${label}:${index}: ${line}`)
+
+    if (fastForwardStopCondition?.(line, gameContext.index, gameContext.label))
+      fastForwardStopCondition = undefined
+
     await processLine(line)
     if (lineSkipped || gameContext.index != index || gameContext.label != label) {
       // the context has been changed while processing the line.

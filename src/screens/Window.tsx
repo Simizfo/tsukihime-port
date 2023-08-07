@@ -16,6 +16,7 @@ import SavesLayer from '../layers/SavesLayer';
 import history from '../utils/history';
 import { HiMenu } from 'react-icons/hi';
 import GestureHandler from '../utils/touch';
+import { isScene } from '../utils/scriptUtils';
 
 //##############################################################################
 //#                                KEY MAPPING                                 #
@@ -30,7 +31,7 @@ const keyMap = new KeyMap({
               {key: "ArrowRight", repeat: false}],
   "auto_play":[()=> objectMatch(displayMode, {text: true, menu: false, choices: false, history: false, load: false, save: false}),
               {key: "E", repeat: false}],
-  "page_nav": [()=> objectMatch(displayMode, {text: true, menu: false, history: false, load: false, save: false}),
+  "page_nav": [()=> objectMatch(displayMode, {menu: false, history: false, load: false, save: false}),
               {key: "PageUp", [KeyMap.args]: "prev"},
               {key: "PageDown", [KeyMap.args]: "next"}],
   "history":  [()=> objectMatch(displayMode, {text: true, menu: false, history: false, load: false, save: false}),
@@ -89,6 +90,10 @@ function page_nav(direction: "prev"|"next") {
         loadSaveState(ss)
       break
     case "next":
+      script.fastForward((line, index, label)=>{
+        return script.getOffsetLine(-1)?.endsWith('\\')
+            || (index == 0) || !isScene(label)
+      })
       //TODO fast-forward to next '\\' or end of scene.
       break;
   }
