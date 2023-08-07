@@ -35,7 +35,7 @@
 .page-content {
     max-width: 1280px;
     margin-inline: auto;
-    padding: min(6%, 2em);
+    padding: min(6vmin, 2em);
     height: inherit;
     width: inherit;
     display: flex;
@@ -44,7 +44,7 @@
     height: 100vh;
 }
 .page-title {
-    font-size: 3em;
+    font-size: clamp(2em, 8vmin, 3em);
     margin-block: 0;
     font-family: Inria Serif;
     font-weight: 700;
@@ -69,6 +69,7 @@ main {
     padding: .2em 1.4em;
     box-shadow: inset 0 0 20px black;
     transition: all .2s ease-out;
+    font-size: clamp(.86em, 3.5vmin, 1em);
 
     &:hover, &:focus-visible {
         color: var(--text-color);
@@ -80,7 +81,7 @@ main {
 
 .back-button {
     align-self: flex-start;
-    margin-top: 1em;
+    margin-top: min(4vmin, 1em);
 }
 
 /* Overlay */

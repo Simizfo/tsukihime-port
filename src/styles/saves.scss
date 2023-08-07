@@ -8,13 +8,13 @@
     gap: 1em;
     flex: 1;
     overflow-x: hidden;
+    font-size: clamp(.9em, 4vmin, 1.1em);
 
     .saves {
         display: flex;
         flex-direction: column;
         gap: .4em;
         overflow-x: hidden;
-        font-size: 1.1em;
         letter-spacing: 1px;
         background-color: var(--menu-container);
         padding: 1em;
@@ -25,7 +25,7 @@
             display: flex;
             flex-direction: row;
             transition: all .2s ease-out;
-            min-height: 100px;
+            min-height: clamp(84px, 25%, 100px);
             overflow: hidden;
 
             &.create, &.import {
@@ -73,7 +73,6 @@
         background-image: linear-gradient(180deg, #00000000 0%, #030312 20%, #030312 80%, #00000000 100%);
         display: flex;
         position: relative;
-        min-width: 220px;
 
         .graphics {
             width: 100%;
@@ -93,6 +92,7 @@
             border: 2px solid #000;
             display: flex;
             flex-direction: column;
+            font-size: .9em;
 
             .actions {
                 align-self: flex-end;
@@ -168,7 +168,7 @@
         }
     }
 
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 720px) and (orientation: portrait) {
         grid-template-columns: 1fr;
         grid-template-rows: 120px 1fr;
 
