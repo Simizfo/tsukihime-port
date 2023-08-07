@@ -5,14 +5,20 @@
     flex-direction: column;
     align-items: center;
     gap: 1em;
+    padding: 1em;
 
     .logo {
-        display: block;
-        width: 400px;
-        max-width: 100%;
-        height: min(70vh, 500px);
-        object-fit: contain;
-        flex: 1;
+        display: flex;
+        overflow: hidden;
+        margin: 1em;
+        justify-content: center;
+        flex: 8;
+
+        img {
+            height: 100%;
+            width: min(94%, 400px);
+            object-fit: contain;
+        }
     }
 
     .info-icon {
@@ -33,19 +39,18 @@
     }
 
     .menu {
+        flex: 1;
         display: flex;
-        padding-block: 2em;
-        min-height: 20vh;
-        margin-top: auto;
-        font-size: 1.3em;
+        margin-bottom: min(10%, 3em);
+        font-size: clamp(1.1em, 7vmin, 1.3em);
         font-weight: bold;
         text-transform: uppercase;
-        letter-spacing: 0.2em;
+        letter-spacing: .2em;
         flex-direction: row;
         gap: 1.4em;
         justify-content: space-evenly;
-        flex-wrap: wrap;
         width: min(800px, 100%);
+        align-items: flex-end;
 
         .menu-item {
             all: unset;
@@ -54,8 +59,6 @@
             user-select: none;
             text-shadow: 0 0 11px #d0d3e1;
             position: relative;
-            text-align: center;
-            height: fit-content;
 
             &:hover, &:focus-visible {
                 cursor: pointer;
@@ -68,7 +71,22 @@
     @media (max-width: 768px) {
         .menu {
             flex-direction: column;
-            gap: 0.6em;
+            gap: .6em;
+            align-items: center;
+        }
+    }
+    @media ((max-width: 768px) or (max-height: 300px)) and (orientation: landscape) {
+        flex-direction: row;
+        .logo {
+            flex: 1;
+            max-height: 100%;
+
+            img {
+                height: auto;
+            }
+        }
+        .menu {
+            margin-bottom: 0;
         }
     }
 }
