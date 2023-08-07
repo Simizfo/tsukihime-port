@@ -178,7 +178,10 @@ const completion = new Proxy({
   get ciel()   { return this.ciel_good   + this.ciel_true  },
   get akiha()  { return this.akiha_good  + this.akiha_true },
   get hisui()  { return this.hisui_good  + this.hisui_true },
-  get kohaku() { return this.kohaku_true }
+  get kohaku() { return this.kohaku_true },
+  get cleared() {
+    return this.ark + this.ciel + this.akiha + this.hisui + this.kohaku
+  }
 }, {set: ()=> true }) // setter prevents error when trying to write the values
 
 const flagsProxy = new Proxy({}, {
@@ -212,8 +215,9 @@ function getVarLocation(fullName: VarName): [any, string] {
     parent = progress.regard
     name = name.substring(0,name.indexOf('_'))
   }
-  else if (/^clear_[a-z]+/.test(name)) {
+  else if (/^clear(ed|_[a-z])+/.test(name)) {
     parent = completion
+    name = name.substring(name.indexOf('_')+1) // 0 if no '_' in name
   }
   else {
     throw Error(`Unknown variable ${name}`)

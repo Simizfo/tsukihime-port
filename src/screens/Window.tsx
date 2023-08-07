@@ -72,7 +72,7 @@ const keyMap = new KeyMap({
 
 function next() {
   if (objectMatch(displayMode, {choices: false, menu: false, history: false})) {
-    if (!displayMode.text && script.currentLine.startsWith('`')) // text has been hidden manually
+    if (!displayMode.text && script.currentLine?.startsWith('`')) // text has been hidden manually
       toggleGraphics()
     else
       script.next()
@@ -136,7 +136,7 @@ const Window = () => {
     const swipeHandler = new GestureHandler(rootElmtRef.current, {
       swipeTrigDistance: 50,
       onSwipe: (direction)=> {
-        if (objectMatch(displayMode, {history: false, menu: false})) {
+        if (objectMatch(displayMode, {history: false, menu: false, save: false, load: false})) {
           switch(direction) {
             case "left" : toggleMenu(); return true
             case "down" : toggleHistory(); return true
