@@ -1,9 +1,16 @@
 import { motion } from "framer-motion"
 import '../styles/saves.scss'
 import SavesLayout from "../components/SavesLayout"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import { SCREEN } from "../utils/variables"
 
 const LoadScreen = () => {
+  const navigate = useNavigate()
+
+  function back(saveLoaded: boolean) {
+    if (!saveLoaded)
+      navigate(SCREEN.TITLE)
+  }
   return (
     <motion.div
       className="page" id="saves"
@@ -11,12 +18,7 @@ const LoadScreen = () => {
       animate={{opacity: 1}}
       exit={{opacity: 0}}>
       <div className="page-content">
-        <h2 className="page-title">Load</h2>
-        <main>
-          <SavesLayout variant="load" />
-        </main>
-
-        <Link to="/title" className="menu-btn back-button">Back</Link>
+        <SavesLayout variant="load" back={back}/>
       </div>
     </motion.div>
   )
