@@ -40,7 +40,8 @@ export function moveBg(direction: "up"|"down") {
 function extractImage(image: string) {
   if (image.startsWith('"') && image.endsWith('"')) {
     // remove ':a;', 'image/', '"', '.jpg'
-    image = image.replace(/:a;|image[\/\\]|"|\.jpg|\.png/g, '')
+    image = image.substring(1, image.length-2)
+                 .replace(/:a;|image[\/\\]|\.\w+$/g, '')
                  .replace('\\', '/')
     switch (image) {
       case "bg/ima_10"  : image = "#000000"; break
