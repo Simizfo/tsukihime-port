@@ -275,6 +275,7 @@
                 font-size: clamp(1em, 4.6vmin, 1.2em);
                 padding: 1.2em;
                 overflow-y: auto;
+                align-items: flex-start;
             }
 
             button, a {
@@ -295,16 +296,22 @@
             }
             .action-icons {
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 margin-top: auto;
                 padding-top: 1em;
-                font-size: 1.1em;
+                width: 100%;
 
                 button {
                     border: 1px solid;
                     border-radius: 4px;
                     padding: 0.2em;
                     width: fit-content;
+                    color: rgb(0 127 201);
+                    background-color: rgb(1 17 27 / 30%);
+
+                    &:hover, &:focus-visible {
+                        color: rgb(119 214 255);
+                    }
                 }
             }
         }

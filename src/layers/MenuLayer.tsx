@@ -3,6 +3,7 @@ import { addEventListener, isFullscreen, toggleFullscreen } from "../utils/utils
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 import { IoClose } from "react-icons/io5"
 import { AiOutlineFullscreen, AiOutlineFullscreenExit } from "react-icons/ai"
+import { BiSkipNext } from "react-icons/bi"
 import { SCREEN, displayMode, settings } from "../utils/variables"
 import { quickLoad, quickSave } from "../utils/savestates"
 import { useObserver } from "../utils/Observer"
@@ -123,6 +124,9 @@ const MenuLayer = () => {
           <div className="action-icons">
             <button onClick={toggleVolume}>
               {mute ? <FaVolumeMute /> : <FaVolumeUp />}
+            </button>
+            <button onClick={()=>{}}>
+              <BiSkipNext />
             </button>
             <button onClick={toggleFullscreen}>
               {fullscreen ? <AiOutlineFullscreenExit /> : <AiOutlineFullscreen />}
