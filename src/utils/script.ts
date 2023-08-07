@@ -242,7 +242,7 @@ async function processCurrentLine() {
   if (currentCommand) {
     if (lastLine.index == index &&
         lastLine.label == label)
-      return
+      console.warn("re-processing same line", label, index)
     // Index has been changed by outside this function.
     // Skip remaining instructions in the previous line.
     // Resolve the promise of the ongoing command.
@@ -256,17 +256,21 @@ async function processCurrentLine() {
   lastLine.index = index
   lastLine.label = label
   if (index < lines.length) {
-    if (isScene(label) && (index == 0 || lines[index-1].endsWith('\\')))
+    const newPage = isScene(label) &&
+                    (index == 0 || lines[index-1].endsWith('\\'))
+    if (newPage)
       history.onPageBreak()
 
     let line = sceneLines[index]
     console.log(`${label}:${index}: ${line}`)
     await processLine(line)
-    if (gameContext.index != index || gameContext.label != label) {
+    if (lineSkipped || gameContext.index != index || gameContext.label != label) {
       // the context has been changed while processing the line.
       // processCurrentLine() will be called again by the observer.
       // The index should not be incremented
       lineSkipped = false
+      if (newPage)
+        history.pop() // if the skipped line is the first of the page, remove page from history
     } else {
       gameContext.index++
     }

@@ -3,6 +3,7 @@ import { defaultGameContext, defaultProgress, gameContext, progress, settings } 
 import history from './history';
 import { toast } from "react-toastify";
 import { FaSave } from "react-icons/fa"
+import { notifyObservers } from "./Observer";
 
 //##############################################################################
 //#                                 SAVESTATES                                 #
@@ -138,6 +139,10 @@ export function loadSaveState(ss: SaveStateId | SaveState) {
     history.onSaveStateLoaded(ss as SaveState)
     deepAssign(gameContext, (ss as SaveState).context)
     deepAssign(progress, (ss as SaveState).progress)
+
+    // force re-processing current line if the index is unchanged
+    notifyObservers(gameContext, 'index')
+
     return true
   }
   return false
