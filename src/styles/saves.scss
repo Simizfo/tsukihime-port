@@ -4,13 +4,22 @@
 
 #saves-layout {
     display: grid;
+    grid-template-areas:
+        "title title"
+        "list info"
+        "buttons buttons";
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: min-content 1fr min-content;
     gap: 1em;
     flex: 1;
     overflow-x: hidden;
     font-size: clamp(.9em, 4vmin, 1.1em);
 
+    .page-title {
+        grid-area: title;
+    }
     .saves {
+        grid-area: list;
         display: flex;
         flex-direction: column;
         gap: .4em;
@@ -69,6 +78,7 @@
     }
 
     .info {
+        grid-area: info;
         overflow: hidden;
         background-image: linear-gradient(180deg, #00000000 0%, #030312 20%, #030312 80%, #00000000 100%);
         display: flex;
@@ -117,6 +127,10 @@
                 }
             }
         }
+    }
+
+    .save-buttons {
+        grid-area: buttons;
     }
 
     .graphics {
@@ -169,12 +183,15 @@
     }
 
     @media screen and (max-width: 720px) and (orientation: portrait) {
+        grid-template-areas:
+            "title"
+            "info"
+            "list"
+            "buttons";
         grid-template-columns: 1fr;
-        grid-template-rows: 120px 1fr;
+        grid-template-rows: min-content 120px 1fr min-content;
 
         .info {
-            grid-row: 1;
-
             .deta {
                 flex: initial;
                 margin-left: auto;
@@ -185,5 +202,12 @@
                 }
             }
         }
+    }
+
+    @media screen and (max-height: 480px) and (orientation: landscape) {
+        grid-template-areas:
+            "list title"
+            "list info"
+            "list buttons";
     }
 }
