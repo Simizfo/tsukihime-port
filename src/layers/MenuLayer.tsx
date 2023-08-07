@@ -4,7 +4,7 @@ import { FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 import { IoClose } from "react-icons/io5"
 import { AiOutlineFullscreen, AiOutlineFullscreenExit } from "react-icons/ai"
 import { BiSkipNext } from "react-icons/bi"
-import { SCREEN, displayMode, settings } from "../utils/variables"
+import { SCREEN, displayMode, gameContext, settings } from "../utils/variables"
 import { quickLoad, quickSave } from "../utils/savestates"
 import { useObserver } from "../utils/Observer"
 import { useNavigate } from "react-router-dom"
@@ -92,6 +92,12 @@ const MenuLayer = () => {
     settings.volume.master = - settings.volume.master
   }
 
+  const fastForwardScene = ()=> {
+    const currLabel = gameContext.label
+    script.fastForward((_l, _i, label)=> label != currLabel)
+    displayMode.menu = false
+  }
+
   return (
     <nav className={`box box-menu ${display ? "show" : ""}`}>
       <div className="menu-container" ref={menuRef}>
@@ -125,7 +131,7 @@ const MenuLayer = () => {
             <button onClick={toggleVolume}>
               {mute ? <FaVolumeMute /> : <FaVolumeUp />}
             </button>
-            <button onClick={()=>{}}>
+            <button onClick={fastForwardScene}>
               <BiSkipNext />
             </button>
             <button onClick={toggleFullscreen}>

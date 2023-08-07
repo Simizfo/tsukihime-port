@@ -51,9 +51,11 @@ export const script = {
   },
 
   set autoPlay(enable: boolean) {
-    autoPlay = enable
-    if (enable) {
-      makeAutoPlay()
+    if (enable != autoPlay) {
+      autoPlay = enable
+      if (enable) {
+        makeAutoPlay()
+      }
     }
   },
 
@@ -74,11 +76,17 @@ export const script = {
     gameContext.index = index
   },
 
-  fastForward(condition: FastForwardStopCondition, delay = settings.fastForwardDelay) {
+  fastForward(condition: FastForwardStopCondition|undefined,
+              delay = settings.fastForwardDelay) {
     fastForwardDelay = delay
     fastForwardStopCondition = condition
+    if (fastForwardStopCondition)
       makeAutoPlay()
-  }
+  },
+
+  get isFastForward() {
+    return fastForwardStopCondition != undefined
+  },
 }
 export default script
 
@@ -224,7 +232,6 @@ export async function processLine(line: string) {
           skipCommand = resolve // if the command must be skipped at some point
           if (autoPlay || fastForwardStopCondition)
             makeAutoPlay()
-
         } else
           resolve()
       })

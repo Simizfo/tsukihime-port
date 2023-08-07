@@ -17,6 +17,7 @@ import history from '../utils/history';
 import { HiMenu } from 'react-icons/hi';
 import GestureHandler from '../utils/touch';
 import { isScene } from '../utils/scriptUtils';
+import { toast } from 'react-toastify';
 
 //##############################################################################
 //#                                KEY MAPPING                                 #
@@ -75,9 +76,24 @@ function next() {
   if (objectMatch(displayMode, {choices: false, menu: false, history: false})) {
     if (!displayMode.text && script.currentLine?.startsWith('`')) // text has been hidden manually
       toggleGraphics()
-    else
+    else if (script.isFastForward || script.autoPlay) {
+      if (script.isFastForward) {
+        script.fastForward(undefined)
+        toast("Fast-Forward stopped", {
+          autoClose: 500,
+          toastId: 'ff-stop'
+        })
+      }
+      if (script.autoPlay) {
+        script.autoPlay = false
+        toast("Auto-play stopped", {
+          autoClose: 500,
+          toastId: 'ap-stop'
+        })
+      }
+    } else {
       script.next()
-    script.autoPlay = false
+    }
   }
 }
 
@@ -90,11 +106,13 @@ function page_nav(direction: "prev"|"next") {
         loadSaveState(ss)
       break
     case "next":
-      script.fastForward((line, index, label)=>{
-        return script.getOffsetLine(-1)?.endsWith('\\')
-            || (index == 0) || !isScene(label)
-      })
-      //TODO fast-forward to next '\\' or end of scene.
+      if (!script.isFastForward) {
+        const currLabel = gameContext.label
+        script.fastForward((_l, _i, label)=>{
+          return script.getOffsetLine(-1)?.endsWith('\\')
+              || label != currLabel
+        })
+      }
       break;
   }
   script.autoPlay = false
