@@ -100,7 +100,7 @@ main {
     width: 100%;
     align-self: center;
     border-radius: .6em;
-    min-height: max(300px, 50vh);
+    min-height: min(100%, 50vh);
     margin: .5em;
     box-shadow: 0 5px 26px #030a32;
     padding: 1em;
@@ -109,6 +109,7 @@ main {
     .close-btn {
         display: flex;
         margin-inline: auto;
+        margin-top: 1em;
     }
 }
 .ReactModal__Overlay {
