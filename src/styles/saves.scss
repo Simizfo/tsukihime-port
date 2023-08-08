@@ -150,6 +150,10 @@
 
     .graphics {
         aspect-ratio: 4/3;
+
+        div.bg img.blur {
+            filter: blur(20px);
+        }
     }
 
     @media screen and (max-width: 720px) and (orientation: portrait) {
