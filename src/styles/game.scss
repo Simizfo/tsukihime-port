@@ -160,7 +160,6 @@
         overflow: hidden;
         backdrop-filter: blur(1px);
 
-        $width: 200px;
         &.show {
             z-index: 4;
             opacity: 1;
@@ -171,6 +170,7 @@
             }
         }
 
+        $width: clamp(170px, 50vmin, 200px);
         .menu-container {
             background: linear-gradient(180deg, hsla(205, 89%, 35%, 0.2) 0%,
                                                 hsla(217, 79%, 28%, 0.6) 20%,
@@ -178,7 +178,7 @@
                                                 hsla(205, 89%, 35%, 0.2) 100%);
             border-inline: 2px solid #19b39c8c;
             position: absolute;
-            right: -$width;
+            right: calc($width * -1);
             height: 100%;
             width: $width;
             transition: all var(--panel-trans-time) ease-out;
@@ -216,19 +216,19 @@
                 }
             }
             .action-icons {
-                display: flex;
-                justify-content: space-between;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: clamp(2px, 2vmin, 6px);
                 margin-top: auto;
                 padding-top: 1em;
                 width: 100%;
 
                 button {
-                    border: 1px solid;
                     border-radius: 4px;
-                    padding: 0.2em;
-                    width: fit-content;
+                    padding: .2em;
                     color: rgb(0 127 201);
                     background-color: rgb(1 17 27 / 30%);
+                    justify-content: center;
 
                     &:hover, &:focus-visible {
                         color: rgb(119 214 255);
