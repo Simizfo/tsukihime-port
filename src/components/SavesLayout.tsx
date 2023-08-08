@@ -3,7 +3,7 @@ import { SCREEN, displayMode } from "../utils/variables"
 import { addEventListener, convertText, parseBBcode } from "../utils/utils"
 import { SceneName } from "../types";
 import { SCENE_ATTRS } from "../utils/constants";
-import { SaveState, QUICK_SAVE_ID, deleteSaveState, exportSaveFile, getSaveState, listSaveStates, loadSaveState, storeLastSaveState } from "../utils/savestates";
+import { SaveState, QUICK_SAVE_ID, deleteSaveState, exportSaveFile, getSaveState, listSaveStates, loadSaveState, storeCurrentState, addSavesChangeListener, removeSavesChangeListener } from "../utils/savestates";
 import { getSceneTitle } from "../utils/scriptUtils";
 import { BsFileEarmarkArrowUp } from "react-icons/bs";
 import { FaPlusCircle, FaTrash, FaDownload } from "react-icons/fa";
@@ -35,12 +35,6 @@ function phaseDay(saveState: SaveState) {
   return parseBBcode(SCENE_ATTRS.days[saveState.context.phase.day])
 }
 
-function deleteSave(id: number) {
-  if (confirm("Are you sure you want to delete this save ?")) {
-    deleteSaveState(id)
-  }
-}
-
 function exportSaves(...ids: number[]) {
   if (ids.length == 0)
     exportSaveFile({ omitSettings: true})
@@ -64,7 +58,7 @@ const SaveListItem = ({id, saveState, onSelect, ...props}: SaveListItemProps)=> 
         {...(id==QUICK_SAVE_ID ? {'quick-save':''} : {})}
         {...props}>
       <div className="graphics">
-        {graphicElements(saveState.context.graphics)}
+        {graphicElements(saveState.graphics ?? saveState.context.graphics)}
       </div>
       <div className="deta">
         <div className="date">
@@ -85,12 +79,12 @@ const SaveDetails = ({id, saveState, deleteSave, ...props}: SaveDetailsProps)=> 
   return (
     <div className="info" {...props}>
       <div className="graphics">
-        {graphicElements(saveState?.context.graphics??{bg:"notreg"})}
+        {graphicElements(saveState?.graphics ?? saveState?.context.graphics ?? {bg:"notreg"})}
       </div>
-      {id != undefined &&
+      {id != undefined && saveState != undefined &&
         <div className="deta">
-          <div>{phaseTitle(saveState as SaveState)}</div>
-          <div>{phaseDay(saveState as SaveState)}</div>
+          <div>{phaseTitle(saveState)}</div>
+          <div>{phaseDay(saveState)}</div>
 
           <div className="actions">
             <button onClick={deleteSave.bind(null, id)}>
@@ -119,35 +113,40 @@ const SavesLayer = ({variant, back, ...props}: Props) => {
   const [saves, setSaves] = useState<Array<[number,SaveState]>>([])
   const [focusedId, setFocusedSave] = useState<number>()
 
-  function updateSavesList() {
-    setSaves(listSaveStates().sort(compareSaveStates))
-  }
-
   useEffect(()=> {
-    updateSavesList()
+    const onChange = ()=> {
+      setSaves(listSaveStates().sort(compareSaveStates))
+    }
+    addSavesChangeListener(onChange)
+    onChange()
+    return removeSavesChangeListener.bind(null, onChange) as VoidFunction
   }, [])
 
   function createSave() {
-    storeLastSaveState(new Date().getTime())
-    updateSavesList()
+    storeCurrentState(new Date().getTime())
   }
 
   function importSaves() {
     loadSaveFile(undefined, { ignoreSettings: true })
-      .then(updateSavesList)
   }
 
   function onSaveSelect(id: number) {
     if (variant == "save") {
-      if (confirm("Are you sure you want to overwrite this save?")) {
-        storeLastSaveState(id)
-        updateSavesList()
-      }
+      if (confirm("Are you sure you want to overwrite this save?"))
+        storeCurrentState(id)
     } else {
       loadSaveState(id)
       if (displayMode.screen != SCREEN.WINDOW)
         navigate(SCREEN.WINDOW)
       back(true)
+    }
+  }
+
+  function deleteSave(id: number) {
+    if (confirm("Are you sure you want to delete this save ?")) {
+      deleteSaveState(id)
+      if (id == focusedId)
+        setFocusedSave(undefined)
     }
   }
 

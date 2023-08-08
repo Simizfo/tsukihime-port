@@ -306,7 +306,7 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
     } : {})
   }
   const classList = className?.trim().split("") ?? []
-  classList.push('box', 'box-graphics')
+  classList.push('box', 'graphics', 'box-graphics')
   if (quake) classList.push('quake')
   if (monoChrome) classList.push("monochrome")
   return (

@@ -124,3 +124,88 @@ main {
 .ReactModal__Overlay--before-close{
     opacity: 0;
 }
+
+
+.graphics {
+    z-index: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 1fr 50%;
+    background: #000;
+
+    div {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+        &.l, &.c, &.r {
+            position: relative;
+            overflow: visible;
+            grid-row: 1;
+            display: grid;
+
+            img {
+                position: absolute;
+                bottom: 0;
+                justify-self: center;
+                height: inherit;
+                object-fit: cover;
+            }
+        }
+        &:not(.phase) {
+            &.l { grid-column: 1; }
+            &.c { grid-column: 2; }
+            &.r { grid-column: 3; }
+        }
+
+        &.l.phase, &.r.phase {
+            --margin: 1em;
+            grid-column: 1 / span 3;
+            height: calc(100% - 2 * var(--margin));
+            width: calc(100% - 2 * var(--margin));
+            font-size: 150%;
+            text-shadow: #000 1px 1px 1px, #000 -1px 1px 1px,
+                            #000 -1px -1px 1px, #000 1px -1px 1px;
+            margin: var(--margin);
+            .phase-title, .phase-day {
+                position: absolute;
+                width: 100%;
+            }
+            &.l {
+                text-align: left;
+                .phase-day { top: calc(2.5em); }
+                .phase-title { bottom: calc(100% - 2.5em); }
+            }
+            &.r {
+                text-align: right;
+                .phase-title { bottom: calc(2.5em); }
+                .phase-day { top: calc(100% - 2.5em); }
+            }
+        }
+
+        &.bg {
+            position: absolute;
+            overflow: hidden;
+            inset: 0;
+            display: block;
+            width: inherit;
+
+            img {
+                width: inherit;
+                height: inherit;
+                object-fit: cover;
+                transition: object-position var(--transition-time) ease-out;
+
+                &[bg-align="top"] { object-position: top; }
+                &[bg-align="center"] { object-position: center; }
+                &[bg-align="bottom"] { object-position: bottom; }
+            }
+        }
+    }
+    &.monochrome {
+        div {
+            mix-blend-mode: multiply;
+            filter: grayscale(1);
+        }
+    }
+}

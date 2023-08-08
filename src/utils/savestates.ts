@@ -15,6 +15,7 @@ export type SaveState = {
   context: typeof gameContext;
   progress: typeof progress;
   text?: string;
+  graphics?: typeof gameContext.graphics;
   date?: number;
 }
 
@@ -23,6 +24,7 @@ type SaveStateId = number
 export const QUICK_SAVE_ID: SaveStateId = 0
 
 const saveStates = new Map<SaveStateId, SaveState>()
+const listeners = new Array<VoidFunction>()
 
 {
   const restored = localStorage.getItem(STORAGE_KEY)
@@ -44,6 +46,7 @@ function restoreSaveStates(keyValuePairs: IterableIterator<[SaveStateId, SaveSta
     saveStates.set(id, ss as SaveState)
   }
   updateLocalStorage()
+  notifyListeners()
 }
 
 /**
@@ -70,6 +73,7 @@ export function storeSaveState(id: SaveStateId, ss: SaveState) {
     ss.date = Date.now()
   saveStates.set(id, ss)
   updateLocalStorage()
+  notifyListeners()
 }
 
 /**
@@ -77,11 +81,12 @@ export function storeSaveState(id: SaveStateId, ss: SaveState) {
  * with the specified id.
  * @param id unique id of the savestate in the map.
  */
-export function storeLastSaveState(id: SaveStateId) {
+export function storeCurrentState(id: SaveStateId) {
   const ss = history.last?.saveState
   if (!ss)
     return false
   ss.text = history.last.text.trim()
+  ss.graphics = deepAssign({}, gameContext.graphics)
   storeSaveState(id, ss)
   return true
 }
@@ -93,6 +98,7 @@ export function storeLastSaveState(id: SaveStateId) {
 export function deleteSaveState(id: SaveStateId) {
   saveStates.delete(id)
   updateLocalStorage()
+  notifyListeners()
 }
 
 /**
@@ -101,6 +107,7 @@ export function deleteSaveState(id: SaveStateId) {
 export function clearSaveStates() {
   saveStates.clear()
   updateLocalStorage()
+  notifyListeners()
 }
 
 export function getSaveState(id: SaveStateId) {
@@ -153,7 +160,7 @@ export function loadSaveState(ss: SaveStateId | SaveState) {
  * with the id 'quick".
  */
 export const quickSave = () => {
-  if (storeLastSaveState(QUICK_SAVE_ID)) {
+  if (storeCurrentState(QUICK_SAVE_ID)) {
     toast('Progress has been saved', {
       icon: FaSave,
       autoClose: 1400,
@@ -208,6 +215,24 @@ export function blankSaveState() : SaveState {
   return {
     context: defaultGameContext,
     progress: defaultProgress
+  }
+}
+
+export function addSavesChangeListener(onChange: VoidFunction) {
+  if (listeners.indexOf(onChange) >= 0)
+    return
+  listeners.push(onChange)
+}
+export function removeSavesChangeListener(onChange: VoidFunction) {
+  const index = listeners.indexOf(onChange)
+  if (index == -1)
+    return false
+  listeners.splice(index, 1)
+  return true
+}
+function notifyListeners() {
+  for (const listener of listeners) {
+    listener()
   }
 }
 
