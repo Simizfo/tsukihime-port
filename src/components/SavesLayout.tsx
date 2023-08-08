@@ -53,7 +53,7 @@ type SaveListItemProps = {
 const SaveListItem = ({id, saveState, onSelect, ...props}: SaveListItemProps)=> {
   const date = new Date(saveState.date as number)
   return (
-    <div className="save-container" key={id}
+    <button className="save-container" key={id}
         onClick={onSelect.bind(null, id)}
         {...(id==QUICK_SAVE_ID ? {'quick-save':''} : {})}
         {...props}>
@@ -68,7 +68,7 @@ const SaveListItem = ({id, saveState, onSelect, ...props}: SaveListItemProps)=> 
           {convertText(saveState.text ?? "")}
         </div>
       </div>
-    </div>
+    </button>
   )
 }
 type SaveDetailsProps = {
@@ -161,7 +161,7 @@ const SavesLayer = ({variant, back, ...props}: Props) => {
             <FaPlusCircle />
           </button>
         </> : <>
-          <label htmlFor="import" className="save-container import">
+          <label htmlFor="import" className="save-container import" tabIndex={0}>
             <BsFileEarmarkArrowUp />
           </label>
           <input type="file" id="import" onChange={importSaves}
