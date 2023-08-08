@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { SCREEN, displayMode } from "../utils/variables"
 import { addEventListener, convertText, parseBBcode } from "../utils/utils"
 import { SceneName } from "../types";
-import { SCENE_ATTRS } from "../utils/constants";
+import { SAVE_EXT, SCENE_ATTRS } from "../utils/constants";
 import { SaveState, QUICK_SAVE_ID, deleteSaveState, exportSaveFile, getSaveState, listSaveStates, loadSaveState, storeCurrentState, addSavesChangeListener, removeSavesChangeListener } from "../utils/savestates";
 import { getSceneTitle } from "../utils/scriptUtils";
 import { BsFileEarmarkArrowUp } from "react-icons/bs";
@@ -165,7 +165,7 @@ const SavesLayer = ({variant, back, ...props}: Props) => {
             <BsFileEarmarkArrowUp />
           </label>
           <input type="file" id="import" onChange={importSaves}
-            accept=".thsave" style={{display: "none"}}/>
+            accept={`.${SAVE_EXT}`} style={{display: "none"}}/>
         </>}
 
         {saves.map(([id, ss]) => <SaveListItem id={id}
