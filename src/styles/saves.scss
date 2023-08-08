@@ -86,10 +86,8 @@
                 font-size: 80%;
                 font-style: italic;
                 background: rgba(255, 255, 255, 0.1);
-                border-top-left-radius: 1.5em;
-                padding-left: 1.5em;
-                padding-right: 0.5em;
-
+                padding: 0.1em 0.5em 0.1em 1.5em;
+                clip-path: polygon(1.5em 0%, 100% 0, 100% 100%, 0 100%);
             }
         }
     }
