@@ -33,4 +33,5 @@ export enum TEXT_SPEED {
   slow = 50,
 }
 
+export const SAVE_EXT = "thweb"
 export const HISTORY_MAX_PAGES = 20

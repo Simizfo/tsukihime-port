@@ -4,6 +4,7 @@ import history from './history';
 import { toast } from "react-toastify";
 import { FaSave } from "react-icons/fa"
 import { notifyObservers } from "./Observer";
+import { SAVE_EXT } from "./constants";
 
 //##############################################################################
 //#                                 SAVESTATES                                 #
@@ -269,7 +270,7 @@ export function exportSaveFile({
   });
   const date = new Date(listSaveStates().filter(([id,_ss])=>saveStateFilter?.includes(id))[0][1].date as number)
   const dateString = `${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, '0')}${date.getDate()}`
-  textFileUserDownload(content, `tsukihime_${dateString}.thsave`)
+  textFileUserDownload(content, `tsukihime_${dateString}.${SAVE_EXT}`)
 }
 
 type loadSaveFileOptions = {
@@ -292,7 +293,7 @@ export async function loadSaveFile(save: string | undefined = undefined, {
       ignoreSaveStates = true
     }: loadSaveFileOptions = {}): Promise<boolean> {
   if (!save) {
-    let files = await requestFilesFromUser({ multiple: true, accept: ".thsave" })
+    let files = await requestFilesFromUser({ multiple: true, accept: `.${SAVE_EXT}` })
     if (!files)
       return false; // canceled by user
     if (files instanceof File)
