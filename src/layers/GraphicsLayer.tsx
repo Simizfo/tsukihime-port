@@ -330,7 +330,7 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
         <Fragment key={pos}>
           {(pos != 'bg' && ([pos, 'a'].includes(trans_pos))) &&
             <>
-            {currImages[pos]?.startsWith('"') && prevImages[pos]?.startsWith('"') && effect=="crossfade" &&
+            {currImages[pos]?.includes('/') && prevImages[pos]?.includes('/') && effect=="crossfade" &&
               // add an opaque background to the image to prevent the background
               // from being visible by transparency
               graphicElement(pos, prevImages[pos], {
