@@ -2,7 +2,7 @@ import { useState, memo, Fragment } from "react";
 import { displayMode, gameContext, settings } from "../utils/variables";
 import { observe, useChildrenObserver, useObserver } from "../utils/Observer";
 import { RouteDayName, RouteName } from "../types";
-import { SCENE_ATTRS } from "../utils/constants";
+import { IMAGES_FOLDERS, SCENE_ATTRS } from "../utils/constants";
 import { parseBBcode } from "../utils/utils";
 import { findImageObjectByName } from "../utils/gallery";
 
@@ -198,13 +198,13 @@ function getTransition(type: string, skipTransition = false) {
   return {effect, duration}
 }
 
-function imgUrl(img: string) {
-  const folder: string = settings.imagesFolder
+function imgUrl(img: string, thumbnail=false) {
+  const folder: string = thumbnail ? IMAGES_FOLDERS.image : settings.imagesFolder
   return `${folder}/${img}.webp`
 }
 
 export function graphicElement(pos: SpritePos, image: string,
-                                _attrs: Record<string, any> = {}) {
+                                _attrs: Record<string, any> = {}, thumbnail=false) {
 
   image = image || ((pos=="bg") ? "#000000" : "#00000000")
   const {key, style, ...attrs} = _attrs
@@ -229,7 +229,7 @@ export function graphicElement(pos: SpritePos, image: string,
           <span className="phase-title">{_phaseTitle}</span><br/>
           {_dayTitle && <span className="phase-day">{_dayTitle}</span>}
       </> : !isColor &&
-        <img src={imgUrl(image)} alt={`[[sprite:${image}]]`}
+        <img src={imgUrl(image, thumbnail)} alt={`[[sprite:${image}]]`}
           className={findImageObjectByName(image)?.sensitive && settings.blurThumbnails ? "blur" : ""}
           {...attrs}
           style={style}
@@ -241,12 +241,12 @@ export function graphicElement(pos: SpritePos, image: string,
 
 export function graphicElements(images: Partial<Record<SpritePos, string>>,
                           attrs?: Partial<Record<SpritePos, Record<string,any>>>|
-                                  ((pos:SpritePos)=>Record<string,any>)) {
+                                  ((pos:SpritePos)=>Record<string,any>), thumbnail=false) {
   return POSITIONS.map(pos => images[pos] && graphicElement(pos,
     images[pos] as string, {
       key: images[pos]||pos,
       ...(typeof attrs == 'function' ? attrs(pos) : attrs?.[pos] ?? {})
-    }))
+    }, thumbnail))
 }
 
 //##############################################################################
