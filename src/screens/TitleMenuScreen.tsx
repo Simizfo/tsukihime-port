@@ -84,7 +84,8 @@ const TitleMenuScreen = () => {
             </div>
 
             <div>
-              No data collected, everything is stored on your browser.
+              No data collected, everything is stored in your browser.
+              Manage your data <Link to="/config">here</Link> (see Advanced panel)
             </div>
           </div>
 
