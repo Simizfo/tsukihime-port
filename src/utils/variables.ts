@@ -28,7 +28,6 @@ export const defaultSettings = deepFreeze({
   blurThumbnails: true,
   warnHScenes: false, // [not implemented]
   // other settings
-  skipDisclaimer: false,
   volume: {
     master: 5,
     track: 10,

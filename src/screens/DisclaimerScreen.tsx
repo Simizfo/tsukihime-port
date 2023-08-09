@@ -9,7 +9,7 @@ const DisclaimerScreen = () => {
   useEffect(()=> {
     const timeout = setTimeout(()=> {
       sawDisclaimer()
-    }, 3000)
+    }, 4000)
     return ()=> clearTimeout(timeout)
   }, [])
 
@@ -28,8 +28,7 @@ const DisclaimerScreen = () => {
 
       <div className="box">
         <p>
-          This is a fan-made port of Tsukihime, a visual novel published on 2000 by Type-Moon,
-          which can't be purchased anymore.
+          This is a web version of <i>Tsukihime</i>, a visual novel published on 2000 by Type-Moon.
         </p>
         <p>
           The game contains adult content and is intended for mature audiences only.

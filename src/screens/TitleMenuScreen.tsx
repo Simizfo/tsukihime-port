@@ -71,8 +71,7 @@ const TitleMenuScreen = () => {
         <div className='title-modal'>
           <div className='links'>
             <div>
-              This is a fan-made port of the original game published on 2000 by Type-Moon,
-              which can't be purchased anymore.
+              This is a web version of <i>Tsukihime</i>, a visual novel published on 2000 by Type-Moon.
             </div>
 
             <div>
