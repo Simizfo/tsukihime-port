@@ -17,6 +17,10 @@ const SkipLayer = () => {
       skipConfirm.current = confirm
       setSceneTitle(title)
     }
+    script.onSkipCancel = ()=> {
+      displayMode.skip = false
+      skipConfirm.current = undefined
+    }
   }, [])
 
   useObserver(setDisplay, displayMode, 'skip')

@@ -167,6 +167,11 @@ class PropertiesObserver<T extends Observable> {
             }
         }
     }
+
+    notifyPending<K extends keyof T>(property: K) {
+        const observer = this.observers.get(property)
+        return observer?.modified
+    }
 }
 
 const callbacksSymbol = Symbol("callbacks")
@@ -249,6 +254,11 @@ export function unobserve<T extends Observable, P extends keyof T>
  */
 export function notifyObservers<T extends Observable>(object: T, property: keyof T) {
     queueMicrotask(object[observerSymbol].notifyObservers.bind(object[observerSymbol], property))
+}
+
+export function isObserverNotifyPending<T extends Observable>(object: T, property: keyof T) {
+    const observer = PropertiesObserver.getObserver<T>(object, false)
+    return observer?.notifyPending(property) ?? false
 }
 
 /**

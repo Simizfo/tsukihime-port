@@ -1,9 +1,9 @@
 import { commands as choiceCommands } from "../layers/ChoicesLayer"
 import { commands as graphicCommands } from "../layers/GraphicsLayer"
 import { commands as textCommands } from "../layers/TextLayer"
-import { LabelName, Page, RouteDayName, RouteName, SceneName } from "../types"
+import { LabelName, SceneName } from "../types"
 import { commands as audioCommands } from "./AudioManager"
-import { observe } from "./Observer"
+import { isObserverNotifyPending, observe } from "./Observer"
 import history from "./history"
 import { SCENE_ATTRS } from "./constants"
 import Timer, { commands as timerCommands } from "./timer"
@@ -11,13 +11,14 @@ import { checkIfCondition, extractInstructions, fetchFBlock, fetchScene, getPhas
 import { commands as variableCommands, gameContext, settings, displayMode, SCREEN } from "./variables"
 import { toast } from "react-toastify"
 type Instruction = {cmd: string, arg: string}
-type CommandHandler = {next: VoidFunction, autoPlayDelay?: number}
+type CommandHandler = {next: VoidFunction, cancel?: VoidFunction, autoPlayDelay?: number}
 type CommandProcessFunction =
     ((arg: string, cmd: string, onFinish: VoidFunction)=>CommandHandler|Instruction[]|void)
 type CommandMap = Map<string, CommandProcessFunction|null>
 
 type SkipCallback = (sceneTitle: string|undefined, confirm:(skip: boolean)=>void)=>void
 let skipCallback: SkipCallback = ()=> { throw Error(`script.onSkipPrompt not specified`) }
+let skipCancelCallback: VoidFunction = ()=> { throw Error(`script.onSkipCancel not specified`) }
 
 type FastForwardStopCondition = (line:string, index: number, label: string)=>boolean
 
@@ -41,6 +42,15 @@ export const script = {
   set onSkipPrompt(callback: SkipCallback) {
     skipCallback = callback
   },
+
+  /**
+   * Set the callback to call when a skip prompt is canceled by loading
+   * another save
+   */
+  set onSkipCancel(callback: VoidFunction) {
+    skipCancelCallback = callback
+  },
+
   /**
    * function to call to move to the next step of the current command.
    * Most commands will interpet it as a "skip".
@@ -103,6 +113,15 @@ function processPhase(dir: "l"|"r") {
     {cmd: "click", arg: Math.max(500, settings.nextPageDelay).toString()},
     ...extractInstructions(`bg #000000,%type_crossfade_fst`)
   ];
+}
+
+function cancelCurrentCommand() {
+  currentCommand?.cancel?.()
+  if (skipCommand) {
+    lineSkipped = true;
+    skipCommand()
+  }
+  currentCommand = undefined
 }
 
 //##############################################################################
@@ -196,10 +215,10 @@ function makeAutoPlay() {
   })
   timer.start()
   cmd.next = ()=> { timer.cancel(); next() }
-  const onFinish = skipCommand
+  const skip = skipCommand
   skipCommand = ()=> {
     timer.cancel()
-    onFinish?.()
+    skip?.()
   }
 }
 /**
@@ -268,8 +287,7 @@ async function processCurrentLine() {
     // Index has been changed by outside this function.
     // Skip remaining instructions in the previous line.
     // Resolve the promise of the ongoing command.
-    lineSkipped = true
-    skipCommand?.()
+    cancelCurrentCommand()
     // Process the current line after aborting the previous line
     setTimeout(processCurrentLine, 0)
     return
@@ -317,7 +335,8 @@ async function fetchSceneLines() {
   // check if context was changed while fetching the file
   if (label == gameContext.label) {
     sceneLines = fetchedLines
-    processCurrentLine()
+    if (!isObserverNotifyPending(gameContext, 'index'))
+      processCurrentLine()
   }
 }
 
@@ -364,6 +383,10 @@ function warnHScene() {
 function onSceneStart() {
   const label = gameContext.label as SceneName
   if (settings.enableSceneSkip && settings.completedScenes.includes(label)) {
+    currentCommand = {
+      next: ()=>{},
+      cancel: skipCancelCallback
+    }
     skipCallback(getSceneTitle(label), async skip=> {
       if (skip)
         onSceneEnd(label)
@@ -386,12 +409,15 @@ function onSceneStart() {
 observe(gameContext, 'label', loadLabel)
 observe(gameContext, 'index', processCurrentLine)
 observe(displayMode, 'screen', (screen)=> {
-  if (screen == SCREEN.WINDOW)
-    processCurrentLine()
-  else {
-    //clear values not in gameContext
-    currentCommand = undefined
+  if (screen != SCREEN.WINDOW) {
+    // clear values not in gameContext
+    //currentCommand = undefined
+    lineSkipped = false
+    autoPlay = false
+    fastForwardStopCondition = undefined
   }
+  else if (!isObserverNotifyPending(gameContext, 'index'))
+    processCurrentLine()
 })
 
 //##############################################################################

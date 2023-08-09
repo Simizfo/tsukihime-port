@@ -24,7 +24,10 @@ export const commands = {
       })
     }
     onChoices(choices)
-    return {next:()=>{}}; // prevent processing next line
+    return {
+      next: ()=>{},
+      cancel: ()=> { displayMode.choices = false }
+    }; // prevent processing next line
   }
 }
 
