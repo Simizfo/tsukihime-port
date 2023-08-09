@@ -7,7 +7,6 @@ import { BiSkipNext } from "react-icons/bi"
 import { SCREEN, displayMode, gameContext, settings } from "../utils/variables"
 import { quickLoad, quickSave } from "../utils/savestates"
 import { useObserver } from "../utils/Observer"
-import { useNavigate } from "react-router-dom"
 import script from "../utils/script"
 
 /**
@@ -18,7 +17,7 @@ import script from "../utils/script"
  * - charger
  */
 const MenuLayer = () => {
-  const navigate = useNavigate()
+
   const menuRef = useRef<HTMLDivElement>(null)
   const [display, setDisplay] = useState<boolean>(displayMode.menu)
   const [mute, setMute] = useState<boolean>(settings.volume.master < 0)
@@ -80,7 +79,7 @@ const MenuLayer = () => {
   }
 
   const title = () => {
-    navigate(SCREEN.TITLE)
+    displayMode.screen = SCREEN.TITLE
     displayMode.menu = false
   }
 

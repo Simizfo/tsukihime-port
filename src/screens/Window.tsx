@@ -16,8 +16,9 @@ import SavesLayer from '../layers/SavesLayer';
 import history from '../utils/history';
 import { HiMenu } from 'react-icons/hi';
 import GestureHandler from '../utils/touch';
-import { isScene } from '../utils/scriptUtils';
 import { toast } from 'react-toastify';
+import { useObserver } from '../utils/Observer';
+import { useNavigate } from 'react-router-dom';
 
 //##############################################################################
 //#                                KEY MAPPING                                 #
@@ -153,6 +154,10 @@ function toggleLoad() {
 //##############################################################################
 
 const Window = () => {
+  const navigate = useNavigate()
+
+  useObserver(navigate, displayMode, 'screen',
+      { filter: screen => screen != SCREEN.WINDOW })
 
   const rootElmtRef = useRef(null)
   useEffect(()=> {

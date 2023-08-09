@@ -169,17 +169,16 @@ function processGoto(arg: string) {
     script.moveTo(arg.substring(1) as LabelName, 0)
     return LOCK_CMD // prevent processing next line
   } else if (arg == "*endofplay") {
+    script.moveTo("endofplay")
     //TODO end session, return to title screen
   }
 }
 
 function processGosub(arg: string, _: string) {
   if (arg == "*right_phase" || arg == "*left_phase") {
-    //display phase transition
     return processPhase((arg == "*left_phase") ? "l" : "r")
   } else if (arg == "*ending") {
-    // ending is called from the scene. If necessary, set the scene
-    // as completed before jumping to ending
+    onSceneEnd(gameContext.label, "ending")
   } else if (isScene(arg)) {
     script.moveTo(arg.substring(1) as SceneName)
     return LOCK_CMD
@@ -348,27 +347,33 @@ async function fetchSceneLines() {
  * @param label id of the scene or block to load.
  */
 async function loadLabel(label: LabelName|"") {
-  console.log(`load label ${label}`)
-  sceneLines = [] // set to empty to prevent execution of previous scene
-  if (gameContext.index == -1)
-    onSceneStart()
-  else if (label != "")
-    fetchSceneLines()
+  if (label == "endofplay") {
+    console.log("going back to title")
+    displayMode.screen = SCREEN.TITLE
+  } else {
+    console.log(`load label ${label}`)
+    sceneLines = [] // set to empty to prevent execution of previous scene
+    if (gameContext.index == -1)
+      onSceneStart()
+    else if (label != "")
+      fetchSceneLines()
+  }
 }
 
-function onSceneEnd(label = gameContext.label) {
+function onSceneEnd(label = gameContext.label, nextLabel:LabelName|undefined=undefined) {
   console.log(`ending ${label}`)
   if (isScene(label)) {
     // add scene to completed scenes
     if (!settings.completedScenes.includes(label))
       settings.completedScenes.push(label)
-    if (/^s\d+a?$/.test(label))
+    if (nextLabel)
+      script.moveTo(nextLabel)
+    else if (/^s\d+a?$/.test(label))
       script.moveTo(`skip${label.substring(1)}` as LabelName)
     else if (label == "openning")
       script.moveTo('s20')
-    else {
-      //TODO back to title
-    }
+    else
+      script.moveTo('endofplay')
   }
 }
 
