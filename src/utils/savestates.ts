@@ -258,18 +258,21 @@ export function exportSaveFile({
       omitSettings= false,
       saveStateFilter= undefined
     }: exportSaveFileOptions = {}) {
+  const saveStates =
+      saveStateFilter == undefined ? listSaveStates()
+      : saveStateFilter.length > 0 ? listSaveStates().filter(([id,_ss])=>saveStateFilter.includes(id))
+      : []
   const content = JSON.stringify({
     ...(!omitSettings ? {
       settings: deepAssign({}, settings)
     } : {}),
-    ...(!saveStateFilter ? {
-      saveStates: listSaveStates()
-    } : saveStateFilter.length > 0 ? {
-      saveStates: listSaveStates().filter(([id,_ss])=>saveStateFilter.includes(id))
-    } : {})
+    ...(saveStates.length > 0 ? { saveStates } : {})
   });
-  const date = new Date(listSaveStates().filter(([id,_ss])=>saveStateFilter?.includes(id))[0][1].date as number)
-  const dateString = `${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, '0')}${date.getDate()}`
+
+  const date = saveStates.length > 0 ?
+      new Date(saveStates.reduce((date, [_, ss])=> Math.max(date, ss.date as number), 0))
+      : new Date()
+  const dateString = `${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, '0')}${date.getDate().toString().padStart(2, '0')}`
   textFileUserDownload(content, `tsukihime_${dateString}.${SAVE_EXT}`)
 }
 

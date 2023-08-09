@@ -3,7 +3,7 @@ import { ConfigButtons, ConfigLayout, ResetBtn } from "../ConfigScreen"
 import { defaultSettings, settings } from "../../utils/variables"
 import { IMAGES_FOLDERS } from "../../utils/constants"
 import { addEventListener, deepAssign, isFullscreen, toggleFullscreen } from "../../utils/utils"
-import { clearSaveStates } from "../../utils/savestates"
+import { clearSaveStates, exportSaveFile, loadSaveFile } from "../../utils/savestates"
 
 const ConfigAdvancedTab = () => {
 
@@ -65,8 +65,16 @@ const ConfigAdvancedTab = () => {
         updateValue={toggleFullscreen}
       />
 
-      <ConfigLayout title="Erase all data">
+      <ConfigLayout title="Data storage">
         <div className="config-btns">
+          <button className="config-btn"
+            onClick={()=>exportSaveFile()}>
+              Export
+          </button>
+          <button className="config-btn"
+            onClick={()=>loadSaveFile()}>
+              Import
+          </button>
           <button className="config-btn erase"
             onClick={eraseData}>
               Erase
