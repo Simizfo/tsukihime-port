@@ -42,19 +42,19 @@ const AnimatedRoutes = () => {
   return (
     <div id="root-view" style={style}>
       <div id="view" style={viewStyle}>
+        <ToastContainer
+          transition={Slide}
+          position="bottom-right"
+          theme="dark" />
+        
         <AnimatePresence mode="wait">
-          <ToastContainer
-            transition={Slide}
-            position="bottom-right"
-            theme="dark" />
-          <Routes location={location} key={location.pathname}>
+          <Routes location={location} key={location.pathname} >
             <Route path="/*" element={<Navigate to={"/disclaimer"} />} />
             <Route path="/disclaimer" element={<DisclaimerScreen />} />
             <Route path="/title" element={<TitleMenuScreen />} />
             <Route path="/window" element={<Window />} />
             <Route path="/gallery" element={<GalleryScreen />} />
             <Route path="/config" element={<ConfigScreen />} />
-            <Route path="/load" element={<LoadScreen />} />
             <Route path="/load" element={<LoadScreen />} />
           </Routes>
         </AnimatePresence>
