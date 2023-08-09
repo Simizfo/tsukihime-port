@@ -39,12 +39,10 @@
             overflow: hidden;
 
             &.create, &.import {
+                min-height: clamp(40px, 25%, 60px);
                 justify-content: center;
                 align-items: center;
-                font-size: 1.4em;
-            }
-            &.import {
-                border: 2px dashed var(--active);
+                font-size: 1.6em;
             }
 
             .deta {
@@ -72,12 +70,22 @@
                 font-size: 30%;
             }
 
-            &:hover, &:focus-visible {
-                cursor: pointer;
-                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 29px 0px rgba(3, 193, 235, 0.88) inset;
+            &::after {
+                position: absolute;
+                content: "";
+                inset: 0;
+                transition: .2s;
             }
 
-            &[quick-save]:after {
+            &:hover, &:focus-visible {
+                cursor: pointer;
+
+                &::after {
+                    box-shadow: 0px 0px 0px 1px rgb(0, 200, 255) inset, 0px 0px 90px 0px rgb(0 209 255 / 54%) inset;
+                }
+            }
+
+            &[quick-save]::before {
                 position: absolute;
                 bottom: 0;
                 right: 0;
