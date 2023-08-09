@@ -39,10 +39,10 @@
             overflow: hidden;
 
             &.create, &.import {
-                min-height: clamp(40px, 25%, 60px);
+                min-height: clamp(36px, 25%, 50px);
                 justify-content: center;
                 align-items: center;
-                font-size: 1.6em;
+                font-size: 1.4em;
             }
 
             .deta {
