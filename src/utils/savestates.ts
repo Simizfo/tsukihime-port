@@ -1,5 +1,5 @@
-import { deepAssign, requestFilesFromUser, textFileUserDownload } from "./utils";
-import { defaultGameContext, defaultProgress, gameContext, progress, settings } from "./variables";
+import { deepAssign, requestJSONs, textFileUserDownload } from "./utils";
+import { defaultGameContext, defaultProgress, gameContext, progress } from "./variables";
 import history from './history';
 import { toast } from "react-toastify";
 import { FaSave } from "react-icons/fa"
@@ -42,7 +42,7 @@ function updateLocalStorage() {
  * Store all the savestates from the iterator in the savestates map
  * @param keyValuePairs iterator of [id, savestate].
  */
-function restoreSaveStates(keyValuePairs: IterableIterator<[SaveStateId, SaveState]>) {
+export function restoreSaveStates(keyValuePairs: Iterable<[SaveStateId, SaveState]>) {
   for (const [id, ss] of keyValuePairs) {
     saveStates.set(id, ss as SaveState)
   }
@@ -224,6 +224,7 @@ export function addSavesChangeListener(onChange: VoidFunction) {
     return
   listeners.push(onChange)
 }
+
 export function removeSavesChangeListener(onChange: VoidFunction) {
   const index = listeners.indexOf(onChange)
   if (index == -1)
@@ -231,6 +232,7 @@ export function removeSavesChangeListener(onChange: VoidFunction) {
   listeners.splice(index, 1)
   return true
 }
+
 function notifyListeners() {
   for (const listener of listeners) {
     listener()
@@ -240,91 +242,59 @@ function notifyListeners() {
 //##############################################################################
 //#                                 SAVE FILES                                 #
 //##############################################################################
-type exportSaveFileOptions = {
-  omitSettings?: boolean,
-  saveStateFilter?: SaveStateId[]
+
+function twoDigits(n: number) {
+  return n.toString().padStart(2, '0')
 }
 /**
- * Export the settings and savestates to a json file and lets the user
- * download it. The settings can be omitted using the parameter
- * {@link omitSettings}, and the save-states to be exported can be filtered
- * by providing an array of ids in the parameter {@link saveStateFilter}.
- * @param exportSettings true if the settings must be omitted in the save file.
- *        Default: false
- * @param saveStateFilter array of save-state ids to export. Empty array:
- *        save-states are omitted. Default : all saves are exported.
+ * Export the save-states to json files and lets the user
+ * download it.
+ * @param ids array of save-state ids to export. Exporting multiple save-states
+ *            will result in multiple files being downloaded
  */
-export function exportSaveFile({
-      omitSettings= false,
-      saveStateFilter= undefined
-    }: exportSaveFileOptions = {}) {
-  const saveStates =
-      saveStateFilter == undefined ? listSaveStates()
-      : saveStateFilter.length > 0 ? listSaveStates().filter(([id,_ss])=>saveStateFilter.includes(id))
-      : []
-  const content = JSON.stringify({
-    ...(!omitSettings ? {
-      settings: deepAssign({}, settings)
-    } : {}),
-    ...(saveStates.length > 0 ? { saveStates } : {})
-  });
-
-  const date = saveStates.length > 0 ?
-      new Date(saveStates.reduce((date, [_, ss])=> Math.max(date, ss.date as number), 0))
-      : new Date()
-  const dateString = `${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, '0')}${date.getDate().toString().padStart(2, '0')}`
-  textFileUserDownload(content, `tsukihime_${dateString}.${SAVE_EXT}`)
-}
-
-type loadSaveFileOptions = {
-  ignoreSettings?: boolean,
-  ignoreSaveStates?: boolean
+export function exportSave(ids: SaveStateId[]) {
+  const saveStates = listSaveStates().filter(([id,_ss])=>ids.includes(id))
+  for (const [id, ss] of saveStates) {
+    const json = JSON.stringify({ id, ...ss }),
+          date = new Date(ss.date as number)
+    const year = date.getFullYear(), month = date.getMonth()+1,
+          day = date.getDate(), hour = date.getHours(), min = date.getMinutes()
+    const dateString = [year, month, day].map(twoDigits).join('-')
+    const timeString = [hour, min].map(twoDigits).join('-')
+    textFileUserDownload(json, `${dateString}_${timeString}.thweb`)
+  }
 }
 /**
- * Restores settings and savestates from one or multiple files requested
- * to the user or from the specified stringified JSON. Settings can be ignored
- * using the parameter {@link ignoreSettings}, and save-states can be ignored
- * using the parameter {@link ignoreSaveStates}.
- * @param save stringified JSON, or undefined to ask the user for it.
- * @param ignoreSettings true if the settings must be ignored
- *        in the save file. Default: false
- * @param ignoreSaveStates true if the save-states must be ignored
- *        in the save file. Default: false
+ * Restores save-states from one or multiple files requested
+ * to the user or from the specified stringified JSONs.
+ * @param saves stringified JSONs, or undefined to ask files from the user.
  */
-export async function loadSaveFile(save: string | undefined = undefined, {
-      ignoreSettings = true,
-      ignoreSaveStates = true
-    }: loadSaveFileOptions = {}): Promise<boolean> {
-  if (!save) {
-    let files = await requestFilesFromUser({ multiple: true, accept: `.${SAVE_EXT}` })
-    if (!files)
-      return false; // canceled by user
-    if (files instanceof File)
-      files = [files]
-    let success = true
-    for (const file of files) {
-      success &&= await new Promise<string>((resolve,reject) => {
+export async function loadSaveFiles(saves?: string[] | FileList | undefined | null) {
+  let jsons
+  if (saves instanceof FileList) {
+    jsons = await Promise.all(Array.from(saves).map(file=> {
+      return new Promise<string>((resolve) => {
         const reader = new FileReader()
         reader.readAsText(file)
         reader.onload = (evt) => {
           if (evt.target?.result?.constructor == String)
-            resolve(evt.target.result)
+            resolve(JSON.parse(evt.target.result))
           else
-            reject(`cannot read save file ${file.name}`)
+            throw Error(`cannot read save file ${file.name}`)
         }
-      }).then(
-        (text)=>loadSaveFile(text, {ignoreSettings, ignoreSaveStates}),
-        (errorMsg)=> {
-        throw Error(errorMsg)
-      });
-    }
-    return success
+      })
+    }));
+  } else if (saves) {
+    jsons = saves.map(save=>JSON.parse(save))
   } else {
-    const content = JSON.parse(save)
-    if (ignoreSettings && content.settings)
-      deepAssign(settings, content.settings)
-    if (ignoreSaveStates && content.saveStates)
-      restoreSaveStates(content.saveStates)
-    return true
+    jsons = await requestJSONs({multiple: true, accept: `.${SAVE_EXT}`})
   }
+  if (!jsons)
+    return false
+  restoreSaveStates(jsons.map(({id, ...save})=>{
+    if (id == undefined || id.constructor != Number)
+      throw Error(`Save-file is missing 'id' field`)
+    return [id, save] as [number, SaveState]
+  }))
+  return true
 }

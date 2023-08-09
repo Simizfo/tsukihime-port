@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react"
+import { ChangeEvent, useEffect, useState } from "react"
 import { SCREEN, displayMode } from "../utils/variables"
 import { addEventListener, convertText, parseBBcode } from "../utils/utils"
 import { SceneName } from "../types";
 import { SAVE_EXT, SCENE_ATTRS } from "../utils/constants";
-import { SaveState, QUICK_SAVE_ID, deleteSaveState, exportSaveFile, getSaveState, listSaveStates, loadSaveState, storeCurrentState, addSavesChangeListener, removeSavesChangeListener } from "../utils/savestates";
+import { SaveState, QUICK_SAVE_ID, deleteSaveState, getSaveState, listSaveStates, loadSaveState, storeCurrentState, addSavesChangeListener, removeSavesChangeListener, exportSave, loadSaveFiles } from "../utils/savestates";
 import { getSceneTitle } from "../utils/scriptUtils";
 import { BsFileEarmarkArrowUp } from "react-icons/bs";
 import { FaPlusCircle, FaTrash, FaDownload } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { loadSaveFile } from "../utils/savestates";
 import { graphicElements } from "../layers/GraphicsLayer";
 
 //##############################################################################
@@ -35,13 +34,6 @@ function phaseDay(saveState: SaveState) {
   return parseBBcode(SCENE_ATTRS.days[saveState.context.phase.day])
 }
 
-function exportSaves(...ids: number[]) {
-  if (ids.length == 0)
-    exportSaveFile({ omitSettings: true})
-  else
-    exportSaveFile({ omitSettings: true, saveStateFilter: ids})
-}
-
 //##############################################################################
 //#                               SUB COMPONENTS                               #
 //##############################################################################
@@ -53,7 +45,7 @@ type SaveListItemProps = {
 const SaveListItem = ({id, saveState, onSelect, ...props}: SaveListItemProps)=> {
   const date = new Date(saveState.date as number)
   return (
-    <button className="save-container" key={id}
+    <button className="save-container"
         onClick={onSelect.bind(null, id)}
         {...(id==QUICK_SAVE_ID ? {'quick-save':''} : {})}
         {...props}>
@@ -90,7 +82,7 @@ const SaveDetails = ({id, saveState, deleteSave, ...props}: SaveDetailsProps)=> 
             <button onClick={deleteSave.bind(null, id)}>
               <FaTrash />
             </button>
-            <button onClick={()=>exportSaves(id)}>
+            <button onClick={()=>exportSave([id])}>
               <FaDownload />
             </button>
           </div>
@@ -126,8 +118,9 @@ const SavesLayer = ({variant, back, ...props}: Props) => {
     storeCurrentState(new Date().getTime())
   }
 
-  function importSaves() {
-    loadSaveFile(undefined, { ignoreSettings: true })
+  function importSaves(event: ChangeEvent) {
+    console.log("import saves from file")
+    loadSaveFiles((event.target as HTMLInputElement)?.files)
   }
 
   function onSaveSelect(id: number) {
@@ -168,7 +161,7 @@ const SavesLayer = ({variant, back, ...props}: Props) => {
             accept={`.${SAVE_EXT}`} style={{display: "none"}}/>
         </>}
 
-        {saves.map(([id, ss]) => <SaveListItem id={id}
+        {saves.map(([id, ss]) => <SaveListItem key={id} id={id}
             saveState={ss} onSelect={onSaveSelect}
             onMouseEnter={setFocusedSave.bind(null, id)}/>
         )}

@@ -8,7 +8,7 @@ import ParticlesComponent from '../components/ParticlesComponent'
 import { SCREEN, displayMode } from '../utils/variables'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
-import { blankSaveState, getLastSave, hasSaveStates, loadSaveFile, loadSaveState } from '../utils/savestates'
+import { blankSaveState, getLastSave, hasSaveStates, loadSaveFiles, loadSaveState } from '../utils/savestates'
 import history from '../utils/history'
 import Modal from 'react-modal';
 import { APP_VERSION } from '../utils/constants'
@@ -33,7 +33,7 @@ const TitleMenuScreen = () => {
                 ?? getLastSave()
                 // or ask user to provide save file(s).
                 // Also retrieve settings from the save file(s)
-                ?? await loadSaveFile().then(getLastSave)
+                ?? await loadSaveFiles().then(getLastSave)
     if (lastSave) {
       loadSaveState(lastSave)
       navigate(SCREEN.WINDOW)
@@ -55,7 +55,7 @@ const TitleMenuScreen = () => {
           delay: 0.6,
           duration: 1,
         }} >
-      
+
         <HiOutlineInformationCircle/>
       </motion.button>
 

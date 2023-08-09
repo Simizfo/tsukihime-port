@@ -230,6 +230,31 @@ export function requestFilesFromUser({ multiple = false, accept = '' }): Promise
 	}));
 }
 
+export async function requestJSONs({ multiple = false, accept = ''}) : Promise<Record<string,any>[]|null> {
+  let files = await requestFilesFromUser(({multiple, accept}))
+  if (!files)
+    return null; // canceled by user
+  if (files instanceof File)
+    files = [files]
+  const jsons = await Promise.all(Array.from(files).map(file=> {
+    return new Promise<string>((resolve,reject) => {
+      const reader = new FileReader()
+      reader.readAsText(file)
+      reader.onload = (evt) => {
+        if (evt.target?.result?.constructor == String)
+          resolve(evt.target.result)
+        else
+          reject(`cannot read save file ${file.name}`)
+      }
+    }).then(
+      (text)=>JSON.parse(text),
+      (errorMsg)=> {
+        throw Error(errorMsg)
+    })
+  }));
+  return jsons
+}
+
 export function toggleFullscreen() {
   if (isFullscreen())
     document.exitFullscreen()

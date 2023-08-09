@@ -2,8 +2,17 @@ import { useEffect, useState } from "react"
 import { ConfigButtons, ConfigLayout, ResetBtn } from "../ConfigScreen"
 import { defaultSettings, settings } from "../../utils/variables"
 import { IMAGES_FOLDERS } from "../../utils/constants"
-import { addEventListener, deepAssign, isFullscreen, toggleFullscreen } from "../../utils/utils"
-import { clearSaveStates, exportSaveFile, loadSaveFile } from "../../utils/savestates"
+import { addEventListener, deepAssign, isFullscreen, requestJSONs, textFileUserDownload, toggleFullscreen } from "../../utils/utils"
+import { SaveState, clearSaveStates, listSaveStates, restoreSaveStates } from "../../utils/savestates"
+
+function twoDigits(n: number) {
+  return n.toString().padStart(2, '0')
+}
+
+type Savefile = {
+  settings: typeof settings,
+  saveStates?: [number, SaveState][],
+}
 
 const ConfigAdvancedTab = () => {
 
@@ -27,6 +36,30 @@ const ConfigAdvancedTab = () => {
     key: T,
     value: typeof conf[T]
   ) => setConf(prev => ({ ...prev, [key]: value }))
+
+  const exportData = () => {
+    const content: Savefile = {
+      settings: deepAssign({}, settings),
+      saveStates: listSaveStates(),
+    }
+    const date = new Date()
+    const year = date.getFullYear(), month = date.getMonth()+1,
+          day = date.getDate(), hour = date.getHours(), min = date.getMinutes()
+    const dateString = [year, month, day].map(twoDigits).join('-')
+    const timeString = [hour, min].map(twoDigits).join('-')
+    textFileUserDownload(JSON.stringify(content), `${dateString}_${timeString}.thfull`)
+  }
+
+  const importData = async () => {
+    const json = (await requestJSONs({accept: '.thfull'}) as Savefile[])?.[0] as Savefile|undefined
+    if (!json)
+      return
+    deepAssign(settings, json.settings)
+    if (json.saveStates != undefined) {
+      clearSaveStates()
+      restoreSaveStates(json.saveStates)
+    }
+  }
 
   const eraseData = () => {
     if (confirm("This will delete all saves, reset all settings and progress. Are you sure?")) {
@@ -68,11 +101,11 @@ const ConfigAdvancedTab = () => {
       <ConfigLayout title="Data storage">
         <div className="config-btns">
           <button className="config-btn"
-            onClick={()=>exportSaveFile()}>
+            onClick={exportData}>
               Export
           </button>
           <button className="config-btn"
-            onClick={()=>loadSaveFile()}>
+            onClick={importData}>
               Import
           </button>
           <button className="config-btn erase"
