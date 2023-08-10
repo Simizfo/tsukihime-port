@@ -6,7 +6,7 @@
         "buttons buttons";
     grid-template-columns: 3fr 1fr;
     grid-template-rows: min-content 1fr min-content;
-    gap: 1em;
+    column-gap: 1em;
     flex: 1;
     overflow-x: hidden;
     font-size: clamp(.9em, 4vmin, 1.1em);
@@ -86,10 +86,10 @@
                 bottom: 0;
                 right: 0;
                 content: "Quick Save";
-                opacity: 50%;
                 font-size: 80%;
                 font-style: italic;
-                background: rgba(255, 255, 255, 0.1);
+                background-color: #10101e;
+                color: #4e4e58;
                 padding: 0.1em 0.5em 0.1em 1.5em;
                 clip-path: polygon(1.5em 0%, 100% 0, 100% 100%, 0 100%);
             }
@@ -179,6 +179,10 @@
                     margin-top: auto;
                 }
             }
+        }
+
+        .saves {
+            margin-top: 1em;
         }
     }
 

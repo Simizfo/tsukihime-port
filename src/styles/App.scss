@@ -45,7 +45,7 @@
     height: 100vh;
 }
 .page-title {
-    font-size: clamp(2em, 8vmin, 3em);
+    font-size: clamp(2.2em, 8vmin, 3em);
     margin-block: 0;
     font-family: serif;
     font-weight: 700;
@@ -53,6 +53,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: .2em;
 }
 main {
     display: flex;

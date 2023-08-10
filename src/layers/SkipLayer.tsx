@@ -39,10 +39,10 @@ const SkipLayer = () => {
       <div className="skip-modal">
         <div className="title">
           You have already seen
-          {sceneTitle ? <> the scene<br/><span className="scene-title">
-            {parseBBcode(sceneTitle)}</span></>
+          {sceneTitle ? <> the scene
+          <div className="scene-title">{parseBBcode(sceneTitle)}</div></>
           : <> this scene</>
-          }.<br />
+          }<br />
           Do you want to skip it?
         </div>
 
