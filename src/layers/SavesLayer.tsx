@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { displayMode } from "../utils/variables"
 import { addEventListener } from "../utils/utils"
 import { useObserver } from '../utils/Observer';
@@ -12,9 +12,13 @@ function back() {
 
 const SavesLayer = () => {
   const [display, setDisplay] = useState(displayMode.save || displayMode.load)
+  const rootRef = useRef<HTMLDivElement>(null)
 
   function onDisplayChange() {
-    setDisplay(displayMode.save || displayMode.load)
+    const display = displayMode.save || displayMode.load
+    setDisplay(display)
+    if (!display && rootRef.current?.contains(document.activeElement))
+      (document.activeElement as HTMLElement).blur?.();
   }
   useObserver(onDisplayChange, displayMode, "save")
   useObserver(onDisplayChange, displayMode, "load")
@@ -28,7 +32,7 @@ const SavesLayer = () => {
   }, [])
 
   return (
-    <div className={`box box-save ${display ? "show" : ""}`}>
+    <div className={`box box-save ${display ? "show" : ""}`} ref={rootRef}>
       <div className="page-content">
         <SavesLayout variant={displayMode.save ? "save" : "load"} back={back} />
       </div>
