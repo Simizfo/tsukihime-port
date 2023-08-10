@@ -48,6 +48,7 @@ const SkipLayer = () => {
 
         <div className="buttons">
           <button onClick={handleYes}>Yes</button>
+          <div className="separator" />
           <button onClick={handleNo}>No</button>
         </div>
       </div>

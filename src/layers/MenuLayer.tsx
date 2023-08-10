@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { addEventListener, isFullscreen, toggleFullscreen } from "../utils/utils"
-import { FaVolumeMute, FaVolumeUp } from "react-icons/fa"
-import { IoClose } from "react-icons/io5"
-import { AiOutlineFullscreen, AiOutlineFullscreenExit } from "react-icons/ai"
+import { FaCompressArrowsAlt, FaExpandArrowsAlt, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 import { BiSkipNext } from "react-icons/bi"
 import { SCREEN, displayMode, gameContext, settings } from "../utils/variables"
 import { quickLoad, quickSave } from "../utils/savestates"
@@ -83,10 +81,6 @@ const MenuLayer = () => {
     displayMode.menu = false
   }
 
-  const closeMenu = () => {
-    displayMode.menu = false
-  }
-
   const toggleVolume = () => {
     settings.volume.master = - settings.volume.master
   }
@@ -107,12 +101,6 @@ const MenuLayer = () => {
           <button onClick={historyMode}>
             History
           </button>
-          <button onClick={quickSave}>
-            Quick save
-          </button>
-          <button onClick={quickLoad}>
-            Quick load
-          </button>
           <button onClick={saveMode}>
             Save
           </button>
@@ -122,22 +110,25 @@ const MenuLayer = () => {
           <button onClick={autoPlay}>
             Auto play
           </button>
+          <button onClick={fastForwardScene}>
+            Fast forward
+          </button>
           <button onClick={title}>
             Title
           </button>
 
           <div className="action-icons">
+            <button onClick={quickSave} className="quick">
+              Q. save
+            </button>
+            <button onClick={quickLoad} className="quick">
+              Q. load
+            </button>
             <button onClick={toggleVolume}>
               {mute ? <FaVolumeMute /> : <FaVolumeUp />}
             </button>
-            <button onClick={fastForwardScene}>
-              <BiSkipNext />
-            </button>
             <button onClick={toggleFullscreen}>
-              {fullscreen ? <AiOutlineFullscreenExit /> : <AiOutlineFullscreen />}
-            </button>
-            <button onClick={closeMenu}>
-              <IoClose />
+              {fullscreen ? <FaCompressArrowsAlt /> : <FaExpandArrowsAlt />}
             </button>
           </div>
         </menu>

@@ -159,7 +159,7 @@
     .box-menu {
         --panel-trans-time: 0.4s;
         z-index: -1;
-        background-color: #0006;
+        background-color: rgb(0 12 42 / 30%);
         opacity: 0;
         display: flex;
         justify-content: flex-end;
@@ -170,6 +170,7 @@
         overflow: hidden;
         backdrop-filter: blur(1px);
         -webkit-backdrop-filter: blur(1px);
+        box-shadow: 0px 0px 0px 0px rgb(0, 200, 255) inset, 0px 0px 90px 0px rgba(0, 209, 255, 0.54) inset;
 
         &.show {
             z-index: 4;
@@ -183,11 +184,8 @@
 
         $width: clamp(170px, 50vmin, 200px);
         .menu-container {
-            background: linear-gradient(180deg, hsla(205, 89%, 35%, 0.2) 0%,
-                                                hsla(217, 79%, 28%, 0.6) 20%,
-                                                hsla(217, 79%, 28%, 0.6) 80%,
-                                                hsla(205, 89%, 35%, 0.2) 100%);
-            border-inline: 2px solid #19b39c8c;
+            background-color: hsla(217, 79%, 28%, 0.8);
+            box-shadow: 0 0 2px 1px #0e3874;
             position: absolute;
             right: calc($width * -1);
             height: 100%;
@@ -202,7 +200,7 @@
                 height: min(100%, 600px);
                 flex: 1;
                 display: flex;
-                row-gap: clamp(.6em, 2.6vmin, .8em);
+                row-gap: .8em;
                 flex-direction: column;
                 font-size: clamp(1em, 4.6vmin, 1.2em);
                 padding: 1.2em;
@@ -235,15 +233,21 @@
                 width: 100%;
 
                 button {
-                    border-radius: 4px;
+                    border-radius: 2px;
                     padding: .2em;
-                    color: rgb(0 127 201);
+                    color: rgb(71 177 239);
                     background-color: rgb(1 17 27 / 30%);
                     justify-content: center;
 
                     &:hover, &:focus-visible {
                         color: rgb(119 214 255);
+                        background-color: rgb(1 17 27 / 60%);
+                        text-decoration: none;
                     }
+                }
+
+                .quick {
+                    font-size: 1rem;
                 }
             }
         }
@@ -322,7 +326,7 @@
         .skip-modal {
             @extend %box;
             align-self: center;
-            padding: 1em 3em;
+            padding: 1em min(3em, 3vmin);
             margin: 1em;
             width: min(540px, 100%);
             box-shadow: 0 0 10px black;
@@ -340,19 +344,25 @@
 
             .buttons {
                 display: flex;
-                gap: 1em;
-                justify-content: space-evenly;
                 font-size: 1.3em;
 
                 button {
                     all: unset;
                     transition: var(--transition);
+                    text-align: center;
+                    flex: 1;
 
                     &:hover, &:focus-visible {
                         cursor: pointer;
                         color: rgb(10 164 171);
                         text-shadow: 1px 0 5px rgb(14 79 187), 1px 0 6px rgba(28, 147, 147, 0.5215686275);
                     }
+                }
+
+                .separator {
+                    width: 1px;
+                    background-color: rgb(255 255 255 / 30%);
+                    margin-inline: .2em;
                 }
             }
         }
