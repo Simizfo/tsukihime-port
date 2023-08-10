@@ -70,7 +70,7 @@ main {
     padding: .2em 1.4em;
     box-shadow: inset 0 0 20px black;
     transition: all .2s ease-out;
-    font-size: clamp(.86em, 3.5vmin, 1em);
+    font-size: clamp(.86rem, 3.5vmin, 1rem);
 
     &:hover, &:focus-visible {
         color: var(--text-color);

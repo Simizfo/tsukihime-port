@@ -10,7 +10,7 @@ const ConfigAdultTab = () => {
   }, settings, {createMissing: false}))
 
   useEffect(()=> {
-    Object.assign(settings, conf)
+    deepAssign(settings, conf)
   }, [conf])
 
   const updateValue = <T extends keyof typeof conf>(
