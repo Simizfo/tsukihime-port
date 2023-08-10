@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { ReactNode, useEffect, useState } from 'react'
 import '../styles/config.scss'
 import { SCREEN, displayMode } from '../utils/variables'
@@ -24,10 +24,12 @@ const tabComponents = {
 }
 
 const ConfigScreen = () => {
-  const [tab, setTab] = useState(Tabs.main)
+  const { state } = useLocation()
+  const [activeTab, setActiveTab] = useState(state?.tab as Tabs || Tabs.main)
 
   useEffect(()=> {
     displayMode.screen = SCREEN.CONFIG
+    window.history.replaceState({}, document.title) //clean state
   }, [])
 
   return (
@@ -43,12 +45,12 @@ const ConfigScreen = () => {
           <div className="tabs">
             {Object.values(Tabs).map(tabBtn =>
               <TabBtn key={tabBtn} text={tabBtn}
-                active={tabBtn === tab}
-                onClick={() => setTab(tabBtn)} />
+                active={tabBtn === activeTab}
+                onClick={() => setActiveTab(tabBtn)} />
             )}
           </div>
 
-          {tabComponents[tab]}
+          {tabComponents[activeTab]}
         </main>
 
         <Link to="/title" className="menu-btn back-button">Back</Link>

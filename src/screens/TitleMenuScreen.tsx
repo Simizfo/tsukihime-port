@@ -85,7 +85,7 @@ const TitleMenuScreen = () => {
 
             <div>
               No data collected, everything is stored in your browser.
-              Manage your data <Link to="/config">here</Link> (see Advanced panel)
+              Manage your data <Link to="/config" state={{ tab: "Advanced" }} >here</Link>
             </div>
           </div>
 
