@@ -23,11 +23,11 @@ export const defaultSettings = deepFreeze({
   font: "Ubuntu", // [not implemented]
   textPanelOpacity: 0.5, // [not implemented]
   imagesFolder: IMAGES_FOLDERS.image_x2,
-  language: SCENES_FOLDERS.english,
+  language: SCENES_FOLDERS.english, // [not implemented]
   fixedRatio: ViewRatio.unconstrained,
   // H-related settings
   blurThumbnails: true,
-  warnHScenes: false, // [not implemented]
+  warnHScenes: false,
   // other settings
   volume: {
     master: 5,
