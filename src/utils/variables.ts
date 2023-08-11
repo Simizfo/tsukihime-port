@@ -1,6 +1,6 @@
 import { ViewRatio, NumVarName, StrVarName, VarName, LabelName, RouteName, RouteDayName } from "../types"
 import { observe, observeChildren } from "./Observer"
-import { IMAGES_FOLDERS, TEXT_SPEED } from "./constants"
+import { IMAGES_FOLDERS, SCENES_FOLDERS, TEXT_SPEED } from "./constants"
 import Timer from "./timer"
 import { deepFreeze, objectMatch, deepAssign } from "./utils"
 
@@ -23,6 +23,7 @@ export const defaultSettings = deepFreeze({
   font: "Ubuntu", // [not implemented]
   textPanelOpacity: 0.5, // [not implemented]
   imagesFolder: IMAGES_FOLDERS.image_x2,
+  language: SCENES_FOLDERS.english,
   fixedRatio: ViewRatio.unconstrained,
   // H-related settings
   blurThumbnails: true,
