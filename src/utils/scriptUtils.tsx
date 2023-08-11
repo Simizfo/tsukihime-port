@@ -1,5 +1,5 @@
 import { RouteDayName, RouteName, SceneName } from "../types";
-import { SCENE_ATTRS } from "./constants";
+import { SCENES_FOLDERS, SCENE_ATTRS } from "./constants";
 import { getGameVariable } from "./variables";
 
 //##############################################################################
@@ -14,7 +14,7 @@ const LOGIC_FILE = 'scene0.txt';
 export async function fetchScene(sceneId: string): Promise<string[] | undefined> {
   if (/^s\d+a?$/.test(sceneId))
     sceneId = `scene${sceneId.substring(1)}`;
-  const script = await fetch(`./scenes/${sceneId}.txt`)
+  const script = await fetch(`./scenes/${SCENES_FOLDERS.english}/${sceneId}.txt`)
     .then(
       (response) => response.ok ? response.text() : undefined,
       (_failErr) => undefined);
@@ -26,7 +26,7 @@ export async function fetchScene(sceneId: string): Promise<string[] | undefined>
 }
 
 async function fetchBlock(label: string): Promise<string[]> {
-  const script = await fetch(`./scenes/` + LOGIC_FILE)
+  const script = await fetch(`./scenes/${SCENES_FOLDERS.english}/${LOGIC_FILE}`)
     .then(script => script.text());
 
   let start = script.indexOf(`\n*${label}`);

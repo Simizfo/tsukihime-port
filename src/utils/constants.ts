@@ -26,6 +26,11 @@ export enum IMAGES_FOLDERS {
   image_x2 = "image_x2",
 }
 
+export enum SCENES_FOLDERS {
+  english = "english",
+  japanese = "japanese",
+}
+
 export enum TEXT_SPEED {
   instant = 0,
   fast = 1,
