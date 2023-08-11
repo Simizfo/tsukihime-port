@@ -47,7 +47,7 @@
         font-size: clamp(1.1em, 7vmin, 1.3em);
         font-weight: bold;
         text-transform: uppercase;
-        letter-spacing: .2em;
+        letter-spacing: 4px;
         flex-direction: row;
         row-gap: .6em;
         column-gap: 1.4em;
@@ -60,24 +60,30 @@
             text-decoration: none;
             transition: var(--transition);
             user-select: none;
-            text-shadow: 0 0 11px #d0d3e1;
+            text-shadow: 0 0 8px #d0d3e1;
             position: relative;
+            border-bottom: 1px solid transparent;
+            padding-top: 6px;
+            padding-bottom: 0;
 
             &:hover, &:focus-visible {
                 cursor: pointer;
                 color: rgb(10 164 171);
                 text-shadow: 1px 0 5px rgb(14 79 187), 1px 0 6px rgba(28, 147, 147, 0.5215686275);
+                border-color: initial;
+                padding-top: 0;
+                padding-bottom: 6px;
             }
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 868px) {
         .menu {
             flex-direction: column;
             align-items: center;
         }
     }
-    @media ((max-width: 768px) or (max-height: 300px)) and (orientation: landscape) {
+    @media ((max-width: 868px) or (max-height: 300px)) and (orientation: landscape) {
         flex-direction: row;
         .logo {
             flex: 1;
