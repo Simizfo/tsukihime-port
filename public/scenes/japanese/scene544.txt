@@ -1,0 +1,64 @@
+
+
+wave se2
+
+bg "image\bg\bg_06b.jpg",%type_nowaitdisp
+play "*3"
+
+
+ld c,":a;image\tachi\osiete.jpg",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+　お待たせしましたー！
+　知得留先生のなぜなにコーナー。
+　好評につき、補習授業（そのに）です！\
+
+　……うわあ、秋葉さんったらほとんど妖怪ですねー。
+　よっぽど長い間遠野くんに鬱積していた物があったのか、なかなかのはっちゃけぶりです。
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+br
+「そんなコトないアル。あんなの全然たいしたコトないアル」\
+
+　はいはい、人間じゃない人には初めから聞いてません。
+　一ミクロンも出番のないヒロインは黙っていてください。
+br
+ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+「……うにゃ、最後までこんな調子だったアルよー、ラーメン食うあるかー」\
+
+cl l,%type_lshutter_fst
+
+――――さて。
+　今回の原因は遠野くんの油断です。
+　その方法ではダメなんだって、以前シキ君が示していたのに繰り返してしまいましたね？
+　再提出にしますから、一個前に戻ってやり直してください。\
+
+――――ここを越えれば、いよいよラスト。
+br
+　この教室も今回でおしまいです。
+　今までご清聴、どうもありがとうございましたー！\
+
+
+
+
+
+
+
+
+
+
+
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+
+return

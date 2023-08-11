@@ -1,0 +1,16 @@
+
+
+
+bg "image\bg\bg_40b.jpg",%type_nowaitdisp
+
+　まあ、これといってやる事もないし部屋でゆっくりしていよう。\
+
+bg "image\bg\ima_10.jpg",%type_tcartain_mid
+
+playstop
+
+!w2000
+
+
+
+return

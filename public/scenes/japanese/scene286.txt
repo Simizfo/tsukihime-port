@@ -1,0 +1,76 @@
+
+
+bg "image\bg\bg_33a.jpg",%type_nowaitdisp
+
+―――たしかに、こんな頭痛を抱えて遊びにいってもシエル先輩に迷惑をかけるだけだ。
+br
+「……そう、だね……昨日からまだ一日経ってないもんな。ちょっと、無茶しすぎた」
+ld l,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+「それではお休みいただけるんですね。志貴さん、一人で歩けますか？」
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_33a.jpg",%type_crossfade_fst
+
+
+「あ―――いや」
+　どうにも、無理そうだ。\
+
+ld l,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+「そうですね、あ、翡翠ちゃん！　志貴さんをお部屋まで連れていって」
+ld r,":a;image\tachi\his_t07.jpg",%type_crossfade_fst
+「え―――姉さん、けど―――」
+ld l,":a;image\tachi\koha_t04.jpg",%type_crossfade_fst
+「翡翠ちゃん！　志貴さんは病人なんですよ、困っている人を見捨てるの？」
+「あ――――」
+「今日ぐらいはわたしが許します。ちゃんと志貴さんをお部屋まで連れて行ってあげなさいっ」\
+
+ld r,":a;image\tachi\his_t21.jpg",%type_crossfade_fst
+「……はい。すみませんでした、わがままを言って」
+ld l,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+「わかってくれればいいんです。それでお薬は見つかった？」
+
+ld r,":a;image\tachi\his_t23.jpg",%type_crossfade_fst
+「……その、姉さんの薬箱は多すぎて。解熱剤ってこれですか？」\
+
+ld l,":a;image\tachi\koha_t05.jpg",%type_crossfade_fst
+
+「あはは、それはちょっと違う用途に使うものですよ。志貴さんはしっかりしてますから、まだ精神安定剤はいりません」
+ld l,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+「志貴さんの熱は体の疲れからきているみたいだから薬はわたしが処方します。翡翠ちゃん、すぐに行くからあとはよろしくね」
+cl l,%type_lshutter_mid
+　琥珀さんは早足で屋敷の西館―――琥珀さんの部屋がある棟へと歩いていく。\
+
+ld r,":a;image\tachi\his_t20.jpg",%type_crossfade_fst
+
+「それでは志貴さま、お部屋にお連れします」
+　失礼します、と断ってから、翡翠は俺に肩を貸してくる。
+cl r,%type_crossfade_fst
+
+br
+　翡翠の手をかりて階段を上がっていく。
+　途中。ずきんずきんと繰り返される頭痛より、すぐ真横にいる翡翠のひどく恥ずかしそうな顔のほうが、ひどく記憶に焼きついた。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+!w2000
+play "*1"
+
+bg "image\bg\bg_40c.jpg",%type_crossfade_mid
+
+
+
+br
+―――結局。
+　俺はベッドに横になって、琥珀さんに処方してもらった薬を飲んで、映画館前で待っているシエル先輩への伝言を頼んだ。
+br
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+
+「…………く」
+　頭痛はやまない。
+　その代わりといってはなんだけど、体の熱はすっかりさがってくれていた。\
+
+
+return

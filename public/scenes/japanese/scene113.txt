@@ -1,0 +1,29 @@
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_25a.jpg",%type_lcartain_mid
+
+　目的もなく街に出てきてしまった。
+　なんだって、俺はこんなところで意味もなく歩いているっていうんだろう。
+br
+bg "image\bg\bg_25a.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\ark_t22.jpg",%type_crossfade_fst
+bg "image\bg\bg_25a.jpg",%type_crossfade_fst
+
+「―――あ」
+　見間違いだ。
+　あいつがまだいるはずがないんだし、俺にはあいつに話しかける理由なんて、ない。\
+
+　なのに、どうしてそんな見間違いなんかをしてしまったんだろう。
+　どうして―――意味もなく、一人で街を歩いていたりしているんだ。
+br
+「……屋敷に戻らなくっちゃな」
+　酔いをさますように頭をふって、ありもしないアルクェイドの幻に背を向けた。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+!w1000
+
+
+return

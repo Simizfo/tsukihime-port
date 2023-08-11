@@ -1,0 +1,31 @@
+
+bg "image\bg\bg_01a.jpg",%type_nowaitdisp
+
+「…………」
+　いや、ここで待っていても先輩には会えない気がする。
+　先輩のほうに会う気がないのなら、俺の姿を見た時点で帰ってしまうだろう。
+　……それを考えると、先輩が学校に来るルートは正門ではないと思う。
+br
+「……来るとしたら裏門からか」
+　そう思い立って、校舎の裏側へ走り出した。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_05a.jpg",%type_lcartain_mid
+
+「――――はあ」
+　裏庭に人影はない。
+　裏門から登校してくる生徒もいない。
+　……それでも、時間ぎりぎりまで来るはずのない先輩を待ち続けた。\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+bg "image\bg\bg_05a.jpg",%type_lshutter_mid
+
+　予鈴が一度鳴って、門が閉められる時間を報せてくる。
+　……先輩はやってこない。
+　ホームルームが始まる前に教室に戻ろう。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+
+return

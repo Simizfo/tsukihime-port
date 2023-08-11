@@ -1,0 +1,37 @@
+
+
+bg "image\bg\bg_04.jpg",%type_nowaitdisp
+
+
+「わりとうちの制服のが合ってるんじゃないかな。ほら、秋葉って大人しそうに見えて芯が強いからさ、無理して清楚な服を着る必要も―――」
+ld c,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+br
+「―――いや、まあ、イメージの払拭という事で、たまには明るい感じの服を着てもいいんじゃないかなって」
+cl c,%type_crossfade_fst
+
+　……危ない危ない。
+　うかつに下手な事は、口にしないほうが安全だ。\
+
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+「ふーん、そんなものかね。そりゃあ秋葉ちゃんぐらいの美人なら、うちの野暮ったいブレザーでも似合うとは思うけど」
+ld l,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+
+「あら。乾さんはこの学校の制服がお嫌いなんですか？」
+「んー、嫌いってわけじゃないけど、当たり前すぎて色気がないっていうか、つまんないっていうか。うちの学校の女どものレベルじゃ制服の統一性に埋もれちまって、みんな同じ顔に見えるんだよな―――って、むはぁあああ！？」\
+quakex 3,100
+
+ld l,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+「あ、ごめんなさい乾くん。手、滑っちゃいました」
+　有彦の横腹に肘鉄を鋭角に叩きこんで、シエル先輩はニコリと笑った。
+br
+　…………気がめいる。
+　こんな胃に穴があきそうな時間を、あと十分近く過ごさないといけないのか…………。\
+playstop
+
+bg "image\bg\ima_10.jpg",%type_tshutter_mid
+
+
+
+return

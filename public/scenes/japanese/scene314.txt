@@ -1,0 +1,36 @@
+
+bg "image\event\stk_e01a.jpg",%type_nowaitdisp
+
+
+
+　………………さむい。
+　こんなにさむい思いに一人で耐えてきたのか、弓塚。
+　ごめんな―――かわいそうだ、とか思っていながら、俺は全然、その痛みが判っていなかった。
+br
+　けど、それも終わり。
+　じき遠野志貴は消えて、それで何もかもが終わりになる。\
+
+playstop
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+―――心音が、遠くなっていく。
+br
+　体中の温かなもの、生きていた全てが停止していく。
+　懐かしい、感覚。
+　八年前の白い夏の日に、孵るような、冷たさ。
+br
+　ドク・ン。
+br
+　一際高く鳴ったあと、心臓が停止した。
+　それで何もかも。遠野志貴だったモノは消え去った。\
+!w3000
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+return

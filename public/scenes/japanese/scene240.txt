@@ -1,0 +1,53 @@
+
+
+
+bg "image\bg\bg_33b.jpg",%type_lcartain_mid
+
+
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+「お帰りなさいませ、志貴さま」
+「ただいま。……翡翠、秋葉はどうしてる？」
+「秋葉さまは学校の手続きに行かれました。遅くなるそうですから、夕食は先にとるようにとの事です」
+「………？」
+　学校の手続き、か。
+　秋葉の通っている高校は名高いお嬢様学校だから、なにかと複雑な手続きがあるのだろう。\
+
+「夕食まで部屋で休んでるから、時間になったら食堂に行くよ」
+「はい。お呼びしますので、ごゆっくりお休みください」
+
+cl a,%type_crossfade_fst
+
+　ふかぶかとお辞儀をする翡翠に背を向けて、自分の部屋へ足を運んだ。\
+
+bg "image\bg\ima_10.jpg",%type_tshutter_mid
+!w2000
+bg "image\bg\bg_40c.jpg",%type_rshutter_mid
+
+br
+―――夕食が終わって、ベッドに腰をかける。
+br
+　時計の針は夜の九時にさしかかろうとしている。
+　この屋敷は八時をすぎてからの外出は禁じられているから、もう外に出る事はできない。
+「……………」
+　だが、そんなものはただのきまりごとだ。
+　その気になればいくらでも外には出れる。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\event\stk_e03.jpg",%type_crossfade_fst
+
+
+
+br
+―――ばいばい。また明日学校でね、遠野くん。
+br
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+
+　俺は―――
+br
+
+
+return

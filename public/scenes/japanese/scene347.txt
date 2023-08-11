@@ -1,0 +1,246 @@
+
+
+
+
+
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_04.jpg",%type_lcartain_mid
+
+
+――――で。
+
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+「いょぉう遠野、遅かったな」
+
+ld l,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
+
+「ほんと、遅かったですね兄さん」
+
+cl a,%type_crossfade_fst
+
+br
+―――どうゆうわけなのか、有彦は俺より先に中庭にやってきていて、秋葉の相手をしていたみたいだ。\
+
+「……朝から姿が見えないと思ったら、こんなところにいたのか有彦」
+
+ld c,":a;image\tachi\ari_t05.jpg",%type_crossfade_fst
+
+「おう！　四時間目からここではってた甲斐があったってもんだぜ！」
+　誇らしげに胸をはって豪語する有彦。
+　……ここまで幸せなヤツだと、文句のもの字もうかばない。\
+
+cl a,%type_crossfade_fst
+
+「で、秋葉。今日の昼食はどうなってるんだ？　琥珀さんにお弁当でも作ってもらったのか？」
+
+ld c,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
+
+「え……オベントウ、ですか？」
+「……いや、いい。そんな一般的なことを尋ねた俺が間違いだった」
+
+cl a,%type_crossfade_fst
+
+　買ってきたパンのなかから、比較的まともなサンドウィッチといちご牛乳を差し出す。\
+
+「ほら、今日の昼食。昨日のよりはマシだから、安心して食べられるぞ」
+
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+「……うん、わかった」
+　おずおずとサンドウィッチといちご牛乳を手に取る秋葉。
+　……この先、秋葉がうちの学校に昼食に慣れる時がくるのか、少しだけ不安になる。\
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\ari_t05.jpg",%type_crossfade_fst
+
+「あー、いいないいなー。なあ遠野、オレっちにはないの？」
+「……うん。まあ、なぜか、買ってある」
+　ほら、とソーセージパンと適当な飲み物を手渡した。
+
+ld c,":a;image\tachi\ari_t03.jpg",%type_crossfade_fst
+
+「うっわー、なんだよそれ！　ゴーヤドリンクなんて哺乳類の飲むモンじゃねーだろうが！」
+「しょうがないだろ、他のはもうなかったんだから。ま、サボテンミキサーならいくらでも余ってたけど、いくらなんでもアレはね、すでに飲み物じゃないから」\
+
+「………むっ。まだおまえにも人の情けというものがあったんですか、遠野」
+「おまえ以外にはいくらでもあるよ。ほら、昨日の借りはこれでチャラだからな」
+
+cl a,%type_crossfade_fst
+
+　ちぇっ、と舌打ちしながらも有彦は楽しげに飲み物パックにストローを挿している。
+「ナプキンももらってきたから、秋葉も―――」
+
+ld c,":a;image\tachi\aki_t15a.jpg",%type_crossfade_fst
+
+cl a,%type_crossfade_mid
+
+「――――！」
+　びっ、びっくりした。
+　なんて顔してるんだ、秋葉のヤツ。
+「ど、どうした秋葉。毛虫でもいたのか？」
+
+ld l,":a;image\tachi\aki_t16a.jpg",%type_crossfade_fst
+
+「……別になんでもありません。ただ、兄さんと乾さんって本当に仲がいいんだなあって思っただけです」\
+
+ld r,":a;image\tachi\ari_t02.jpg",%type_crossfade_fst
+
+「あははは！　秋葉ちゃん、そりゃあいくらなんでも持ち上げすぎだって。オレと遠野は友人は友人でも仇敵と書いてトモと呼ぶ友人なんだからな！」
+
+ld l,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
+
+　がははは、と愉快そうに笑う有彦の横で、秋葉は何か言いたそうな視線を向けてくる。
+
+cl a,%type_crossfade_fst
+
+br
+――――と。
+br
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_lshutter_mid
+
+「あ、こんなところにいたんですね、遠野くんたち」
+　お弁当を片手に、先輩がやってきた。\
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\ari_t05.jpg",%type_crossfade_fst
+
+「あっ、シエル先輩じゃん！　やった、今日はスリーセブンだぞ遠野！」
+「…………」
+
+cl a,%type_crossfade_fst
+
+　……悪いけど有彦、俺はそこまで素直に喜べない。
+　だって、その―――
+
+ld c,":a;image\tachi\aki_t10.jpg",%type_lshutter_mid
+
+br
+　秋葉が、とっても恐い顔をしているんだ。\
+
+cl a,%type_crossfade_fst
+
+ld r,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+「みなさん、わたしもお昼をご一緒していいですか？」
+　うんうん、とうなずく有彦。
+　俺だってそれには賛成だけど―――
+
+ld l,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+「嫌です」
+　なんて、秋葉はきっぱりと断言した。\
+
+cl a,%type_crossfade_fst
+
+　……中庭の空気が寒い。
+　十月も末だから、そりゃあ暖かいとは言えないけど、とにかく寒い。
+　秋葉のお嬢さまなところしか知らなかった有彦なんて、『あ』と口を開けたまま固まっている。
+「…………はあ」
+　が、兄として秋葉の今の発言は注意してやらないといけないだろう。\
+
+「秋葉、なんてコト言うんだ。たとえ冗談にしたって、今のは失礼だぞ」
+
+ld l,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
+
+「兄さん。私、冗談は口にしません。今のは偽りのない私の本心です」
+「な―――なんて事を言うんだおまえ！　秋葉は先輩とまだ会ったばっかりじゃないか！　だっていうのにいきなり嫌ですって、それはどういう了見だ！」
+
+ld l,":a;image\tachi\aki_t06.jpg",%type_crossfade_fst
+
+「嫌なものは嫌なんですっ。私、その人とは絶対的に相性が悪いんです。
+
+ld l,":a;image\tachi\aki_t18a.jpg",%type_crossfade_fst
+
+「あなただってそうでしょう？　私とは相容れないってわかってるんじゃない、先輩？」\
+
+ld r,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+「いえいえ、そんなコトはありませんよ。たしかにお互い苦手なタイプみたいですけど、わたしはなんとか我慢できますから」
+「「――――っ」」
+　ザザッ、と有彦といっしょに身を引いた。
+　……すごい。
+　はっきりとケンカを売っている秋葉も秋葉だけど、それを笑顔で受け流す先輩も先輩だ。\
+
+ld l,":a;image\tachi\aki_t03a.jpg",%type_crossfade_fst
+
+「ふうん……それって、つまりお互いのことは相殺しあいましょう、っていう提案なのかしら」
+
+ld r,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+「てっとり早く言うとそうですね。わたしが用があるのは秋葉さんじゃなくて遠野くんや乾くんですから」
+
+cl a,%type_crossfade_fst
+
+br
+　ばちばちばち、と二人の間で火花が散っている。
+　古い言い方でいうと龍虎相搏つ、というヤツかもしれない。\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_04.jpg",%type_rshutter_fst
+
+
+　……結局、もう破滅的に（自称）相性が悪いシエル先輩と秋葉を囲んで、昼食がはじまってしまった。
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+「でも、遠野くんにこんな歳の近い妹さんがいるなんて知りませんでした。わたし、てっきり遠野くんって一人っ子だと思ってましたから」
+「……あれ？　俺、前に先輩には妹がいるって話さなかったっけ」
+
+ld c,":a;image\tachi\cel_t12.jpg",%type_crossfade_fst
+
+「ええ、聞きましたよ。遠野のお屋敷には妹さんが一人残っている、っていう話でしたよね」
+
+cl a,%type_crossfade_fst
+
+　……？
+　なんだ、やっぱり先輩は秋葉のことを前から知ってたんじゃないか。\
+
+ld l,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+「私も兄さんにこんな知り合いがいるとは思いませんでした。シエル先輩はいつからこの学園にいらっしゃるんですか？」
+
+ld r,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+「ん？　秋葉ちゃん、先輩は三年だからずっと前からいるぜ。今年で卒業なのは残念だけどな」
+
+ld l,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+
+「そうですか。あまり制服慣れしていなさそうでしたので、私と同じように転校してきたのかと思いました」\
+
+ld r,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+「そうですねー、わたしもホントは秋葉さんみたいな制服が着たかったかなあ。秋葉さん、その制服は前の学校のものですか？」
+
+ld l,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+「ええ、こちらの学校の制服は好みじゃありませんから、前の学校のものを着ているんです」
+br
+　さらりと、秋葉はとんでもないコトを言ってのける。
+　……そっか、てっきりまだ制服が出来てないのかなって思ったけど、初めっからうちの学校の制服を着る気はなかったんだ。\
+
+ld r,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+「はあ。秋葉さん、どうも活発そうですからこっちのほうが似合うとは思いますよ。ね、遠野くんはどう思います？」
+「え？　な、なにがですか？」
+
+ld r,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+「ですから、秋葉さんの制服の話です。どっちの制服が似合うかなって」
+「……どっちの制服が似合うか、か……」
+br
+
+cl a,%type_crossfade_fst
+
+　そうだな、俺は―――
+
+br
+
+
+return

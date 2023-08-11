@@ -1,0 +1,15 @@
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w4000
+bg "image\bg\bg_29b.jpg",%type_lcartain_slw
+
+――――時計の針は二つとも頂点に差し掛かろうとしている。
+　ここにきてから二時間。アルクェイドがやってくるような気配はない。
+br
+　俺は――――
+br
+
+
+
+return

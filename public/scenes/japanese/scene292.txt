@@ -1,0 +1,169 @@
+
+
+bg "image\bg\bg_40e.jpg",%type_crossfade_mid
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_40e.jpg",%type_nowaitdisp
+
+
+　はあ、はあ、はあ―――――
+br
+　そういう、コトか。
+　この衝動。
+　俺の意思を残したままで狂わせようとするこの衝動。
+br
+　これが。
+　これがロアなのか。\
+
+　でもどうして。少なくとも、俺はずっとマトモだったのに。
+　この屋敷に帰ってくるまでは、本当に普通の人間だったのに。
+br
+　どんどん、とドアを叩く音がする。
+　けれどそこを開けるワケにはいかない。
+　開ければ、俺はそれで終わってしまう。\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+
+bg "image\bg\cmo_13.jpg",%type_crossfade_fst
+bg "image\bg\bg_40e.jpg",%type_crossfade_fst
+
+
+「あ―――――」
+　ようやくわかった。
+　あの夢は、俺より一代前のロアの記憶だ。
+　部屋に閉じこもって、そのあげくに両親を殺して、自分の住んでいた街を吸血鬼だらけにしてしまった、見知らぬ誰かの、最後の記憶。\
+
+「――――――」
+　……手段がない。
+　コイツは、俺が自殺すれば解決するという問題でもない。
+　こればっかりは、もうどうしようもない。\
+
+　前のヤツの気持ちがわかった。
+　俺が死んだところで、死ぬのは俺のイシとやらだけだ。そうなれば残ったロアのイシがこの体を完全に操るだろう。
+　そうなれば―――もっと酷いコトになる。
+br
+「は―――はは、は」
+　……もっとも、俺には自殺するなんていうつもりは微塵もないんだけど。\
+
+「志貴さま、開けてください、志貴さま！」
+　ドンドン、と扉の向こうから翡翠の声が聞こえる。
+br
+　……翡翠の声は、どこか知らない異国のコトバのように聞こえた。
+　遠すぎる。
+　たった一枚。たった一枚の壁を隔てただけなのに。
+br
+　今はそれが、もう月と星の間ぐらい、遠く離れて聞こえていた。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+playstop
+
+bg "image\bg\bg_40e.jpg",%type_crossfade_slw
+
+waveloop se10
+
+　午前十時になった。
+　翡翠は諦めて引き下がった。
+　かわるがわる、秋葉や琥珀さんがやってきて扉をノックしたが、すべて無視した。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_40e.jpg",%type_crossfade_slw
+
+　十二時。
+　……腹がへった。
+　けど、まだ大丈夫だ。
+　シーツをかぶって、ガタガタと震える体を抱きしめている。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_40e.jpg",%type_crossfade_slw
+
+
+　二時。
+　……喉がかわいて、死にそうだ。
+　時間の感覚が、少しおかしい。
+　とてもゆったりと感じられる。
+　興奮剤をうたれつづけているみたいに、体中が動き回りたくて暴れている。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_40e.jpg",%type_crossfade_slw
+
+br
+　四時。
+　……またドアがノックされた。
+　名前を呼ばれる。
+　それが誰の声だったか、誰の名前を口にしているのか、どうしても判別できない。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+monocro #ff0000
+
+bg "image\bg\bg_40e.jpg",%type_crossfade_slw
+
+br
+br
+　五時。
+　段々と暗くなっていく。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+
+bg "image\bg\bg_40e.jpg",%type_crossfade_slw
+
+
+br
+br
+br
+　六時。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+monocro off
+
+bg "image\bg\bg_40f.jpg",%type_crossfade_slw
+
+
+br
+br
+br
+br
+　七時。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_40f.jpg",%type_crossfade_slw
+
+br
+br
+br
+br
+br
+　八時。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+bg "image\bg\bg_40f.jpg",%type_crossfade_slw
+
+wave se3
+
+br
+br
+br
+br
+br
+br
+―――誰か、きた。\
+
+「志貴さん、夕ごはんをもってきました。朝から何も食べていないんじゃまいってしまいますよ」
+br
+　琥珀の声だ。
+　どんどん、と扉をノックしている。
+br
+「もう、こうなったらお食事だけでも食べてもらいますからね」
+　ガチャガチャ、という音。
+　ドアをノックする音ではなく、鍵を開けているような、そんな音。\
+
+「ふふふ、最後の切り札マスターキーの出番ですよー」
+「――――あ」
+br
+　カギが、開く。
+br
+
+
+
+
+
+return

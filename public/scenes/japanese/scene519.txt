@@ -1,0 +1,71 @@
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "*3"
+
+
+ld c,":a;image\tachi\osiete.jpg",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+　メルシー！
+　クライマックスでデッドエンドを迎えてしまった残念な遠野くんの為のこのコーナー、
+“教えて！知得留先生！”の時間がやってきちゃいました。
+　よせばいいのにこのコーナーもすでに二日目。
+　この分だと三日目ぐらいまでいきそうで吐き気がしますね。
+br
+　それでは一時間目の授業を始めましょう。\
+
+
+　あーあ。
+　だから言ったじゃないですか遠野くん。
+　アルクェイドなんかを信用しちゃいけないんだって。
+
+br
+ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+
+「違うよう。アレはわたしのせいじゃないよう」
+br
+　誰がどう見ても貴女の所為です。
+br
+「うにゃー！」\
+cl l,%type_lshutter_fst
+
+――――さて。
+br
+　ここに来てしまった遠野くん。
+　言いにくいんですが、かなり前から再提出。
+　アルクェイドに生まれていた遠野くんへの感情は、残念ながら彼女の吸血衝動には及びませんでした。
+　一日、二日前からやりなおして絆を深めてみたりしてください。
+br
+　ああ、あとそうですね。
+　遠野くん、いくら魅入られたからって簡単にキレちゃうのはどうかと思いますよー。\
+
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+ld c,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+「わたしのせいじゃないのに……」
+
+ld c,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+ld c,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+「志貴のばかー！　どんかんー！　とーへんぼくー！」\
+
+
+cl c,%type_crossfade_mid
+
+
+playstop
+
+
+
+return

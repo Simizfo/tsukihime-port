@@ -1,0 +1,119 @@
+
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_01c.jpg",%type_lcartain_mid
+
+―――夕方の一件が気になって、学校にやってきた。
+br
+　……思い返してみると、学校でのアルクェイドはどこかおかしかった。
+　なんの脈絡もないけど、あいつがアテもなく走り去った先があるとしたら、それはこの校舎のように思える。\
+
+bg "image\bg\bg_03c.jpg",%type_lcartain_mid
+
+　あたりには人の気配はおろか、物音一つさえしない。
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_03c.jpg",%type_crossfade_fst
+
+「…………っ」
+　だっていうのに、校舎の中に、何かがいるような、予感がする。\
+
+wave se0
+
+
+　何か。
+!w500
+
+　日の落ちたこの校舎は、不吉な『場』と、
+!w500
+
+　化している。\
+
+「……入るぞ、志貴」
+　ためらっていても時間の無駄だ。
+　自分に言い聞かせるように呟いて、校舎の中へと歩き出した。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+play "*6"
+
+bg "image\bg\bg_10c.jpg",%type_lcartain_mid
+waveloop se1
+
+br
+――――一階に、人影はない。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_07b.jpg",%type_lcartain_mid
+
+br
+br
+br
+――――ズキリ、と首の後が痺れる。
+　それを堪えて、二階にあがった。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_11c.jpg",%type_lcartain_mid
+
+br
+br
+br
+br
+br
+――――二階にあがる。
+　人影はない。\
+
+wave se7
+
+　人影はない。
+wave se7
+
+　人影は、ない。
+br
+　だが。
+　背中に、ぬめりと。
+　蛇の腹のような、冷たいくせに柔らかい、感触がのしかかってきた。\
+
+「―――――誰だ！」
+　振りかえる。
+　そこには、たしか。
+ld c,":a;image\tachi\roa_t07a.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+\
+
+「え――――？」
+　トス、という音。
+　次の、瞬間。
+　俺の胸が、切開された。\
+
+bg "image\bg\ima_12b.jpg",%type_lshutter_fst
+
+　血が流れる。
+　胸の古傷が開くように、突然、背後から胸をナイフで貫かれた。
+「あ―――――」
+　ずるり、と体が落ちる。
+br
+――――ワケが解らない。
+\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+　意識が薄れる。
+　その最後の瞬間。
+br
+wavestop
+
+bg "image\bg\cmo_06.jpg",%type_crossfade_mid
+　いつかの、遠い夏の日の映像が、繰り返された。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+playstop
+
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+return

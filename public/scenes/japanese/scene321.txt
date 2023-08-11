@@ -1,0 +1,74 @@
+
+
+
+bg "image\bg\bg_34a.jpg",%type_tcartain_mid
+
+play "*3"
+
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+
+「それでは志貴さんが戻ってきた事を祝して、乾杯をしたいと思います。みなさん、どうかお好きなお飲み物を選んでください」
+　琥珀さんはまったく毒気のない笑顔で、並べられた飲み物を勧めてくる。
+
+cl a,%type_crossfade_fst
+
+　その大部分がジュースなどといったものではなく、れっきとしたアルコール飲料だったりした。\
+
+「……秋葉、あのさ」
+
+ld c,":a;image\tachi\aki_t04b.jpg",%type_crossfade_fst
+
+「ん？　なに兄さん？」
+　……秋葉は自分のグラスにとくとくと茶色の液体を注いで、オレンジジュースで割ったりしている。
+「おま、おまえ、それウイスキーじゃ、ないんですか」
+「そうだけど、何かヘンですか？」
+「そうだけどって、秋葉」
+　その、未成年の飲酒はいけないんじゃなかったっけ……？\
+
+ld c,":a;image\tachi\aki_t08b.jpg",%type_crossfade_fst
+
+「兄さんの歓迎会なんですから、お酒ぐらいは飲まないとつまらないでしょう？
+　あ、それとも兄さん。もしかしてアルコールは弱いほう？」
+　秋葉はどことなく嬉しそうだ。\
+
+cl a,%type_crossfade_fst
+
+ld l,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+
+「あっ、翡翠ちゃん。珍しいね、今日はジュースじゃないんだ」
+
+ld r,":a;image\tachi\his_t20.jpg",%type_crossfade_fst
+
+「…………………」
+　照れているのか、翡翠は無言でお酒をグラスについでいる。\
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\aki_t04b.jpg",%type_crossfade_fst
+
+「ほら兄さん、翡翠もお酒を飲むっていうんですから、まさか一人だけジュースですませようってつもりじゃないでしょう？」
+「………ったく。わりとお祭り好きだったんだな、秋葉は」
+
+ld c,":a;image\tachi\aki_t08b.jpg",%type_crossfade_fst
+
+「ええ。好きなお祭りは少ないですけど、今日は特別ですから」
+
+cl a,%type_crossfade_fst
+
+br
+――――はあ。
+　仕方ない、あんまり純度の高いアルコールは体によくないんだけど、少しぐらいなら大丈夫だろう。
+　テーブルに並んだ飲み物の中で一番度数の低いのは―――ワインかな。\
+
+ld c,":a;image\tachi\koha_t03.jpg",%type_crossfade_fst
+
+「それではみなさん、グラスをどうぞ。
+　せーの、かんぱーいっ！」
+br
+　キィン、とガラスとガラスの弾け合う音のあと、琥珀さんはクイッと一気に、秋葉は時間をかけてゆっくり、翡翠はチロチロと舐めるように飲み干していく。
+br
+　……あーあ、どうなってもしらないからな、俺は。\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_slw
+
+return

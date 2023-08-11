@@ -1,0 +1,82 @@
+
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "*3"
+
+
+ld c,":a;image\tachi\osiete.jpg",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+　メルシー！
+　おめでとうございます！　シエルさんのグッドエンドです！
+br
+　……って、え？
+　…………あれ？
+　…………あれれれ？？
+　ちょっと待ったぁ！
+　なんですか。
+　なんなんですかこの終わり方！\
+
+
+ld l,":a;image\tachi\ark_t30.jpg",%type_crossfade_mid
+
+「………………………………こそこそ」
+br
+　そこ！　まちなさい、この泥棒ネコ――――！
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+
+wave se9
+quakey 1,50
+!w1000
+ld l,":a;image\tachi\ark_t31a.jpg",%type_crossfade_mid
+
+br
+「いったーい、ぼうりょくはんたいー。シエル先生はすぐ体罰をするのでいけないとおもいまーす」\
+
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+
+wave se9
+quakey 1,50
+ld r,":a;image\tachi\cel_t20.jpg",%type_lshutter_fst
+
+――――却下です。
+　……ああもう、えっとですね！
+　各ヒロインには二種類のエンディングが用意されています。
+　今回のはシエルさんのグッドエンド。
+　少し前の選択に戻って、違う物語を歩んでください！
+　そっちのほうがトゥルーエンディングですから！\
+
+
+　あ、それとですね。
+　シエルさんとアルクェイドのルートを表とすると、まったく別展開の裏ルートが存在します。
+　秋葉さんを代表する“遠野家”ルートですね。
+　中々分岐の条件が解りづらいようですから、ちょっとヒントを。\
+
+　一日目は、自分からシエルさんに会ってはいけません。
+br
+　昼休みには教室に残ったほうがいいみたいです。
+br
+　それと、極めつけ。
+　遠野くんはネロという吸血鬼に出会わなければこんな事にはならなかったと思います。
+　ですから、まず事の発端。
+　あの時、あの行動をしようとさえしなければ、まったく違った展開が待ち受けている事でしょう。
+br
+　それではまたいずれ、本編でお会いしましょうね！\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+
+return

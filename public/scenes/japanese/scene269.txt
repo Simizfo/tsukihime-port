@@ -1,0 +1,21 @@
+
+bg "image\bg\bg_27b.jpg",%type_nowaitdisp
+
+「―――ちょっと待ってよ。先輩、さっき俺の好きにしていいよ、って言ってくれたよね……？」
+
+ld c,":a;image\tachi\cel_t01b.jpg",%type_crossfade_fst
+
+「はい、どうぞ遠野くんのお好きなようにしてください」
+　先輩は笑顔で頷いた。\
+
+「……よかった、俺の幻聴ってわけじゃなかったんだ。それじゃ、ここでお別れだ。これ以上付いてきちゃダメだからな」
+ld c,":a;image\tachi\cel_t07b.jpg",%type_crossfade_fst
+
+「はあ。わたし、遠野くんについてきているわけじゃありませんけど」
+「―――あの、先輩？」
+ld c,":a;image\tachi\cel_t01b.jpg",%type_crossfade_fst
+「わたし、公園に用があるだけです。遠野くんがこれから何処に行くのかは知りませんけど、行き先が公園でないのならここでお別れですよ」\
+cl c,%type_crossfade_fst
+
+
+return

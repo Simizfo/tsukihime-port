@@ -1,0 +1,63 @@
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "*3"
+
+
+ld c,":a;image\tachi\osiete.jpg",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+
+
+　ボンジョワール！
+　またもやあっさりとデッドエンドを迎えてしまった不運な遠野くんの為のこのコーナー、
+“おしえて！知得留先生！”の時間がやってきちゃいました。
+br
+　それではニ時間目の授業を始めます。
+　今回は野生の動物をくわしく見学する連載シリーズ、がくがく動物ランドその一をお送りします。
+\
+
+ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+
+「先生、その前にしつもんー。その名前あたまわるいよー。チエルって読めるじゃんー」
+br
+　却下します。
+cl l,%type_lshutter_fst
+
+――――さて、遠野くん。
+　慎重なのはいいと思いますが、今回は裏目に出ましたね。
+　基本的に遠野くんはヒーローなんですから、多少の無茶は許されます。
+　許されますが、さすがに鮫なんていう不条理な動物には対処しきれませんでした。
+　このさいアルクェイドなんてうっちゃっておいて、\
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+
+「むーっ！　チエルに言われたくないー」
+br
+
+
+―――うっちゃっておいて！
+cl l,%type_lshutter_fst
+br
+「きゃー、ぼうりょくはんたいー」
+br
+　とりあえず覚悟を決めて、遠野くんだけでホテルを探検してみてください。
+　中は動物王国まっさかり。
+　霊長類の代表として、ケモノどもに目にモノ見せてあげましょうねー。\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+
+
+return

@@ -1,0 +1,54 @@
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "*3"
+
+
+ld c,":a;image\tachi\osiete.jpg",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+　こんにちは。本教室の担任、知得留です。
+　六時間目は人捜しの基本、というものを皆さんで考えてみましょう。
+br
+　ズバリ、率直にいって遠野くんは人捜しというものが解っていません。
+　アルクェイドが走り去っていった理由を考察し、彼女は何故、何処へ、何をしに行ったのか、と推理をめぐらせていけば答えはおのずと出てきます。
+br
+　つまり彼女はお腹が減ったので、路地裏にチューチューしにいったのです！\
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+
+
+「でたらめー！　シエル横暴ー！　メガネー！　インドじんー！」
+br
+　………………。
+　それでは今回はここまで。
+　引き続きゲーム本編をお楽しみください。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+ld c,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+「にゃ？　どうしたシエル？　ショットガンとかマシンガンとか皆殺しバルカンなんか持ち出しちゃって」
+br
+wave se6
+
+
+　アルクッ！　インドは関係ないでしょう、インドは！
+br
+「メガネが怒ったにゃー！　ばひゅー（擬音）」\
+
+cl c,%type_bscroll_mid
+
+
+
+
+
+
+playstop
+
+return

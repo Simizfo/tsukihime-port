@@ -1,0 +1,14 @@
+
+
+bg "image\bg\bg_06a.jpg",%type_lshutter_mid
+
+　昼休みになった。
+　さて、どこで昼食をとろうか。
+br
+
+
+
+
+
+
+return

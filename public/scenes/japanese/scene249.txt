@@ -1,0 +1,13 @@
+playstop
+
++
+bg "image\bg\bg_06b.jpg",%type_crossfade_slw
+
+
+　今日も確実にひまを持て余しながら授業が終わった。
+br
+　さて―――
+br
+
+
+return

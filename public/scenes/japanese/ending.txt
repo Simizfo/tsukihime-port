@@ -1,0 +1,69 @@
+mov %staffrollwait,4000
+
+play "*10"
+
+setwindow 18,18, 23,16, 25,25, 0,4, 22, 1, 1,#ffffff, 0,0, 639,479
+setcursor 0,":c;icon\hollow.bmp",0,0
+setcursor 1,":c;icon\hollow.bmp",0,0
+
+bg "image\word\ed_01.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_02.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_03.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_04.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_05.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_06.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_07.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_08.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+
+bg "image\word\ed_09.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_10.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_11.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_12.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_13.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_14.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_15.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+bg "image\word\ed_16.jpg",%type_crossfade_mid
+delay %staffrollwait
+
+delay 25000
+
+playstop
+
+bg "image\word\ed_17.jpg",%type_crossfade_slw
+
+\
+
+setwindow 18,18, 23,16, 25,25, 0,4, 22, 1, 1,#aaaaaa, 0,0, 639,479
+setcursor 0,":l/3,160,2;icon\cursor0.bmp",0,0
+setcursor 1,":l/3,160,2;icon\cursor1.bmp",0,0
+return

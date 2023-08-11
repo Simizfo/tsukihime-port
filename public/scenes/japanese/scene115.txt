@@ -1,0 +1,12 @@
+
+bg "image\bg\bg_06b.jpg",%type_nowaitdisp
+
+　……そうだな、あんまり翡翠や琥珀さんに迷惑をかけるのも申し訳ない。
+　ここ数日まっすぐ屋敷に帰らなかった事だし、今日ぐらいは寄り道をせずに帰宅したほうがいいだろう。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w2000
+
+
+
+return

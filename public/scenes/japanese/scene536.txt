@@ -1,0 +1,47 @@
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "*3"
+
+
+ld c,":a;image\tachi\osiete.jpg",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+　……はい、三日目のお昼休みです。
+　いつもならお昼ご飯を食べに外出しているんですけど、今回はさすがに、ちょっと……。
+br
+ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+
+「首ちょんぱだもんねー。食べても胃までいかないにゃ。志貴もやることエグイけど、シエルは自業自得なんじゃない？」
+br
+　あはは、やかましいです。
+　まったく出番のない人よりはマシですよーだ。\
+
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+
+「うっ、言われてみればそのとおりー！　どうしてここまで出番がないのよ、ばかー！」
+br
+　日頃の行いでしょうけど、今回は貴女にかまっている余裕はありません。
+　遠野くん。
+　さっさと一個前に戻って、もっと遠野くんらしい選択をしてください。
+　このままじゃわたしも遠野くんもうかばれません！\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+
+
+
+playstop
+
+
+
+
+return

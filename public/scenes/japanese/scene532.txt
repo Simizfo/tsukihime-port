@@ -1,0 +1,109 @@
+
+
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "*3"
+
+
+ld c,":a;image\tachi\osiete.jpg",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+　ボンジュール！
+　かくも容易くデッドエンドを迎えてしまったおませな遠野くんの為のこのコーナー、
+“教えて！知得留先生！”の時間がやってきちゃいました。
+br
+　さて、三日目の一時間目です。残る授業は秋葉さんだけですねー\
+
+ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+
+「んにゃ？　せんせい、どうして秋葉より翡翠の授業の方が早く終わってるの？」
+br
+　その質問は却下します。
+　さて、遠野くん。
+　お気持ちは解りますが、弓塚さんの大ピンチです。
+br
+「？？？？　むしろ志貴のほうが大ピンチなんじゃない？」\
+
+　いいから大ピンチです。
+　同級生の女の子がＳＯＳなんですから、君子危うに近寄らずを気取っている場合ではありません。
+　少し前に戻って、ちゃんと路地裏を調べて下さいね。
+　それではまた、次の授業で会いましょう！\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+ld c,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+「……なっとくいかない。どうして秋葉より翡翠のが先なのよー」
+br
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+「わたし、なっとくいかないぞ。　正ヒロインなのにぜんぜん出番ないし、志貴はわたしのこと無視するし！」
+br
+ld r,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+
+「そうだ、なっとくいかないのだ！　わたしだけならまだしもシエルは出番あるみたいじゃん！　なのにわたしは後ろ姿だけだし、くわえてさっちんの方が吸血鬼らしいなんてどういうコトだきのこー！」\
+
+ld r,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld l,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld r,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld r,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld l,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld r,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld r,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld l,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+ld c,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+ld r,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+
+br
+br
+br
+br
+br
+br
+br
+「なっとくいかない、なっとくいかない、なっとくいかなーい！」\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+
+
+
+
+return

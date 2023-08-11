@@ -1,0 +1,43 @@
+
+bg "image\bg\bg_11b.jpg",%type_nowaitdisp
+
+
+　さすがにそこまで甘える事はできない。
+　先輩は好意で言ってくれているんだろうけど、この人にあんまり格好の悪いところを見せたくはない。\
+
+「――いや、我慢できそうです。先輩の言葉だけでおなかが膨らみましたから」
+ld c,":a;image\tachi\cel_t09.jpg",%type_crossfade_fst
+「……そうですか？　遠野くん、朝から何も食べていないんじゃ途中で倒れちゃうかもしれませんよ……？」\
+
+「ご心配にはおよびません。俺みたいに何度も貧血で倒れたりしていると、いつ倒れるかなっていうのが解るようになるんです。で、とりあえず今日はオッケーって体が言ってますから」
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+「……まあ遠野くんがそう言うんなら大丈夫なんでしょうけど」
+　はあ、と呆れた風なため息をこぼしながら、先輩は廊下を歩いていった。\
+
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_01b.jpg",%type_lcartain_mid
+
+
+　校門を通り抜けた。
+　ここからの帰り道はお互い別方向になる。
+br
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_mid
+「それじゃあここでお別れですね。なんか、あっという間でした」
+　……同感。こっちももう少しうちの学校が広かったら良かったのに、と本気で思っていたりする。\
+
+「それじゃ先輩、また明日」
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+「はい。また明日、学校でお会いしましょう」
+cl c,%type_lshutter_mid
+
+　笑顔で返答して、先輩は別方向の帰り道を去っていく。
+　それを軽く見届けてから、自分も屋敷への帰路についた。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+
+playstop
+
+
+return

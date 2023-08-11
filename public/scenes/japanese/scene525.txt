@@ -1,0 +1,74 @@
+
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "*4"
+
+
+ld c,":a;image\tachi\osiete.jpg",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+
+ld r,":a;image\tachi\nero_t02a.jpg",%type_tshutter_mid
+
+「少年、質問かね」
+br
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+「あ、きったなーい。ネロったらこんなトコロまで顔出して目立とうとしてるー」
+br
+
+ld r,":a;image\tachi\nero_t03.jpg",%type_crossfade_fst
+
+
+「たわけ。知得留クンはカレー屋に出かけている。よって、私が代理だ」
+br
+「ふーん。それじゃヒントの一つでも出してみなさいよ、貴方」
+br
+cl r,%type_crossfade_fst
+ld r,":a;image\tachi\nero_t04.jpg",%type_crossfade_fst
+
+「喧嘩両成敗。無益は殺生はするな」\
+
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+
+「なっとくいかなーい。シエルと戦う気がなくっても、無条件でメガネ外しちゃった志貴だっているはずにゃ。
+　それはどうだっていうのよう」
+
+ld r,":a;image\tachi\nero_t02a.jpg",%type_crossfade_fst
+
+br
+「盗むな、犯すな、欺くな。不心得者は心当たりがあろう。ならば早々にこの日の朝に時間旅行にでかけるがいい。
+　ふん。そう言えば姫君にも心当たりがあるのではないかね？」\
+
+
+ld l,":a;image\tachi\ark_t30.jpg",%type_lshutter_fst
+
+「にゃ、にゃにが？　わたし難しいコトわからなーい」
+br
+ld r,":a;image\tachi\nero_t02c.jpg",%type_crossfade_fst
+
+「……まあ、人の事など瑣末だがね。
+　では私はここで、君たちの結末を見てみるとしよう―――――」\
+
+
+
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+
+playstop
+
+
+return

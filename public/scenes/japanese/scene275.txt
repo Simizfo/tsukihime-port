@@ -1,0 +1,13 @@
+
+bg "image\bg\bg_01a.jpg",%type_nowaitdisp
+
+
+「…………」
+　いや、ここで待っていても先輩には会えない気がする。
+　先輩のほうに会う気がないのなら、俺の姿を見た時点で帰ってしまうだろうし。
+　ひとまず教室に行って、どうすればいいのか考えよう。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+return

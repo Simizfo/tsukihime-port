@@ -1,0 +1,102 @@
+
+bg "image\bg\ima_06.jpg",%type_nowaitdisp
+
+br
+――――自分の命が惜しいんだ。\
+
+　昨日、アルクェイドを殺してしまった時の光景を思い出す。
+　血と死臭に満ちた時間。―――あんなものを、俺は二度と経験したくない。
+　アルクェイドと一緒にいれば、間違いなくあんな光景が繰り返される。それが嫌なら屋敷に戻るしかない。\
+
+「――――――」
+　……なにか、自分の選択には大きな欠陥がある気がする。
+　けど今は頭が混乱していて、理性が正常に働いてくれない。
+　とにかく今は自分の部屋に戻って一息つこう。そうすればきっと冷静になって、いい考えも浮かんでくるはずだ。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_22c.jpg",%type_lcartain_slw
+
+　日が沈んで、あたりはすっかり暗くなってしまった。
+　時間にして七時を過ぎたあたりだろう。
+　屋敷の門限は八時だそうだから、急いで帰らないとまた秋葉に小言を言われる。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_47.jpg",%type_lcartain_slw
+
+　屋敷の周りの道は、相変わらず人気がない。
+　まだ日が沈んだばかりだっていうのに、まるで深夜のような静けさだ。\
+
+「そういえば、ここって……」
+　屋敷に帰ってきた日の夜、野犬の声がうるさくて様子を見にきた場所だったっけ。
+
+wave se0
+
+
+「あれ……？」
+　いま、なにか。
+　ひどく、不吉な予感が、した。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_47.jpg",%type_crossfade_fst
+
+bg "image\bg\ima_10.jpg",%type_tcartain_fst
+
+br
+br
+br
+br
+br
+br
+――――おかしい。
+　突然、あたりが真っ暗になってしまった。\
+
+　ぼたぼた、という音が聞こえる。
+　……どこからだろう。
+　とても近くから聞こえる。
+　体が急速に冷めていく。
+　とても近くから聞こえる。
+　意識が緊急ランプのように回転していく。\
+
+br
+br
+br
+br
+br
+br
+br
+　ぼたぼた。ぼたぼた。\
+
+br
+br
+br
+br
+br
+br
+br
+　音は。
+　どうやら、自分の首の後ろから、しているようだ。\
+
+「あ―――――」
+wave se4
+
+　アスファルトに倒れこむ。
+　手足は動かない。意識は薄れていく。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+ld c,":a;image\tachi\nero_t01a.jpg",%type_crossfade_fst
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+　薄れていく意識の底で、
+!w500
+
+　数匹の黒犬が俺の手足を食べている事だけが、
+!w500
+　わかった。\
+
+cl a,%type_waitdisp
+bg "image\word\end.jpg",%type_crossfade_slw
+
+resettimer
+waittimer 3000
+
+return
