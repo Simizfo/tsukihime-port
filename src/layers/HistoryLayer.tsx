@@ -39,13 +39,18 @@ const HistoryLayer = (props: Props) => {
   useEffect(() => {
     //on right click, when history is displayed, hide history
     const handleContextMenu = (_e: MouseEvent) => {
-      if (display) {
-        setDisplay(false)
-      }
+      if (display) setDisplay(false)
     }
     return addEventListener({event: 'contextmenu', handler: handleContextMenu})
   })
 
+  useEffect(() => {
+    //on escape, when history is displayed, hide history
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key == "Escape" && display) setDisplay(false)
+    }
+    return addEventListener({event: 'keydown', handler: handleKeyDown})
+  })
 
   useEffect(() => {
     //when scrolled to the bottom of history, hide history

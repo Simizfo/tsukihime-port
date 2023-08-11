@@ -31,6 +31,16 @@ const SavesLayer = () => {
     return addEventListener({event: 'contextmenu', handler: handleContextMenu})
   }, [])
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key == "Escape") {
+        displayMode.save = false
+        displayMode.load = false
+      }
+    }
+    return addEventListener({event: 'keydown', handler: handleKeyDown})
+  }, [])
+  
   return (
     <div className={`box box-save ${display ? "show" : ""}`} ref={rootRef}>
       <div className="page-content">

@@ -98,9 +98,8 @@ const SaveDetails = ({id, saveState, deleteSave, ...props}: SaveDetailsProps)=> 
 type Props = {
   variant: "save"|"load",
   back: (saveLoaded:boolean)=>void,
-  [key: string]: any
 }
-const SavesLayer = ({variant, back, ...props}: Props) => {
+const SavesLayer = ({variant, back}: Props) => {
   const navigate = useNavigate()
   const [saves, setSaves] = useState<Array<[number,SaveState]>>([])
   const [focusedId, setFocusedSave] = useState<number>()
