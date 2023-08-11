@@ -48,16 +48,6 @@ const TitleMenuScreen = () => {
       exit={{opacity: 0}}>
 
       <ParticlesComponent />
-      <motion.button className="info-icon" onClick={()=>setShow(true)}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          delay: 0.6,
-          duration: 1,
-        }} >
-
-        <HiOutlineInformationCircle/>
-      </motion.button>
 
       <Modal
         isOpen={show}
@@ -136,6 +126,17 @@ const TitleMenuScreen = () => {
           Gallery
         </Link>
       </nav>
+
+      <motion.button className="info-icon" onClick={()=>setShow(true)}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: 0.6,
+          duration: 1,
+        }} >
+
+        <HiOutlineInformationCircle/>
+      </motion.button>
     </motion.div>
   )
 }
