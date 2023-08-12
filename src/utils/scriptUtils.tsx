@@ -29,7 +29,7 @@ async function fetchBlock(label: string): Promise<string[]> {
   const script = await fetch(`./scenes/${SCENES_FOLDERS.english}/${LOGIC_FILE}`)
     .then(script => script.text());
 
-  let start = script.indexOf(`\n*${label}`);
+  let start = script.search(new RegExp(`^\\*${label}\\b`, "m"));
   if (start == -1)
     return [];
   start = script.indexOf('\n', start + 1) + 1;
