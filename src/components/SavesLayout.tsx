@@ -124,8 +124,14 @@ const SavesLayer = ({variant, back}: Props) => {
 
   function onSaveSelect(id: number) {
     if (variant == "save") {
-      if (confirm("Are you sure you want to overwrite this save?"))
+      if (confirm("Are you sure you want to overwrite this save?")) {
+        /*
         storeCurrentState(id)
+        /*/
+        deleteSaveState(id)
+        storeCurrentState(new Date().getTime())
+        //*/
+      }
     } else {
       loadSaveState(id)
       if (displayMode.screen != SCREEN.WINDOW)
