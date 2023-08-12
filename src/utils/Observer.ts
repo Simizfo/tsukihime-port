@@ -26,7 +26,7 @@ class PropertyObserver<V> {
     private listeners: Array<Listener<V>>
 
     constructor(parent: any, property: PropertyKey, onValueChange: VoidFunction) {
-        const descriptor = Object.getOwnPropertyDescriptor(parent, property)
+        const descriptor = Object.seal(Object.getOwnPropertyDescriptor(parent, property))
         if (!descriptor)
             throw Error(`property ${property.toString()} is not a direct property of object ${parent}`)
         if (!(descriptor.configurable && (descriptor.writable??true)))
@@ -40,7 +40,10 @@ class PropertyObserver<V> {
             get() { return descriptor.get?.call(this)??descriptor.value },
             set(v: V) {
                 const oldValue = this[property]
-                descriptor.set?.call(this,v)??(descriptor.value = v)
+                if (descriptor.set)
+                    descriptor.set.call(this, v)
+                else
+                    descriptor.value = v
                 if (v != oldValue && !self.changed) {
                     self.changed = true
                     onValueChange()
