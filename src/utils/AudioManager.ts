@@ -1,6 +1,7 @@
 import { observe } from "./Observer";
 import { STRALIAS_JSON } from "./constants";
-import { settings, gameContext, displayMode, SCREEN } from "./variables";
+import { displayMode, SCREEN } from "./display";
+import { settings, gameContext } from "./variables";
 
 //##############################################################################
 //#                             AudioManager class                             #

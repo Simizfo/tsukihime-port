@@ -9,7 +9,7 @@ import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
 import KeyMap from '../utils/KeyMap';
 import script from '../utils/script';
 import { objectMatch } from '../utils/utils';
-import { SCREEN, displayMode, gameContext } from '../utils/variables';
+import { gameContext } from '../utils/variables';
 import { quickSave, quickLoad, loadSaveState } from "../utils/savestates";
 import SkipLayer from '../layers/SkipLayer';
 import SavesLayer from '../layers/SavesLayer';
@@ -19,38 +19,44 @@ import GestureHandler from '../utils/touch';
 import { toast } from 'react-toastify';
 import { useObserver } from '../utils/Observer';
 import { useNavigate } from 'react-router-dom';
+import { SCREEN, displayMode } from '../utils/display';
 
 //##############################################################################
 //#                                KEY MAPPING                                 #
 //##############################################################################
 
+function isViewAnyOf(...views: Array<typeof displayMode.currentView>) {
+  return views.includes(displayMode.currentView)
+}
+
 const keyMap = new KeyMap({
-  "next":     [()=> objectMatch(displayMode, {menu: false, choices: false, history: false, load: false, save: false}),
+  "next":     [()=> isViewAnyOf("text", "graphics"),
               {key: "Enter"},
               {key: "Control", repeat: true},
               {key: "Meta", repeat: true},
               {key: "ArrowDown", repeat: false},
               {key: "ArrowRight", repeat: false}],
-  "auto_play":[()=> objectMatch(displayMode, {text: true, menu: false, choices: false, history: false, load: false, save: false}),
+  "auto_play":[()=> displayMode.currentView == "text",
               {key: "E", repeat: false}],
-  "page_nav": [()=> objectMatch(displayMode, {menu: false, history: false, load: false, save: false}),
+  "page_nav": [()=> isViewAnyOf("text", "graphics", "dialog"),
               {key: "PageUp", [KeyMap.args]: "prev"},
               {key: "PageDown", [KeyMap.args]: "next"}],
-  "history":  [()=> objectMatch(displayMode, {text: true, menu: false, history: false, load: false, save: false}),
+  "history":  [()=> isViewAnyOf("text", "dialog"),
               {key: "ArrowUp", repeat: false},
               {key: "ArrowLeft", repeat: false},
               {key: "H", repeat: false}],
-  "graphics": {code: "Space", repeat: false, [KeyMap.condition]: ()=>objectMatch(displayMode, {menu: false, history: false, load: false, save: false})},
-  "menu":     [
-              {key: "Escape", repeat: false, [KeyMap.condition]: ()=>(displayMode.menu || !displayMode.history) && !displayMode.load && !displayMode.save},
-              {key: "Backspace", repeat: false, [KeyMap.condition]: ()=>displayMode.menu}],
-  "q_save":   {key: "S", repeat: false},
-  "q_load":   {key: "L", repeat: false},
-  "load":     [()=> objectMatch(displayMode, {menu: false, history: false, load: false, save: false}),
+  "graphics": {code: "Space", repeat: false, [KeyMap.condition]: ()=>isViewAnyOf("text", "graphics")},
+  "menu":     {key: "Escape", repeat: false, [KeyMap.condition]: ()=>!isViewAnyOf("history", "saves")},
+  "back":     [
+              {key: "Escape", repeat: false},
+              {key: "Backspace", repeat: false}],
+  "q_save":   {key: "S", repeat: false, [KeyMap.condition]: ()=> !displayMode.saveScreen},
+  "q_load":   {key: "L", repeat: false, [KeyMap.condition]: ()=> !displayMode.saveScreen},
+  "load":     [()=> isViewAnyOf("text", "graphics"),
               {key: "A", repeat: false}],
-  "save":     [()=> objectMatch(displayMode, {menu: false, history: false, load: false, save: false}),
+  "save":     [()=> isViewAnyOf("text", "graphics"),
               {key: "Z", repeat: false}],
-  "bg_move":  [()=> objectMatch(displayMode, {menu: false, history: false, load: false, save: false}),
+  "bg_move":  [()=> isViewAnyOf("text", "graphics"),
               {key: "ArrowUp", ctrlKey: true, repeat: false, [KeyMap.args]: "up"},
               {key: "ArrowDown", ctrlKey: true, repeat: false, [KeyMap.args]: "down"}]
 }, (action, _evt, ...args)=> {
@@ -74,7 +80,7 @@ const keyMap = new KeyMap({
 //##############################################################################
 
 function next() {
-  if (objectMatch(displayMode, {choices: false, menu: false, history: false})) {
+  if (isViewAnyOf("text", "graphics")) {
     if (!displayMode.text && script.currentLine?.startsWith('`')) // text has been hidden manually
       toggleGraphics()
     else if (script.isFastForward || script.autoPlay) {
@@ -134,7 +140,6 @@ function toggleGraphics() {
 }
 
 function toggleHistory() {
-  displayMode.text = !displayMode.text
   displayMode.history = !displayMode.history
   script.autoPlay = false
 }
@@ -164,13 +169,15 @@ const Window = () => {
     const swipeHandler = new GestureHandler(rootElmtRef.current, {
       swipeTrigDistance: 50,
       onSwipe: (direction)=> {
-        if (objectMatch(displayMode, {history: false, menu: false, save: false, load: false})) {
+        if (displayMode.text) {
           switch(direction) {
             case "left" : toggleMenu(); return true
             case "down" : toggleHistory(); return true
             case "right" : page_nav("prev"); return true
             case "up" : toggleGraphics(); return true
           }
+        } else if (displayMode.graphics) {
+          //TODO : move background ?
         }
       }
     })

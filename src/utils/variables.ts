@@ -75,38 +75,6 @@ for (const key of Reflect.ownKeys(settings)) {
   }
 }
 
-//_________________________________display mode_________________________________
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-export enum SCREEN {
-  TITLE = "/title",
-  WINDOW = "/window",
-  GALLERY = "/gallery",
-  CONFIG = "/config",
-  LOAD = "/load"
-}
-export const displayMode : {
-  screen: SCREEN,
-  menu: boolean,
-  history: boolean,
-  text: boolean,
-  choices: boolean,
-  skip: boolean,
-  save: boolean,
-  load: boolean,
-  bgAlignment: 'top'|'center'|'bottom'
-} = {
-  screen: SCREEN.TITLE,
-  menu: false,
-  history: false,
-  text: true,
-  choices: false,
-  skip: false,
-  save: false,
-  load: false,
-  bgAlignment: 'center'
-}
-
 //##############################################################################
 //#                             SCENARIO VARIABLES                             #
 //##############################################################################
@@ -276,7 +244,5 @@ declare global {
 }
 window.settings = settings
 window.progress = progress
-window.displayMode = displayMode
 window.g = window.gameContext = gameContext
 window.temp_vars = temp
-displayMode.screen = SCREEN.WINDOW

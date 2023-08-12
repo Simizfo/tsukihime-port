@@ -1,10 +1,11 @@
 import { useState, memo, Fragment } from "react";
-import { displayMode, gameContext, settings } from "../utils/variables";
+import { gameContext, settings } from "../utils/variables";
 import { observe, useChildrenObserver, useObserver } from "../utils/Observer";
 import { RouteDayName, RouteName } from "../types";
 import { IMAGES_FOLDERS, SCENE_ATTRS } from "../utils/constants";
 import { parseBBcode } from "../utils/utils";
 import { findImageObjectByName } from "../utils/gallery";
+import { displayMode } from "../utils/display";
 
 type SpritePos = keyof typeof gameContext.graphics
 const POSITIONS: Array<SpritePos> = Object.keys(gameContext.graphics) as Array<SpritePos>
@@ -75,7 +76,7 @@ function applyChange(pos: SpritePos, image: string, type: string, onFinish: Void
     transition.pos = pos as SpritePos|'a'
 
     if (duration > 0) {
-      displayMode.text = false
+      displayMode.graphics = true
       // Listen for the 'duration' to be set to 0
       // The component sets it to 0 after completing the animation,
       // and calling 'next' the command also sets it to 0

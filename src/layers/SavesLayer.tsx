@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { displayMode } from "../utils/variables"
+import { displayMode } from "../utils/display"
 import { addEventListener } from "../utils/utils"
 import { useObserver } from '../utils/Observer';
 import SavesLayout from "../components/SavesLayout";
@@ -11,31 +11,31 @@ function back() {
 }
 
 const SavesLayer = () => {
-  const [display, setDisplay] = useState(displayMode.save || displayMode.load)
+  const [display, setDisplay] = useState(displayMode.saveScreen)
   const rootRef = useRef<HTMLDivElement>(null)
 
   function onDisplayChange() {
-    const display = displayMode.save || displayMode.load
+    const display = displayMode.saveScreen
     setDisplay(display)
     if (!display && rootRef.current?.contains(document.activeElement))
       (document.activeElement as HTMLElement).blur?.();
   }
-  useObserver(onDisplayChange, displayMode, "save")
-  useObserver(onDisplayChange, displayMode, "load")
+  useObserver(onDisplayChange, displayMode, "saveScreen")
 
   useEffect(() => {
     const handleContextMenu = (_e: MouseEvent) => {
-      displayMode.save = false
-      displayMode.load = false
+      displayMode.saveScreen = false
     }
     return addEventListener({event: 'contextmenu', handler: handleContextMenu})
   }, [])
 
   return (
     <div className={`box box-save ${display ? "show" : ""}`} ref={rootRef}>
-      <div className="page-content">
-        <SavesLayout variant={displayMode.save ? "save" : "load"} back={back} />
-      </div>
+      {display && 
+        <div className="page-content">
+          <SavesLayout variant={displayMode.savesVariant as "save"|"load"} back={back} />
+        </div>
+      }
     </div>
   )
 }

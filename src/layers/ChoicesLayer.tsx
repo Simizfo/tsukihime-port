@@ -1,11 +1,12 @@
 import { useState } from "react"
 import { Choice, LabelName } from "../types"
-import { SCREEN, displayMode, gameContext } from "../utils/variables"
+import { gameContext } from "../utils/variables"
 import { useObserver } from "../utils/Observer"
 import script from "../utils/script"
+import { displayMode } from "../utils/display"
 
-const choicesContainer: {choices: Choice[]} = {
-  choices: []
+const choicesContainer = {
+  choices: [] as Choice[]
 }
 
 
@@ -23,24 +24,16 @@ export const commands = {
         label: tokens[i+1].trim().substring(1) as LabelName // remove '*'
       })
     }
-    onChoices(choices)
-    return {
-      next: ()=>{},
-      cancel: ()=> { displayMode.choices = false }
-    }; // prevent processing next line
-  }
-}
-
-function onChoices(choices: Choice[]) {
-  if (choices.length > 1) {
+    if (choices.length == 0)
+      console.error("no choice after scene", gameContext.label)
     choicesContainer.choices = choices
-    displayMode.choices = true;
+    displayMode.choice = true;
     console.log(choices)
-  } else if (choices.length == 1) {
-    gameContext.label = choices[0].label
-    console.log(choices[0])
-  } else {
-    console.error("no choice after scene", gameContext.label)
+
+    return {
+      next: ()=>{}, // prevent continuing to next instruction
+      cancel: ()=> { choicesContainer.choices = [] }
+    }; // prevent processing next line
   }
 }
 
@@ -49,20 +42,32 @@ function onChoices(choices: Choice[]) {
 //##############################################################################
 
 const ChoicesLayer = () => {
-  const [display, setDisplay] = useState<boolean>(displayMode.choices)
+  const [display, setDisplay] = useState<boolean>(false)
   const [choices, setChoices] = useState<Choice[]>([])
 
-  useObserver(setDisplay, displayMode, 'choices')
-  useObserver(setChoices, choicesContainer, 'choices')
+  function updateDisplay() {
+    if (displayMode.choice && choicesContainer.choices.length == 0)
+      displayMode.choice = false
+    else setDisplay(displayMode.choice)
+  }
+
+  useObserver(updateDisplay, displayMode, 'choice')
+  useObserver((choices)=> {
+    setChoices(choices)
+    updateDisplay()
+  }, choicesContainer, 'choices')
+
+  /*
   useObserver((screen)=> {
     if (screen != SCREEN.WINDOW)
       displayMode.choices = false // 'select' will be re-processed
   }, displayMode, 'screen')
+  */
 
   const handleSelect = (choice: Choice) => {
     console.log(choice)
     script.moveTo(choice.label)
-    displayMode.choices = false
+    choicesContainer.choices = []
   }
 
   return display ? (

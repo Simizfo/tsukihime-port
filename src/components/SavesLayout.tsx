@@ -1,5 +1,5 @@
 import { ChangeEvent, useEffect, useState } from "react"
-import { SCREEN, displayMode } from "../utils/variables"
+import { SCREEN, displayMode } from "../utils/display"
 import { addEventListener, convertText, parseBBcode } from "../utils/utils"
 import { SceneName } from "../types";
 import { SAVE_EXT, SCENE_ATTRS } from "../utils/constants";

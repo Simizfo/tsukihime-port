@@ -2,10 +2,11 @@ import { useEffect, useRef, useState } from "react"
 import { addEventListener, isFullscreen, toggleFullscreen } from "../utils/utils"
 import { FaCompressArrowsAlt, FaExpandArrowsAlt, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 import { BiSkipNext } from "react-icons/bi"
-import { SCREEN, displayMode, gameContext, settings } from "../utils/variables"
+import { gameContext, settings } from "../utils/variables"
 import { quickLoad, quickSave } from "../utils/savestates"
 import { useObserver } from "../utils/Observer"
 import script from "../utils/script"
+import { displayMode, SCREEN } from "../utils/display"
 
 /**
  * TODO
@@ -50,10 +51,8 @@ const MenuLayer = () => {
   }, [])
 
   const graphicMode = () => {
+    displayMode.graphics = !displayMode.graphics;
     displayMode.menu = false
-    displayMode.history = false
-    displayMode.choices = false
-    displayMode.text = !displayMode.text
   }
 
   const historyMode = () => {

@@ -8,8 +8,9 @@ import history from "./history"
 import { SCENE_ATTRS } from "./constants"
 import Timer, { commands as timerCommands } from "./timer"
 import { checkIfCondition, extractInstructions, fetchFBlock, fetchScene, getPhaseDetails, getSceneTitle, isScene } from "./scriptUtils"
-import { commands as variableCommands, gameContext, settings, displayMode, SCREEN } from "./variables"
+import { commands as variableCommands, gameContext, settings } from "./variables"
 import { toast } from "react-toastify"
+import { SCREEN, displayMode } from "./display"
 type Instruction = {cmd: string, arg: string}
 type CommandHandler = {next: VoidFunction, cancel?: VoidFunction, autoPlayDelay?: number}
 type CommandProcessFunction =

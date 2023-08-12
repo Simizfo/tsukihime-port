@@ -4,10 +4,10 @@ import pageIcon from '../assets/icons/icon_bars.svg'
 import Timer from "../utils/timer"
 import { TEXT_SPEED } from "../utils/constants"
 import { convertText } from "../utils/utils"
-import { displayMode, settings } from "../utils/variables"
+import { settings } from "../utils/variables"
 import { useObserver } from "../utils/Observer"
-import script from "../utils/script"
 import history from "../utils/history"
+import { displayMode } from "../utils/display"
 
 const icons: Record<"moon"|"page", string> = {
   "moon": moonIcon,

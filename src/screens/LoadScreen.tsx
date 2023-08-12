@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import '../styles/saves.scss'
 import SavesLayout from "../components/SavesLayout"
 import { useNavigate } from "react-router-dom"
-import { SCREEN } from "../utils/variables"
+import { SCREEN } from "../utils/display"
 
 const LoadScreen = () => {
   const navigate = useNavigate()

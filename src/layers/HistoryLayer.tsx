@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { addEventListener, convertText, objectMatch } from "../utils/utils";
-import { displayMode } from '../utils/variables';
+import { displayMode } from '../utils/display';
 import { SaveState, loadSaveState } from "../utils/savestates";
 import { useObserver } from '../utils/Observer';
 import history from '../utils/history';
@@ -19,10 +19,12 @@ const HistoryLayer = (props: Props) => {
     const handleWheel = (e: WheelEvent) => {
       if (e.ctrlKey)
         return
-      if (e.deltaY < 0 && !display && objectMatch(displayMode, {menu:false, save:false, load: false})) {
+      if (e.deltaY < 0 && !display && objectMatch(displayMode, {menu:false, saves:false})) {
         if (!history.empty) // at least one element in the iterator
           setDisplay(true)
         script.autoPlay = false
+      } else if (e.deltaY > 0 && display && historyRef.current?.scrollHeight == historyRef.current?.clientHeight) {
+        setDisplay(false)
       }
       //TODO: scroll down: close if scroll past bottom
     }
@@ -59,10 +61,6 @@ const HistoryLayer = (props: Props) => {
   })
 
   useEffect(() => {
-    displayMode.text = !display
-  }, [display])
-
-  useEffect(() => {
     //scroll to the bottom of history
     if (display) {
       const historyElement = historyRef.current
@@ -82,7 +80,7 @@ const HistoryLayer = (props: Props) => {
           {/* lignes des pages précédentes */}
           {Array.from(history, ({contentType, text, saveState}, i) =>
             <Fragment key={i}>
-              {i > 0 && <hr/>}
+              {i > 0 && <hr {...{"page-type": contentType}}/>}
               {saveState &&
                 <button className="menu-btn load" onClick={onClick.bind(null,saveState)}>Load</button>
               }

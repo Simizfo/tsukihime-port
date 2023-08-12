@@ -1,7 +1,7 @@
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { ReactNode, useEffect, useState } from 'react'
 import '../styles/config.scss'
-import { SCREEN, displayMode } from '../utils/variables'
+import { SCREEN, displayMode } from '../utils/display'
 import { motion } from 'framer-motion'
 import ConfigMainTab from './config/ConfigMainTab'
 import ConfigAdultTab from './config/ConfigAdultTab'

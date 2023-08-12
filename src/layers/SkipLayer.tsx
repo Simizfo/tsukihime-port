@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react"
-import { displayMode } from "../utils/variables"
+import { displayMode } from "../utils/display"
 import { useObserver } from "../utils/Observer"
 import script from "../utils/script"
 import { parseBBcode } from "../utils/utils"
 
 const SkipLayer = () => {
-  const [display, setDisplay] = useState<boolean>(displayMode.skip)
+  const [display, setDisplay] = useState<boolean>(false)
   const [sceneTitle, setSceneTitle] = useState<string>()
   const skipConfirm = useRef<(skip:boolean)=>void>()
 
@@ -22,8 +22,11 @@ const SkipLayer = () => {
       skipConfirm.current = undefined
     }
   }, [])
-
-  useObserver(setDisplay, displayMode, 'skip')
+  useObserver(()=> {
+    if (displayMode.skip && skipConfirm.current == undefined)
+      displayMode.skip = false
+    else setDisplay(displayMode.skip)
+  }, displayMode, 'skip')
 
   function onSelection(skip: boolean) {
     displayMode.skip = false
