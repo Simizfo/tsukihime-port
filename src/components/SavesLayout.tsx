@@ -98,9 +98,8 @@ const SaveDetails = ({id, saveState, deleteSave, ...props}: SaveDetailsProps)=> 
 type Props = {
   variant: "save"|"load",
   back: (saveLoaded:boolean)=>void,
-  [key: string]: any
 }
-const SavesLayer = ({variant, back, ...props}: Props) => {
+const SavesLayer = ({variant, back}: Props) => {
   const navigate = useNavigate()
   const [saves, setSaves] = useState<Array<[number,SaveState]>>([])
   const [focusedId, setFocusedSave] = useState<number>()
@@ -149,11 +148,11 @@ const SavesLayer = ({variant, back, ...props}: Props) => {
     <div id="saves-layout">
       <h2 className="page-title">{title}</h2>
       <div className="saves">
-        {variant == "save" ? <>
+        {variant === "save" ?
           <button className="save-container create" onClick={createSave}>
             <FaPlusCircle />
           </button>
-        </> : <>
+        : <>
           <label htmlFor="import" className="save-container import" tabIndex={0}>
             <BsFileEarmarkArrowUp />
           </label>
@@ -161,7 +160,9 @@ const SavesLayer = ({variant, back, ...props}: Props) => {
             accept={`.${SAVE_EXT}`} style={{display: "none"}}/>
         </>}
 
-        {saves.map(([id, ss]) => <SaveListItem key={id} id={id}
+        {saves.filter(([id, _])=> variant === "load" || id !== QUICK_SAVE_ID)
+          .map(([id, ss]) =>
+          <SaveListItem key={id} id={id}
             saveState={ss} onSelect={onSaveSelect}
             onMouseEnter={setFocusedSave.bind(null, id)}/>
         )}

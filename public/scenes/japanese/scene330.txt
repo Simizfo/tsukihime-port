@@ -1,0 +1,138 @@
+
+bg "image\bg\bg_06b.jpg",%type_nowaitdisp
+
+　……昼休みの件もあるし、秋葉のことが気にかかる。
+　一人で帰れない、なんて事はないだろうけど、念のため様子を見に行ってみるか。\
+
+bg "image\bg\bg_11b.jpg",%type_lshutter_mid
+
+
+　すっかり日が暮れた廊下を歩く。
+　秋葉のクラスは一年一組だったっけ。
+br
+bg "image\bg\ima_10.jpg",%type_lshutter_fst
+bg "image\bg\bg_06b.jpg",%type_lshutter_fst
+
+
+　教室は静まりかえっていた。
+　人気のない赤い教室の中、一人の女生徒が佇んでいる。\
+
+playstop
+
+monocro #ff0000
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+
+「―――――――」
+　……少し。眩暈がした。
+　まっかな夕焼けに染まった教室。
+　かすかに赤い長髪の女生徒が、一人で帰り支度をしている。
+br
+　それは、どう見ても秋葉に違いない。
+　なのにどうしてか、俺には初めて見るような、見知らぬ女生徒のように、思えてしまった。\
+
+bg "image\bg\bg_06b.jpg",%type_crossfade_mid
+
+monocro off
+play "*3"
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+「兄さん？」
+「――――――」
+　呼びかけられて眩暈がおさまった。
+「おまえ―――秋葉、だよな」
+
+ld c,":a;image\tachi\aki_t04a.jpg",%type_crossfade_fst
+
+「？　兄さん、また気分でも悪いんですか？」
+　秋葉はいつもの調子で話しかけてくる。
+　……見れば秋葉は黒髪だし、この少女は紛れもなく自分の妹である遠野秋葉だ。\
+
+「……いや、なんでもない。それより秋葉、これから帰るんだろ。用がないんなら一緒に帰らないか？」
+
+ld c,":a;image\tachi\aki_t09.jpg",%type_crossfade_fst
+
+「ええ、そうですね。兄さんがよろしいのでしたら、一緒に帰りましょう」
+　どういう風の吹き回しか、秋葉はすごく優しく微笑んだ。
+　……どくん、と心臓が動く。
+　さっきの眩暈のせいなのか、それとも自分の学校に秋葉がいるっていう事自体が異常なことなのか。
+　ともかく、なんだか必要以上に、胸の動悸が激しくなってしまっていた。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_01b.jpg",%type_lcartain_mid
+
+
+　秋葉と一緒に校舎を出る。
+　昇降口をすぎて校門に着いたとたん、俺に手をふる先輩の姿が見えた。
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_lshutter_mid
+「あっ、やっと来ましたね遠野くん」
+「あれ、先輩。どうしたんですか、こんなところでぼけっとして」
+
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+「もう、ぼけっとしていたんじゃないです。遠野くんが来ると思って待っていたんですけど―――」
+
+cl a,%type_crossfade_fst
+
+　先輩は俺の横にいる秋葉に視線を送る。
+　先輩は一目で俺と秋葉が一緒に帰っている、という事実を看破したらしい。\
+
+ld l,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+「遠野くん、そちらが妹さんなんですか？」
+　秋葉をちらりと流し目に見る先輩。
+
+ld r,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+「………………………」
+　秋葉は何も言わない。
+　言わないけど、先輩も秋葉も『そのコを紹介してほしい』と視線で語ってくる。
+br
+ ────はあ。
+　なんか、すごく疲れる事になりそうだ。\
+
+「先輩、こいつは俺の妹で秋葉っていうんだ。今日うちの学校に転校してきたらしい」
+　よろしく、と秋葉は先輩に頭をさげる。
+
+ld l,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+「そうなんですか。こんにちは、遠野くんのおともだちのシエルです」
+
+ld l,":a;image\tachi\cel_t07a.jpg",%type_crossfade_fst
+
+ld r,":a;image\tachi\aki_t11a.jpg",%type_crossfade_fst
+
+　……なんだろう。
+　先輩と秋葉は、互いを見つめあったまま何も話さない。\
+
+cl a,%type_crossfade_fst
+
+「先輩、俺を待ってたような口ぶりだったけど、何かあったんですか？」
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+「はい、ちょっと遠野くんに付き合ってもらいたいところがあったんですけど―――」
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+「―――今日はもう遅くなっちゃいましたから、また今度にしますね。さよなら遠野くん。秋葉さんもまた明日お会いしましょう」
+　それじゃあ、と先輩は反対方向へ歩いていってしまった。\
+
+cl a,%type_lshutter_fst
+
+「───あ」
+　止める間もなく、先輩はトコトコと去っていく。
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+「帰りましょう兄さん。もう日が暮れてしまうわ」
+　秋葉は何事もなかったように、極めてクールにそんな事を言った。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+
+
+return

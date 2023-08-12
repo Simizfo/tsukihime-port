@@ -1,0 +1,204 @@
+
+
+
+playstop
+
+bg "image\bg\bg_06b.jpg",%type_crossfade_slw
+
+
+　授業が終わって、教室は急速に黄昏はじめる。
+　遠くの地平線に日が沈んでいく。
+　教室には誰もいない。
+　こうやって、別段やる事もなく教室に残っている物好きは自分ぐらいしかいない。
+br
+「―――――」
+　茜色に染まっていく教室。
+br
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+bg "image\bg\ima_07.jpg",%type_crossfade_mid
+wave se0
+
+
+ ───夕焼けは、あまりみたくない。
+　鮮烈な血をイメージさせて、ここ数日の出来事を思い返してしまう。\
+
+「――――――」
+　だっていうのに、あまり家に帰る気にはなれなかった。
+　ぼんやりと窓の外の緋色を眺める。
+br
+　赤い。
+　赤い、夕焼け。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\ima_07.jpg",%type_crossfade_fst
+wave se0
+
+br
+「い―――――た」
+br
+　ずきりと、胸の古傷が、痛んだ。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\ima_07.jpg",%type_crossfade_fst
+
+wave se0
+
+　赤い色。
+　赤いなにか。
+　例えば、人の血。
+　べったりとはりついて、むせ返るような濃厚な匂いをもった、たくさんの血液。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\ima_07.jpg",%type_crossfade_fst
+wave se0
+
+「――――くっ」
+br
+　痛い。
+　メガネをちゃんとかけてるのに、頭が、痛い。
+br
+　　　　　　　どうして。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\ima_07.jpg",%type_crossfade_fst
+
+br
+br
+wave se0
+
+　ずきりと。　　　　あたまが
+　　　どうして。
+　　　　　　　　　　　あたまが。
+　どうして。
+　　　　　　　　　　　　　　　　　　ずき
+り　　　　と　　　どうして―――――
+!w750
+
+\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\ima_07.jpg",%type_crossfade_fst
+quakey 3,100
+
+wave se9
+wave se4
+
+quakey 3,100
+
+
+bg "image\bg\bg_06b.jpg",%type_crossfade_slw
+
+
+br
+br
+br
+「はあ――――はあ――――は―――――」
+br
+br
+　呼吸が荒い。
+　なにかひどく―――気が高ぶっている。
+　イライラして、何か気に食わなくて、何かにヤツ当たりでもしないとおさまらない――――。\
+
+「……遠野くん、ですか？」
+
+
+ld c,":a;image\tachi\cel_t07a.jpg",%type_crossfade_slw
+play "*3"
+
+
+「あれ――――先、輩」
+　先輩は何か深刻な顔をして、教室の中に入ってくる。
+「いま、机を倒すような音がしたから来たんですけど……それ、遠野くんがやったんですか？」
+「――――え？」
+　振りかえる。
+　そこにはたしかに、乱暴に倒された机や椅子が散乱していた。\
+
+「……あ……うん、そうみたいだ。なんか、ワケもなくムシャクシャしちゃって、その―――」
+　俺が、こんなふうに散らかしたんだろうか？
+
+
+ld c,":a;image\tachi\cel_t10a.jpg",%type_crossfade_fst
+
+
+「もう、ダメじゃないですか。何があったか知りませんけど、物に八つ当たりなんかしちゃだめです」
+
+cl c,%type_crossfade_fst
+
+
+br
+　先輩は倒れた椅子と机を直していく。
+　俺も無言で机を立てなおした。\
+
+「……すみません。なんか、自分でもよくわからなくて」
+
+
+ld c,":a;image\tachi\cel_t08.jpg",%type_crossfade_fst
+
+
+「はあ。遠野くん、なんかヘンですよ。あの時だって雨にうたれてぼーっとしてて、今日は今日で机を倒してぼっーとしているんですから」
+「ああ―――うん、ここんところ少し疲れていてヘンなんだ、俺」
+　はあ、と深く深呼吸をする。
+　……先輩の顔が見れたからだろうか。
+　さっきまでの頭痛も、わけのわからない苛だちもキレイさっぱり消えてしまった。\
+
+「ごめんね、また迷惑かけちゃって。それじゃ帰るから、また明日」
+
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_crossfade_fst
+
+
+「あ、遠野くんは今からお帰りなんですか？」
+　ああ、と頷く。
+　先輩はさっきのコトなんてまるで無かったことのように、淡い笑顔をうかべた。\
+
+
+ld c,":a;image\tachi\cel_t03.jpg",%type_crossfade_fst
+
+
+「奇遇ですね。わたしも今日は早めに帰ろうかなぁ、って思ってたんです。ちょうどいいですから一緒に帰っていいですか？」
+「いや、俺は嬉しいけど……先輩の家と俺の家って逆方向じゃないか。一緒には帰れないよ」
+「ですから、校門までご一緒します」
+「……まあ、そういうコトなら喜んで」
+
+
+
+ld c,":a;image\tachi\cel_t04.jpg",%type_crossfade_fst
+
+
+「はい。それじゃあ荷物をとってきますから、ちょっと待っててください」
+
+cl c,%type_lshutter_mid
+
+
+
+　タッ、と軽快な足音をたてて先輩は走っていく。
+br
+　待つ事、実にわずか一分で先輩は帰ってきた。\
+
+
+ld c,":a;image\tachi\cel_t01a.jpg",%type_lshutter_fst
+
+
+「お待たせしました。それでははりきって行きましょう！」
+　先輩の姿は、本当に明るい。
+　なんていうか、見ているだけでさっきまでの陰鬱とした気持ちが晴れていく。
+　こんないい人が誘ってくれてるっていうのに、いつまでも暗い顔をしてちゃバチがあたるってもんだ。\
+
+「……オッケー、それじゃ行こうか。けど、そんなにはりきったら校門までなんてあっという間だね」
+
+ld c,":a;image\tachi\cel_t02.jpg",%type_crossfade_fst
+
+
+「あ、そうですよね。できるだけゆっくり行かないともったいないです」
+　先輩はトコトコと歩きだす。
+　その後ろについて、夕暮れの教室を後にした。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+
+
+
+return

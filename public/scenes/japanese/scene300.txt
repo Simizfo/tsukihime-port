@@ -1,0 +1,16 @@
+
+bg "image\bg\bg_11c.jpg",%type_nowaitdisp
+
+wavestop
+
+
+
+
+
+
+
+
+
+
+
+return

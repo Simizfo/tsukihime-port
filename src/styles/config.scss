@@ -7,7 +7,7 @@
     overflow-x: auto;
 
     button {
-        padding: .4em 1.6em;
+        padding: .4em min(1.6em, 4vw);
         background-color: transparent;
         transition: .2s ease-in-out;
         border-radius: 8px 8px 0 0;
@@ -24,7 +24,7 @@
 
         &.active {
             border-color: var(--active);
-            background-color: #06060673;
+            background-color: rgb(4 45 64 / 45%);
         }
         &:focus-visible.active {
             background-color: var(--focus);
@@ -46,10 +46,10 @@
             display: grid;
             grid-template-columns: 1fr 2fr;
             align-items: center;
-            padding-block: 1em;
+            padding-block: .8em;
 
             &:not(:nth-last-child(2)) {
-                border-bottom: 1px solid;
+                border-bottom: 1px solid rgb(255 255 255 / 12%);
             }
 
             .config-btns {
@@ -132,7 +132,7 @@
             }
 
             .erase {
-                color: #e90000;
+                color: #bc2525;
     
                 &.config-btn:hover, &.config-btn:focus-visible {
                     background-color: rgb(255 0 0 / 28%);

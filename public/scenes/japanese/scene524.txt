@@ -1,0 +1,65 @@
+
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "*3"
+
+
+ld c,":a;image\tachi\osiete.jpg",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+
+　メルシー！　四時間目の授業です。
+　……はあ、残念です。
+　戦闘において背中を見せるなんて、遠野くんもまだまだですね。
+　戦い慣れているシエルさんと遠野くんとでは、キャリアが違います。
+　ここはシエルさんの意表をつく行動をとるべきだったでしょう。\
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+「ふん、後ろからばっさりなんて性格出てるじゃんシエル。もしかして本領発揮かにゃ～？」
+br
+　…………。
+
+bg "image\bg\ima_14.jpg",%type_lshutter_fst
+wave se11
+br
+「うにゃ！　刺した、いまカメラの見えないところでトスッと刺したにゃー！」
+br
+　……………………。
+bg "image\bg\ima_13.jpg",%type_nowaitdisp
+br
+「うにゃああああああああああああああああ！」\
+
+bg "image\bg\bg_06a.jpg",%type_lshutter_mid
+ld r,":a;image\tachi\cel_t20.jpg",%type_lshutter_fst
+
+　スパッと化け猫退治も終わりました。
+　まったく、人の恋人を横から掠め取る吸血鬼にとやかくいわれる覚えはありません。
+　それではみなさん、引き続き本編をお楽しみくださいね！\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+ld c,":a;image\tachi\ark_t30.jpg",%type_lscroll_mid
+
+「にゃによー、わたしそんなコトまだしてないよう」
+
+br
+　まだ、という事はいずれ行う、というコトですね。
+br
+「えへへー。その答えはもちっと先にとっておくのだ」\
+cl c,%type_lscroll_mid
+
+
+playstop
+
+
+return

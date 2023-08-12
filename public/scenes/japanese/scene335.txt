@@ -1,0 +1,148 @@
+
+
+
+
+
+bg "image\bg\bg_40b.jpg",%type_nowaitdisp
+
+
+
+
+
+
+―――居間に行けば誰かいるだろう。
+br
+　一人でいるよりは大勢でいたほうが楽しいにきまっている。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_fst
+play "*3"
+
+bg "image\bg\bg_34c.jpg",%type_lcartain_fst
+
+
+　居間に入ると琥珀さんの姿があった。
+
+ld c,":a;image\tachi\koha_t02.jpg",%type_crossfade_fst
+
+「あら志貴さん。どうしたんです、夕食まではまだ時間がありますよ」
+「いや、食事にきたんじゃなくてくつろぎにきたんだ。お邪魔するけど、いいかな」
+「はい、どうぞごゆっくり。えっと、それじゃ……」\
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\his_t23.jpg",%type_tshutter_mid
+
+「姉さん、離れの屋敷の事ですけど―――」
+「やっ。お邪魔してるよ、翡翠」
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+「――はい。お帰りなさいませ、志貴さま。お出迎えができず、申し訳ありませんでした」
+「いいって、そんなこと気にしなくて。こっちこそ帰ってきたのに声をかけなくてごめんな」
+
+ld c,":a;image\tachi\his_t02.jpg",%type_crossfade_fst
+
+「―――――――」
+　翡翠はかすかに頬を赤くする。
+　翡翠の感情表現が少しだけわかるようになってきて、嬉しい。\
+
+cl a,%type_crossfade_fst
+
+ld l,":a;image\tachi\koha_t01a.jpg",%type_crossfade_fst
+
+「ちょうどよかった。翡翠ちゃん、志貴さんにお飲み物を用意してくれる？」
+
+ld r,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+「はい。志貴さま、何を飲まれますか」
+「そうだね、ごはんの前だからお茶だけでいいよ。ただみんなと話をしにきただけだから、あんまりお構いなく」
+「はい、かしこまりました」\
+
+cl a,%type_crossfade_fst
+
+bg "image\bg\ima_10.jpg",%type_tshutter_mid
+bg "image\bg\bg_34c.jpg",%type_bshutter_mid
+
+
+　翡翠が三人分のお茶を持ってきて、なんとなく会話がないままのまったりとした時間がすぎる。
+br
+「ああ、そういえば翡翠。さっき離れの屋敷がどうしたって言ってなかった？」
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+「はい、口にしましたがそれがなにか？」
+「んー、別にどうこうってワケじゃないんだけど、あそこには入るなって秋葉にきつく言われたから。もしかして俺がいない間に、あそこで事故でも起きたのかなって」\
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\koha_t02b.jpg",%type_crossfade_fst
+
+「いえ、そんな事はありませんよ。あそこは使用人用にあてがわれた屋敷ですから、志貴さんが足を運ぶ必要がないだけですね」
+「使用人用の屋敷……？」
+
+ld c,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
+
+「はい。今はわたしと翡翠ちゃんしかいませんけど、ちょっと前までは十人以上の使用人がお屋敷で働かせていただいてましたから。お屋敷のお部屋もそう多くはありませんから、使用人用にと建てられたのが離れのお屋敷なんです」\
+
+cl a,%type_crossfade_fst
+
+ld r,":a;image\tachi\his_t09.jpg",%type_crossfade_fst
+
+「姉さん―――その話は、してはいけないと」
+
+ld l,":a;image\tachi\koha_t11.jpg",%type_crossfade_fst
+
+「あ」
+
+cl a,%type_crossfade_fst
+
+　翡翠に言われて、琥珀さんはきょろきょろとあたりを見渡す。
+　……幸い秋葉の姿はなく、琥珀さんはホッと息をついた。\
+
+ld c,":a;image\tachi\koha_t04b.jpg",%type_crossfade_fst
+
+「志貴さん！」
+「あ、はい、なんでしょう」
+「………今のお話は、ないしょです」
+　琥珀さんはぐっ、とこっちの手を握ってくる。
+「あ、うん―――秋葉には言わないよ」
+
+ld c,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
+
+「はい、ありがとうございます」
+　ほう、と胸を撫で下ろす琥珀さん。
+　よっぽど秋葉に離れの屋敷の話は禁じられていたのだろう。\
+
+cl a,%type_crossfade_fst
+
+――――けど、なんでだろう。
+　使用人たちの家だったという離れの屋敷。
+　そこへ立ち入る事を嫌う秋葉。\
+
+「……ねえ琥珀さん。あの離れはいつから使用されなくなったんだ？」
+
+ld l,":a;image\tachi\koha_t11.jpg",%type_crossfade_fst
+
+「えっと……ね、翡翠ちゃん？」
+
+ld r,":a;image\tachi\his_t01b.jpg",%type_crossfade_fst
+
+「………………」
+　翡翠は無言で首を横にふる。
+　どうやらそれさえも『話してはいけないこと』であるらしい。
+「なんで？　それって秘密にするほどのことなのか？」\
+
+ld r,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+「―――はい。あの離れに関するお話は、志貴さまのお体によい影響を与えません」
+　そうきっぱりと返答されて、離れの屋敷の話はそれきりになってしまった。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+playstop
+
+!w1500
+
+
+
+return

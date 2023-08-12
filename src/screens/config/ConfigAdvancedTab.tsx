@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { ConfigButtons, ConfigLayout, ResetBtn } from "../ConfigScreen"
 import { defaultSettings, settings } from "../../utils/variables"
-import { IMAGES_FOLDERS } from "../../utils/constants"
+import { IMAGES_FOLDERS, SCENES_FOLDERS } from "../../utils/constants"
 import { addEventListener, deepAssign, isFullscreen, requestJSONs, textFileUserDownload, toggleFullscreen } from "../../utils/utils"
 import { SaveState, clearSaveStates, listSaveStates, restoreSaveStates } from "../../utils/savestates"
 
@@ -18,6 +18,7 @@ const ConfigAdvancedTab = () => {
 
   const [conf, setConf] = useState(deepAssign({
     imagesFolder: undefined,
+    language: undefined,
   }, settings, {createMissing: false}))
 
   const [fullscreen, setFullscreen] = useState<boolean>(isFullscreen()) // don't save in settings
@@ -97,6 +98,19 @@ const ConfigAdvancedTab = () => {
         conf={{fullscreen}}
         updateValue={toggleFullscreen}
       />
+
+      {import.meta.env.DEV &&
+      <ConfigButtons
+        title="Language (WIP)"
+        btns={[
+          { text: `English`, value: SCENES_FOLDERS.english },
+          { text: `Japanese`, value: SCENES_FOLDERS.japanese },
+        ]}
+        property="language"
+        conf={conf}
+        updateValue={updateValue}
+      />
+      }
 
       <ConfigLayout title="Data storage">
         <div className="config-btns">

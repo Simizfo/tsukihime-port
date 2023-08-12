@@ -1,0 +1,79 @@
+
+
+
+
+!w2000
+bg "image\bg\bg_06b.jpg",%type_tshutter_mid
+
+play "*1"
+
+　放課後になった。
+　秋葉を迎えに一年の教室に行こう。
+br
+bg "image\bg\bg_10b.jpg",%type_lcartain_fst
+
+
+　……と、廊下に出たとたん、秋葉とバッタリ会った。\
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+「あれ、兄さん。どこかに行かれるんですか？」
+「いや、これから秋葉を迎えに行こうと思ってたところだ。そっちこそどこか寄っていくのか？」
+
+ld c,":a;image\tachi\aki_t16a.jpg",%type_crossfade_fst
+
+「いえ、私は兄さんと帰ろうかなって、こっちに来てみたんですけど……」
+「そうか、行き違わないでよかった。それじゃ行こうか、琥珀さんたちが待ってる」
+
+ld c,":a;image\tachi\aki_t09.jpg",%type_crossfade_fst
+
+「そうですね。家に帰りましょう、兄さん」\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_23b.jpg",%type_lcartain_mid
+
+
+「そうだ、秋葉に聞こうと思ったことがあった」
+
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+
+「私に聞きたいこと、ですか……？」
+「ああ。秋葉ってさ、どうして先輩のことをあんなに毛嫌いしてるんだよ。もしかして顔見知りだったのか？」
+
+ld c,":a;image\tachi\aki_t01a.jpg",%type_crossfade_fst
+
+「いえ、あの人とは昨日が初めてです。私があの人を好きになれないのは生理的なものですから、兄さんには関係ありません」
+「……生理的って、なんだいそれ」
+
+ld c,":a;image\tachi\aki_t21.jpg",%type_crossfade_fst
+
+「自分の感情では制御できない、という事です。兄さんがお父様を嫌っていたのと同じようなものですから、あまり気にしないでください」\
+
+「―――あのな、秋葉。俺は親父が苦手だっただけで、別に嫌ってはいなかったよ」
+
+ld c,":a;image\tachi\aki_t13a.jpg",%type_crossfade_fst
+
+「私だってあの人のことが嫌いってわけじゃありません。……まあ、今日のはたしかに言いすぎでした。自分でも反省しているんですから、昼間の一件は大目に見てください」
+「……そっか。それならいいんだけど」\
+
+cl a,%type_crossfade_fst
+
+　……まあ、そうゆうことなら問題はないかな。
+　昼休みはシエル先輩が来る方が多いんだから、秋葉とシエル先輩の仲が悪いままでは困る。
+　秋葉もこう言っているし、明日からは俺も有彦も横でハラハラしなくてすみそうだ―――\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w1000
+playstop
+
+bg "image\bg\bg_40b.jpg",%type_rcartain_mid
+
+
+「――――ふう」
+　鞄を机に放り投げて、ベッドに腰を下ろす。
+　さて、どうしようか。
+　秋葉は習い事があるそうで、帰ってくるなり車でどこかに出かけてしまった。
+　……そういえば、琥珀さんも翡翠もなにやら忙しそうに屋敷の庭を歩いていたな。
+br
+
+return

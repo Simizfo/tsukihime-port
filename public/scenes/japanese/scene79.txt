@@ -1,0 +1,33 @@
+
+
+
+bg "image\bg\bg_25a.jpg",%type_lcartain_mid
+
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+
+
+「……ん？」
+　路地裏から表通りに出た途端、彼女―――アルクェイドは不審そうに眉をよせた。
+ld c,":a;image\tachi\ark_t06.jpg",%type_crossfade_fst
+
+「ねえ志貴。貴方ってもしかしてクリスチャン？」
+br
+　……アルクェイドの問いかけは、本当によくわからない。\
+
+「クリスちゃん……？　なんだよ突然。そんな女の子の知り合いはいないけど？」
+ld c,":a;image\tachi\ark_t03.jpg",%type_crossfade_fst
+「そう。じゃあわたしの勘違いね」
+　あっさりと自分勝手に納得すると、アルクェイドはオフィス街にむかって踵を返した。
+ld c,":a;image\tachi\ark_t01a.jpg",%type_crossfade_fst
+
+「それじゃ行きましょうか。とりあえず安全なところを探さないとね」
+　アルクェイドは歩き始める。
+「――――はあ」
+br
+　いまさら引き返す事はできそうにない。
+　ため息をついて、俺は彼女の後についていった。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+return

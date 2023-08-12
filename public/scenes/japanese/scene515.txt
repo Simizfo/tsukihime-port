@@ -1,0 +1,62 @@
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "*3"
+
+
+ld c,":a;image\tachi\osiete.jpg",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld c,":a;image\tachi\his_t16.jpg",%type_tshutter_mid
+「申し訳ございません。知得留先生は昼食の時間なのでお休みです。お帰りになるまでしばらくお待ちください」
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+br
+「どうせカレーパンのくせに、職務怠慢ー！」
+br
+
+ld r,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+
+「でてこーい、ばかシエルー！」
+br
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+「同感ですが、居ないものは仕方がありません。
+　無い袖はふれませんし、姉さんが整理整頓できない事を嘆いても虚しいだけです。
+　それでは恒例の救罪コーナーですが」\
+
+ld c,":a;image\tachi\his_t17.jpg",%type_crossfade_fst
+
+「……時に、志貴さま。
+　隠し事はあまりよい結果を生みません。
+　これに懲りましたら、次からは翡翠を信頼してください。
+
+ld c,":a;image\tachi\his_t01b.jpg",%type_crossfade_fst
+
+　……以上です。
+　それでは私はお屋敷に戻ります。
+　引き続き、ゲーム本編をお楽しみくださいませ」\
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+ld c,":a;image\tachi\ark_t30.jpg",%type_lscroll_mid
+
+「にゃ……なんか今のおんな、おなじネコ属性のかおりがするのにゃ……」
+
+cl c,%type_lscroll_mid
+
+
+
+
+playstop
+
+
+
+return

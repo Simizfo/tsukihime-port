@@ -1,0 +1,49 @@
+
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+
+br
+―――弓塚のいそうなところなんて見当もつかない。
+　ただ家とかマンションが多いあたりを中心に捜してみよう。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_24b.jpg",%type_lcartain_mid
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_23b.jpg",%type_lcartain_mid
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w500
+bg "image\bg\bg_22b.jpg",%type_lcartain_slw
+
+
+　日が沈む。
+　街中を走りまわっても、弓塚さつきの姿は見つけられなかった。
+br
+「…………くっ」
+　悔しくて歯を噛んだ。
+　……弓塚が見つからないのが悔しいんじゃない。
+　二日前。
+　この道で、あんな約束をした自分が、腹だたしい。\
+
+br
+―――ピンチの時は助けてね。
+br
+　そう言ってきた弓塚に、俺は気軽に返答した。
+　自分に出来ることなら手を貸すよ。
+　……それは、なんて無責任な返答だったんだろう。
+　俺にできることなんて、本当にちっぽけだ。
+br
+　痛い、と。
+　痛くて暗くて寒い、なんて苦しんでいた弓塚の姿を見つけ出すことさえ、できない。\
+
+「――――――」
+　日が沈んでいく。
+　……認めたくないけど、夜にならないと弓塚は見つけられない気がする。
+
+「……夕方には戻るって、翡翠に言ったんだっけ」
+　時間が早かったのかもしれない。
+　いったん屋敷に戻って、冷静に考えてみよう。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w1000
+return

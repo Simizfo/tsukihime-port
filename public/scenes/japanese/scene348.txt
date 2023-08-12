@@ -1,0 +1,48 @@
+
+
+
+
+bg "image\bg\bg_04.jpg",%type_nowaitdisp
+
+
+「……どうだろう。俺は今のままの秋葉がいいと思うけど。秋葉の髪ってキレイだからさ、あんまり明るい色彩の服には合わないと思うんだ」
+
+ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+「へえー、珍しいね、遠野が女のコの容姿を誉めるなんて。っていうか、初めてじゃないか、それ」
+「うるさいな、たんにそう思っただけだよ。秋葉にはセーラー服のが似合うから、ブレザーはイヤだって言ってるだけだろ」
+
+ld c,":a;image\tachi\ari_t05.jpg",%type_crossfade_fst
+
+　ふーん、とにやにや笑いをする有彦。\
+
+「――――あ」
+　……しまった。有彦に、のせられた。
+
+ld c,":a;image\tachi\aki_t16a.jpg",%type_crossfade_fst
+
+　ちらりと秋葉を見ると、秋葉もなんだかそっぽを向いて黙っている。\
+
+cl a,%type_crossfade_fst
+
+ld c,":a;image\tachi\ari_t01.jpg",%type_crossfade_fst
+
+「なるほどねー、遠野に女っけがないワケだ。そりゃあ秋葉ちゃんを毎日見てれば、うちの学校の女どもになんか目もくれないもんな――――って、げふぅうう！？」
+
+quakex 2,150
+cl a,%type_lshutter_fst
+
+ld c,":a;image\tachi\cel_t04.jpg",%type_lshutter_fst
+
+「あ、ごめんなさい乾くん。手、滑っちゃいました」
+　有彦の横腹に肘鉄を鋭角に叩きこんで、シエル先輩はニコリと笑った。
+br
+　…………はあ。
+　こんな胃に穴があきそうな時間を、あと十分近く過ごさないといけないのか…………。\
+playstop
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+
+return

@@ -1,0 +1,39 @@
+
+bg "image\bg\bg_34a.jpg",%type_nowaitdisp
+
+　……そうだな。
+　後悔はしないって決めたんだし、なにより俺を気遣ってくれた琥珀さんの気持ちを大切にしないと。
+「賛成にきまってるよ。自分の歓迎会なんだから、断るはずがないだろ」\
+
+ld l,":a;image\tachi\koha_t03b.jpg",%type_crossfade_fst
+
+「きまりですね！　それじゃあわたしはお料理の準備をしますね。翡翠ちゃんは―――今日のわたしの仕事を任せていいかな？」
+
+ld r,":a;image\tachi\his_t02.jpg",%type_crossfade_fst
+
+「わかりました。ロビーと東館の掃除ですね」
+
+ld r,":a;image\tachi\aki_t04b.jpg",%type_crossfade_fst
+
+「それじゃあ私は……どうしよっか、琥珀？」
+
+ld l,":a;image\tachi\koha_t05b.jpg",%type_crossfade_fst
+
+「秋葉さまと志貴さんはお部屋でお休みくださいな。ご夕食を早めにして歓迎会を開きますから、ご用がおありでしたらそれまでに済ませてくださいね」\
+
+cl a,%type_lshutter_mid
+
+
+　琥珀さんは厨房に、翡翠は中庭へ向かった。
+
+ld c,":a;image\tachi\aki_t08b.jpg",%type_crossfade_fst
+
+「それじゃ私は部屋に戻ります」
+
+cl a,%type_lshutter_mid
+playstop
+
+br
+　さて。俺はどうしようか？
+
+return

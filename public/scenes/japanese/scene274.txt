@@ -1,0 +1,23 @@
+
+bg "image\bg\bg_01a.jpg",%type_nowaitdisp
+
+「…………」
+　ここで待とう。
+　先輩が来てくれるとは思えないけど、もしかしたら昨日のように登校してくるかもしれない。\
+
+bg "image\bg\ima_10.jpg",%type_lshutter_mid
+!w1000
+
+bg "image\bg\bg_01a.jpg",%type_lshutter_mid
+
+――――時間になった。
+br
+　ホームルームまであと十分ほどという時間になって、正門が閉められた。
+「…………」
+　先輩はやってこない。
+　ため息をついて、重い足取りで教室に向かった。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+return

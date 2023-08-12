@@ -1,0 +1,44 @@
+
+
+
+bg "image\bg\bg_06b.jpg",%type_nowaitdisp
+play "*8"
+
+
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+
+　はい、最後の授業がやってきちゃいました。
+　七時間目は、ある一つの終劇についてです。
+
+br
+　……約束を果たした遠野くんの心情は、彼以外の誰にも解らないものでしょう。
+　わたしからアドバイスするような事はありません。
+　ですが遠野くんが違う結末を望む、というのでしたらどうか遡って、もう一度自分の行動を選んでください。\
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+「えー。でも秋葉の好感度が足りないと選択肢出てこないじゃん」
+br
+――――うっ。
+　そ、その場合はですね、何日か戻って、秋葉さんとの絆を深めてください。
+　そうすればきっと、違った運命が待っているはずですから。\
+
+
+
+
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+
+
+
+return

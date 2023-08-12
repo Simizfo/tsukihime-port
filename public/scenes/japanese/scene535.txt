@@ -1,0 +1,88 @@
+
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "*3"
+
+
+ld c,":a;image\tachi\osiete.jpg",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+　メルシー！
+　はい、ついに四時間目です。
+　理不尽なデッドエンドを迎えてしまった恵まれない遠野くんの為のこのコーナー、
+“教えて！知得留先生！”の時間がやってきちゃいました。\
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+「いいなー、シエルは色々出番があって。わたしなんて正ヒロインなのにこの扱いだラクガキ」
+br
+　はいそこ、ヘンな語尾をつけない。
+　いいじゃないですか、私みたいになんでも屋にされるよりは貫禄があって。
+br
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+「やだー、ふまんー！　わたしもシエルみたいな格好して、あたまいいって言われるわよー！」\
+
+　…………。
+br
+ld l,":a;image\tachi\ark_t31b.jpg",%type_lshutter_fst
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+「出番ない！　出番ない！　出番ない！
+ld l,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+ld l,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+「出番ない！　出番ない！　出番ない！　出番ない！　出番ない！　シエルめがね！　出番ない！　シエルない！　出番ない！　シエルメガネ！　出番ない！　シエル地味！　シエル降板！　メガネシエル！　エセフランス！　鉄砲フェチ！　シエルインド！」
+ld l,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+ld l,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+ld l,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+ld l,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+ld l,":a;image\tachi\ark_t31b.jpg",%type_nowaitdisp
+ld l,":a;image\tachi\ark_t31a.jpg",%type_nowaitdisp
+
+
+br
+　…………（むか）\
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+wave se9
+「きゅううぅぅぅぅ………………」
+br
+ld r,":a;image\tachi\cel_t20.jpg",%type_lshutter_fst
+
+――――さて、それではレクチャーです。
+br
+　今回の死因ははっきりしていますね。
+　自分一人の手で解決しよう！　という意気込みは立派ですけど、この事件は遠野くん一人で解決できる物ではありません。
+　何かを得るためには何かを失うのが世の常。
+　先生も悲しいですが、ここは一度だけシエルさんと決別するべきでしょう。\
+
+
+
+
+
+
+
+
+
+
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+
+
+
+playstop
+
+
+
+
+return

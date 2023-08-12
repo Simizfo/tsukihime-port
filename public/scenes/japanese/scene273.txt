@@ -1,0 +1,142 @@
+
+mov $phasebg,"image\bg\bg_11c.jpg"
+mov $phasetitle_a,":a;image\word\pcel_09a.jpg"
+mov $phasetitle_b,":a;image\word\day_09.jpg"
+gosub *left_phase
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\cmo_14.jpg",%type_crossfade_fst
+
+　暗いところにいた。
+　目が覚めてから八年間。
+　ずっと、暗いところで息をひそめていた。\
+
+　なんのためにかは、オレにもわからない。
+　そんなものはとっくに磨耗してしまった。
+　ココにあるのはただの闇だ。
+　それでも、オレは何かを成さなければならないらしい。\
+
+　なんのためにいるのかは、わからない。
+　だがオレの目的ははっきりしている。
+　オレを縛めていたモノはすべて消えた。
+　阻むものはなにもない。
+!w500
+br
+　あとは。
+!w500
+br
+　オマエを、殺しにいくだけだ。\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_slw
+bg "image\bg\bg_40e.jpg",%type_crossfade_fst
+
+br
+　チチ、チチチ、チチチチチ
+br
+　窓が開けっぱなしになっているんだろうか。
+　庭の方から小鳥の鳴き声が聞こえてきている。
+br
+　ひんやりと冷たい風が頬にあたる。
+　目蓋には淡い陽の光。
+　静かで、ゆるやかな周囲の色合い。
+br
+　柔らかな朝の訪れ。\
+
+bg "image\bg\bg_40a.jpg",%type_crossfade_fst
+
+play "*2"
+
+　朝、か。
+　昨夜、秋葉に看病されたまま眠って、そのまま朝を迎えてしまったらしい。
+　体はベッドに横になったままで、体のふしぶしが微かに重かった。
+　それでも昨夜よりは体は回復している。
+　目を開けて、体を起こす事にした。\
+
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_40a.jpg",%type_crossfade_fst
+
+「う…………」
+　とたん、吐きそうになった。
+　昨日の貧血がまだ続いているのか。
+　胸のあたりがムカムカして、気持ちが悪い。
+br
+ld c,":a;image\tachi\his_t01.jpg",%type_lshutter_fst
+「失礼します」
+　翡翠が部屋に入ってくる。
+　まだ俺が眠っていると思ったのか、翡翠は入ってくるなり起きている俺を見て微かに驚いたようだ。\
+
+「おはようございます。お目覚めになられていたんですね、志貴さま」
+「――――」
+　なぜか。
+　そんな、些細な翡翠の仕草が癇にさわった。\
+
+「おはよう。朝食だろ、すぐに行くから出ていってくれ。着替えるんだ、これから」
+ld c,":a;image\tachi\his_t04.jpg",%type_crossfade_fst
+「……はい、失礼しました」
+cl c,%type_lshutter_mid
+「…………」
+　いくら気分が悪いからって翡翠にあたるなんて、どうかしてる。\
+
+bg "image\bg\ima_11.jpg",%type_crossfade_fst
+bg "image\bg\bg_40a.jpg",%type_crossfade_fst
+
+「――――」
+　気分が悪い。
+　こんなんじゃ学校にいっても授業にならない。
+br
+「……休むか、な」
+　けど、学校には行かないと。
+　学校に行けば先輩に会えるかもしれない。\
+
+　……あの人がまだ『先輩』でいてくれている望みなんて無いだろうけど、それでも―――もしかしたら、先輩はいるかもしれない。
+br
+「―――――ふう」
+　大きく深呼吸をして、気持ちを落ち着かせる。
+　なんとか眩暈を抑えこんで、自分の部屋を後にした。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_34a.jpg",%type_lcartain_mid
+
+ld c,":a;image\tachi\aki_t16a.jpg",%type_lshutter_mid
+「あ、兄さん。……おはよう、ございます」
+　……居間に入るなり、秋葉はうわずった声で挨拶をしてきた。\
+
+「……ああ、おはよう。今朝も早いな秋葉は」
+「わたしはいつも通りですけど……兄、さん？」
+ld c,":a;image\tachi\aki_t12a.jpg",%type_crossfade_fst
+「……大丈夫なんですか？　まだ顔色が悪いようですし、気分が優れないのでしたら今日はお休みになったほうが―――」
+「いや、大丈夫だ。そのうちに治るから、秋葉に心配してもらう必要はない」
+　即答して秋葉の前を通りすぎる。
+　食堂にいって、朝食を食べないと力が出ない。\
+
+「じゃあな。おまえ、そろそろ時間だろ」
+ld c,":a;image\tachi\aki_t17a.jpg",%type_crossfade_fst
+「……………はい。それではお先に失礼します」
+　ためらいがちに言って、秋葉は静かに立ちあがった。
+cl c,%type_lshutter_mid
+　秋葉が居間から出ていく。
+　それを横目で眺めながら食堂に入っていった。\
+playstop
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_23a.jpg",%type_lcartain_mid
+
+　屋敷を出て学校に向かう。
+　手足がまだ重く、他人の体を着ているような感覚で坂道を下りていく。\
+
+bg "image\bg\bg_01a.jpg",%type_lcartain_mid
+
+　朝の七時四十分。
+　正門は登校してくる生徒たちの姿で混雑している。
+br
+「……………」
+　先輩が来るとは思えないけど、教室で待っているよりはここで待ち伏せしたほうがいいんだろうか。
+br
+
+
+
+
+
+return

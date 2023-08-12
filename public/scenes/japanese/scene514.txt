@@ -1,0 +1,80 @@
+
+wave se2
+
+bg "image\bg\bg_06a.jpg",%type_nowaitdisp
+play "*3"
+
+
+ld c,":a;image\tachi\osiete.jpg",%type_lcartain_mid
+
+!w1000
+cl c,%type_lcartain_mid
+
+
+ld r,":a;image\tachi\cel_t20.jpg",%type_tshutter_mid
+
+
+
+　ボンジョワール！
+　なんだかあっさりとデッドエンドを迎えてしまったお茶目な遠野くんの為のこのコーナー、
+“おしえて！知得留先生！”のお時間です。
+br
+　さて、好評のがくがく動物ランドシリーズ、第三弾。\
+
+ld l,":a;image\tachi\ark_t31a.jpg",%type_lshutter_fst
+
+「うそつけー！　ちっとも動物なんて出てこないぞー！」
+br
+　却下。
+　人間失格（ペット名）、Ｇｏ！
+
+ld c,":a;image\tachi\kemo_t04.jpg",%type_lshutter_fst
+br
+「殺るジャンキー」
+cl l,%type_lshutter_fst
+
+br
+「きゃああーーーーーーーーー……………ふにゃ」
+cl c,%type_lshutter_fst
+
+br
+　さて、動物シリーズ第三弾。
+　どうして遠野くんはデッドアウトしてしまったのか。
+　この時間は特別講師として、さっき役回りが終わってブラブラ散歩していたこの方をお呼びしました。
+　それではネロ教授、なにか一言。\
+
+
+play "*4"
+
+ld l,":a;image\tachi\nero_t03.jpg",%type_lshutter_fst
+
+「何もない」
+br
+　……あの。
+br
+「何もない。私は勝利した時しか語らん」
+br
+　……あの、ですね、一応、ここにきたってコトはネロ教授の勝ちだったわけですが。
+ld l,":a;image\tachi\nero_t02c.jpg",%type_crossfade_fst
+br
+「―――なるほど、正論だな。
+　だが言うべき事などない。千載一遇の好機を逃す者など知らぬ。
+　一度だけ前に戻ってやり直すがいい」\
+cl l,%type_lshutter_mid
+
+
+play "*3"
+
+　えーっと……はい、ありがとうございました。
+　それでは四時間目の授業はここまでです。
+　引き続き、ゲーム本編をお楽しみください。\
+
+
+
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+playstop
+
+
+return

@@ -1,0 +1,308 @@
+
+
+
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+
+「……行ってみるか」
+　ベッドから出て、足音を立てないように部屋を後にした。\
+playstop
+waveloop se10
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_33d.jpg",%type_lcartain_mid
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_42c.jpg",%type_lcartain_mid
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+bg "image\bg\bg_54c.jpg",%type_lcartain_mid
+
+
+
+―――庭の林には月光さえ届かない。
+br
+　林というよりもはや森に近い庭を歩いていく。
+　……いまいちどこにあるのか覚えてなかったけど、森に入るなり足がかってに離れの屋敷を目指し出した。
+br
+　頭のほうで忘れかけていても、体が覚えていたということだろうか。
+　ともかく、少しも迷わずに離れの屋敷に到着できた。\
+
+bg "image\bg\ima_10.jpg",%type_tcartain_mid
+bg "image\bg\bg_44b.jpg",%type_bcartain_mid
+
+
+「―――――――」
+　使われなくなってどれほどの年月が経っているのか、離れの屋敷は所々が老朽化している。
+　玄関に手をかけると、鍵はかかっていなかった。
+br
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+
+
+　中は当然のように暗い。
+　畳や障子の匂いがして、まったく何も見えない闇だというのに安心できた。\
+
+bg "image\bg\bg_45c.jpg",%type_lshutter_mid
+
+
+「―――――あ」
+　その和室に入ったとたん、ぞくりと、背中が震えた。
+
+「―――――ここ、知ってる」
+　子供のころ、本館のほうにはない和室が珍しくて遊びにきたのだろうか。
+「――――――」
+　けど、ヘンだ。
+　屋敷に帰ってきて、自分の部屋に案内された時に感じていた違和感と似たものを、肌が感じ取っている。\
+
+「……有間の家が和室だったからかな」
+　なんだか、ずっとここで暮らしてきたような気がする。
+　いや、それとも―――\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_45c.jpg",%type_crossfade_fst
+
+
+br
+br
+br
+br
+　そういえば、昔　\
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_45c.jpg",%type_crossfade_fst
+
+
+br
+br
+br
+br
+br
+br
+　庭で遊んでいる時にいたのは、　\
+
+bg "image\bg\cmo_05.jpg",%type_nowaitdisp
+bg "image\bg\bg_45c.jpg",%type_nowaitdisp
+
+
+br
+br
+br
+br
+br
+br
+br
+br
+　自分と、秋葉、だけではなかったような、　\
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_45c.jpg",%type_nowaitdisp
+
+
+「痛っ――――」
+　ズキリ、と首筋が痛んだ。
+　貧血の前触れか、体も鉛のように重く感じる。
+「……まずいな……部屋に戻らないと」
+　頭を軽くふって、本当に倒れてしまう前に部屋に戻ることにした。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w1000
+bg "image\bg\bg_40d.jpg",%type_rcartain_mid
+
+
+「は――――あ」
+　なんとか部屋に戻ってこれた。
+　いくらなんでも、立ち入り禁止のあの離れで倒れてしまったら、秋葉のかみなりが落ちてしまう。
+「――――ん」
+　くらり、と眩暈がする。
+　そのまま、着替えもせずにベッドに倒れこんだ。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_slw
+monocro #ff0000
+wavestop
+
+
+
+!w2000
+wave se0
+
+!w600
+――――熱い。\
+
+wave se0
+!w600
+br
+br
+br
+――――熱い。\
+
+wave se0
+!w600
+br
+br
+br
+br
+br
+――――熱い。\
+
+wave se0
+!w600
+br
+br
+br
+br
+br
+br
+br
+――――喉が、カラカラに渇いて、熱い。\
+
+!w600
+br
+br
+br
+br
+br
+br
+br
+br
+――――――このままでは眠れない。
+　　　　　　起きて、水を飲みに行こう。\
+
+bg "image\bg\bg_47.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_24c.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_25b.jpg",%type_crossfade_mid
+
+play "*4"
+
+　夜の街に出たようだ。
+　目を血走らせて誰か通りかからないか待っているのか。\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+――――――熱かった。\
+
+　ふと、窓ガラスに映った顔が見えた。
+　目は血走っていて、とても正気には見えなかった。\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+――――――ただ、熱かった。\
+
+　獲物を見つけたようだ。
+　背後から首をしめて、それで終わり。
+　見知らぬ女性はそれで死んでしまったみたいだった。\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+―――俺は、ただ、熱かった。\
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_30b.jpg",%type_nowaitdisp
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+
+bg "image\bg\ima_13b.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_31b.jpg",%type_nowaitdisp
+
+
+　死体を連れこんで、喉元に食らいついたのか。
+　じゅるじゅる、という音が聞こえる。
+　喉もとから、肉ごとかみ切るように血を飲んで、喉の渇きを癒している。\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+―――わからない。\
+
+　はあはあという呼吸音。
+　よほど。
+　よほどその行為は興奮するのか。
+　死体の胸に指をつきいれた。
+　肉を潰していく音、骨を崩していく音。
+　心臓を素手でえぐりだす、音。\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+―――見ているだけで、頭が真っ白になる。\
+
+　その、究極の略奪。
+　頂点に位置する背徳性。
+　それが、見ているものさえ熱くさせる。
+　たとえそれがマイナスの快楽にしたって、熱くなるということには、かわりはないらしい。\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+―――俺には、わからない。\
+
+bg "image\bg\ima_18.jpg",%type_crossfade_fst
+
+　熱い血液を口からたらして、恍惚とした目で、夜空を見上げていた。
+　長い髪が乱れる。
+　頭上には螺旋の空。
+　なんてキレイな、銀色の月。\
+
+wave se0
+
+br
+br
+br
+br
+br
+br
+br
+―――だから、わからない。
+　　　俺は、ただ、熱かっただけなのに――――\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+monocro off
+playstop
+
+!w3000
+
+
+
+
+
+return

@@ -1,0 +1,166 @@
+
+bg "image\bg\bg_33a.jpg",%type_nowaitdisp
+
+
+―――それでも約束を破る事はできない。
+br
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_33a.jpg",%type_crossfade_fst
+
+waveloop se1
+
+「っ――――！」
+　刃物が体に突き刺さるような頭痛。
+　それを堪えて、なんとか前へと歩き出す。\
+
+「いけません、志貴さん！　そんなお体で出かけられてはわたしたちが秋葉さまに叱られます！」
+　琥珀―――さんが、外に出ようとする俺の、邪魔をする。\
+
+「――――」
+　……この人が止めようとする気持ちもわかる。
+　こんな頭痛を抱えて遊びにいっても、そこいらで倒れてしまうに決まっている。
+　だからここでじっとしていろって言っている。\
+
+　けど聞けない。
+「……うる……さい」
+　何故だろう。
+　なんの理由もなく、思った。
+　いま会いにいかなければもう永遠に、マトモなままで先輩に会えないだろう、と。\
+
+「何かお約束をされたのならわたしが代理で断りに行きますから、志貴さんは部屋に戻って――」
+「うるさい、そこを退けって言ってるんだ……！」「あ――――」
+　乱暴に琥珀さんを押しのけて、外に向かって走り出した。\
+
+bg "image\bg\bg_48a.jpg",%type_lcartain_mid
+
+
+「いけません、志貴さん……！」
+　琥珀さんの声をふりきって、吐き気を堪えながら走る。
+br
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+bg "image\bg\bg_22a.jpg",%type_lcartain_mid
+
+　ただ走った。
+　先輩との約束に追いつけるように、
+　何か得体のしれないモノから逃げるように、
+　倒れる寸前の躯にムチをうって走った。\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+bg "image\bg\bg_25a.jpg",%type_lcartain_mid
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_25a.jpg",%type_nowaitdisp
+
+―――街は人間であふれかえっている。
+　熱い陽射し。
+　むせ返る惰性に満ちた活気は見苦しい。
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_25a.jpg",%type_nowaitdisp
+　どうしてこう。
+　無為な昆虫のように、知性あるものが、命題もなく群をなすのか。\
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_25a.jpg",%type_nowaitdisp
+
+「―――――――」
+　……朦朧とする。
+　吐き気と眩暈のせいだろうか。
+　何か、自分が、自分でないような、気がする。
+「――――――先、輩」
+　周囲を見渡す。
+　先輩は――――何処に、いるんだろう。
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_25a.jpg",%type_nowaitdisp
+　意識が霞んで見つけられない。\
+
+
+　
+―――――見つけられない。
+　こう人が多いと。
+　　　　　　　　　　。見つけられない――――
+　　　　　　　　　　　　こう雑多すぎると。
+　何も。
+　　　　　　　　　　　　　　　意味などないような
+!w1000
+
+　　　　　　　　　眩暈が　　　
+!w2000
+
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_25a.jpg",%type_nowaitdisp
+\
+
+ld c,":a;image\tachi\cel_t01c.jpg",%type_lshutter_mid
+
+「あ、遠野くん。驚いたなあ、ほんとに時間通りに来たんですか？」
+「先……輩？」
+br
+―――初めて見た。先輩の、私服だ。
+br
+「……えっと、さっきはちょっといじわるしちゃいました。そんなに疲れるぐらい走らせちゃって、ごめんなさい」
+br
+―――ぺこり、と頭をさげてくる先輩。\
+
+「―――――っ」
+　ばかだな。そんなこと、気にしなくていいのに。
+br
+bg "image\bg\ima_11.jpg",%type_nowaitdisp
+bg "image\bg\bg_25a.jpg",%type_nowaitdisp
+wavestop
+
+「あ、遠野くん―――！？」
+bg "image\bg\ima_11.jpg",%type_crossfade_mid
+br
+　……ああ、吐き気がする。
+　けど来て良かった。
+　先輩の私服を見れたんだから、こんな眩暈ぐらい我慢して、今日は三人で楽しく遊ばなくっちゃいけない―――――\
+
+
+!w3000
+
+play "*1"
+
+bg "image\bg\bg_40c.jpg",%type_crossfade_slw
+br
+――――気がつくと、ベッドに眠っている自分がいた。\
+
+「あ―――れ」
+　首だけを動かして周囲を見る。
+　ここは自分の部屋で、窓の外は夜。
+　部屋には翡翠がいて、眠っていた俺の様子をうかがっていた。\
+
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+
+「志貴さま、お目覚めになられましたか？」
+「……翡翠。俺は、どうして」
+　手足がしびれて、自由のきかない体のまま、首だけを動かして翡翠を見る。\
+
+「志貴さまは外でお倒れになられました。
+　志貴さまと同伴していたご学友が屋敷に連絡をくださいまして、そのまま志貴さまをお屋敷にお連れしました」
+「――――そうか。結局、俺は」
+　琥珀さんを押しのけておいて、気を失ってしまったっていうワケか。\
+
+「……バカみたいだ。琥珀さんに、会わせる顔がない」
+wave se0
+
+bg "image\bg\ima_11b.jpg",%type_crossfade_fst
+bg "image\bg\bg_40c.jpg",%type_crossfade_fst
+
+　後悔と一緒になって頭痛がやってくる。
+　……体の具合はそれなりによくなってはいるみたいだけど、頭痛だけは消えてくれない。\
+
+「……翡翠。俺の体、どうなったんだ？」
+ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
+「ご安心ください。志貴さまのお体に大事はありませんでした。姉さんが処方した鎮痛剤もありますから、頭痛がするようでしたらお飲みください」
+cl c,%type_crossfade_mid
+
+　翡翠は銀のトレイに水と、琥珀さんが用意してくれたっていう薬を持ってくる。\
+cl c,%type_crossfade_fst
+
+　だが、今は飲む気になんてなれなかった。
+「……ああ。ひどくなったら自分で飲むから、そこに置いておいてくれ」\
+
+
+
+return

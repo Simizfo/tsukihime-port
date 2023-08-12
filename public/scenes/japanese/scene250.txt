@@ -1,0 +1,19 @@
+
+bg "image\bg\bg_06b.jpg",%type_nowaitdisp
+
+　とりわけやる事もないし、まっすぐ屋敷に帰る事にしよう。
+
+bg "image\bg\ima_10.jpg",%type_lcartain_slw
+!w1000
+bg "image\bg\bg_32b.jpg",%type_lcartain_slw
+
+　坂をのぼりきって、屋敷に帰ってきた。
+　時刻はまだ夕方の五時前。
+　夕食まであと二時間、部屋で時間を潰すとしようか―――\
+
+bg "image\bg\ima_10.jpg",%type_lcartain_mid
+!w1000
+
+
+
+return

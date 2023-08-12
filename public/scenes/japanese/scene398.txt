@@ -1,0 +1,270 @@
+
+
+
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+
+
+
+
+―――今夜は眠らないでいればいい。
+br
+「……そうだ。今夜は眠らずにいて、それでもし――」
+　明日、また新しい被害者が出たのなら、俺は殺人事件にはまったく無関係という事になる。\
+
+「――――よし」
+　なにか、微妙に道を間違えているってコトぐらい、分かっている。
+　こうして眠らずにいて、誰か見知らぬ人が殺されるのを待っているなんて、おかしいって解っている。
+「―――けど、それ以外にどうしろっていうんだ」
+　俺には―――自分の記憶さえ確かじゃない俺には、もうこんな方法しか残っていない。
+br
+―――ともかく。
+　今夜は眠らずにいて、夢を見ないで朝を迎えるしか方法はないんだ。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+
+bg "image\bg\bg_40d.jpg",%type_crossfade_mid
+
+
+br
+br
+br
+――――一時間が経った。
+　意識は、まだきちんと保てている。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+bg "image\bg\bg_40d.jpg",%type_crossfade_mid
+
+
+br
+br
+br
+br
+br
+――――さらに一時間。
+　意識は、まだきちんと保てている。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+bg "image\bg\bg_40d.jpg",%type_crossfade_fst
+
+
+
+br
+br
+br
+br
+br
+br
+br
+――――一時間。
+　イシキは　きちんと保てている。\
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+
+br
+br
+br
+br
+br
+br
+br
+br
+br
+――――時刻は、午前一時をスギた。
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+　イシキは　マダ　キチン　と保てている。\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_fst
+
+
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+――――あと、四時間もすれば、アサに。\
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+　……なにか、おかしい。
+　イシキは　キチン　と有るのに。
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+
+　……シカイが、うっすらと　閉じていく。
+
+bg "image\bg\ima_11b.jpg",%type_nowaitdisp
+bg "image\bg\bg_40d.jpg",%type_nowaitdisp
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+bg "image\bg\bg_40d.jpg",%type_crossfade_mid
+
+br
+　起きて、いなくちゃいけないのに。
+　まだ、ぜんぜん眠くないのに。
+　どうして
+!w750
+　どうして
+!w1350
+　どうして
+!w1750
+　カラダは　こんなにも　眠りを　欲している、の、か―――――　\
+
+bg "image\bg\ima_10.jpg",%type_tcartain_mid
+!w2000
+
+
+
+
+
+!w3000
+waveloop se10
+
+bg "image\bg\bg_26a.jpg",%type_nowaitdisp
+
+
+「ハア―――ハア――――ハア」\
+
+　誰かに、見られている気がする。
+　オレは。
+　ぎょろぎょろと血走った目で、道行く人間を見定めている。\
+
+br
+br
+br
+br
+br
+br
+―――時間が時間のせいか。
+　　　昨夜に比べて、人通りはまったくない。\
+
+　……誰かに、見られている。
+　見付からない。
+　今夜も、目当ての人物は見付からない。
+
+br
+br
+br
+br
+#ff0000
+　　　　　　　イライラ　する　\
+#ffffff
+
+「ハア―――ハア―――ハア――――」\
+
+　場所を変えよう。
+　今夜は、街はやめだ。\
+
+bg "image\bg\bg_24c.jpg",%type_crossfade_fst
+
+
+　屋根から屋根を伝って、ごちゃごちゃとしたところに出た。
+　……一際高い家の屋根から、道を見渡す。\
+
+br
+br
+br
+br
+br
+br
+br
+#ff0000
+　　　　　　　　　　みるな　\
+#ffffff
+
+
+「――――いた」
+　通りを一人きりで歩いている。
+　女だ。
+　今度こそ間違いなく
+　アキハだったら、いい。\
+
+#ff0000
+
+br
+br
+br
+br
+br
+br
+br
+　　　　　　　　　オレを　みるな　\
+#ffffff
+
+　いや、別にそうでなくてもいい。
+　もう一度。
+　もう一度、あのカンカクを味わいたい――――\
+
+
+bg "image\bg\ima_10.jpg",%type_nowaitdisp
+wave se12
+
+
+bg "image\bg\ima_12b.jpg",%type_lshutter_fst
+
+
+　後ろから、できるだけ体をキズつけないように、殺した。
+　髪を握って、ずるずるとアキハのカラダを引きずっていく。
+
+bg "image\bg\bg_22c.jpg",%type_lshutter_mid
+
+
+「ハア――――ハア――――ハア」
+　アキハの首筋にかじりついて、血を吸った。
+
+br
+―――つまらない。
+　昨夜ほど、今夜のは、面白くなかった。
+　やっぱりこんな短い髪だと、アキハじゃない。\
+
+「……つまらない……！」
+　頭にくる。
+　死体をバラバラにしても、ぜんぜん気が晴れない。
+　ニセモノ。
+　ニセモノは、頭にくる。\
+
+#ff0000
+
+br
+br
+br
+br
+br
+br
+br
+　　　　　　　　　　のぞくな　\
+#ffffff
+
+「ハア――――ハア――――ハア――――」
+br
+　余分な体力を使ってしまった。
+　じき夜があける。
+　朝になれば、志貴が目を覚ます。
+br
+「今夜は、疲れた。また明日、やろう」
+　うん、それがいい。そうしよう。\
+
+　さあ。
+　朝が来る前に、誰にも気付かれないように、今日は学校に戻らないと――――\
+
+bg "image\bg\ima_10.jpg",%type_crossfade_mid
+wavestop
+
+!w3000
+
+
+
+
+
+
+
+return
