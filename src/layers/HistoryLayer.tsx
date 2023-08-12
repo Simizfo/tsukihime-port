@@ -5,6 +5,7 @@ import { SaveState, loadSaveState } from "../utils/savestates";
 import { useObserver } from '../utils/Observer';
 import history from '../utils/history';
 import script from '../utils/script';
+import strings from '../utils/lang';
 
 type Props = {
   [key: string] : any // other properties to apply to the root 'div' element of the component
@@ -87,7 +88,7 @@ const HistoryLayer = (props: Props) => {
             <Fragment key={i}>
               {i > 0 && <hr {...{"page-type": contentType}}/>}
               {saveState &&
-                <button className="menu-btn load" onClick={onClick.bind(null,saveState)}>Load</button>
+                <button className="menu-btn load" onClick={onClick.bind(null,saveState)}>{strings.history.load}</button>
               }
               {text.split('\n').map((line, i) =>
                 <Fragment key={i}>
@@ -101,7 +102,7 @@ const HistoryLayer = (props: Props) => {
       </div>
 
       <footer>
-        <button onClick={() => setDisplay(false)}>Close</button>
+        <button onClick={() => setDisplay(false)}>{strings.history.close}</button>
       </footer>
     </div>
   )

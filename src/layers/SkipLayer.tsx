@@ -3,6 +3,7 @@ import { displayMode } from "../utils/display"
 import { useObserver } from "../utils/Observer"
 import script from "../utils/script"
 import { parseBBcode } from "../utils/utils"
+import strings from "../utils/lang"
 
 const SkipLayer = () => {
   const [display, setDisplay] = useState<boolean>(false)
@@ -41,18 +42,19 @@ const SkipLayer = () => {
     <div id="skip-layer" className={`box ${display ? "show" : ""}`}>
       <div className="skip-modal">
         <div className="title">
-          You have already seen
-          {sceneTitle ? <> the scene
-          <div className="scene-title">{parseBBcode(sceneTitle)}</div></>
-          : <> this scene</>
-          }<br />
-          Do you want to skip it?
+          {sceneTitle ?<>
+            {parseBBcode(strings.game["skip-named"][0])}
+            <div className="scene-title">{parseBBcode(sceneTitle)}</div>
+            {parseBBcode(strings.game["skip-named"][1])}  
+          </> : <>
+            {parseBBcode(strings.game["skip-unnamed"][1])}
+          </>}
         </div>
 
         <div className="buttons">
-          <button onClick={handleYes}>Yes</button>
+          <button onClick={handleYes}>{strings.yes}</button>
           <div className="separator" />
-          <button onClick={handleNo}>No</button>
+          <button onClick={handleNo}>{strings.no}</button>
         </div>
       </div>
     </div>

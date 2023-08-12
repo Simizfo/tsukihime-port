@@ -1,14 +1,15 @@
 import { ChangeEvent, useEffect, useState } from "react"
 import { SCREEN, displayMode } from "../utils/display"
-import { addEventListener, convertText, parseBBcode } from "../utils/utils"
+import { convertText, parseBBcode } from "../utils/utils"
 import { SceneName } from "../types";
-import { SAVE_EXT, SCENE_ATTRS } from "../utils/constants";
+import { SAVE_EXT } from "../utils/constants";
 import { SaveState, QUICK_SAVE_ID, deleteSaveState, getSaveState, listSaveStates, loadSaveState, storeCurrentState, addSavesChangeListener, removeSavesChangeListener, exportSave, loadSaveFiles } from "../utils/savestates";
 import { getSceneTitle } from "../utils/scriptUtils";
 import { BsFileEarmarkArrowUp } from "react-icons/bs";
 import { FaPlusCircle, FaTrash, FaDownload } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { graphicElements } from "../layers/GraphicsLayer";
+import strings from "../utils/lang";
 
 //##############################################################################
 //#                               TOOL FUNCTIONS                               #
@@ -27,11 +28,11 @@ function phaseTitle(saveState: SaveState) {
   if (phase.route == "" || phase.routeDay == "") {
     return parseBBcode(getSceneTitle(context.label as SceneName) ?? "")
   }
-  return parseBBcode(SCENE_ATTRS.routes[phase.route][phase.routeDay])
+  return parseBBcode(strings.scenario.routes[phase.route][phase.routeDay])
 }
 
 function phaseDay(saveState: SaveState) {
-  return parseBBcode(SCENE_ATTRS.days[saveState.context.phase.day])
+  return parseBBcode(strings.scenario.days[saveState.context.phase.day])
 }
 
 //##############################################################################
@@ -54,7 +55,7 @@ const SaveListItem = ({id, saveState, onSelect, ...props}: SaveListItemProps)=> 
       </div>
       <div className="deta">
         <div className="date">
-          <b>{date.toLocaleDateString()}</b> {date.toLocaleTimeString()}
+          <b>{date.toLocaleDateString(strings.locale)}</b> {date.toLocaleTimeString(strings.locale)}
         </div>
         <div className="line">
           {convertText(saveState.text ?? "")}
@@ -149,7 +150,7 @@ const SavesLayer = ({variant, back}: Props) => {
   }
 
   const focusedSave = focusedId != undefined ? getSaveState(focusedId) : undefined
-  const title = variant == "save" ? "Save" : "Load"
+  const title = strings.saves[variant == "save" ? "title-save" : "title-load"]
   return (
     <div id="saves-layout">
       <h2 className="page-title">{title}</h2>
@@ -177,7 +178,7 @@ const SavesLayer = ({variant, back}: Props) => {
       <SaveDetails id={focusedId} saveState={focusedSave} deleteSave={deleteSave}/>
       <div className="save-buttons">
         <button className="menu-btn back-button" onClick={back.bind(null, false)}>
-          Back
+          {strings.back}
         </button>
       </div>
     </div>

@@ -5,6 +5,7 @@ import { ViewRatio } from "../../types"
 import { TEXT_SPEED } from "../../utils/constants"
 import { deepAssign, negative } from "../../utils/utils"
 import { FaMinus, FaPlus, FaVolumeMute, FaVolumeOff, FaVolumeUp } from "react-icons/fa"
+import strings from "../../utils/lang"
 
 const ConfigMainTab = () => {
   const [conf, setConf] = useState(deepAssign({
@@ -34,11 +35,16 @@ const ConfigMainTab = () => {
     newConf[key1][key2] = value
     return newConf
   })
+  
+  const numFormat = new Intl.NumberFormat(strings.locale, { maximumSignificantDigits: 3 })
+  const msToS = (ms: number)=> {
+    return numFormat.format(ms/1000)
+  }
 
   const volumeNames: {[key in keyof typeof conf.volume]: string} = {
-    'master': "Global volume",
-    'track': "Music volume",
-    'se': "SFX volume"
+    'master': strings.config["volume-master"],
+    'track': strings.config["volume-track"],
+    'se': strings.config["volume-se"]
   }
 
   return (
@@ -68,11 +74,11 @@ const ConfigMainTab = () => {
       )}
 
       <ConfigButtons
-        title="Display ratio"
+        title={strings.config.ratio}
         btns={[
-          { text: "Auto", value: ViewRatio.unconstrained },
-          { text: "4/3", value: ViewRatio.fourByThree },
-          { text: "16/9", value: ViewRatio.sixteenByNine }
+          { text: strings.config["ratio-auto"], value: ViewRatio.unconstrained },
+          { text: strings.config["ratio-4-3"], value: ViewRatio.fourByThree },
+          { text: strings.config["ratio-16-9"], value: ViewRatio.sixteenByNine }
         ]}
         property="fixedRatio"
         conf={conf}
@@ -80,19 +86,19 @@ const ConfigMainTab = () => {
       />
 
       <ConfigButtons
-        title="Text display speed"
+        title={strings.config["text-speed"]}
         btns={[
-          { text: "Slow", value: TEXT_SPEED.slow },
-          { text: "Medium", value: TEXT_SPEED.normal },
-          { text: "Fast", value: TEXT_SPEED.fast },
-          { text: "Instant", value: TEXT_SPEED.instant }
+          { text: strings.config["text-speed-low"], value: TEXT_SPEED.slow },
+          { text: strings.config["text-speed-med"], value: TEXT_SPEED.normal },
+          { text: strings.config["text-speed-high"], value: TEXT_SPEED.fast },
+          { text: strings.config["text-speed-instant"], value: TEXT_SPEED.instant }
         ]}
         property="textSpeed"
         conf={conf}
         updateValue={updateValue}
       />
 
-      <ConfigLayout title={`Auto-play text delay: ${(conf.autoClickDelay/1000).toFixed(1)}s`}>
+      <ConfigLayout title={strings.config["auto-play-delay-text"].replace('$0',msToS(conf.autoClickDelay))}>
         <div className="config-range">
         <span className="icon"><FaMinus /></span>
           <input
@@ -108,7 +114,7 @@ const ConfigMainTab = () => {
         </div>
       </ConfigLayout>
 
-      <ConfigLayout title={`Auto-play page delay: ${(conf.nextPageDelay/1000).toFixed(1)}s`}>
+      <ConfigLayout title={strings.config["auto-play-delay-page"].replace('$0',msToS(conf.nextPageDelay))}>
         <div className="config-range">
         <span className="icon"><FaMinus /></span>
           <input

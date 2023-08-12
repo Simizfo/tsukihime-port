@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { ConfigButtons, ResetBtn } from "../ConfigScreen"
 import { defaultSettings, settings } from "../../utils/variables"
 import { deepAssign } from "../../utils/utils"
+import strings from "../../utils/lang"
 
 const ConfigAdultTab = () => {
   const [conf, setConf] = useState(deepAssign({
@@ -21,10 +22,10 @@ const ConfigAdultTab = () => {
   return (
     <section>
       <ConfigButtons
-        title="Blur thumbnails"
+        title={strings.config["adult-blur"]}
         btns={[
-          { text: 'On', value: true },
-          { text: 'Off', value: false },
+          { text: strings.config.on, value: true },
+          { text: strings.config.off, value: false },
         ]}
         property="blurThumbnails"
         conf={conf}
@@ -32,10 +33,10 @@ const ConfigAdultTab = () => {
       />
 
       <ConfigButtons
-        title="Warn me when I enter an H scene"
+        title={strings.config["adult-warn"]}
         btns={[
-          { text: 'On', value: true },
-          { text: 'Off', value: false },
+          { text: strings.config.on, value: true },
+          { text: strings.config.off, value: false },
         ]}
         property="warnHScenes"
         conf={conf}

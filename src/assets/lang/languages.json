@@ -1,12 +1,11 @@
 {
-    "en-mm": {
-        "display-name": "English",
-        "authors": "mirror moon",
-        "lang-file": "en-mm.json"
-    },
-    "jp": {
-        "display-name": "大和",
-        "lang-file": "jp.json",
-        "fallback": "en-mm"
-    }
+  "jp": {
+    "display-name": "大和",
+    "lang-file": "jp.json"
+  },
+  "en-mm": {
+    "display-name": "English",
+    "authors": "mirror moon",
+    "lang-file": "en-mm.json"
+  }
 }

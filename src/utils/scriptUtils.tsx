@@ -1,6 +1,7 @@
 import { RouteDayName, RouteName, SceneName } from "../types";
 import { SCENE_ATTRS } from "./constants";
-import { getGameVariable, settings } from "./variables";
+import strings from "./lang";
+import { getGameVariable } from "./variables";
 
 //##############################################################################
 //#                           FETCH SCENES / BLOCKS                            #
@@ -14,7 +15,7 @@ const LOGIC_FILE = 'scene0.txt';
 export async function fetchScene(sceneId: string): Promise<string[] | undefined> {
   if (/^s\d+a?$/.test(sceneId))
     sceneId = `scene${sceneId.substring(1)}`;
-  const script = await fetch(`./scenes/${settings.language}/${sceneId}.txt`)
+  const script = await fetch(`${strings["scene-dir"]}/${sceneId}.txt`)
     .then(
       (response) => response.ok ? response.text() : undefined,
       (_failErr) => undefined);
@@ -26,7 +27,7 @@ export async function fetchScene(sceneId: string): Promise<string[] | undefined>
 }
 
 async function fetchBlock(label: string): Promise<string[]> {
-  const script = await fetch(`./scenes/${settings.language}/${LOGIC_FILE}`)
+  const script = await fetch(`${strings["scene-dir"]}/${LOGIC_FILE}`)
     .then(script => script.text());
 
   let start = script.search(new RegExp(`^\\*${label}\\b`, "m"));
@@ -82,25 +83,25 @@ export async function fetchFBlock(label: string): Promise<string[]> {
 //##############################################################################
 
 export function isScene(label: string): boolean {
-  //TODO create a list of unique scene names (e.g., openning, eclipse)
-  return /^\*?s\d+a?$/.test(label) || ["openning"].includes(label)
+  return /^\*?s\d+a?$/.test(label) || ["openning", "ending", "eclipse"].includes(label)
 }
 
 export function getSceneTitle(label: SceneName): string|undefined {
-  const attrs = SCENE_ATTRS.scenes[label]
+  const attrs = strings.scenario.scenes[label] ?? SCENE_ATTRS.scenes[label]
+  
   if (!attrs)
     return undefined
   if ("title" in attrs)
     return attrs.title
   else {
     const {r, d, s} = attrs
-    let route: keyof typeof SCENE_ATTRS.routes
+    let route: keyof typeof strings.scenario.routes
     if (typeof r == "object" && 'flg' in r)
       route = r[(getGameVariable(`%flg${r.flg}`)) ? "1" : "0"]
     else
       route = r
 
-    let sceneName = SCENE_ATTRS.routes[route][d]
+    let sceneName = strings.scenario.routes[route][d]
     if (s) {
       sceneName += " - "
       if (typeof s == "object" && 'flg' in s)
@@ -112,14 +113,14 @@ export function getSceneTitle(label: SceneName): string|undefined {
   }
 }
 
-const routePhaseRegexp = /word\\P(?<route>[A-Z]+)_(?<rDay>\d+[AB])/
+const routePhaseRegexp = /word\\p(?<route>[a-z]+)_(?<rDay>\d+[ab])/
 const ignoredPhaseRegexp = /(?<ignored>bg\\.*)/
-const dayPhaseRegexp = /word\\day_(?<day>\w+)/
+const dayPhaseRegexp = /word\\day_(?<day>\d+)/
 const rawScenePhaseRegexp = /word\\(?<scene>\w+)/
 
 export function getPhaseDetails() {
 
-  const phaseTitle_a = getGameVariable("$phasetitle_a")
+  const phaseTitle_a = getGameVariable("$phasetitle_a").toLowerCase()
   const phaseTitle_b = getGameVariable("$phasetitle_b")
   let {route = "", rDay = "", day = "", ignored = "", scene = ""} = {
     ...(phaseTitle_a.match(routePhaseRegexp)?.groups ??
@@ -131,8 +132,8 @@ export function getPhaseDetails() {
     throw Error(`Cannot parse phase imgs ${phaseTitle_a} or ${phaseTitle_b}`)
   return {
     bg: getGameVariable("$phasebg"),
-    route : (route.toLowerCase() as RouteName) || "others",
-    routeDay : (rDay.toLowerCase() as RouteDayName) || scene,
+    route : (route as RouteName) || "others",
+    routeDay : (rDay as RouteDayName) || scene,
     day : parseInt(day) || 0
   }
 }
@@ -211,8 +212,13 @@ export function extractInstructions(line: string) {
 
   if (endPageBreak) // '\\' will be added as an individual command at the end
     line = line.substring(0, line.length-1)
-
-  if (line.startsWith('`')) {
+  
+  if (/^[-―「\s]/.test(line)) {
+    if (!endPageBreak)
+      line += '\n'
+    instructions.push(...splitText(line))
+  }
+  else if (line.startsWith('`')) {
     // following space (if present) is part of the argument
     line = line.substring(1)
     if (!endPageBreak)

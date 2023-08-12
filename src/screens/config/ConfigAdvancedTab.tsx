@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react"
+import { useEffect, useReducer, useState } from "react"
 import { ConfigButtons, ConfigLayout, ResetBtn } from "../ConfigScreen"
 import { defaultSettings, settings } from "../../utils/variables"
 import { IMAGES_FOLDERS, SCENES_FOLDERS } from "../../utils/constants"
 import { addEventListener, deepAssign, isFullscreen, requestJSONs, textFileUserDownload, toggleFullscreen } from "../../utils/utils"
 import { SaveState, clearSaveStates, listSaveStates, restoreSaveStates } from "../../utils/savestates"
+import strings, { languages } from "../../utils/lang"
+import { useObserver } from "../../utils/Observer"
 
 function twoDigits(n: number) {
   return n.toString().padStart(2, '0')
@@ -20,6 +22,9 @@ const ConfigAdvancedTab = () => {
     imagesFolder: undefined,
     language: undefined,
   }, settings, {createMissing: false}))
+
+  const [_updateNum, forceUpdate] = useReducer(x => (x + 1) % 100, 0);
+  useObserver(forceUpdate, strings, 'translation-name')
 
   const [fullscreen, setFullscreen] = useState<boolean>(isFullscreen()) // don't save in settings
 
@@ -63,14 +68,12 @@ const ConfigAdvancedTab = () => {
   }
 
   const eraseData = () => {
-    if (confirm("This will delete all saves, reset all settings and progress. Are you sure?")) {
+    if (confirm(strings.config["data-erase-warning"])) {
       clearSaveStates()
       deepAssign(settings, defaultSettings)
       setTimeout(()=> {
         localStorage.clear()
-        alert("All data have been deleted. If you leave this website without making any change"+
-              " to the settings and without starting a new game, no data will remain stored"+
-              " on your computer")
+        alert(strings.config["data-erase-confirm"])
       }, 10) // leave room for asynchronous callbacks (if any) to complete
     }
   }
@@ -78,10 +81,10 @@ const ConfigAdvancedTab = () => {
   return (
     <section>
       <ConfigButtons
-        title="Quality"
+        title={strings.config.quality}
         btns={[
-          { text: `640\u00D7480`, value: IMAGES_FOLDERS.image },
-          { text: `1280\u00D7960`, value: IMAGES_FOLDERS.image_x2 },
+          { text: strings.config["quality-sd"], value: IMAGES_FOLDERS.image },
+          { text: strings.config["quality-hd"], value: IMAGES_FOLDERS.image_x2 },
         ]}
         property="imagesFolder"
         conf={conf}
@@ -89,10 +92,10 @@ const ConfigAdvancedTab = () => {
       />
 
       <ConfigButtons
-        title="Fullscreen"
+        title={strings.config.fullscreen}
         btns={[
-          { text: `On`, value: true },
-          { text: `Off`, value: false },
+          { text: strings.config.on, value: true },
+          { text: strings.config.off, value: false },
         ]}
         property="fullscreen"
         conf={{fullscreen}}
@@ -101,30 +104,29 @@ const ConfigAdvancedTab = () => {
 
       {import.meta.env.DEV &&
       <ConfigButtons
-        title="Language (WIP)"
-        btns={[
-          { text: `English`, value: SCENES_FOLDERS.english },
-          { text: `Japanese`, value: SCENES_FOLDERS.japanese },
-        ]}
+        title={strings.config.language}
+        btns={Object.entries(languages).map(([id, {"display-name": dispName}])=> {
+          return {text: dispName, value: id}
+        })}
         property="language"
         conf={conf}
         updateValue={updateValue}
       />
       }
 
-      <ConfigLayout title="Data storage">
+      <ConfigLayout title={strings.config.data}>
         <div className="config-btns">
           <button className="config-btn"
             onClick={exportData}>
-              Export
+              {strings.config["data-export"]}
           </button>
           <button className="config-btn"
             onClick={importData}>
-              Import
+            {strings.config["data-import"]}
           </button>
           <button className="config-btn erase"
             onClick={eraseData}>
-              Erase
+            {strings.config["data-erase"]}
           </button>
         </div>
       </ConfigLayout>

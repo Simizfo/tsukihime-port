@@ -8,8 +8,8 @@ export const APP_VERSION = import.meta.env.VITE_VERSION
 export const STRALIAS_JSON = JSON.parse(JSON.stringify(straliasJson))
 export const NUMALIAS_JSON = JSON.parse(JSON.stringify(numaliasJson))
 export const SCENE_ATTRS : {
-  days: string[],
-  routes: Record<RouteName, Record<RouteDayName, string>>,
+  //days: string[],
+  //routes: Record<RouteName, Record<RouteDayName, string>>,
   scenes: Record<SceneName, ({
     title: string,
   } | {
@@ -19,7 +19,7 @@ export const SCENE_ATTRS : {
   }) & {
     h?: boolean
   }>
- } = JSON.parse(JSON.stringify(sceneAttrs))
+} = JSON.parse(JSON.stringify(sceneAttrs))
 
 export enum IMAGES_FOLDERS {
   image = "image",

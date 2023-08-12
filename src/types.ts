@@ -42,7 +42,7 @@ export type RouteName = 'aki'|'ark'|'cel'|'his'|'koha'|'others'
 export type RouteDayName = `${number}${'a'|'b'}`|'pro'|'epi'|'end'|'fin'
 
 export type SceneName = `s${number}${'a'|''}` |
-  "openning" | "ending" | "eclipse" | `mm${string}`
+  "openning" | "ending" | "eclipse"
 export type LabelName = SceneName |
   `f${number}${'a'|''}` | `skip${number}${'a'|''}` |
   'endofplay'

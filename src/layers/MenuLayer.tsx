@@ -7,6 +7,7 @@ import { quickLoad, quickSave } from "../utils/savestates"
 import { useObserver } from "../utils/Observer"
 import script from "../utils/script"
 import { displayMode, SCREEN } from "../utils/display"
+import strings from "../utils/lang"
 
 /**
  * TODO
@@ -95,33 +96,33 @@ const MenuLayer = () => {
       <div className="menu-container" ref={menuRef}>
         <menu>
           <button onClick={graphicMode}>
-            Graphics
+            {strings.menu["graphics"]}
           </button>
           <button onClick={historyMode}>
-            History
+            {strings.menu["history"]}
           </button>
           <button onClick={saveMode}>
-            Save
+            {strings.menu["save"]}
           </button>
           <button onClick={loadMode}>
-            Load
+            {strings.menu["load"]}
           </button>
           <button onClick={autoPlay}>
-            Auto play
+            {strings.menu["auto-play"]}
           </button>
           <button onClick={fastForwardScene}>
-            Fast forward
+            {strings.menu["ffw"]}
           </button>
           <button onClick={title}>
-            Title
+            {strings.menu["title"]}
           </button>
 
           <div className="action-icons">
             <button onClick={quickSave} className="quick">
-              Q. save
+              {strings.menu["q-save"]}
             </button>
             <button onClick={quickLoad} className="quick">
-              Q. load
+              {strings.menu["q-load"]}
             </button>
             <button onClick={toggleVolume}>
               {mute ? <FaVolumeMute /> : <FaVolumeUp />}

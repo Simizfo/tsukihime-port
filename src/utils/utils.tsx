@@ -12,9 +12,10 @@ export function objectMatch(toTest: Record<PropertyKey, any>, minKeys: Record<Pr
     if (!(p in toTest))
       return false
 		if(minKeys[p] !== toTest[p]) {
-      if (minKeys[p].constructor != toTest[p].constructor)
+      const refType = minKeys[p]?.constructor
+      if (refType != toTest[p]?.constructor)
         return false
-      if (minKeys[p].constructor != Object && minKeys[p].constructor != Array)
+      if (refType != Object && refType != Array)
         return false
       if (!objectMatch(toTest[p], minKeys[p], useSymbols))
         return false
@@ -46,28 +47,29 @@ export function deepAssign<Td extends Record<string,any>, Ts extends Record<stri
   for (const p of Object.getOwnPropertyNames(src)) {
     let create = false
     let exists = Object.hasOwn(dest, p)
+    const srcType = src[p]?.constructor
     if (!exists)
       create = createMissing
     else
-      create = morphTypes && src[p]?.constructor != dest[p]?.constructor
+      create = morphTypes && srcType != dest[p]?.constructor
     if (create) {
-      if (primitiveTypes.includes(src[p]?.constructor))
+      if (primitiveTypes.includes(srcType))
         (dest as any)[p] = src[p]
-      else if (src[p].constructor == Object)
+      else if (srcType == Object)
         (dest as any)[p] = deepAssign({}, src[p])
-      else if (src[p].constructor == Array)
+      else if (srcType == Array)
         (dest as any)[p] = src[p].slice(0, src[p].length)
       else
-        throw Error(`cannot deep-assign ${p as string}:${src[p].constructor}`)
+        throw Error(`cannot deep-assign ${p as string}:${srcType}`)
     } else if (exists) {
-      if (primitiveTypes.includes(src[p].constructor)) {
+      if (primitiveTypes.includes(srcType)) {
         (dest as any)[p] = src[p]
-      } else if (src[p].constructor == Object)
+      } else if (srcType == Object)
         deepAssign(dest[p], src[p] as any, {createMissing, morphTypes})
-      else if (src[p].constructor == Array)
+      else if (srcType == Array)
         dest[p].splice(0, dest[p].length, ...(src[p] as Array<any>))
       else
-        throw Error(`cannot deep-assign ${p as string}:${src[p].constructor}`)
+        throw Error(`cannot deep-assign ${p as string}:${srcType}`)
     }
   }
   return dest

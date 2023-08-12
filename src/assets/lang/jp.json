@@ -1,4 +1,4 @@
 {
   "locale": "ja-JP",
-  "scene-dir": "scenes-jp"
+  "scene-dir": "./scenes/japanese"
 }

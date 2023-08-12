@@ -1,5 +1,5 @@
 import { Link, useLocation, useParams } from 'react-router-dom'
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode, useEffect, useReducer, useState } from 'react'
 import '../styles/config.scss'
 import { SCREEN, displayMode } from '../utils/display'
 import { motion } from 'framer-motion'
@@ -8,6 +8,9 @@ import ConfigAdultTab from './config/ConfigAdultTab'
 import ConfigAdvancedTab from './config/ConfigAdvancedTab'
 import ConfigControlsTab from './config/ConfigControlsTab'
 import TabBtn from '../components/TabBtn'
+import strings from '../utils/lang'
+import { useObserver } from '../utils/Observer'
+import { settings } from '../utils/variables'
 
 enum Tabs {
   main = "Main",
@@ -26,6 +29,8 @@ const tabComponents = {
 const ConfigScreen = () => {
   const { state } = useLocation()
   const [activeTab, setActiveTab] = useState(state?.tab as Tabs || Tabs.main)
+  const [_updateNum, forceUpdate] = useReducer(x => (x + 1) % 100, 0);
+  useObserver(forceUpdate, strings, 'translation-name')
 
   useEffect(()=> {
     displayMode.screen = SCREEN.CONFIG
@@ -100,6 +105,6 @@ export const ConfigButtons = ({title, btns, property, conf, updateValue}: Config
 
 export const ResetBtn = ({onClick}: {onClick: ()=> void}) => (
   <div className="reset">
-    <button className="menu-btn reset" onClick={onClick}>Reset</button>
+    <button className="menu-btn reset" onClick={onClick}>{strings.config.reset}</button>
   </div>
 )
