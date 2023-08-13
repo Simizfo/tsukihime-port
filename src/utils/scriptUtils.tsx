@@ -213,9 +213,9 @@ export function extractInstructions(line: string) {
   if (endPageBreak) // '\\' will be added as an individual command at the end
     line = line.substring(0, line.length-1)
   
-  if (/^[-―「\s]/.test(line)) {
+  if (/^[-―─「\s]/.test(line)) {
     if (!endPageBreak)
-      line += '\n'
+      line += '@\n'
     instructions.push(...splitText(line))
   }
   else if (line.startsWith('`')) {
@@ -227,9 +227,7 @@ export function extractInstructions(line: string) {
   } else if (line.startsWith('!')) {
     instructions.push(...splitText(line)) // '!w' are handled as inline commands
   } else {
-    let index = line.indexOf(' ')
-    if (index == -1)
-      index = line.length
+    let index = line.search(/\s|$/)
     instructions.push({
       cmd: line.substring(0,index),
       arg: line.substring(index+1)

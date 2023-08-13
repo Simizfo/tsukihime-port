@@ -125,7 +125,7 @@ function replaceDashes(text: string): JSX.Element {
     const nodes: Array<JSX.Element|string> = []
     //replace consecutive dashes with a continuous line
     let m
-    while ((m = /-{2,}/g.exec(text)) !== null) {
+    while ((m = /[-―─]{2,}/g.exec(text)) !== null) {
       if (m.index > 0)
         nodes.push(text.substring(0, m.index))
       const len = m[0].length

@@ -135,7 +135,7 @@ const TextLayer = memo(({...props}: Props) => {
         // gradually display next characters
         const timer = new Timer(textSpeed, ()=> {
           index++
-          while (newText.charAt(index+1) == '-')
+          while (['-', '―', '─'].includes(newText.charAt(index+1)))
             index++
           setCursor(index)
           if (index >= newText.length) {

@@ -17,10 +17,10 @@ const choicesContainer = {
 export const commands = {
   'select': (arg: string)=> {
     const choices: Choice[] = []
-    const tokens = arg.split(/`,|(?<=\*\w+),/)
+    const tokens = arg.split(/[`"],|(?<=\*\w+),/)
     for (let i = 0; i < tokens.length; i+= 2) {
       choices.push({
-        str: tokens[i].trim().substring(1), // remove '`'
+        str: tokens[i].trim().substring(1), // remove '`' or '"'
         label: tokens[i+1].trim().substring(1) as LabelName // remove '*'
       })
     }
