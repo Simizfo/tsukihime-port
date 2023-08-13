@@ -12,15 +12,15 @@ function back() {
 
 const SavesLayer = () => {
   const [display, setDisplay] = useState(displayMode.saveScreen)
+  const [variant, setVariant] = useState(displayMode.savesVariant as Exclude<typeof displayMode.savesVariant, "">)
   const rootRef = useRef<HTMLDivElement>(null)
 
-  function onDisplayChange() {
-    const display = displayMode.saveScreen
-    setDisplay(display)
-    if (!display && rootRef.current?.contains(document.activeElement))
+  useObserver(setVariant, displayMode, "savesVariant", {filter: (v)=> v != ""})
+  useObserver(setDisplay, displayMode, "saveScreen")
+  useObserver(()=> {
+    if (rootRef.current?.contains(document.activeElement))
       (document.activeElement as HTMLElement).blur?.();
-  }
-  useObserver(onDisplayChange, displayMode, "saveScreen")
+  }, displayMode, "saveScreen", {filter: (d)=> !d})
 
   useEffect(() => {
     const handleContextMenu = (_e: MouseEvent) => {
@@ -41,11 +41,9 @@ const SavesLayer = () => {
   
   return (
     <div className={`box box-save ${display ? "show" : ""}`} ref={rootRef}>
-      {display && 
-        <div className="page-content">
-          <SavesLayout variant={displayMode.savesVariant as "save"|"load"} back={back} />
-        </div>
-      }
+      <div className="page-content">
+        <SavesLayout variant={variant} back={back} />
+      </div>
     </div>
   )
 }
