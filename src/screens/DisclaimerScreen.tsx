@@ -29,7 +29,7 @@ const DisclaimerScreen = () => {
       >
 
       <div className="box">
-        {strings.disclaimer.map(txt=><p>{bb(txt)}</p>)}
+        {strings.disclaimer.map((txt,i)=><p key={i}>{bb(txt)}</p>)}
       </div>
     </motion.div>
   )
