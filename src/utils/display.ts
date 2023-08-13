@@ -155,6 +155,15 @@ observe(displayMode, "saveScreen", hideMenuOnActive)
 observe(displayMode, "history", hideMenuOnActive)
 observe(displayMode, "graphics", hideMenuOnActive)
 observe(displayMode, "text", hideMenuOnActive)
+observe(displayMode, "screen", (screen)=> {
+  if (screen != SCREEN.WINDOW) {
+    displayMode.history = false
+    displayMode.text = false
+    displayMode.dialog = false
+    displayMode.saveScreen = false
+    displayMode.menu = false
+  }
+})
 
 
 //##############################################################################

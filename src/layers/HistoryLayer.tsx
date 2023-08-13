@@ -20,7 +20,7 @@ const HistoryLayer = (props: Props) => {
     const handleWheel = (e: WheelEvent) => {
       if (e.ctrlKey)
         return
-      if (e.deltaY < 0 && !display && objectMatch(displayMode, {menu:false, saves:false})) {
+      if (e.deltaY < 0 && !display && objectMatch(displayMode, {menu:false, saveScreen:false})) {
         if (!history.empty) // at least one element in the iterator
           setDisplay(true)
         script.autoPlay = false

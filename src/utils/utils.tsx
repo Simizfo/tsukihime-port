@@ -4,20 +4,20 @@ import { RecursivePartial } from "../types"
 //#                            OBJECTS MANIPULATION                            #
 //##############################################################################
 
-export function objectMatch(toTest: Record<PropertyKey, any>, minKeys: Record<PropertyKey, any>, useSymbols=true): boolean {
+export function objectMatch<T extends Record<PropertyKey, any>>(toTest: T, ref: RecursivePartial<T>, useSymbols=true): boolean {
   const props = [
-      ...Object.getOwnPropertyNames(minKeys),
-      ...(useSymbols ? Object.getOwnPropertySymbols(minKeys) : [])]
+      ...Object.getOwnPropertyNames(ref),
+      ...(useSymbols ? Object.getOwnPropertySymbols(ref) : [])]
 	for(const p of props) {
     if (!(p in toTest))
       return false
-		if(minKeys[p] !== toTest[p]) {
-      const refType = minKeys[p]?.constructor
+		if(ref[p] !== toTest[p]) {
+      const refType = ref[p]?.constructor
       if (refType != toTest[p]?.constructor)
         return false
       if (refType != Object && refType != Array)
         return false
-      if (!objectMatch(toTest[p], minKeys[p], useSymbols))
+      if (!objectMatch(toTest[p], ref[p] as Exclude<typeof ref[typeof p], undefined>, useSymbols))
         return false
     }
 	}
