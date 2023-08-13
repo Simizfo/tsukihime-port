@@ -7,7 +7,7 @@ import { isObserverNotifyPending, observe } from "./Observer"
 import history from "./history"
 import { SCENE_ATTRS } from "./constants"
 import Timer, { commands as timerCommands } from "./timer"
-import { checkIfCondition, extractInstructions, fetchFBlock, fetchScene, getPhaseDetails, getSceneTitle, isScene } from "./scriptUtils"
+import { checkIfCondition, extractInstructions, fetchFBlock, fetchScene, getPhaseDetails, getSceneTitle, isScene, isTextLine } from "./scriptUtils"
 import { commands as variableCommands, gameContext, settings } from "./variables"
 import { toast } from "react-toastify"
 import { SCREEN, displayMode } from "./display"
@@ -98,6 +98,10 @@ export const script = {
   get isFastForward() {
     return fastForwardStopCondition != undefined
   },
+
+  isCurrentLineText() {
+    return isTextLine(this.currentLine)
+  }
 }
 export default script
 

@@ -27,6 +27,10 @@ export enum ViewRatio {
   sixteenByNine = "16/9",
 }
 
+export type KeysMatching<T extends object, V> = {
+  [K in keyof T]-?: T[K] extends V ? K : never
+}[keyof T];
+
 export type RecursivePartial<T> = {
   [P in keyof T]?: RecursivePartial<T[P]>
 }

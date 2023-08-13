@@ -34,8 +34,10 @@ export const displayMode = {
   set history(v) {
     if (v != history) {
       history = v
-      if (v == this.text) // showing the history hides th text,
-        this.text = !v    // and hiding the history shows the text
+      if (v == this.text) { // showing the history hides the text,
+        this.text = !v      // and hiding the history shows the text
+        this.dialog = !v // also hide/show the dialogs if any
+      }
     }
   },
 

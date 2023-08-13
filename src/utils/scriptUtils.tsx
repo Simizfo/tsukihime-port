@@ -205,6 +205,8 @@ function splitText(text: string) {
   }
   return instructions
 }
+const textLineRegexp = /^[`\-―─「\s]/
+export const isTextLine = textLineRegexp.test.bind(textLineRegexp)
 
 export function extractInstructions(line: string) {
   const instructions = new Array<{cmd:string,arg:string}>()
@@ -213,16 +215,13 @@ export function extractInstructions(line: string) {
   if (endPageBreak) // '\\' will be added as an individual command at the end
     line = line.substring(0, line.length-1)
   
-  if (/^[-―─「\s]/.test(line)) {
-    if (!endPageBreak)
+  if (isTextLine(line)) {
+    if (line.startsWith('`')) {
+      line = line.substring(1)
+      if (!endPageBreak)
+          line += '\n'
+    } else if (!endPageBreak)
       line += '@\n'
-    instructions.push(...splitText(line))
-  }
-  else if (line.startsWith('`')) {
-    // following space (if present) is part of the argument
-    line = line.substring(1)
-    if (!endPageBreak)
-      line += '\n'
     instructions.push(...splitText(line))
   } else if (line.startsWith('!')) {
     instructions.push(...splitText(line)) // '!w' are handled as inline commands
