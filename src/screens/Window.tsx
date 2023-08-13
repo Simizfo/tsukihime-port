@@ -46,7 +46,7 @@ const keyMap = new KeyMap({
               {key: "ArrowUp", repeat: false},
               {key: "ArrowLeft", repeat: false},
               {key: "H", repeat: false}],
-  "graphics": {code: "Space", repeat: false, [KeyMap.condition]: ()=>isViewAnyOf("text", "graphics")},
+  "graphics": {code: "Space", repeat: false, [KeyMap.condition]: ()=>isViewAnyOf("text", "graphics", "dialog")},
   "back":     [
               {key: "Escape", repeat: false},
               {key: "Backspace", repeat: false}],
@@ -109,18 +109,22 @@ function back() {
   stopAutoPlay()
   switch (displayMode.currentView) {
     case "saves"    : displayMode.saveScreen = false; break
-    case "graphics" : displayMode.graphics = false; break;
     case "history"  : displayMode.history = false; break
     case "menu"     : displayMode.menu = false; break;
-    case "dialog"   : // open the menu if the current view is texts or dialog
+    case "graphics" : // open the menu if the current view is texts,
+    case "dialog"   : // graphics or dialog
     case "text"     : displayMode.menu = true; break
     default : console.error(`cannot exit unknown view "${displayMode.currentView}"`)
   }
 }
-
+function canDisableGraphics() {
+  return script.isCurrentLineText() ||
+         script.currentLine.startsWith("select") ||
+         script.currentLine.startsWith("gosub")
+}
 function next() {
   if (isViewAnyOf("text", "graphics")) {
-    if (displayMode.currentView == "graphics" && script.isCurrentLineText()) // text has been hidden manually
+    if (displayMode.currentView == "graphics" && canDisableGraphics()) // text has been hidden manually
       displayMode.graphics = false
     else if (!stopAutoPlay())
       script.next()
