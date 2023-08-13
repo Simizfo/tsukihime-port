@@ -3,7 +3,7 @@ import '../styles/title-menu.scss'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import strings from '../utils/lang'
-import { parseBBcode } from '../utils/utils'
+import { bb } from '../utils/utils'
 
 const DisclaimerScreen = () => {
   const navigate = useNavigate()
@@ -29,7 +29,7 @@ const DisclaimerScreen = () => {
       >
 
       <div className="box">
-        {strings.disclaimer.map(txt=><p>{parseBBcode(txt)}</p>)}
+        {strings.disclaimer.map(txt=><p>{bb(txt)}</p>)}
       </div>
     </motion.div>
   )

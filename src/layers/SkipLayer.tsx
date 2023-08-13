@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { displayMode } from "../utils/display"
 import { useObserver } from "../utils/Observer"
 import script from "../utils/script"
-import { parseBBcode } from "../utils/utils"
+import { bb } from "../utils/utils"
 import strings from "../utils/lang"
 
 const SkipLayer = () => {
@@ -43,11 +43,11 @@ const SkipLayer = () => {
       <div className="skip-modal">
         <div className="title">
           {sceneTitle ?<>
-            {parseBBcode(strings.game["skip-named"][0])}
-            <div className="scene-title">{parseBBcode(sceneTitle)}</div>
-            {parseBBcode(strings.game["skip-named"][1])}  
+            {bb(strings.game["skip-named"][0])}
+            <div className="scene-title">{bb(sceneTitle)}</div>
+            {bb(strings.game["skip-named"][1])}  
           </> : <>
-            {parseBBcode(strings.game["skip-unnamed"][1])}
+            {bb(strings.game["skip-unnamed"][1])}
           </>}
         </div>
 

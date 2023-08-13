@@ -1,6 +1,6 @@
 import { ChangeEvent, useEffect, useState } from "react"
 import { SCREEN, displayMode } from "../utils/display"
-import { convertText, parseBBcode } from "../utils/utils"
+import { convertText, bb } from "../utils/utils"
 import { SceneName } from "../types";
 import { SAVE_EXT } from "../utils/constants";
 import { SaveState, QUICK_SAVE_ID, deleteSaveState, getSaveState, listSaveStates, loadSaveState, storeCurrentState, addSavesChangeListener, removeSavesChangeListener, exportSave, loadSaveFiles } from "../utils/savestates";
@@ -26,13 +26,13 @@ function phaseTitle(saveState: SaveState) {
   const context = saveState.context
   const phase = context.phase
   if (phase.route == "" || phase.routeDay == "") {
-    return parseBBcode(getSceneTitle(context.label as SceneName) ?? "")
+    return bb(getSceneTitle(context.label as SceneName) ?? "")
   }
-  return parseBBcode(strings.scenario.routes[phase.route][phase.routeDay])
+  return bb(strings.scenario.routes[phase.route][phase.routeDay])
 }
 
 function phaseDay(saveState: SaveState) {
-  return parseBBcode(strings.scenario.days[saveState.context.phase.day])
+  return bb(strings.scenario.days[saveState.context.phase.day])
 }
 
 //##############################################################################

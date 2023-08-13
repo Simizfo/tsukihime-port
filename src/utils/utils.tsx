@@ -150,7 +150,7 @@ const bbcodeTagRegex = /(?<!\\)\[(?<tag>\/?\w+)(=(?<arg>[^\]]+))?\]/g
 /**
  * convert text with BB code to JSX nodes
  */
-export function parseBBcode(text: string): JSX.Element {
+export function bb(text: string): JSX.Element {
   const nodes = [{tag:"", arg: "", content:[] as JSX.Element[]}]
   let lastIndex = 0
   text = text.replaceAll("\n", "[br/]")

@@ -2,7 +2,7 @@ import { useState, memo, Fragment } from "react";
 import { gameContext, settings } from "../utils/variables";
 import { observe, useChildrenObserver, useObserver } from "../utils/Observer";
 import { RouteDayName, RouteName } from "../types";
-import { parseBBcode } from "../utils/utils";
+import { bb } from "../utils/utils";
 import { findImageObjectByName } from "../utils/gallery";
 import { displayMode } from "../utils/display";
 import strings, { imageUrl } from "../utils/lang";
@@ -166,10 +166,10 @@ export {
 }
 
 function phaseTitle(route: RouteName, routeDay: RouteDayName) {
-  return parseBBcode(strings.scenario.routes[route][routeDay])
+  return bb(strings.scenario.routes[route][routeDay])
 }
 function dayTitle(day: number) {
-  return parseBBcode(strings.scenario.days[day])
+  return bb(strings.scenario.days[day])
 }
 
 //_______________________________component tools________________________________

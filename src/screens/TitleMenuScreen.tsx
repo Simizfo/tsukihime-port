@@ -13,7 +13,7 @@ import history from '../utils/history'
 import Modal from 'react-modal';
 import { APP_VERSION } from '../utils/constants'
 import strings from '../utils/lang'
-import { parseBBcode } from '../utils/utils'
+import { bb } from '../utils/utils'
 
 const TitleMenuScreen = () => {
   const navigate = useNavigate()
@@ -63,25 +63,25 @@ const TitleMenuScreen = () => {
         <div className='title-modal'>
           <div className='links'>
             <div>
-              {parseBBcode(strings.title.about.port)}.
+              {bb(strings.title.about.port)}.
             </div>
             {strings.title.about.translation && <div>
-              {parseBBcode(strings.title.about.translation)}
+              {bb(strings.title.about.translation)}
             </div>}
 
             <div>
-              {parseBBcode(strings.title.about.project)} <br/>
+              {bb(strings.title.about.project)} <br/>
               v{APP_VERSION}
             </div>
 
             <div>
-              {parseBBcode(strings.title.about.data)}
+              {bb(strings.title.about.data)}
             </div>
           </div>
 
           <div className='tsuki-remake'>
             <img src={tsukiR} alt="tsukihime logo" className="logo"/>
-            {parseBBcode(strings.title.about.remake)}
+            {bb(strings.title.about.remake)}
           </div>
         </div>
 
