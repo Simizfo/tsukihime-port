@@ -274,3 +274,5 @@ export function toggleFullscreen() {
 export function isFullscreen() {
   return document.fullscreenElement !== null
 }
+
+export function TSForceType<T>(v: any): asserts v is T {}

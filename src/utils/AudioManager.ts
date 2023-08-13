@@ -1,6 +1,7 @@
 import { observe } from "./Observer";
 import { STRALIAS_JSON } from "./constants";
 import { displayMode, SCREEN } from "./display";
+import { TSForceType } from "./utils";
 import { settings, gameContext } from "./variables";
 
 //##############################################################################
@@ -9,14 +10,14 @@ import { settings, gameContext } from "./variables";
 
 class AudioManager {
 
-  private context: AudioContext;
+  private context: AudioContext|null;
 
   //Gain nodes.
   //Set separate gains for track and effects,
   //and merge them into a global gain node to apply a common gain.
-  private trackGainNode: GainNode;
-  private seGainNode: GainNode;
-  private masterGainNode: GainNode;
+  private trackGainNode: GainNode | {gain: {value: number}};
+  private seGainNode: GainNode | {gain: {value: number}};
+  private masterGainNode: GainNode | {gain: {value: number}};
 
   //Source nodes.
   //Play the sounds from audio buffers.
@@ -30,20 +31,38 @@ class AudioManager {
   private sounds: Map<string, {buffer: AudioBuffer|Promise<AudioBuffer>|null, path: string}>;
 
   constructor() {
-    this.context = new AudioContext();
-
-    this.trackGainNode = this.context.createGain();
-    this.seGainNode = this.context.createGain();
-    this.masterGainNode = this.context.createGain();
-
-    this.trackGainNode.connect(this.masterGainNode);
-    this.seGainNode.connect(this.masterGainNode);
-    this.masterGainNode.connect(this.context.destination)
-
+    this.context = null
+    this.trackGainNode = {gain: {value: 1}} // fake gain nodes to keep gain value
+    this.seGainNode =  {gain: {value: 1}}
+    this.masterGainNode =  {gain: {value: 1}}
     this.sounds = new Map();
 
     this.trackNode = null;
     this.seNode = null;
+  }
+
+  private buildNodes() {
+    if (this.context)
+      return
+
+    this.context = new AudioContext()
+    const masterVolume = this.masterGainNode.gain.value
+    const trackVolume = this.trackGainNode.gain.value
+    const seVolume = this.seGainNode.gain.value
+    this.masterGainNode = this.context.createGain()
+    this.trackGainNode = this.context.createGain()
+    this.seGainNode = this.context.createGain()
+    this.masterGainNode.gain.value = masterVolume
+    this.trackGainNode.gain.value = trackVolume
+    this.seGainNode.gain.value = seVolume
+
+    TSForceType<GainNode>(this.trackGainNode)
+    TSForceType<GainNode>(this.masterGainNode)
+    TSForceType<GainNode>(this.seGainNode)
+
+    this.trackGainNode.connect(this.masterGainNode);
+    this.seGainNode.connect(this.masterGainNode);
+    this.masterGainNode.connect(this.context.destination);
   }
 
 //______________________________public properties_______________________________
@@ -131,6 +150,10 @@ class AudioManager {
    *             of the audio buffer, false otherwise. Defaults to true.
    */
   async playTrack(name: string, loop = true): Promise<void> {
+    this.buildNodes()
+    TSForceType<AudioContext>(this.context)
+    TSForceType<GainNode>(this.trackGainNode)
+
     if (this.trackNode) {
       this.trackNode.stop();
       this.trackNode.disconnect();
@@ -171,6 +194,10 @@ class AudioManager {
    *             of the audio buffer, false otherwise. Defaults to false.
    */
   async playSE(name: string, loop = false): Promise<void> {
+    this.buildNodes()
+    TSForceType<AudioContext>(this.context)
+    TSForceType<GainNode>(this.seGainNode)
+
     if (this.seNode) {
       this.seNode.stop();
       this.seNode.disconnect();
@@ -216,7 +243,11 @@ class AudioManager {
 
     sound.buffer = fetch(sound.path)
         .then(data=>data.arrayBuffer())
-        .then(arrayBuffer=>this.context.decodeAudioData(arrayBuffer))
+        .then(arrayBuffer=>{
+          this.buildNodes()
+          TSForceType<AudioContext>(this.context)
+          return this.context.decodeAudioData(arrayBuffer)
+        })
         .then(audioBuffer=>{
           sound.buffer = audioBuffer;
           return Promise.resolve(audioBuffer);
@@ -227,6 +258,9 @@ class AudioManager {
 
   private async createABSource(name: string, loop: boolean): Promise<AudioBufferSourceNode>
   {
+    this.buildNodes()
+    TSForceType<AudioContext>(this.context)
+
     let audioBuffer = this.loadFile(name);
     if (!audioBuffer)
       return Promise.reject(`unknown sound name "${name}".`+
