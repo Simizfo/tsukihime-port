@@ -1,23 +1,23 @@
 {
   "locale": "ja-JP",
-  "scene-dir": "./scenes/japanese",
   "translation-name": "original",
 
   "scenario": {
+    "scenes-dir": "./scenes/japanese",
     "days": [
-    "[i]1[sup]st[/sup] day|October 21 (Thur.)",
-    "[i]2[sup]nd[/sup] day|October 22 (Fri.)",
-    "[i]3[sup]rd[/sup] day|October 23 (Sat.)",
-    "[i]4[sup]th[/sup] day|October 24 (Sun.)",
-    "[i]5[sup]th[/sup] day|October 25 (Mon.)",
-    "[i]6[sup]th[/sup] day|October 26 (Tue.)",
-    "[i]7[sup]th[/sup] day|October 27 (Wed.)",
-    "[i]8[sup]th[/sup] day|October 28 (Thur.)",
-    "[i]9[sup]th[/sup] day|October 29 (Fri.)",
-    "[i]10[sup]th[/sup] day|October 30 (Sat.)",
-    "[i]11[sup]th[/sup] day|October 1 (Sun.)",
-    "[i]12[sup]th[/sup] day|October 2 (Mon.)",
-    "[i]13[sup]th[/sup] day|October 3 (Tue.)"
+      "[i]1[sup]st[/sup] day|October 21 (Thur.)",
+      "[i]2[sup]nd[/sup] day|October 22 (Fri.)",
+      "[i]3[sup]rd[/sup] day|October 23 (Sat.)",
+      "[i]4[sup]th[/sup] day|October 24 (Sun.)",
+      "[i]5[sup]th[/sup] day|October 25 (Mon.)",
+      "[i]6[sup]th[/sup] day|October 26 (Tue.)",
+      "[i]7[sup]th[/sup] day|October 27 (Wed.)",
+      "[i]8[sup]th[/sup] day|October 28 (Thur.)",
+      "[i]9[sup]th[/sup] day|October 29 (Fri.)",
+      "[i]10[sup]th[/sup] day|October 30 (Sat.)",
+      "[i]11[sup]th[/sup] day|October 1 (Sun.)",
+      "[i]12[sup]th[/sup] day|October 2 (Mon.)",
+      "[i]13[sup]th[/sup] day|October 3 (Tue.)"
     ],
     
     "routes": {
@@ -79,8 +79,8 @@
         "11a": "[b]11／硝る躯 III",
         "12a": "[b]12／白昼夢",
         "13a": "[b]13／金糸の繭",
-        "14a": "まひるの月",
-        "14b": "ひなたのゆめ"
+        "14a": "[b]まひるの月",
+        "14b": "[b]ひなたのゆめ"
       },
       "koha": {
         "05a": "[b]5／カイン I",
@@ -110,23 +110,29 @@
     "dead-end": "Dead end",
     "osiete": "Ciel's lesson"
   },
-
+  "images": {
+    "redirect-ids": {
+      "": {"sd":"image/$.webp", "hd": "image_x2/$.webp"}
+    },
+    "redirected-images": { }
+  },
   "disclaimer": [
-    "This is a web version of [i]Tsukihime[/i], a visual novel published on 2000 by Type-Moon.",
-    "The game contains adult content and is intended for mature audiences only."
+    "This is a web version of [b]月姫[/b], a visual novel published on 2000 by TYPE-MOON.",
+    "このゲームは、18歳以上のみ対象の商品となっております。"
   ],
   "title": {
     "start": "New Game",
-    "resul": "Continue",
+    "resume": "Continue",
     "load": "Load",
     "config": "Config",
-    "gallery": "Gallery",
+    "gallery": "ギヤラリー",
     "about": {
-      "port": "This is a web version of [i]Tsukihime[/i], a visual novel published on 2000 by Type-Moon",
+      "port": "This is a web version of [b]月姫[/b], a visual novel published on 2000 by TYPE-MOON",
       "translation": "",
       "project": "Project available on [url='https://github.com/requinDr/tsukihime-port']Github[/url]",
       "data": "No data collected, everything is stored in your browser. Manage your data [url='/config?tab=Advanced']here[/url]",
-      "remake": "Support by buying the remake [url='http://typemoon.com/products/tsukihime/']Tsukime - A piece of blue glass moon[/url]"
+      "remake": "Support by buying the remake [url='http://typemoon.com/products/tsukihime/']月姫 -A piece of blue glass moon[/url]",
+      "close": "close"
     }
   },
   "config": {
@@ -211,6 +217,14 @@
   "history": {
     "load": "Load",
     "close": "Close"
+  },
+  "characters": {
+    "aki": "秋葉",
+    "ark": "アルクェイド",
+    "cel": "シエル",
+    "his": "翡翠",
+    "koha": "琥珀",
+    "others": "Others"
   },
   "yes": "Yes",
   "no": "No",

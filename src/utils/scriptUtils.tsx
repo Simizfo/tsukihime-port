@@ -15,7 +15,7 @@ const LOGIC_FILE = 'scene0.txt';
 export async function fetchScene(sceneId: string): Promise<string[] | undefined> {
   if (/^s\d+a?$/.test(sceneId))
     sceneId = `scene${sceneId.substring(1)}`;
-  const script = await fetch(`${strings["scene-dir"]}/${sceneId}.txt`)
+  const script = await fetch(`${strings.scenario["scenes-dir"]}/${sceneId}.txt`)
     .then(
       (response) => response.ok ? response.text() : undefined,
       (_failErr) => undefined);
@@ -27,7 +27,7 @@ export async function fetchScene(sceneId: string): Promise<string[] | undefined>
 }
 
 async function fetchBlock(label: string): Promise<string[]> {
-  const script = await fetch(`${strings["scene-dir"]}/${LOGIC_FILE}`)
+  const script = await fetch(`${strings.scenario["scenes-dir"]}/${LOGIC_FILE}`)
     .then(script => script.text());
 
   let start = script.search(new RegExp(`^\\*${label}\\b`, "m"));

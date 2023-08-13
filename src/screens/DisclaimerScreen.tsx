@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import '../styles/title-menu.scss'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
+import strings from '../utils/lang'
+import { parseBBcode } from '../utils/utils'
 
 const DisclaimerScreen = () => {
   const navigate = useNavigate()
@@ -27,12 +29,7 @@ const DisclaimerScreen = () => {
       >
 
       <div className="box">
-        <p>
-          This is a web version of <i>Tsukihime</i>, a visual novel published on 2000 by Type-Moon.
-        </p>
-        <p>
-          The game contains adult content and is intended for mature audiences only.
-        </p>
+        {strings.disclaimer.map(txt=><p>{parseBBcode(txt)}</p>)}
       </div>
     </motion.div>
   )

@@ -1,7 +1,6 @@
 import { useEffect, useReducer, useState } from "react"
 import { ConfigButtons, ConfigLayout, ResetBtn } from "../ConfigScreen"
 import { defaultSettings, settings } from "../../utils/variables"
-import { IMAGES_FOLDERS, SCENES_FOLDERS } from "../../utils/constants"
 import { addEventListener, deepAssign, isFullscreen, requestJSONs, textFileUserDownload, toggleFullscreen } from "../../utils/utils"
 import { SaveState, clearSaveStates, listSaveStates, restoreSaveStates } from "../../utils/savestates"
 import strings, { languages } from "../../utils/lang"
@@ -83,10 +82,10 @@ const ConfigAdvancedTab = () => {
       <ConfigButtons
         title={strings.config.quality}
         btns={[
-          { text: strings.config["quality-sd"], value: IMAGES_FOLDERS.image },
-          { text: strings.config["quality-hd"], value: IMAGES_FOLDERS.image_x2 },
+          { text: strings.config["quality-sd"], value: 'sd' },
+          { text: strings.config["quality-hd"], value: 'hd' },
         ]}
-        property="imagesFolder"
+        property="resolution"
         conf={conf}
         updateValue={updateValue}
       />

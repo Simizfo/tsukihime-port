@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { RecursivePartial } from "../types"
 
 //##############################################################################
@@ -104,6 +105,7 @@ export function convertText(text: string, props: Record<string, any> = {}): JSX.
 
 function bbcodeTagToJSX({tag: Tag, arg, content}: {tag: string, arg: string, content: JSX.Element[]}) {
   switch(Tag) {
+    case 'br' :
     case 'b' :
     case 'i' :
     case 's' :
@@ -115,7 +117,11 @@ function bbcodeTagToJSX({tag: Tag, arg, content}: {tag: string, arg: string, con
     case 'center':
     case 'left':
     case 'right': return <div style={{textAlign: Tag}}>{...content}</div>
-    case 'url': return <a href={arg}>{...content}</a>
+    case 'url':
+      if (arg.lastIndexOf('.') > arg.lastIndexOf('/'))
+        return <a href={arg} target="_blank">{...content}</a>
+      else
+        return <Link to={arg}>{...content}</Link>
     default :
       throw Error(`Unknown bbcode tag ${Tag}`)
   }
@@ -147,6 +153,7 @@ const bbcodeTagRegex = /(?<!\\)\[(?<tag>\/?\w+)(=(?<arg>[^\]]+))?\]/g
 export function parseBBcode(text: string): JSX.Element {
   const nodes = [{tag:"", arg: "", content:[] as JSX.Element[]}]
   let lastIndex = 0
+  text = text.replaceAll("\n", "[br/]")
   let m
   while(((m = bbcodeTagRegex.exec(text))) !== null) {
     let {tag, arg} = m.groups ?? {}

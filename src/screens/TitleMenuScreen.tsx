@@ -12,6 +12,8 @@ import { blankSaveState, getLastSave, hasSaveStates, loadSaveFiles, loadSaveStat
 import history from '../utils/history'
 import Modal from 'react-modal';
 import { APP_VERSION } from '../utils/constants'
+import strings from '../utils/lang'
+import { parseBBcode } from '../utils/utils'
 
 const TitleMenuScreen = () => {
   const navigate = useNavigate()
@@ -61,35 +63,30 @@ const TitleMenuScreen = () => {
         <div className='title-modal'>
           <div className='links'>
             <div>
-              This is a web version of <i>Tsukihime</i>, a visual novel published on 2000 by Type-Moon.
+              {parseBBcode(strings.title.about.port)}.
             </div>
+            {strings.title.about.translation && <div>
+              {parseBBcode(strings.title.about.translation)}
+            </div>}
 
             <div>
-              English translation by <a href="http://mirrormoon.org/projects/complete/tsukihime/" target="_blank">mirror moon</a>
-            </div>
-
-            <div>
-              Project available on <a href="https://github.com/requinDr/tsukihime-port" target="_blank">Github</a><br />
+              {parseBBcode(strings.title.about.project)} <br/>
               v{APP_VERSION}
             </div>
 
             <div>
-              No data collected, everything is stored in your browser.
-              Manage your data <Link to="/config" state={{ tab: "Advanced" }} >here</Link>
+              {parseBBcode(strings.title.about.data)}
             </div>
           </div>
 
           <div className='tsuki-remake'>
             <img src={tsukiR} alt="tsukihime logo" className="logo"/>
-
-            <span>Support by buying the remake <a href="http://typemoon.com/products/tsukihime/" target="_blank">
-              Tsukime - A piece of blue glass moon
-            </a></span>
+            {parseBBcode(strings.title.about.remake)}
           </div>
         </div>
 
         <button className='menu-btn close-btn' onClick={()=>setShow(false)}>
-          close
+          {strings.title.about.close}
         </button>
       </Modal>
 
@@ -105,25 +102,25 @@ const TitleMenuScreen = () => {
 
       <nav className="menu">
         <button className='menu-item' onClick={newGame}>
-          New Game
+          {strings.title.start}
         </button>
 
         {hasSaveStates() &&
         <button className='menu-item' onClick={continueGame}>
-          Continue
+          {strings.title.resume}
         </button>
         }
 
         <Link to={SCREEN.LOAD} className="menu-item">
-          Load
+          {strings.title.load}
         </Link>
 
         <Link to={SCREEN.CONFIG} className="menu-item">
-          Config
+          {strings.title.config}
         </Link>
 
         <Link to={SCREEN.GALLERY} className="menu-item">
-          Gallery
+          {strings.title.gallery}
         </Link>
       </nav>
 

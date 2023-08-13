@@ -2,11 +2,10 @@ import { useState, memo, Fragment } from "react";
 import { gameContext, settings } from "../utils/variables";
 import { observe, useChildrenObserver, useObserver } from "../utils/Observer";
 import { RouteDayName, RouteName } from "../types";
-import { IMAGES_FOLDERS } from "../utils/constants";
 import { parseBBcode } from "../utils/utils";
 import { findImageObjectByName } from "../utils/gallery";
 import { displayMode } from "../utils/display";
-import strings from "../utils/lang";
+import strings, { imageUrl } from "../utils/lang";
 
 type SpritePos = keyof typeof gameContext.graphics
 const POSITIONS: Array<SpritePos> = Object.keys(gameContext.graphics) as Array<SpritePos>
@@ -200,13 +199,8 @@ function getTransition(type: string, skipTransition = false) {
   return {effect, duration}
 }
 
-function imgUrl(img: string, thumbnail=false) {
-  const folder: string = thumbnail ? IMAGES_FOLDERS.image : settings.imagesFolder
-  return `${folder}/${img}.webp`
-}
-
 export function graphicElement(pos: SpritePos, image: string,
-                                _attrs: Record<string, any> = {}, thumbnail=false) {
+    _attrs: Record<string, any> = {}, resolution=settings.resolution) {
 
   image = image || ((pos=="bg") ? "#000000" : "#00000000")
   const {key, style, ...attrs} = _attrs
@@ -231,7 +225,7 @@ export function graphicElement(pos: SpritePos, image: string,
           <span className="phase-title">{_phaseTitle}</span><br/>
           {_dayTitle && <span className="phase-day">{_dayTitle}</span>}
       </> : !isColor &&
-        <img src={imgUrl(image, thumbnail)} alt={`[[sprite:${image}]]`}
+        <img src={imageUrl(image, resolution)} alt={`[[sprite:${image}]]`}
           className={findImageObjectByName(image)?.sensitive && settings.blurThumbnails ? "blur" : ""}
           {...attrs}
           style={style}
@@ -243,12 +237,12 @@ export function graphicElement(pos: SpritePos, image: string,
 
 export function graphicElements(images: Partial<Record<SpritePos, string>>,
                           attrs?: Partial<Record<SpritePos, Record<string,any>>>|
-                                  ((pos:SpritePos)=>Record<string,any>), thumbnail=false) {
+                                  ((pos:SpritePos)=>Record<string,any>), resolution=settings.resolution) {
   return POSITIONS.map(pos => images[pos] && graphicElement(pos,
     images[pos] as string, {
       key: images[pos]||pos,
       ...(typeof attrs == 'function' ? attrs(pos) : attrs?.[pos] ?? {})
-    }, thumbnail))
+    }, resolution))
 }
 
 //##############################################################################
@@ -339,8 +333,8 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
                 key: `mask${prevImages[pos]}`,
                 'for-mask': "",
                 style: {
-                  '--from-image': `url(${imgUrl(prevImages[pos])})`,
-                  '--to-image': `url(${imgUrl(currImages[pos])})`
+                  '--from-image': `url(${imageUrl(prevImages[pos])})`,
+                  '--to-image': `url(${imageUrl(currImages[pos])})`
                 }
               })}
             {prevImages[pos] && graphicElement(pos, prevImages[pos], {

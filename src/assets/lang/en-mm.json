@@ -1,9 +1,9 @@
 {
   "locale": "en-US",
-  "scene-dir": "./scenes/english",
   "translation-name": "mirror moon",
 
   "scenario": {
+    "scenes-dir": "./scenes/english",
     "days": [
       "[i]1[sup]st[/sup] day | October 21 (Thur.)",
       "[i]2[sup]nd[/sup] day | October 22 (Fri.)",
@@ -102,22 +102,29 @@
     },
 
     "scenes": {
-      "openning": {"title": "Prologue - Glass Moon"},
-      "eclipse": {"title": "Epilogue"},
-      "ending": {"title": "Credits"}
+      "openning": {"title": "[b][i]Prologue - Glass Moon"},
+      "eclipse": {"title": "[b][i]Epilogue"},
+      "ending": {"title": "[b][i]Credits"}
     },
 
     "dead-end": "Dead end",
     "osiete": "Ciel's lesson"
   },
-
+  "images": {
+    "redirect-ids": {
+      "en-mm": {"sd":"image-en/$.webp", "hd": "image-en_x2/$.webp"}
+    },
+    "redirected-images": {
+      "tachi/osiete": "en-mm"
+    }
+  },
   "disclaimer": [
     "This is a web version of [i]Tsukihime[/i], a visual novel published on 2000 by Type-Moon.",
     "The game contains adult content and is intended for mature audiences only."
   ],
   "title": {
     "start": "New Game",
-    "resul": "Continue",
+    "resume": "Continue",
     "load": "Load",
     "config": "Config",
     "gallery": "Gallery",
@@ -126,7 +133,8 @@
       "translation": "English translation by [url='http://mirrormoon.org/projects/complete/tsukihime/']mirror moon[/url]",
       "project": "Project available on [url='https://github.com/requinDr/tsukihime-port']Github[/url]",
       "data": "No data collected, everything is stored in your browser. Manage your data [url='/config?tab=Advanced']here[/url]",
-      "remake": "Support by buying the remake [url='http://typemoon.com/products/tsukihime/']Tsukihime - A piece of blue glass moon[/url]"
+      "remake": "Support by buying the remake [url='http://typemoon.com/products/tsukihime/']Tsukihime - A piece of blue glass moon[/url]",
+      "close": "close"
     }
   },
   "config": {
@@ -142,8 +150,8 @@
     "volume-se": "SFX volume",
     "ratio": "Display ratio",
     "ratio-auto": "Auto",
-    "ratio-4-3": "4/3",
-    "ratio-16-9": "16/9",
+    "ratio-4-3": "4:3",
+    "ratio-16-9": "16:9",
     "text-speed": "Text display speed",
     "text-speed-low": "Slow",
     "text-speed-med": "Medium",
@@ -204,7 +212,21 @@
     "load": "Load",
     "auto-play": "Auto-Play",
     "ffw": "Fast forward",
-    "title": "Title"
+    "title": "Title",
+    "q-save": "Q. save",
+    "q-load": "Q. load"
+  },
+  "history": {
+    "load": "Load",
+    "close": "Close"
+  },
+  "characters": {
+    "aki": "Akiha",
+    "ark": "Arcueid",
+    "cel": "Ciel",
+    "his": "Hisui",
+    "koha": "Kohaku",
+    "others": "Others"
   },
   "yes": "Yes",
   "no": "No",

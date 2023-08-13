@@ -50,9 +50,3 @@ export type LabelName = SceneName |
 export type NumVarName = `%${string}`
 export type StrVarName = `$${string}`
 export type VarName = NumVarName | StrVarName
-
-export type GalleryImg = {
-  img: string,
-  sensitive: boolean
-  src?: string
-}

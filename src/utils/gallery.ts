@@ -1,16 +1,8 @@
-import { GalleryImg } from "../types";
 
-export enum CHARACTERS {
-  arcueid = "Arcueid",
-  ciel = "Ciel",
-  akiha = "Akiha",
-  kohaku = "Kohaku",
-  hisui = "Hisui",
-  others = "Others",
-}
-
+type CharacterId = keyof typeof GALLERY_IMAGES
+export type GalleryImg = {img: string, sensitive: boolean}
 export const GALLERY_IMAGES = {
-  arcueid: [
+  ark: [
     {img: "ark_e01", sensitive: false},
     {img: "ark_e02", sensitive: false},
     {img: "ark_e03", sensitive: false},
@@ -40,8 +32,8 @@ export const GALLERY_IMAGES = {
     {img: "ark_h11", sensitive: true},
     {img: "ark_h12", sensitive: true},
     {img: "ark_h13", sensitive: true}
-  ],
-  ciel: [
+  ] as GalleryImg[],
+  cel: [
     {img: "cel_e01", sensitive: false},
     {img: "cel_e02a", sensitive: false},
     {img: "cel_e02b", sensitive: false},
@@ -79,8 +71,8 @@ export const GALLERY_IMAGES = {
     {img: "cel_h10", sensitive: true},
     {img: "cel_h11a", sensitive: true},
     {img: "cel_h11b", sensitive: true}
-  ],  
-  akiha: [
+  ] as GalleryImg[],  
+  aki: [
     {img: "aki_e01", sensitive: false},
     {img: "aki_e01b", sensitive: false},
     {img: "aki_e02", sensitive: false},
@@ -111,8 +103,8 @@ export const GALLERY_IMAGES = {
     {img: "aki_h13", sensitive: true},
     {img: "aki_h14", sensitive: false},
     {img: "aki_h15", sensitive: true}
-  ],  
-  kohaku: [
+  ] as GalleryImg[],  
+  koha: [
     {img: "koha_e01a", sensitive: false},
     {img: "koha_e01b", sensitive: false},
     {img: "koha_e02", sensitive: false},
@@ -138,8 +130,8 @@ export const GALLERY_IMAGES = {
     {img: "koha_h10", sensitive: true},
     {img: "koha_h10b", sensitive: true},
     {img: "koha_h11", sensitive: true}
-  ],  
-  hisui: [
+  ] as GalleryImg[],  
+  his: [
     {img: "his_e01", sensitive: false},
     {img: "his_e01b", sensitive: false},
     {img: "his_e02", sensitive: false},
@@ -174,7 +166,7 @@ export const GALLERY_IMAGES = {
     {img: "his_h14", sensitive: true},
     {img: "his_h15", sensitive: true},
     {img: "his_h16", sensitive: true}
-  ],  
+  ] as GalleryImg[],  
   others: [
     {img: "ao_01", sensitive: false},
     {img: "ao_02", sensitive: false},
@@ -186,7 +178,7 @@ export const GALLERY_IMAGES = {
     {img: "stk_e01d", sensitive: false},
     {img: "stk_e02", sensitive: false},
     {img: "stk_e03", sensitive: false}
-  ]  
+  ] as GalleryImg[]
 }
 
 // Function to find an image object in the GALLERY_IMAGES object based on a partial image name
@@ -194,7 +186,7 @@ export function findImageObjectByName(imageName: string): GalleryImg | undefined
   for (const characterKey in GALLERY_IMAGES) {
     if (GALLERY_IMAGES.hasOwnProperty(characterKey)) {
       const characterImages = GALLERY_IMAGES[characterKey as keyof typeof GALLERY_IMAGES];
-      const foundImage = characterImages.find((imgObj: GalleryImg) => imageName.includes(imgObj.img))
+      const foundImage = characterImages.find((imgObj) => imageName.includes(imgObj.img))
       if (foundImage) {
         return foundImage
       }

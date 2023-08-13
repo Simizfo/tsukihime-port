@@ -1,37 +1,35 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Fancybox from "../components/Fancybox"
 import '../styles/gallery.scss'
 import { settings } from '../utils/variables'
 import { motion } from 'framer-motion'
-import { CHARACTERS, GALLERY_IMAGES } from '../utils/gallery'
-import { GalleryImg } from '../types'
+import { GALLERY_IMAGES, GalleryImg } from '../utils/gallery'
 import TabBtn from '../components/TabBtn'
+import strings, { imageUrl } from '../utils/lang'
 
-const defaultImg = `${import.meta.env.BASE_URL}image/notreg.webp`
+type CharacterId = keyof typeof GALLERY_IMAGES
+type GalleryItem = GalleryImg & {src_sd: string, src_hd: string}
 
 const GalleryScreen = () => {
-  const [selected, setSelected] = useState<CHARACTERS>(CHARACTERS.arcueid)
-  const [images, setImages] = useState<any[]>([])
+  const [selected, setSelected] = useState<CharacterId>("ark")
+  const [images, setImages] = useState<GalleryItem[]>([])
+  const [defaultThumbnail] = useState(imageUrl("notreg"))
+  const containerRef = useRef<HTMLDivElement>()
 
   useEffect(()=> {
-    let imagesTmp: any[] = []
-    switch(selected) {
-      case CHARACTERS.arcueid: imagesTmp = GALLERY_IMAGES.arcueid; break
-      case CHARACTERS.ciel   : imagesTmp = GALLERY_IMAGES.ciel   ; break
-      case CHARACTERS.akiha  : imagesTmp = GALLERY_IMAGES.akiha  ; break
-      case CHARACTERS.kohaku : imagesTmp = GALLERY_IMAGES.kohaku ; break
-      case CHARACTERS.hisui  : imagesTmp = GALLERY_IMAGES.hisui  ; break
-      case CHARACTERS.others : imagesTmp = GALLERY_IMAGES.others ; break
-      default : throw Error(`unknown character ${selected}`)
-    }
+    let imagesTmp: any[] = GALLERY_IMAGES[selected]
+    if( imagesTmp == undefined)
+      throw Error(`unknown character ${selected}`)
     
     imagesTmp = imagesTmp.map((image: GalleryImg) => {
-      const src = settings.eventImages.includes(`event/${image.img}`)
-                  ? `/${settings.imagesFolder}/event/${image.img}.webp`
-                  : defaultImg
-      return {...image, src: src}
+      const name = `event/${image.img}`
+      const [sd, hd] = settings.eventImages.includes(name)
+                  ? [imageUrl(name, 'sd'), imageUrl(name, 'hd')]
+                  : [defaultThumbnail, undefined]
+
+      return {...image, src_sd: sd, src_hd: hd}
     })
 
     setImages(imagesTmp)
@@ -46,11 +44,11 @@ const GalleryScreen = () => {
       animate={{opacity: 1}}
       exit={{opacity: 0}}>
       <div className="page-content">
-        <h2 className="page-title">Gallery</h2>
+        <h2 className="page-title">{strings.title.gallery}</h2>
         <main>
           <div className="tabs">
-            {Object.values(CHARACTERS).map(character =>
-              <TabBtn key={character} text={character}
+            {(Object.keys(GALLERY_IMAGES) as Array<CharacterId>).map(character =>
+              <TabBtn key={character} text={strings.characters[character]}
                 active={selected === character}
                 onClick={() => setSelected(character)} />
             )}
@@ -61,14 +59,14 @@ const GalleryScreen = () => {
               Thumbs: false,
               Toolbar: false,
             }}>
-            {images.map((image: GalleryImg) =>
+            {images.map(({src_hd, src_sd, ...image}) =>
               <React.Fragment key={image.img}>
-                {image.src === defaultImg ?
-                  <img src={image.src} alt="event" />
+                {src_sd === defaultThumbnail ?
+                  <img src={src_sd} alt="event" />
                 :
-                  <a href={image.src} data-fancybox="gallery"
+                  <a href={src_hd} data-fancybox="gallery"
                     className={image.sensitive && settings.blurThumbnails ? 'blur' : ''}>
-                    <img src={`${import.meta.env.BASE_URL}image/event/${image.img}.webp`} alt="event" />
+                    <img src={src_sd} alt="event" />
                   </a>
                 }
               </React.Fragment>
@@ -76,7 +74,7 @@ const GalleryScreen = () => {
           </Fancybox>
         </main>
 
-        <Link to="/title" className="menu-btn back-button">Back</Link>
+        <Link to="/title" className="menu-btn back-button">{strings.back}</Link>
       </div>
     </motion.div>
   )

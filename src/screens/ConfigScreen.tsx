@@ -84,7 +84,7 @@ interface ConfigButtonsProps {
   title: string
   btns: { text: string; value: any }[]
   property: string
-  conf: any
+  conf: Record<string, any>
   updateValue: (key: any, value: any) => void
 }
 /** Display multiples options to choose from */

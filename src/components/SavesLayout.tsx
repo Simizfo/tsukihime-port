@@ -51,7 +51,7 @@ const SaveListItem = ({id, saveState, onSelect, ...props}: SaveListItemProps)=> 
         {...(id==QUICK_SAVE_ID ? {'quick-save':''} : {})}
         {...props}>
       <div className="graphics">
-        {graphicElements(saveState.graphics ?? saveState.context.graphics, {}, true)}
+        {graphicElements(saveState.graphics ?? saveState.context.graphics, {}, 'sd')}
       </div>
       <div className="deta">
         <div className="date">
@@ -72,7 +72,7 @@ const SaveDetails = ({id, saveState, deleteSave, ...props}: SaveDetailsProps)=> 
   return (
     <div className="info" {...props}>
       <div className="graphics">
-        {graphicElements(saveState?.graphics ?? saveState?.context.graphics ?? {bg:"notreg"}, {}, true)}
+        {graphicElements(saveState?.graphics ?? saveState?.context.graphics ?? {bg:"notreg"}, {}, 'sd')}
       </div>
       {id != undefined && saveState != undefined &&
         <div className="deta">
