@@ -392,22 +392,28 @@ function warnHScene() {
 function onSceneStart() {
   const label = gameContext.label as SceneName
   if (settings.enableSceneSkip && settings.completedScenes.includes(label)) {
-    currentCommand = {
-      next: ()=>{},
-      cancel: skipCancelCallback
+    if (currentCommand) {
+      cancelCurrentCommand()
+      setTimeout(onSceneStart, 0) // wait for the cancel to complete
     }
-    skipCallback(getSceneTitle(label), async skip=> {
-      if (skip) {
-        history.onPageBreak("skip", label)
-        onSceneEnd(label)
-      } else {
-        // check if context was changed while asking user
-        if (label == gameContext.label) {
-          gameContext.index = 0
-          fetchSceneLines()
-        }
+    else {
+      currentCommand = {
+        next: ()=>{},
+        cancel: skipCancelCallback
       }
-    })
+      skipCallback(getSceneTitle(label), async skip=> {
+        if (skip) {
+          history.onPageBreak("skip", label)
+          onSceneEnd(label)
+        } else {
+          // check if context was changed while asking user
+          if (label == gameContext.label) {
+            gameContext.index = 0
+            fetchSceneLines()
+          }
+        }
+      })
+    }
   } else {
     if (settings.warnHScenes && SCENE_ATTRS.scenes[label]?.h)
       warnHScene()
