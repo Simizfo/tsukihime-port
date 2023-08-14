@@ -39,7 +39,7 @@ const PageElement = memo(({saveState, onLoad}: {saveState: SaveState, onLoad: (s
       const {scene} = content as PageContent<"skip">
       const sceneTitle = getSceneTitle(scene)??""
       displayContent = <span className='skip'>
-        Skipped scene {bb(sceneTitle)}
+        {bb(strings.history.skipped.replace('$0', sceneTitle))}
       </span>
       break
     case "phase" :

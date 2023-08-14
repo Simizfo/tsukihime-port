@@ -219,7 +219,8 @@
   },
   "history": {
     "load": "Load",
-    "close": "Close"
+    "close": "Close",
+    "skipped": "Skipped scene $0."
   },
   "characters": {
     "aki": "Akiha",
