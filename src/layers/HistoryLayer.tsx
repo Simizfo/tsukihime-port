@@ -8,7 +8,6 @@ import script from '../utils/script';
 import strings, { dayTitle, phaseTitle } from '../utils/lang';
 import { PageContent, RouteDayName } from '../types';
 import { getSceneTitle } from '../utils/scriptUtils';
-import { defaultGameContext, gameContext } from '../utils/variables';
 
 const PageElement = memo(({saveState, onLoad}: {saveState: SaveState, onLoad: (ss: SaveState)=>void})=> {
   if (saveState.page == undefined)
@@ -43,10 +42,10 @@ const PageElement = memo(({saveState, onLoad}: {saveState: SaveState, onLoad: (s
       </span>
       break
     case "phase" :
-      const {route, routeDay, day} = deepAssign(defaultGameContext.phase, saveState.context.phase ?? {}, {clone: true})
+      const {route, routeDay, day} = saveState.context.phase ?? {}
       displayContent = <span className='phase'>
         {route && phaseTitle(route, routeDay as RouteDayName)}
-        {day > 0 && <><br/>{dayTitle(day)}</>}
+        {!!(day) && <><br/>{dayTitle(day)}</>}
       </span>
       break
     default :
