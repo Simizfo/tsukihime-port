@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useReducer } from 'react'
 import { Link } from 'react-router-dom'
 import tsukiLogo from "../assets/game/menus/tsukihime-logo.webp"
 import tsukiR from "../assets/game/menus/Tsukihime_blue_glass_cover.webp"
@@ -15,10 +15,13 @@ import { APP_VERSION } from '../utils/constants'
 import strings from '../utils/lang'
 import { bb } from '../utils/utils'
 import { RxExternalLink } from 'react-icons/rx'
+import { useObserver } from '../utils/Observer'
 
 const TitleMenuScreen = () => {
   const navigate = useNavigate()
   const [show, setShow] = useState(false)
+  const [_updateNum, forceUpdate] = useReducer(x => (x + 1) % 100, 0);
+  useObserver(forceUpdate, strings, 'translation-name')
 
   useEffect(()=> {
     displayMode.screen = SCREEN.TITLE
