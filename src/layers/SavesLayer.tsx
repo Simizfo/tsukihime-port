@@ -15,12 +15,13 @@ const SavesLayer = () => {
   const [variant, setVariant] = useState(displayMode.savesVariant as Exclude<typeof displayMode.savesVariant, "">)
   const rootRef = useRef<HTMLDivElement>(null)
 
-  useObserver(setVariant, displayMode, "savesVariant", {filter: (v)=> v != ""})
-  useObserver(setDisplay, displayMode, "saveScreen")
-  useObserver(()=> {
-    if (rootRef.current?.contains(document.activeElement))
-      (document.activeElement as HTMLElement).blur?.();
-  }, displayMode, "saveScreen", {filter: (d)=> !d})
+  useObserver((display)=> {
+    setDisplay(display)
+    if (display)
+      setVariant(displayMode.savesVariant as "save"|"load")
+    else if (rootRef.current?.contains(document.activeElement))
+      (document.activeElement as HTMLElement).blur?.()
+  }, displayMode, "saveScreen")
 
   useEffect(() => {
     const handleContextMenu = (_e: MouseEvent) => {

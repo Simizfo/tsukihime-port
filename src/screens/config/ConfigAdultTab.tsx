@@ -8,7 +8,7 @@ const ConfigAdultTab = () => {
   const [conf, setConf] = useState(deepAssign({
     blurThumbnails: undefined,
     warnHScenes: undefined,
-  }, settings, {createMissing: false}))
+  }, settings, {extend: false}))
 
   useEffect(()=> {
     deepAssign(settings, conf)
@@ -44,7 +44,7 @@ const ConfigAdultTab = () => {
       />
 
       <ResetBtn onClick={() => {
-        const defaultConf = deepAssign(structuredClone(conf), defaultSettings, {createMissing: false})
+        const defaultConf = deepAssign(structuredClone(conf), defaultSettings, {extend: false})
         setConf(defaultConf)
       }} />
     </section>

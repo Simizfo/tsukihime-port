@@ -31,8 +31,13 @@ export type KeysMatching<T extends object, V> = {
   [K in keyof T]-?: T[K] extends V ? K : never
 }[keyof T];
 
-export type RecursivePartial<T> = {
+export type RecursivePartial<T> = T|{
   [P in keyof T]?: RecursivePartial<T[P]>
+}
+
+export type JSONPrimitive = string|number|boolean|null
+export type JSONObject = {
+  [key:string]: JSONPrimitive|JSONObject|Array<JSONPrimitive|JSONObject>
 }
 
 export type Digit = '0'|'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'

@@ -15,7 +15,7 @@ const ConfigMainTab = () => {
     fixedRatio: undefined,
     autoClickDelay: undefined,
     nextPageDelay: undefined,
-  }, settings, {createMissing: false}))
+  }, settings, {extend: false}))
 
   useEffect(()=> {
     deepAssign(settings, conf)
@@ -131,7 +131,7 @@ const ConfigMainTab = () => {
       </ConfigLayout>
 
       <ResetBtn onClick={() => {
-        const defaultConf = deepAssign(structuredClone(conf), defaultSettings, {createMissing: false})
+        const defaultConf = deepAssign(structuredClone(conf), defaultSettings, {extend: false})
         setConf(defaultConf)
       }} />
     </section>

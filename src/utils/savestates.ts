@@ -1,10 +1,11 @@
-import { deepAssign, requestJSONs, textFileUserDownload } from "./utils";
+import { TSForceType, deepAssign, jsonDiff, requestJSONs, textFileUserDownload } from "./utils";
 import { defaultGameContext, defaultProgress, gameContext, progress } from "./variables";
 import history from './history';
 import { toast } from "react-toastify";
 import { FaSave } from "react-icons/fa"
 import { notifyObservers } from "./Observer";
 import { SAVE_EXT } from "./constants";
+import { RecursivePartial } from "../types";
 
 //##############################################################################
 //#                                 SAVESTATES                                 #
@@ -13,10 +14,10 @@ import { SAVE_EXT } from "./constants";
 const STORAGE_KEY = "savestates"
 
 export type SaveState = {
-  context: typeof gameContext;
-  progress: typeof progress;
+  context: RecursivePartial<typeof gameContext>;
+  progress: RecursivePartial<typeof progress>;
   text?: string;
-  graphics?: typeof gameContext.graphics;
+  graphics?: RecursivePartial<typeof gameContext.graphics>;
   date?: number;
 }
 
@@ -57,8 +58,8 @@ export function restoreSaveStates(keyValuePairs: Iterable<[SaveStateId, SaveStat
  */
 export function createSaveState() {
   const ss: SaveState = {
-    context: deepAssign({}, gameContext) as typeof gameContext,
-    progress: deepAssign({}, progress) as typeof progress
+    context: jsonDiff(gameContext, defaultGameContext),
+    progress: jsonDiff(progress, defaultProgress)
   }
   return ss
 }
@@ -87,7 +88,7 @@ export function storeCurrentState(id: SaveStateId) {
   if (!ss)
     return false
   ss.text = history.last.text.trim()
-  ss.graphics = deepAssign({}, gameContext.graphics)
+  ss.graphics = jsonDiff(gameContext.graphics, defaultGameContext.graphics)
   storeSaveState(id, ss)
   return true
 }
@@ -144,9 +145,12 @@ export function loadSaveState(ss: SaveStateId | SaveState) {
     }
   }
   if (ss) {
-    history.onSaveStateLoaded(ss as SaveState)
-    deepAssign(gameContext, (ss as SaveState).context)
-    deepAssign(progress, (ss as SaveState).progress)
+    TSForceType<SaveState>(ss)
+    history.onSaveStateLoaded(ss)
+    const ctx = deepAssign(defaultGameContext, ss.context, {clone: true})
+    const pgr = deepAssign(defaultProgress, ss.progress, {clone: true})
+    deepAssign(gameContext, ctx)
+    deepAssign(progress, pgr)
 
     // force re-processing current line if the index is unchanged
     notifyObservers(gameContext, 'index')
@@ -212,7 +216,7 @@ export function getLastSave(): SaveState {
     (ss1, ss2)=>(ss1.date ?? 0) > (ss2.date ?? 0) ? ss1 : ss2)
 }
 
-export function blankSaveState() : SaveState {
+export function blankSaveState() : Readonly<SaveState> {
   return {
     context: defaultGameContext,
     progress: defaultProgress

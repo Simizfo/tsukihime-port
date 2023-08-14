@@ -93,7 +93,7 @@ const TextLayer = memo(({...props}: Props) => {
   const [ previousText, setPreviousText ] = useState<string[]>([]) // lines to display entirely
   const [ newText, setNewText ] = useState<string>("") // line to display gradually
   const [ cursor, setCursor ] = useState<number>(0) // position of the cursor on the last line.
-  const [ glyph, setGlyph ] = useState<'moon'|'page'|''>('') // id of the animated glyph to display at end of line
+  const [ glyph, setGlyph ] = useState<'moon'|'page'>() // id of the animated glyph to display at end of line
 
   const [ display, setDisplay ] = useState<boolean>(displayMode.text)
 

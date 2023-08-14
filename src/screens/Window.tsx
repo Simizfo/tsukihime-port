@@ -120,7 +120,7 @@ function back() {
 function canDisableGraphics() {
   return script.isCurrentLineText() ||
          script.currentLine.startsWith("select") ||
-         script.currentLine.startsWith("gosub")
+         script.currentLine.match(/gosub\s+\*(?!(left|right))/)
 }
 function next() {
   if (isViewAnyOf("text", "graphics")) {

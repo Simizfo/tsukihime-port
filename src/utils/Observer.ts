@@ -31,6 +31,8 @@ class PropertyObserver<V> {
             throw Error(`property ${property.toString()} is not a direct property of object ${parent}`)
         if (!(descriptor.configurable && (descriptor.writable??true)))
             throw Error(`property ${property.toString()} of ${parent} must be configurable and writable to be observed`)
+        if ((descriptor.get != undefined) != (descriptor.set != undefined))
+            throw Error(`property ${property.toString()} of ${parent} must be writeable and readable`)
 
         this.originalDescriptor = descriptor
         this.changed = false
@@ -273,7 +275,7 @@ export function isObserverNotifyPending<T extends Observable>(object: T, propert
  *        If it returns false, the callback function is not called
  */
 export function observeChildren<T extends Object>(parent: T, attr: keyof T,
-        callback: (prop: PropertyKey, value: any)=>void,
+        callback: (prop: keyof T, value: T[keyof T])=>void,
         options: ChildrenObserverOptions<T> = {}) {
     if (!(callbacksSymbol in parent[attr])) {
         parent[attr] = new ObservableContainer(parent[attr]) as any
@@ -283,7 +285,7 @@ export function observeChildren<T extends Object>(parent: T, attr: keyof T,
 }
 
 export function unobserveChildren<T extends Object>(parent: T, attr: keyof T,
-        callback: (prop: PropertyKey, value: any)=>void): boolean {
+        callback: (prop: keyof T, value: T[keyof T])=>void): boolean {
     const callbacks = parent[attr][callbacksSymbol as keyof ObservableContainer<T>] as ChildrenListener<T>[]
     const index = callbacks?.findIndex(listener=> listener.callback = callback)??-1
     if (index == -1)
@@ -295,7 +297,7 @@ export function unobserveChildren<T extends Object>(parent: T, attr: keyof T,
 }
 
 export function useObserver<T extends Observable, P extends keyof T>(
-        callback:ObserverCallback, object: T|ObservableContainer<T>, property: P,
+        callback:ObserverCallback<T[P]>, object: T|ObservableContainer<T>, property: P,
         options: ObserverOptions<T[P]> = {}) {
     useEffect(()=> {
         observe(object as T, property, callback, options)
@@ -304,10 +306,10 @@ export function useObserver<T extends Observable, P extends keyof T>(
 }
 
 export function useChildrenObserver<T extends Object>(
-        callback: (prop: PropertyKey, value: any)=>void, parent: T, attr: keyof T,
+        callback: (prop: keyof T, value: T[keyof T])=>void, parent: T, attr: keyof T,
         options: ChildrenObserverOptions<T> = {}) {
     useEffect(()=> {
         observeChildren(parent, attr, callback, options)
-        return unobserveChildren.bind(null, parent, attr as any, callback) as VoidFunction
+        return unobserveChildren.bind(null, parent, attr as any, callback as any) as VoidFunction
     }, [])
 }

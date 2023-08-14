@@ -1,17 +1,18 @@
 import { useEffect, useReducer, useState } from "react"
 import { ConfigButtons, ConfigLayout, ResetBtn } from "../ConfigScreen"
 import { defaultSettings, settings } from "../../utils/variables"
-import { addEventListener, deepAssign, isFullscreen, requestJSONs, textFileUserDownload, toggleFullscreen } from "../../utils/utils"
+import { addEventListener, deepAssign, isFullscreen, jsonDiff, requestJSONs, textFileUserDownload, toggleFullscreen } from "../../utils/utils"
 import { SaveState, clearSaveStates, listSaveStates, restoreSaveStates } from "../../utils/savestates"
 import strings, { languages } from "../../utils/lang"
 import { useObserver } from "../../utils/Observer"
+import { RecursivePartial } from "../../types"
 
 function twoDigits(n: number) {
   return n.toString().padStart(2, '0')
 }
 
 type Savefile = {
-  settings: typeof settings,
+  settings: RecursivePartial<typeof settings>,
   saveStates?: [number, SaveState][],
 }
 
@@ -20,7 +21,7 @@ const ConfigAdvancedTab = () => {
   const [conf, setConf] = useState(deepAssign({
     imagesFolder: undefined,
     language: undefined,
-  }, settings, {createMissing: false}))
+  }, settings, {extend: false}))
 
   const [_updateNum, forceUpdate] = useReducer(x => (x + 1) % 100, 0);
   useObserver(forceUpdate, strings, 'translation-name')
@@ -44,7 +45,7 @@ const ConfigAdvancedTab = () => {
 
   const exportData = () => {
     const content: Savefile = {
-      settings: deepAssign({}, settings),
+      settings: jsonDiff(settings, defaultSettings),
       saveStates: listSaveStates(),
     }
     const date = new Date()
@@ -59,7 +60,8 @@ const ConfigAdvancedTab = () => {
     const json = (await requestJSONs({accept: '.thfull'}) as Savefile[])?.[0] as Savefile|undefined
     if (!json)
       return
-    deepAssign(settings, json.settings)
+    const importedSettings = deepAssign(defaultSettings, json.settings, {clone: true})
+    deepAssign(settings, importedSettings)
     if (json.saveStates != undefined) {
       clearSaveStates()
       restoreSaveStates(json.saveStates)
@@ -131,7 +133,7 @@ const ConfigAdvancedTab = () => {
       </ConfigLayout>
 
       <ResetBtn onClick={() => {
-        const defaultConf = deepAssign(structuredClone(conf), defaultSettings, {createMissing: false})
+        const defaultConf = deepAssign(structuredClone(conf), defaultSettings, {extend: false})
         setConf(defaultConf)
       }} />
     </section>

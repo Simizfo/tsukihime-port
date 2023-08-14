@@ -3,7 +3,7 @@ import { observe, observeChildren } from "./Observer"
 import { TEXT_SPEED } from "./constants"
 import { LangCode, LangFile } from "./lang"
 import Timer from "./timer"
-import { deepFreeze, objectMatch, deepAssign } from "./utils"
+import { deepFreeze, objectMatch, deepAssign, jsonDiff, objectsEqual } from "./utils"
 
 //##############################################################################
 //#                           APP-RELATED VARIABLES                            #
@@ -24,7 +24,7 @@ export const defaultSettings = deepFreeze({
   font: "Ubuntu", // [not implemented]
   textPanelOpacity: 0.5, // [not implemented]
   resolution: "hd" as keyof LangFile["images"]["redirect-ids"][string],
-  language: "en-mm" as LangCode, // [not implemented]
+  language: "en-mm" as LangCode,
   fixedRatio: ViewRatio.unconstrained,
   // H-related settings
   blurThumbnails: true,
@@ -41,23 +41,23 @@ export const defaultSettings = deepFreeze({
 })
 
 // load from file
-const savedSettings = (()=> {
-  const result = structuredClone(defaultSettings)
+let savedSettings = (()=>{
   const fileContent = localStorage.getItem(SETTINGS_STORAGE_KEY)
   if (fileContent && fileContent.length > 0)
-    deepAssign(result, JSON.parse(fileContent))
-  return result
+    return JSON.parse(fileContent)
+  else return {}
 })()
+export const settings = deepAssign(defaultSettings, savedSettings, {clone: true})
 // deep-copy savedSettings
-export const settings = structuredClone(savedSettings)
 
 const savePostPoneTimer = new Timer(0, saveSettings)
 
 function saveSettings() {
   savePostPoneTimer.cancel()
-  if (!objectMatch(savedSettings, settings, false)) {
-    settings.completedScenes.sort()
-    deepAssign(savedSettings, settings)
+  settings.completedScenes.sort()
+  const diff = jsonDiff(settings, defaultSettings)
+  if (!objectsEqual(diff, savedSettings, false)) {
+    savedSettings = diff
     localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(savedSettings))
   }
 }

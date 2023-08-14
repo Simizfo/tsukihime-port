@@ -1,6 +1,6 @@
 import { ChangeEvent, useEffect, useState } from "react"
 import { SCREEN, displayMode } from "../utils/display"
-import { convertText, bb } from "../utils/utils"
+import { convertText, bb, TSForceType } from "../utils/utils"
 import { SceneName } from "../types";
 import { SAVE_EXT } from "../utils/constants";
 import { SaveState, QUICK_SAVE_ID, deleteSaveState, getSaveState, listSaveStates, loadSaveState, storeCurrentState, addSavesChangeListener, removeSavesChangeListener, exportSave, loadSaveFiles } from "../utils/savestates";
@@ -25,14 +25,15 @@ function compareSaveStates([id1, ss1]: [number, SaveState], [id2, ss2]: [number,
 function phaseTitle(saveState: SaveState) {
   const context = saveState.context
   const phase = context.phase
-  if (phase.route == "" || phase.routeDay == "") {
+  if (!phase || !phase.route || !phase.routeDay) {
     return bb(getSceneTitle(context.label as SceneName) ?? "")
   }
   return bb(strings.scenario.routes[phase.route][phase.routeDay])
 }
 
 function phaseDay(saveState: SaveState) {
-  return bb(strings.scenario.days[saveState.context.phase.day])
+  const day = saveState.context.phase?.day
+  return (day) ? bb(strings.scenario.days[day-1]) : ""
 }
 
 //##############################################################################
@@ -51,7 +52,7 @@ const SaveListItem = ({id, saveState, onSelect, ...props}: SaveListItemProps)=> 
         {...(id==QUICK_SAVE_ID ? {'quick-save':''} : {})}
         {...props}>
       <div className="graphics">
-        {graphicElements(saveState.graphics ?? saveState.context.graphics, {}, 'sd')}
+        {graphicElements(saveState.graphics ?? saveState.context.graphics ?? {bg: ""}, {}, 'sd')}
       </div>
       <div className="deta">
         <div className="date">

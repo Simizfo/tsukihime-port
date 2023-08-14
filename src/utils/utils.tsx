@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { RecursivePartial } from "../types"
+import { JSONObject, JSONPrimitive, RecursivePartial } from "../types"
 
 //##############################################################################
 //#                            OBJECTS MANIPULATION                            #
@@ -29,51 +29,77 @@ export function objectsEqual(obj1: Record<PropertyKey, any>, obj2: Record<Proper
 	return objectMatch(obj1, obj2, useSymbols) && objectMatch(obj2, obj1, useSymbols)
 }
 
-const primitiveTypes = [String, Number, BigInt, Symbol, Boolean, null, undefined]
+const primitiveTypes = [String, Number, BigInt, Symbol, Boolean, null, undefined] as Array<Function|null|undefined>
 
+function isPrimitive(v: any) : v is string|number|BigInt|Symbol|boolean|null|undefined {
+  return primitiveTypes.includes(v?.constructor)
+}
+export function deepAssign<Td extends Record<string,any>, Ts extends Td>(dest: Readonly<Td>, src: Readonly<Ts>,
+  opts: {extend?: true, morphTypes?: true, clone: true}): Ts
+export function deepAssign<Td extends Record<string,any>, Ts extends RecursivePartial<Td>>(dest: Readonly<Td>, src: Readonly<Ts>,
+  opts: {extend?: boolean, morphTypes?: boolean, clone: true}): Td
 export function deepAssign<Td extends Record<string,any>, Ts extends Td>(dest: Td, src: Readonly<Ts>,
-  opts?: {createMissing?: true, morphTypes?: true}): Ts; // Td ⊂ Ts
+  opts?: {extend?: true, morphTypes?: true, clone?: false}): Ts; // Td ⊂ Ts
 export function deepAssign<Td extends Record<string, any>, Ts = RecursivePartial<Td>>(dest: Td, src: Readonly<Ts>,
-  opts?: {createMissing?: true, morphTypes?: true}): Td; // Td ⊃ Ts
+  opts?: {extend?: boolean, morphTypes?: true, clone?: false}): Td; // Td ⊃ Ts
 export function deepAssign<Td extends Record<string,any>, Ts extends Record<string, any>>(dest: Td, src: Readonly<Ts>,
-  opts: {createMissing: false, morphTypes: false}): Td; // only update values
+  opts: {extend: false, morphTypes: false, clone?: false}): Td; // only update values
 export function deepAssign<Td extends Record<string,any>, Ts extends Record<keyof Td, Ts[keyof Td]>>(dest: Td, src: Readonly<Ts>,
-  opts: {createMissing: false, morphTypes?: true}): {[K in keyof Td] : Ts[K]}; // update values and types
+  opts: {extend: false, morphTypes?: true, clone?: false}): {[K in keyof Td] : Ts[K]}; // update values and types
 
 export function deepAssign<Td extends Record<string,any>, Ts extends Record<string, any>>(dest: Td, src: Readonly<Ts>,
-  opts?: {createMissing?: boolean, morphTypes?: boolean}): Record<string, any>
+  opts?: {extend?: boolean, morphTypes?: boolean, clone?: boolean}): Record<string, any>
 
 export function deepAssign<Td extends Record<string,any>, Ts extends Record<string, any>>(dest: Td, src: Readonly<Ts>,
-    {createMissing = true, morphTypes = true} = {}): Record<string, any> {
+    {extend = true, morphTypes = true, clone = false} = {}): Record<string, any> {
+  const res = clone ? {} : dest as Record<string, any>
   for (const p of Object.getOwnPropertyNames(src)) {
     let create = false
     let exists = Object.hasOwn(dest, p)
     const srcType = src[p]?.constructor
     if (!exists)
-      create = createMissing
+      create = extend
     else
       create = morphTypes && srcType != dest[p]?.constructor
     if (create) {
-      if (primitiveTypes.includes(srcType))
-        (dest as any)[p] = src[p]
+      if (isPrimitive(src[p]))
+        res[p] = src[p]
       else if (srcType == Object)
-        (dest as any)[p] = deepAssign({}, src[p])
+        res[p] = deepAssign({}, src[p])
       else if (srcType == Array)
-        (dest as any)[p] = src[p].slice(0, src[p].length)
+        res[p] = src[p].slice(0, src[p].length)
       else
         throw Error(`cannot deep-assign ${p as string}:${srcType}`)
     } else if (exists) {
-      if (primitiveTypes.includes(srcType)) {
-        (dest as any)[p] = src[p]
+      if (isPrimitive(src[p])) {
+        res[p] = src[p]
       } else if (srcType == Object)
-        deepAssign(dest[p], src[p] as any, {createMissing, morphTypes})
-      else if (srcType == Array)
-        dest[p].splice(0, dest[p].length, ...(src[p] as Array<any>))
+        res[p] = deepAssign(dest[p], src[p] as any, {extend, morphTypes, clone})
+      else if (srcType == Array) {
+        if (clone)
+          res[p] = Array.from(src[p])
+        else
+          dest[p].splice(0, dest[p].length, ...(src[p] as Array<any>))
+      }
       else
         throw Error(`cannot deep-assign ${p as string}:${srcType}`)
     }
   }
-  return dest
+  if (clone) {
+    for (const p of Object.getOwnPropertyNames(dest)) {
+      if (!Object.hasOwn(src, p)) {
+        if (isPrimitive(dest[p]))
+          res[p] = dest[p]
+        else if (Array.isArray(dest[p]))
+          res[p] = Array.from(dest[p])
+        else if (dest[p]?.constructor == Object)
+          res[p] = deepAssign({}, dest[p], {extend, morphTypes, clone: false})
+        else
+          throw Error(`cannot clone ${p as string}:${dest[p].constructor}`)
+      }
+    }
+  }
+  return res
 }
 
 export function deepFreeze<T extends Record<PropertyKey, any>>(object: T): Readonly<T> {
@@ -84,6 +110,38 @@ export function deepFreeze<T extends Record<PropertyKey, any>>(object: T): Reado
       deepFreeze(value)
   }
   return Object.freeze(object)
+}
+
+export function jsonDiff<T extends JSONObject>(obj: T, ref: Readonly<RecursivePartial<T>>) {
+  const result: JSONObject = {}
+  for (const p of Object.keys(obj)) {
+    TSForceType<keyof T>(p)
+    if (!Object.hasOwn(ref, p)) {
+      if (isPrimitive(obj[p]))
+        result[p] = ref[p] as JSONPrimitive
+      else if (Array.isArray(obj[p])) {
+        result[p] = Array.from(obj[p] as Array<JSONPrimitive|JSONObject>)
+      } else {
+        result[p] = deepAssign({}, obj[p] as JSONObject)
+      }
+    } else if (obj[p] == ref[p]) {
+      continue
+    } else if (isPrimitive(obj[p])) {
+      result[p] = obj[p]
+    } else if (Array.isArray(obj[p])) {
+      const refArray = ref[p] as any[]
+      const objArray = obj[p] as any[]
+      if (objArray.length != refArray.length ||
+          objArray.some((v, i) => v != refArray[i])) {
+        result[p] = objArray
+      }
+    } else {
+      const val = jsonDiff(obj[p] as JSONObject, ref[p] as JSONObject) as JSONObject
+      if (Object.keys(val).length > 0)
+        result[p] = val
+    }
+  }
+  return result as RecursivePartial<T>
 }
 
 //##############################################################################
