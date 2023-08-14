@@ -1,6 +1,8 @@
 {
   "locale": "en-US",
   "translation-name": "mirror moon",
+  "translation-desc": "English translation by mirror moon",
+  "translation-url": "http://mirrormoon.org/projects/complete/tsukihime/",
 
   "scenario": {
     "scenes-dir": "./scenes/english",
@@ -130,7 +132,6 @@
     "gallery": "Gallery",
     "about": {
       "port": "This is a web version of [i]Tsukihime[/i], a visual novel published on 2000 by Type-Moon",
-      "translation": "English translation by [url='http://mirrormoon.org/projects/complete/tsukihime/']mirror moon[/url]",
       "project": "Project available on [url='https://github.com/requinDr/tsukihime-port']Github[/url]",
       "data": "No data collected, everything is stored in your browser. Manage your data [url='/config?tab=Advanced']here[/url]",
       "remake": "Support by buying the remake [url='http://typemoon.com/products/tsukihime/']Tsukihime - A piece of blue glass moon[/url]",

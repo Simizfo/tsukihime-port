@@ -52,7 +52,24 @@
                 border-bottom: 1px solid rgb(255 255 255 / 12%);
             }
 
+            .config-actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1em;
+            }
+            .desc {
+                font-size: .7em;
+                color: #969696;
+                border: 1px solid #26ffff3b;
+                padding: .2em 1em;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                gap: 0.6em;
+            }
+
             .config-btns {
+                flex: 1;
                 display: flex;
                 gap: .4em;
                 flex-wrap: wrap;
@@ -76,6 +93,7 @@
             }
 
             .config-range {
+                flex: 1;
                 display: flex;
                 gap: .6em;
                 align-items: center;
@@ -151,6 +169,11 @@
             .config {
                 grid-template-columns: 1fr;
                 row-gap: 0.4em;
+
+                .config-actions {
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                }
             }
         }
     }

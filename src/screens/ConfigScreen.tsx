@@ -69,27 +69,37 @@ export default ConfigScreen
 
 interface ConfigLayoutProps {
   title: string
+  desc?: ReactNode
   children: ReactNode
   [key:string]:any
 }
-export const ConfigLayout = ({ title, children, ...props }: ConfigLayoutProps) => (
+export const ConfigLayout = ({ title, desc, children, ...props }: ConfigLayoutProps) => (
   <div className="config" {...props}>
     <div>{title}</div>
 
-    {children}
+    <div className="config-actions">
+      {children}
+
+      {desc &&
+      <div className="desc">
+        {desc}
+      </div>
+      }
+    </div>
   </div>
 )
 
 interface ConfigButtonsProps {
   title: string
+  desc?: ReactNode
   btns: { text: string; value: any }[]
   property: string
   conf: Record<string, any>
   updateValue: (key: any, value: any) => void
 }
 /** Display multiples options to choose from */
-export const ConfigButtons = ({title, btns, property, conf, updateValue}: ConfigButtonsProps) => (
-  <ConfigLayout title={title}>
+export const ConfigButtons = ({title, desc, btns, property, conf, updateValue}: ConfigButtonsProps) => (
+  <ConfigLayout title={title} desc={desc}>
     <div className="config-btns">
       {btns.map(btn =>
         <button

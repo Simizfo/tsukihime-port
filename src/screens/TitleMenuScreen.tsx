@@ -14,6 +14,7 @@ import Modal from 'react-modal';
 import { APP_VERSION } from '../utils/constants'
 import strings from '../utils/lang'
 import { bb } from '../utils/utils'
+import { RxExternalLink } from 'react-icons/rx'
 
 const TitleMenuScreen = () => {
   const navigate = useNavigate()
@@ -65,8 +66,8 @@ const TitleMenuScreen = () => {
             <div>
               {bb(strings.title.about.port)}.
             </div>
-            {strings.title.about.translation && <div>
-              {bb(strings.title.about.translation)}
+            {strings["translation-desc"] && <div>
+              {bb(strings["translation-desc"])} <a href={strings["translation-url"]} target="_blank"><RxExternalLink /></a>
             </div>}
 
             <div>
@@ -81,7 +82,7 @@ const TitleMenuScreen = () => {
 
           <div className='tsuki-remake'>
             <img src={tsukiR} alt="tsukihime logo" className="logo"/>
-            {bb(strings.title.about.remake)}
+            <span>{bb(strings.title.about.remake)}</span>
           </div>
         </div>
 

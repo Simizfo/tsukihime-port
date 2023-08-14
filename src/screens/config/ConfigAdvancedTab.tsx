@@ -6,6 +6,7 @@ import { SaveState, clearSaveStates, listSaveStates, restoreSaveStates } from ".
 import strings, { languages } from "../../utils/lang"
 import { useObserver } from "../../utils/Observer"
 import { RecursivePartial } from "../../types"
+import { RxExternalLink } from 'react-icons/rx'
 
 function twoDigits(n: number) {
   return n.toString().padStart(2, '0')
@@ -103,9 +104,10 @@ const ConfigAdvancedTab = () => {
         updateValue={toggleFullscreen}
       />
 
-      {import.meta.env.DEV &&
       <ConfigButtons
         title={strings.config.language}
+        desc={strings["translation-desc"] &&
+          <>{strings["translation-desc"]} <a href={strings["translation-url"]} target="_blank"><RxExternalLink /></a></>}
         btns={Object.entries(languages).map(([id, {"display-name": dispName}])=> {
           return {text: dispName, value: id}
         })}
@@ -113,7 +115,6 @@ const ConfigAdvancedTab = () => {
         conf={conf}
         updateValue={updateValue}
       />
-      }
 
       <ConfigLayout title={strings.config.data}>
         <div className="config-btns">

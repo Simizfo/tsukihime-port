@@ -1,6 +1,8 @@
 {
   "locale": "ja-JP",
   "translation-name": "original",
+  "translation-desc": "",
+  "translation-url": "",
 
   "scenario": {
     "scenes-dir": "./scenes/japanese",
@@ -128,7 +130,6 @@
     "gallery": "ギヤラリー",
     "about": {
       "port": "This is a web version of [b]月姫[/b], a visual novel published on 2000 by TYPE-MOON",
-      "translation": "",
       "project": "Project available on [url='https://github.com/requinDr/tsukihime-port']Github[/url]",
       "data": "No data collected, everything is stored in your browser. Manage your data [url='/config?tab=Advanced']here[/url]",
       "remake": "Support by buying the remake [url='http://typemoon.com/products/tsukihime/']月姫 -A piece of blue glass moon[/url]",
