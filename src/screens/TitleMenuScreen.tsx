@@ -31,7 +31,7 @@ const TitleMenuScreen = () => {
 
   async function continueGame() {
     // restart from beginning of last visisted page ...
-    const lastSave = history.last?.saveState
+    const lastSave = history.last
                 // or from last saved game
                 ?? getLastSave()
                 // or ask user to provide save file(s).

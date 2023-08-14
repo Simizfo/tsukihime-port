@@ -1,16 +1,71 @@
-import { Fragment, useEffect, useRef, useState } from 'react';
-import { addEventListener, convertText, objectMatch } from "../utils/utils";
+import { Fragment, memo, useEffect, useRef, useState } from 'react';
+import { addEventListener, bb, convertText, deepAssign, objectMatch } from "../utils/utils";
 import { displayMode } from '../utils/display';
 import { SaveState, loadSaveState } from "../utils/savestates";
 import { useObserver } from '../utils/Observer';
 import history from '../utils/history';
 import script from '../utils/script';
-import strings from '../utils/lang';
+import strings, { dayTitle, phaseTitle } from '../utils/lang';
+import { PageContent, RouteDayName } from '../types';
+import { getSceneTitle } from '../utils/scriptUtils';
+import { defaultGameContext, gameContext } from '../utils/variables';
+
+const PageElement = memo(({saveState, onLoad}: {saveState: SaveState, onLoad: (ss: SaveState)=>void})=> {
+  if (saveState.page == undefined)
+    return <></>
+  const {contentType, ...content} = saveState.page
+  let displayContent
+  switch(contentType) {
+    case "text" :
+      const {text} = content as PageContent<"text">
+      displayContent = text.split('\n').map((line, i) =>
+        <Fragment key={i}>
+          {i > 0 && <br/>}
+          {convertText(line)}
+        </Fragment>
+      )
+      break
+    case "choice":
+      const {choices, selected} = content as PageContent<"choice">  
+      displayContent = <>{choices.map(({str, index})=>
+        <Fragment key={index}>{index > 0 && <br/>}
+          <span className={`choice ${index==selected ? 'selected' : ''}`} key={index}>
+            {str}
+          </span>
+        </Fragment>
+      )}</>
+      break
+    case "skip" :
+      const {scene} = content as PageContent<"skip">
+      const sceneTitle = getSceneTitle(scene)??""
+      displayContent = <span className='skip'>
+        Skipped scene {bb(sceneTitle)}
+      </span>
+      break
+    case "phase" :
+      const {route, routeDay, day} = deepAssign(defaultGameContext.phase, saveState.context.phase ?? {}, {clone: true})
+      displayContent = <span className='phase'>
+        {route && phaseTitle(route, routeDay as RouteDayName)}
+        {day > 0 && <><br/>{dayTitle(day)}</>}
+      </span>
+      break
+    default :
+      throw Error(`Unknown pgae type ${contentType}`)
+  }
+  return (
+  <>
+    <hr {...{"page-type": contentType}}/>
+    {saveState &&
+      <button className="menu-btn load" onClick={onLoad.bind(null,saveState)}>{strings.history.load}</button>
+    }
+    {displayContent}
+  </>
+  )
+})
 
 type Props = {
   [key: string] : any // other properties to apply to the root 'div' element of the component
 }
-
 const HistoryLayer = (props: Props) => {
   const [ display, setDisplay ] = useState(displayMode.history)
   const historyRef = useRef<HTMLDivElement>(null)
@@ -84,19 +139,8 @@ const HistoryLayer = (props: Props) => {
       <div className="box-text" id="history" ref={historyRef}>
         <div className="text-container">
           {/* lignes des pages précédentes */}
-          {Array.from(history, ({contentType, text, saveState}, i) =>
-            <Fragment key={i}>
-              {i > 0 && <hr {...{"page-type": contentType}}/>}
-              {saveState &&
-                <button className="menu-btn load" onClick={onClick.bind(null,saveState)}>{strings.history.load}</button>
-              }
-              {text.split('\n').map((line, i) =>
-                <Fragment key={i}>
-                  {i > 0 && <br/>}
-                  {convertText(line)}
-                </Fragment>
-              )}
-            </Fragment>
+          {Array.from(history, (page, i) =>
+            <PageElement key={i} saveState={page} onLoad={onClick} />
           )}
         </div>
       </div>

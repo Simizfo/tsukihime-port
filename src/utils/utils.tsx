@@ -41,7 +41,7 @@ export function deepAssign<Td extends Record<string,any>, Ts extends RecursivePa
 export function deepAssign<Td extends Record<string,any>, Ts extends Td>(dest: Td, src: Readonly<Ts>,
   opts?: {extend?: true, morphTypes?: true, clone?: false}): Ts; // Td ⊂ Ts
 export function deepAssign<Td extends Record<string, any>, Ts = RecursivePartial<Td>>(dest: Td, src: Readonly<Ts>,
-  opts?: {extend?: boolean, morphTypes?: true, clone?: false}): Td; // Td ⊃ Ts
+  opts?: {extend?: boolean, morphTypes: false, clone?: false}): Td; // Td ⊃ Ts
 export function deepAssign<Td extends Record<string,any>, Ts extends Record<string, any>>(dest: Td, src: Readonly<Ts>,
   opts: {extend: false, morphTypes: false, clone?: false}): Td; // only update values
 export function deepAssign<Td extends Record<string,any>, Ts extends Record<keyof Td, Ts[keyof Td]>>(dest: Td, src: Readonly<Ts>,

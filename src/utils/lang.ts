@@ -1,4 +1,4 @@
-import { deepAssign, objectsEqual } from "./utils"
+import { bb, deepAssign, objectsEqual } from "./utils"
 import { defaultSettings, settings } from "./variables"
 import _languages from '../assets/lang/languages.json'
 import defaultStrings from '../assets/lang/default.json'
@@ -91,6 +91,14 @@ export function imageUrl(img: string, res=settings.resolution) {
   if (!url.startsWith("http"))
     url = `${import.meta.env.BASE_URL}${url}`
   return url
+}
+
+export function phaseTitle(route: RouteName, routeDay: RouteDayName) {
+  return bb(strings.scenario.routes[route][routeDay])
+}
+
+export function dayTitle(day: number) {
+  return day > 0 ? bb(strings.scenario.days[day-1]) : ""
 }
 
 //##############################################################################

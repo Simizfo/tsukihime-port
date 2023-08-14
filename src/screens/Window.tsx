@@ -135,8 +135,7 @@ function page_nav(direction: "prev"|"next") {
   stopAutoPlay()
   switch (direction) {
     case "prev":
-      let page = history.get(history.length < 2 ? -1 : -2)
-      let ss = page?.saveState
+      let ss = history.get(history.length < 2 ? -1 : -2)
       if (ss)
         loadSaveState(ss)
       break

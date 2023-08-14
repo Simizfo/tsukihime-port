@@ -1,12 +1,22 @@
 import { SaveState } from "./utils/savestates"
 
-export type Page = {
-  contentType: 'text'|'choice'|'skip'|'phase'
-  saveState: SaveState|undefined,
-  text: string
-}
+export type PageType = 'text'|'choice'|'skip'|'phase'
+export type PageContent<T extends PageType> =
+  T extends 'text' ? { text: string } :
+  T extends 'choice' ? { choices: Choice[], selected?: number} :
+  T extends 'skip' ? { scene: SceneName } :
+  T extends 'phase' ? { } :
+  never
+export type PageArgs<T extends PageType> =
+  T extends 'text' ? [string] :
+  T extends 'choice' ? [Choice[]] :
+  T extends 'skip' ? [SceneName] :
+  T extends 'phase' ? [] :
+  never
+
 
 export type Choice = {
+  index: number,
   str: string,
   label: LabelName,
 }

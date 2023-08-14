@@ -1,9 +1,10 @@
 import { useState } from "react"
-import { Choice, LabelName } from "../types"
+import { Choice, LabelName, PageContent } from "../types"
 import { gameContext } from "../utils/variables"
 import { useObserver } from "../utils/Observer"
 import script from "../utils/script"
 import { displayMode } from "../utils/display"
+import history from "../utils/history"
 
 const choicesContainer = {
   choices: [] as Choice[]
@@ -20,6 +21,7 @@ export const commands = {
     const tokens = arg.split(/[`"],|(?<=\*\w+),/)
     for (let i = 0; i < tokens.length; i+= 2) {
       choices.push({
+        index: i,
         str: tokens[i].trim().substring(1), // remove '`' or '"'
         label: tokens[i+1].trim().substring(1) as LabelName // remove '*'
       })
@@ -29,7 +31,7 @@ export const commands = {
     choicesContainer.choices = choices
     displayMode.choice = true;
     console.log(choices)
-
+    history.onPageBreak("choice", choices)
     return {
       next: ()=>{}, // prevent continuing to next instruction
       cancel: ()=> { choicesContainer.choices = [] }
@@ -66,6 +68,9 @@ const ChoicesLayer = () => {
 
   const handleSelect = (choice: Choice) => {
     console.log(choice)
+    const lastPage = history.last?.page
+    if (lastPage?.contentType == "choice")
+      (lastPage as PageContent<"choice">).selected = choice.index
     script.moveTo(choice.label)
     choicesContainer.choices = []
   }

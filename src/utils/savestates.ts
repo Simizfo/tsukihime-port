@@ -1,11 +1,14 @@
-import { TSForceType, deepAssign, jsonDiff, requestJSONs, textFileUserDownload } from "./utils";
+import { TSForceType, bb, deepAssign, jsonDiff, requestJSONs, textFileUserDownload } from "./utils";
 import { defaultGameContext, defaultProgress, gameContext, progress } from "./variables";
 import history from './history';
 import { toast } from "react-toastify";
 import { FaSave } from "react-icons/fa"
 import { notifyObservers } from "./Observer";
 import { SAVE_EXT } from "./constants";
-import { RecursivePartial } from "../types";
+import { PageArgs, PageContent, PageType, RecursivePartial } from "../types";
+import { getSceneTitle } from "./scriptUtils";
+import { dayTitle, phaseTitle } from "./lang";
+import { Fragment } from "react";
 
 //##############################################################################
 //#                                 SAVESTATES                                 #
@@ -13,10 +16,12 @@ import { RecursivePartial } from "../types";
 
 const STORAGE_KEY = "savestates"
 
-export type SaveState = {
+export type SaveState<T extends PageType = PageType> = {
   context: RecursivePartial<typeof gameContext>;
   progress: RecursivePartial<typeof progress>;
-  text?: string;
+  page?: {
+    contentType: T,
+  } & PageContent<T>;
   graphics?: RecursivePartial<typeof gameContext.graphics>;
   date?: number;
 }
@@ -56,10 +61,11 @@ export function restoreSaveStates(keyValuePairs: Iterable<[SaveStateId, SaveStat
  * (flags, character regards).
  * @returns the created savestate.
  */
-export function createSaveState() {
-  const ss: SaveState = {
+export function createSaveState<T extends PageType>(page?: {contentType: T} & PageContent<T>) {
+  const ss: SaveState<T> = {
     context: jsonDiff(gameContext, defaultGameContext),
-    progress: jsonDiff(progress, defaultProgress)
+    progress: jsonDiff(progress, defaultProgress),
+    page
   }
   return ss
 }
@@ -84,10 +90,9 @@ export function storeSaveState(id: SaveStateId, ss: SaveState) {
  * @param id unique id of the savestate in the map.
  */
 export function storeCurrentState(id: SaveStateId) {
-  const ss = history.last?.saveState
+  const ss = history.last
   if (!ss)
     return false
-  ss.text = history.last.text.trim()
   ss.graphics = jsonDiff(gameContext.graphics, defaultGameContext.graphics)
   storeSaveState(id, ss)
   return true

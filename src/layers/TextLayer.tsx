@@ -8,6 +8,7 @@ import { settings } from "../utils/variables"
 import { useObserver } from "../utils/Observer"
 import history from "../utils/history"
 import { displayMode } from "../utils/display"
+import { PageContent } from "../types"
 
 const icons: Record<"moon"|"page", string> = {
   "moon": moonIcon,
@@ -32,8 +33,9 @@ history.addListener(()=> {
 })
 
 function appendText(text: string) {
-  history.last.text += text
-  scriptInterface.text = history.last.text
+  const lastPage = history.last.page as PageContent<"text">
+  lastPage.text += text
+  scriptInterface.text = lastPage.text
   scriptInterface.glyph = undefined
 }
 

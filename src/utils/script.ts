@@ -1,13 +1,13 @@
 import { commands as choiceCommands } from "../layers/ChoicesLayer"
 import { commands as graphicCommands } from "../layers/GraphicsLayer"
 import { commands as textCommands } from "../layers/TextLayer"
-import { LabelName, SceneName } from "../types"
+import { LabelName, RouteDayName, RouteName, SceneName } from "../types"
 import { commands as audioCommands } from "./AudioManager"
 import { isObserverNotifyPending, observe } from "./Observer"
 import history from "./history"
 import { SCENE_ATTRS } from "./constants"
 import Timer, { commands as timerCommands } from "./timer"
-import { checkIfCondition, extractInstructions, fetchFBlock, fetchScene, getPhaseDetails, getSceneTitle, isScene, isTextLine } from "./scriptUtils"
+import { checkIfCondition, extractInstructions, fetchFBlock, fetchScene, getSceneTitle, isScene, isTextLine } from "./scriptUtils"
 import { commands as variableCommands, gameContext, settings } from "./variables"
 import { toast } from "react-toastify"
 import { SCREEN, displayMode } from "./display"
@@ -106,11 +106,9 @@ export const script = {
 export default script
 
 function processPhase(dir: "l"|"r") {
-  const {bg, route, routeDay, day} = getPhaseDetails()
-  gameContext.phase.route = route
-  gameContext.phase.routeDay = routeDay
-  gameContext.phase.day = day
+  const {bg, route, routeDay, day} = gameContext.phase
   const invDir = dir=='l'?'r':'l';
+  history.onPageBreak("phase")
   return [
     ...extractInstructions(`bg ${bg},%type_${dir}cartain_fst`),
     ...extractInstructions(`ld ${dir},$${route}|${routeDay},%type_${invDir}cartain_fst`),
@@ -300,10 +298,11 @@ async function processCurrentLine() {
   lastLine.index = index
   lastLine.label = label
   if (index < lines.length) {
-    const newPage = isScene(label) &&
-                    (index == 0 || lines[index-1].endsWith('\\'))
+    const newPage = isScene(label) && (
+        index == 0 || lines[index-1].endsWith('\\') ||
+        (history.last?.page?.contentType != "text" ?? true))
     if (newPage)
-      history.onPageBreak()
+      history.onPageBreak("text", "")
     let line = sceneLines[index]
     console.log(`${label}:${index}: ${line}`)
 
@@ -398,9 +397,10 @@ function onSceneStart() {
       cancel: skipCancelCallback
     }
     skipCallback(getSceneTitle(label), async skip=> {
-      if (skip)
+      if (skip) {
+        history.onPageBreak("skip", label)
         onSceneEnd(label)
-      else {
+      } else {
         // check if context was changed while asking user
         if (label == gameContext.label) {
           gameContext.index = 0

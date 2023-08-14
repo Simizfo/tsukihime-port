@@ -2,10 +2,9 @@ import { useState, memo, Fragment } from "react";
 import { gameContext, settings } from "../utils/variables";
 import { observe, useChildrenObserver, useObserver } from "../utils/Observer";
 import { RouteDayName, RouteName } from "../types";
-import { bb } from "../utils/utils";
 import { findImageObjectByName } from "../utils/gallery";
 import { displayMode } from "../utils/display";
-import strings, { imageUrl } from "../utils/lang";
+import { dayTitle, imageUrl, phaseTitle } from "../utils/lang";
 
 type SpritePos = keyof typeof gameContext.graphics
 const POSITIONS: Array<SpritePos> = Object.keys(gameContext.graphics) as Array<SpritePos>
@@ -163,13 +162,6 @@ const commands = {
 
 export {
   commands
-}
-
-function phaseTitle(route: RouteName, routeDay: RouteDayName) {
-  return bb(strings.scenario.routes[route][routeDay])
-}
-function dayTitle(day: number) {
-  return bb(strings.scenario.days[day])
 }
 
 //_______________________________component tools________________________________

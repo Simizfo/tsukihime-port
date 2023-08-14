@@ -1,7 +1,7 @@
-import { ChangeEvent, useEffect, useState } from "react"
+import { ChangeEvent, Fragment, memo, useEffect, useState } from "react"
 import { SCREEN, displayMode } from "../utils/display"
-import { convertText, bb, TSForceType } from "../utils/utils"
-import { SceneName } from "../types";
+import { bb} from "../utils/utils"
+import { PageContent, SceneName } from "../types";
 import { SAVE_EXT } from "../utils/constants";
 import { SaveState, QUICK_SAVE_ID, deleteSaveState, getSaveState, listSaveStates, loadSaveState, storeCurrentState, addSavesChangeListener, removeSavesChangeListener, exportSave, loadSaveFiles } from "../utils/savestates";
 import { getSceneTitle } from "../utils/scriptUtils";
@@ -33,12 +33,41 @@ function phaseTitle(saveState: SaveState) {
 
 function phaseDay(saveState: SaveState) {
   const day = saveState.context.phase?.day
-  return (day) ? bb(strings.scenario.days[day-1]) : ""
+  return day ? bb(strings.scenario.days[day-1]) : ""
 }
 
 //##############################################################################
 //#                               SUB COMPONENTS                               #
 //##############################################################################
+
+const SaveSummary = memo(({saveState}: {saveState: SaveState})=> {
+  const page = saveState.page
+  switch (page?.contentType) {
+    case "text" :
+      return <>{(page as PageContent<"text">).text.trim()}</>
+    case "choice" :
+      const {choices, selected: sel} = (page as PageContent<"choice">)
+      return <>{choices.map(({index: i, str})=>
+        <Fragment key={i}>{i > 0 && <>, </>}
+          <span className={`choice ${sel == i ? "selected" : ""}`} key={i}>
+            {str}
+          </span>
+        </Fragment>
+      )}</>
+    case "skip" :
+      return <span className="scene-skip">
+        {getSceneTitle((page as PageContent<"skip">).scene)}
+      </span>
+    case "phase" :
+      const day = phaseDay(saveState)
+      return <>
+        {phaseTitle(saveState)}
+        {day && <>, {day}</>}
+      </>
+    default :
+      throw Error(`unimplemented page type`)
+  }
+})
 
 type SaveListItemProps = {
   id: number, saveState: SaveState, onSelect: (id: number)=>void,
@@ -59,7 +88,7 @@ const SaveListItem = ({id, saveState, onSelect, ...props}: SaveListItemProps)=> 
           <b>{date.toLocaleDateString(strings.locale)}</b> {date.toLocaleTimeString(strings.locale)}
         </div>
         <div className="line">
-          {convertText(saveState.text ?? "")}
+          <SaveSummary saveState={saveState}/>
         </div>
       </div>
     </button>

@@ -113,31 +113,6 @@ export function getSceneTitle(label: SceneName): string|undefined {
   }
 }
 
-const routePhaseRegexp = /word\\p(?<route>[a-z]+)_(?<rDay>\d+[ab])/
-const ignoredPhaseRegexp = /(?<ignored>bg\\.*)/
-const dayPhaseRegexp = /word\\day_(?<day>\d+)/
-const rawScenePhaseRegexp = /word\\(?<scene>\w+)/
-
-export function getPhaseDetails() {
-
-  const phaseTitle_a = getGameVariable("$phasetitle_a").toLowerCase()
-  const phaseTitle_b = getGameVariable("$phasetitle_b")
-  let {route = "", rDay = "", day = "", ignored = "", scene = ""} = {
-    ...(phaseTitle_a.match(routePhaseRegexp)?.groups ??
-        phaseTitle_a.match(ignoredPhaseRegexp)?.groups ?? {}),
-    ...(phaseTitle_b.match(dayPhaseRegexp)?.groups ??
-        phaseTitle_b.match(rawScenePhaseRegexp)?.groups ?? {})
-  }
-  if (!(route && rDay && day) && !(ignored && scene))
-    throw Error(`Cannot parse phase imgs ${phaseTitle_a} or ${phaseTitle_b}`)
-  return {
-    bg: getGameVariable("$phasebg"),
-    route : (route as RouteName) || "others",
-    routeDay : (rDay as RouteDayName) || scene,
-    day : parseInt(day) || 0
-  }
-}
-
 // (%var|n)(op)(%var|n)
 const opRegexp = /(?<lhs>(%\w+|\d+))(?<op>[=!><]+)(?<rhs>(%\w+|\d+))/
 export function checkIfCondition(condition: string) {

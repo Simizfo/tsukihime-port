@@ -1,9 +1,10 @@
-import { Page } from "../types"
+import { Choice, PageArgs, PageContent, PageType, RouteDayName, RouteName, SceneName } from "../types"
 import { HISTORY_MAX_PAGES } from "./constants"
 import { SaveState, createSaveState } from "./savestates"
+import { gameContext } from "./variables"
 
 class History {
-  private pages: Page[]
+  private pages: SaveState[]
   private limit: number
   private listeners: VoidFunction[]
 
@@ -31,14 +32,14 @@ class History {
   /**
    * oldest page in the queue. Next to be removed
    */
-  get first(): Page {
+  get first(): SaveState {
     return this.pages[0]
   }
 
   /**
    * Most recent page in the queue.
    */
-  get last(): Page {
+  get last(): SaveState {
     return this.pages[this.pages.length - 1]
   }
 
@@ -78,7 +79,7 @@ class History {
    * @param elmt element to insert
    * @returns this
    */
-  push(elmt: Page): typeof this {
+  push<T extends PageType>(elmt: SaveState<T>): typeof this {
     this.pages.push(elmt)
     this.clean()
     this.onChange()
@@ -87,28 +88,39 @@ class History {
 
   /**
    * Push a new page to the history
-   * @param createSS true if the new page must have a save-state
    * @param contentType type of the page
    */
-  createPage(createSS: boolean = true, contentType: Page['contentType'] = 'text') {
-    this.push({
-      saveState: createSS ? createSaveState() : undefined,
+  private createPage<T extends PageType>(contentType: T, ...args: PageArgs<T>) {
+    let content
+    switch(contentType) {
+      case "text" :
+        content = { text: args[0] as string ?? "" } as PageContent<"text">
+        break
+      case "choice": content = { choices: args[0] as Choice[] } as PageContent<"choice">; break
+      case "skip" : content = { scene: args[0] as SceneName } as PageContent<"skip">; break
+      case "phase" : content = {} as PageContent<"phase">
+        break
+      default :
+        throw Error(`Unknown page type ${contentType}`)
+    }
+    this.push(createSaveState({
       contentType,
-      text: ""
-    })
+      ...content as PageContent<T>
+    }))
   }
 
-  onPageBreak(createSS: boolean = true, contentType: Page['contentType'] = 'text') {
-    if (this.last?.text.length == 0)
-      this.pages.pop() // remove empty pages from history
-    this.createPage(createSS, contentType)
+  onPageBreak<T extends PageType>(contentType: T, ...args: PageArgs<T>) {
+    const lastPage = this.last?.page
+    if (lastPage?.contentType == "text" && (lastPage as PageContent<"text">).text.length == 0)
+      this.pages.pop() // remove empty text pages from history
+    this.createPage(contentType, ...args)
   }
 
   /**
    * Remove and return the most recent element in the stack
    * @returns the removed item
    */
-  pop(): Page | undefined {
+  pop(): SaveState | undefined {
     const page = this.pages.pop()
     if (page)
       this.onChange()
@@ -142,7 +154,7 @@ class History {
    * @returns true if the save-state was in the history, false otherwise.
    */
   onSaveStateLoaded(saveState: SaveState): boolean {
-    let i = this.pages.findLastIndex(page=>page.saveState == saveState)
+    let i = this.pages.indexOf(saveState)
     this.trimLasts(this.pages.length - i)
     this.onChange()
     return i >= 0

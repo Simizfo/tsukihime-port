@@ -58,7 +58,10 @@ function saveSettings() {
   const diff = jsonDiff(settings, defaultSettings)
   if (!objectsEqual(diff, savedSettings, false)) {
     savedSettings = diff
-    localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(savedSettings))
+    if (Object.keys(diff).length == 0)
+      localStorage.removeItem(SETTINGS_STORAGE_KEY)
+    else
+      localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(savedSettings))
   }
 }
 
@@ -90,6 +93,7 @@ export const gameContext = {
     route: "" as RouteName|"",
     routeDay: "" as RouteDayName|"",
     day: 0,
+    bg: ""
   },
 //_______________________________audio, graphics________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -118,9 +122,6 @@ export const progress = {
   flags: new Array<string>(),
 }
 export const temp = { // temporaty variables (do not need to be saved)
-  phasebg: "",      // not used in this web-based implementation (yet)
-  phasetitle_a: "", // not used in this web-based implementation (yet)
-  phasetitle_b: "", // not used in this web-based implementation (yet)
   rockending: -1, // written, but never read in the script.
   flushcount: 0,  //used in for loops in the script
 }
@@ -169,6 +170,54 @@ const flagsProxy = new Proxy({}, {
   }
 })
 
+const routePhaseRE = /word\\p(?<route>[a-z]+)_(?<rDay>\d+[ab])/
+const ignoredPhaseRE = /(?<ignored>bg\\.*)/
+const parseTitleA = (val: string)=> val.match(routePhaseRE)?.groups ??
+                                    val.match(ignoredPhaseRE)?.groups ?? {}
+const dayPhaseRE = /word\\day_(?<day>\d+)/
+const rawScenePhaseRE = /word\\(?<scene>\w+)/
+const parseTitleB = (val: string)=> val.match(dayPhaseRE)?.groups ??
+                                    val.match(rawScenePhaseRE)?.groups ?? {}
+
+const phaseProxy = new Proxy({}, {
+  get (_, varName: `phase${`title_${'a'|'b'}`|'bg'}`) {
+    const {route, routeDay, day, bg} = gameContext.phase
+    switch(varName) {
+      case "phasebg" : return `"${bg}"`
+      case "phasetitle_a" :
+        return day > 0 ? `"a;image\\word\\p${route}_${routeDay}.jpg"`
+                       : `"a;image\\bg\\ima_10.jpg"`
+      case "phasetitle_b" :
+        return day > 0 ? `"a;image\\word\\day_${day.toString().padStart(2, "0")}.png`
+                       : `"a;image\\word\\${routeDay}.jpg`
+    }
+  },
+  set (_, varName: `phase${`title_${'a'|'b'}`|'bg'}`, value: string) {
+    switch(varName) {
+      case "phasebg" : gameContext.phase.bg = value; return true
+      case "phasetitle_a" :
+        const {route = "", rDay = "", ignored = ""} = parseTitleA(value.toLowerCase())
+        if (!(route && rDay) && !ignored)
+          throw Error(`Cannot parse ${varName} ${value}`)
+        deepAssign(gameContext.phase, {
+          route : (route as RouteName) || "others",
+          routeDay : (rDay as RouteDayName) || ""
+        })
+        return true
+      case "phasetitle_b" :
+        const {day = "", scene = ""} = parseTitleB(value.toLowerCase())
+        if (!day && !scene)
+          throw Error(`Cannot parse ${varName} ${value}`)
+        gameContext.phase.day = parseInt(day) || 0
+        if (scene)
+          gameContext.phase.routeDay = scene as RouteDayName
+        return true
+      default :
+        return false
+    }
+  }
+})
+
 function getVarLocation(fullName: VarName): [any, string] {
   if (!['$','%'].includes(fullName.charAt(0)))
     throw Error(`Ill-formed variable name in 'mov' command: "${fullName}"`)
@@ -176,6 +225,9 @@ function getVarLocation(fullName: VarName): [any, string] {
   let parent
   if (name in temp) {
     parent = temp
+  }
+  else if (name.startsWith("phase")) {
+    parent = phaseProxy
   }
   else if (/^flg[1-9A-Z]$/.test(name)) {
     parent = flagsProxy
