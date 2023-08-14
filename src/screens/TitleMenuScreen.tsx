@@ -129,8 +129,8 @@ const TitleMenuScreen = () => {
           {strings.title.config}
         </Link>
 
-        <Link to={SCREEN.GALLERY} className="menu-item">
-          {strings.title.gallery}
+        <Link to={SCREEN.EXTRA} className="menu-item">
+          {strings.title.extra}
         </Link>
       </nav>
 

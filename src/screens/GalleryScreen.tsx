@@ -1,6 +1,5 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
 import Fancybox from "../components/Fancybox"
 import '../styles/gallery.scss'
 import { settings } from '../utils/variables'
@@ -8,6 +7,7 @@ import { motion } from 'framer-motion'
 import { GALLERY_IMAGES, GalleryImg } from '../utils/gallery'
 import TabBtn from '../components/TabBtn'
 import strings, { imageUrl } from '../utils/lang'
+import { SCREEN } from '../utils/display'
 
 type CharacterId = keyof typeof GALLERY_IMAGES
 type GalleryItem = GalleryImg & {src_sd: string, src_hd: string}
@@ -16,7 +16,6 @@ const GalleryScreen = () => {
   const [selected, setSelected] = useState<CharacterId>("ark")
   const [images, setImages] = useState<GalleryItem[]>([])
   const [defaultThumbnail] = useState(imageUrl("notreg"))
-  const containerRef = useRef<HTMLDivElement>()
 
   useEffect(()=> {
     let imagesTmp: any[] = GALLERY_IMAGES[selected]
@@ -74,7 +73,7 @@ const GalleryScreen = () => {
           </Fancybox>
         </main>
 
-        <Link to="/title" className="menu-btn back-button">{strings.back}</Link>
+        <Link to={SCREEN.EXTRA} className="menu-btn back-button">{strings.back}</Link>
       </div>
     </motion.div>
   )

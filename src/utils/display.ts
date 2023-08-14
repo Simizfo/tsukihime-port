@@ -4,9 +4,11 @@ import { notifyObservers, observe, observeChildren } from "./Observer";
 export enum SCREEN {
   TITLE = "/title",
   WINDOW = "/window",
-  GALLERY = "/gallery",
   CONFIG = "/config",
-  LOAD = "/load"
+  LOAD = "/load",
+  EXTRA = "/extra",
+  GALLERY = "/extra/gallery",
+  ENDINGS = "/extra/endings",
 }
 
 let history: boolean = false;
