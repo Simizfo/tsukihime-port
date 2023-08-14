@@ -176,6 +176,8 @@ function bbcodeTagToJSX({tag: Tag, arg, content}: {tag: string, arg: string, con
     case 'left':
     case 'right': return <div style={{textAlign: Tag}}>{...content}</div>
     case 'url':
+      if (arg.startsWith("'") && arg.endsWith("'"))
+        arg = arg.substring(1, arg.length-1)
       if (arg.lastIndexOf('.') > arg.lastIndexOf('/'))
         return <a href={arg} target="_blank">{...content}</a>
       else

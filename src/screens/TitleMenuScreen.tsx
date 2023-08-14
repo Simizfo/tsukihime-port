@@ -64,25 +64,31 @@ const TitleMenuScreen = () => {
         <div className='title-modal'>
           <div className='links'>
             <div>
-              {bb(strings.title.about.port)}.
+              {bb(strings.title.about.port)}
             </div>
             {strings["translation-desc"] && <div>
               {bb(strings["translation-desc"])} <a href={strings["translation-url"]} target="_blank"><RxExternalLink /></a>
             </div>}
 
             <div>
-              {bb(strings.title.about.project)} <br/>
+              {bb(strings.title.about.project
+                .replace('$0', "[url='https://github.com/requinDr/tsukihime-port']")
+                .replace('$1', "[/url]"))} <br/>
               v{APP_VERSION}
             </div>
 
             <div>
-              {bb(strings.title.about.data)}
+              {bb(strings.title.about.data
+                .replace('$0', "[url='/config?tab=Advanced']")
+                .replace('$1', "[/url]"))}
             </div>
           </div>
 
           <div className='tsuki-remake'>
             <img src={tsukiR} alt="tsukihime logo" className="logo"/>
-            <span>{bb(strings.title.about.remake)}</span>
+            <span>{bb(strings.title.about.remake
+                    .replace('$0', "[url='http://typemoon.com/products/tsukihime/']")
+                    .replace('$1', "[/url]"))}</span>
           </div>
         </div>
 
