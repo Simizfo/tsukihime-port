@@ -27,15 +27,20 @@ const tabComponents = {
 }
 
 const ConfigScreen = () => {
-  const { state } = useLocation()
-  const [activeTab, setActiveTab] = useState(state?.tab as Tabs || Tabs.main)
+  const urlParams = new URLSearchParams(window.location.search)
+  const [activeTab, setActiveTab] = useState(urlParams.get("tab") as Tabs || Tabs.main)
   const [_updateNum, forceUpdate] = useReducer(x => (x + 1) % 100, 0);
   useObserver(forceUpdate, strings, 'translation-name')
 
   useEffect(()=> {
     displayMode.screen = SCREEN.CONFIG
-    window.history.replaceState({}, document.title) //clean state
-  }, [])
+    if (!Object.hasOwn(tabComponents, activeTab))
+      setActiveTab(Tabs.main)
+    else {
+      const baseUrl = window.location.origin + window.location.pathname
+      window.history.replaceState({}, "", `${baseUrl}?tab=${activeTab}`)
+    }
+  }, [activeTab])
 
   return (
     <motion.div
