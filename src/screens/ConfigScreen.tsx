@@ -106,12 +106,12 @@ interface ConfigButtonsProps {
 export const ConfigButtons = ({title, desc, btns, property, conf, updateValue}: ConfigButtonsProps) => (
   <ConfigLayout title={title} desc={desc}>
     <div className="config-btns">
-      {btns.map(btn =>
+      {btns.map(({text, value}) =>
         <button
-          key={btn.text}
-          className={`config-btn ${conf[property] === btn.value ? 'active' : ''}`}
-          onClick={() => updateValue(property, btn.value)}>
-          {btn.text}
+          key={text}
+          className={`config-btn ${conf[property] === value ? 'active' : ''}`}
+          onClick={() => updateValue(property, value)}>
+          {text}
         </button>
       )}
     </div>

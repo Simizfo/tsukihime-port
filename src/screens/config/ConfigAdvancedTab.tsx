@@ -20,6 +20,7 @@ type Savefile = {
 const ConfigAdvancedTab = () => {
 
   const [conf, setConf] = useState(deepAssign({
+    resolution: undefined,
     imagesFolder: undefined,
     language: undefined,
   }, settings, {extend: false}))
