@@ -114,7 +114,7 @@
   },
   "images": {
     "redirect-ids": {
-      "en-mm": {"sd":"image-en/$.webp", "hd": "image-en_x2/$.webp"}
+      "en-mm": {"sd":"image_en/$.webp", "hd": "image_x2_en/$.webp"}
     },
     "redirected-images": {
       "tachi/osiete": "en-mm"
