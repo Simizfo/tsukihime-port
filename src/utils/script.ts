@@ -384,7 +384,6 @@ function onSceneEnd(label = gameContext.label, nextLabel:LabelName|undefined=und
 function warnHScene() {
   toast('You are about to read an H-scene. Beware of your surroundings.', {
     autoClose: 6000,
-
     toastId: "hscene-warning",
   })
 }

@@ -41,7 +41,7 @@ const ExtraScreen = () => {
           </section>
           
           <section>
-            <Link to={SCREEN.ENDINGS} className="page-link">Endings</Link>
+            <Link to={SCREEN.ENDINGS} className="page-link">Endings WIP</Link>
           </section>
         </main>
 

@@ -1,3 +1,32 @@
 #endings {
-    
+    .endings-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .ending {
+        padding: .6em min(2em, 2vw);
+        font-size: clamp(1.1em, 7vmin, 1.2em);
+        width: 100%;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: min(80%, 660px);
+            height: 1px;
+            background-color: #fff;
+        }
+
+        //one out ouf two endings is on the right
+        &:nth-child(2n) {
+            text-align: end;
+            &::after {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
 }
