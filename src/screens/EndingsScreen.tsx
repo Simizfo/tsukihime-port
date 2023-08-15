@@ -6,8 +6,12 @@ import { SCREEN } from '../utils/display'
 import chalkboard from '../assets/images/chalkboard.webp'
 import { wbb } from '../utils/utils'
 import { RouteEnding, endings, osiete } from '../utils/endings'
+import { Tooltip } from 'react-tooltip'
+import { settings } from '../utils/variables'
+import ReactDOMServer from 'react-dom/server';
 
 const imgPrefix = "/image/event/"
+// settings.completedScenes.push("s521")
 const EndingsScreen = () => {
 
   return (
@@ -32,10 +36,18 @@ const EndingsScreen = () => {
 
           <div className="badendings-list">
             <h3>{strings.endings.osiete}</h3>
-            {Object.values(osiete).filter(e=>e?.seen).map((ending, index)=>
-              // TODO: tooltip with the title of each bad end
-              <div key={index} className="badending">
-                <img src={chalkboard} alt="Bad Ending" />
+            <Tooltip id="osiete" place="top" className="tooltip" />
+            {Object.values(osiete).map((ending, index)=>
+              <div key={index} className={`badending ${ending?.seen ? 'seen' : ''}`}>
+                {ending?.seen ? <img src={chalkboard} alt={`Bad Ending ${ending.scene}`}
+                                  data-tooltip-id="osiete"
+                                  data-tooltip-html={ReactDOMServer.renderToStaticMarkup(
+                                  <div>
+                                    {wbb(ending.name)}<br />
+                                    Day: {ending.day}
+                                  </div>)} />
+                : <img src={chalkboard} alt="Bad Ending" />
+                }
               </div>
             )}
           </div>

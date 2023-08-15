@@ -73,10 +73,15 @@
         .badending {
             width: 30px;
             height: 30px;
+            filter: grayscale(1);
 
             img {
                 width: 100%;
                 height: 100%;
+            }
+
+            &.seen {
+                filter: grayscale(0);
             }
         }
     }
