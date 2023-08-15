@@ -1,12 +1,15 @@
-import { useEffect } from 'react'
+import { useEffect, useReducer } from 'react'
 import '../styles/title-menu.scss'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import strings from '../utils/lang'
 import { bb } from '../utils/utils'
+import { useObserver } from '../utils/Observer'
 
 const DisclaimerScreen = () => {
   const navigate = useNavigate()
+  const [_updateNum, forceUpdate] = useReducer(x => (x + 1) % 100, 0);
+  useObserver(forceUpdate, strings, 'translation-name')
 
   useEffect(()=> {
     const timeout = setTimeout(()=> {
