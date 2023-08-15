@@ -1,3 +1,51 @@
 #extra {
-    
+
+    section {
+        margin-bottom: max(1em, 4vh);
+        border-radius: 6px;
+        padding: 1em;
+        background-color: var(--menu-container);
+        position: relative;
+
+        .page-link {
+            all: unset;
+            text-decoration: none;
+            transition: var(--transition);
+            user-select: none;
+            text-shadow: 0 0 4px #d0d3e1;
+            position: relative;
+            border-bottom: 1px solid transparent;
+            padding-top: 4px;
+            padding-bottom: 0;
+        
+            display: block;
+            font-size: clamp(1.4em, 6vmin, 1.6em);
+            width: fit-content;
+
+            &:hover {
+                cursor: pointer;
+                color: rgb(10, 164, 171);
+                text-shadow: 1px 0 3px rgb(14, 79, 187), 1px 0 4px rgba(28, 147, 147, 0.5215686275);
+                border-color: initial;
+                padding-top: 0;
+                padding-bottom: 4px;
+            }
+        }
+    }
+
+    #extra-gallery {
+        .gallery-previews {
+            display: flex;
+            overflow-x: hidden;
+            gap: .6em;
+            margin-bottom: 1em;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                min-width: 80px;
+            }
+        }
+    }
 }
