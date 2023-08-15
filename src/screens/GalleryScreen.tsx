@@ -15,11 +15,11 @@ type GalleryItem = GalleryImg & {src_sd: string, src_hd: string}
 const GalleryScreen = () => {
   const [selected, setSelected] = useState<CharacterId>("ark")
   const [images, setImages] = useState<GalleryItem[]>([])
-  const [defaultThumbnail] = useState(imageUrl("notreg"))
+  const [defaultThumbnail] = useState(imageUrl("notreg", "sd"))
 
   useEffect(()=> {
     let imagesTmp: any[] = GALLERY_IMAGES[selected]
-    if( imagesTmp == undefined)
+    if (imagesTmp == undefined)
       throw Error(`unknown character ${selected}`)
     
     imagesTmp = imagesTmp.map((image: GalleryImg) => {

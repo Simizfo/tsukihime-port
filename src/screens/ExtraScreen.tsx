@@ -7,7 +7,7 @@ import { settings } from '../utils/variables'
 import { findImageObjectByName } from '../utils/gallery'
 
 const GALLERY_IMG_NB = 8
-// get GALLERY_IMG_NB random, non sensitives images
+// get random, non sensitives images
 const GALLERY_IMGS = settings.eventImages
                       .filter(image => !findImageObjectByName(image)?.sensitive)
                       .sort(() => Math.random() - 0.5)
@@ -26,14 +26,14 @@ const ExtraScreen = () => {
         <main>
 
           <section id="extra-gallery">
-            <div className='gallery-previews'>
+            <div className="gallery-previews">
               {GALLERY_IMGS.map((image, index) =>
-                <img key={index} src={imageUrl(image)} alt="event" />
+                <img key={index} src={imageUrl(image, "sd")} alt="event" />
               )}
 
               {/* Placeholders */}
               {Array(Math.max(0, GALLERY_IMG_NB - GALLERY_IMGS.length)).fill(0).map((_, index) =>
-                <img key={index} src={imageUrl("notreg")} alt="placeholder" />
+                <img key={index} src={imageUrl("notreg", "sd")} alt="placeholder" />
               )}
             </div>
 
