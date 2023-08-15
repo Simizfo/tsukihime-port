@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import tsukiLogo from "../assets/images/tsukihime-logo.webp"
 import tsukiR from "../assets/images/tsukihime_blue_glass_cover.webp"
@@ -12,16 +12,14 @@ import { blankSaveState, getLastSave, hasSaveStates, loadSaveFiles, loadSaveStat
 import history from '../utils/history'
 import Modal from 'react-modal';
 import { APP_VERSION } from '../utils/constants'
-import strings from '../utils/lang'
+import strings, { useLanguageRefresh } from '../utils/lang'
 import { bb } from '../utils/utils'
 import { RxExternalLink } from 'react-icons/rx'
-import { useObserver } from '../utils/Observer'
 
 const TitleMenuScreen = () => {
   const navigate = useNavigate()
   const [show, setShow] = useState(false)
-  const [_updateNum, forceUpdate] = useReducer(x => (x + 1) % 100, 0);
-  useObserver(forceUpdate, strings, 'translation-name')
+  useLanguageRefresh()
 
   useEffect(()=> {
     displayMode.screen = SCREEN.TITLE

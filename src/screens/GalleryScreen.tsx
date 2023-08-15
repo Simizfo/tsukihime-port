@@ -6,7 +6,7 @@ import { settings } from '../utils/variables'
 import { motion } from 'framer-motion'
 import { GALLERY_IMAGES, GalleryImg } from '../utils/gallery'
 import TabBtn from '../components/TabBtn'
-import strings, { imageUrl } from '../utils/lang'
+import strings, { imageUrl, useLanguageRefresh } from '../utils/lang'
 import { SCREEN } from '../utils/display'
 
 type CharacterId = keyof typeof GALLERY_IMAGES
@@ -16,6 +16,7 @@ const GalleryScreen = () => {
   const [selected, setSelected] = useState<CharacterId>("ark")
   const [images, setImages] = useState<GalleryItem[]>([])
   const [defaultThumbnail] = useState(imageUrl("notreg", "sd"))
+  useLanguageRefresh()
 
   useEffect(()=> {
     let imagesTmp: any[] = GALLERY_IMAGES[selected]

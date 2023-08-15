@@ -3,8 +3,7 @@ import { ConfigButtons, ConfigLayout, ResetBtn } from "../ConfigScreen"
 import { defaultSettings, settings } from "../../utils/variables"
 import { addEventListener, deepAssign, isFullscreen, jsonDiff, requestJSONs, textFileUserDownload, toggleFullscreen } from "../../utils/utils"
 import { SaveState, clearSaveStates, listSaveStates, restoreSaveStates } from "../../utils/savestates"
-import strings, { languages } from "../../utils/lang"
-import { useObserver } from "../../utils/Observer"
+import strings, { languages, useLanguageRefresh, waitLanguageLoad } from "../../utils/lang"
 import { RecursivePartial } from "../../types"
 import { RxExternalLink } from 'react-icons/rx'
 
@@ -23,10 +22,8 @@ const ConfigAdvancedTab = () => {
     resolution: undefined,
     imagesFolder: undefined,
     language: undefined,
-  }, settings, {extend: false}))
-
-  const [_updateNum, forceUpdate] = useReducer(x => (x + 1) % 100, 0);
-  useObserver(forceUpdate, strings, 'translation-name')
+  }, settings, {extend: false}))  
+  useLanguageRefresh()
 
   const [fullscreen, setFullscreen] = useState<boolean>(isFullscreen()) // don't save in settings
 

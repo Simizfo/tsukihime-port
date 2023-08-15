@@ -3,9 +3,11 @@ import '../styles/saves.scss'
 import SavesLayout from "../components/SavesLayout"
 import { useNavigate } from "react-router-dom"
 import { SCREEN } from "../utils/display"
+import { useLanguageRefresh } from "../utils/lang"
 
 const LoadScreen = () => {
   const navigate = useNavigate()
+  useLanguageRefresh()
 
   function back(saveLoaded: boolean) {
     if (!saveLoaded)

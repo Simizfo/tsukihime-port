@@ -1,5 +1,5 @@
-import { Link, useLocation, useParams } from 'react-router-dom'
-import { ReactNode, useEffect, useReducer, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { ReactNode, useEffect, useState } from 'react'
 import '../styles/config.scss'
 import { SCREEN, displayMode } from '../utils/display'
 import { motion } from 'framer-motion'
@@ -8,9 +8,7 @@ import ConfigAdultTab from './config/ConfigAdultTab'
 import ConfigAdvancedTab from './config/ConfigAdvancedTab'
 import ConfigControlsTab from './config/ConfigControlsTab'
 import TabBtn from '../components/TabBtn'
-import strings from '../utils/lang'
-import { useObserver } from '../utils/Observer'
-import { settings } from '../utils/variables'
+import strings, { useLanguageRefresh } from '../utils/lang'
 
 enum Tabs {
   main = "Main",
@@ -29,8 +27,7 @@ const tabComponents = {
 const ConfigScreen = () => {
   const urlParams = new URLSearchParams(window.location.search)
   const [activeTab, setActiveTab] = useState(urlParams.get("tab") as Tabs || Tabs.main)
-  const [_updateNum, forceUpdate] = useReducer(x => (x + 1) % 100, 0);
-  useObserver(forceUpdate, strings, 'translation-name')
+  useLanguageRefresh()
 
   useEffect(()=> {
     displayMode.screen = SCREEN.CONFIG

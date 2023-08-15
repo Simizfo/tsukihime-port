@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import '../styles/extra.scss'
 import { motion } from 'framer-motion'
-import strings, { imageUrl } from '../utils/lang'
+import strings, { imageUrl, useLanguageRefresh } from '../utils/lang'
 import { SCREEN } from '../utils/display'
 import { settings } from '../utils/variables'
 import { findImageObjectByName } from '../utils/gallery'
@@ -14,7 +14,8 @@ const GALLERY_IMGS = settings.eventImages
                       .slice(0, GALLERY_IMG_NB) || []
 
 const ExtraScreen = () => {
-
+  useLanguageRefresh()
+  
   return (
     <motion.div
       className="page" id="extra"

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import '../styles/endings.scss'
 import { motion } from 'framer-motion'
-import strings from '../utils/lang'
+import strings, { useLanguageRefresh } from '../utils/lang'
 import { SCREEN } from '../utils/display'
 import chalkboard from '../assets/images/chalkboard.webp'
 import { wbb } from '../utils/utils'
@@ -13,6 +13,7 @@ import ReactDOMServer from 'react-dom/server';
 const imgPrefix = "/image/event/"
 // settings.completedScenes.push("s521")
 const EndingsScreen = () => {
+  useLanguageRefresh()
 
   return (
     <motion.div

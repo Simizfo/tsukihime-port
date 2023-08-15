@@ -1,6 +1,6 @@
 import { RouteDayName, RouteName, SceneName } from "../types";
 import { SCENE_ATTRS } from "./constants";
-import strings from "./lang";
+import strings, { waitLanguageLoad } from "./lang";
 import { getGameVariable } from "./variables";
 
 //##############################################################################
@@ -15,6 +15,7 @@ const LOGIC_FILE = 'scene0.txt';
 export async function fetchScene(sceneId: string): Promise<string[] | undefined> {
   if (/^s\d+a?$/.test(sceneId))
     sceneId = `scene${sceneId.substring(1)}`;
+  await waitLanguageLoad()
   const script = await fetch(`${strings.scenario["scenes-dir"]}/${sceneId}.txt`)
     .then(
       (response) => response.ok ? response.text() : undefined,
@@ -27,6 +28,7 @@ export async function fetchScene(sceneId: string): Promise<string[] | undefined>
 }
 
 async function fetchBlock(label: string): Promise<string[]> {
+  await waitLanguageLoad()
   const script = await fetch(`${strings.scenario["scenes-dir"]}/${LOGIC_FILE}`)
     .then(script => script.text());
 

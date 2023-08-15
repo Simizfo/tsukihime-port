@@ -1,13 +1,14 @@
 import { bb, deepAssign, objectsEqual } from "./utils"
 import { defaultSettings, settings } from "./variables"
-import _languages from '../assets/lang/languages.json'
 import defaultStrings from '../assets/lang/default.json'
-import { observe } from "./Observer"
+import { observe, useObserver } from "./Observer"
 import { SCENE_ATTRS } from "./constants"
 import { RouteName, RouteDayName } from "../types"
+import { useReducer } from "react"
+const LANGUAGES_LIST_URL = "/lang/languages.json"
 
+export type LangCode = string
 
-export type LangCode = keyof typeof _languages
 
 export type LangFile = typeof defaultStrings & {
   scenario: {
@@ -23,18 +24,16 @@ export type LangFile = typeof defaultStrings & {
 
 type LangDesc = {
   "display-name": string,
-  "lang-file": `${string}.json`,
+  "lang-file"?: `${string}.json`,
   fallback?: LangCode,
   authors?: string,
 }
-const languages = _languages as Record<LangCode, LangDesc>
-
-export { languages }
 
 export const langDesc: LangDesc = {
   "display-name": "",
   "lang-file": "default.json",
 }
+export const languages: Record<LangCode, LangDesc> = { }
 
 export const {
   images,
@@ -48,37 +47,74 @@ async function loadStrings(language: LangCode): Promise<LangFile|undefined> {
               : deepAssign({}, defaultStrings) as LangFile
   if (!strings)
     return undefined
-  const response = await fetch(url.startsWith("http") ? url : `./lang/${url}`)
-  if (response.ok) {
-    const json = await response.json() as LangFile
-    deepAssign(strings, json)
-  } else {
-    console.error(`Unable to load json for language ${language}. Response code: ${response.status}`)
-    return undefined
+  if (url) {
+    const response = await fetch(url.indexOf(':') >= 0 ? url : `/lang/${url}`)
+    if (response.ok) {
+      const json = await response.json() as LangFile
+      deepAssign(strings, json)
+    } else {
+      console.error(`Unable to load json for language ${language}. Response code: ${response.status}`)
+      return undefined
+    }
   }
   return strings as LangFile
 }
-async function updateStrings() {
 
-  deepAssign(langDesc, (languages[settings.language] ?? languages[defaultSettings.language]))
-  const tmp = deepAssign({}, langDesc)
+let loadedLanguage = ""
+
+async function updateStrings() {
+  let lang = settings.language
+  if (!Object.hasOwn(languages, lang)) {
+    console.error(`unknwon language ${lang}. Reverting to default.`)
+    settings.language = lang = defaultSettings.language
+  }
   loadStrings(settings.language).then(strs=> {
-    if(strs && objectsEqual(langDesc, tmp)) {
-      const {images: _images, ..._strings} = strs as LangFile;
+    if(strs && lang == settings.language) {
+      const {images: imgs, ..._strings} = strs as LangFile;
       deepAssign(strings, _strings)
-      deepAssign(images, _images)
+      deepAssign(images, imgs)
+      deepAssign(langDesc, (languages[lang]))
+      loadedLanguage = lang
     }
   })
 }
-addEventListener("load", ()=> { // put in "load" event to avoid cirular dependencies
+
+async function fetchLanguagesList() {
+  const response = await fetch(LANGUAGES_LIST_URL)
+  if (response.ok) {
+    const json = await response.json() as typeof languages
+    deepAssign(languages, json)
+    return true
+  } else {
+    console.error(`Unable to load languages list. Response code: ${response.status}`)
+    return false
+  }
+}
+addEventListener("load", async ()=> { // put in "load" event to avoid cirular dependencies
+  const ok = await fetchLanguagesList()
+  if (!ok)
+    return
   observe(settings, "language", updateStrings)
   updateStrings()
 })
 
+export async function waitLanguageLoad() {
+  if (loadedLanguage == settings.language)
+    return
+  return new Promise(resolve=> {
+    observe(strings, 'translation-name', resolve, {once: true})
+  })
+}
+
+export function useLanguageRefresh() {
+  const [_updateNum, forceUpdate] = useReducer(x => (x + 1) % 100, 0);
+  useObserver(forceUpdate, strings, 'translation-name')
+}
+
 export default strings
 
 //##############################################################################
-//#                       TRANSLATION-RELATED FUNCTIONS                        #
+//#                        TRANSLATION-RELATED GETTERS                         #
 //##############################################################################
 
 export function imageUrl(img: string, res=settings.resolution) {

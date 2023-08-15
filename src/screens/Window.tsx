@@ -21,6 +21,7 @@ import { useObserved, useObserver } from '../utils/Observer';
 import { useNavigate } from 'react-router-dom';
 import { SCREEN, displayMode } from '../utils/display';
 import { KeysMatching } from '../types';
+import { useLanguageRefresh } from '../utils/lang';
 
 //##############################################################################
 //#                                KEY MAPPING                                 #
@@ -163,6 +164,7 @@ function toggleMenu() {
 const Window = () => {
   const navigate = useNavigate()
   const [showMenuBtn] = useObserved(displayMode, "graphics", (v)=>!v)
+  useLanguageRefresh()
 
   useObserver(navigate, displayMode, 'screen',
       { filter: screen => screen != SCREEN.WINDOW })

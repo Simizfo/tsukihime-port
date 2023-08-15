@@ -1,7 +1,6 @@
 {
   "jp": {
-    "display-name": "日本語",
-    "lang-file": "jp.json"
+    "display-name": "日本語"
   },
   "en-mm": {
     "display-name": "English",
