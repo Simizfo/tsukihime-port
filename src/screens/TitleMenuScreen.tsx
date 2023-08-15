@@ -1,7 +1,7 @@
 import { useState, useEffect, useReducer } from 'react'
 import { Link } from 'react-router-dom'
-import tsukiLogo from "../assets/game/menus/tsukihime-logo.webp"
-import tsukiR from "../assets/game/menus/Tsukihime_blue_glass_cover.webp"
+import tsukiLogo from "../assets/images/tsukihime-logo.webp"
+import tsukiR from "../assets/images/tsukihime_blue_glass_cover.webp"
 import { HiOutlineInformationCircle } from 'react-icons/hi'
 import '../styles/title-menu.scss'
 import ParticlesComponent from '../components/ParticlesComponent'
