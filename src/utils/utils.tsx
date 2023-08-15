@@ -243,6 +243,11 @@ export function bb(text: string): JSX.Element {
   return <>{...nodes[0].content}</>
 }
 
+/** remove bb code */
+export function wbb(text: string): string {
+  return text?.replaceAll(/\[[^\]]+\]/g, "")
+}
+
 //##############################################################################
 //#                                   OTHERS                                   #
 //##############################################################################

@@ -1,22 +1,26 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/endings.scss'
 import { motion } from 'framer-motion'
 import strings from '../utils/lang'
 import { SCREEN } from '../utils/display'
 import { settings } from '../utils/variables'
+import chalkboard from '../assets/images/chalkboard.webp'
+import { wbb } from '../utils/utils'
 
-//Distant Reed Warbler (Akiha Normal Ending)
-//Warm Afternoon Nap (Akiha True Ending)
-//Moon at Dawn (Arcueid Good Ending)
-//Tsukihime (Arcueid True Ending)
-//Sun (Ciel Good Ending)
-//Daylight Blue (Ciel True Ending)
-//Dreams of Sunshine (Hisui Good Ending)
-//Midday Moon (Hisui True Ending)
-//Dreams of Sunshine (Kohaku True Ending)
+const imgPrefix = "/image/event/"
 
 const EndingsScreen = () => {
+  const endings = [
+    {name: wbb(strings.scenario.routes.aki['13b']), character: "aki", type: "Normal", img: "aki_f01", route: "aki"},
+    {name: wbb(strings.scenario.routes.aki['13a']), character: "aki", type: "True", img: "aki_f02"},
+    {name: wbb(strings.scenario.routes.ark['13b']), character: "ark", type: "Good", img: "ark_f02"},
+    {name: wbb(strings.scenario.routes.ark['13a']), character: "ark", type: "True", img: "ark_f03"},
+    {name: wbb(strings.scenario.routes.cel['13b']), character: "cel", type: "Good", img: "cel_e07a"},
+    {name: wbb(strings.scenario.routes.cel['13a']), character: "cel", type: "True", img: "cel_f02"},
+    {name: wbb(strings.scenario.routes.his['14b']), character: "his", type: "Good", img: "his_f02"},
+    {name: wbb(strings.scenario.routes.his['14a']), character: "his", type: "True", img: "his_f03"},
+    {name: wbb(strings.scenario.routes.koha['12a']), character: "koha", type: "True", img: "koha_f01"},
+  ]
 
   return (
     <motion.div
@@ -27,40 +31,32 @@ const EndingsScreen = () => {
       <div className="page-content">
         <h2 className="page-title">Endings</h2>
         <main>
-          
-          {/* {settings.completedScenes.map((scene, index) =>
-            <div key={index} className="ending">
-              {scene}
-            </div>
-          )} */}
 
           <div className="endings-list">
-            <div className="ending">
-              Distant Reed Warbler (Akiha Normal Ending)
+            {endings.map((ending, index) =>
+              <div key={index} className={`ending ${ending.character}`}>
+                <img className="ending-img" src={`${imgPrefix}${ending.img}.webp`} alt={ending.name} />
+                <div className="ending-name">{ending.name}</div>
+                <div className="ending-bottom">
+                  <div>{strings.characters[ending.character as keyof typeof strings.characters]}</div>
+                  <div className="ending-type">{ending.type}</div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="badendings-list">
+            <h3>Oshiete</h3>
+
+            {/* TODO: tooltip with the title of each bad end */}
+            <div className="badending">
+              <img src={chalkboard} alt="Bad Endings" />
             </div>
-            <div className="ending">
-              Warm Afternoon Nap (Akiha True Ending)
+            <div className="badending">
+              <img src={chalkboard} alt="Bad Endings" />
             </div>
-            <div className="ending">
-              Moon at Dawn (Arcueid Good Ending)
-            </div>
-            <div className="ending">
-              Tsukihime (Arcueid True Ending)
-            </div>
-            <div className="ending">
-              Sun (Ciel Good Ending)
-            </div>
-            <div className="ending">
-              Daylight Blue (Ciel True Ending)
-            </div>
-            <div className="ending">
-              Dreams of Sunshine (Hisui Good Ending)
-            </div>
-            <div className="ending">
-              Midday Moon (Hisui True Ending)
-            </div>
-            <div className="ending">
-              Dreams of Sunshine (Kohaku True Ending)
+            <div className="badending">
+              <img src={chalkboard} alt="Bad Endings" />
             </div>
           </div>
         </main>
