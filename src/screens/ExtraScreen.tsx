@@ -4,10 +4,17 @@ import { motion } from 'framer-motion'
 import strings, { imageUrl } from '../utils/lang'
 import { SCREEN } from '../utils/display'
 import { settings } from '../utils/variables'
+import { findImageObjectByName } from '../utils/gallery'
 
+const GALLERY_IMG_NB = 8
+// get GALLERY_IMG_NB random, non sensitives images
+const GALLERY_IMGS = settings.eventImages
+                      .filter(image => !findImageObjectByName(image)?.sensitive)
+                      .sort(() => Math.random() - 0.5)
+                      .slice(0, GALLERY_IMG_NB) || []
 
 const ExtraScreen = () => {
-  console.log(settings.eventImages)
+
   return (
     <motion.div
       className="page" id="extra"
@@ -20,14 +27,12 @@ const ExtraScreen = () => {
 
           <section id="extra-gallery">
             <div className='gallery-previews'>
-              {/* todo: filter out sensitive images (don't even blur them) */}
-              {/* display 8 random images */}
-              {settings.eventImages.sort(() => Math.random() - 0.5).slice(0, 8).map((image, index) =>
+              {GALLERY_IMGS.map((image, index) =>
                 <img key={index} src={imageUrl(image)} alt="event" />
               )}
 
               {/* Placeholders */}
-              {Array(Math.max(0, 8 - settings.eventImages.length)).fill(0).map((_, index) =>
+              {Array(Math.max(0, GALLERY_IMG_NB - GALLERY_IMGS.length)).fill(0).map((_, index) =>
                 <img key={index} src={imageUrl("notreg")} alt="placeholder" />
               )}
             </div>
