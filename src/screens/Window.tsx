@@ -17,7 +17,7 @@ import history from '../utils/history';
 import { HiMenu } from 'react-icons/hi';
 import GestureHandler from '../utils/touch';
 import { toast } from 'react-toastify';
-import { useObserver } from '../utils/Observer';
+import { useObserved, useObserver } from '../utils/Observer';
 import { useNavigate } from 'react-router-dom';
 import { SCREEN, displayMode } from '../utils/display';
 import { KeysMatching } from '../types';
@@ -162,6 +162,7 @@ function toggleMenu() {
 
 const Window = () => {
   const navigate = useNavigate()
+  const [showMenuBtn] = useObserved(displayMode, "graphics", (v)=>!v)
 
   useObserver(navigate, displayMode, 'screen',
       { filter: screen => screen != SCREEN.WINDOW })
@@ -225,9 +226,11 @@ const Window = () => {
 
       <SkipLayer />
 
-      <button className="menu-button" onClick={toggleMenu}>
-        <HiMenu />
-      </button>
+      {showMenuBtn &&
+        <button className="menu-button" onClick={toggleMenu}>
+          <HiMenu />
+        </button>
+      }
       <MenuLayer />
     </motion.div>
   )
