@@ -48,7 +48,7 @@ async function loadStrings(language: LangCode): Promise<LangFile|undefined> {
               : deepAssign({}, defaultStrings) as LangFile
   if (!strings)
     return undefined
-  const response = await fetch(url.startsWith("http") ? url : `./src/assets/lang/${url}`)
+  const response = await fetch(url.startsWith("http") ? url : `./lang/${url}`)
   if (response.ok) {
     const json = await response.json() as LangFile
     deepAssign(strings, json)
