@@ -17,7 +17,8 @@ export const SCENE_ATTRS : {
       d: RouteDayName
       s?: (string | { flg: UcLetter|Digit, "0": string, "1": string }),
   }) & {
-    h?: boolean
+    h?: true
+    osiete?: true
   }>
 } = JSON.parse(JSON.stringify(sceneAttrs))
 

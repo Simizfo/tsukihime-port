@@ -1,9 +1,10 @@
 import { ViewRatio, NumVarName, StrVarName, VarName, LabelName, RouteName, RouteDayName } from "../types"
 import { observe, observeChildren } from "./Observer"
 import { TEXT_SPEED } from "./constants"
+import { endings } from "./endings"
 import { LangCode, LangFile } from "./lang"
 import Timer from "./timer"
-import { deepFreeze, objectMatch, deepAssign, jsonDiff, objectsEqual } from "./utils"
+import { deepFreeze, deepAssign, jsonDiff, objectsEqual } from "./utils"
 
 //##############################################################################
 //#                           APP-RELATED VARIABLES                            #
@@ -135,25 +136,28 @@ export const defaultProgress = deepFreeze(structuredClone(progress))
 
 //___________________________________commands___________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-export const completion = new Proxy({
-  get ark_good()    { return settings.completedScenes.includes("s53a") ? 1 : 0 },
-  get ark_true()    { return settings.completedScenes.includes("s52a") ? 1 : 0 },
-  get ciel_good()   { return settings.completedScenes.includes("s308") ? 1 : 0 },
-  get ciel_true()   { return settings.completedScenes.includes("s310") ? 1 : 0 },
-  get akiha_good()  { return settings.completedScenes.includes("s384") ? 1 : 0 },
-  get akiha_true()  { return settings.completedScenes.includes("s385") ? 1 : 0 },
-  get hisui_good()  { return settings.completedScenes.includes("s413") ? 1 : 0 },
-  get hisui_true()  { return settings.completedScenes.includes("s412") ? 1 : 0 },
-  get kohaku_true() { return settings.completedScenes.includes("s429") ? 1 : 0 },
-  get ark()    { return this.ark_good    + this.ark_true   },
-  get ciel()   { return this.ciel_good   + this.ciel_true  },
-  get akiha()  { return this.akiha_good  + this.akiha_true },
-  get hisui()  { return this.hisui_good  + this.hisui_true },
-  get kohaku() { return this.kohaku_true },
-  get cleared() {
-    return this.ark + this.ciel + this.akiha + this.hisui + this.kohaku
-  }
-}, {set: ()=> true }) // setter prevents error when trying to write the values
+const endingsProxy = new Proxy({}, {
+  get(_, name: string) {
+    if (Object.hasOwn(endings, name))
+      return (endings[name as keyof typeof endings]).seen ? 1 : 0
+    switch(name) {
+      case "ark" : return (endings.ark_good ? 0 : 1)
+                        + (endings.ark_true ? 0 : 1)
+      case "ciel" : return (endings.ciel_good ? 0 : 1)
+                         + (endings.ciel_true ? 0 : 1)
+      case "akiha" : return (endings.akiha_good ? 0 : 1)
+                          + (endings.akiha_true ? 0 : 1)
+      case "hisui" : return (endings.hisui_good ? 0 : 1)
+                          + (endings.hisui_true ? 0 : 1)
+      case "kohaku" : return (endings.kohaku_true ? 0 : 1)
+      case "cleared" : return endingsProxy.ark + endingsProxy.ciel +
+          endingsProxy.akiha + endingsProxy.hisui + endingsProxy.kohaku
+    }
+  },
+  set() { return true } // setter prevents error when script tries to write values
+}) as Record<keyof typeof endings, 0|1> &
+    {ark: 0|1|2, ciel: 0|1|2, akiha: 0|1|2, hisui: 0|1|2, kohaku: 0|1,
+     cleared: number}
 
 const flagsProxy = new Proxy({}, {
   get(_, flag: string) {
@@ -238,7 +242,7 @@ function getVarLocation(fullName: VarName): [any, string] {
     name = name.substring(0,name.indexOf('_'))
   }
   else if (/^clear(ed|_[a-z])+/.test(name)) {
-    parent = completion
+    parent = endingsProxy
     name = name.substring(name.indexOf('_')+1) // 0 if no '_' in name
   }
   else {

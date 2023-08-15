@@ -1,5 +1,3 @@
-import { SaveState } from "./utils/savestates"
-
 export type PageType = 'text'|'choice'|'skip'|'phase'
 export type PageContent<T extends PageType> =
   T extends 'text' ? { text: string } :
@@ -44,6 +42,9 @@ export type KeysMatching<T extends object, V> = {
 export type RecursivePartial<T> = T|{
   [P in keyof T]?: RecursivePartial<T[P]>
 }
+export type PartialRecord<K extends keyof any, T> = {
+  [P in K]?: T
+}
 
 export type JSONPrimitive = string|number|boolean|null
 export type JSONObject = {
@@ -58,7 +59,11 @@ export type UcLetter = 'A'|'B'|'C'|'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'
 export type Letter = LcLetter|UcLetter
 
 export type RouteName = 'aki'|'ark'|'cel'|'his'|'koha'|'others'
-export type RouteDayName = `${number}${'a'|'b'}`|'pro'|'epi'|'end'|'fin'
+export type RouteDayName<T extends RouteName=RouteName> = 
+  T extends 'others' ? 'pro'|'epi'|'end'|'fin'
+                     : `${number}${'a'|'b'}`
+
+export type CharId = Exclude<RouteName, "others">
 
 export type SceneName = `s${number}${'a'|''}` |
   "openning" | "ending" | "eclipse"

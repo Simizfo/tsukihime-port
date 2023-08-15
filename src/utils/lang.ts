@@ -60,22 +60,20 @@ async function loadStrings(language: LangCode): Promise<LangFile|undefined> {
 }
 async function updateStrings() {
 
-  const chosenLanguage = {
-    fallback: undefined, // force the presence of undefined fields in the lang. desc.
-    authors: undefined,
-    ...(languages[settings.language] ?? languages[defaultSettings.language])
-  }
-  deepAssign(langDesc, chosenLanguage)
+  deepAssign(langDesc, (languages[settings.language] ?? languages[defaultSettings.language]))
+  const tmp = deepAssign({}, langDesc)
   loadStrings(settings.language).then(strs=> {
-    if(strs && objectsEqual(langDesc, chosenLanguage)) {
+    if(strs && objectsEqual(langDesc, tmp)) {
       const {images: _images, ..._strings} = strs as LangFile;
       deepAssign(strings, _strings)
       deepAssign(images, _images)
     }
   })
 }
-observe(settings, "language", updateStrings)
-updateStrings()
+addEventListener("load", ()=> { // put in "load" event to avoid cirular dependencies
+  observe(settings, "language", updateStrings)
+  updateStrings()
+})
 
 export default strings
 
