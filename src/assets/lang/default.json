@@ -180,6 +180,12 @@
     "controls-qsave": "Quick Save",
     "controls-move-bg": "Move background"
   },
+  "endings": {
+    "normal": "Normal",
+    "good": "Good",
+    "true": "True",
+    "osiete": "Teach-me, Ciel-sensei"
+  },
   "saves": {
     "title-load": "Load",
     "title-save": "Save",

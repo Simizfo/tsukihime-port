@@ -1,44 +1,53 @@
 #endings {
     .endings-list {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        grid-template-columns: repeat(9, 116px);
+        overflow-x: auto;
         gap: 1em;
         background-color: var(--menu-container);
         padding: 1em;
         margin-bottom: 1em;
 
         .ending {
+            grid-row: 1;
             display: flex;
             flex-direction: column;
-            padding: .5em;
             font-size: clamp(1.1em, 7vmin, 1.2em);
             border-radius: 2px;
+            overflow: hidden;
             position: relative;
+            min-height: 220px;
             box-shadow: 0 2px 4px #000014;
     
             &.aki {
-                background-image: linear-gradient(180deg, #270000 0%, #640000 100%);
+                background-image: linear-gradient(180deg, #101010 0%, #212121 100%);
+                box-shadow: 0 2px 4px #101010;
             }
             &.ark {
-                background-image: linear-gradient(180deg, #192700 0%, #466400 100%);
+                background-image: linear-gradient(180deg, #271700 0%, #646400 100%);
+                box-shadow: 0 2px 4px #271700;
             }
             &.cel {
                 background-image: linear-gradient(180deg, #001727 0%, #003464 100%);
+                box-shadow: 0 2px 4px #001727;
             }
             &.his {
-                background-image: linear-gradient(180deg, #270027 0%, #640064 100%);
+                background-image: linear-gradient(180deg, #270012 0%, #640022 100%);
+                box-shadow: 0 2px 4px #270012;
             }
             &.koha {
-                background-image: linear-gradient(180deg, #271700 0%, #646400 100%);
+                background-image: linear-gradient(180deg, #270027 0%, #640064 100%);
+                box-shadow: 0 2px 4px #270027;
             }
     
             .ending-img {
                 max-width: 100%;;
             }
             .ending-name {
-                margin-block: .4em;
+                margin: .5em;
             }
             .ending-bottom {
+                margin: .5em;
                 display: flex;
                 justify-content: space-between;
                 font-size: 0.8em;

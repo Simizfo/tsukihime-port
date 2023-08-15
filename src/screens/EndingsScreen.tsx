@@ -3,23 +3,22 @@ import '../styles/endings.scss'
 import { motion } from 'framer-motion'
 import strings from '../utils/lang'
 import { SCREEN } from '../utils/display'
-import { settings } from '../utils/variables'
+import { completion, settings } from '../utils/variables'
 import chalkboard from '../assets/images/chalkboard.webp'
 import { wbb } from '../utils/utils'
 
 const imgPrefix = "/image/event/"
-
 const EndingsScreen = () => {
   const endings = [
-    {name: wbb(strings.scenario.routes.aki['13b']), character: "aki", type: "Normal", img: "aki_f01", route: "aki"},
-    {name: wbb(strings.scenario.routes.aki['13a']), character: "aki", type: "True", img: "aki_f02"},
-    {name: wbb(strings.scenario.routes.ark['13b']), character: "ark", type: "Good", img: "ark_f02"},
-    {name: wbb(strings.scenario.routes.ark['13a']), character: "ark", type: "True", img: "ark_f03"},
-    {name: wbb(strings.scenario.routes.cel['13b']), character: "cel", type: "Good", img: "cel_e07a"},
-    {name: wbb(strings.scenario.routes.cel['13a']), character: "cel", type: "True", img: "cel_f02"},
-    {name: wbb(strings.scenario.routes.his['14b']), character: "his", type: "Good", img: "his_f02"},
-    {name: wbb(strings.scenario.routes.his['14a']), character: "his", type: "True", img: "his_f03"},
-    {name: wbb(strings.scenario.routes.koha['12a']), character: "koha", type: "True", img: "koha_f01"},
+    {name: "13b", character: "aki", type: strings.endings.normal, img: "aki_f01", viewed: completion.akiha_good},
+    {name: "13a", character: "aki", type: strings.endings.true, img: "aki_f02", viewed: completion.akiha_true},
+    {name: "13b", character: "ark", type: strings.endings.good, img: "ark_f02", viewed: completion.ark_good},
+    {name: "13a", character: "ark", type: strings.endings.true, img: "ark_f03", viewed: completion.ark_true},
+    {name: "13b", character: "cel", type: strings.endings.good, img: "cel_e07a", viewed: completion.ciel_good},
+    {name: "13a", character: "cel", type: strings.endings.true, img: "cel_f02", viewed: completion.ciel_true},
+    {name: "14b", character: "his", type: strings.endings.good, img: "his_f02", viewed: completion.hisui_good},
+    {name: "14a", character: "his", type: strings.endings.true, img: "his_f03", viewed: completion.hisui_true},
+    {name: "12a", character: "koha", type: strings.endings.true, img: "koha_f01", viewed: completion.kohaku_true},
   ]
 
   return (
@@ -33,30 +32,21 @@ const EndingsScreen = () => {
         <main>
 
           <div className="endings-list">
-            {endings.map((ending, index) =>
-              <div key={index} className={`ending ${ending.character}`}>
-                <img className="ending-img" src={`${imgPrefix}${ending.img}.webp`} alt={ending.name} />
-                <div className="ending-name">{ending.name}</div>
-                <div className="ending-bottom">
-                  <div>{strings.characters[ending.character as keyof typeof strings.characters]}</div>
-                  <div className="ending-type">{ending.type}</div>
-                </div>
-              </div>
-            )}
+          {endings.map((ending, index) => {
+            if (ending.viewed) {
+              return <EndingComponent ending={ending} key={index} />
+            } else {
+              return <div key={index} className="ending" />
+            }
+          })}
           </div>
 
           <div className="badendings-list">
-            <h3>Oshiete</h3>
+            <h3>{strings.endings.osiete}</h3>
 
             {/* TODO: tooltip with the title of each bad end */}
             <div className="badending">
-              <img src={chalkboard} alt="Bad Endings" />
-            </div>
-            <div className="badending">
-              <img src={chalkboard} alt="Bad Endings" />
-            </div>
-            <div className="badending">
-              <img src={chalkboard} alt="Bad Endings" />
+              <img src={chalkboard} alt="Bad Ending" />
             </div>
           </div>
         </main>
@@ -68,3 +58,16 @@ const EndingsScreen = () => {
 }
 
 export default EndingsScreen
+
+const EndingComponent = ({ending}: {ending: any}) => {
+  return (
+    <div className={`ending ${ending.character}`}>
+      <img className="ending-img" src={`${imgPrefix}${ending.img}.webp`} alt={ending.name} />
+      <div className="ending-name">{wbb(strings.scenario.routes[ending.character as keyof typeof strings.characters][ending.name])}</div>
+      <div className="ending-bottom">
+        <div>{strings.characters[ending.character as keyof typeof strings.characters]}</div>
+        <div className="ending-type">{ending.type}</div>
+      </div>
+    </div>
+  )
+}

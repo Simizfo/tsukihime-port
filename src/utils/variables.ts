@@ -135,16 +135,16 @@ export const defaultProgress = deepFreeze(structuredClone(progress))
 
 //___________________________________commands___________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-const completion = new Proxy({
-  get ark_good()    { return settings.completedScenes.includes("53a") ? 1 : 0 },
-  get ark_true()    { return settings.completedScenes.includes("52a") ? 1 : 0 },
-  get ciel_good()   { return settings.completedScenes.includes("308") ? 1 : 0 },
-  get ciel_true()   { return settings.completedScenes.includes("310") ? 1 : 0 },
-  get akiha_good()  { return settings.completedScenes.includes("384") ? 1 : 0 },
-  get akiha_true()  { return settings.completedScenes.includes("385") ? 1 : 0 },
-  get hisui_good()  { return settings.completedScenes.includes("413") ? 1 : 0 },
-  get hisui_true()  { return settings.completedScenes.includes("412") ? 1 : 0 },
-  get kohaku_true() { return settings.completedScenes.includes("429") ? 1 : 0 },
+export const completion = new Proxy({
+  get ark_good()    { return settings.completedScenes.includes("s53a") ? 1 : 0 },
+  get ark_true()    { return settings.completedScenes.includes("s52a") ? 1 : 0 },
+  get ciel_good()   { return settings.completedScenes.includes("s308") ? 1 : 0 },
+  get ciel_true()   { return settings.completedScenes.includes("s310") ? 1 : 0 },
+  get akiha_good()  { return settings.completedScenes.includes("s384") ? 1 : 0 },
+  get akiha_true()  { return settings.completedScenes.includes("s385") ? 1 : 0 },
+  get hisui_good()  { return settings.completedScenes.includes("s413") ? 1 : 0 },
+  get hisui_true()  { return settings.completedScenes.includes("s412") ? 1 : 0 },
+  get kohaku_true() { return settings.completedScenes.includes("s429") ? 1 : 0 },
   get ark()    { return this.ark_good    + this.ark_true   },
   get ciel()   { return this.ciel_good   + this.ciel_true  },
   get akiha()  { return this.akiha_good  + this.akiha_true },
