@@ -4,7 +4,7 @@ import { FaCompressArrowsAlt, FaExpandArrowsAlt, FaVolumeMute, FaVolumeUp } from
 import { BiSkipNext } from "react-icons/bi"
 import { gameContext, settings } from "../utils/variables"
 import { quickLoad, quickSave } from "../utils/savestates"
-import { useObserver } from "../utils/Observer"
+import { useObserved } from "../utils/Observer"
 import script from "../utils/script"
 import { displayMode, SCREEN } from "../utils/display"
 import strings from "../utils/lang"
@@ -19,21 +19,14 @@ import strings from "../utils/lang"
 const MenuLayer = () => {
 
   const menuRef = useRef<HTMLDivElement>(null)
-  const [display, setDisplay] = useState<boolean>(displayMode.menu)
-  const [mute, setMute] = useState<boolean>(settings.volume.master < 0)
+  const [mute] = useObserved(settings.volume, 'master', (vol)=>vol<0)
   const [fullscreen, setFullscreen] = useState<boolean>(isFullscreen())
+  const [display] = useObserved(displayMode, 'menu')
 
-  useObserver((display: boolean)=> {
-    setDisplay(display)
-    if (!display) {
-      if (menuRef.current?.contains(document.activeElement))
-        (document.activeElement as HTMLElement).blur?.();
-    }
-  }, displayMode, 'menu')
-
-  useObserver((volume: number)=> {
-    setMute(volume < 0)
-  }, settings.volume, 'master')
+  useEffect(()=> {
+    if (!display && menuRef.current?.contains(document.activeElement))
+      (document.activeElement as HTMLElement).blur?.();
+  }, [display])
 
   useEffect(() => {
     //if a left click is made outside the menu, hide it

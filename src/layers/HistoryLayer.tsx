@@ -2,7 +2,7 @@ import { Fragment, memo, useEffect, useRef, useState } from 'react';
 import { addEventListener, bb, convertText, deepAssign, objectMatch } from "../utils/utils";
 import { displayMode } from '../utils/display';
 import { SaveState, loadSaveState } from "../utils/savestates";
-import { useObserver } from '../utils/Observer';
+import { useObserved, useObserver } from '../utils/Observer';
 import history from '../utils/history';
 import script from '../utils/script';
 import strings, { dayTitle, phaseTitle } from '../utils/lang';
@@ -66,7 +66,7 @@ type Props = {
   [key: string] : any // other properties to apply to the root 'div' element of the component
 }
 const HistoryLayer = (props: Props) => {
-  const [ display, setDisplay ] = useState(displayMode.history)
+  const [ display, setDisplay ] = useObserved(displayMode, 'history')
   const historyRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -85,13 +85,6 @@ const HistoryLayer = (props: Props) => {
     }
     return addEventListener({event: 'wheel', handler: handleWheel})
   })
-
-  useObserver(setDisplay, displayMode, 'history')
-
-  useEffect(()=> {
-    if (display != displayMode.history)
-      displayMode.history = display
-  }, [display])
 
   useEffect(() => {
     //on right click, when history is displayed, hide history

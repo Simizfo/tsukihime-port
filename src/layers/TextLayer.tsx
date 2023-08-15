@@ -5,7 +5,7 @@ import Timer from "../utils/timer"
 import { TEXT_SPEED } from "../utils/constants"
 import { convertText } from "../utils/utils"
 import { settings } from "../utils/variables"
-import { useObserver } from "../utils/Observer"
+import { useObserved, useObserver } from "../utils/Observer"
 import history from "../utils/history"
 import { displayMode } from "../utils/display"
 import { PageContent } from "../types"
@@ -90,18 +90,14 @@ type Props = {
 
 const TextLayer = memo(({...props}: Props) => {
 
-  const [ text, setText ] = useState<string>("")
-  const [ immediate, setImmediate ] = useState<boolean>(false)
+  const [ display ] = useObserved(displayMode, 'text')
+  const [ text ] = useObserved(scriptInterface, 'text')
+  const [ immediate ] = useObserved(scriptInterface, 'fastForward')
   const [ previousText, setPreviousText ] = useState<string[]>([]) // lines to display entirely
   const [ newText, setNewText ] = useState<string>("") // line to display gradually
   const [ cursor, setCursor ] = useState<number>(0) // position of the cursor on the last line.
   const [ glyph, setGlyph ] = useState<'moon'|'page'>() // id of the animated glyph to display at end of line
 
-  const [ display, setDisplay ] = useState<boolean>(displayMode.text)
-
-  useObserver(setDisplay, displayMode, 'text')
-  useObserver(setText, scriptInterface, 'text')
-  useObserver(setImmediate, scriptInterface, 'fastForward')
   useObserver((glyph)=> {
     if (glyph) {
       setPreviousText(scriptInterface.text.split('\n'))

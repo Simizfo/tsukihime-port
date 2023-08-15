@@ -1,6 +1,6 @@
 import { useState, memo, Fragment } from "react";
 import { gameContext, settings } from "../utils/variables";
-import { observe, useChildrenObserver, useObserver } from "../utils/Observer";
+import { observe, useChildrenObserver, useObserved, useObserver } from "../utils/Observer";
 import { RouteDayName, RouteName } from "../types";
 import { findImageObjectByName } from "../utils/gallery";
 import { displayMode } from "../utils/display";
@@ -243,26 +243,20 @@ export function graphicElements(images: Partial<Record<SpritePos, string>>,
 
 export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
 
-  const [bgAlign, setBgAlign] = useState<'top'|'center'|'bottom'>(displayMode.bgAlignment)
+  const [bgAlign] = useObserved(displayMode, 'bgAlignment')
 
   const [prevImages, setPrevImages] = useState<typeof gameContext.graphics>({...gameContext.graphics})
   const [currImages, setCurrImages] = useState<typeof gameContext.graphics>({...gameContext.graphics})
-  const [quake, setQuake] = useState<boolean>()
-  const [monoChrome, setMonoChrome] = useState<string>("")
+  const [quake] = useObserved(quakeEffect, 'duration', (d)=>d!=0)
+  const [monoChrome] = useObserved(gameContext, 'monochrome')
 
 //__________________________listen for sprite changes___________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  useObserver(setBgAlign, displayMode, 'bgAlignment')
   useObserver(()=> {
     // animation finished or skipped
     setPrevImages({...gameContext.graphics})
   }, transition, 'duration', { filter: (d)=>d==0 })
-
-  useObserver(setMonoChrome, gameContext, "monochrome")
-  useObserver((d)=> {
-    setQuake(d != 0)
-  }, quakeEffect, 'duration')
 
   useChildrenObserver((_pos, _img)=> {
     setCurrImages({...gameContext.graphics})

@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 type ObserverCallback<T=any> = (value: T)=>void
 type Observable = Record<PropertyKey, any>
@@ -303,6 +303,31 @@ export function useObserver<T extends Observable, P extends keyof T>(
         observe(object as T, property, callback, options)
         return unobserve.bind(null, object as T, property, callback) as VoidFunction
     }, [])
+}
+
+export function useObserved<V extends never,T extends Observable, P extends keyof T>(
+    object: T|ObservableContainer<T>, property: P, map?: never, invMap?: never): [T[P], (v:T[P])=>void];
+export function useObserved<V,T extends Observable, P extends keyof T>(
+    object: T|ObservableContainer<T>, property: P, map: (v:T[P], curr?: V)=>V, invMap?: never): [V];
+export function useObserved<V,T extends Observable, P extends keyof T>(
+    object: T|ObservableContainer<T>, property: P, map: (v:T[P], curr?: V)=>V, invMap: (v: V, curr: T[P])=> T[P]) : [V, (v:V)=>void];
+export function useObserved<V,T extends Observable, P extends keyof T>(
+    object: T|ObservableContainer<T>, property: P, map?: (v:T[P], curr?: V)=>V, invMap?: (v: V, curr: T[P])=> T[P]) : [V|T[P], (v:V|T[P])=>void]
+export function useObserved<V,T extends Observable, P extends keyof T>(
+    object: T|ObservableContainer<T>, property: P, map?: (v:T[P], curr?: V)=>V, invMap?: (v: V, curr: T[P])=> T[P]) {
+    const currentValue = (object as T)[property]
+    if (map) {
+        const [value, setValue] = useState<V>(map(currentValue))
+        useObserver((v:T[P])=> {setValue(map(v, value))}, object, property)
+        if (invMap)
+            return [value, (v: V)=> {(object as T)[property] = (invMap(v, (object as T)[property]))}]
+        else
+            return [value]
+    } else {
+        const [value, setValue] = useState<T[P]>(currentValue)
+        useObserver(setValue, object, property)
+        return [value, (v: T[P])=> { (object as T)[property] = v }]
+    }
 }
 
 export function useChildrenObserver<T extends Object>(
