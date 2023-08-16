@@ -9,16 +9,16 @@
 
     .logo {
         display: flex;
-        overflow: hidden;
         margin: 1em;
         justify-content: center;
-        filter: drop-shadow(0 0 8em rgb(10, 164, 171));
         flex: 8;
+        min-height: 0;
 
         img {
             height: 100%;
             width: min(94%, 400px);
             object-fit: contain;
+            filter: drop-shadow(0 0 8em rgb(10, 164, 171));
         }
     }
 

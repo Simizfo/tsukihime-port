@@ -86,7 +86,7 @@ const TitleMenuScreen = () => {
           </div>
 
           <div className='tsuki-remake'>
-            <img src={tsukiR} alt="tsukihime logo" className="logo"/>
+            <img src={tsukiR} alt="tsukihime logo" className="logo" draggable={false} />
             <span>{bb(strings.title.about.remake
                     .replace('$0', "[url='http://typemoon.com/products/tsukihime/']")
                     .replace('$1', "[/url]"))}</span>
@@ -99,7 +99,7 @@ const TitleMenuScreen = () => {
       </Modal>
 
       <div className="logo">
-        <motion.img src={tsukiLogo} alt="tsukihime logo"
+        <motion.img src={tsukiLogo} alt="tsukihime logo" draggable={false}
           initial={{ opacity: 0, scale: 0.6 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
