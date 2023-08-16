@@ -29,12 +29,12 @@ const ExtraScreen = () => {
           <section id="extra-gallery">
             <div className="gallery-previews">
               {GALLERY_IMGS.map((image, index) =>
-                <img key={index} src={imageUrl(image, "sd")} alt="event" />
+                <img key={index} src={imageUrl(image, "sd")} alt="event" draggable={false} />
               )}
 
               {/* Placeholders */}
               {Array(Math.max(0, GALLERY_IMG_NB - GALLERY_IMGS.length)).fill(0).map((_, index) =>
-                <img key={index} src={imageUrl("notreg", "sd")} alt="placeholder" />
+                <img key={index} src={imageUrl("notreg", "sd")} alt="placeholder" draggable={false} />
               )}
             </div>
 

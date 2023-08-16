@@ -62,11 +62,11 @@ const GalleryScreen = () => {
             {images.map(({src_hd, src_sd, ...image}) =>
               <React.Fragment key={image.img}>
                 {src_sd === defaultThumbnail ?
-                  <img src={src_sd} alt="event" />
+                  <img src={src_sd} alt="event" draggable={false} />
                 :
                   <a href={src_hd} data-fancybox="gallery"
                     className={image.sensitive && settings.blurThumbnails ? 'blur' : ''}>
-                    <img src={src_sd} alt="event" />
+                    <img src={src_sd} alt="event" draggable={false} />
                   </a>
                 }
               </React.Fragment>

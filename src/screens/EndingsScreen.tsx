@@ -40,14 +40,14 @@ const EndingsScreen = () => {
             <Tooltip id="osiete" place="top" className="tooltip" />
             {Object.values(osiete).map((ending, index)=>
               <div key={index} className={`badending ${ending?.seen ? 'seen' : ''}`}>
-                {ending?.seen ? <img src={chalkboard} alt={`Bad Ending ${ending.scene}`}
+                {ending?.seen ? <img src={chalkboard} alt={`Bad Ending ${ending.scene}`} draggable={false}
                                   data-tooltip-id="osiete"
                                   data-tooltip-html={ReactDOMServer.renderToStaticMarkup(
                                   <div>
                                     {wbb(ending.name)}<br />
                                     Day: {ending.day}
                                   </div>)} />
-                : <img src={chalkboard} alt="Bad Ending" />
+                : <img src={chalkboard} alt="Bad Ending" draggable={false} />
                 }
               </div>
             )}
@@ -65,7 +65,8 @@ export default EndingsScreen
 const EndingComponent = ({ending:{char, image, name, day, type}}: {ending: RouteEnding}) => {
   return (
     <div className={`ending ${char}`}>
-      <img className="ending-img" src={`${imgPrefix}${image}.webp`} alt={name} />
+      <img className="ending-img" src={`${imgPrefix}${image}.webp`}
+        alt={name} draggable={false} />
       <div className="ending-name">{wbb(strings.scenario.routes[char][day])}</div>
       <div className="ending-bottom">
         <div>{strings.characters[char]}</div>
