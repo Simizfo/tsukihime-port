@@ -77,7 +77,7 @@ interface ConfigLayoutProps {
 }
 export const ConfigLayout = ({ title, desc, children, ...props }: ConfigLayoutProps) => (
   <div className="config" {...props}>
-    <div>{title}</div>
+    <div className="config-name">{title}</div>
 
     <div className="config-actions">
       {children}

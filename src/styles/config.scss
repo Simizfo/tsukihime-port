@@ -52,6 +52,9 @@
                 border-bottom: 1px solid rgb(255 255 255 / 12%);
             }
 
+            .config-name {
+                margin-left: min(4%, 1em);
+            }
             .config-actions {
                 display: flex;
                 flex-wrap: wrap;
@@ -169,10 +172,21 @@
             .config {
                 grid-template-columns: 1fr;
                 row-gap: 0.4em;
+                padding-block: 1em;
 
+                .config-name {
+                    font-size: .9em;
+                    margin-bottom: .2em;
+                }
                 .config-actions {
                     flex-direction: column;
                     flex-wrap: nowrap;
+                    .config-btns {
+                        gap: 0.6em;
+                        .config-btn {
+                            min-width: clamp(80px, 26%, 100px);
+                        }
+                    }
                 }
             }
         }
