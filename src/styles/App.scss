@@ -169,6 +169,7 @@ main {
             text-shadow: #000 1px 1px 1px, #000 -1px 1px 1px,
                             #000 -1px -1px 1px, #000 1px -1px 1px;
             margin: var(--margin);
+            user-select: none;
             .phase-title, .phase-day {
                 position: absolute;
                 width: 100%;
