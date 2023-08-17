@@ -207,8 +207,15 @@ main {
     }
     &.monochrome {
         div {
-            mix-blend-mode: multiply;
             filter: grayscale(1);
+        }
+        
+        &:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgb(255, 0, 255);
+            mix-blend-mode: multiply;
         }
     }
 }
