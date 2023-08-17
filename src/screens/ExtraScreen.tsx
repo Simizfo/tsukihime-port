@@ -34,6 +34,8 @@ const ExtraScreen = () => {
         <main>
 
           <section id="extra-gallery">
+            <Link to={SCREEN.GALLERY} className="page-link">Gallery</Link>
+
             <div className="gallery-previews">
               {galleryImgs.map((image, index) =>
                 <img key={index} src={imageUrl(image, "thumb")} alt="event" draggable={false} />
@@ -44,12 +46,15 @@ const ExtraScreen = () => {
                 <img key={index} src={defaultThumbnail} alt="placeholder" draggable={false} />
               )}
             </div>
-
-            <Link to={SCREEN.GALLERY} className="page-link">Gallery</Link>
           </section>
           
           <section>
             <Link to={SCREEN.ENDINGS} className="page-link">Endings</Link>
+          </section>
+
+          <section id="extra-scenes">
+            <Link to="#" className="page-link">Scenes</Link>
+            <div>Coming soon</div>
           </section>
         </main>
 

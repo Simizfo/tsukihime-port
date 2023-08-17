@@ -1,7 +1,7 @@
 #extra {
 
     section {
-        margin-bottom: max(1em, 4vh);
+        margin-bottom: max(1em, 3vh);
         border-radius: 6px;
         padding: 1em;
         background-color: var(--menu-container);
@@ -20,7 +20,7 @@
         
             display: block;
             font-size: clamp(1.4em, 6vmin, 1.6em);
-            width: fit-content;
+            width: max-content;
 
             &:hover {
                 cursor: pointer;
@@ -34,11 +34,14 @@
     }
 
     #extra-gallery {
+        .page-link {
+            float: left;
+            margin-right: 2em;
+        }
         .gallery-previews {
             display: flex;
             overflow-x: hidden;
-            gap: .6em;
-            margin-bottom: 1em;
+            gap: 8px;
 
             img {
                 width: 100%;
@@ -47,5 +50,10 @@
                 background-color: #1a353f59;
             }
         }
+    }
+
+    #extra-scenes {
+        pointer-events: none;
+        opacity: .5;
     }
 }
