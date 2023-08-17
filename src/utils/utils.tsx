@@ -133,7 +133,7 @@ export function jsonDiff<T extends JSONObject>(obj: T, ref: Readonly<RecursivePa
       const objArray = obj[p] as any[]
       if (objArray.length != refArray.length ||
           objArray.some((v, i) => v != refArray[i])) {
-        result[p] = objArray
+        result[p] = Array.from(objArray)
       }
     } else {
       const val = jsonDiff(obj[p] as JSONObject, ref[p] as JSONObject) as JSONObject

@@ -5,16 +5,22 @@ import strings, { imageUrl, useLanguageRefresh } from '../utils/lang'
 import { SCREEN } from '../utils/display'
 import { settings } from '../utils/variables'
 import { findImageObjectByName } from '../utils/gallery'
+import { useState, useEffect } from 'react'
 
 const GALLERY_IMG_NB = 8
-// get random, non sensitives images
-const GALLERY_IMGS = settings.eventImages
-                      .filter(image => !findImageObjectByName(image)?.sensitive)
-                      .sort(() => Math.random() - 0.5)
-                      .slice(0, GALLERY_IMG_NB) || []
 
 const ExtraScreen = () => {
   useLanguageRefresh()
+  
+// get random, non sensitives images
+  const [galleryImgs, setGalleryImgs] = useState<string[]>([])
+
+  useEffect(()=> {
+    setGalleryImgs(settings.eventImages
+      .filter(image => !findImageObjectByName(image)?.sensitive)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, GALLERY_IMG_NB))
+  }, [])
   
   return (
     <motion.div
@@ -28,12 +34,12 @@ const ExtraScreen = () => {
 
           <section id="extra-gallery">
             <div className="gallery-previews">
-              {GALLERY_IMGS.map((image, index) =>
+              {galleryImgs.map((image, index) =>
                 <img key={index} src={imageUrl(image, "sd")} alt="event" draggable={false} />
               )}
 
               {/* Placeholders */}
-              {Array(Math.max(0, GALLERY_IMG_NB - GALLERY_IMGS.length)).fill(0).map((_, index) =>
+              {Array(Math.max(0, GALLERY_IMG_NB - galleryImgs.length)).fill(0).map((_, index) =>
                 <img key={index} src={imageUrl("notreg", "sd")} alt="placeholder" draggable={false} />
               )}
             </div>
