@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom"
 import { graphicElements } from "../layers/GraphicsLayer"
 import strings from "../utils/lang"
 import { Tooltip } from 'react-tooltip'
+import { settings } from "../utils/variables"
 
 //##############################################################################
 //#                               TOOL FUNCTIONS                               #
@@ -103,7 +104,7 @@ const SaveDetails = ({id, saveState, deleteSave, ...props}: SaveDetailsProps)=> 
   return (
     <div className="info" {...props}>
       <div className="graphics">
-        {graphicElements(saveState?.graphics ?? saveState?.context.graphics ?? {bg:"notreg"}, {}, 'sd')}
+        {graphicElements(saveState?.graphics ?? saveState?.context.graphics ?? {bg:"notreg"}, {}, settings.resolution)}
       </div>
       {id != undefined && saveState != undefined &&
         <div className="deta">

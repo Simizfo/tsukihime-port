@@ -10,12 +10,13 @@ import strings, { imageUrl, useLanguageRefresh } from '../utils/lang'
 import { SCREEN } from '../utils/display'
 
 type CharacterId = keyof typeof GALLERY_IMAGES
-type GalleryItem = GalleryImg & {src_sd: string, src_hd: string}
+type GalleryItem = GalleryImg & {src_thumb: string, src_hd: string}
+
+const defaultThumbnail = imageUrl("notreg", "thumb")
 
 const GalleryScreen = () => {
   const [selected, setSelected] = useState<CharacterId>("ark")
   const [images, setImages] = useState<GalleryItem[]>([])
-  const [defaultThumbnail] = useState(imageUrl("notreg", "sd"))
   useLanguageRefresh()
 
   useEffect(()=> {
@@ -25,11 +26,11 @@ const GalleryScreen = () => {
     
     imagesTmp = imagesTmp.map((image: GalleryImg) => {
       const name = `event/${image.img}`
-      const [sd, hd] = settings.eventImages.includes(name)
-                  ? [imageUrl(name, 'sd'), imageUrl(name, 'hd')]
+      const [thumb, hd] = settings.eventImages.includes(name)
+                  ? [imageUrl(name, 'thumb'), imageUrl(name, 'hd')]
                   : [defaultThumbnail, undefined]
 
-      return {...image, src_sd: sd, src_hd: hd}
+      return {...image, src_thumb: thumb, src_hd: hd}
     })
 
     setImages(imagesTmp)
@@ -59,14 +60,14 @@ const GalleryScreen = () => {
               Thumbs: false,
               Toolbar: false,
             }}>
-            {images.map(({src_hd, src_sd, ...image}) =>
+            {images.map(({src_hd, src_thumb, ...image}) =>
               <React.Fragment key={image.img}>
-                {src_sd === defaultThumbnail ?
-                  <img src={src_sd} alt="event" draggable={false} />
+                {src_thumb === defaultThumbnail ?
+                  <img src={src_thumb} alt="event" draggable={false} />
                 :
                   <a href={src_hd} data-fancybox="gallery"
                     className={image.sensitive && settings.blurThumbnails ? 'blur' : ''}>
-                    <img src={src_sd} alt="event" draggable={false} />
+                    <img src={src_thumb} alt="event" draggable={false} />
                   </a>
                 }
               </React.Fragment>

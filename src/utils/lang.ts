@@ -17,7 +17,7 @@ export type LangFile = typeof defaultStrings & {
     scenes: typeof SCENE_ATTRS.scenes
   },
   images: {
-    "redirect-ids": Record<string, {sd:`${string}\$${string}`, hd:`${string}\$${string}`}>,
+    "redirect-ids": Record<string, {thumb:`${string}\$${string}`, sd:`${string}\$${string}`, hd:`${string}\$${string}`}>,
     "redirected-images": Record<string, string>
   }
 }
