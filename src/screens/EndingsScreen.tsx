@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import '../styles/endings.scss'
 import { motion } from 'framer-motion'
-import strings, { useLanguageRefresh } from '../utils/lang'
+import strings, { imageUrl, useLanguageRefresh } from '../utils/lang'
 import { SCREEN } from '../utils/display'
 import chalkboard from '../assets/images/chalkboard.webp'
 import { wbb } from '../utils/utils'
@@ -10,7 +10,6 @@ import { Tooltip } from 'react-tooltip'
 import { settings } from '../utils/variables'
 import ReactDOMServer from 'react-dom/server';
 
-const imgPrefix = "/image/event/"
 // settings.completedScenes.push("s521")
 const EndingsScreen = () => {
   useLanguageRefresh()
@@ -65,7 +64,7 @@ export default EndingsScreen
 const EndingComponent = ({ending:{char, image, name, day, type}}: {ending: RouteEnding}) => {
   return (
     <div className={`ending ${char}`}>
-      <img className="ending-img" src={`${imgPrefix}${image}.webp`}
+      <img className="ending-img" src={imageUrl(`event/${image}`, 'thumb')}
         alt={name} draggable={false} />
       <div className="ending-name">{wbb(strings.scenario.routes[char][day])}</div>
       <div className="ending-bottom">
