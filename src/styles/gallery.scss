@@ -13,6 +13,7 @@
         a {
             overflow: hidden;
             height: max-content;
+            background-color: #0e98cb59;
             display: table; // don't ask why, firefox makes no sense
 
             &:hover img {
@@ -24,6 +25,7 @@
             aspect-ratio: 4/3;
             width: 100%;
             transition: .2s ease-out;
+            background-color: #1a353f59;
         }
         .blur img {
             filter: blur(30px);

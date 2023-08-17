@@ -86,7 +86,7 @@ const TitleMenuScreen = () => {
           </div>
 
           <div className='tsuki-remake'>
-            <img src={tsukiR} alt="tsukihime logo" className="logo" draggable={false} />
+            <img src={tsukiR} alt="tsukihime remake logo" className="logo" draggable={false} />
             <span>{bb(strings.title.about.remake
                     .replace('$0', "[url='http://typemoon.com/products/tsukihime/']")
                     .replace('$1', "[/url]"))}</span>
