@@ -1,6 +1,6 @@
 import { ChangeEvent, Fragment, memo, useEffect, useState } from "react"
 import { SCREEN, displayMode } from "../utils/display"
-import { bb} from "../utils/utils"
+import { bb, wbb } from "../utils/utils"
 import { PageContent, SceneName } from "../types"
 import { SAVE_EXT } from "../utils/constants"
 import { SaveState, QUICK_SAVE_ID, deleteSaveState, getSaveState, listSaveStates, loadSaveState, storeCurrentState, addSavesChangeListener, removeSavesChangeListener, exportSave, loadSaveFiles } from "../utils/savestates"
@@ -30,12 +30,12 @@ function phaseTitle(saveState: SaveState) {
   if (!phase || !phase.route || !phase.routeDay) {
     return bb(getSceneTitle(context.label as SceneName) ?? "")
   }
-  return bb(strings.scenario.routes[phase.route][phase.routeDay])
+  return wbb(strings.scenario.routes[phase.route][phase.routeDay])
 }
 
 function phaseDay(saveState: SaveState) {
   const day = saveState.context.phase?.day
-  return day ? bb(strings.scenario.days[day-1]) : ""
+  return day ? wbb(strings.scenario.days[day-1]) : ""
 }
 
 //##############################################################################

@@ -163,26 +163,41 @@ main {
         &.l.phase, &.r.phase {
             --margin: 1em;
             grid-column: 1 / span 3;
-            height: calc(100% - 2 * var(--margin));
-            width: calc(100% - 2 * var(--margin));
-            font-size: 150%;
+            height: 100%;
+            width: 100%;
+            font-size: 1.6em;
+            line-height: 1.2em;
             text-shadow: #000 1px 1px 1px, #000 -1px 1px 1px,
                             #000 -1px -1px 1px, #000 1px -1px 1px;
-            margin: var(--margin);
             user-select: none;
-            .phase-title, .phase-day {
+            & > div {
                 position: absolute;
-                width: 100%;
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+
+                .phase-day {
+                    font-size: .8em;
+                }
             }
             &.l {
                 text-align: left;
-                .phase-day { top: calc(2.5em); }
-                .phase-title { bottom: calc(100% - 2.5em); }
+
+                & > div {
+                    top: min(8%, 3rem);
+                    left: var(--margin);
+                    margin-right: var(--margin);
+                }
             }
             &.r {
                 text-align: right;
-                .phase-title { bottom: calc(2.5em); }
-                .phase-day { top: calc(100% - 2.5em); }
+                
+                & > div {
+                    bottom: min(8%, 3rem);
+                    right: var(--margin);
+                    margin-left: var(--margin);
+                }
             }
         }
 

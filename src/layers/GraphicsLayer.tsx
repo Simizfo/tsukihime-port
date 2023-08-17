@@ -213,10 +213,12 @@ export function graphicElement(pos: SpritePos, image: string,
       className={className}
       {...(isColor ? {style:{ background: image, ...style }} : {})}
       {...(isPhaseText || isColor ? attrs : {})}>
-      {isPhaseText ? <>
-          <span className="phase-title">{_phaseTitle}</span><br/>
-          {_dayTitle && <span className="phase-day">{_dayTitle}</span>}
-      </> : !isColor &&
+      {isPhaseText ?
+      <div>
+        <div className="phase-title">{_phaseTitle}</div>
+        {_dayTitle && <div className="phase-day">{_dayTitle}</div>}
+      </div>
+      : !isColor &&
         <img src={imageUrl(image, resolution)} alt={`[[sprite:${image}]]`} draggable={false}
           className={findImageObjectByName(image)?.sensitive && settings.blurThumbnails ? "blur" : ""}
           {...attrs}
