@@ -1,36 +1,4 @@
-.tabs {
-    border-bottom: 2px solid var(--active);
-    display: flex;
-    flex-direction: row;
-    gap: .4em;
-    padding-inline: 1em;
-    overflow-x: auto;
-
-    button {
-        padding: .4em min(1.6em, 4vw);
-        background-color: transparent;
-        transition: .2s ease-in-out;
-        border-radius: 8px 8px 0 0;
-        font-size: 1.1em;
-        border: 2px solid transparent;
-        border-bottom: 0;
-
-        &:hover, &.active:hover {
-            background-color: var(--active);
-        }
-        &:focus-visible {
-            background-color: var(--focus);
-        }
-
-        &.active {
-            border-color: var(--active);
-            background-color: rgb(4 45 64 / 45%);
-        }
-        &:focus-visible.active {
-            background-color: var(--focus);
-        }
-    }
-}
+@use "partials/_tabs";
 
 #config {
     section {

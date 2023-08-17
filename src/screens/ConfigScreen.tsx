@@ -7,8 +7,8 @@ import ConfigMainTab from './config/ConfigMainTab'
 import ConfigAdultTab from './config/ConfigAdultTab'
 import ConfigAdvancedTab from './config/ConfigAdvancedTab'
 import ConfigControlsTab from './config/ConfigControlsTab'
-import TabBtn from '../components/TabBtn'
 import strings, { useLanguageRefresh } from '../utils/lang'
+import TabsComponent from '../components/TabsComponent'
 
 enum Tabs {
   main = "Main",
@@ -49,13 +49,8 @@ const ConfigScreen = () => {
         <h2 className="page-title">Config</h2>
 
         <main>
-          <div className="tabs">
-            {Object.values(Tabs).map(tabBtn =>
-              <TabBtn key={tabBtn} text={tabBtn}
-                active={tabBtn === activeTab}
-                onClick={() => setActiveTab(tabBtn)} />
-            )}
-          </div>
+          <TabsComponent tabs={Object.values(Tabs)}
+            selected={activeTab} setSelected={setActiveTab} />
 
           {tabComponents[activeTab]}
         </main>

@@ -29,8 +29,8 @@
         }
         .blur img {
             filter: blur(30px);
-            transition: .2s ease-out;
-            transition-delay: .8s;
+            transition: .3s ease-out;
+            transition-delay: .6s;
 
             &:hover {
                 filter: blur(0);
