@@ -8,7 +8,6 @@ import TextLayer from '../layers/TextLayer';
 import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
 import KeyMap from '../utils/KeyMap';
 import script from '../utils/script';
-import { objectMatch } from '../utils/utils';
 import { gameContext } from '../utils/variables';
 import { quickSave, quickLoad, loadSaveState } from "../utils/savestates";
 import SkipLayer from '../layers/SkipLayer';
@@ -22,6 +21,7 @@ import { useNavigate } from 'react-router-dom';
 import { SCREEN, displayMode } from '../utils/display';
 import { KeysMatching } from '../types';
 import { useLanguageRefresh } from '../utils/lang';
+import ConfigLayer from '../layers/ConfigLayer';
 
 //##############################################################################
 //#                                KEY MAPPING                                 #
@@ -57,6 +57,8 @@ const keyMap = new KeyMap({
               {key: "A", repeat: false}],
   "save":     [()=> isViewAnyOf("text", "graphics"),
               {key: "Z", repeat: false}],
+  "config":   [()=> isViewAnyOf("text", "graphics"),
+              {key: "C", repeat: false}],
   "bg_move":  [()=> isViewAnyOf("text", "graphics"),
               {key: "ArrowUp", ctrlKey: true, repeat: false, [KeyMap.args]: "up"},
               {key: "ArrowDown", ctrlKey: true, repeat: false, [KeyMap.args]: "down"}]
@@ -70,6 +72,7 @@ const keyMap = new KeyMap({
     case "graphics" : toggleView('graphics'); break
     case "load"     : toggleView('load'); break
     case "save"     : toggleView('save'); break
+    case "config"   : toggleView('config'); break
     case "q_save"   : quickSave(); break
     case "q_load"   : quickLoad(); break
     case "bg_move"  : moveBg(args[0]); break
@@ -226,6 +229,8 @@ const Window = () => {
       <HistoryLayer />
 
       <SavesLayer />
+
+      <ConfigLayer />
 
       <SkipLayer />
 

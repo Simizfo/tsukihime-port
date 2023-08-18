@@ -12,9 +12,6 @@ import strings from "../utils/lang"
 /**
  * TODO
  * - scène suivante
- * - lecture auto
- * - sauvegarder
- * - charger
  */
 const MenuLayer = () => {
 
@@ -64,6 +61,11 @@ const MenuLayer = () => {
     displayMode.load = true
   }
 
+  const configMode = () => {
+    displayMode.menu = false
+    displayMode.config = true
+  }
+
   const autoPlay = () => {
     displayMode.menu = false
     script.autoPlay = true
@@ -99,6 +101,9 @@ const MenuLayer = () => {
           </button>
           <button onClick={loadMode}>
             {strings.menu["load"]}
+          </button>
+          <button onClick={configMode}>
+            {strings.menu["config"]}
           </button>
           <button onClick={autoPlay}>
             {strings.menu["auto-play"]}

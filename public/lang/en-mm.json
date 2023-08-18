@@ -217,6 +217,7 @@
     "history": "History",
     "save": "Save",
     "load": "Load",
+    "config": "Config",
     "auto-play": "Auto-Play",
     "ffw": "Fast forward",
     "title": "Title",

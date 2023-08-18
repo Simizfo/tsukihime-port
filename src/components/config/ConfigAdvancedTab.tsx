@@ -1,5 +1,5 @@
 import { useEffect, useReducer, useState } from "react"
-import { ConfigButtons, ConfigLayout, ResetBtn } from "../ConfigScreen"
+import { ConfigButtons, ConfigItem, ResetBtn } from "../ConfigLayout"
 import { defaultSettings, settings } from "../../utils/variables"
 import { addEventListener, deepAssign, isFullscreen, jsonDiff, requestJSONs, textFileUserDownload, toggleFullscreen } from "../../utils/utils"
 import { SaveState, clearSaveStates, listSaveStates, restoreSaveStates } from "../../utils/savestates"
@@ -114,7 +114,7 @@ const ConfigAdvancedTab = () => {
         updateValue={updateValue}
       />
 
-      <ConfigLayout title={strings.config.data}>
+      <ConfigItem title={strings.config.data}>
         <div className="config-btns">
           <button className="config-btn"
             onClick={exportData}>
@@ -129,7 +129,7 @@ const ConfigAdvancedTab = () => {
             {strings.config["data-erase"]}
           </button>
         </div>
-      </ConfigLayout>
+      </ConfigItem>
 
       <ResetBtn onClick={() => {
         const defaultConf = deepAssign(structuredClone(conf), defaultSettings, {extend: false})

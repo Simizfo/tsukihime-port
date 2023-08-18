@@ -17,6 +17,7 @@ let skip: boolean = false;
 let choice: boolean = false;
 let graphics: boolean = false;
 let savesVariant: 'save'|'load'|'' = '';
+let config: boolean = false;
 
 export const displayMode = {
   screen: SCREEN.TITLE,
@@ -107,6 +108,22 @@ export const displayMode = {
 
   get savesVariant() { return savesVariant },
 
+  get config() { return config },
+  set config(v: boolean) {
+    if (v != config) {
+      config = v
+      if (v) {
+        this.dialog = false
+        this.text = false
+        this.history = false
+        this.saveScreen = false
+      } else {
+        this.text = true
+        this.dialog = true
+      }
+    }
+  },
+
   get graphics() { return graphics },
   set graphics(v: boolean) {
     if (v != graphics) {
@@ -166,6 +183,7 @@ observe(displayMode, "screen", (screen)=> {
     displayMode.dialog = false
     displayMode.saveScreen = false
     displayMode.menu = false
+    displayMode.config = false
   }
 })
 

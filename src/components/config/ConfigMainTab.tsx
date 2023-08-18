@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { ConfigButtons, ConfigLayout, ResetBtn } from "../ConfigScreen"
+import { ConfigButtons, ConfigItem, ResetBtn } from "../ConfigLayout"
 import { defaultSettings, settings } from "../../utils/variables"
 import { ViewRatio } from "../../types"
 import { TEXT_SPEED } from "../../utils/constants"
@@ -50,7 +50,7 @@ const ConfigMainTab = () => {
   return (
     <section>
       {(Object.keys(conf.volume) as Array<keyof typeof volumeNames>).map(key=>
-        <ConfigLayout key={key} title={volumeNames[key]}>
+        <ConfigItem key={key} title={volumeNames[key]}>
           <div className="config-range">
           <span className="icon"><FaVolumeOff /></span>
             <input
@@ -70,7 +70,7 @@ const ConfigMainTab = () => {
               {negative(conf.volume[key]) ? <FaVolumeMute aria-label="mute" /> : <FaVolumeUp aria-label="unmute" />}
             </button>
           </div>
-        </ConfigLayout>
+        </ConfigItem>
       )}
 
       <ConfigButtons
@@ -98,7 +98,7 @@ const ConfigMainTab = () => {
         updateValue={updateValue}
       />
 
-      <ConfigLayout title={strings.config["auto-play-delay-text"].replace('$0',msToS(conf.autoClickDelay))}>
+      <ConfigItem title={strings.config["auto-play-delay-text"].replace('$0',msToS(conf.autoClickDelay))}>
         <div className="config-range">
         <span className="icon"><FaMinus /></span>
           <input
@@ -112,9 +112,9 @@ const ConfigMainTab = () => {
             }} />
           <span className="icon"><FaPlus /></span>
         </div>
-      </ConfigLayout>
+      </ConfigItem>
 
-      <ConfigLayout title={strings.config["auto-play-delay-page"].replace('$0',msToS(conf.nextPageDelay))}>
+      <ConfigItem title={strings.config["auto-play-delay-page"].replace('$0',msToS(conf.nextPageDelay))}>
         <div className="config-range">
         <span className="icon"><FaMinus /></span>
           <input
@@ -128,7 +128,7 @@ const ConfigMainTab = () => {
             }} />
           <span className="icon"><FaPlus /></span>
         </div>
-      </ConfigLayout>
+      </ConfigItem>
 
       <ResetBtn onClick={() => {
         const defaultConf = deepAssign(structuredClone(conf), defaultSettings, {extend: false})

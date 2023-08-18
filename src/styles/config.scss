@@ -1,6 +1,10 @@
 @use "partials/_tabs";
 
-#config {
+#config-layout {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
     section {
         padding: 1em;
         display: flex;

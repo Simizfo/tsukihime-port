@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { ConfigButtons, ResetBtn } from "../ConfigScreen"
+import { ConfigButtons, ResetBtn } from "../ConfigLayout"
 import { defaultSettings, settings } from "../../utils/variables"
 import { deepAssign } from "../../utils/utils"
 import strings from "../../utils/lang"
