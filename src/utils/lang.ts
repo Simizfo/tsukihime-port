@@ -5,7 +5,8 @@ import { observe, useObserver } from "./Observer"
 import { SCENE_ATTRS } from "./constants"
 import { RouteName, RouteDayName } from "../types"
 import { useReducer } from "react"
-const LANGUAGES_LIST_URL = "/lang/languages.json"
+const LANG_DIR = `${import.meta.env.BASE_URL}lang/`
+const LANGUAGES_LIST_URL = `${LANG_DIR}languages.json`
 
 export type LangCode = string
 
@@ -48,7 +49,7 @@ async function loadStrings(language: LangCode): Promise<LangFile|undefined> {
   if (!strings)
     return undefined
   if (url) {
-    const response = await fetch(url.indexOf(':') >= 0 ? url : `/lang/${url}`)
+    const response = await fetch(url.indexOf(':') >= 0 ? url : `${LANG_DIR}${url}`)
     if (response.ok) {
       const json = await response.json() as LangFile
       deepAssign(strings, json)

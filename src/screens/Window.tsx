@@ -120,8 +120,9 @@ function back() {
 }
 function canDisableGraphics() {
   return script.isCurrentLineText() ||
-         script.currentLine.startsWith("select") ||
-         script.currentLine.match(/gosub\s+\*(?!(left|right))/)
+         script.currentLine?.startsWith("select") ||
+         //script.currentLine?.startsWith("osiete") || TODO uncomment if necessary, or remove
+         script.currentLine?.match(/gosub\s+\*(?!(left|right))/)
 }
 function next() {
   if (isViewAnyOf("text", "graphics")) {

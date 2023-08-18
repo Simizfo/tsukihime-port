@@ -146,7 +146,12 @@ function buildCommands() {
     'goto'      : processGoto,
     'gosub'     : processGosub,
 
-    'skip'      : (n: string)=> { gameContext.index += parseInt(n) },
+    'osiete'    : (label)=> {
+      /* TODO : dialog box to ask user. if yes, `goto label`, if not, `goto *endofplay`*/
+      processGoto(label)
+    },
+
+    'skip'      : (n)=> { gameContext.index += parseInt(n) },
     'return'    : ()=> { onSceneEnd(); return LOCK_CMD },
     'click'     : processClick,
 

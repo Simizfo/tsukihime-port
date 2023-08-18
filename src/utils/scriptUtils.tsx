@@ -48,7 +48,7 @@ const ignoredFBlockLines = [
   "gosub *regard_update",
   "!sd"
 ];
-
+const osieteRE = /[`"][^`"]+[`"],\s*(?<label>\*f5\d{2}),\s*[`"][^`"]+[`"],\s*\*endofplay/
 export async function fetchFBlock(label: string): Promise<string[]> {
   const afterScene = /^skip\d+a?$/.test(label);
   if (afterScene) {
@@ -76,8 +76,12 @@ export async function fetchFBlock(label: string): Promise<string[]> {
     const choices = lines.slice(choiceLine).map(line => line.trim()).join(' ');
     lines.splice(choiceLine);
     lines.push(choices);
+    let osieteMatch = osieteRE.exec(choices)
+    if (osieteMatch && osieteMatch.groups?.["label"])
+      lines.splice(choiceLine, 1, `osiete ${osieteMatch.groups.label}`)
   }
-  return lines;
+  //remove remaining text lines
+  return lines.filter(l=>!isTextLine(l));
 }
 
 //##############################################################################
