@@ -178,7 +178,7 @@ const Window = () => {
     const swipeHandler = new GestureHandler(rootElmtRef.current, {
       swipeTrigDistance: 50,
       onSwipe: (direction)=> {
-        if (displayMode.text) {
+        if (displayMode.text && !displayMode.saveScreen) {
           stopAutoPlay()
           switch(direction) {
             case "up" : displayMode.graphics = true; return true
