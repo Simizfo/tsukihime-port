@@ -11,6 +11,7 @@ import { checkIfCondition, extractInstructions, fetchFBlock, fetchScene, getScen
 import { commands as variableCommands, gameContext, settings } from "./variables"
 import { toast } from "react-toastify"
 import { SCREEN, displayMode } from "./display"
+import strings from "./lang"
 type Instruction = {cmd: string, arg: string}
 type CommandHandler = {next: VoidFunction, cancel?: VoidFunction, autoPlayDelay?: number}
 type CommandProcessFunction =
@@ -387,7 +388,7 @@ function onSceneEnd(label = gameContext.label, nextLabel:LabelName|undefined=und
 }
 
 function warnHScene() {
-  toast('You are about to read an H-scene. Beware of your surroundings.', {
+  toast(strings.game["toast-hscene-waning"], {
     autoClose: 6000,
     toastId: "hscene-warning",
   })

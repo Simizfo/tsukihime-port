@@ -1,11 +1,12 @@
-import { useEffect, useReducer, useState } from "react"
+import { useEffect, useState } from "react"
 import { ConfigButtons, ConfigItem, ResetBtn } from "../ConfigLayout"
 import { defaultSettings, settings } from "../../utils/variables"
 import { addEventListener, deepAssign, isFullscreen, jsonDiff, requestJSONs, textFileUserDownload, toggleFullscreen } from "../../utils/utils"
 import { SaveState, clearSaveStates, listSaveStates, restoreSaveStates } from "../../utils/savestates"
-import strings, { languages, useLanguageRefresh, waitLanguageLoad } from "../../utils/lang"
+import strings, { languages, useLanguageRefresh } from "../../utils/lang"
 import { RecursivePartial } from "../../types"
 import { RxExternalLink } from 'react-icons/rx'
+import { toast } from "react-toastify"
 
 function twoDigits(n: number) {
   return n.toString().padStart(2, '0')
@@ -56,14 +57,28 @@ const ConfigAdvancedTab = () => {
   }
 
   const importData = async () => {
-    const json = (await requestJSONs({accept: '.thfull'}) as Savefile[])?.[0] as Savefile|undefined
-    if (!json)
-      return
-    const importedSettings = deepAssign(defaultSettings, json.settings, {clone: true})
-    deepAssign(settings, importedSettings)
-    if (json.saveStates != undefined) {
-      clearSaveStates()
-      restoreSaveStates(json.saveStates)
+    try {
+      const json = (await requestJSONs({accept: '.thfull'}) as Savefile[])?.[0] as Savefile|undefined
+      if (!json)
+        return
+      const importedSettings = deepAssign(defaultSettings, json.settings, {clone: true})
+      deepAssign(settings, importedSettings)
+      if (json.saveStates != undefined) {
+        clearSaveStates()
+        restoreSaveStates(json.saveStates)
+      }
+
+      toast("Your data has been loaded", {
+        autoClose: 3000,
+        toastId: "loaded-data",
+        type: "success",
+      })
+    } catch (e) {
+      toast("Failed to load data", {
+        autoClose: 3000,
+        toastId: "failed-data",
+        type: "error",
+      })
     }
   }
 
