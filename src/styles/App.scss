@@ -36,7 +36,7 @@
 .page-content {
     max-width: max(1280px, 60%);
     margin-inline: auto;
-    padding: min(6vmin, 2em);
+    padding: min(6vmin, 2rem);
     height: inherit;
     width: inherit;
     display: flex;
@@ -45,7 +45,7 @@
     height: 100vh;
 }
 .page-title {
-    font-size: clamp(2.2em, 8vmin, 3em);
+    font-size: clamp(2.2rem, 8vmin, 3rem);
     margin-block: 0;
     font-family: serif;
     font-weight: 700;
@@ -89,7 +89,7 @@ main {
 /* Overlay */
 .overlay {
     position: fixed;
-    inset: 0px;
+    inset: 0;
     display: flex;
     justify-content: center;
     z-index: 10;
@@ -101,9 +101,9 @@ main {
     max-width: 800px;
     width: 100%;
     align-self: center;
-    border-radius: .6em;
+    border-radius: 12px;
     min-height: min(100%, 50vh);
-    margin: .5em;
+    margin: .5rem;
     box-shadow: 0 5px 26px #030a32;
     padding: 1em;
     border: 1px solid #00628b;
