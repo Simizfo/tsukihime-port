@@ -1,50 +1,54 @@
 import { ReactNode, useEffect, useState } from 'react'
 import '../styles/config.scss'
-import { SCREEN, displayMode } from '../utils/display'
 import ConfigMainTab from '../components/config/ConfigMainTab'
 import ConfigAdultTab from '../components/config/ConfigAdultTab'
 import ConfigAdvancedTab from '../components/config/ConfigAdvancedTab'
 import ConfigControlsTab from '../components/config/ConfigControlsTab'
 import strings, { useLanguageRefresh } from '../utils/lang'
 import TabsComponent from '../components/TabsComponent'
+import { SCREEN } from '../utils/display'
 
 enum Tabs {
   main = "Main",
   adult = "Adult",
-  advanced = "Advanced",
   controls = "Controls",
+  advanced = "Advanced",
 }
 
 const tabComponents = {
   [Tabs.main]: <ConfigMainTab />,
   [Tabs.adult]: <ConfigAdultTab />,
-  [Tabs.advanced]: <ConfigAdvancedTab />,
   [Tabs.controls]: <ConfigControlsTab />,
+  [Tabs.advanced]: <ConfigAdvancedTab />,
 }
 
 type Props = {
   back: ()=>void,
   selectedTab?: Tabs,
   setUrl?: (activeTab: string)=>void,
+  page?: string,
 }
 
-const ConfigLayout = ({back, selectedTab, setUrl}: Props) => {
+const ConfigLayout = ({back, selectedTab, setUrl, page}: Props) => {
   const [activeTab, setActiveTab] = useState(selectedTab || Tabs.main)
   useLanguageRefresh()
 
   useEffect(()=> {
     if (!Object.hasOwn(tabComponents, activeTab))
       setActiveTab(Tabs.main)
-    else {
-      if (setUrl) setUrl(activeTab)
-    }
+    else if (setUrl)
+      setUrl(activeTab)
   }, [activeTab])
+
+  const tabs = page === SCREEN.CONFIG
+                ? Object.values(Tabs)
+                : Object.values(Tabs).filter(t => t !== Tabs.advanced)
 
   return (
     <div id="config-layout">
       <h2 className="page-title">{strings.menu.config}</h2>
 
-      <TabsComponent tabs={Object.values(Tabs)}
+      <TabsComponent tabs={tabs}
         selected={activeTab} setSelected={setActiveTab} />
 
       {tabComponents[activeTab]}
