@@ -130,6 +130,7 @@
     "load": "Load",
     "config": "Config",
     "gallery": "Gallery",
+    "endings": "Endings",
     "about": {
       "port": "This is a web version of [i]Tsukihime[/i], a visual novel published on 2000 by Type-Moon.",
       "project": "Project available on $0Github$1.",

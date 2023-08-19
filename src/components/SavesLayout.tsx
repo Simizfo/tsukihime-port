@@ -187,7 +187,7 @@ const SavesLayer = ({variant, back}: Props) => {
   const focusedSave = focusedId != undefined ? getSaveState(focusedId) : undefined
   const title = strings.saves[variant == "save" ? "title-save" : "title-load"]
   return (
-    <div id="saves-layout">
+    <main id="saves-layout">
       <h2 className="page-title">{title}</h2>
       <div className="saves">
         {variant === "save" ?
@@ -216,7 +216,7 @@ const SavesLayer = ({variant, back}: Props) => {
           {strings.back}
         </button>
       </div>
-    </div>
+    </main>
   )
 }
 

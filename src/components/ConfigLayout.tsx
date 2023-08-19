@@ -45,7 +45,7 @@ const ConfigLayout = ({back, selectedTab, setUrl, page}: Props) => {
                 : Object.values(Tabs).filter(t => t !== Tabs.advanced)
 
   return (
-    <div id="config-layout">
+    <main id="config-layout">
       <h2 className="page-title">{strings.menu.config}</h2>
 
       <TabsComponent tabs={tabs}
@@ -56,7 +56,7 @@ const ConfigLayout = ({back, selectedTab, setUrl, page}: Props) => {
       <button className="menu-btn back-button" onClick={back.bind(null)}>
         {strings.back}
       </button>
-    </div>
+    </main>
   )
 }
 

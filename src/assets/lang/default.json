@@ -129,6 +129,7 @@
     "config": "Config",
     "extra": "Extra",
     "gallery": "ギヤラリー",
+    "endings": "Endings",
     "about": {
       "port": "This is a web version of [b]月姫[/b], a visual novel published on 2000 by TYPE-MOON.",
       "project": "Project available on $0Github$1.",

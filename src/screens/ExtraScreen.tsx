@@ -30,11 +30,11 @@ const ExtraScreen = () => {
       animate={{opacity: 1}}
       exit={{opacity: 0}}>
       <div className="page-content">
-        <h2 className="page-title">Extra</h2>
-        <main>
+        <h2 className="page-title">{strings.title.extra}</h2>
 
+        <main>
           <section id="extra-gallery">
-            <Link to={SCREEN.GALLERY} className="page-link">Gallery</Link>
+            <Link to={SCREEN.GALLERY} className="page-link">{strings.title.gallery}</Link>
 
             <div className="gallery-previews">
               {galleryImgs.map((image, index) =>
@@ -49,7 +49,7 @@ const ExtraScreen = () => {
           </section>
           
           <section>
-            <Link to={SCREEN.ENDINGS} className="page-link">Endings</Link>
+            <Link to={SCREEN.ENDINGS} className="page-link">{strings.title.endings}</Link>
           </section>
 
           <section id="extra-scenes">

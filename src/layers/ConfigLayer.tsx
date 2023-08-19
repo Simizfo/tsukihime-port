@@ -30,7 +30,7 @@ const ConfigLayer = () => {
   }, [])
   
   return (
-    <div className={`box box-save ${display ? "show" : ""}`} ref={rootRef}>
+    <div className={`box box-save-config ${display ? "show" : ""}`} ref={rootRef}>
       <div className="page-content">
         <ConfigLayout back={back} />
       </div>

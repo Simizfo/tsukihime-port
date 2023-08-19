@@ -46,6 +46,7 @@ const GalleryScreen = () => {
       exit={{opacity: 0}}>
       <div className="page-content">
         <h2 className="page-title">{strings.title.gallery}</h2>
+        
         <main>
           <TabsComponent tabs={Object.keys(GALLERY_IMAGES) as Array<CharacterId>}
             selected={selected} setSelected={setSelected}
@@ -70,7 +71,7 @@ const GalleryScreen = () => {
             )}
           </Fancybox>
         </main>
-
+        
         <Link to={SCREEN.EXTRA} className="menu-btn back-button">{strings.back}</Link>
       </div>
     </motion.div>

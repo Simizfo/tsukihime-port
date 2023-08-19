@@ -41,7 +41,7 @@ const SavesLayer = () => {
   }, [])
   
   return (
-    <div className={`box box-save ${display ? "show" : ""}`} ref={rootRef}>
+    <div className={`box box-save-config ${display ? "show" : ""}`} ref={rootRef}>
       <div className="page-content">
         <SavesLayout variant={variant} back={back} />
       </div>

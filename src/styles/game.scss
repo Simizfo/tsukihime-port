@@ -263,10 +263,11 @@
             }
         }
     }
-    .box-save {
+    .box-save-config {
         z-index: -1;
         opacity: 0;
         transition: var(--transition);
+        display: flex;
         &.show {
             z-index: 100;
             opacity: 1;

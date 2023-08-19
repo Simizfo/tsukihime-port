@@ -21,7 +21,7 @@ const EndingsScreen = () => {
       animate={{opacity: 1}}
       exit={{opacity: 0}}>
       <div className="page-content">
-        <h2 className="page-title">Endings</h2>
+        <h2 className="page-title">{strings.title.endings}</h2>
         <main>
 
           <div className="endings-list">
