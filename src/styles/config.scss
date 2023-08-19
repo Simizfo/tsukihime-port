@@ -9,6 +9,7 @@
         overflow-x: hidden;
         flex: 1;
         background-color: var(--menu-container);
+        box-shadow: var(--menu-shadow);
 
         .config {
             display: grid;
@@ -17,7 +18,7 @@
             padding-block: .8em;
 
             &:not(:nth-last-child(2)) {
-                border-bottom: 1px solid rgb(255 255 255 / 12%);
+                border-bottom: 1px solid var(--separator);
             }
 
             .config-name {

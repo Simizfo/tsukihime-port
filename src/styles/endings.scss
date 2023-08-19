@@ -5,6 +5,7 @@
         overflow-x: auto;
         gap: 1em;
         background-color: var(--menu-container);
+        box-shadow: var(--menu-shadow);
         padding: 1em;
         margin-bottom: 1em;
 
@@ -60,6 +61,7 @@
 
     .badendings-list {
         background-color: var(--menu-container);
+        box-shadow: var(--menu-shadow);
         padding: 1em;
         gap: 1em;
         display: flex;
