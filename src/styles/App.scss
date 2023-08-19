@@ -136,6 +136,7 @@ main {
     display: grid;
     grid-template-columns: 50% 1fr 50%;
     background: #000;
+    letter-spacing: initial;
 
     div {
         height: 100%;
