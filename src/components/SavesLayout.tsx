@@ -82,7 +82,7 @@ const SaveListItem = ({id, saveState, onSelect, ...props}: SaveListItemProps)=> 
         onClick={onSelect.bind(null, id)}
         {...(id==QUICK_SAVE_ID ? {'quick-save':''} : {})}
         {...props}>
-      <div className="graphics">
+      <div className={`graphics ${saveState.context.monochrome ? "monochrome" : ""}`}>
         {graphicElements(saveState.graphics ?? saveState.context.graphics ?? {bg: ""}, {}, 'sd')}
       </div>
       <div className="deta">
@@ -103,7 +103,7 @@ type SaveDetailsProps = {
 const SaveDetails = ({id, saveState, deleteSave, ...props}: SaveDetailsProps)=> {
   return (
     <div className="info" {...props}>
-      <div className="graphics">
+      <div className={`graphics ${saveState?.context.monochrome ? "monochrome" : ""}`}>
         {graphicElements(saveState?.graphics ?? saveState?.context.graphics ?? {bg:"notreg"}, {}, settings.resolution)}
       </div>
       {id != undefined && saveState != undefined &&
