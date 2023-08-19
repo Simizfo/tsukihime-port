@@ -83,13 +83,13 @@
 
             &[quick-save]::before {
                 position: absolute;
-                bottom: 0;
+                bottom: 2px;
                 right: 0;
                 content: "Quick Save";
                 font-size: 80%;
                 font-style: italic;
-                background-color: rgb(0 29 48);
-                color: #bbbbc1;
+                background-color: rgb(37 43 57);
+                color: #5297a7;
                 padding: 0.1em 0.5em 0.1em 1.5em;
                 clip-path: polygon(1.5em 0%, 100% 0, 100% 100%, 0 100%);
             }
