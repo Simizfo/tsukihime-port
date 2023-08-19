@@ -5,9 +5,10 @@ import { ViewRatio } from "../../types"
 import { TEXT_SPEED } from "../../utils/constants"
 import { deepAssign, negative } from "../../utils/utils"
 import { FaMinus, FaPlus, FaVolumeMute, FaVolumeOff, FaVolumeUp } from "react-icons/fa"
-import strings from "../../utils/lang"
+import strings, { useLanguageRefresh } from "../../utils/lang"
 
 const ConfigMainTab = () => {
+  useLanguageRefresh()
   const [conf, setConf] = useState(deepAssign({
     // object only used for its structure. Values don't matter.
     volume : undefined,

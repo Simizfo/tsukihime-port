@@ -1,5 +1,7 @@
-const ConfigControlsTab = () => {
+import { useLanguageRefresh } from "../../utils/lang"
 
+const ConfigControlsTab = () => {
+  useLanguageRefresh()
   return (
     <section>
       <div>

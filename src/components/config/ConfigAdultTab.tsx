@@ -2,9 +2,10 @@ import { useEffect, useState } from "react"
 import { ConfigButtons, ResetBtn } from "../ConfigLayout"
 import { defaultSettings, settings } from "../../utils/variables"
 import { deepAssign } from "../../utils/utils"
-import strings from "../../utils/lang"
+import strings, { useLanguageRefresh } from "../../utils/lang"
 
 const ConfigAdultTab = () => {
+  useLanguageRefresh()
   const [conf, setConf] = useState(deepAssign({
     blurThumbnails: undefined,
     warnHScenes: undefined,
