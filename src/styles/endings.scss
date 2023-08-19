@@ -4,10 +4,12 @@
         grid-template-columns: repeat(9, 116px);
         overflow-x: auto;
         gap: 1em;
+        justify-content: space-between;
         background-color: var(--menu-container);
         box-shadow: var(--menu-shadow);
         padding: 1em;
         margin-bottom: 1em;
+        flex: none;
 
         .ending {
             grid-row: 1;
@@ -18,27 +20,27 @@
             overflow: hidden;
             position: relative;
             min-height: 220px;
-            box-shadow: 0 2px 4px #000014;
+            box-shadow: 0 2px 4px 1px #000014;
     
             &.aki {
                 background-image: linear-gradient(180deg, #101010 0%, #212121 100%);
-                box-shadow: 0 2px 4px #101010;
+                box-shadow: 0 2px 4px 1px #101010;
             }
             &.ark {
                 background-image: linear-gradient(180deg, #271700 0%, #646400 100%);
-                box-shadow: 0 2px 4px #271700;
+                box-shadow: 0 2px 4px 1px #271700;
             }
             &.cel {
                 background-image: linear-gradient(180deg, #001727 0%, #003464 100%);
-                box-shadow: 0 2px 4px #001727;
+                box-shadow: 0 2px 4px 1px #001727;
             }
             &.his {
                 background-image: linear-gradient(180deg, #270012 0%, #640022 100%);
-                box-shadow: 0 2px 4px #270012;
+                box-shadow: 0 2px 4px 1px #270012;
             }
             &.koha {
                 background-image: linear-gradient(180deg, #270027 0%, #640064 100%);
-                box-shadow: 0 2px 4px #270027;
+                box-shadow: 0 2px 4px 1px #270027;
             }
     
             .ending-img {
@@ -64,20 +66,23 @@
         box-shadow: var(--menu-shadow);
         padding: 1em;
         gap: 1em;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
+        overflow-y: auto;
 
         h3 {
             all: unset;
             font-size: clamp(1.1em, 7vmin, 1.2em);
             width: 100%;
             margin-bottom: .4em;
+            grid-column: 1/-1;
         }
 
         .badending {
-            width: 30px;
-            height: 30px;
+            width: 32px;
+            height: 32px;
             filter: grayscale(1);
+            opacity: .5;
 
             img {
                 width: 100%;
@@ -86,6 +91,7 @@
 
             &.seen {
                 filter: grayscale(0);
+                opacity: 1;
             }
         }
     }

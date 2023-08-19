@@ -22,11 +22,11 @@ const EndingsScreen = () => {
       exit={{opacity: 0}}>
       <div className="page-content">
         <h2 className="page-title">{strings.title.endings}</h2>
+        
         <main>
-
           <div className="endings-list">
           {Object.values(endings).map((ending, index) => {
-            if (ending.seen) {
+            if (ending.seen || window.unlock) {
               return <EndingComponent ending={ending} key={index} />
             } else {
               return <div key={index} className="ending" />
