@@ -5,8 +5,7 @@ import { PageContent, SceneName } from "../types"
 import { SAVE_EXT } from "../utils/constants"
 import { SaveState, QUICK_SAVE_ID, deleteSaveState, getSaveState, listSaveStates, loadSaveState, storeCurrentState, addSavesChangeListener, removeSavesChangeListener, exportSave, loadSaveFiles } from "../utils/savestates"
 import { getSceneTitle } from "../utils/scriptUtils"
-import { BsFileEarmarkArrowUp } from "react-icons/bs"
-import { FaPlusCircle, FaTrash, FaDownload } from "react-icons/fa"
+import { BsDownload, BsFileEarmarkArrowUp, BsPlusCircle, BsTrash } from "react-icons/bs"
 import { useNavigate } from "react-router-dom"
 import { graphicElements } from "../layers/GraphicsLayer"
 import strings from "../utils/lang"
@@ -114,12 +113,12 @@ const SaveDetails = ({id, saveState, deleteSave, ...props}: SaveDetailsProps)=> 
           <div className="actions">
             <Tooltip id="tooltip" className="tooltip" delayShow={800} />
             <button onClick={deleteSave.bind(null, id)}
-              data-tooltip-id="tooltip" data-tooltip-content="Delete this save">
-              <FaTrash />
+              data-tooltip-id="tooltip" data-tooltip-content="Delete">
+              <BsTrash />
             </button>
             <button onClick={()=>exportSave([id])}
-              data-tooltip-id="tooltip" data-tooltip-content="Download this save">
-              <FaDownload />
+              data-tooltip-id="tooltip" data-tooltip-content="Download">
+              <BsDownload />
             </button>
           </div>
         </div>
@@ -192,7 +191,7 @@ const SavesLayer = ({variant, back}: Props) => {
       <div className="saves">
         {variant === "save" ?
           <button className="save-container create" onClick={createSave}>
-            <FaPlusCircle />
+            <BsPlusCircle />
           </button>
         : <>
           <label htmlFor="import" className="save-container import" tabIndex={0}>

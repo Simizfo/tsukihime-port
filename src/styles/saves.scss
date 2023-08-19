@@ -104,6 +104,8 @@
         display: flex;
         flex-direction: column;
         position: relative;
+        font-size: 1.1em;
+        color: #9d9d9d;
 
         .graphics {
             width: 100%;
@@ -124,7 +126,6 @@
 
                 button {
                     padding: .2em 1em;
-                    font-size: .9em;
                     opacity: .8;
                     display: flex;
                     align-items: center;
