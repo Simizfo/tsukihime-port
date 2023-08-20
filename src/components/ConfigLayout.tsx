@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useState } from 'react'
 import '../styles/config.scss'
-import ConfigMainTab from '../components/config/ConfigMainTab'
-import ConfigAdultTab from '../components/config/ConfigAdultTab'
+import ConfigGameTab from './config/ConfigGameTab'
+import ConfigAudioTab from './config/ConfigAudioTab'
 import ConfigAdvancedTab from '../components/config/ConfigAdvancedTab'
 import ConfigControlsTab from '../components/config/ConfigControlsTab'
 import strings, { useLanguageRefresh } from '../utils/lang'
@@ -9,15 +9,15 @@ import TabsComponent from '../components/TabsComponent'
 import { SCREEN } from '../utils/display'
 
 enum Tabs {
-  main = "Main",
-  adult = "Adult",
+  game = "Game",
+  audio = "Audio",
   controls = "Controls",
   advanced = "Advanced",
 }
 
 const tabComponents = {
-  [Tabs.main]: <ConfigMainTab />,
-  [Tabs.adult]: <ConfigAdultTab />,
+  [Tabs.game]: <ConfigGameTab />,
+  [Tabs.audio]: <ConfigAudioTab />,
   [Tabs.controls]: <ConfigControlsTab />,
   [Tabs.advanced]: <ConfigAdvancedTab />,
 }
@@ -30,12 +30,12 @@ type Props = {
 }
 
 const ConfigLayout = ({back, selectedTab, setUrl, page}: Props) => {
-  const [activeTab, setActiveTab] = useState(selectedTab || Tabs.main)
+  const [activeTab, setActiveTab] = useState(selectedTab || Tabs.game)
   useLanguageRefresh()
 
   useEffect(()=> {
     if (!Object.hasOwn(tabComponents, activeTab))
-      setActiveTab(Tabs.main)
+      setActiveTab(Tabs.game)
     else if (setUrl)
       setUrl(activeTab)
   }, [activeTab])

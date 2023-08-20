@@ -9,6 +9,25 @@
         overflow-x: hidden;
         flex: 1;
 
+        .sub {
+            margin-top: 1em;
+            padding: .8em;
+            border-left: 1px solid cyan;
+            background-color: #00ffff0a;
+
+            .title {
+                color: cyan;
+            }
+
+            .config {
+                border-bottom: 0 !important;
+            }
+
+            .config:not(:last-of-type) {
+                border-bottom: 1px solid var(--separator) !important;
+            }
+        }
+
         .config {
             display: grid;
             grid-template-columns: 1fr 2fr;

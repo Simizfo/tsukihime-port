@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { ConfigButtons, ConfigItem, ResetBtn } from "../ConfigLayout"
 import { defaultSettings, settings } from "../../utils/variables"
-import { addEventListener, deepAssign, isFullscreen, jsonDiff, requestJSONs, textFileUserDownload, toggleFullscreen } from "../../utils/utils"
+import { deepAssign, jsonDiff, requestJSONs, textFileUserDownload } from "../../utils/utils"
 import { SaveState, clearSaveStates, listSaveStates, restoreSaveStates } from "../../utils/savestates"
 import strings, { languages, useLanguageRefresh } from "../../utils/lang"
 import { RecursivePartial } from "../../types"
@@ -23,20 +23,14 @@ const ConfigAdvancedTab = () => {
     resolution: undefined,
     imagesFolder: undefined,
     language: undefined,
+    blurThumbnails: undefined,
+    warnHScenes: undefined,
   }, settings, {extend: false}))  
   useLanguageRefresh()
-
-  const [fullscreen, setFullscreen] = useState<boolean>(isFullscreen()) // don't save in settings
 
   useEffect(()=> {
     deepAssign(settings, conf)
   }, [conf])
-
-  useEffect(()=> {
-    return addEventListener({event: 'fullscreenchange', handler: ()=> {
-      setFullscreen(isFullscreen())
-    }})
-  }, [])
 
   const updateValue = <T extends keyof typeof conf>(
     key: T,
@@ -107,17 +101,6 @@ const ConfigAdvancedTab = () => {
       />
 
       <ConfigButtons
-        title={strings.config.fullscreen}
-        btns={[
-          { text: strings.config.on, value: true },
-          { text: strings.config.off, value: false },
-        ]}
-        property="fullscreen"
-        conf={{fullscreen}}
-        updateValue={toggleFullscreen}
-      />
-
-      <ConfigButtons
         title={strings.config.language}
         desc={strings["translation-desc"] &&
           <>{strings["translation-desc"]} <a href={strings["translation-url"]} target="_blank"><RxExternalLink /></a></>}
@@ -128,6 +111,31 @@ const ConfigAdvancedTab = () => {
         conf={conf}
         updateValue={updateValue}
       />
+
+      <div className="sub">
+        <div className="title">Adult</div>
+        <ConfigButtons
+          title={strings.config["adult-blur"]}
+          btns={[
+            { text: strings.config.on, value: true },
+            { text: strings.config.off, value: false },
+          ]}
+          property="blurThumbnails"
+          conf={conf}
+          updateValue={updateValue}
+        />
+
+        <ConfigButtons
+          title={strings.config["adult-warn"]}
+          btns={[
+            { text: strings.config.on, value: true },
+            { text: strings.config.off, value: false },
+          ]}
+          property="warnHScenes"
+          conf={conf}
+          updateValue={updateValue}
+        />
+      </div>
 
       <ConfigItem title={strings.config.data}>
         <div className="config-btns">

@@ -3,11 +3,11 @@ import { ConfigButtons, ConfigItem, ResetBtn } from "../ConfigLayout"
 import { defaultSettings, settings } from "../../utils/variables"
 import { ViewRatio } from "../../types"
 import { TEXT_SPEED } from "../../utils/constants"
-import { deepAssign, negative } from "../../utils/utils"
-import { FaMinus, FaPlus, FaVolumeMute, FaVolumeOff, FaVolumeUp } from "react-icons/fa"
+import { addEventListener, deepAssign, isFullscreen, toggleFullscreen } from "../../utils/utils"
+import { FaMinus, FaPlus } from "react-icons/fa"
 import strings, { useLanguageRefresh } from "../../utils/lang"
 
-const ConfigMainTab = () => {
+const ConfigGameTab = () => {
   useLanguageRefresh()
   const [conf, setConf] = useState(deepAssign({
     // object only used for its structure. Values don't matter.
@@ -18,62 +18,30 @@ const ConfigMainTab = () => {
     nextPageDelay: undefined,
   }, settings, {extend: false}))
 
+  const [fullscreen, setFullscreen] = useState<boolean>(isFullscreen()) // don't save in settings
+
   useEffect(()=> {
     deepAssign(settings, conf)
   }, [conf])
+
+  useEffect(()=> {
+    return addEventListener({event: 'fullscreenchange', handler: ()=> {
+      setFullscreen(isFullscreen())
+    }})
+  }, [])
 
   const updateValue = <T extends keyof typeof conf>(
     key: T,
     value: typeof conf[T]
   ) => setConf(prev => ({ ...prev, [key]: value }))
-
-  const updateSubValue = <K extends keyof typeof conf, T extends keyof (typeof conf)[K]>(
-    key1: K,
-    key2: T,
-    value: typeof conf[K][T]
-  ) => setConf(prev=> {
-    const newConf = structuredClone(prev)
-    newConf[key1][key2] = value
-    return newConf
-  })
   
   const numFormat = new Intl.NumberFormat(strings.locale, { maximumSignificantDigits: 3 })
   const msToS = (ms: number)=> {
     return numFormat.format(ms/1000)
   }
 
-  const volumeNames: {[key in keyof typeof conf.volume]: string} = {
-    'master': strings.config["volume-master"],
-    'track': strings.config["volume-track"],
-    'se': strings.config["volume-se"]
-  }
-
   return (
     <section>
-      {(Object.keys(conf.volume) as Array<keyof typeof volumeNames>).map(key=>
-        <ConfigItem key={key} title={volumeNames[key]}>
-          <div className="config-range">
-          <span className="icon"><FaVolumeOff /></span>
-            <input
-              type="range"
-              min={0}
-              max={10}
-              step={1}
-              value={Math.abs(conf.volume[key])}
-              onChange={e => {
-                const sign = negative(conf.volume[key]) ? -1 : 1
-                updateSubValue('volume', key, sign * parseInt(e.target.value))
-              }} />
-            <span className="icon"><FaVolumeUp /></span>
-
-            <button className="mute"
-              onClick={()=> updateSubValue('volume', key, -conf.volume[key])}>
-              {negative(conf.volume[key]) ? <FaVolumeMute aria-label="mute" /> : <FaVolumeUp aria-label="unmute" />}
-            </button>
-          </div>
-        </ConfigItem>
-      )}
-
       <ConfigButtons
         title={strings.config.ratio}
         btns={[
@@ -84,6 +52,17 @@ const ConfigMainTab = () => {
         property="fixedRatio"
         conf={conf}
         updateValue={updateValue}
+      />
+
+      <ConfigButtons
+        title={strings.config.fullscreen}
+        btns={[
+          { text: strings.config.on, value: true },
+          { text: strings.config.off, value: false },
+        ]}
+        property="fullscreen"
+        conf={{fullscreen}}
+        updateValue={toggleFullscreen}
       />
 
       <ConfigButtons
@@ -139,4 +118,4 @@ const ConfigMainTab = () => {
   )
 }
 
-export default ConfigMainTab
+export default ConfigGameTab
