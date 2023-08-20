@@ -197,15 +197,22 @@ const SavesLayer = ({variant, back}: Props) => {
           <button
             className={`save-container create ${focusedId === 1 ? "active" : ""}`}
             onClick={createSave}
-            onFocus={setFocusedSave.bind(1, undefined)}
-            onPointerEnter={setFocusedSave.bind(1, undefined)}
-            onMouseEnter={setFocusedSave.bind(1, undefined)}
+            onFocus={setFocusedSave.bind(null, 1)}
+            onPointerEnter={setFocusedSave.bind(null, 1)}
+            onMouseEnter={setFocusedSave.bind(null, 1)}
             onMouseLeave={setFocusedSave.bind(null, undefined)}
           >
             <BsPlusCircle />
           </button>
         : <>
-          <label htmlFor="import" className="save-container import" tabIndex={0}>
+          <label htmlFor="import"
+            className={`save-container import ${focusedId === 2 ? "active" : ""}`}
+            tabIndex={0}
+            onFocus={setFocusedSave.bind(null, 2)}
+            onPointerEnter={setFocusedSave.bind(null, 2)}
+            onMouseEnter={setFocusedSave.bind(null, 2)}
+            onMouseLeave={setFocusedSave.bind(null, undefined)}
+          >
             <BsFileEarmarkArrowUp />
           </label>
           <input type="file" id="import" onChange={importSaves}
