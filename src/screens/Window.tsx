@@ -31,12 +31,12 @@ function isViewAnyOf(...views: Array<typeof displayMode.currentView>) {
   return views.includes(displayMode.currentView)
 }
 
-const keyMap = new KeyMap(inGameKeymap, (action, _evt, ...args)=> {
+const keyMap = new KeyMap(inGameKeymap, (action, evt, ...args)=> {
   switch(action) {
     case "next"     : next(); break
     case "back"     : back(); break
     case "auto_play": script.autoPlay = !script.autoPlay; break
-    case "page_nav" : page_nav(args[0]); break
+    case "page_nav" : page_nav(args[0], evt); break
     case "history"  : toggleView('history'); break
     case "graphics" : toggleView('graphics'); break
     case "load"     : toggleView('load'); break
@@ -57,22 +57,24 @@ function toggleView(v: KeysMatching<typeof displayMode, boolean>) {
   displayMode[v] = !displayMode[v]
 }
 
-function stopAutoPlay() {
+function stopAutoPlay(displayToast=true) {
   let result = false
   if (script.autoPlay) {
     script.autoPlay = false
-    toast("Auto-play stopped", {
-      autoClose: 500,
-      toastId: 'ap-stop'
-    })
+    if (displayToast)
+      toast("Auto-play stopped", {
+        autoClose: 500,
+        toastId: 'ap-stop'
+      })
     result = true
   }
   if (script.isFastForward) {
     script.fastForward(undefined)
-    toast("Fast-Forward stopped", {
-      autoClose: 500,
-      toastId: 'ff-stop'
-    })
+    if (displayToast)
+      toast("Fast-Forward stopped", {
+        autoClose: 500,
+        toastId: 'ff-stop'
+      })
     result = true
   }
   return result
@@ -106,8 +108,8 @@ function next() {
   }
 }
 
-function page_nav(direction: "prev"|"next") {
-  stopAutoPlay()
+function page_nav(direction: "prev"|"next", event?: KeyboardEvent) {
+  stopAutoPlay(!(event?.repeat))
   switch (direction) {
     case "prev":
       let ss = history.get(history.length < 2 ? -1 : -2)
