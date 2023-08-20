@@ -6,7 +6,7 @@ import ChoicesLayer from '../layers/ChoicesLayer';
 import MenuLayer from '../layers/MenuLayer';
 import TextLayer from '../layers/TextLayer';
 import GraphicsLayer, { moveBg } from '../layers/GraphicsLayer';
-import KeyMap from '../utils/KeyMap';
+import KeyMap, { inGameKeymap } from '../utils/KeyMap';
 import script from '../utils/script';
 import { gameContext } from '../utils/variables';
 import { quickSave, quickLoad, loadSaveState } from "../utils/savestates";
@@ -31,38 +31,7 @@ function isViewAnyOf(...views: Array<typeof displayMode.currentView>) {
   return views.includes(displayMode.currentView)
 }
 
-const keyMap = new KeyMap({
-  "next":     [()=> isViewAnyOf("text", "graphics"),
-              {key: "Enter"},
-              {key: "Control", repeat: true},
-              {key: "Meta", repeat: true},
-              {key: "ArrowDown", repeat: false},
-              {key: "ArrowRight", repeat: false}],
-  "auto_play":[()=> displayMode.currentView == "text",
-              {key: "E", repeat: false}],
-  "page_nav": [()=> isViewAnyOf("text", "graphics", "dialog"),
-              {key: "PageUp", [KeyMap.args]: "prev"},
-              {key: "PageDown", [KeyMap.args]: "next"}],
-  "history":  [()=> isViewAnyOf("text", "dialog"),
-              {key: "ArrowUp", repeat: false},
-              {key: "ArrowLeft", repeat: false},
-              {key: "H", repeat: false}],
-  "graphics": {code: "Space", repeat: false, [KeyMap.condition]: ()=>isViewAnyOf("text", "graphics", "dialog")},
-  "back":     [
-              {key: "Escape", repeat: false},
-              {key: "Backspace", repeat: false}],
-  "q_save":   {key: "S", repeat: false, [KeyMap.condition]: ()=> !displayMode.saveScreen},
-  "q_load":   {key: "L", repeat: false, [KeyMap.condition]: ()=> !displayMode.saveScreen},
-  "load":     [()=> isViewAnyOf("text", "graphics"),
-              {key: "A", repeat: false}],
-  "save":     [()=> isViewAnyOf("text", "graphics"),
-              {key: "Z", repeat: false}],
-  "config":   [()=> isViewAnyOf("text", "graphics"),
-              {key: "C", repeat: false}],
-  "bg_move":  [()=> isViewAnyOf("text", "graphics"),
-              {key: "ArrowUp", ctrlKey: true, repeat: false, [KeyMap.args]: "up"},
-              {key: "ArrowDown", ctrlKey: true, repeat: false, [KeyMap.args]: "down"}]
-}, (action, _evt, ...args)=> {
+const keyMap = new KeyMap(inGameKeymap, (action, _evt, ...args)=> {
   switch(action) {
     case "next"     : next(); break
     case "back"     : back(); break

@@ -187,6 +187,10 @@ observe(displayMode, "screen", (screen)=> {
   }
 })
 
+export function isViewAnyOf(...views: Array<typeof displayMode.currentView>) {
+  return views.includes(displayMode.currentView)
+}
+
 
 //##############################################################################
 //#                                   DEBUG                                    #

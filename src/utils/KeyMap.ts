@@ -1,7 +1,13 @@
 /**
  * Created by Loic France on 12/20/2016.
  */
+
+import { displayMode, isViewAnyOf } from "./display"
 import { objectsEqual } from "./utils"
+
+//##############################################################################
+//#                                KeyMap class                                #
+//##############################################################################
 
 export type KeyMapCallback = (action: any, event: KeyboardEvent, ...args: any) => boolean|void
 export type KeyMapCondition = (action: any, event: KeyboardEvent, ...args: any) => boolean
@@ -9,7 +15,7 @@ export type KeyMapMapping = Record<string,
   KeymapKeyFilter|Array<KeymapKeyFilter|KeyMapCondition>
 >
 
-type KeymapKeyFilter = ({
+export type KeymapKeyFilter = ({
     code: string
 } | {
     key: string
@@ -189,4 +195,37 @@ export default class KeyMap {
     }
     return undefined;
   }
+}
+
+//##############################################################################
+//#                         Application-specific code                          #
+//##############################################################################
+
+export const inGameKeymap: KeyMapMapping = {
+  "next":     [()=> isViewAnyOf("text", "graphics"),
+              {key: "Enter"},
+              {key: "Control", repeat: true},
+              {key: "Meta", repeat: true},
+              {key: "ArrowDown", repeat: false},
+              {key: "ArrowRight", repeat: false}],
+  "auto_play":[()=> displayMode.currentView == "text",
+              {key: "E", repeat: false}],
+  "page_nav": [()=> isViewAnyOf("text", "graphics", "dialog"),
+              {key: "PageUp", [KeyMap.args]: "prev"},
+              {key: "PageDown", [KeyMap.args]: "next"}],
+  "history":  [()=> isViewAnyOf("text", "dialog"),
+              {key: "ArrowUp", repeat: false},
+              {key: "ArrowLeft", repeat: false},
+              {key: "H", repeat: false}],
+  "graphics": [{code: "Space", repeat: false, [KeyMap.condition]: ()=>isViewAnyOf("text", "graphics", "dialog")}],
+  "back":     [{key: "Escape", repeat: false},
+              {key: "Backspace", repeat: false}],
+  "q_save":   [{key: "S", repeat: false, [KeyMap.condition]: ()=> !displayMode.saveScreen}],
+  "q_load":   [{key: "L", repeat: false, [KeyMap.condition]: ()=> !displayMode.saveScreen}],
+  "load":     [{key: "A", repeat: false, [KeyMap.condition]: ()=> isViewAnyOf("text", "graphics")}],
+  "save":     [{key: "Z", repeat: false, [KeyMap.condition]: ()=> isViewAnyOf("text", "graphics")}],
+  "config":   [{key: "C", repeat: false, [KeyMap.condition]: ()=> isViewAnyOf("text", "graphics")}],
+  "bg_move":  [()=> isViewAnyOf("text", "graphics"),
+              {key: "ArrowUp", ctrlKey: true, repeat: false, [KeyMap.args]: "up"},
+              {key: "ArrowDown", ctrlKey: true, repeat: false, [KeyMap.args]: "down"}]
 }
