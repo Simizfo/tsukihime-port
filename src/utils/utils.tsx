@@ -164,6 +164,7 @@ export function convertText(text: string, props: Record<string, any> = {}): JSX.
 function bbcodeTagToJSX({tag: Tag, arg, content}: {tag: string, arg: string, content: JSX.Element[]}) {
   switch(Tag) {
     case 'br' :
+    case 'wbr' : return <><Tag/>{...content}</>
     case 'b' :
     case 'i' :
     case 's' :
@@ -206,7 +207,7 @@ function replaceDashes(text: string): JSX.Element {
 }
 
 //[/?<tag>=<arg>] not preceded by a '\'
-const bbcodeTagRegex = /(?<!\\)\[(?<tag>\/?\w+)(=(?<arg>[^\]]+))?\]/g
+const bbcodeTagRegex = /(?<!\\)\[(?<tag>(\/?\w+)|(\w+\/))(=(?<arg>[^\]]+))?\]/g
 /**
  * convert text with BB code to JSX nodes
  */
@@ -227,6 +228,11 @@ export function bb(text: string): JSX.Element {
       nodes.pop()
       const prevNode = nodes[nodes.length-1]
       prevNode.content.push(bbcodeTagToJSX(currNode))
+    } else if (tag.endsWith('/')) {
+      currNode.content.push(bbcodeTagToJSX({
+        tag: tag.substring(0, tag.length-1),
+        arg: arg, content: []
+      }))
     } else {
       nodes.push({tag, arg, content:[]})
     }

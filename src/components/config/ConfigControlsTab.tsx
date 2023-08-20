@@ -16,32 +16,33 @@ function convertAction([action, keys]: KeyMapEntry) : [string, KeymapKeyFilter[]
 
 const ConfigControlsTab = () => {
   useLanguageRefresh()
-  const keymap = useRef(Object.entries(inGameKeymap).map(convertAction))
   const controlStrings = strings.config.controls as Record<string, string>
+  const keymap = useRef(
+      Object.entries(inGameKeymap)
+            .filter(([action, _])=> Object.hasOwn(controlStrings, action))
+            .map(convertAction))
   return (
     <section>
       {keymap.current.map(([action, keys], i)=> 
-        <>{Object.hasOwn(strings.config.controls, action) && 
-          <div key={i} className="keyMap">
-            <div className="action">{controlStrings[action]}</div>
-            {keys.map(({code, key, ctrlKey, altKey, shiftKey, repeat}, j)=>
-              <div key={`${code || key}`} className="keyItem">
-                  {ctrlKey ? "Ctrl + " : ""}
-                  {altKey ? "Alt + " : ""}
-                  {shiftKey ? "Shift + " : ""}
-                  {code || key}
-                  {repeat != undefined && (
-                    repeat && <>
-                      &nbsp;
-                      <span className="info">
-                        {bb(controlStrings["_hold"])}
-                      </span>
-                    </>
-                  )}
-              </div>
-            )}
-          </div>
-        }</>
+        <div key={i} className="keyMap">
+          <div className="action">{bb(controlStrings[action])}</div>
+          {keys.map(({code, key, ctrlKey, altKey, shiftKey, repeat}, j)=>
+            <div key={`${code || key}`} className="keyItem">
+                {ctrlKey ? "Ctrl + " : ""}
+                {altKey ? "Alt + " : ""}
+                {shiftKey ? "Shift + " : ""}
+                {code || key}
+                {repeat != undefined && (
+                  repeat && <>
+                    &nbsp;
+                    <span className="info">
+                      {bb(controlStrings["_hold"])}
+                    </span>
+                  </>
+                )}
+            </div>
+          )}
+        </div>
       )}
     </section>
   )
