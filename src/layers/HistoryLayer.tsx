@@ -1,6 +1,6 @@
 import { Fragment, memo, useEffect, useRef, useState } from 'react';
 import { addEventListener, bb, convertText, deepAssign, objectMatch } from "../utils/utils";
-import { displayMode } from '../utils/display';
+import { displayMode, isViewAnyOf } from '../utils/display';
 import { SaveState, loadSaveState } from "../utils/savestates";
 import { useObserved, useObserver } from '../utils/Observer';
 import history from '../utils/history';
@@ -74,7 +74,7 @@ const HistoryLayer = (props: Props) => {
     const handleWheel = (e: WheelEvent) => {
       if (e.ctrlKey)
         return
-      if (e.deltaY < 0 && !display && objectMatch(displayMode, {menu:false, saveScreen:false})) {
+      if (e.deltaY < 0 && !display && isViewAnyOf("text", "graphics")) {
         if (!history.empty) // at least one element in the iterator
           setDisplay(true)
         script.autoPlay = false

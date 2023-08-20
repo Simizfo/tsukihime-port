@@ -10,24 +10,14 @@ function back() {
 }
 
 const ConfigLayer = () => {
-  const [display, setDisplay] = useObserved(displayMode, 'config')
+  const [display] = useObserved(displayMode, 'config')
   const rootRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const handleContextMenu = (_e: MouseEvent) => {
-      displayMode.config = false
-    }
-    return addEventListener({event: 'contextmenu', handler: handleContextMenu})
-  }, [])
+    if (!display && rootRef.current?.contains(document.activeElement))
+      (document.activeElement as HTMLElement).blur?.()
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key == "Escape") {
-        displayMode.config = false
-      }
-    }
-    return addEventListener({event: 'keydown', handler: handleKeyDown})
-  }, [])
+  }, [display])
   
   return (
     <div className={`box box-save-config ${display ? "show" : ""}`} ref={rootRef}>

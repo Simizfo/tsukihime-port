@@ -82,6 +82,7 @@ function back() {
   stopAutoPlay()
   switch (displayMode.currentView) {
     case "saves"    : displayMode.saveScreen = false; break
+    case "config"   : displayMode.config = false; break
     case "history"  : displayMode.history = false; break
     case "menu"     : displayMode.menu = false; break;
     case "graphics" : // open the menu if the current view is texts,

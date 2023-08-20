@@ -143,6 +143,8 @@ export const displayMode = {
   get currentView() { // not observable
     if (this.saveScreen)
       return "saves"
+    else if (this.config)
+      return "config"
     else if (this.menu)
       return "menu"
     else if (this.history)
