@@ -175,13 +175,20 @@
     "data-erase": "Erase",
     "data-erase-warning": "This will delete all saves, reset all settings and progress. Are you sure?",
     "data-erase-confirm": "All data have been deleted. If you leave this website without making any change to the settings and without starting a new game, no data will remain stored on your computer",
-    "controls-next": "Next",
-    "controls-skip": "Skip",
-    "controls-history": "History",
-    "controls-menu": "メニュー",
-    "controls-qload": "Quick Load",
-    "controls-qsave": "Quick Save",
-    "controls-move-bg": "Move background"
+    "controls": {
+      "next": "Next",
+      "history": "Show/hide History",
+      "back": "Close current view / Display menu",
+      "bg_move": "Move Background image",
+      "auto_play" : "Auto-play",
+      "page_nav": "Navigate to next / previous page",
+      "load": "Open Load panel",
+      "save": "Open Save panel",
+      "q_save": "Quick-save",
+      "q_load": "Quick-load",
+      "config": "Open config panel",
+      "_hold": "[i](Hold)"
+    }
   },
   "endings": {
     "normal": "Normal",

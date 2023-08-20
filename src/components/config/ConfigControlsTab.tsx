@@ -1,6 +1,7 @@
 import { Fragment, useRef } from "react"
 import { KeymapKeyFilter, inGameKeymap } from "../../utils/KeyMap"
-import { useLanguageRefresh } from "../../utils/lang"
+import strings, { useLanguageRefresh } from "../../utils/lang"
+import { bb } from "../../utils/utils"
 
 type KeyMapEntry = [string, typeof inGameKeymap[keyof typeof inGameKeymap]]
 
@@ -16,30 +17,32 @@ function convertAction([action, keys]: KeyMapEntry) : [string, KeymapKeyFilter[]
 const ConfigControlsTab = () => {
   useLanguageRefresh()
   const keymap = useRef(Object.entries(inGameKeymap).map(convertAction))
-
+  const controlStrings = strings.config.controls as Record<string, string>
   return (
     <section>
-      <table><tbody>
-        {keymap.current.map(([action, keys], i)=>
-        <Fragment key={i}>
-          {keys.map(({code, key, ctrlKey, altKey, shiftKey, repeat}, j)=>
-            <tr key={`${code || key}`}>
-              {j == 0 &&
-                <td {...(keys.length > 1)? {rowSpan: keys.length} : {}}>
-                  {action}
-                </td>
-              }
-              <td>
-                {ctrlKey ? "Ctrl + " : ""}
-                {altKey ? "Alt + " : ""}
-                {shiftKey ? "Shift + " : ""}
-                {code || key}
-              </td>
-            </tr>
-          )}
-        </Fragment>
-        )}
-      </tbody></table>
+      {keymap.current.map(([action, keys], i)=> 
+        <>{Object.hasOwn(strings.config.controls, action) && 
+          <div key={i} className="keyMap">
+            <div className="action">{controlStrings[action]}</div>
+            {keys.map(({code, key, ctrlKey, altKey, shiftKey, repeat}, j)=>
+              <div key={`${code || key}`} className="keyItem">
+                  {ctrlKey ? "Ctrl + " : ""}
+                  {altKey ? "Alt + " : ""}
+                  {shiftKey ? "Shift + " : ""}
+                  {code || key}
+                  {repeat != undefined && (
+                    repeat && <>
+                      &nbsp;
+                      <span className="info">
+                        {bb(controlStrings["_hold"])}
+                      </span>
+                    </>
+                  )}
+              </div>
+            )}
+          </div>
+        }</>
+      )}
     </section>
   )
 }

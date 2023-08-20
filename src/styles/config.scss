@@ -147,6 +147,31 @@
             }
         }
 
+        .keyMap {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            padding-block: .8em;
+
+            &:not(:last-of-type) {
+                border-bottom: 1px solid var(--separator) !important;
+            }
+
+            .action {
+                margin: 1px;
+                padding: 5px;
+                grid-column: 1;
+            }
+            .keyItem {
+                margin: 1px;
+                padding: 5px;
+                grid-column: 2;
+                .info {
+                    opacity: 0.3;
+                }
+            }
+        }
+
         .reset {
             margin-top: 1em;
             align-self: flex-end;
