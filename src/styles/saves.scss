@@ -73,7 +73,7 @@
                 margin-block: 4px;
             }
 
-            &:hover, &:focus-visible {
+            &.active {
                 cursor: pointer;
 
                 &::after {
