@@ -128,8 +128,6 @@
     "load": "Load",
     "config": "Config",
     "extra": "Extra",
-    "gallery": "ギヤラリー",
-    "endings": "Endings",
     "about": {
       "port": "This is a web version of [b]月姫[/b], a visual novel published on 2000 by TYPE-MOON.",
       "project": "Project available on $0Github$1.",
@@ -137,6 +135,10 @@
       "remake": "Support by buying the remake $0月姫 -A piece of blue glass moon$1.",
       "close": "close"
     }
+  },
+  "extra": {
+    "gallery": "ギヤラリー",
+    "endings": "Endings"
   },
   "config": {
     "on": "On",
@@ -185,7 +187,7 @@
     "normal": "Normal",
     "good": "Good",
     "true": "True",
-    "osiete": "Teach-me, Ciel-sensei"
+    "osiete": "知得留先生の授業"
   },
   "saves": {
     "title-load": "Load",

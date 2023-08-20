@@ -34,7 +34,7 @@ const ExtraScreen = () => {
 
         <main>
           <section id="extra-gallery">
-            <Link to={SCREEN.GALLERY} className="page-link">{strings.title.gallery}</Link>
+            <Link to={SCREEN.GALLERY} className="page-link">{strings.extra.gallery}</Link>
 
             <div className="gallery-previews">
               {galleryImgs.map((image, index) =>
@@ -49,7 +49,7 @@ const ExtraScreen = () => {
           </section>
           
           <section>
-            <Link to={SCREEN.ENDINGS} className="page-link">{strings.title.endings}</Link>
+            <Link to={SCREEN.ENDINGS} className="page-link">{strings.extra.endings}</Link>
           </section>
 
           <section id="extra-scenes">
