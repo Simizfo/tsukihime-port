@@ -71,13 +71,16 @@ const SaveSummary = memo(({saveState}: {saveState: SaveState})=> {
 })
 
 type SaveListItemProps = {
-  id: number, saveState: SaveState, onSelect: (id: number)=>void,
+  id: number,
+  saveState: SaveState,
+  onSelect: (id: number)=>void,
+  focusedSave?: number,
   [key: string]: any
 }
-const SaveListItem = ({id, saveState, onSelect, ...props}: SaveListItemProps)=> {
+const SaveListItem = ({id, saveState, onSelect, focusedSave, ...props}: SaveListItemProps)=> {
   const date = new Date(saveState.date as number)
   return (
-    <button className="save-container"
+    <button className={`save-container ${id==focusedSave ? "active" : ""}`}
         onClick={onSelect.bind(null, id)}
         {...(id==QUICK_SAVE_ID ? {'quick-save':''} : {})}
         {...props}>
@@ -176,7 +179,7 @@ const SavesLayer = ({variant, back}: Props) => {
   }
 
   function deleteSave(id: number) {
-    if (confirm("Are you sure you want to delete this save ?")) {
+    if (confirm("Are you sure you want to delete this save?")) {
       deleteSaveState(id)
       if (id == focusedId)
         setFocusedSave(undefined)
@@ -184,17 +187,32 @@ const SavesLayer = ({variant, back}: Props) => {
   }
 
   const focusedSave = focusedId != undefined ? getSaveState(focusedId) : undefined
+  console.log(focusedId)
   const title = strings.saves[variant == "save" ? "title-save" : "title-load"]
   return (
     <main id="saves-layout">
       <h2 className="page-title">{title}</h2>
       <div className="saves">
         {variant === "save" ?
-          <button className="save-container create" onClick={createSave}>
+          <button
+            className={`save-container create ${focusedId === 1 ? "active" : ""}`}
+            onClick={createSave}
+            onFocus={setFocusedSave.bind(null, 1)}
+            onPointerEnter={setFocusedSave.bind(null, 1)}
+            onMouseEnter={setFocusedSave.bind(null, 1)}
+            onMouseLeave={setFocusedSave.bind(null, undefined)}
+          >
             <BsPlusCircle />
           </button>
         : <>
-          <label htmlFor="import" className="save-container import" tabIndex={0}>
+          <label htmlFor="import"
+            className={`save-container import ${focusedId === 2 ? "active" : ""}`}
+            tabIndex={0}
+            onFocus={setFocusedSave.bind(null, 2)}
+            onPointerEnter={setFocusedSave.bind(null, 2)}
+            onMouseEnter={setFocusedSave.bind(null, 2)}
+            onMouseLeave={setFocusedSave.bind(null, undefined)}
+          >
             <BsFileEarmarkArrowUp />
           </label>
           <input type="file" id="import" onChange={importSaves}
@@ -205,7 +223,12 @@ const SavesLayer = ({variant, back}: Props) => {
           .map(([id, ss]) =>
           <SaveListItem key={id} id={id}
             saveState={ss} onSelect={onSaveSelect}
-            onMouseEnter={setFocusedSave.bind(null, id)}/>
+            focusedSave={focusedId}
+            onFocus={setFocusedSave.bind(null, id)}
+            onPointerEnter={setFocusedSave.bind(null, id)}
+            onMouseEnter={setFocusedSave.bind(null, id)}
+            onMouseLeave={setFocusedSave.bind(null, undefined)}
+          />
         )}
       </div>
 
