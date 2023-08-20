@@ -1,15 +1,13 @@
-@use "partials/_tabs";
+@use 'partials/_components';
 
 #config-layout {
     section {
-        padding: 1em;
+        @extend %menu-container;
         display: flex;
         flex-direction: column;
         font-size: 1.2em;
         overflow-x: hidden;
         flex: 1;
-        background-color: var(--menu-container);
-        box-shadow: var(--menu-shadow);
 
         .config {
             display: grid;

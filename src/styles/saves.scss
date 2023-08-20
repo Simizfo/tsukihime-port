@@ -1,3 +1,5 @@
+@use 'partials/_components';
+
 #saves-layout {
     font-size: 1rem;
     display: grid;
@@ -13,14 +15,12 @@
         grid-area: title;
     }
     .saves {
+        @extend %menu-container;
         grid-area: list;
         display: flex;
         flex-direction: column;
         overflow-x: hidden;
         letter-spacing: 1px;
-        background-color: var(--menu-container);
-        box-shadow: var(--menu-shadow);
-        padding: 1em;
 
         .save-container {
             position: relative;
@@ -97,14 +97,13 @@
     }
 
     .info {
+        @extend %menu-container;
         grid-area: info;
         overflow: hidden;
-        background-color: var(--menu-container);
-        box-shadow: var(--menu-shadow);
         display: flex;
         flex-direction: column;
-        position: relative;
         font-size: 1.1em;
+        gap: 1em;
 
         .graphics {
             width: 100%;
@@ -114,10 +113,8 @@
         }
 
         .deta {
-            padding: .8em;
             display: flex;
             flex-direction: column;
-            color: #9d9d9d;
 
             .actions {
                 align-self: flex-end;
@@ -138,7 +135,7 @@
                 }
 
                 button:not(:last-of-type) {
-                    border-right: 1px solid grey;
+                    border-right: 1px solid var(--separator);
                 }
             }
         }
@@ -168,12 +165,10 @@
         .info {
             flex-direction: row;
             .graphics {
-                font-size: 30%;
+                display: none;
             }
             .deta {
                 display: block;
-                align-self: auto;
-                flex: 2;
 
                 .actions {
                     position: absolute;

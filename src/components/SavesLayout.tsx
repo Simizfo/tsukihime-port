@@ -102,7 +102,7 @@ type SaveDetailsProps = {
 const SaveDetails = ({id, saveState, deleteSave, ...props}: SaveDetailsProps)=> {
   return (
     <div className="info" {...props}>
-      <div className={`graphics ${saveState?.context.monochrome ? "monochrome" : ""}`}>
+      <div className="graphics">
         {graphicElements(saveState?.graphics ?? saveState?.context.graphics ?? {bg:"notreg"}, {}, settings.resolution)}
       </div>
       {id != undefined && saveState != undefined &&

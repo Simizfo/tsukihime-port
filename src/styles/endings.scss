@@ -1,13 +1,13 @@
+@use 'partials/_components';
+
 #endings {
     .endings-list {
+        @extend %menu-container;
         display: grid;
         grid-template-columns: repeat(9, 116px);
         overflow-x: auto;
         gap: 1em;
         justify-content: space-between;
-        background-color: var(--menu-container);
-        box-shadow: var(--menu-shadow);
-        padding: 1em;
         margin-bottom: 1em;
         flex: none;
 
@@ -62,9 +62,7 @@
     }
 
     .badendings-list {
-        background-color: var(--menu-container);
-        box-shadow: var(--menu-shadow);
-        padding: 1em;
+        @extend %menu-container;
         gap: 1em;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));

@@ -1,14 +1,14 @@
+@use 'partials/_components';
+
 #gallery {
     .gallery-container {
+        @extend %menu-container;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
         gap: .6em;
         overflow-y: scroll;
         height: inherit;
         align-content: start;
-        padding: 1em;
-        background-color: var(--menu-container);
-        box-shadow: var(--menu-shadow);
         flex: 1;
 
         a {
