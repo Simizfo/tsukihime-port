@@ -45,7 +45,7 @@ const GalleryScreen = () => {
       animate={{opacity: 1}}
       exit={{opacity: 0}}>
       <div className="page-content">
-        <h2 className="page-title">{strings.title.gallery}</h2>
+        <h2 className="page-title">{strings.extra.gallery}</h2>
         
         <main>
           <TabsComponent tabs={Object.keys(GALLERY_IMAGES) as Array<CharacterId>}
