@@ -1,20 +1,14 @@
 import { useNavigate } from 'react-router-dom'
 import '../styles/config.scss'
-import { SCREEN, displayMode } from '../utils/display'
+import { SCREEN } from '../utils/display'
 import { motion } from 'framer-motion'
 import { useLanguageRefresh } from '../utils/lang'
 import ConfigLayout from '../components/ConfigLayout'
-import { useEffect } from 'react'
 
 const ConfigScreen = () => {
   const navigate = useNavigate()
   useLanguageRefresh()
   const urlParams = new URLSearchParams(window.location.search)
-
-  useEffect(()=> {
-    displayMode.screen = SCREEN.CONFIG
-    setUrl("Game")
-  }, [])
 
   const setUrl = (activeTab: string) => {
     const baseUrl = window.location.origin + window.location.pathname

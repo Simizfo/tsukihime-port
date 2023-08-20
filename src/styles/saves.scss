@@ -55,7 +55,7 @@
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    max-width: 50ch;
+                    max-width: 60ch;
                     color: #9d9d9d;
                 }
             }
@@ -83,7 +83,7 @@
 
             &[quick-save]::before {
                 position: absolute;
-                bottom: 2px;
+                bottom: 4px;
                 right: 0;
                 content: "Quick Save";
                 font-size: 80%;
