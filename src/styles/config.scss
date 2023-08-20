@@ -86,7 +86,7 @@
                 display: flex;
                 gap: .6em;
                 align-items: center;
-                padding: .2em;
+                min-height: 36.45px; // height of buttons
 
                 input[type="range"] {
                     appearance: none;

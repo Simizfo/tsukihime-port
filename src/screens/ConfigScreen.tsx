@@ -13,7 +13,7 @@ const ConfigScreen = () => {
 
   useEffect(()=> {
     displayMode.screen = SCREEN.CONFIG
-    setUrl("Main")
+    setUrl("Game")
   }, [])
 
   const setUrl = (activeTab: string) => {
