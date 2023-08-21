@@ -277,9 +277,9 @@ export function negative(n: number) {
  * @param text content of the file to download
  * @param fileName default name of the file
  */
-export function textFileUserDownload(text: string, fileName: string) {
+export function textFileUserDownload(text: string, fileName: string, contentType="text/plain") {
 	let element = document.createElement('a');
-	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+	element.setAttribute('href', `data:${contentType};charset=utf-8,${encodeURIComponent(text)}`);
 	element.setAttribute('download', fileName);
 	element.style.display = 'none';
 	document.body.appendChild(element);

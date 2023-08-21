@@ -47,7 +47,7 @@ const ConfigAdvancedTab = () => {
           day = date.getDate(), hour = date.getHours(), min = date.getMinutes()
     const dateString = [year, month, day].map(twoDigits).join('-')
     const timeString = [hour, min].map(twoDigits).join('-')
-    textFileUserDownload(JSON.stringify(content), `${dateString}_${timeString}.thfull`)
+    textFileUserDownload(JSON.stringify(content), `${dateString}_${timeString}.thfull`, "application/thfull+json")
   }
 
   const importData = async () => {

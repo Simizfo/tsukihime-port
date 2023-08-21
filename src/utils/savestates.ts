@@ -270,7 +270,7 @@ export function exportSave(ids: SaveStateId[]) {
           day = date.getDate(), hour = date.getHours(), min = date.getMinutes()
     const dateString = [year, month, day].map(twoDigits).join('-')
     const timeString = [hour, min].map(twoDigits).join('-')
-    textFileUserDownload(json, `${dateString}_${timeString}.thweb`)
+    textFileUserDownload(json, `${dateString}_${timeString}.thweb`, "application/thweb+json")
   }
 }
 /**
