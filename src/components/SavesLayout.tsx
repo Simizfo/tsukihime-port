@@ -1,4 +1,4 @@
-import { ChangeEvent, Fragment, memo, useEffect, useState } from "react"
+import { ChangeEvent, MouseEvent, Fragment, memo, useEffect, useState } from "react"
 import { SCREEN, displayMode } from "../utils/display"
 import { bb, wbb } from "../utils/utils"
 import { PageContent, SceneName } from "../types"
@@ -155,9 +155,9 @@ const SavesLayer = ({variant, back}: Props) => {
     storeCurrentState(new Date().getTime())
   }
 
-  function importSaves(event: ChangeEvent) {
+  function importSaves(event: ChangeEvent|MouseEvent) {
     console.log("import saves from file")
-    loadSaveFiles((event.target as HTMLInputElement)?.files)
+    loadSaveFiles((event.target as HTMLInputElement)?.files, event.type == "contextmenu")
   }
 
   function onSaveSelect(id: number) {
@@ -208,6 +208,7 @@ const SavesLayer = ({variant, back}: Props) => {
           <label htmlFor="import"
             className={`save-container import ${focusedId === 2 ? "active" : ""}`}
             tabIndex={0}
+            onContextMenu={importSaves}
             onFocus={setFocusedSave.bind(null, 2)}
             onPointerEnter={setFocusedSave.bind(null, 2)}
             onMouseEnter={setFocusedSave.bind(null, 2)}
@@ -216,6 +217,7 @@ const SavesLayer = ({variant, back}: Props) => {
             <BsFileEarmarkArrowUp />
           </label>
           <input type="file" id="import" onChange={importSaves}
+            onContextMenu={importSaves}
             accept={`.${SAVE_EXT}`} style={{display: "none"}}/>
         </>}
 

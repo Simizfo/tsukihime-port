@@ -50,9 +50,9 @@ const ConfigAdvancedTab = () => {
     textFileUserDownload(JSON.stringify(content), `${dateString}_${timeString}.thfull`, "application/thfull+json")
   }
 
-  const importData = async () => {
+  const importData = async (allExtensions=false) => {
     try {
-      const json = (await requestJSONs({accept: '.thfull'}) as Savefile[])?.[0] as Savefile|undefined
+      const json = (await requestJSONs({accept: allExtensions ? '*' : '.thfull'}) as Savefile[])?.[0] as Savefile|undefined
       if (!json)
         return
       const importedSettings = deepAssign(defaultSettings, json.settings, {clone: true})
@@ -144,7 +144,8 @@ const ConfigAdvancedTab = () => {
               {strings.config["data-export"]}
           </button>
           <button className="config-btn"
-            onClick={importData}>
+            onClick={importData.bind(null, false)}
+            onContextMenu={importData.bind(null, true)}>
             {strings.config["data-import"]}
           </button>
           <button className="config-btn erase"
