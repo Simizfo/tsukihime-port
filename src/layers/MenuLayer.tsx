@@ -122,10 +122,10 @@ const MenuLayer = () => {
             <button onClick={quickLoad} className="quick">
               {strings.menu["q-load"]}
             </button>
-            <button onClick={toggleVolume}>
+            <button onClick={toggleVolume} aria-label="mute/unmute">
               {mute ? <FaVolumeMute /> : <FaVolumeUp />}
             </button>
-            <button onClick={toggleFullscreen}>
+            <button onClick={toggleFullscreen} aria-label="toggle fullscreen">
               {fullscreen ? <FaCompressArrowsAlt /> : <FaExpandArrowsAlt />}
             </button>
           </div>
