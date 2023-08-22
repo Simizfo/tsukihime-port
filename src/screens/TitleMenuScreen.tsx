@@ -15,10 +15,32 @@ import { APP_VERSION } from '../utils/constants'
 import strings, { useLanguageRefresh } from '../utils/lang'
 import { bb } from '../utils/utils'
 import { RxExternalLink } from 'react-icons/rx'
+import { useObserved } from '../utils/Observer'
+
+const pwaIcon = "icons/icon_128.webp"
+
+type BeforeInstallPromptEvent = Event & {prompt: ()=>Promise<{outcome: any}>}
+
+let sync = {
+  installPWAEvent: undefined as BeforeInstallPromptEvent|undefined
+}
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  sync.installPWAEvent = event as BeforeInstallPromptEvent;
+});
+async function installPWA() {
+  if (!sync.installPWAEvent) {
+    return;
+  }
+  const result = await sync.installPWAEvent.prompt();
+  if (result.outcome == "accepted")
+    sync.installPWAEvent = undefined
+}
 
 const TitleMenuScreen = () => {
   const navigate = useNavigate()
   const [show, setShow] = useState(false)
+  const [showPWAButton] = useObserved(sync, 'installPWAEvent', e=>e!=undefined)
   useLanguageRefresh()
 
   useEffect(()=> {
@@ -131,6 +153,19 @@ const TitleMenuScreen = () => {
           {strings.title.extra}
         </Link>
       </nav>
+
+      {showPWAButton &&
+        <motion.button className="pwa-install" onClick={installPWA}
+          initial={{ opacity: 0, scale: 0.6 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            ease: [0, 0.71, 0.2, 1.01]
+          }} >
+          <img src={pwaIcon} alt="PWA icon" draggable={false}/>
+          <span>Install</span>
+        </motion.button>
+      }
 
       <motion.button className="info-icon" onClick={()=>setShow(true)}
         initial={{ opacity: 0 }}

@@ -1,6 +1,7 @@
 @use 'partials/particles';
 
 #title-menu {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,6 +38,26 @@
             cursor: pointer;
             color: rgb(10 164 171);
             background-color: #0000009e;
+        }
+    }
+
+    .pwa-install {
+        z-index: 1;
+        position: absolute;
+        left: 10pt;
+        top: 10pt;
+        width: 40pt;
+        padding: 5pt;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid rgb(10 164 171);
+        border-radius: 5pt;
+        text-align: center;
+        transition: var(--transition);
+
+        &:hover {
+            transform: scale(1.1) !important;
         }
     }
 
@@ -145,7 +166,7 @@
             .tsuki-remake {
                 flex-direction: row;
             }
-        }    
+        }
     }
 }
 
