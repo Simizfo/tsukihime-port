@@ -1,9 +1,12 @@
 import { TouchEvent, TouchEventHandler } from "react"
+import { getScrollableParent } from "./utils"
 
 type Direction = ""|"left"|"right"|"up"|"down"
 
 export type SwipeListener = (direction: Direction, distance: number, event: TouchEvent, dx: number, dy: number)=>boolean|void
+
 const events = ["touchstart", "touchmove", "touchend", "touchcancel"]
+
 export class GestureHandler {
   private _onTouch: TouchEventHandler
   private swipeListener: SwipeListener|undefined
@@ -38,6 +41,18 @@ export class GestureHandler {
 
   get onTouch() {
     return this._onTouch
+  }
+
+  private onSwipe(dir: Direction, dist: number, evt: TouchEvent, dx: number, dy: number) {
+    const scrollDir = dir == "left" ? "right" : dir == "right" ? "left"
+                    : dir == "up" ? "down" :  dir == "down" ? "up" : ""
+
+    if (scrollDir != "" && getScrollableParent(evt.target as HTMLElement, [scrollDir]) != null)
+      this.cancel()
+    else if (this.swipeListener?.(dir, dist, evt, dx, dy)) {
+      evt.preventDefault()
+      this.cancel()
+    }
   }
 
   private touchEventHandler(event: TouchEvent) {
@@ -76,21 +91,19 @@ export class GestureHandler {
             dir != "" && dist > this.minDistance)
           this.moveTriggered = true;
         if (this.moveTriggered) {
-          if (this.swipeListener?.(dir, dist, event, dx, dy)) {
-            event.preventDefault()
-            this.cancel()
-          }
+          this.onSwipe(dir, dist, event, dx, dy)
         }
         if (event.type == "touchend")
           this.cancel()
         break
       case "touchcancel" :
         if (this.moveTriggered)
-          this.swipeListener?.("", 0, event, 0, 0)
+          this.onSwipe("", 0, event, 0, 0)
         this.cancel()
         break
     }
   }
+
   cancel() {
     this.moveTriggered = false
     this.start.x = -1

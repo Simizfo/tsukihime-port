@@ -149,33 +149,22 @@ const Window = () => {
   const rootElmtRef = useRef(null)
   useEffect(()=> {
     const swipeHandler = new GestureHandler(rootElmtRef.current, {
-      swipeTrigDistance: 50,
-      onSwipe: (direction, _dist, evt)=> {
+      swipeTrigDistance: 50, onSwipe: (direction)=> {
         if (direction == "")
           return
-        const oppositeDir = direction == "left" ? "right"
-                          : direction == "right" ? "left"
-                          : direction == "up" ? "down"
-                          : "up"
-        if (getScrollableParent(evt.target as HTMLElement, [oppositeDir]) != null)
-          return
-        switch (displayMode.currentView) {
-          case "menu" :
-            if (direction == 'right') {
-              back()
-              return true
-            }
-            break
-          case "text" :
-          case "graphics" : // TODO move background instead of opening views ?
-          case "dialog" :
-            switch(direction) {
-              case "up" : toggleView('graphics'); return true;
-              case "left" : toggleView('menu'); return true;
-              case "right" : toggleView('history'); return true;
-              case "down" : toggleView('history'); return true;
-            }
-            break
+        if (isViewAnyOf("text", "graphics", "dialog")) {
+          // TODO in graphics mode, move background instead of opening views ?
+          switch(direction) {
+            case "up" : toggleView('graphics'); return true;
+            case "left" : toggleView('menu'); return true;
+            case "right" : toggleView('history'); return true;
+            case "down" : toggleView('history'); return true;
+          }
+        } else {
+          if (direction == "right") {
+            back()
+            return true
+          }
         }
       }
     })
