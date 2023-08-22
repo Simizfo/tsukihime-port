@@ -156,14 +156,14 @@ const TitleMenuScreen = () => {
 
       {showPWAButton &&
         <motion.button className="pwa-install" onClick={installPWA}
-          initial={{ opacity: 0, scale: 0.6 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.8,
-            ease: [0, 0.71, 0.2, 1.01]
-          }} >
-          <img src={pwaIcon} alt="PWA icon" draggable={false}/>
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: 0.8,
+          duration: 1,
+        }} >
           <span>Install</span>
+          <img src={pwaIcon} alt="PWA icon" draggable={false}/>
         </motion.button>
       }
 
