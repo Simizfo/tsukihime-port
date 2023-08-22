@@ -263,6 +263,44 @@ export const addEventListener = ({event, handler, element = window}: any) => {
   return () => element.removeEventListener(event, handler)
 }
 
+export function listParentNodes(element: Node|null): Array<Node> {
+  const result = new Array<Node>()
+  while (element) {
+    result.unshift(element)
+    element = element.parentNode
+  }
+  return result
+}
+
+export function getScrollableParent(element: Node, directions?: Array<"up"|"down"|"left"|"right">): HTMLElement|null {
+  const tree = listParentNodes(element) as Array<HTMLElement>
+  const up = directions?.includes('up') ?? true
+  const down = directions?.includes('down') ?? true
+  const left = directions?.includes('left') ?? true
+  const right = directions?.includes('right') ?? true
+  const y = up || down
+  const x = left || right
+  for (let i=tree.length-1; i>= 0; i--) {
+    const {
+      clientWidth: clientW, clientHeight: clientH, clientLeft: clientL, clientTop: clientT,
+      scrollWidth: scrollW, scrollHeight: scrollH, scrollLeft: scrollL, scrollTop: scrollT
+    } = tree[i]
+    if (x && clientW != 0 && clientW < scrollW) {
+      if (left && clientL > scrollL)
+        return tree[i]
+      if (right && clientL + clientW < scrollW - scrollL)
+        return tree[i]
+    }
+    if (y && clientH != 0 && clientH < scrollH) {
+      if (up && clientT > scrollT)
+        return tree[i]
+      if (down && clientT + clientH < scrollH - scrollT)
+        return tree[i]
+    }
+  }
+  return null
+}
+
 export function isDigit(str: string, index: number = 0) {
   const char = str.charAt(index)
   return char >= '0' && char <= '9'
@@ -346,4 +384,4 @@ export function isFullscreen() {
   return document.fullscreenElement !== null
 }
 
-export function TSForceType<T>(v: any): asserts v is T {}
+export function TSForceType<T>(_v: any): asserts _v is T {}

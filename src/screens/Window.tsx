@@ -22,6 +22,7 @@ import { SCREEN, displayMode } from '../utils/display';
 import { KeysMatching } from '../types';
 import { useLanguageRefresh } from '../utils/lang';
 import ConfigLayer from '../layers/ConfigLayer';
+import { getScrollableParent } from '../utils/utils';
 
 //##############################################################################
 //#                                KEY MAPPING                                 #
@@ -149,17 +150,32 @@ const Window = () => {
   useEffect(()=> {
     const swipeHandler = new GestureHandler(rootElmtRef.current, {
       swipeTrigDistance: 50,
-      onSwipe: (direction)=> {
-        if (displayMode.text && !displayMode.saveScreen) {
-          stopAutoPlay()
-          switch(direction) {
-            case "up" : displayMode.graphics = true; return true
-            case "down" : displayMode.history = true; return true
-            case "left" : displayMode.menu = true; return true
-            case "right" : page_nav("prev"); return true
-          }
-        } else if (displayMode.graphics) {
-          //TODO : move background ?
+      onSwipe: (direction, _dist, evt)=> {
+        if (direction == "")
+          return
+        const oppositeDir = direction == "left" ? "right"
+                          : direction == "right" ? "left"
+                          : direction == "up" ? "down"
+                          : "up"
+        if (getScrollableParent(evt.target as HTMLElement, [oppositeDir]) != null)
+          return
+        switch (displayMode.currentView) {
+          case "menu" :
+            if (direction == 'right') {
+              back()
+              return true
+            }
+            break
+          case "text" :
+          case "graphics" : // TODO move background instead of opening views ?
+          case "dialog" :
+            switch(direction) {
+              case "up" : toggleView('graphics'); return true;
+              case "left" : toggleView('menu'); return true;
+              case "right" : toggleView('history'); return true;
+              case "down" : toggleView('history'); return true;
+            }
+            break
         }
       }
     })

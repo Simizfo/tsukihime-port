@@ -43,8 +43,8 @@ export class GestureHandler {
   private touchEventHandler(event: TouchEvent) {
     switch(event.type) {
       case "touchstart" :
-        this.start.x = event.targetTouches[0].screenX
-        this.start.y = event.targetTouches[0].screenY
+        this.start.x = event.targetTouches[0].clientX
+        this.start.y = event.targetTouches[0].clientY
         this.start.id = event.targetTouches[0].identifier
         break
       case "touchmove" :
@@ -57,7 +57,7 @@ export class GestureHandler {
             this.cancel()
             return;
           }
-          const {screenX: x, screenY: y} = touch
+          const {clientX: x, clientY: y} = touch
           this.lastTouch.x = x
           this.lastTouch.y = y
         }
