@@ -8,7 +8,8 @@ import { FaVolumeMute, FaVolumeOff, FaVolumeUp } from "react-icons/fa"
 const ConfigAudioTab = () => {
   useLanguageRefresh()
   const [conf, setConf] = useState(deepAssign({
-    volume : undefined,
+    volume: undefined,
+    trackFormat: undefined
   }, settings, {extend: false}))
 
   useEffect(()=> {
@@ -30,7 +31,7 @@ const ConfigAudioTab = () => {
     return newConf
   })
 
-  const volumeNames: {[key in keyof typeof conf.volume]: string} = {
+  const volumeNames: Record<keyof typeof conf.volume, string> = {
     'master': strings.config["volume-master"],
     'track': strings.config["volume-track"],
     'se': strings.config["volume-se"]
@@ -61,6 +62,18 @@ const ConfigAudioTab = () => {
           </div>
         </ConfigItem>
       )}
+      
+      <ConfigButtons
+        title={strings.config["track-source"]}
+        btns={[
+          { text: strings.config["track-source-original"], value: "CD_original/track$.ogg" },
+          { text: strings.config["track-source-everafter"], value: "CD_everafter/track$.mp3" },
+          { text: strings.config["track-source-tsukibako"], value: "CD_tsukibako/track$.ogg" }
+        ]}
+        property="trackFormat"
+        conf={conf}
+        updateValue={updateValue}
+      />
 
 
       <ResetBtn onClick={() => {

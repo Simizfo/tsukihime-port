@@ -30,12 +30,13 @@ export const defaultSettings = deepFreeze({
   // H-related settings
   blurThumbnails: true,
   warnHScenes: false,
-  // other settings
+  // audio settings
   volume: {
     master: 5,
     track: 10,
     se: 10,
   },
+  trackFormat: "CD_everafter/track$.mp3",
   // saved progress
   eventImages: new Array<string>(),
   completedScenes: new Array<string>(),

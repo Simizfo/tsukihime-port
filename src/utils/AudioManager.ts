@@ -288,11 +288,19 @@ for(const [key, value] of Object.entries(STRALIAS_JSON)) {
     audio.setSoundFileUrl(key, value as string)
 }
 
-for (let i=1; i <= 10; i++) {
-  // "*5" -> CD/track05.mp3
-  const paddedNumber = i.toString().padStart(2,'0')
-  audio.setSoundFileUrl(`"*${i}"`, `CD/track${paddedNumber}.mp3`)
+function updateTrackPaths() {
+  for (let i=1; i <= 10; i++) {
+    const paddedNum = i.toString().padStart(2,'0')
+    const url = settings.trackFormat.replace('$', paddedNum)
+    audio.setSoundFileUrl(`"*${i}"`, url, true)
+  }
+  if (audio.isTrackPlaying()) {
+    if (displayMode.screen == SCREEN.WINDOW)
+      playTrack(gameContext.audio.track)
+  }
 }
+observe(settings, "trackFormat", updateTrackPaths)
+updateTrackPaths()
 
 //_______________________________react to changes_______________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

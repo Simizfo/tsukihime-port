@@ -11,7 +11,6 @@ const ConfigGameTab = () => {
   useLanguageRefresh()
   const [conf, setConf] = useState(deepAssign({
     // object only used for its structure. Values don't matter.
-    volume : undefined,
     textSpeed: undefined,
     fixedRatio: undefined,
     autoClickDelay: undefined,
