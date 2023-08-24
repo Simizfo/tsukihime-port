@@ -8,7 +8,6 @@ import { findImageObjectByName } from '../utils/gallery'
 import { useState, useEffect } from 'react'
 
 const GALLERY_IMG_NB = 8
-const defaultThumbnail = imageUrl("notreg", "thumb")
 
 const ExtraScreen = () => {
   useLanguageRefresh()
@@ -43,7 +42,7 @@ const ExtraScreen = () => {
 
               {/* Placeholders */}
               {Array(Math.max(0, GALLERY_IMG_NB - galleryImgs.length)).fill(0).map((_, index) =>
-                <img key={index} src={defaultThumbnail} alt="placeholder" draggable={false} />
+                <div className="placeholder" />
               )}
             </div>
           </section>

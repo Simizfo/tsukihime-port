@@ -41,11 +41,18 @@
             overflow-x: hidden;
             gap: 8px;
 
-            img {
-                width: 100%;
+            img, .placeholder {
+                display: block;
                 aspect-ratio: 4/3;
+                width: 100%;
+            }
+            img {
                 min-width: 80px;
-                background-color: #1a353f59;
+                transition: .2s ease-out;
+                background-color: #0e98cb59;
+            }
+            .placeholder {
+                border: 1px solid #004347;
             }
         }
     }
