@@ -42,7 +42,7 @@ const ExtraScreen = () => {
 
               {/* Placeholders */}
               {Array(Math.max(0, GALLERY_IMG_NB - galleryImgs.length)).fill(0).map((_, index) =>
-                <div className="placeholder" />
+                <div className="placeholder" key={index} />
               )}
             </div>
           </section>
