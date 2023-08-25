@@ -87,11 +87,6 @@
         .second-row {
             margin-top: 1em;
             font-size: .7em;
-
-            .disabled {
-                pointer-events: none;
-                opacity: .4;
-            }
         }
 
         .menu-item {
@@ -112,6 +107,11 @@
                 border-color: initial;
                 padding-top: 0;
                 padding-bottom: 6px;
+            }
+            &.disabled, &:disabled {
+                pointer-events: none;
+                opacity: .4;
+                text-shadow: 0 0 2px #d0d3e1;
             }
         }
     }
