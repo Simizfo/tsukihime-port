@@ -1,11 +1,9 @@
-import { memo, useCallback, useEffect, useRef, useState } from "react";
+import { memo, useCallback, useRef, useState } from "react";
 import { gameContext, settings } from "../utils/variables";
 import { observe, useObserved, useObserver } from "../utils/Observer";
 import { displayMode } from "../utils/display";
-import { Graphics, preloadImage } from "../components/GraphicsComponent";
-
-type SpritePos = keyof typeof gameContext.graphics
-const POSITIONS: Array<SpritePos> = Object.keys(gameContext.graphics) as Array<SpritePos>
+import { Graphics, SpritePos, preloadImage } from "../components/GraphicsComponent";
+import { objectMatch, useTraceUpdate } from "../utils/utils";
 
 const transition = {
   effect: "",
@@ -32,13 +30,17 @@ export function moveBg(direction: "up"|"down") {
   else if(direction == "up" && index > 0) index--
   displayMode.bgAlignment = positions[index]
 }
+
+function endTransition() {
+  transition.duration = 0
+}
 //_____________________________script command tools_____________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 function extractImage(image: string) {
   if (image.startsWith('"') && image.endsWith('"')) {
     // remove ':a;', 'image/', '"', '.jpg'
-    image = image.substring(1, image.length-2)
+    image = image.substring(1, image.length-1)
                  .replace(/:a;|image[\/\\]|\.\w+$/g, '')
                  .replace('\\', '/')
     switch (image) {
@@ -80,7 +82,7 @@ function applyChange(pos: SpritePos, image: string, type: string, onFinish: Void
   let change = setSprite(pos as SpritePos, image)
 
   if (pos == 'bg') {
-    if(clearAllSprites())
+    if (!change && objectMatch(gameContext.graphics, {l: "", c: "", r: ""}))
       change = true
     if (change && (image as string).includes('event/') &&
         !settings.eventImages.includes(image)) {
@@ -100,11 +102,13 @@ function applyChange(pos: SpritePos, image: string, type: string, onFinish: Void
       // Listen for the 'duration' to be set to 0
       // The component sets it to 0 after completing the animation,
       // and calling 'next' the command also sets it to 0
-      observe(transition, 'duration', onFinish,
-              { filter: (d)=> d == 0, once: true })
-      return {next: ()=> {
-        transition.duration = 0
-      }}
+      observe(transition, 'duration',
+          pos != 'bg' ? onFinish : ()=> { clearAllSprites(); onFinish() },
+          { filter: (d)=> d == 0, once: true })
+      return { next: endTransition }
+    } else if (pos == 'bg') {
+      // instant background change erases all sprites
+      clearAllSprites()
     }
   }
 }
@@ -179,9 +183,9 @@ const commands = {
   'bg' : processImageCmd,
   'ld' : processImageCmd,
   'cl' : processImageCmd,
-  'quakex'  : processQuake, //TODO : vertical shake effect
-  'quakey'  : processQuake, //TODO : horizontal shake effect
-  'monocro' : processMonocro, //TODO : fade screen to monochrome
+  'quakex'  : processQuake,
+  'quakey'  : processQuake,
+  'monocro' : processMonocro, //TODO : crossfade ?
 }
 
 export {
@@ -195,40 +199,45 @@ export {
 //________________________________Tool functions________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-function endTransition() {
-  transition.duration = 0
+type GraphicTransitionResult = {
+  img: string, prev: string,
+  duration: number, effect: string,
+  imgLoaded: boolean
 }
 
-function useGraphicTransition(pos: SpritePos): [string, string, number, string] {
-  const [img] = useObserved(gameContext.graphics, pos)
+function useGraphicTransition(pos: SpritePos, preload: boolean = true): GraphicTransitionResult {
+  const [img, setImg] = useState("")
+  const [loaded, setLoaded] = useState(true)
   const prev = useRef("")
   const [d, setD] = useState(0)
   const [e, setE] = useState("")
 
-  const callback = useCallback(()=> {
-    const {duration: transD, pos: transP, effect: transE} = transition
-    if (transD > 0 && (transP == pos || transP == 'a' && pos != 'bg')) {
-      setD(transD)
-      setE(transE)
-    } else {
+  const onChange = useCallback(()=> {
+    const {duration: transD, pos: transPos, effect: transE} = transition
+    if (transD == 0 || transPos != pos && (pos == 'bg' || transPos != 'a')) {
       setD(0)
       setE("")
       prev.current = gameContext.graphics[pos]
+    } else {
+      setD(transD)
+      setE(transE)
     }
   }, [])
-  useObserver(callback, transition, 'duration')
-  useObserver(callback, transition, 'effect')
-  useObserver(callback, gameContext.graphics, pos)
-  return [img, prev.current, d, e]
-}
+  useObserver(onChange, transition, 'duration')
+  useObserver(onChange, transition, 'effect')
 
-function useImagePreload(img: string) : boolean {
-  const [imgLoaded, setImageLoaded] = useState(false)
-  useEffect(()=> {
-    setImageLoaded(false)
-    preloadImage(img).finally(setImageLoaded.bind(null, true))
-  }, [img])
-  return imgLoaded
+  useObserver((img)=> {
+    setImg(img)
+    if (preload && img) {
+      setLoaded(false)
+      preloadImage(img).finally(setLoaded.bind(null, true))
+    } else {
+      setLoaded(true)
+    }
+    onChange()
+  }, gameContext.graphics, pos)
+
+  return {img, prev: prev.current, duration: d, effect: e, imgLoaded: loaded}
 }
 
 //________________________________Sub components________________________________
@@ -236,24 +245,22 @@ function useImagePreload(img: string) : boolean {
 
 //.......... l, c, r sprites ...........
 const SpriteGraphics = memo(({pos}: {pos: Exclude<SpritePos, 'bg'>})=> {
-  const [currImg, prevImg, fadeTime, effect] = useGraphicTransition(pos)
-  const [bgTransition] = useObserved(transition, 'duration',
-      (d)=> d > 0 && transition.pos == 'bg' && prevImg != "")
-  const imgLoaded = useImagePreload(currImg)
-  const img1 = prevImg
-  const img2 = bgTransition ? prevImg : currImg
+  const {img: currImg, prev: prevImg, duration: fadeTime, effect, imgLoaded}
+      = useGraphicTransition(pos)
+
+  //useTraceUpdate(pos, {pos, currImg, prevImg, fadeTime, effect, imgLoaded})
 
   if (!imgLoaded)
-    return <Graphics key={img1} pos={pos} image={img1}/>
+    return <Graphics key={prevImg} pos={pos} image={prevImg}/>
 
   return <>
     {fadeTime > 0 &&
-      <Graphics key={img1} pos={pos} image={img1} fadeOut={effect}
-                fadeTime={fadeTime} toImg={img2}
+      <Graphics key={prevImg} pos={pos} image={prevImg} fadeOut={effect}
+                fadeTime={fadeTime} toImg={currImg}
                 onAnimationEnd={endTransition}/>
     }
     {(fadeTime == 0 || effect != "") &&
-      <Graphics key={img2} pos={pos} image={img2} fadeIn={effect}
+      <Graphics key={currImg} pos={pos} image={currImg} fadeIn={effect}
                 fadeTime={fadeTime} onAnimationEnd={endTransition}/>
     }
   </>
@@ -261,31 +268,31 @@ const SpriteGraphics = memo(({pos}: {pos: Exclude<SpritePos, 'bg'>})=> {
 
 //............. background .............
 const BackgroundGraphics = memo(()=> {
-  const [bgAlign] = useObserved(displayMode, 'bgAlignment',
-      (a)=>({ 'bg-align': a }))
-  const [currImg, prevImg, fadeTime, _effect] = useGraphicTransition('bg')
+  const [bgAlign] = useObserved(displayMode, 'bgAlignment')
+  const {img: currImg, prev: prevImg, duration: fadeTime, effect: _effect}
+      = useGraphicTransition('bg', false)
   const bgTransition = fadeTime > 0
+
+  //useTraceUpdate('bg', {bgAlign, currImg, prevImg, fadeTime, _effect})
 
   const img = bgTransition ? prevImg : currImg
   return (
-    <Graphics key={img} pos='bg' image={img} {...bgAlign}/>
+    <Graphics key={img} pos='bg' image={img} {...{'bg-align': bgAlign}}/>
   )
 })
 
 //............. foreground .............
 //(used to make background transitions over the sprites)
 const ForegroundGraphics = memo(()=> {
-  const [bgAlign] = useObserved(displayMode, 'bgAlignment',
-      (a)=>({ 'bg-align': a }))
-  const [img, _prev, fadeTime, effect] = useGraphicTransition('bg')
-  const imgLoaded = useImagePreload(img)
+  const [bgAlign] = useObserved(displayMode, 'bgAlignment')
+  const {img, duration: fadeTime, effect, imgLoaded}
+      = useGraphicTransition('bg')
 
-  return (
-    (imgLoaded && fadeTime > 0 && effect != "") ?
-      <Graphics key={img} pos='bg' image={img} fadeTime={fadeTime}
-                fadeIn={effect} onAnimationEnd={endTransition} {...bgAlign}/>
-    : <></>
-  )
+  //useTraceUpdate('fg', {bgAlign, img, fadeTime, effect, imgLoaded})
+  return (imgLoaded && fadeTime > 0 && effect != "") ? (
+    <Graphics key={img} pos='bg' image={img} fadeTime={fadeTime} fadeIn={effect}
+              onAnimationEnd={endTransition} {...{'bg-align': bgAlign}}/>
+  ) : <></>
 })
 
 //________________________________Main component________________________________

@@ -3,6 +3,7 @@ import { gameContext, settings } from "../utils/variables";
 import { RouteDayName, RouteName } from "../types";
 import { dayTitle, imageUrl, phaseTitle } from "../utils/lang";
 import { findImageObjectByName } from "../utils/gallery";
+import { useTraceUpdate } from "../utils/utils";
 
 export type SpritePos = keyof typeof gameContext.graphics
 
@@ -46,7 +47,7 @@ export function graphicElement(pos: SpritePos, image: string,
   )
 }
 
-export async function preloadImage(src:string): Promise<void> {
+export async function preloadImage(src:string, resolution=settings.resolution): Promise<void> {
   if (src.startsWith('#') || src.startsWith('$'))
     return
   else {
@@ -54,7 +55,7 @@ export async function preloadImage(src:string): Promise<void> {
       const img = new Image()
       img.onload = resolve as VoidFunction
       img.onerror = img.onabort = reject
-      img.src = src
+      img.src = imageUrl(src, resolution)
     })
   }
 }
@@ -82,8 +83,9 @@ type Props = {
   fadeOut?: undefined
   fadeTime?: 0
   toImg?: undefined
+  onAnimationEnd?: undefined
 } | (
-  { fadeTime: number } & (
+  { fadeTime: number, onAnimationEnd: VoidFunction } & (
     { fadeIn: string, fadeOut?: undefined, toImg?: undefined } |
     { fadeOut: string, fadeIn?: undefined, toImg: string }
   )
@@ -91,7 +93,9 @@ type Props = {
 
 export const Graphics = memo(({pos, image, resolution=settings.resolution,
     fadeTime=0, fadeIn=undefined, fadeOut=undefined, toImg=undefined,
-    ...props} : Props)=> {
+    onAnimationEnd=undefined, ...props} : Props)=> {
+
+  //useTraceUpdate(`graph[${pos}]`, {pos, image, resolution, fadeTime, fadeIn, fadeOut, toImg, onAnimationEnd, ...props})
 
 //____________________________________image_____________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -102,21 +106,20 @@ export const Graphics = memo(({pos, image, resolution=settings.resolution,
     }
 //............ static image ............
     else if (fadeTime == 0) {
-      return props
+      return {}
     }
 //........ (dis)appearing image ........
     else {
-      const {style: insertedStyle, ...attrs} = props
-      const style = {'--transition-time': `${fadeTime}ms`, ...insertedStyle}
-      const fadeAttrs = fadeIn ? {'fade-in' : fadeIn}
-                      : fadeOut ? {'fade-out': fadeOut} : {}
       return {
-        ...fadeAttrs,
-        style: style,
-        ...attrs
+        ...(fadeIn ? {'fade-in' : fadeIn}
+          : fadeOut ? {'fade-out': fadeOut} : {}),
+          style: {
+            '--transition-time': `${fadeTime}ms`
+          },
+        onAnimationEnd
       }
     }
-  }, [pos, image, fadeTime, fadeIn, fadeOut, ...Object.values(props)])()
+  }, [pos, image, fadeTime, fadeIn, fadeOut])()
 
 //________________________________crossfade mask________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -140,8 +143,14 @@ export const Graphics = memo(({pos, image, resolution=settings.resolution,
 
 //____________________________________render____________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  const {style: baseStyle = {}, ...baseAttrs} = (imageProps || {})  as Record<string, any>
+  const {style: insertStyle = {}, ...isertAttrs} = props
   return <>
-    {maskProps != undefined && graphicElement(pos, image, maskProps, resolution)}
+    {maskProps != undefined && graphicElement(pos, image, {
+        style: {...baseStyle, ...insertStyle},
+        ...baseAttrs,
+        ...isertAttrs
+      }, resolution)}
     {imageProps != undefined && graphicElement(pos, image, imageProps, resolution)}
   </>
 })
