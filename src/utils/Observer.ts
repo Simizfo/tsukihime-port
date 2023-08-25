@@ -4,15 +4,15 @@ type ObserverCallback<T=any> = (value: T)=>void
 type Observable = Record<PropertyKey, any>
 
 type Listener<T=any> = {
-    callback: ObserverCallback<T>,
-    once: boolean
-    filter?: (v:T)=>boolean,
+  callback: ObserverCallback<T>,
+  once: boolean
+  filter?: (v:T)=>boolean,
 }
 type ObserverOptions<T> = Partial<Omit<Listener<T>, 'callback'>>
 
 type ChildrenListener<T> = {
-    callback: (prop: keyof T, val: any)=>void,
-    filter?: (prop: keyof T, v: T[keyof T])=>boolean
+  callback: (prop: keyof T, val: any)=>void,
+  filter?: (prop: keyof T, v: T[keyof T])=>boolean
 }
 type ChildrenObserverOptions<T> = Partial<Omit<ChildrenListener<T>, 'callback'>>
 
@@ -21,203 +21,222 @@ type ChildrenObserverOptions<T> = Partial<Omit<ChildrenListener<T>, 'callback'>>
 //##############################################################################
 
 class PropertyObserver<V> {
-    private originalDescriptor: PropertyDescriptor
-    private changed: boolean
-    private listeners: Array<Listener<V>>
+  private originalDescriptor: PropertyDescriptor
+  private changed: boolean
+  private listeners: Array<Listener<V>>
 
-    constructor(parent: any, property: PropertyKey, onValueChange: VoidFunction) {
-        const descriptor = Object.seal(Object.getOwnPropertyDescriptor(parent, property))
-        if (!descriptor)
-            throw Error(`property ${property.toString()} is not a direct property of object ${parent}`)
-        if (!(descriptor.configurable && (descriptor.writable??true)))
-            throw Error(`property ${property.toString()} of ${parent} must be configurable and writable to be observed`)
-        if ((descriptor.get != undefined) != (descriptor.set != undefined))
-            throw Error(`property ${property.toString()} of ${parent} must be writeable and readable`)
+  constructor(parent: any, property: PropertyKey, onValueChange: VoidFunction) {
+    const descriptor = Object.seal(Object.getOwnPropertyDescriptor(parent, property))
+    if (!descriptor)
+      throw Error(`property ${property.toString()} is not a direct property of object ${parent}`)
+    if (!(descriptor.configurable && (descriptor.writable??true)))
+      throw Error(`property ${property.toString()} of ${parent} must be configurable and writable to be observed`)
+    if ((descriptor.get != undefined) != (descriptor.set != undefined))
+      throw Error(`property ${property.toString()} of ${parent} must be writeable and readable`)
 
-        this.originalDescriptor = descriptor
-        this.changed = false
-        this.listeners = []
-        const self = this
-        Object.defineProperty(parent, property, {
-            get() { return descriptor.get?.call(this)??descriptor.value },
-            set(v: V) {
-                const oldValue = this[property]
-                if (descriptor.set)
-                    descriptor.set.call(this, v)
-                else
-                    descriptor.value = v
-                if (v != oldValue && !self.changed) {
-                    self.changed = true
-                    onValueChange()
-                }
-            },
-            enumerable: descriptor.enumerable,
-            configurable: true
-        })
-    }
-    get modified() {
-        return this.changed
-    }
-    notifyChange(value : V) {
-        this.changed = false
-        const listeners = this.listeners.filter(({filter})=>filter?.(value)??true)
-        for (const listener of listeners) {
-            listener.callback(value)
-            if (listener.once)
-                this.listeners.splice(this.listeners.indexOf(listener), 1)
+    this.originalDescriptor = descriptor
+    this.changed = false
+    this.listeners = []
+    const self = this
+    Object.defineProperty(parent, property, {
+      get() { return descriptor.get?.call(this)??descriptor.value },
+      set(v: V) {
+        const oldValue = this[property]
+        if (descriptor.set)
+          descriptor.set.call(this, v)
+        else
+          descriptor.value = v
+        if (v != oldValue && !self.changed) {
+          self.changed = true
+          onValueChange()
         }
-        return this.listeners.length == 0
+      },
+      enumerable: descriptor.enumerable,
+      configurable: true
+    })
+  }
+  get modified() {
+    return this.changed
+  }
+  notifyChange(value : V) {
+    this.changed = false
+    const listeners = this.listeners.filter(({filter})=>filter?.(value)??true)
+    for (const listener of listeners) {
+      listener.callback(value)
+      if (listener.once)
+        this.listeners.splice(this.listeners.indexOf(listener), 1)
     }
-    addListener(callback: ObserverCallback<V>, {filter=undefined, once=false}: ObserverOptions<V>) {
-        this.listeners.push({callback, filter, once})
+    return this.listeners.length == 0
+  }
+  addListener(callback: ObserverCallback<V>, {filter=undefined, once=false}: ObserverOptions<V>) {
+    this.listeners.push({callback, filter, once})
+  }
+  removeListener(callback: ObserverCallback<V>) {
+    let index = this.listeners.findIndex(listener=>listener.callback == callback)
+    if (index >= 0) {
+      this.listeners.splice(index, 1)
+      return this.listeners.length
+    } else {
+      return -1
     }
-    removeListener(callback: ObserverCallback<V>) {
-        let index = this.listeners.findIndex(listener=>listener.callback == callback)
-        if (index >= 0) {
-            this.listeners.splice(index, 1)
-            return this.listeners.length
-        } else {
-            return -1
-        }
-    }
-    stopObserver(parent: any, property: PropertyKey) {
-        Object.defineProperty(parent, property, this.originalDescriptor)
-    }
+  }
+  stopObserver(parent: any, property: PropertyKey) {
+    Object.defineProperty(parent, property, this.originalDescriptor)
+  }
 }
 
 const observerSymbol = Symbol("Observer")
 
+const notifyTask = {
+  _list: [] as Array<VoidFunction>,
+  _microtaskQueued: false,
+  _microtask() {
+    notifyTask._microtaskQueued = false
+    for (const func of notifyTask._list) {
+      func()
+    }
+    notifyTask._list = []
+  },
+  enqueue(func: VoidFunction) {
+    this._list.push(func)
+    if (!this._microtaskQueued) {
+      this._microtaskQueued = true
+      queueMicrotask(this._microtask)
+    }
+  }
+}
+
 class PropertiesObserver<T extends Observable> {
 
-    private observers: Map<keyof T, PropertyObserver<any>>
-    private parent: T
-    private microtaskQueued: boolean
-    private onValueChange: VoidFunction
-    private notify: VoidFunction
+  private observers: Map<keyof T, PropertyObserver<any>>
+  private parent: T
+  private notifyQueued: boolean
+  private onValueChange: VoidFunction
+  private notify: VoidFunction
 
-    static getObserver<T extends Observable>(parent: T|ObservableContainer<T>, create:true) : PropertiesObserver<T>;
-    static getObserver<T extends Observable>(parent: T|ObservableContainer<T>, create:false) : PropertiesObserver<T>|undefined;
-    static getObserver<T extends Observable>(parent: T|ObservableContainer<T>, create=false) : PropertiesObserver<T>|undefined {
-        if (observerSymbol in parent) {
-            return parent[observerSymbol] as PropertiesObserver<T>
-        } else if (create) {
-            const observer = new PropertiesObserver(parent);
-            (parent as any)[observerSymbol] = observer
-            return observer as PropertiesObserver<T>
-        } else {
-            return undefined
-        }
+  static getObserver<T extends Observable>(parent: T|ObservableContainer<T>, create:true) : PropertiesObserver<T>;
+  static getObserver<T extends Observable>(parent: T|ObservableContainer<T>, create:false) : PropertiesObserver<T>|undefined;
+  static getObserver<T extends Observable>(parent: T|ObservableContainer<T>, create=false) : PropertiesObserver<T>|undefined {
+    if (observerSymbol in parent) {
+      return parent[observerSymbol] as PropertiesObserver<T>
+    } else if (create) {
+      const observer = new PropertiesObserver(parent);
+      (parent as any)[observerSymbol] = observer
+      return observer as PropertiesObserver<T>
+    } else {
+      return undefined
     }
+  }
 
-    private constructor(parent: T) {
-        this.observers = new Map()
-        this.parent = parent
-        this.microtaskQueued = false
-        this.onValueChange = this._onValueChange.bind(this)
-        this.notify = this._notify.bind(this)
-    }
+  private constructor(parent: T) {
+    this.observers = new Map()
+    this.parent = parent
+    this.notifyQueued = false
+    this.onValueChange = this._onValueChange.bind(this)
+    this.notify = this._notify.bind(this)
+  }
 
-    private _onValueChange() {
-        if (!this.microtaskQueued) {
-            queueMicrotask(this.notify)
-            this.microtaskQueued = true
-        }
+  private _onValueChange() {
+    if (!this.notifyQueued) {
+      notifyTask.enqueue(this.notify)
+      this.notifyQueued = true
     }
+  }
 
-    private _notify() {
-        this.microtaskQueued = false
-        for (const [property, observer] of this.observers.entries()) {
-            if (observer.modified) {
-                observer.notifyChange(this.parent[property])
-            }
-        }
+  private _notify() {
+    this.notifyQueued = false
+    for (const [property, observer] of this.observers.entries()) {
+      if (observer.modified) {
+        observer.notifyChange(this.parent[property])
+      }
     }
+  }
 
-    private getObserver<K extends keyof T>(prop: K): PropertyObserver<T[K]> {
-        if (!this.observers.has(prop)) {
-            const observer = new PropertyObserver<T[K]>(this.parent, prop,
-                    this.onValueChange)
-            this.observers.set(prop, observer)
-        }
-        return this.observers.get(prop) as PropertyObserver<T[K]>
+  private getObserver<K extends keyof T>(prop: K): PropertyObserver<T[K]> {
+    if (!this.observers.has(prop)) {
+      const observer = new PropertyObserver<T[K]>(this.parent, prop,
+          this.onValueChange)
+      this.observers.set(prop, observer)
     }
+    return this.observers.get(prop) as PropertyObserver<T[K]>
+  }
 
-    private onSizeChanged() {
-        if (this.observers.size == 0)
-            delete this.parent[observerSymbol]
-    }
+  private onSizeChanged() {
+    if (this.observers.size == 0)
+      delete this.parent[observerSymbol]
+  }
 
-    observe<K extends keyof T>(property: K, callback: ObserverCallback<T[K]>,
-            options: ObserverOptions<T[K]> = {}) {
-        this.getObserver(property).addListener(callback, options)
-    }
+  observe<K extends keyof T>(property: K, callback: ObserverCallback<T[K]>,
+      options: ObserverOptions<T[K]> = {}) {
+    this.getObserver(property).addListener(callback, options)
+  }
 
-    unobserve<K extends keyof T>(property: K, callback: ObserverCallback<T[K]>) {
-        const observer = this.getObserver(property)
-        const remainingListeners = observer.removeListener(callback)
-        if (remainingListeners == 0) {
-            observer.stopObserver(this.parent, property)
-            this.observers.delete(property)
-            this.onSizeChanged()
-        }
+  unobserve<K extends keyof T>(property: K, callback: ObserverCallback<T[K]>) {
+    const observer = this.getObserver(property)
+    const remainingListeners = observer.removeListener(callback)
+    if (remainingListeners == 0) {
+      observer.stopObserver(this.parent, property)
+      this.observers.delete(property)
+      this.onSizeChanged()
     }
+  }
 
-    notifyObservers<K extends keyof T>(property: K) {
-        const observer = this.observers.get(property)
-        if (observer) {
-            const empty = observer.notifyChange(this.parent[property])
-            if (empty) {
-                observer.stopObserver(this.parent, property)
-                this.onSizeChanged()
-            }
-        }
+  notifyObservers<K extends keyof T>(property: K) {
+    const observer = this.observers.get(property)
+    if (observer) {
+      const empty = observer.notifyChange(this.parent[property])
+      if (empty) {
+        observer.stopObserver(this.parent, property)
+        this.onSizeChanged()
+      }
     }
+  }
 
-    notifyPending<K extends keyof T>(property: K) {
-        const observer = this.observers.get(property)
-        return observer?.modified
-    }
+  notifyPending<K extends keyof T>(property: K) {
+    const observer = this.observers.get(property)
+    return observer?.modified
+  }
 }
 
 const callbacksSymbol = Symbol("callbacks")
 const hiddenObjSymbol = Symbol("hidden object")
 
 class ObservableContainer<T extends Object> {
-    constructor(obj: T) {
-        const callbacks : Array<ChildrenListener<T>> = []
-        const modifs: [(keyof T), T[keyof T]][] = []
-        let microtaskQueued = false
-        const notify = ()=> {
-            microtaskQueued = false
-            for (const [key, value] of modifs) {
-                for (const {callback, filter} of callbacks) {
-                    if (filter?.(key as keyof T, value) ?? true)
-                        callback(key as keyof T, value)
-                }
-            }
+  constructor(obj: T) {
+    const callbacks : Array<ChildrenListener<T>> = []
+    const modifs: [(keyof T), T[keyof T]][] = []
+    let notifyQueued = false
+    const notify = ()=> {
+      notifyQueued = false
+      for (const [key, value] of modifs) {
+        for (const {callback, filter} of callbacks) {
+          if (filter?.(key as keyof T, value) ?? true)
+            callback(key as keyof T, value)
         }
-        return new Proxy(obj, {
-            //...Reflect,
-            get(target, key: PropertyKey, receiver) {
-                switch(key) {
-                    case callbacksSymbol: return callbacks
-                    case hiddenObjSymbol: return obj
-                    default : return Reflect.get(target, key, receiver)
-                }
-            },
-            set(target, key: PropertyKey, value, receiver) {
-                const diff = value != Reflect.get(target, key, receiver)
-                const result = Reflect.set(target, key, value, receiver)
-                if (diff && result) {
-                    modifs.push([key as keyof T, value])
-                    if (!microtaskQueued) {
-                        queueMicrotask(notify)
-                    }
-                }
-                return result
-            }
-        })
+      }
     }
+    return new Proxy(obj, {
+      //...Reflect,
+      get(target, key: PropertyKey, receiver) {
+        switch(key) {
+          case callbacksSymbol: return callbacks
+          case hiddenObjSymbol: return obj
+          default : return Reflect.get(target, key, receiver)
+        }
+      },
+      set(target, key: PropertyKey, value, receiver) {
+        const diff = value != Reflect.get(target, key, receiver)
+        const result = Reflect.set(target, key, value, receiver)
+        if (diff && result) {
+          modifs.push([key as keyof T, value])
+          if (!notifyQueued) {
+            notifyTask.enqueue(notify)
+          }
+        }
+        return result
+      }
+    })
+  }
 }
 
 //##############################################################################
@@ -236,10 +255,10 @@ class ObservableContainer<T extends Object> {
  *        call
  */
 export function observe<T extends Observable, P extends keyof T>(
-        object: T|ObservableContainer<T>, property: P,
-        callback: ObserverCallback<T[P]>, options: ObserverOptions<T[P]> = {}) {
-    const observer = PropertiesObserver.getObserver<T>(object, true)
-    observer.observe(property, callback, options)
+    object: T|ObservableContainer<T>, property: P,
+    callback: ObserverCallback<T[P]>, options: ObserverOptions<T[P]> = {}) {
+  const observer = PropertiesObserver.getObserver<T>(object, true)
+  observer.observe(property, callback, options)
 }
 
 /**
@@ -248,22 +267,22 @@ export function observe<T extends Observable, P extends keyof T>(
  * All parameters must be the same as when calling the `observe` function
  */
 export function unobserve<T extends Observable, P extends keyof T>
-        (object: T|ObservableContainer<T>, property: P,
-        callback: ObserverCallback<T[P]>): boolean {
-    const observer = PropertiesObserver.getObserver(object, false)
-    return observer?.unobserve(property, callback) ?? false
+    (object: T|ObservableContainer<T>, property: P,
+    callback: ObserverCallback<T[P]>): boolean {
+  const observer = PropertiesObserver.getObserver(object, false)
+  return observer?.unobserve(property, callback) ?? false
 }
 
 /**
  * Notify all listeners (call the callbacks) with the current value of the specified property
  */
 export function notifyObservers<T extends Observable>(object: T, property: keyof T) {
-    queueMicrotask(object[observerSymbol].notifyObservers.bind(object[observerSymbol], property))
+  queueMicrotask(object[observerSymbol].notifyObservers.bind(object[observerSymbol], property))
 }
 
 export function isObserverNotifyPending<T extends Observable>(object: T, property: keyof T) {
-    const observer = PropertiesObserver.getObserver<T>(object, false)
-    return observer?.notifyPending(property) ?? false
+  const observer = PropertiesObserver.getObserver<T>(object, false)
+  return observer?.notifyPending(property) ?? false
 }
 
 /**
@@ -275,34 +294,34 @@ export function isObserverNotifyPending<T extends Observable>(object: T, propert
  *        If it returns false, the callback function is not called
  */
 export function observeChildren<T extends Object>(parent: T, attr: keyof T,
-        callback: (prop: keyof T, value: T[keyof T])=>void,
-        options: ChildrenObserverOptions<T> = {}) {
-    if (!(callbacksSymbol in parent[attr])) {
-        parent[attr] = new ObservableContainer(parent[attr]) as any
-    }
-    const callbacks = parent[attr][callbacksSymbol as keyof ObservableContainer<T>] as ChildrenListener<T>[]
-    callbacks.push({callback, ...options})
+    callback: (prop: keyof T, value: T[keyof T])=>void,
+    options: ChildrenObserverOptions<T> = {}) {
+  if (!(callbacksSymbol in parent[attr])) {
+    parent[attr] = new ObservableContainer(parent[attr]) as any
+  }
+  const callbacks = parent[attr][callbacksSymbol as keyof ObservableContainer<T>] as ChildrenListener<T>[]
+  callbacks.push({callback, ...options})
 }
 
 export function unobserveChildren<T extends Object>(parent: T, attr: keyof T,
-        callback: (prop: keyof T, value: T[keyof T])=>void): boolean {
-    const callbacks = parent[attr][callbacksSymbol as keyof ObservableContainer<T>] as ChildrenListener<T>[]
-    const index = callbacks?.findIndex(listener=> listener.callback = callback)??-1
-    if (index == -1)
-        return false
-    callbacks.splice(index, 1)
-    if (callbacks.length == 0)
-        parent[attr] = parent[attr][hiddenObjSymbol as keyof ObservableContainer<T>]
-    return true
+    callback: (prop: keyof T, value: T[keyof T])=>void): boolean {
+  const callbacks = parent[attr][callbacksSymbol as keyof ObservableContainer<T>] as ChildrenListener<T>[]
+  const index = callbacks?.findIndex(listener=> listener.callback = callback)??-1
+  if (index == -1)
+    return false
+  callbacks.splice(index, 1)
+  if (callbacks.length == 0)
+    parent[attr] = parent[attr][hiddenObjSymbol as keyof ObservableContainer<T>]
+  return true
 }
 
 export function useObserver<T extends Observable, P extends keyof T>(
-        callback:ObserverCallback<T[P]>, object: T|ObservableContainer<T>, property: P,
-        options: ObserverOptions<T[P]> = {}) {
-    useEffect(()=> {
-        observe(object as T, property, callback, options)
-        return unobserve.bind(null, object as T, property, callback) as VoidFunction
-    }, [])
+    callback:ObserverCallback<T[P]>, object: T|ObservableContainer<T>, property: P,
+    options: ObserverOptions<T[P]> = {}) {
+  useEffect(()=> {
+    observe(object as T, property, callback, options)
+    return unobserve.bind(null, object as T, property, callback) as VoidFunction
+  }, [])
 }
 
 export function useObserved<V extends never,T extends Observable, P extends keyof T>(
@@ -316,25 +335,25 @@ export function useObserved<V,T extends Observable, P extends keyof T>(
 export function useObserved<V,T extends Observable, P extends keyof T>(
     object: T|ObservableContainer<T>, property: P, map?: (v:T[P], curr?: V)=>V, invMap?: (v: V, curr: T[P])=> T[P]) {
     const currentValue = (object as T)[property]
-    if (map) {
-        const [value, setValue] = useState<V>(map(currentValue))
-        useObserver((v:T[P])=> {setValue(map(v, value))}, object, property)
-        if (invMap)
-            return [value, (v: V)=> {(object as T)[property] = (invMap(v, (object as T)[property]))}]
-        else
-            return [value]
-    } else {
-        const [value, setValue] = useState<T[P]>(currentValue)
-        useObserver(setValue, object, property)
-        return [value, (v: T[P])=> { (object as T)[property] = v }]
-    }
+  if (map) {
+    const [value, setValue] = useState<V>(map(currentValue))
+    useObserver((v:T[P])=> {setValue(map(v, value))}, object, property)
+    if (invMap)
+      return [value, (v: V)=> {(object as T)[property] = (invMap(v, (object as T)[property]))}]
+    else
+      return [value]
+  } else {
+    const [value, setValue] = useState<T[P]>(currentValue)
+    useObserver(setValue, object, property)
+    return [value, (v: T[P])=> { (object as T)[property] = v }]
+  }
 }
 
 export function useChildrenObserver<T extends Object>(
-        callback: (prop: keyof T, value: T[keyof T])=>void, parent: T, attr: keyof T,
-        options: ChildrenObserverOptions<T> = {}) {
-    useEffect(()=> {
-        observeChildren(parent, attr, callback, options)
-        return unobserveChildren.bind(null, parent, attr as any, callback as any) as VoidFunction
-    }, [])
+    callback: (prop: keyof T, value: T[keyof T])=>void, parent: T, attr: keyof T,
+    options: ChildrenObserverOptions<T> = {}) {
+  useEffect(()=> {
+    observeChildren(parent, attr, callback, options)
+    return unobserveChildren.bind(null, parent, attr as any, callback as any) as VoidFunction
+  }, [])
 }
