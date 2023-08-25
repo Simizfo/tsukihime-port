@@ -1,8 +1,8 @@
-import { memo, useCallback, useRef, useState } from "react";
+import { memo, useCallback, useEffect, useRef, useState } from "react";
 import { gameContext, settings } from "../utils/variables";
 import { observe, useObserved, useObserver } from "../utils/Observer";
 import { displayMode } from "../utils/display";
-import { Graphics } from "../components/GraphicsComponent";
+import { Graphics, preloadImage } from "../components/GraphicsComponent";
 
 type SpritePos = keyof typeof gameContext.graphics
 const POSITIONS: Array<SpritePos> = Object.keys(gameContext.graphics) as Array<SpritePos>
@@ -192,6 +192,9 @@ export {
 //#                                 COMPONENT                                  #
 //##############################################################################
 
+//________________________________Tool functions________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 function endTransition() {
   transition.duration = 0
 }
@@ -203,19 +206,29 @@ function useGraphicTransition(pos: SpritePos): [string, string, number, string] 
   const [e, setE] = useState("")
 
   const callback = useCallback(()=> {
-    if (transition.duration == 0) {
+    const {duration: transD, pos: transP, effect: transE} = transition
+    if (transD > 0 && (transP == pos || transP == 'a' && pos != 'bg')) {
+      setD(transD)
+      setE(transE)
+    } else {
       setD(0)
       setE("")
       prev.current = gameContext.graphics[pos]
-    } else if (transition.pos == pos || transition.pos == 'a' && pos != 'bg') {
-      setD(transition.duration)
-      setE(transition.effect)
     }
   }, [])
   useObserver(callback, transition, 'duration')
   useObserver(callback, transition, 'effect')
   useObserver(callback, gameContext.graphics, pos)
   return [img, prev.current, d, e]
+}
+
+function useImagePreload(img: string) : boolean {
+  const [imgLoaded, setImageLoaded] = useState(false)
+  useEffect(()=> {
+    setImageLoaded(false)
+    preloadImage(img).finally(setImageLoaded.bind(null, true))
+  }, [img])
+  return imgLoaded
 }
 
 //________________________________Sub components________________________________
@@ -226,9 +239,13 @@ const SpriteGraphics = memo(({pos}: {pos: Exclude<SpritePos, 'bg'>})=> {
   const [currImg, prevImg, fadeTime, effect] = useGraphicTransition(pos)
   const [bgTransition] = useObserved(transition, 'duration',
       (d)=> d > 0 && transition.pos == 'bg' && prevImg != "")
-
+  const imgLoaded = useImagePreload(currImg)
   const img1 = prevImg
   const img2 = bgTransition ? prevImg : currImg
+
+  if (!imgLoaded)
+    return <Graphics key={img1} pos={pos} image={img1}/>
+
   return <>
     {fadeTime > 0 &&
       <Graphics key={img1} pos={pos} image={img1} fadeOut={effect}
@@ -261,9 +278,10 @@ const ForegroundGraphics = memo(()=> {
   const [bgAlign] = useObserved(displayMode, 'bgAlignment',
       (a)=>({ 'bg-align': a }))
   const [img, _prev, fadeTime, effect] = useGraphicTransition('bg')
+  const imgLoaded = useImagePreload(img)
 
   return (
-    (fadeTime > 0 && effect != "") ?
+    (imgLoaded && fadeTime > 0 && effect != "") ?
       <Graphics key={img} pos='bg' image={img} fadeTime={fadeTime}
                 fadeIn={effect} onAnimationEnd={endTransition} {...bgAlign}/>
     : <></>
@@ -282,7 +300,7 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
     quakeEffect.duration = 0
   }, [])
 
-//............... render ...............
+//......... compute properties .........
   let style, className;
   ({style, className, ...props} = props);
   style = {
@@ -298,6 +316,7 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
   classList.push('box', 'graphics', 'box-graphics')
   if (quake) classList.push('quake')
   if (monoChrome) classList.push("monochrome")
+//............... render ...............
   return (
     <div className={classList.join(' ')} {...props}
          style={style} onAnimationEnd={onQuakeEnd}>
