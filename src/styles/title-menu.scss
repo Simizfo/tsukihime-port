@@ -64,18 +64,35 @@
 
     .menu {
         flex: 1;
-        display: flex;
-        margin-bottom: min(10%, 3em);
-        font-size: clamp(1.1em, 7vmin, 1.3em);
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        flex-direction: row;
-        row-gap: .4em;
-        column-gap: 1.4em;
-        justify-content: space-evenly;
+        margin-bottom: 2em;
         width: min(800px, 100%);
-        align-items: flex-end;
+        font-size: 1.3em;
+
+        .first-row, .second-row {
+            display: flex;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            flex-direction: row;
+            row-gap: .4em;
+            column-gap: 2em;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .first-row {
+            .extra {
+                display: none;
+            }
+        }
+        .second-row {
+            margin-top: 1em;
+            font-size: .7em;
+
+            .disabled {
+                pointer-events: none;
+                opacity: .4;
+            }
+        }
 
         .menu-item {
             all: unset;
@@ -91,7 +108,7 @@
             &:hover, &:focus-visible {
                 cursor: pointer;
                 color: rgb(10 164 171);
-                text-shadow: 1px 0 5px rgb(14 79 187), 1px 0 6px rgba(28, 147, 147, 0.5215686275);
+                text-shadow: 0 0 6px #005aff;
                 border-color: initial;
                 padding-top: 0;
                 padding-bottom: 6px;
@@ -99,17 +116,28 @@
         }
     }
 
-    @media (max-width: 868px) {
+    @media (max-width: 800px) {
         .menu {
-            flex-direction: column;
-            align-items: center;
+            .first-row, .second-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            .first-row {
+                margin-top: 1em;
+                .extra {
+                    display: block;
+                }
+            }
+            .second-row {
+                display: none;
+            }
         }
     }
-    @media ((max-width: 868px) or (max-height: 300px)) and (orientation: landscape) {
+    @media ((max-width: 800px) or (max-height: 300px)) and (orientation: landscape) {
         flex-direction: row;
         .logo {
             flex: 1;
-            max-height: 100%;
+            max-height: 85%;
 
             img {
                 height: auto;

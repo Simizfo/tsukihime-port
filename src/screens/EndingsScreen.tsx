@@ -53,7 +53,7 @@ const EndingsScreen = () => {
           </div>
         </main>
 
-        <Link to={SCREEN.EXTRA} className="menu-btn back-button">{strings.back}</Link>
+        <Link to={SCREEN.TITLE} className="menu-btn back-button">{strings.back}</Link>
       </div>
     </motion.div>
   )

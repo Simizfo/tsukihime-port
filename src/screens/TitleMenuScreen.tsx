@@ -131,27 +131,43 @@ const TitleMenuScreen = () => {
       </div>
 
       <nav className="menu">
-        <button className='menu-item' onClick={newGame}>
-          {strings.title.start}
-        </button>
+        <div className='first-row'>
+          <button className='menu-item' onClick={newGame}>
+            {strings.title.start}
+          </button>
+
+          {hasSaveStates() &&
+          <button className='menu-item' onClick={continueGame}>
+            {strings.title.resume}
+          </button>
+          }
+
+          <Link to={SCREEN.LOAD} className="menu-item">
+            {strings.title.load}
+          </Link>
+
+          <Link to={SCREEN.CONFIG} className="menu-item">
+            {strings.title.config}
+          </Link>
+
+          <Link to={SCREEN.EXTRA} className='menu-item extra'>
+            {strings.title.extra}
+          </Link>
+        </div>
 
         {hasSaveStates() &&
-        <button className='menu-item' onClick={continueGame}>
-          {strings.title.resume}
-        </button>
+        <div className='second-row'>
+          <Link to={SCREEN.GALLERY} className="menu-item">
+            {strings.extra.gallery}
+          </Link>
+          <Link to={SCREEN.ENDINGS} className="menu-item">
+            {strings.extra.endings}
+          </Link>
+          <Link to="#" className="menu-item disabled" aria-disabled>
+            Scenes
+          </Link>
+        </div>
         }
-
-        <Link to={SCREEN.LOAD} className="menu-item">
-          {strings.title.load}
-        </Link>
-
-        <Link to={SCREEN.CONFIG} className="menu-item">
-          {strings.title.config}
-        </Link>
-
-        <Link to={SCREEN.EXTRA} className="menu-item">
-          {strings.title.extra}
-        </Link>
       </nav>
 
       {showPWAButton &&
