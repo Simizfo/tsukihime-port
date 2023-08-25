@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { JSONObject, JSONPrimitive, RecursivePartial } from "../types"
+import { useEffect, useRef } from "react"
 
 //##############################################################################
 //#                            OBJECTS MANIPULATION                            #
@@ -385,3 +386,25 @@ export function isFullscreen() {
 }
 
 export function TSForceType<T>(_v: any): asserts _v is T {}
+
+//##############################################################################
+//#                                   DEBUG                                    #
+//##############################################################################
+
+export function useTraceUpdate(before: string, props: Record<string, any>) {
+  const prev = useRef(props);
+  useEffect(() => {
+    const changedProps = Object.entries(props).reduce((ps, [k, v]) => {
+      if (prev.current[k] !== v) {
+        ps[k] = [prev.current[k], v];
+      }
+      return ps;
+    }, {} as Record<string, any>);
+    if (Object.keys(changedProps).length > 0) {
+      console.log(before, 'Changed props:', changedProps);
+    } else {
+      console.log(before, 'No changed props');
+    }
+    prev.current = props;
+  });
+}

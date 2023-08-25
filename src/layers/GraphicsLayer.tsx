@@ -1,10 +1,8 @@
-import { useState, memo, Fragment } from "react";
+import { memo, useCallback, useRef, useState } from "react";
 import { gameContext, settings } from "../utils/variables";
-import { observe, useChildrenObserver, useObserved, useObserver } from "../utils/Observer";
-import { RouteDayName, RouteName } from "../types";
-import { findImageObjectByName } from "../utils/gallery";
+import { observe, useObserved, useObserver } from "../utils/Observer";
 import { displayMode } from "../utils/display";
-import { dayTitle, imageUrl, phaseTitle } from "../utils/lang";
+import { Graphics } from "../components/GraphicsComponent";
 
 type SpritePos = keyof typeof gameContext.graphics
 const POSITIONS: Array<SpritePos> = Object.keys(gameContext.graphics) as Array<SpritePos>
@@ -34,7 +32,7 @@ export function moveBg(direction: "up"|"down") {
   else if(direction == "up" && index > 0) index--
   displayMode.bgAlignment = positions[index]
 }
-//_______________________________script commands________________________________
+//_____________________________script command tools_____________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 function extractImage(image: string) {
@@ -52,6 +50,29 @@ function extractImage(image: string) {
     throw Error(`cannot extract image from "${image}"`)
   }
   return image
+}
+
+function getTransition(type: string, skipTransition = false) {
+  let duration = 0
+  let effect = type
+
+  if (effect.startsWith('type_'))
+    effect = effect.substring('type_'.length)
+
+  const index = effect.lastIndexOf('_')
+  if (index !== -1) {
+    if (!skipTransition) {
+      let speed = effect.substring(index+1)
+      switch(speed) {
+        case 'slw': duration = 1500; break
+        case 'mid': duration = 800; break
+        case 'fst': duration = 400; break
+        default : throw Error(`Ill-formed effect '${effect}'`)
+      }
+    }
+    effect = effect.substring(0, index)
+  }
+  return {effect, duration}
 }
 
 function applyChange(pos: SpritePos, image: string, type: string, onFinish: VoidFunction) {
@@ -88,26 +109,6 @@ function applyChange(pos: SpritePos, image: string, type: string, onFinish: Void
   }
 }
 
-function processImageCmd(arg: string, cmd: string, onFinish: VoidFunction) {
-  const args = arg.split(',')
-  let pos:string = 'bg',
-      image:string = '',
-      type:string = ''
-
-  switch(cmd) {
-    case 'bg': [image, type] = args; break
-    case 'ld': [pos, image, type] = args; break
-    case 'cl': [pos, type] = args; break
-    default : throw Error(`unknown image command ${cmd} ${arg}`)
-  }
-  // get image
-  if (image)
-    image = extractImage(image)
-  type = type?.replace('%', '')
-
-  return applyChange(pos as SpritePos, image, type, onFinish)
-}
-
 function clearAllSprites() {
   const graphics = gameContext.graphics
   const changed = (graphics.l != "" || graphics.c != "" || graphics.r != "")
@@ -128,6 +129,29 @@ function setSprite(pos: SpritePos|'a', image: string): boolean {
   } else {
     return false
   }
+}
+
+//_______________________________script commands________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+function processImageCmd(arg: string, cmd: string, onFinish: VoidFunction) {
+  const args = arg.split(',')
+  let pos:string = 'bg',
+      image:string = '',
+      type:string = ''
+
+  switch(cmd) {
+    case 'bg': [image, type] = args; break
+    case 'ld': [pos, image, type] = args; break
+    case 'cl': [pos, type] = args; break
+    default : throw Error(`unknown image command ${cmd} ${arg}`)
+  }
+  // get image
+  if (image)
+    image = extractImage(image)
+  type = type?.replace('%', '')
+
+  return applyChange(pos as SpritePos, image, type, onFinish)
 }
 
 function processQuake(arg: string, cmd: string, onFinish: VoidFunction) {
@@ -164,120 +188,101 @@ export {
   commands
 }
 
-//_______________________________component tools________________________________
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-
-function getTransition(type: string, skipTransition = false) {
-  let duration = 0
-  let effect = type
-
-  if (effect.startsWith('type_'))
-    effect = effect.substring('type_'.length)
-
-  const index = effect.lastIndexOf('_')
-  if (index !== -1) {
-    if (!skipTransition) {
-      let speed = effect.substring(index+1)
-      switch(speed) {
-        case 'slw': duration = 1500; break
-        case 'mid': duration = 800; break
-        case 'fst': duration = 400; break
-        default : throw Error(`Ill-formed effect '${effect}'`)
-      }
-    }
-    effect = effect.substring(0, index)
-  }
-  return {effect, duration}
-}
-
-export function graphicElement(pos: SpritePos, image: string,
-    _attrs: Record<string, any> = {}, resolution=settings.resolution) {
-
-  image = image || ((pos=="bg") ? "#000000" : "#00000000")
-  const {key, style, ...attrs} = _attrs
-  const isColor = image.startsWith('#')
-  const isPhaseText = image.startsWith('$')
-  let _phaseTitle
-  let _dayTitle
-  if (isPhaseText) {
-    let [route, routeDay, day] = image.substring(1).split('|')
-    _phaseTitle = phaseTitle(route as RouteName, routeDay as RouteDayName)
-    if (day)
-      _dayTitle = dayTitle(parseInt(day))
-  }
-  const className = `${pos} ${isPhaseText ? 'phase' : ''}`
-  return (
-    <div
-      key={key}
-      className={className}
-      {...(isColor ? {style:{ background: image, ...style }} : {})}
-      {...(isPhaseText || isColor ? attrs : {})}>
-      {isPhaseText ?
-      <div>
-        <div className="phase-title">{_phaseTitle}</div>
-        {_dayTitle && <div className="phase-day">{_dayTitle}</div>}
-      </div>
-      : !isColor &&
-        <img src={imageUrl(image, resolution)} alt={`[[sprite:${image}]]`} draggable={false}
-          className={findImageObjectByName(image)?.sensitive && settings.blurThumbnails ? "blur" : ""}
-          {...attrs}
-          style={style}
-        />
-      }
-    </div>
-  )
-}
-
-export function graphicElements(images: Partial<Record<SpritePos, string>>,
-                          attrs?: Partial<Record<SpritePos, Record<string,any>>>|
-                                  ((pos:SpritePos)=>Record<string,any>), resolution=settings.resolution) {
-  return POSITIONS.map(pos => images[pos] && graphicElement(pos,
-    images[pos] as string, {
-      key: images[pos]||pos,
-      ...(typeof attrs == 'function' ? attrs(pos) : attrs?.[pos] ?? {})
-    }, resolution))
-}
-
 //##############################################################################
 //#                                 COMPONENT                                  #
 //##############################################################################
 
+function endTransition() {
+  transition.duration = 0
+}
+
+function useGraphicTransition(pos: SpritePos): [string, string, number, string] {
+  const [img] = useObserved(gameContext.graphics, pos)
+  const prev = useRef("")
+  const [d, setD] = useState(0)
+  const [e, setE] = useState("")
+
+  const callback = useCallback(()=> {
+    if (transition.duration == 0) {
+      setD(0)
+      setE("")
+      prev.current = gameContext.graphics[pos]
+    } else if (transition.pos == pos || transition.pos == 'a' && pos != 'bg') {
+      setD(transition.duration)
+      setE(transition.effect)
+    }
+  }, [])
+  useObserver(callback, transition, 'duration')
+  useObserver(callback, transition, 'effect')
+  useObserver(callback, gameContext.graphics, pos)
+  return [img, prev.current, d, e]
+}
+
+//________________________________Sub components________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+//.......... l, c, r sprites ...........
+const SpriteGraphics = memo(({pos}: {pos: Exclude<SpritePos, 'bg'>})=> {
+  const [currImg, prevImg, fadeTime, effect] = useGraphicTransition(pos)
+  const [bgTransition] = useObserved(transition, 'duration',
+      (d)=> d > 0 && transition.pos == 'bg' && prevImg != "")
+
+  const img1 = prevImg
+  const img2 = bgTransition ? prevImg : currImg
+  return <>
+    {fadeTime > 0 &&
+      <Graphics key={img1} pos={pos} image={img1} fadeOut={effect}
+                fadeTime={fadeTime} toImg={img2}
+                onAnimationEnd={endTransition}/>
+    }
+    {(fadeTime == 0 || effect != "") &&
+      <Graphics key={img2} pos={pos} image={img2} fadeIn={effect}
+                fadeTime={fadeTime} onAnimationEnd={endTransition}/>
+    }
+  </>
+})
+
+//............. background .............
+const BackgroundGraphics = memo(()=> {
+  const [bgAlign] = useObserved(displayMode, 'bgAlignment',
+      (a)=>({ 'bg-align': a }))
+  const [currImg, prevImg, fadeTime, _effect] = useGraphicTransition('bg')
+  const bgTransition = fadeTime > 0
+
+  const img = bgTransition ? prevImg : currImg
+  return (
+    <Graphics key={img} pos='bg' image={img} {...bgAlign}/>
+  )
+})
+
+//............. foreground .............
+//(used to make background transitions over the sprites)
+const ForegroundGraphics = memo(()=> {
+  const [bgAlign] = useObserved(displayMode, 'bgAlignment',
+      (a)=>({ 'bg-align': a }))
+  const [img, _prev, fadeTime, effect] = useGraphicTransition('bg')
+
+  return (
+    (fadeTime > 0 && effect != "") ?
+      <Graphics key={img} pos='bg' image={img} fadeTime={fadeTime}
+                fadeIn={effect} onAnimationEnd={endTransition} {...bgAlign}/>
+    : <></>
+  )
+})
+
+//________________________________Main component________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
 
-  const [bgAlign] = useObserved(displayMode, 'bgAlignment')
-
-  const [prevImages, setPrevImages] = useState<typeof gameContext.graphics>({...gameContext.graphics})
-  const [currImages, setCurrImages] = useState<typeof gameContext.graphics>({...gameContext.graphics})
   const [quake] = useObserved(quakeEffect, 'duration', (d)=>d!=0)
   const [monoChrome] = useObserved(gameContext, 'monochrome')
 
-//__________________________listen for sprite changes___________________________
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-  useObserver(()=> {
-    // animation finished or skipped
-    setPrevImages({...gameContext.graphics})
-  }, transition, 'duration', { filter: (d)=>d==0 })
-
-  useChildrenObserver((_pos, _img)=> {
-    setCurrImages({...gameContext.graphics})
-    if (transition.duration == 0)
-      setPrevImages({...gameContext.graphics})
-  }, gameContext, "graphics")
-
-//__________________________________animations__________________________________
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  const onQuakeEnd = ()=> {
+//........ animation callbacks .........
+  const onQuakeEnd = useCallback(()=> {
     quakeEffect.duration = 0
-  }
-  const onAnimationEnd = ()=> {
-    transition.duration = 0
-  }
+  }, [])
 
-//____________________________________render____________________________________
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  const {pos: trans_pos, duration, effect} = transition
+//............... render ...............
   let style, className;
   ({style, className, ...props} = props);
   style = {
@@ -294,58 +299,21 @@ export const GraphicsLayer = memo(function({...props}: Record<string, any>) {
   if (quake) classList.push('quake')
   if (monoChrome) classList.push("monochrome")
   return (
-    <div className={classList.join(' ')} {...props} style={style} onAnimationEnd={onQuakeEnd}>
+    <div className={classList.join(' ')} {...props}
+         style={style} onAnimationEnd={onQuakeEnd}>
 
-      {(duration == 0) ? // no animation => display all sprites without effect
-        graphicElements(currImages, {bg: {'bg-align': bgAlign}})
-      : (trans_pos == "bg") ? // bg animation fade-in new bg over prev. sprites
-        <>
-        {graphicElements(prevImages, {bg: {'bg-align': bgAlign}})}
-        {graphicElement('bg', currImages.bg, {
-          key: currImages.bg||'bg',
-          'bg-align': bgAlign,
-          'fade-in': effect,
-          onAnimationEnd: onAnimationEnd,
-          style: {'--transition-time': `${duration}ms`},
-        })}
-        </>
-      : POSITIONS.map(pos => // sprite animation: changed sprite fades-in above
-                              // previous sprite. Others displayed noramlly.
-        <Fragment key={pos}>
-          {(pos != 'bg' && ([pos, 'a'].includes(trans_pos))) &&
-            <>
-            {currImages[pos]?.includes('/') && prevImages[pos]?.includes('/') && effect=="crossfade" &&
-              // add an opaque background to the image to prevent the background
-              // from being visible by transparency
-              graphicElement(pos, prevImages[pos], {
-                key: `mask${prevImages[pos]}`,
-                'for-mask': "",
-                style: {
-                  '--from-image': `url(${imageUrl(prevImages[pos])})`,
-                  '--to-image': `url(${imageUrl(currImages[pos])})`
-                }
-              })}
-            {prevImages[pos] && graphicElement(pos, prevImages[pos], {
-              key: prevImages[pos]||pos,
-              'fade-out': effect,
-              style: {'--transition-time': `${duration}ms`},
-              onAnimationEnd: onAnimationEnd,
-            })}
-            </>
-          }
-          {graphicElement(pos, currImages[pos], {
-            key: currImages[pos]||pos,
-            ...(pos == 'bg' ? {
-              'bg-align': bgAlign
-            } : [pos, 'a'].includes(trans_pos) ? {
-              'fade-in': effect,
-              style: {'--transition-time': `${duration}ms`},
-              onAnimationEnd: onAnimationEnd,
-            } : {})
-          })}
-        </Fragment>)
-      }
+      <BackgroundGraphics/>
+      <SpriteGraphics pos='l'/>
+      <SpriteGraphics pos='c'/>
+      <SpriteGraphics pos='r'/>
+      <ForegroundGraphics/>
     </div>
   )
 })
 export default GraphicsLayer
+
+//##############################################################################
+//#                                   DEBUG                                    #
+//##############################################################################
+
+window.transition = transition

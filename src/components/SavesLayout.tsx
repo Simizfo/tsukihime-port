@@ -7,10 +7,10 @@ import { SaveState, QUICK_SAVE_ID, deleteSaveState, getSaveState, listSaveStates
 import { getSceneTitle } from "../utils/scriptUtils"
 import { BsDownload, BsFileEarmarkArrowUp, BsPlusCircle, BsTrash } from "react-icons/bs"
 import { useNavigate } from "react-router-dom"
-import { graphicElements } from "../layers/GraphicsLayer"
 import strings from "../utils/lang"
 import { Tooltip } from 'react-tooltip'
 import { settings } from "../utils/variables"
+import { graphicElements } from "./GraphicsComponent"
 
 //##############################################################################
 //#                               TOOL FUNCTIONS                               #
