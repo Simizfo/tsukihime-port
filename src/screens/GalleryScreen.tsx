@@ -6,7 +6,7 @@ import { settings } from '../utils/variables'
 import { motion } from 'framer-motion'
 import { GALLERY_IMAGES, GalleryImg } from '../utils/gallery'
 import strings, { imageUrl, useLanguageRefresh } from '../utils/lang'
-import { SCREEN } from '../utils/display'
+import { SCREEN, useScreenAutoNavigate } from '../utils/display'
 import TabsComponent from '../components/TabsComponent'
 
 type CharacterId = keyof typeof GALLERY_IMAGES
@@ -15,9 +15,10 @@ type GalleryItem = GalleryImg & {src_thumb: string, src_hd: string}
 const defaultThumbnail = imageUrl("notreg", "thumb")
 
 const GalleryScreen = () => {
+  useScreenAutoNavigate(SCREEN.GALLERY)
+  useLanguageRefresh()
   const [selected, setSelected] = useState<CharacterId>("ark")
   const [images, setImages] = useState<GalleryItem[]>([])
-  useLanguageRefresh()
 
   useEffect(()=> {
     let imagesTmp: any[] = GALLERY_IMAGES[selected]

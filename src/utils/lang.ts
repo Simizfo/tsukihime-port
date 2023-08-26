@@ -1,4 +1,4 @@
-import { bb, deepAssign, objectsEqual } from "./utils"
+import { bb, deepAssign } from "./utils"
 import { defaultSettings, settings } from "./variables"
 import defaultStrings from '../assets/lang/default.json'
 import { observe, useObserver } from "./Observer"

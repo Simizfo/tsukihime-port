@@ -1,4 +1,4 @@
-import { RouteDayName, RouteName, SceneName } from "../types";
+import { SceneName } from "../types";
 import { SCENE_ATTRS } from "./constants";
 import strings, { waitLanguageLoad } from "./lang";
 import { getGameVariable } from "./variables";

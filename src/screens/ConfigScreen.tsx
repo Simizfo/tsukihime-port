@@ -1,12 +1,11 @@
-import { useNavigate } from 'react-router-dom'
 import '../styles/config.scss'
-import { SCREEN } from '../utils/display'
+import { SCREEN, displayMode, useScreenAutoNavigate } from '../utils/display'
 import { motion } from 'framer-motion'
 import { useLanguageRefresh } from '../utils/lang'
 import ConfigLayout from '../components/ConfigLayout'
 
 const ConfigScreen = () => {
-  const navigate = useNavigate()
+  useScreenAutoNavigate(SCREEN.CONFIG)
   useLanguageRefresh()
   const urlParams = new URLSearchParams(window.location.search)
 
@@ -16,7 +15,7 @@ const ConfigScreen = () => {
   }
 
   function back() {
-    navigate(SCREEN.TITLE)
+    displayMode.screen = SCREEN.TITLE
   }
   return (
     <motion.div

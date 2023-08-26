@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from 'react'
+import { useEffect } from 'react'
 import '../styles/title-menu.scss'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'

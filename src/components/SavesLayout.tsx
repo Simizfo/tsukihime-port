@@ -6,7 +6,6 @@ import { SAVE_EXT } from "../utils/constants"
 import { SaveState, QUICK_SAVE_ID, deleteSaveState, getSaveState, listSaveStates, loadSaveState, storeCurrentState, addSavesChangeListener, removeSavesChangeListener, exportSave, loadSaveFiles } from "../utils/savestates"
 import { getSceneTitle } from "../utils/scriptUtils"
 import { BsDownload, BsFileEarmarkArrowUp, BsPlusCircle, BsTrash } from "react-icons/bs"
-import { useNavigate } from "react-router-dom"
 import strings from "../utils/lang"
 import { Tooltip } from 'react-tooltip'
 import { settings } from "../utils/variables"
@@ -138,7 +137,6 @@ type Props = {
   back: (saveLoaded:boolean)=>void,
 }
 const SavesLayer = ({variant, back}: Props) => {
-  const navigate = useNavigate()
   const [saves, setSaves] = useState<Array<[number,SaveState]>>([])
   const [focusedId, setFocusedSave] = useState<number>()
 
@@ -172,8 +170,7 @@ const SavesLayer = ({variant, back}: Props) => {
       }
     } else {
       loadSaveState(id)
-      if (displayMode.screen != SCREEN.WINDOW)
-        navigate(SCREEN.WINDOW)
+      displayMode.screen = SCREEN.WINDOW
       back(true)
     }
   }

@@ -2,16 +2,16 @@ import { Link } from 'react-router-dom'
 import '../styles/endings.scss'
 import { motion } from 'framer-motion'
 import strings, { imageUrl, useLanguageRefresh } from '../utils/lang'
-import { SCREEN } from '../utils/display'
+import { SCREEN, useScreenAutoNavigate } from '../utils/display'
 import chalkboard from '../assets/images/chalkboard.webp'
 import { wbb } from '../utils/utils'
 import { RouteEnding, endings, osiete } from '../utils/endings'
 import { Tooltip } from 'react-tooltip'
-import { settings } from '../utils/variables'
 import ReactDOMServer from 'react-dom/server';
 
 // settings.completedScenes.push("s521")
 const EndingsScreen = () => {
+  useScreenAutoNavigate(SCREEN.ENDINGS)
   useLanguageRefresh()
 
   return (

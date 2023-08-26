@@ -206,9 +206,9 @@ type GraphicTransitionResult = {
 }
 
 function useGraphicTransition(pos: SpritePos, preload: boolean = true): GraphicTransitionResult {
-  const [img, setImg] = useState("")
+  const [img, setImg] = useState(gameContext.graphics[pos])
   const [loaded, setLoaded] = useState(true)
-  const prev = useRef("")
+  const prev = useRef(gameContext.graphics[pos])
   const [d, setD] = useState(0)
   const [e, setE] = useState("")
 

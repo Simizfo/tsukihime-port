@@ -5,9 +5,8 @@ import tsukiR from "../assets/images/tsukihime_blue_glass_cover.webp"
 import { HiOutlineInformationCircle } from 'react-icons/hi'
 import '../styles/title-menu.scss'
 import ParticlesComponent from '../components/ParticlesComponent'
-import { SCREEN, displayMode } from '../utils/display'
+import { SCREEN, displayMode, useScreenAutoNavigate } from '../utils/display'
 import { motion } from 'framer-motion'
-import { useNavigate } from 'react-router-dom'
 import { blankSaveState, getLastSave, hasSaveStates, loadSaveFiles, loadSaveState } from '../utils/savestates'
 import history from '../utils/history'
 import Modal from 'react-modal';
@@ -38,18 +37,15 @@ async function installPWA() {
 }
 
 const TitleMenuScreen = () => {
-  const navigate = useNavigate()
+  useScreenAutoNavigate(SCREEN.TITLE)
   const [show, setShow] = useState(false)
   const [showPWAButton] = useObserved(sync, 'installPWAEvent', e=>e!=undefined)
   useLanguageRefresh()
 
-  useEffect(()=> {
-    displayMode.screen = SCREEN.TITLE
-  }, [])
-
   function newGame() {
+    history.clear()
     loadSaveState(blankSaveState())
-    navigate(SCREEN.WINDOW)
+    displayMode.screen = SCREEN.WINDOW
   }
 
   async function continueGame() {
@@ -62,7 +58,7 @@ const TitleMenuScreen = () => {
                 ?? await loadSaveFiles().then(getLastSave)
     if (lastSave) {
       loadSaveState(lastSave)
-      navigate(SCREEN.WINDOW)
+      displayMode.screen = SCREEN.WINDOW
     }
   }
 

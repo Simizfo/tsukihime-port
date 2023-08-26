@@ -1,14 +1,11 @@
-import { TSForceType, bb, deepAssign, jsonDiff, requestJSONs, textFileUserDownload } from "./utils";
+import { TSForceType, deepAssign, jsonDiff, requestJSONs, textFileUserDownload } from "./utils";
 import { defaultGameContext, defaultProgress, gameContext, progress } from "./variables";
 import history from './history';
 import { toast } from "react-toastify";
 import { FaSave } from "react-icons/fa"
 import { notifyObservers } from "./Observer";
 import { SAVE_EXT } from "./constants";
-import { PageArgs, PageContent, PageType, RecursivePartial } from "../types";
-import { getSceneTitle } from "./scriptUtils";
-import { dayTitle, phaseTitle } from "./lang";
-import { Fragment } from "react";
+import { PageContent, PageType, RecursivePartial } from "../types";
 
 //##############################################################################
 //#                                 SAVESTATES                                 #
@@ -16,19 +13,19 @@ import { Fragment } from "react";
 
 const STORAGE_KEY = "savestates"
 
+export const QUICK_SAVE_ID: SaveStateId = 0
+
 export type SaveState<T extends PageType = PageType> = {
-  context: RecursivePartial<typeof gameContext>;
-  progress: RecursivePartial<typeof progress>;
+  context: RecursivePartial<typeof gameContext>
+  progress: RecursivePartial<typeof progress>
   page?: {
-    contentType: T,
-  } & PageContent<T>;
-  graphics?: RecursivePartial<typeof gameContext.graphics>;
-  date?: number;
+    contentType: T
+  } & PageContent<T>
+  graphics?: RecursivePartial<typeof gameContext.graphics>
+  date?: number
 }
 
 type SaveStateId = number
-
-export const QUICK_SAVE_ID: SaveStateId = 0
 
 const saveStates = new Map<SaveStateId, SaveState>()
 const listeners = new Array<VoidFunction>()
@@ -38,6 +35,9 @@ const listeners = new Array<VoidFunction>()
   if (restored)
     restoreSaveStates(JSON.parse(restored))
 }
+
+//________________________________Local storage_________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 function updateLocalStorage() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(
@@ -55,6 +55,9 @@ export function restoreSaveStates(keyValuePairs: Iterable<[SaveStateId, SaveStat
   updateLocalStorage()
   notifyListeners()
 }
+
+//______________________________SaveState creation______________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 /**
  * Creates a savestates that contains the current gameContext and the progress
@@ -99,31 +102,27 @@ export function storeCurrentState(id: SaveStateId) {
 }
 
 /**
- * Delete from the savestate map the savesate with the specified id
- * @param id unique id of the savestate in the map.
+ * Stores the last savestate of the script's history in the savestate map
+ * with the id 'quick".
  */
-export function deleteSaveState(id: SaveStateId) {
-  saveStates.delete(id)
-  updateLocalStorage()
-  notifyListeners()
+export const quickSave = () => {
+  if (storeCurrentState(QUICK_SAVE_ID)) {
+    toast('Progress has been saved', {
+      icon: FaSave,
+      autoClose: 1400,
+      toastId: "qs-toast",
+    })
+  } else {
+    toast("Couldn't save progress", {
+      autoClose: 2400,
+      toastId: "qs-toast",
+      type: "warning"
+    })
+  }
 }
 
-/**
- * Delete all savestates from the savestates map.
- */
-export function clearSaveStates() {
-  saveStates.clear()
-  updateLocalStorage()
-  notifyListeners()
-}
-
-export function getSaveState(id: SaveStateId) {
-  return saveStates.get(id)
-}
-
-export function hasSaveStates() {
-  return saveStates.size > 0 || !history.empty
-}
+//______________________________SaveState loading_______________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 /**
  * Restore the context and progress from the specified savestate.
@@ -166,26 +165,6 @@ export function loadSaveState(ss: SaveStateId | SaveState) {
 }
 
 /**
- * Stores the last savestate of the script's history in the savestate map
- * with the id 'quick".
- */
-export const quickSave = () => {
-  if (storeCurrentState(QUICK_SAVE_ID)) {
-    toast('Progress has been saved', {
-      icon: FaSave,
-      autoClose: 1400,
-      toastId: "qs-toast",
-    })
-  } else {
-    toast("Couldn't save progress", {
-      autoClose: 2400,
-      toastId: "qs-toast",
-      type: "warning"
-    })
-  }
-}
-
-/**
  * Loads the savestate with the id 'quick' from the script's history,
  * and restores the context and progress from it.
  */
@@ -203,7 +182,39 @@ export const quickLoad = ()=> {
       type: "warning"
     })
   }
+}
 
+//______________________________SaveState deletion______________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+/**
+ * Delete from the savestate map the savesate with the specified id
+ * @param id unique id of the savestate in the map.
+ */
+export function deleteSaveState(id: SaveStateId) {
+  saveStates.delete(id)
+  updateLocalStorage()
+  notifyListeners()
+}
+
+/**
+ * Delete all savestates from the savestates map.
+ */
+export function clearSaveStates() {
+  saveStates.clear()
+  updateLocalStorage()
+  notifyListeners()
+}
+
+//___________________________________Getters____________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+export function getSaveState(id: SaveStateId) {
+  return saveStates.get(id)
+}
+
+export function hasSaveStates() {
+  return saveStates.size > 0 || !history.empty
 }
 
 /**
@@ -216,7 +227,9 @@ export function listSaveStates(): Array<[SaveStateId, SaveState]> {
   return Array.from(saveStates.entries())
 }
 
-export function getLastSave(): SaveState {
+export function getLastSave(): SaveState|undefined {
+  if (saveStates.size == 0)
+    return undefined
   return Array.from(saveStates.values()).reduce(
     (ss1, ss2)=>(ss1.date ?? 0) > (ss2.date ?? 0) ? ss1 : ss2)
 }
@@ -227,6 +240,9 @@ export function blankSaveState() : Readonly<SaveState> {
     progress: defaultProgress
   }
 }
+
+//_______________________________Saves listeners________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 export function addSavesChangeListener(onChange: VoidFunction) {
   if (listeners.indexOf(onChange) >= 0)

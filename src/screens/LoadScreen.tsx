@@ -1,17 +1,16 @@
 import { motion } from "framer-motion"
 import '../styles/saves.scss'
 import SavesLayout from "../components/SavesLayout"
-import { useNavigate } from "react-router-dom"
-import { SCREEN } from "../utils/display"
+import { SCREEN, displayMode, useScreenAutoNavigate } from "../utils/display"
 import { useLanguageRefresh } from "../utils/lang"
 
 const LoadScreen = () => {
-  const navigate = useNavigate()
+  useScreenAutoNavigate(SCREEN.LOAD)
   useLanguageRefresh()
 
   function back(saveLoaded: boolean) {
     if (!saveLoaded)
-      navigate(SCREEN.TITLE)
+      displayMode.screen = SCREEN.TITLE
   }
   return (
     <motion.div

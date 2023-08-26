@@ -1,7 +1,7 @@
 import { commands as choiceCommands } from "../layers/ChoicesLayer"
 import { commands as graphicCommands } from "../layers/GraphicsLayer"
 import { commands as textCommands } from "../layers/TextLayer"
-import { LabelName, RouteDayName, RouteName, SceneName } from "../types"
+import { LabelName, SceneName } from "../types"
 import { commands as audioCommands } from "./AudioManager"
 import { isObserverNotifyPending, observe } from "./Observer"
 import history from "./history"
@@ -12,6 +12,7 @@ import { commands as variableCommands, gameContext, settings } from "./variables
 import { toast } from "react-toastify"
 import { SCREEN, displayMode } from "./display"
 import strings from "./lang"
+import { SaveState } from "./savestates"
 type Instruction = {cmd: string, arg: string}
 type CommandHandler = {next: VoidFunction, cancel?: VoidFunction, autoPlayDelay?: number}
 type CommandProcessFunction =
@@ -23,8 +24,6 @@ let skipCallback: SkipCallback = ()=> { throw Error(`script.onSkipPrompt not spe
 let skipCancelCallback: VoidFunction = ()=> { throw Error(`script.onSkipCancel not specified`) }
 
 type FastForwardStopCondition = (line:string, index: number, label: string)=>boolean
-
-const pageChangeListeners = new Array<VoidFunction>()
 
 let sceneLines: Array<string> = []
 let lastLine = {label: "", index: 0}
@@ -304,11 +303,10 @@ async function processCurrentLine() {
   lastLine.index = index
   lastLine.label = label
   if (index < lines.length) {
-    const newPage = isScene(label) && (
-        index == 0 || lines[index-1].endsWith('\\') ||
-        (history.last?.page?.contentType != "text" ?? true))
-    if (newPage)
+    if(isScene(label) && (index == 0 || lines[index-1].endsWith('\\') ||
+        (history.last?.page?.contentType != "text" ?? true))) {
       history.onPageBreak("text", "")
+    }
     let line = sceneLines[index]
     console.log(`${label}:${index}: ${line}`)
 
@@ -321,7 +319,7 @@ async function processCurrentLine() {
       // processCurrentLine() will be called again by the observer.
       // The index should not be incremented
       lineSkipped = false
-      if (newPage)
+      if (history.last.context.index == index)
         history.pop() // if the skipped line is the first of the page, remove page from history
     } else {
       gameContext.index++
@@ -357,7 +355,9 @@ async function fetchSceneLines() {
  * @param label id of the scene or block to load.
  */
 async function loadLabel(label: LabelName|"") {
-  if (label == "endofplay") {
+  if (label == "") {
+    sceneLines = []
+  } else if (label == "endofplay") {
     console.log("going back to title")
     displayMode.screen = SCREEN.TITLE
   } else {
@@ -365,7 +365,7 @@ async function loadLabel(label: LabelName|"") {
     sceneLines = [] // set to empty to prevent execution of previous scene
     if (gameContext.index == -1)
       onSceneStart()
-    else if (label != "")
+    else
       fetchSceneLines()
   }
 }

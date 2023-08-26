@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import '../styles/extra.scss'
 import { motion } from 'framer-motion'
 import strings, { imageUrl, useLanguageRefresh } from '../utils/lang'
-import { SCREEN } from '../utils/display'
+import { SCREEN, useScreenAutoNavigate } from '../utils/display'
 import { settings } from '../utils/variables'
 import { findImageObjectByName } from '../utils/gallery'
 import { useState, useEffect } from 'react'
@@ -10,6 +10,7 @@ import { useState, useEffect } from 'react'
 const GALLERY_IMG_NB = 8
 
 const ExtraScreen = () => {
+  useScreenAutoNavigate(SCREEN.EXTRA)
   useLanguageRefresh()
   
 // get random, non sensitives images

@@ -1,5 +1,7 @@
 
-import { notifyObservers, observe, observeChildren } from "./Observer";
+import { useNavigate } from "react-router-dom";
+import { notifyObservers, observe, unobserve } from "./Observer";
+import { useEffect } from "react";
 
 export enum SCREEN {
   TITLE = "/title",
@@ -191,6 +193,16 @@ observe(displayMode, "screen", (screen)=> {
 
 export function isViewAnyOf(...views: Array<typeof displayMode.currentView>) {
   return views.includes(displayMode.currentView)
+}
+
+export function useScreenAutoNavigate(currentScreen: SCREEN) {
+  const navigate = useNavigate()
+  useEffect(()=> {
+    displayMode.screen = currentScreen
+    observe(displayMode, 'screen', navigate,
+        { filter: (s)=> s != currentScreen })
+    return unobserve.bind(null, displayMode, 'screen', navigate) as VoidFunction
+  }, [])
 }
 
 

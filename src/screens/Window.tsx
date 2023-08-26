@@ -16,13 +16,11 @@ import history from '../utils/history';
 import { HiMenu } from 'react-icons/hi';
 import GestureHandler from '../utils/touch';
 import { toast } from 'react-toastify';
-import { useObserved, useObserver } from '../utils/Observer';
-import { useNavigate } from 'react-router-dom';
-import { SCREEN, displayMode } from '../utils/display';
+import { useObserved } from '../utils/Observer';
+import { SCREEN, displayMode, useScreenAutoNavigate } from '../utils/display';
 import { KeysMatching } from '../types';
 import { useLanguageRefresh } from '../utils/lang';
 import ConfigLayer from '../layers/ConfigLayer';
-import { getScrollableParent } from '../utils/utils';
 
 //##############################################################################
 //#                                KEY MAPPING                                 #
@@ -139,12 +137,9 @@ function toggleMenu() {
 //##############################################################################
 
 const Window = () => {
-  const navigate = useNavigate()
-  const [showMenuBtn] = useObserved(displayMode, "graphics", (v)=>!v)
+  useScreenAutoNavigate(SCREEN.WINDOW)
   useLanguageRefresh()
-
-  useObserver(navigate, displayMode, 'screen',
-      { filter: screen => screen != SCREEN.WINDOW })
+  const [hideMenuBtn] = useObserved(displayMode, "graphics")
 
   const rootElmtRef = useRef(null)
   useEffect(()=> {
@@ -172,10 +167,16 @@ const Window = () => {
   }, [rootElmtRef])
 
   useEffect(()=> {
-    displayMode.screen = SCREEN.WINDOW
     //TODO wait for screen transition animation to end before starting the script
     if (gameContext.label == '') {
-      script.moveTo('openning')
+      setTimeout(()=> {
+        if (gameContext.label != '')
+          return
+        if (!history.empty)
+          loadSaveState(history.last)
+        else
+          script.moveTo('openning')
+      }, 100)
     }
 
     keyMap.enable(document, "keydown", {
@@ -211,7 +212,7 @@ const Window = () => {
 
       <SkipLayer />
 
-      {showMenuBtn &&
+      {!hideMenuBtn &&
         <button className="menu-button" onClick={toggleMenu}>
           <HiMenu />
         </button>

@@ -1,7 +1,6 @@
-import { Choice, PageArgs, PageContent, PageType, RouteDayName, RouteName, SceneName } from "../types"
+import { Choice, PageArgs, PageContent, PageType, SceneName } from "../types"
 import { HISTORY_MAX_PAGES } from "./constants"
 import { SaveState, createSaveState } from "./savestates"
-import { gameContext } from "./variables"
 
 class History {
   private pages: SaveState[]
@@ -109,6 +108,11 @@ class History {
     }))
   }
 
+  /**
+   * Creates a new page in the history. Replaces the last page if it is an empty text page
+   * @param contentType type of the page to create
+   * @param args content of the page, depending on {@link contentType}
+   */
   onPageBreak<T extends PageType>(contentType: T, ...args: PageArgs<T>) {
     const lastPage = this.last?.page
     if (lastPage?.contentType == "text" && (lastPage as PageContent<"text">).text.length == 0)
@@ -162,12 +166,17 @@ class History {
 
   /**
    * Listen for pages addition or removal.
-   * @param listener callback function
+   * @param listener callback function to register
    */
   addListener(listener: VoidFunction) {
     this.listeners.push(listener)
   }
 
+  /**
+   * Stop listening for pages addition or removal
+   * @param listener callback function to unregister
+   * @returns true if the callback was registered, false otherwise
+   */
   removeListener(listener: VoidFunction): boolean {
     const i = this.listeners.indexOf(listener)
     if (i == -1)
@@ -176,9 +185,32 @@ class History {
     return true
   }
 
+  /**
+   * pages have been removed or added. Notify the listeners
+   */
   private onChange() {
     for (const listener of this.listeners) {
       listener()
+    }
+  }
+
+  /**
+   * Save the history in the session storage
+   */
+  saveSession() {
+    const jsonString = JSON.stringify(this.pages)
+    sessionStorage.setItem("history", jsonString);
+  }
+
+  /**
+   * restore the history from the session storage
+   */
+  restoreSession() {
+    const saved = sessionStorage.getItem("history")
+    if (saved) {
+      this.pages.splice(0, this.pages.length, ...JSON.parse(saved))
+      this.clean()
+      this.onChange()
     }
   }
 
@@ -188,5 +220,11 @@ class History {
 }
 
 const history = new History(HISTORY_MAX_PAGES)
+history.restoreSession()
+
+document.addEventListener("visibilitychange", ()=> {
+  if (document.visibilityState == "hidden")
+    history.saveSession()
+})
 
 export default history

@@ -240,7 +240,7 @@ class ObservableContainer<T extends Object> {
 }
 
 //##############################################################################
-//#                              PUBLIC FUNCTIONS                              #
+//#                           PUBLIC BASE FUNCTIONS                            #
 //##############################################################################
 
 /**
@@ -277,7 +277,7 @@ export function unobserve<T extends Observable, P extends keyof T>
  * Notify all listeners (call the callbacks) with the current value of the specified property
  */
 export function notifyObservers<T extends Observable>(object: T, property: keyof T) {
-  queueMicrotask(object[observerSymbol].notifyObservers.bind(object[observerSymbol], property))
+  notifyTask.enqueue(object[observerSymbol].notifyObservers.bind(object[observerSymbol], property))
 }
 
 export function isObserverNotifyPending<T extends Observable>(object: T, property: keyof T) {
@@ -314,6 +314,10 @@ export function unobserveChildren<T extends Object>(parent: T, attr: keyof T,
     parent[attr] = parent[attr][hiddenObjSymbol as keyof ObservableContainer<T>]
   return true
 }
+
+//##############################################################################
+//#                            REACT-HOOK FUNCTIONS                            #
+//##############################################################################
 
 export function useObserver<T extends Observable, P extends keyof T>(
     callback:ObserverCallback<T[P]>, object: T|ObservableContainer<T>, property: P,
