@@ -17,18 +17,14 @@ import { HiMenu } from 'react-icons/hi';
 import GestureHandler from '../utils/touch';
 import { toast } from 'react-toastify';
 import { useObserved } from '../utils/Observer';
-import { SCREEN, displayMode, useScreenAutoNavigate } from '../utils/display';
+import { SCREEN, displayMode, isViewAnyOf, useScreenAutoNavigate } from '../utils/display';
 import { KeysMatching } from '../types';
 import { useLanguageRefresh } from '../utils/lang';
 import ConfigLayer from '../layers/ConfigLayer';
 
 //##############################################################################
-//#                                KEY MAPPING                                 #
+//#                                USER INPUTS                                 #
 //##############################################################################
-
-function isViewAnyOf(...views: Array<typeof displayMode.currentView>) {
-  return views.includes(displayMode.currentView)
-}
 
 const keyMap = new KeyMap(inGameKeymap, (action, evt, ...args)=> {
   switch(action) {
@@ -44,6 +40,27 @@ const keyMap = new KeyMap(inGameKeymap, (action, evt, ...args)=> {
     case "q_save"   : quickSave(); break
     case "q_load"   : quickLoad(); break
     case "bg_move"  : moveBg(args[0]); break
+  }
+})
+
+const gestures = new GestureHandler(null, {
+  swipeTrigDistance: 50, onSwipe: (direction)=> {
+    if (direction == "")
+      return
+    if (isViewAnyOf("text", "graphics", "dialog")) {
+      // TODO in graphics mode, move background instead of opening views ?
+      switch(direction) {
+        case "up" : toggleView('graphics'); return true;
+        case "left" : toggleView('menu'); return true;
+        case "right" : toggleView('history'); return true;
+        case "down" : toggleView('history'); return true;
+      }
+    } else {
+      if (direction == "right") {
+        back()
+        return true
+      }
+    }
   }
 })
 
@@ -92,15 +109,17 @@ function back() {
     default : console.error(`cannot exit unknown view "${displayMode.currentView}"`)
   }
 }
-function canDisableGraphics() {
+
+function manuallyDisabledGraphics() {
   return script.isCurrentLineText() ||
          script.currentLine?.startsWith("select") ||
          //script.currentLine?.startsWith("osiete") || TODO uncomment if necessary, or remove
          script.currentLine?.match(/gosub\s+\*(?!(left|right))/)
 }
+
 function next() {
   if (isViewAnyOf("text", "graphics")) {
-    if (displayMode.currentView == "graphics" && canDisableGraphics()) // text has been hidden manually
+    if (displayMode.currentView == "graphics" && manuallyDisabledGraphics()) // text has been hidden manually
       displayMode.graphics = false
     else if (!stopAutoPlay())
       script.next()
@@ -139,32 +158,8 @@ function toggleMenu() {
 const Window = () => {
   useScreenAutoNavigate(SCREEN.WINDOW)
   useLanguageRefresh()
-  const [hideMenuBtn] = useObserved(displayMode, "graphics")
-
   const rootElmtRef = useRef(null)
-  useEffect(()=> {
-    const swipeHandler = new GestureHandler(rootElmtRef.current, {
-      swipeTrigDistance: 50, onSwipe: (direction)=> {
-        if (direction == "")
-          return
-        if (isViewAnyOf("text", "graphics", "dialog")) {
-          // TODO in graphics mode, move background instead of opening views ?
-          switch(direction) {
-            case "up" : toggleView('graphics'); return true;
-            case "left" : toggleView('menu'); return true;
-            case "right" : toggleView('history'); return true;
-            case "down" : toggleView('history'); return true;
-          }
-        } else {
-          if (direction == "right") {
-            back()
-            return true
-          }
-        }
-      }
-    })
-    return swipeHandler.disable.bind(swipeHandler)
-  }, [rootElmtRef])
+  const [hideMenuBtn] = useObserved(displayMode, "graphics")
 
   useEffect(()=> {
     //TODO wait for screen transition animation to end before starting the script
@@ -178,7 +173,17 @@ const Window = () => {
           script.moveTo('openning')
       }, 100)
     }
+  }, [])
 
+//............ user inputs .............
+  useEffect(()=> {
+    if (rootElmtRef.current) {
+      gestures.enable(rootElmtRef.current)
+      return gestures.disable.bind(gestures)
+    }
+  }, [rootElmtRef])
+
+  useEffect(()=> {
     keyMap.enable(document, "keydown", {
       capture: false // default if bubble. set to true to change to capture
     })
@@ -190,6 +195,7 @@ const Window = () => {
     back()
   }
 
+//............... render ...............
   return (
     <motion.div
       className="page window" ref={rootElmtRef}

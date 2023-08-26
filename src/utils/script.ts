@@ -12,7 +12,7 @@ import { commands as variableCommands, gameContext, settings } from "./variables
 import { toast } from "react-toastify"
 import { SCREEN, displayMode } from "./display"
 import strings from "./lang"
-import { SaveState } from "./savestates"
+
 type Instruction = {cmd: string, arg: string}
 type CommandHandler = {next: VoidFunction, cancel?: VoidFunction, autoPlayDelay?: number}
 type CommandProcessFunction =
