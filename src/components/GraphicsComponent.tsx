@@ -144,13 +144,13 @@ export const Graphics = memo(({pos, image, resolution=settings.resolution,
 //____________________________________render____________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   const {style: baseStyle = {}, ...baseAttrs} = (imageProps || {})  as Record<string, any>
-  const {style: insertStyle = {}, ...isertAttrs} = props
+  const {style: insertStyle = {}, ...insertAttrs} = props
   return <>
-    {maskProps != undefined && graphicElement(pos, image, {
+    {maskProps != undefined && graphicElement(pos, image, maskProps, resolution)}
+    {imageProps != undefined && graphicElement(pos, image, {
         style: {...baseStyle, ...insertStyle},
         ...baseAttrs,
-        ...isertAttrs
+        ...insertAttrs
       }, resolution)}
-    {imageProps != undefined && graphicElement(pos, image, imageProps, resolution)}
   </>
 })

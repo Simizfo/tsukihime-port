@@ -26,7 +26,6 @@ let skipCancelCallback: VoidFunction = ()=> { throw Error(`script.onSkipCancel n
 type FastForwardStopCondition = (line:string, index: number, label: string)=>boolean
 
 let sceneLines: Array<string> = []
-let lastLine = {label: "", index: 0}
 let currentCommand: CommandHandler | undefined
 let skipCommand: VoidFunction | undefined
 let lineSkipped: boolean = false
@@ -272,6 +271,14 @@ export async function processLine(line: string) {
   }
 }
 
+function createPageIfNeeded() {
+  const {index, label} = gameContext
+  if (isScene(label) && (index == 0 || sceneLines[index-1].endsWith('\\') ||
+      (history.last?.page?.contentType != "text" ?? true))) {
+    history.onPageBreak("text", "")
+  }
+}
+
 /**
  * Executed when {@link gameContext.index} is modified,
  * when the scene is loaded, or when the screen changes.
@@ -288,26 +295,17 @@ async function processCurrentLine() {
     return
 
   if (currentCommand) {
-    if (lastLine.index == index &&
-        lastLine.label == label)
-      console.warn("re-processing same line", label, index)
-    // Index has been changed by outside this function.
-    // Skip remaining instructions in the previous line.
-    // Resolve the promise of the ongoing command.
+    // Index/Label changed while executing an instruction.
+    // Cancel unfinished instructions.
     cancelCurrentCommand()
     // Process the current line after aborting the previous line
     setTimeout(processCurrentLine, 0)
     return
   }
 
-  lastLine.index = index
-  lastLine.label = label
   if (index < lines.length) {
-    if(isScene(label) && (index == 0 || lines[index-1].endsWith('\\') ||
-        (history.last?.page?.contentType != "text" ?? true))) {
-      history.onPageBreak("text", "")
-    }
-    let line = sceneLines[index]
+    createPageIfNeeded()
+    let line = lines[index]
     console.log(`${label}:${index}: ${line}`)
 
     if (fastForwardStopCondition?.(line, gameContext.index, gameContext.label))
@@ -315,7 +313,7 @@ async function processCurrentLine() {
 
     await processLine(line)
     if (lineSkipped || gameContext.index != index || gameContext.label != label) {
-      // the context has been changed while processing the line.
+      // Index/Label changed while executing the instruction.
       // processCurrentLine() will be called again by the observer.
       // The index should not be incremented
       lineSkipped = false
