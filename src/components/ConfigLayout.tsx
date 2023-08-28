@@ -85,10 +85,15 @@ export const ConfigItem = ({ title, desc, children, ...props }: ConfigLayoutProp
   </div>
 )
 
+type ConfigButtonsEntry =
+  { text: string|JSX.Element } & (
+  { value: any, onSelect?: never } |
+  { value?: never, onSelect: VoidFunction })
+
 interface ConfigButtonsProps {
   title: string
   desc?: ReactNode
-  btns: { text: string; value: any }[]
+  btns: ConfigButtonsEntry[]
   property: string
   conf: Record<string, any>
   updateValue: (key: any, value: any) => void
@@ -97,11 +102,11 @@ interface ConfigButtonsProps {
 export const ConfigButtons = ({title, desc, btns, property, conf, updateValue}: ConfigButtonsProps) => (
   <ConfigItem title={title} desc={desc}>
     <div className="config-btns">
-      {btns.map(({text, value}) =>
+      {btns.map(({text, value, onSelect}) =>
         <button
-          key={text}
+          key={text.toString()}
           className={`config-btn ${conf[property] === value ? 'active' : ''}`}
-          onClick={() => updateValue(property, value)}>
+          onClick={onSelect ?? (() => updateValue(property, value))}>
           {text}
         </button>
       )}

@@ -3,7 +3,7 @@ import { ConfigButtons, ConfigItem, ResetBtn } from "../ConfigLayout"
 import { defaultSettings, settings } from "../../utils/variables"
 import { deepAssign, jsonDiff, requestJSONs, textFileUserDownload } from "../../utils/utils"
 import { SaveState, clearSaveStates, listSaveStates, restoreSaveStates } from "../../utils/savestates"
-import strings, { languages, useLanguageRefresh } from "../../utils/lang"
+import strings, { addLang, languages, useLanguageRefresh } from "../../utils/lang"
 import { RecursivePartial } from "../../types"
 import { RxExternalLink } from 'react-icons/rx'
 import { toast } from "react-toastify"
@@ -87,6 +87,22 @@ const ConfigAdvancedTab = () => {
     }
   }
 
+  const createTranslation = () => {
+    alert("Not yet implemented")
+    return
+    const id = ""
+    const displayName = ""
+    const fallback = ""
+    const authors = ""
+    const langFile = ""
+    addLang(id, {
+      "display-name": displayName,
+      ...(fallback ? {fallback} : {}),
+      ...(authors ? {authors} : {}),
+      "lang-file": langFile
+    })
+  }
+
   return (
     <section>
       <ConfigButtons
@@ -104,9 +120,12 @@ const ConfigAdvancedTab = () => {
         title={strings.config.language}
         desc={strings["translation-desc"] &&
           <>{strings["translation-desc"]} <a href={strings["translation-url"]} target="_blank"><RxExternalLink /></a></>}
-        btns={Object.entries(languages).map(([id, {"display-name": dispName}])=> {
-          return {text: dispName, value: id}
-        })}
+        btns={[
+          ...Object.entries(languages).map(([id, {"display-name": dispName}])=> {
+            return {text: dispName, value: id}
+          }),
+          //{text: <FaPlus/>, onSelect: createTranslation}
+        ]}
         property="language"
         conf={conf}
         updateValue={updateValue}
