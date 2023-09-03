@@ -12,7 +12,7 @@ import history from '../utils/history'
 import Modal from 'react-modal';
 import { APP_VERSION } from '../utils/constants'
 import strings, { useLanguageRefresh } from '../utils/lang'
-import { bb } from '../utils/utils'
+import { bb } from '../utils/Bbcode'
 import { RxExternalLink } from 'react-icons/rx'
 import { useObserved } from '../utils/Observer'
 

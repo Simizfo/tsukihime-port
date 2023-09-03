@@ -3,7 +3,7 @@ import '../styles/title-menu.scss'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import strings, { useLanguageRefresh } from '../utils/lang'
-import { bb } from '../utils/utils'
+import { bb } from '../utils/Bbcode'
 
 const DisclaimerScreen = () => {
   const navigate = useNavigate()

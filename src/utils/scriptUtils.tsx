@@ -1,4 +1,5 @@
 import { SceneName } from "../types";
+import { closeBB } from "./Bbcode";
 import { SCENE_ATTRS } from "./constants";
 import strings, { waitLanguageLoad } from "./lang";
 import { getGameVariable } from "./variables";
@@ -12,9 +13,34 @@ const LOGIC_FILE = 'scene0.txt';
  * Fetch and split the script into lines
  */
 
+export function credits(): string[] {
+  return [
+    'play "*10"',
+    'bg #000000,%type_crossfade_fst',
+    ...(strings.credits.map(({center, top, bottom, delay=5600})=> {
+      const delayCmd = `delay ${delay}`
+      let [text, vAlign] = center ? [center, 'c'] :
+                           top    ? [top   , 't'] :
+                           bottom ? [bottom, 'b'] :
+                           [null, '']
+      if (!text)
+        return delayCmd
+      if (Array.isArray(text))
+        text = text.map(closeBB).join('\n')
+      const textCmd = `bg #000000$${vAlign}\`${text}\`,%type_crossfade_mid`
+      return [textCmd, delayCmd]
+    }).flat()),
+    'bg #000000,%type_crossfade_slw',
+    "goto *endofplay"
+  ]
+}
+
 export async function fetchScene(sceneId: string): Promise<string[] | undefined> {
   if (/^s\d+a?$/.test(sceneId))
     sceneId = `scene${sceneId.substring(1)}`;
+  else if (sceneId == "ending") {
+    return credits()
+  }
   await waitLanguageLoad()
   const script = await fetch(`${strings.scenario["scenes-dir"]}/${sceneId}.txt`)
     .then(

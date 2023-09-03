@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import strings, { imageUrl, useLanguageRefresh } from '../utils/lang'
 import { SCREEN, useScreenAutoNavigate } from '../utils/display'
 import chalkboard from '../assets/images/chalkboard.webp'
-import { wbb } from '../utils/utils'
+import { wbb } from '../utils/Bbcode'
 import { RouteEnding, endings, osiete } from '../utils/endings'
 import { Tooltip } from 'react-tooltip'
 import ReactDOMServer from 'react-dom/server';

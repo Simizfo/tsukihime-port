@@ -1,13 +1,14 @@
-import { Fragment, memo, useEffect, useRef, useState } from 'react';
-import { addEventListener, bb, convertText, deepAssign, objectMatch } from "../utils/utils";
+import { Fragment, memo, useEffect, useRef } from 'react';
+import { addEventListener, convertText } from "../utils/utils";
 import { displayMode, isViewAnyOf } from '../utils/display';
 import { SaveState, loadSaveState } from "../utils/savestates";
-import { useObserved, useObserver } from '../utils/Observer';
+import { useObserved, } from '../utils/Observer';
 import history from '../utils/history';
 import script from '../utils/script';
-import strings, { dayTitle, phaseTitle } from '../utils/lang';
+import { strings, dayTitle, phaseTitle } from '../utils/lang';
 import { PageContent, RouteDayName } from '../types';
 import { getSceneTitle } from '../utils/scriptUtils';
+import { bb } from '../utils/Bbcode';
 
 const PageElement = memo(({saveState, onLoad}: {saveState: SaveState, onLoad: (ss: SaveState)=>void})=> {
   if (saveState.page == undefined)
@@ -126,8 +127,13 @@ const HistoryLayer = (props: Props) => {
     loadSaveState(saveState)
   }
   const {className, ...otherProps} = props
+  const classList = ["box", "box-history"]
+  if (display)
+    classList.push("show")
+  if (className)
+    classList.push(className)
   return (
-    <div className={`box box-history ${display ? "show " : ""}${className}`} {...otherProps}>
+    <div className={classList.join(' ')} {...otherProps}>
       <div className="box-text" id="history" ref={historyRef}>
         <div className="text-container">
           {/* lignes des pages précédentes */}

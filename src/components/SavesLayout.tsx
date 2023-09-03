@@ -1,6 +1,6 @@
 import { ChangeEvent, MouseEvent, Fragment, memo, useEffect, useState } from "react"
 import { SCREEN, displayMode } from "../utils/display"
-import { bb, wbb } from "../utils/utils"
+import { bb, wbb } from "../utils/Bbcode"
 import { PageContent, SceneName } from "../types"
 import { SAVE_EXT } from "../utils/constants"
 import { SaveState, QUICK_SAVE_ID, deleteSaveState, getSaveState, listSaveStates, loadSaveState, storeCurrentState, addSavesChangeListener, removeSavesChangeListener, exportSave, loadSaveFiles } from "../utils/savestates"

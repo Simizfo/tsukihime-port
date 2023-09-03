@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { JSONObject, JSONPrimitive, RecursivePartial } from "../types"
-import { useEffect, useRef } from "react"
+import { ReactElement, ReactNode, useEffect, useRef } from "react"
 
 //##############################################################################
 //#                            OBJECTS MANIPULATION                            #
@@ -162,34 +162,7 @@ export function convertText(text: string, props: Record<string, any> = {}): JSX.
   return <span {...props}>{replaceDashes(text)}</span>
 }
 
-function bbcodeTagToJSX({tag: Tag, arg, content}: {tag: string, arg: string, content: JSX.Element[]}) {
-  switch(Tag) {
-    case 'br' :
-    case 'wbr' : return <><Tag/>{...content}</>
-    case 'b' :
-    case 'i' :
-    case 's' :
-    case 'sup' :
-    case 'sub' : return <Tag>{...content}</Tag>
-    case 'u' : return <span style={{textDecoration: "underline"}}>{...content}</span>
-    case 'size' : return <span style={{fontSize: arg}}>{...content}</span>
-    case 'color' : return <span style={{color: arg}}>{...content}</span>
-    case 'center':
-    case 'left':
-    case 'right': return <div style={{textAlign: Tag}}>{...content}</div>
-    case 'url':
-      if (arg.startsWith("'") && arg.endsWith("'"))
-        arg = arg.substring(1, arg.length-1)
-      if (arg.lastIndexOf('.') > arg.lastIndexOf('/'))
-        return <a href={arg} target="_blank">{...content}</a>
-      else
-        return <Link to={arg}>{...content}</Link>
-    default :
-      throw Error(`Unknown bbcode tag ${Tag}`)
-  }
-}
-
-function replaceDashes(text: string): JSX.Element {
+export function replaceDashes(text: string): JSX.Element {
     const nodes: Array<JSX.Element|string> = []
     //replace consecutive dashes with a continuous line
     let m
@@ -207,52 +180,37 @@ function replaceDashes(text: string): JSX.Element {
     return <>{...nodes}</>
 }
 
-//[/?<tag>=<arg>] not preceded by a '\'
-const bbcodeTagRegex = /(?<!\\)\[(?<tag>(\/?\w+)|(\w+\/))(=(?<arg>[^\]]+))?\]/g
-/**
- * convert text with BB code to JSX nodes
- */
-export function bb(text: string): JSX.Element {
-  const nodes = [{tag:"", arg: "", content:[] as JSX.Element[]}]
-  let lastIndex = 0
-  text = text.replaceAll("\n", "[br/]")
-  let m
-  while(((m = bbcodeTagRegex.exec(text))) !== null) {
-    let {tag, arg} = m.groups ?? {}
-    const currNode = nodes[nodes.length-1]
-    const subText = text.substring(lastIndex, m.index)
-    currNode.content.push(replaceDashes(subText))
-    lastIndex = bbcodeTagRegex.lastIndex
-    if (tag.startsWith('/')) {
-      if (tag.substring(1) != currNode?.tag)
-        throw Error(`Unmatched [${tag}] in "${text}"`)
-      nodes.pop()
-      const prevNode = nodes[nodes.length-1]
-      prevNode.content.push(bbcodeTagToJSX(currNode))
-    } else if (tag.endsWith('/')) {
-      currNode.content.push(bbcodeTagToJSX({
-        tag: tag.substring(0, tag.length-1),
-        arg: arg, content: []
-      }))
-    } else {
-      nodes.push({tag, arg, content:[]})
-    }
+export function innerText(jsx: ReactNode): string {
+  switch (typeof jsx) {
+    case null :
+    case 'undefined' :
+    case 'boolean' : return ''
+    case 'number' : return (jsx as number).toString()
+    case 'string' : return jsx as string
+    default :
+      if (Array.isArray(jsx))
+        return (jsx as Array<ReactNode>).reduce<string>((str, node)=>str + innerText(node), "")
+      if ((jsx as ReactElement).props.children) {
+        return innerText((jsx as ReactElement).props.children)
+      }
+      return ""
   }
-  if (lastIndex == 0) // no bbcode
-    return replaceDashes(text)
-  if (lastIndex < text.length) //
-    nodes[nodes.length-1].content.push(replaceDashes(text.substring(lastIndex)))
-  while (nodes.length > 1) {
-    const currNode = nodes.pop() as typeof nodes[0]
-    const prevNode = nodes[nodes.length-1]
-    prevNode.content.push(bbcodeTagToJSX(currNode))
-  }
-  return <>{...nodes[0].content}</>
 }
 
-/** remove bb code */
-export function wbb(text: string): string {
-  return text?.replaceAll(/\[[^\]]+\]/g, "")
+export function splitFirst(text: string, sep: string) : [string, string|null] {
+  const i = text.indexOf(sep)
+  if (i >= 0)
+    return [text.substring(0, i), text.substring(i+1)]
+  else
+    return [text, null]
+}
+
+export function splitLast(text: string, sep: string) : [string, string|null] {
+  const i = text.lastIndexOf(sep)
+  if (i >= 0)
+    return [text.substring(0, i), text.substring(i+1)]
+  else
+    return [text, null]
 }
 
 //##############################################################################

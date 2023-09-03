@@ -158,15 +158,15 @@ main {
                 object-fit: cover;
             }
         }
-        &:not(.phase) {
-            &.l { grid-column: 1; }
-            &.c { grid-column: 2; }
-            &.r { grid-column: 3; }
-        }
+        &.l { grid-column: 1; }
+        &.c { grid-column: 2; }
+        &.r { grid-column: 3; }
 
-        &.l.phase, &.r.phase {
+        .text {
             --margin: 1em;
-            grid-column: 1 / span 3;
+            position: absolute;
+            left: 0;
+            top: 0;
             height: 100%;
             width: 100%;
             font-size: 1.6em;
@@ -174,34 +174,21 @@ main {
             text-shadow: #000 1px 1px 1px, #000 -1px 1px 1px,
                             #000 -1px -1px 1px, #000 1px -1px 1px;
             user-select: none;
-            & > div {
+            & > * {
                 position: absolute;
-                width: auto;
+                width: 100%;
                 height: auto;
-                display: flex;
-                flex-direction: column;
-
-                .phase-day {
-                    font-size: .8em;
-                }
+                padding: min(8%, 3rem) var(--margin);
             }
-            &.l {
-                text-align: left;
-
-                & > div {
-                    top: min(8%, 3rem);
-                    left: var(--margin);
-                    margin-right: var(--margin);
-                }
+            &[vertical-align="t"] > *{
+                top: 0;
             }
-            &.r {
-                text-align: right;
-                
-                & > div {
-                    bottom: min(8%, 3rem);
-                    right: var(--margin);
-                    margin-left: var(--margin);
-                }
+            &[vertical-align="b"] > * {
+                bottom: 0;
+            }
+            &[vertical-align="c"] > * {
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
 
@@ -217,11 +204,10 @@ main {
                 height: inherit;
                 object-fit: cover;
                 transition: object-position var(--transition-time) ease-out;
-
-                &[bg-align="top"] { object-position: top; }
-                &[bg-align="center"] { object-position: center; }
-                &[bg-align="bottom"] { object-position: bottom; }
             }
+            &[bg-align="top"] img { object-position: top; }
+            &[bg-align="center"] img { object-position: center; }
+            &[bg-align="bottom"] img { object-position: bottom; }
         }
     }
     &.monochrome {

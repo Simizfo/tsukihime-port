@@ -3,7 +3,7 @@ import { gameContext, settings } from "../utils/variables";
 import { observe, useObserved, useObserver } from "../utils/Observer";
 import { displayMode } from "../utils/display";
 import { Graphics, SpritePos, preloadImage } from "../components/GraphicsComponent";
-import { objectMatch, useTraceUpdate } from "../utils/utils";
+import { objectMatch, splitFirst, splitLast, useTraceUpdate } from "../utils/utils";
 
 const transition = {
   effect: "",
@@ -38,6 +38,8 @@ function endTransition() {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 function extractImage(image: string) {
+  let text;
+  [image, text] = splitFirst(image, '$')
   if (image.startsWith('"') && image.endsWith('"')) {
     // remove ':a;', 'image/', '"', '.jpg'
     image = image.substring(1, image.length-1)
@@ -48,10 +50,10 @@ function extractImage(image: string) {
       case "bg/ima_11"  : image = "#ffffff"; break
       case "bg/ima_11b" : image = "#9c0120"; break;
     }
-  } else if (!image.startsWith('#') && !image.startsWith('$')) { // not image nor color
+  } else if (!image.startsWith('#')) { // not image nor color
     throw Error(`cannot extract image from "${image}"`)
   }
-  return image
+  return text ? `${image}$${text}` : image
 }
 
 function getTransition(type: string, skipTransition = false) {
@@ -84,9 +86,10 @@ function applyChange(pos: SpritePos, image: string, type: string, onFinish: Void
   if (pos == 'bg') {
     if (!change && objectMatch(gameContext.graphics, {l: "", c: "", r: ""}))
       change = true
-    if (change && (image as string).includes('event/') &&
-        !settings.eventImages.includes(image)) {
-      settings.eventImages.push(image as string)
+    if (change) {
+      const [img] = splitFirst(image, '$')
+      if (img.includes('event/') && !settings.eventImages.includes(image))
+        settings.eventImages.push(image as string)
     }
   }
 
@@ -139,15 +142,17 @@ function setSprite(pos: SpritePos|'a', image: string): boolean {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 function processImageCmd(arg: string, cmd: string, onFinish: VoidFunction) {
-  const args = arg.split(',')
   let pos:string = 'bg',
       image:string = '',
       type:string = ''
 
   switch(cmd) {
-    case 'bg': [image, type] = args; break
-    case 'ld': [pos, image, type] = args; break
-    case 'cl': [pos, type] = args; break
+    case 'bg': [image, type] = splitLast(arg, ',') as [string, string]; break
+    case 'cl': [pos, type] = arg.split(','); break
+    case 'ld':
+      [pos, arg] = splitFirst(arg, ',') as [string, string]
+      [image, type] = splitLast(arg, ',') as [string, string]
+      break
     default : throw Error(`unknown image command ${cmd} ${arg}`)
   }
   // get image
@@ -230,6 +235,7 @@ function useGraphicTransition(pos: SpritePos, preload: boolean = true): GraphicT
     setImg(img)
     if (preload && img) {
       setLoaded(false)
+      img = splitFirst(img, '$')[0]
       preloadImage(img).finally(setLoaded.bind(null, true))
     } else {
       setLoaded(true)

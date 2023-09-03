@@ -12,6 +12,7 @@ import { commands as variableCommands, gameContext, settings } from "./variables
 import { toast } from "react-toastify"
 import { SCREEN, displayMode } from "./display"
 import strings from "./lang"
+import { closeBB } from "./Bbcode"
 
 type Instruction = {cmd: string, arg: string}
 type CommandHandler = {next: VoidFunction, cancel?: VoidFunction, autoPlayDelay?: number}
@@ -106,13 +107,31 @@ export default script
 
 function processPhase(dir: "l"|"r") {
   const {bg, route, routeDay, day} = gameContext.phase
-  const invDir = dir=='l'?'r':'l';
+  const [hAlign, vAlign, invDir] =
+      (dir == "l") ? ["[left]", "t", "r"]
+                   : ["[right]", "b", "l"]
+  const title = (route && routeDay) ?
+      closeBB(strings.scenario.routes[route][routeDay])
+      : ""
+  
+  let texts
+  const common = `bg ${bg}$${vAlign}\`${hAlign}${title}`
+  if (day) {
+    const dayStr = `[size=80%]${closeBB(strings.scenario.days[day-1])}`
+    texts = [
+      `${common}\n[hide]${dayStr}\`,%type_${invDir}cartain_fst`,
+      `${common}\n${dayStr}\`,%type_crossfade_fst`,
+    ]
+  } else {
+    texts = [
+      `${common}\`,%type_${invDir}cartain_fst`
+    ]
+  }
   history.onPageBreak("phase")
   return [
     ...extractInstructions(`bg ${bg},%type_${dir}cartain_fst`),
-    ...extractInstructions(`ld ${dir},$${route}|${routeDay},%type_${invDir}cartain_fst`),
-    ...(day ? extractInstructions(`ld ${dir},$${route}|${routeDay}|${day},%type_crossfade_fst`) : []),
-    {cmd: "click", arg: Math.max(500, settings.nextPageDelay).toString()},
+    ...(texts.map(extractInstructions).flat()),
+    {cmd: "click", arg: Math.max(1000, settings.nextPageDelay).toString()},
     ...extractInstructions(`bg #000000,%type_crossfade_fst`)
   ];
 }
@@ -317,7 +336,7 @@ async function processCurrentLine() {
       // processCurrentLine() will be called again by the observer.
       // The index should not be incremented
       lineSkipped = false
-      if (history.last.context.index == index)
+      if (history.last?.context.index == index)
         history.pop() // if the skipped line is the first of the page, remove page from history
     } else {
       gameContext.index++
