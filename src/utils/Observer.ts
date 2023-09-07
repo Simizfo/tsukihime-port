@@ -324,6 +324,10 @@ export function useObserver<T extends Observable, P extends keyof T>(
     options: ObserverOptions<T[P]> = {}) {
   useEffect(()=> {
     observe(object as T, property, callback, options)
+    const val = (object as T)[property]
+    if (!options.once && (options.filter?.(val) ?? true)) {
+      callback(val)
+    }
     return unobserve.bind(null, object as T, property, callback) as VoidFunction
   }, [])
 }
