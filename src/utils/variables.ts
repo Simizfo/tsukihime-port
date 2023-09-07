@@ -1,10 +1,11 @@
 import { ViewRatio, NumVarName, StrVarName, VarName, LabelName, RouteName, RouteDayName } from "../types"
 import { observe, observeChildren } from "./Observer"
 import { TEXT_SPEED } from "./constants"
+import { SCREEN, displayMode } from "./display"
 import { endings } from "./endings"
 import { LangCode, LangFile } from "./lang"
 import Timer from "./timer"
-import { deepFreeze, deepAssign, jsonDiff, objectsEqual } from "./utils"
+import { deepFreeze, deepAssign, jsonDiff, objectsEqual, resettable } from "./utils"
 
 //##############################################################################
 //#                           APP-RELATED VARIABLES                            #
@@ -86,7 +87,7 @@ for (const key of Reflect.ownKeys(settings)) {
 //#                             SCENARIO VARIABLES                             #
 //##############################################################################
 
-export const gameContext = {
+const [gameContext, resetContext, defaultGameContext] = resettable(deepFreeze({
 //_____________________________position in scenario_____________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   label: '' as LabelName|'', // script block label
@@ -110,10 +111,10 @@ export const gameContext = {
     r : "",
   },
   monochrome: "",
-}
+}))
 //_______________________________script variables_______________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-export const progress = {
+const [progress, resetProgress, defaultProgress] = resettable(deepFreeze({
   regard: {
     ark: 0,
     ciel: 0,
@@ -122,14 +123,22 @@ export const progress = {
     hisui: 0,
   },
   flags: new Array<string>(),
-}
-export const temp = { // temporaty variables (do not need to be saved)
+}))
+const [temp, resetTemp] = resettable({ // temporaty variables (do not need to be saved)
   rockending: -1, // written, but never read in the script.
   flushcount: 0,  //used in for loops in the script
-}
+})
 
-export const defaultGameContext = deepFreeze(structuredClone(gameContext))
-export const defaultProgress = deepFreeze(structuredClone(progress))
+export { gameContext, defaultGameContext, progress, defaultProgress, temp }
+window.addEventListener('load', ()=> {
+  observe(displayMode, 'screen', (screen)=> {
+    if (screen != SCREEN.WINDOW) {
+      resetContext()
+      resetProgress()
+      resetTemp()
+    }
+  })
+})
 
 //##############################################################################
 //#                                 FUNCTIONS                                  #

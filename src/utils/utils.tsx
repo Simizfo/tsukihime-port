@@ -343,6 +343,11 @@ export function isFullscreen() {
   return document.fullscreenElement !== null
 }
 
+export function resettable<T extends Record<PropertyKey, any>>(resetValue: Readonly<T>): [T, VoidFunction, Readonly<T>] {
+  const value = deepAssign({}, resetValue) as T
+  return [value, deepAssign.bind(null, value, resetValue, {}), resetValue]
+}
+
 export function TSForceType<T>(_v: any): asserts _v is T {}
 
 //##############################################################################

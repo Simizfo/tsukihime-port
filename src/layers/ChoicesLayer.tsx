@@ -1,14 +1,17 @@
 import { useState } from "react"
 import { Choice, LabelName, PageContent } from "../types"
 import { gameContext } from "../utils/variables"
-import { useObserver } from "../utils/Observer"
+import { observe, useObserver } from "../utils/Observer"
 import script from "../utils/script"
-import { displayMode } from "../utils/display"
+import { SCREEN, displayMode } from "../utils/display"
 import history from "../utils/history"
+import { resettable } from "../utils/utils"
 
-const choicesContainer = {
+const [choicesContainer, resetChoices] = resettable({
   choices: [] as Choice[]
-}
+})
+
+observe(displayMode, 'screen', resetChoices, {filter: s => s != SCREEN.WINDOW})
 
 
 //##############################################################################

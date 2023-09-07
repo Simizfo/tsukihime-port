@@ -1,19 +1,27 @@
 import { memo, useCallback, useRef, useState } from "react";
 import { gameContext, settings } from "../utils/variables";
 import { observe, useObserved, useObserver } from "../utils/Observer";
-import { displayMode } from "../utils/display";
+import { SCREEN, displayMode } from "../utils/display";
 import { Graphics, SpritePos, preloadImage } from "../components/GraphicsComponent";
-import { objectMatch, splitFirst, splitLast, useTraceUpdate } from "../utils/utils";
+import { objectMatch, resettable, splitFirst, splitLast, useTraceUpdate } from "../utils/utils";
 
-const transition = {
+const [transition, resetTransition] = resettable({
   effect: "",
   duration: 0,
   pos: "a" as SpritePos|'a',
-}
-const quakeEffect = {
+})
+
+const [quakeEffect, resetQuake] = resettable({
   x: 0, y: 0,
   duration: 0,
-}
+})
+
+observe(displayMode, 'screen', (screen)=> {
+  if (screen != SCREEN.WINDOW) {
+    resetTransition()
+    resetQuake()
+  }
+})
 
 //##############################################################################
 //#                                 FUNCTIONS                                  #
@@ -291,12 +299,11 @@ const BackgroundGraphics = memo(()=> {
 //(used to make background transitions over the sprites)
 const ForegroundGraphics = memo(()=> {
   const [bgAlign] = useObserved(displayMode, 'bgAlignment')
-  const {img, duration: fadeTime, effect, imgLoaded}
-      = useGraphicTransition('bg')
+  const {img, duration, effect, imgLoaded} = useGraphicTransition('bg')
 
-  //useTraceUpdate('fg', {bgAlign, img, fadeTime, effect, imgLoaded})
-  return (imgLoaded && fadeTime > 0 && effect != "") ? (
-    <Graphics key={img} pos='bg' image={img} fadeTime={fadeTime} fadeIn={effect}
+  //useTraceUpdate('fg', {bgAlign, img, duration, effect, imgLoaded, randId})
+  return (imgLoaded && duration > 0 && effect != "") ? (
+    <Graphics key={img} pos='bg' image={img} fadeTime={duration} fadeIn={effect}
               onAnimationEnd={endTransition} {...{'bg-align': bgAlign}}/>
   ) : <></>
 })

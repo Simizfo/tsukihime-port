@@ -139,10 +139,8 @@ export const Graphics = memo(({pos, image, resolution=settings.resolution,
   // add an opaque background to the crossfade-disappearing image to prevent
   // the background from being visible by transparency
   const maskProps = useCallback(()=> {
-    if (pos == 'bg' || fadeTime == 0 || fadeOut != 'crossfade'
-        || !image || !toImg || !isImage(image) || !isImage(toImg))
-      return undefined
-    else {
+    if (pos != 'bg' && fadeTime > 0 && fadeOut == 'crossfade'
+        && image && toImg && isImage(image) && isImage(toImg)) {
       return {
         'for-mask': "",
         style: {

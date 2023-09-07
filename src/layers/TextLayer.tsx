@@ -3,11 +3,11 @@ import moonIcon from '../assets/icons/icon_moon.svg'
 import pageIcon from '../assets/icons/icon_bars.svg'
 import Timer from "../utils/timer"
 import { TEXT_SPEED } from "../utils/constants"
-import { convertText } from "../utils/utils"
+import { convertText, resettable } from "../utils/utils"
 import { settings } from "../utils/variables"
-import { useObserved, useObserver } from "../utils/Observer"
+import { observe, useObserved, useObserver } from "../utils/Observer"
 import history from "../utils/history"
-import { displayMode } from "../utils/display"
+import { SCREEN, displayMode } from "../utils/display"
 import { PageContent } from "../types"
 
 const icons: Record<"moon"|"page", string> = {
@@ -15,17 +15,15 @@ const icons: Record<"moon"|"page", string> = {
   "page": pageIcon
 }
 
-const scriptInterface: {
-  text: string,
-  glyph: keyof typeof icons|undefined,
-  fastForward: boolean,
-  onFinish: VoidFunction|undefined
-} = {
-  text: "",
-  glyph: undefined,
-  fastForward: false,
-  onFinish: undefined
-}
+const [scriptInterface, resetSI] = resettable({
+  text: "" as string,
+  glyph: undefined as keyof typeof icons|undefined,
+  fastForward: false as boolean,
+  onFinish: undefined as VoidFunction|undefined
+})
+
+observe(displayMode, 'screen', resetSI, {filter: s => s != SCREEN.WINDOW})
+
 
 history.addListener(()=> {
   scriptInterface.text = ""
