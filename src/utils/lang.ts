@@ -5,7 +5,7 @@ import { observe, useObserver } from "./Observer"
 import { SCENE_ATTRS } from "./constants"
 import { RouteName, RouteDayName } from "../types"
 import { useReducer } from "react"
-import { bb } from "./Bbcode"
+import { bb, closeBB } from "./Bbcode"
 const LANG_DIR = `${import.meta.env.BASE_URL}lang/`
 const LANGUAGES_LIST_URL = `${LANG_DIR}languages.json`
 
@@ -24,6 +24,14 @@ type LangDesc = {
 
 type ImageRedirect<format extends string> = {thumb:format, sd:format, hd: format}
 
+type TextImage = {
+  bg?: string,
+} & (
+  { top: string|string[], center?: never, bottom?: never } |
+  { center: string|string[], top?: never, bottom?: never } |
+  { bottom: string|string[], top?: never, center?: never }
+)
+
 export type LangFile = typeof defaultStrings & {
   scenario: {
     days: string[],
@@ -31,9 +39,11 @@ export type LangFile = typeof defaultStrings & {
     scenes: typeof SCENE_ATTRS.scenes
   },
   images: {
-    "redirect-ids"?: Record<string, ImageRedirect<`${string}\$${string}`>>,
-    "redirected-images": Record<string, string|ImageRedirect<string>>
-  }
+    "redirect-ids": Record<string, ImageRedirect<`${string}\$${string}`>>,
+    "redirected-images": Record<string, string|ImageRedirect<string>>,
+    "words": Record<string, TextImage>
+  },
+  credits: (TextImage & {delay?: number})[]
 }
 
 let langDesc: LangDesc = {
@@ -46,7 +56,7 @@ const strings = (()=> {
   let {images: _imgs, ...strings} = deepAssign({}, defaultStrings) as LangFile
   images = _imgs
   return strings
-})()
+})() as Omit<LangFile, keyof typeof images>
 
 export { strings }
 
@@ -71,21 +81,58 @@ export function useLanguageRefresh() {
 
 export default strings
 
-//_________________________TRANSLATION-RELATED GETTERS__________________________
+//_________________________translation-related getters__________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 export function imageUrl(img: string, res=settings.resolution) {
-  const imgRedirect = images["redirected-images"][img] ?? ""
-  let url
-  if (imgRedirect.constructor == String)
-    url = images["redirect-ids"][imgRedirect][res].replace('$', img)
+  let imgRedirect = images["redirected-images"][img] ?? ""
+  let src
+  if (imgRedirect.constructor == String) {
+    imgRedirect = images["redirect-ids"][imgRedirect]
+  }
   else {
     TSForceType<ImageRedirect<string>>(imgRedirect)
-    url = imgRedirect[res]
   }
-  if (!/^\w+:\/\//.test(url)) // does not start with "<protocol>://"
-    url = `${import.meta.env.BASE_URL}${url}`
-  return url
+  if (res == "thumb" && !("thumb" in imgRedirect))
+    res = "sd"
+  if (res == "sd" && !("sd" in imgRedirect))
+    res = "hd"
+  else if (res == "hd" && !("hd" in imgRedirect))
+    res = "sd"
+  src = imgRedirect[res].replace('$', img)
+  if (src.startsWith('#'))
+    return src
+  if (!/^\w+:\/\//.test(src)) // does not start with "<protocol>://"
+    src = `${import.meta.env.BASE_URL}${src}`
+  return src
+}
+
+function textImageToStr(textImg: TextImage): string {
+  const {center, top, bottom, bg="#000000"} = textImg
+  let [text, vAlign] = center ? [center, 'c'] :
+                       top    ? [top   , 't'] :
+                       bottom ? [bottom, 'b'] :
+                       [null, '']
+  if (text) {
+    if (Array.isArray(text))
+      text = text.map(closeBB).join('\n')
+    text = `$${vAlign}\`${text}\``
+  }
+  return `${bg}${text??""}`
+}
+
+export function wordImage(img: string) : string {
+  if (img.startsWith("word/"))
+    img = img.substring("word/".length)
+  const textImage = images.words[img as keyof typeof images.words]
+  if (!textImage) {
+    throw Error(`unknown word-image ${img}`)
+  }
+  return textImageToStr(textImage)
+}
+
+export function credits() : [string, number][] {
+  return strings.credits.map(({delay=5600, ...textImage})=> [textImageToStr(textImage), delay])
 }
 
 export function phaseTitle(route: RouteName, routeDay: RouteDayName) {
@@ -94,6 +141,25 @@ export function phaseTitle(route: RouteName, routeDay: RouteDayName) {
 
 export function dayTitle(day: number) {
   return day > 0 ? bb(strings.scenario.days[day-1]) : ""
+}
+
+//________________________________languages list________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+export function addLang(id: LangCode, description: LangDesc, tranlationFileJSON?: Partial<LangFile>) {
+  if (!("lang-file" in description)) {
+    if (!tranlationFileJSON)
+      throw Error(`added languages must specify a "lang-file" in their descriptor, or a translation json`)
+    storeTranslation(id, tranlationFileJSON)
+  }
+  languages[id] = description
+  saveLanguagesList()
+}
+
+export function deleteLang(id: LangCode) {
+  delete languages[id]
+  localStorage.removeItem(`lang_${id}`)
+  saveLanguagesList()
 }
 
 //##############################################################################
@@ -188,22 +254,6 @@ function saveLanguagesList() {
 
 function storeTranslation(id: LangCode, json: Partial<LangFile>) {
   localStorage.setItem(`lang_${id}`, JSON.stringify(json))
-}
-
-export function addLang(id: LangCode, description: LangDesc, tranlationFileJSON?: Partial<LangFile>) {
-  if (!("lang-file" in description)) {
-    if (!tranlationFileJSON)
-      throw Error(`added languages must specify a "lang-file" in their descriptor, or a translation json`)
-    storeTranslation(id, tranlationFileJSON)
-  }
-  languages[id] = description
-  saveLanguagesList()
-}
-
-export function deleteLang(id: LangCode) {
-  delete languages[id]
-  localStorage.removeItem(`lang_${id}`)
-  saveLanguagesList()
 }
 
 //##############################################################################

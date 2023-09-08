@@ -97,9 +97,7 @@
       },
       "others": {
         "pro": "[b][i]a prologue",
-        "epi": "[b][i]an epilogue",
-        "end": "END",
-        "fin": "Fin"
+        "epi": "[b][i]an epilogue"
       }
     },
 
@@ -116,7 +114,11 @@
     "redirect-ids": {
       "": {"thumb":"image_thumb/$.webp", "sd":"image/$.webp", "hd": "image_x2/$.webp"}
     },
-    "redirected-images": { }
+    "redirected-images": { },
+    "words": {
+      "fin": {"center": "[center]Fin"},
+      "end": {"bottom": "[right]END"}
+    }
   },
   "disclaimer": [
     "This is a web version of [b]月姫[/b], a visual novel published on 2000 by TYPE-MOON.",

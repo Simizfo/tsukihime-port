@@ -4,6 +4,7 @@ import { observe, useObserved, useObserver } from "../utils/Observer";
 import { SCREEN, displayMode } from "../utils/display";
 import { Graphics, SpritePos, preloadImage } from "../components/GraphicsComponent";
 import { objectMatch, resettable, splitFirst, splitLast, useTraceUpdate } from "../utils/utils";
+import { wordImage } from "../utils/lang";
 
 const [transition, resetTransition] = resettable({
   effect: "",
@@ -53,10 +54,21 @@ function extractImage(image: string) {
     image = image.substring(1, image.length-1)
                  .replace(/:a;|image[\/\\]|\.\w+$/g, '')
                  .replace('\\', '/')
-    switch (image) {
-      case "bg/ima_10"  : image = "#000000"; break
-      case "bg/ima_11"  : image = "#ffffff"; break
-      case "bg/ima_11b" : image = "#9c0120"; break;
+    const [dir, name] = image.split('/')
+    if (dir == "bg") {
+      switch (name) {
+        case "ima_10"  : image = "#000000"; break
+        case "ima_11"  : image = "#ffffff"; break
+        case "ima_11b" : image = "#9c0120"; break;
+      }
+    } else if (dir == "word") {
+      if (text)
+        throw Error(`Cannot cumulate word image and text (${image}, ${text})`);
+      [image, text] = splitFirst(wordImage(image), '$')
+    }
+    else if (dir == "event") {
+      if (!settings.eventImages.includes(image))
+        settings.eventImages.push(image)
     }
   } else if (!image.startsWith('#')) { // not image nor color
     throw Error(`cannot extract image from "${image}"`)
@@ -91,15 +103,8 @@ function applyChange(pos: SpritePos, image: string, type: string, onFinish: Void
 
   let change = setSprite(pos as SpritePos, image)
 
-  if (pos == 'bg') {
-    if (!change && objectMatch(gameContext.graphics, {l: "", c: "", r: ""}))
+  if (pos == 'bg' && !change && objectMatch(gameContext.graphics, {l: "", c: "", r: ""}))
       change = true
-    if (change) {
-      const [img] = splitFirst(image, '$')
-      if (img.includes('event/') && !settings.eventImages.includes(image))
-        settings.eventImages.push(image as string)
-    }
-  }
 
   // update transition only if sprites have been changed
   if (change) {
