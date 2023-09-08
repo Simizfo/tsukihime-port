@@ -255,6 +255,10 @@ function getVarLocation(fullName: VarName): [any, string] {
     parent = endingsProxy
     name = name.substring(name.indexOf('_')+1) // 0 if no '_' in name
   }
+  else if (name == "ark_normalcleared") {
+    parent = endingsProxy
+    name = "ark_true"
+  }
   else {
     throw Error(`Unknown variable ${name}`)
   }
