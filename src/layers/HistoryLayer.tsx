@@ -1,5 +1,5 @@
 import { Fragment, memo, useEffect, useRef } from 'react';
-import { addEventListener, convertText } from "../utils/utils";
+import { addEventListener } from "../utils/utils";
 import { displayMode, isViewAnyOf } from '../utils/display';
 import { SaveState, loadSaveState } from "../utils/savestates";
 import { useObserved, } from '../utils/Observer';
@@ -8,7 +8,7 @@ import script from '../utils/script';
 import { strings, dayTitle, phaseTitle } from '../utils/lang';
 import { PageContent, RouteDayName } from '../types';
 import { getSceneTitle } from '../utils/scriptUtils';
-import { bb } from '../utils/Bbcode';
+import { Bbcode, bb } from '../utils/Bbcode';
 
 const PageElement = memo(({saveState, onLoad}: {saveState: SaveState, onLoad: (ss: SaveState)=>void})=> {
   if (saveState.page == undefined)
@@ -21,7 +21,7 @@ const PageElement = memo(({saveState, onLoad}: {saveState: SaveState, onLoad: (s
       displayContent = text.split('\n').map((line, i) =>
         <Fragment key={i}>
           {i > 0 && <br/>}
-          {convertText(line)}
+          <Bbcode text={line}/>
         </Fragment>
       )
       break

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
-import { innerText, replaceDashes } from "./utils"
-import { Fragment, memo } from "react"
+import { TSForceType, innerText, replaceDashes } from "./utils"
+import { Fragment, memo, useEffect, useReducer, useRef } from "react"
+import Timer from "./timer"
 
 
 type TagTranslator<T=string|undefined> = (tag: string, content: Array<string|JSX.Element>, arg: T, props?: Record<string, any>)=> JSX.Element
@@ -54,9 +55,11 @@ const url: TagTranslator = (_, content, arg, props?)=> {
 const line: TagTranslator = (_, content, arg, props?)=> {
   const n = parseInt(arg || "1")
   const {className: insertClass, ...attrs} = props ?? {}
+  let className = 'dash'
+  if (insertClass) className += insertClass
   return <>
     {simple('span', ["\u{2002}".repeat(n)/*en-dash-sized space*/], "",
-            {className: `dash ${insertClass}`, ...attrs})}
+            {className, ...attrs})}
     {content}
   </>
 }
@@ -160,9 +163,175 @@ export function closeBB(text: string): string {
 
 type Props = {
   text: string,
-  dict: typeof defaultBBcodeDict
-} & Record<string, any>
+  dict?: typeof defaultBBcodeDict
+} & React.ComponentPropsWithoutRef<"span">
 
 export const Bbcode = memo(({text, dict = defaultBBcodeDict, ...props}: Props)=> {
-  return bb(text, dict, props)
+  return bb(text, props, dict)
+})
+
+function hideTree(root: Readonly<BbNode>, indices: number[], hideTag: string|undefined, hideArg: string) : BbNode|undefined {
+  const i = indices[0]
+  if (i == root.content.length)
+    return root
+  if (i == 0 && indices.length == 1)
+    return hideTag ? {tag: hideTag, arg: hideArg, content: [root]} : undefined
+  const content = root.content.slice(0, i)
+  let cutIdx = i
+  if (indices.length > 1) {
+    const current = root.content[i]
+    if (current.constructor == String) {
+      content.push(current.substring(0,indices[1]))
+      if (hideTag) {
+        const hiddenTxt = current.substring(indices[1])
+        content.push({tag: hideTag, arg: hideArg, content: [hiddenTxt]})
+      }
+    } else {
+      const partial = hideTree(current as BbNode, indices.slice(1), hideTag, hideArg)
+      if (partial)
+        content.push(partial)
+    }
+    cutIdx++
+  }
+  if (hideTag) {
+    content.push({tag: hideTag, arg: hideArg, content: root.content.slice(cutIdx)})
+  }
+  return {...root, content}
+}
+
+function moveCursors(path: (BbNode|string)[], indices: number[], level: number) {
+  const node = path[level]
+  const index = indices[level]
+  const content = (node.constructor == String) ? node : (node as BbNode).content
+  if (index >= content.length) {
+    return true
+  } else if (content.constructor == String) {
+    indices[level]++
+  } else {
+    TSForceType<(string|BbNode)[]>(content)
+    if (level == path.length-1) {
+      path.push(content[index])
+      indices.push(0)
+    }
+    if (moveCursors(path, indices, level+1)) {
+      indices[level]++
+      path.splice(level+1)
+      indices.splice(level+1)
+    }
+  }
+  return false
+}
+
+function atEnd(path: (BbNode|string)[], cursors: number[]) {
+  const lastNode = path[path.length-1]
+  if (lastNode.constructor == String) {
+    if (cursors[cursors.length-1] < lastNode.length)
+      return false
+  } else if (cursors[cursors.length-1] < (lastNode as BbNode).content.length)
+    return false
+  for (let i=0; i < path.length; i++) {
+    const node = path[i]
+    const content = (node.constructor == String) ? node : (node as BbNode).content
+    const end = (i < path.length) ? content.length-1 : content.length
+    if (cursors[i] < end)
+      return false
+  }
+  return true
+}
+
+function pathToEnd(root: BbNode): [(string|BbNode)[], number[]] {
+  const path: (string|BbNode)[] = [root]
+  const cursors: number[] = []
+  while (path[path.length-1].constructor != String && (path[path.length-1] as BbNode).content.length > 0) {
+    const node = path[path.length-1] as BbNode
+    const i = node.content.length-1
+    cursors.push(i)
+    path.push(node.content[i])
+  }
+  const lastNode = path[path.length-1]
+  if (lastNode.constructor == String)
+    cursors.push(lastNode.length)
+  else
+    cursors.push((lastNode as BbNode).content.length)
+  return [path, cursors]
+}
+
+function pathFromCursors(root: BbNode, cursors: number[]): (string|BbNode)[] {
+  const path: (string|BbNode)[] = [root]
+  let lastNode: string|BbNode = root
+  for (let i=0; i < cursors.length-1; i++) {
+    if (lastNode.constructor == String)
+      throw Error("Error while retrieving path in bbcode: Unexpected string")
+    lastNode = (lastNode as BbNode).content[cursors[i]]
+    path.push(lastNode)
+  }
+  return path
+}
+
+type TWProps = Props & {
+  charDelay: number,
+  startIndex?: number,
+  restartOnAppend?: boolean,
+  hideTag?: string,
+  hideTagArg?: string
+  onFinish?: VoidFunction
+}
+
+export const BBTypeWriter = memo(({text, dict = defaultBBcodeDict, charDelay,
+    restartOnAppend=false, hideTag=undefined, hideTagArg="", onFinish, ...props}: TWProps)=> {
+  const root = useRef<BbNode>()
+  const prevText = useRef<string>("")
+  const cursors = useRef<number[]>([0])
+  const path = useRef<(BbNode|string)[]>([])
+  const [tree, updateTree] = useReducer(()=>
+    root.current ? hideTree(root.current, cursors.current, hideTag, hideTagArg) : undefined, undefined)
+  const finishCallback = useRef<VoidFunction>()
+
+  //useTraceUpdate("[BBTW] "+ text, {text, dict, charDelay, restartOnAppend, hideTag, hideTagArg, onFinish, hideTree, ...props})
+  
+  const timer = useRef<Timer>(new Timer(charDelay, ()=> {
+    if (atEnd(path.current, cursors.current)) {
+      finishCallback.current?.()
+      updateTree() // not necessary. For debug purpose.
+      timer.current.stop()
+    } else {
+      moveCursors(path.current, cursors.current, 0)
+      updateTree()
+    }
+  }, true))
+
+  useEffect(()=> { finishCallback.current = onFinish }, [onFinish])
+
+  useEffect(()=> {
+    if (text == prevText.current)
+      return
+    root.current = createTree(text)
+    if (charDelay == 0) {
+      [path.current, cursors.current] = pathToEnd(root.current)
+      finishCallback.current?.()
+    } else {
+      if (restartOnAppend || prevText.current == "" || !text.startsWith(prevText.current)) {
+        cursors.current = [0]
+        path.current = [root.current]
+      } else {
+        path.current = pathFromCursors(root.current, cursors.current)
+      }
+      timer.current.start()
+    }
+    prevText.current = text
+    updateTree()
+  }, [text])
+
+  useEffect(()=> {
+    if (charDelay == 0) {
+      if (root.current)
+        [path.current, cursors.current] = pathToEnd(root.current)
+      updateTree()
+      timer.current.stop()
+      finishCallback.current?.()
+    }
+  }, [charDelay])
+
+  return tree && tagToJSX(tree, dict, props)
+  
 })

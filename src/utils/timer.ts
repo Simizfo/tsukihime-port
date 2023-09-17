@@ -15,6 +15,18 @@ export default class Timer {
     this.loop = loop
     this.callback = callback
   }
+
+  get delay() {
+    return this.time
+  }
+  set delay(value: number) {
+    this.time = value
+    if (this.started) {
+      this.pause()
+      this.start()
+    }
+  }
+
   get started() {
     return this.timeout != 0
   }
@@ -26,6 +38,15 @@ export default class Timer {
       this.timeout = setInterval(this.callback, this.time)
     } else {
       this.timeout = setTimeout(this.callback, this.time)
+    }
+  }
+
+  stop() {
+    if (this.timeout) {
+      if (this.loop)
+        clearInterval(this.timeout)
+      else
+        clearTimeout(this.timeout)
     }
   }
 

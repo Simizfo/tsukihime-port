@@ -1,14 +1,13 @@
-import { useEffect, useState, Fragment, memo } from "react"
+import { useEffect, useState, memo } from "react"
 import moonIcon from '../assets/icons/icon_moon.svg'
 import pageIcon from '../assets/icons/icon_bars.svg'
-import Timer from "../utils/timer"
-import { TEXT_SPEED } from "../utils/constants"
-import { convertText, resettable } from "../utils/utils"
+import { preprocessText, resettable } from "../utils/utils"
 import { settings } from "../utils/variables"
-import { observe, useObserved, useObserver } from "../utils/Observer"
+import { observe, useObserved } from "../utils/Observer"
 import history from "../utils/history"
 import { SCREEN, displayMode } from "../utils/display"
 import { PageContent } from "../types"
+import { BBTypeWriter, Bbcode } from "../utils/Bbcode"
 
 const icons: Record<"moon"|"page", string> = {
   "moon": moonIcon,
@@ -61,7 +60,7 @@ export const commands = {
   '@'  : onBreakChar,
   '\\' : onBreakChar,
   '`'  : (text:string, _: string, onFinish: VoidFunction)=> {
-    appendText(text)
+    appendText(preprocessText(text))
     if (text == '\n') // line breaks are displayed instantly
       return;
 
@@ -82,94 +81,56 @@ export const commands = {
 //#                                 COMPONENT                                  #
 //##############################################################################
 
-type Props = {
-  [key: string] : any // other properties to apply to the root 'div' element of the component
-}
+type Props = { } & React.ComponentPropsWithoutRef<"div">
 
 const TextLayer = memo(({...props}: Props) => {
 
   const [ display ] = useObserved(displayMode, 'text')
   const [ text ] = useObserved(scriptInterface, 'text')
+  const [ lines, setLines ] = useState<string[]>([])
   const [ immediate ] = useObserved(scriptInterface, 'fastForward')
-  const [ previousText, setPreviousText ] = useState<string[]>([]) // lines to display entirely
-  const [ newText, setNewText ] = useState<string>("") // line to display gradually
-  const [ cursor, setCursor ] = useState<number>(0) // position of the cursor on the last line.
-  const [ glyph, setGlyph ] = useState<'moon'|'page'>() // id of the animated glyph to display at end of line
-
-  useObserver((glyph)=> {
-    if (glyph) {
-      setPreviousText(scriptInterface.text.split('\n'))
-      setNewText("")
-    }
-    setGlyph(glyph)
-  }, scriptInterface, 'glyph')
+  const [ glyph ] = useObserved(scriptInterface, 'glyph')
 
   useEffect(()=> {
-    const previous = previousText.join('\n') + newText
+    if (glyph) {
+      scriptInterface.onFinish?.()
+    }
+  }, [glyph])
+
+  useEffect(()=> {
+    const previous = lines.join('\n')
     if (previous != text) {
-      if (text.startsWith(previous)) {
-        setPreviousText((previous).split('\n'))
-        setNewText(text.substring(previous.length))
-      } else {
-        setPreviousText([])
-        setNewText(text)
-      }
+      setLines(text.trimEnd().split('\n'))
       if (!displayMode.text && text.length > 0)
         displayMode.text = true
-      setCursor(0)
     }
   }, [text])
 
-  useEffect(()=> {
-    if (newText.length > 0) {
-      const textSpeed = settings.textSpeed
-      if (immediate || textSpeed == TEXT_SPEED.instant) {
-        setCursor(newText.length)
-        scriptInterface.onFinish?.()
-      } else {
-        let index = newText.search(/\S|$/)
-        // gradually display next characters
-        const timer = new Timer(textSpeed, ()=> {
-          index++
-          while (['-', '―', '─'].includes(newText.charAt(index+1)))
-            index++
-          setCursor(index)
-          if (index >= newText.length) {
-            timer.cancel()
-            scriptInterface.onFinish?.()
-          }
-        }, true)
-        timer.start()
-        setCursor(index)
-        return timer.cancel.bind(timer)
-      }
-    } else if (previousText.length > 0) {
-      scriptInterface.onFinish?.()
-    }
-  }, [previousText, newText, immediate])
-
   const {className, ...remaining_props} = props
-  const visibleText = newText.substring(0, cursor)
-  const hiddenText = newText.substring(cursor)
-  const hide = !display || (previousText.length == 0 && newText.length == 0)
+  const classList = ['box', 'box-text']
+  if (!display || (text.length == 0)) classList.push('hide')
+  if (className) classList.push(className)
+  const [previousLines, lastLine] = [lines.slice(0, lines.length-1), lines[lines.length-1]]
+  console.log(lines, previousLines, lastLine)
   return (
-    <div className={`box box-text ${hide ? "hide ":""}${className||''}`} {...remaining_props}>
+    <div className={classList.join(' ')} {...remaining_props}>
       <div className="text-container">
-        {previousText.map((line, i)=>
-          <Fragment key={i}>
-            {i > 0 && <br/>}
-            {convertText(line)}
-          </Fragment>)}
-        <span>
-          {glyph ? <>
-            &#8203;
-            <img src={icons[glyph]} alt={glyph} id={glyph} className="cursor" />
-            &#8203;
-          </> : <>
-            {convertText(visibleText)}
-            {convertText(hiddenText, {style:{visibility: 'hidden'}})}
-          </>}
-        </span>
+        {previousLines.map((line, i)=> <>
+          {line && <Bbcode text={line} key={i}/>}
+          <br/>
+        </>)}
+        {lastLine &&
+          <BBTypeWriter charDelay={immediate ? 0 : settings.textSpeed} text={lastLine} hideTag="hide"
+            onFinish={()=> {
+              scriptInterface.onFinish?.()
+            }}/>
+        }
+        {glyph && <span><>
+          &#8203;
+          <img src={icons[glyph]} alt={glyph} id={glyph} className="cursor" />
+          &#8203;
+        </></span>}
+        
       </div>
     </div>
   )

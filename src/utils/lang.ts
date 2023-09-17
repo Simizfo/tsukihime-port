@@ -215,7 +215,7 @@ async function updateStrings() {
     console.error(`unknwon language ${lang}. Reverting to default.`)
     settings.language = lang = defaultSettings.language
   }
-  console.log(`loading strings fpr ${settings.language}`)
+  console.log(`loading strings for ${settings.language}`)
   const strs  = await loadStrings(settings.language)
   if (strs && lang == settings.language) {
     const {images: imgs, ..._strings} = strs as LangFile;

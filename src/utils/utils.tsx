@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import { JSONObject, JSONPrimitive, RecursivePartial } from "../types"
 import { ReactElement, ReactNode, useEffect, useRef } from "react"
 
@@ -149,17 +148,20 @@ export function jsonDiff<T extends JSONObject>(obj: T, ref: Readonly<RecursivePa
 //#                              TEXT CONVERSION                               #
 //##############################################################################
 
-export function convertText(text: string, props: Record<string, any> = {}): JSX.Element {
-
-  if (text == "br")
-    text = ""
-  else if ( text.length > 0) {
-    //remove '`', '@' and '\', EDIT : already removed by script parser
-    //replace '|' with '…'
-    text = text//.replace(/[`@\\]|(\!w\d+\b)/g, '')
-               .replaceAll('|', '…')
+export function preprocessText(text: string) {
+  text = text.replaceAll('|', '…')
+  let m
+  let result = ""
+  while ((m = /[-―─]{2,}/g.exec(text)) !== null) {
+    if (m.index > 0)
+      result += text.substring(0, m.index)
+    const len = m[0].length
+    result += `[line=${len}/]`
+    text = text.substring(m.index + len)
   }
-  return <span {...props}>{replaceDashes(text)}</span>
+  if (text.length > 0)
+    result += text
+  return result
 }
 
 export function replaceDashes(text: string): JSX.Element {
@@ -197,16 +199,16 @@ export function innerText(jsx: ReactNode): string {
   }
 }
 
-export function splitFirst(text: string, sep: string) : [string, string|null] {
-  const i = text.indexOf(sep)
+export function splitFirst(text: string, sep: string, position=0) : [string, string|null] {
+  const i = text.indexOf(sep, position)
   if (i >= 0)
     return [text.substring(0, i), text.substring(i+1)]
   else
     return [text, null]
 }
 
-export function splitLast(text: string, sep: string) : [string, string|null] {
-  const i = text.lastIndexOf(sep)
+export function splitLast(text: string, sep: string, position=text.length) : [string, string|null] {
+  const i = text.lastIndexOf(sep, position)
   if (i >= 0)
     return [text.substring(0, i), text.substring(i+1)]
   else
@@ -346,6 +348,10 @@ export function isFullscreen() {
 export function resettable<T extends Record<PropertyKey, any>>(resetValue: Readonly<T>): [T, VoidFunction, Readonly<T>] {
   const value = deepAssign({}, resetValue) as T
   return [value, deepAssign.bind(null, value, resetValue, {}), resetValue]
+}
+
+export function isIterable(obj: any): obj is Iterable<any> {
+  return typeof obj[Symbol.iterator] === 'function'
 }
 
 export function TSForceType<T>(_v: any): asserts _v is T {}
