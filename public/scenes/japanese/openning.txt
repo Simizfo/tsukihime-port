@@ -20,16 +20,16 @@ br
 br
 br
 br
- [center]暗い夜。
- [center]家の中にみんなはいない。\
+[center]暗い夜。
+[center]家の中にみんなはいない。\
 br
 br
 br
 br
 br
 br
- [center]一人きりはこわいから
- [center]みんなにあいたくて庭にでた。\
+[center]一人きりはこわいから
+[center]みんなにあいたくて庭にでた。\
 
 bg "image\bg\ima_02.jpg",%type_crossfade_mid
 !w1000
@@ -39,36 +39,36 @@ br
 br
 br
 br
- [center]屋敷の庭はすごく広くて
- [center]まわりは深い深い森に囲まれて。
- [center]森の木々はくろく・くろく
- [center]大きなカーテンのようだった。\
+[center]屋敷の庭はすごく広くて
+[center]まわりは深い深い森に囲まれて。
+[center]森の木々はくろく・くろく
+[center]大きなカーテンのようだった。\
 
 br
 br
 br
 br
 br
- [center]それは　まるでどこかの劇場みたい。
- [center]　ざあ　と木々のカーテンが開いて、
- [center]すぐに演劇が始まるのかとわくわくした。\
+[center]それは　まるでどこかの劇場みたい。
+[center]　ざあ　と木々のカーテンが開いて、
+[center]すぐに演劇が始まるのかとわくわくした。\
 
 br
 br
 br
 br
 br
- [center]遠くでいろんな音がしてる。
- [center]くろい木々のカーテンの奥。
- [center]森の中で　みんなが楽しそうに騒いでる。\
+[center]遠くでいろんな音がしてる。
+[center]くろい木々のカーテンの奥。
+[center]森の中で　みんなが楽しそうに騒いでる。\
 br
 br
 br
 br
 br
 br
- [center]幕はまだ開かない。
- [center]がまんできずに　森の中へと入っていった。\
+[center]幕はまだ開かない。
+[center]がまんできずに　森の中へと入っていった。\
 
 bg "image\bg\ima_10.jpg",%type_crossfade_slw
 
@@ -79,8 +79,8 @@ br
 br
 br
 br
- [center]すごく、くらい。
- [center]森はふかくて　ツメタイヒカリも届かない。\
+[center]すごく、くらい。
+[center]森はふかくて　ツメタイヒカリも届かない。\
 
 
 br
@@ -88,25 +88,25 @@ br
 br
 br
 br
- [center]ただ　寒い。
- [center]眼球の奥がしびれてしまうぐらいの　寒い冬。\
+[center]ただ　寒い。
+[center]眼球の奥がしびれてしまうぐらいの　寒い冬。\
 
 br
 br
 br
 br
 br
- [center]自分の名前をよばれた気がして
- [center]もっと奥へと歩いていく。\
+[center]自分の名前をよばれた気がして
+[center]もっと奥へと歩いていく。\
 br
 br
 br
 br
 br
- [center]木々のヴェールを抜けたあと。
- [center]森の広場にはみんなそろって待っていた。
- [center]みんなふぞろいのかっこう。
- [center]みんなばらばらのてあし。\
+[center]木々のヴェールを抜けたあと。
+[center]森の広場にはみんなそろって待っていた。
+[center]みんなふぞろいのかっこう。
+[center]みんなばらばらのてあし。\
 br
 br
 br
@@ -114,7 +114,7 @@ br
 br
 br
 br
- [center]一面　まっかになってる森のひろば。\
+[center]一面　まっかになってる森のひろば。\
 
 br
 br
@@ -127,7 +127,7 @@ br
 br
 br
 br
- [center]バラバラにするために見知らぬ人がやってくる。\
+[center]バラバラにするために見知らぬ人がやってくる。\
 
 br
 br
@@ -143,8 +143,8 @@ br
 br
 br
 br
- [center]けれど誰かが前にやってきて
- [center]かわりにバラバラにされてくれた。\
+[center]けれど誰かが前にやってきて
+[center]かわりにバラバラにされてくれた。\
 
 br
 br
@@ -163,19 +163,19 @@ br
 br
 br
 br
- [center]びしゃりと。
- [center]暖かいものが顔にかかった。
- [center]あかい。
- [center]トマトみたいに　あかい水。\
+[center]びしゃりと。
+[center]暖かいものが顔にかかった。
+[center]あかい。
+[center]トマトみたいに　あかい水。\
 
 br
 br
 br
 br
 br
- [center]バラバラになった人。
- [center]その　おかあさん　という人は　
- [center]それっきりボクの名前を呼ばなくなった。\
+[center]バラバラになった人。
+[center]その　おかあさん　という人は　
+[center]それっきりボクの名前を呼ばなくなった。\
 
 br
 br
@@ -194,8 +194,8 @@ br
 br
 br
 br
- [center]ただ寒くて。
- [center]意味もなく　泣いてしまいそうだった。\
+[center]ただ寒くて。
+[center]意味もなく　泣いてしまいそうだった。\
 
 
 bg "image\bg\ima_10.jpg",%type_crossfade_slw
@@ -206,10 +206,10 @@ br
 br
 br
 br
- [center]目にあたたかい緋色が混ざってくる。
- [center]眼球の奥に染みこんでくる。
- [center]だけどぜんぜん気にならない。
- [center]夜空には、ただ一人きりの月がある。\
+[center]目にあたたかい緋色が混ざってくる。
+[center]眼球の奥に染みこんでくる。
+[center]だけどぜんぜん気にならない。
+[center]夜空には、ただ一人きりの月がある。\
 
 
 bg "image\bg\ima_01.jpg",%type_crossfade_slw
@@ -220,8 +220,8 @@ br
 br
 br
 br
- [center]すごく不思議。
- [center]どうしていままで気がつかなかったんだろう。\
+[center]すごく不思議。
+[center]どうしていままで気がつかなかったんだろう。\
 
 br
 br
@@ -240,7 +240,7 @@ br
 br
 br
 br
- [center]ああ───気がつかなかった。\
+[center]ああ───気がつかなかった。\
 br
 br
 br
@@ -248,7 +248,7 @@ br
 br
 br
 br
- [center]こんやはこんなにも\
+[center]こんやはこんなにも\
 br
 br
 br
