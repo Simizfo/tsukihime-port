@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { TSForceType, innerText, replaceDashes } from "./utils"
-import { Fragment, memo, useEffect, useReducer, useRef } from "react"
+import { Fragment, ReactNode, cloneElement, memo, useEffect, useReducer, useRef } from "react"
 import Timer from "./timer"
 
 
@@ -163,11 +163,17 @@ export function closeBB(text: string): string {
 
 type Props = {
   text: string,
-  dict?: typeof defaultBBcodeDict
+  dict?: typeof defaultBBcodeDict,
+  rootPrefix?: ReactNode,
+  rootSuffix?: ReactNode
 } & React.ComponentPropsWithoutRef<"span">
 
-export const Bbcode = memo(({text, dict = defaultBBcodeDict, ...props}: Props)=> {
-  return bb(text, props, dict)
+export const Bbcode = memo(({text, dict = defaultBBcodeDict, rootPrefix: prefix, rootSuffix: suffix, ...props}: Props)=> {
+  let root = bb(text, props, dict)
+  if (prefix || suffix) {
+    root = cloneElement(root, undefined, [prefix, ...root.props.children, suffix])
+  }
+  return root
 })
 
 function hideTree(root: Readonly<BbNode>, indices: number[], hideTag: string|undefined, hideArg: string) : BbNode|undefined {
@@ -277,8 +283,9 @@ type TWProps = Props & {
   onFinish?: VoidFunction
 }
 
-export const BBTypeWriter = memo(({text, dict = defaultBBcodeDict, charDelay,
-    restartOnAppend=false, hideTag=undefined, hideTagArg="", onFinish, ...props}: TWProps)=> {
+export const BBTypeWriter = memo(({text, dict = defaultBBcodeDict, charDelay, rootPrefix,
+    rootSuffix, restartOnAppend=false, hideTag=undefined, hideTagArg="",
+    onFinish, ...props}: TWProps)=> {
   const root = useRef<BbNode>()
   const prevText = useRef<string>("")
   const cursors = useRef<number[]>([0])
@@ -332,6 +339,10 @@ export const BBTypeWriter = memo(({text, dict = defaultBBcodeDict, charDelay,
     }
   }, [charDelay])
 
-  return tree && tagToJSX(tree, dict, props)
+  let resultNode = (tree) ? tagToJSX(tree, dict, props) : undefined
+  if (rootPrefix || rootSuffix)
+    resultNode = resultNode ? cloneElement(resultNode, undefined, [rootPrefix, ...resultNode.props.children, rootSuffix])
+               : <>{rootPrefix}{rootSuffix}</>
+  return resultNode
   
 })

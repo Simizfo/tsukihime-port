@@ -111,7 +111,9 @@ const TextLayer = memo(({...props}: Props) => {
   if (!display || (text.length == 0)) classList.push('hide')
   if (className) classList.push(className)
   const [previousLines, lastLine] = [lines.slice(0, lines.length-1), lines[lines.length-1]]
-  console.log(lines, previousLines, lastLine)
+  
+  const glyphNode = glyph && <span><img src={icons[glyph]} alt={glyph} id={glyph} className="cursor" /></span>
+
   return (
     <div className={classList.join(' ')} {...remaining_props}>
       <div className="text-container">
@@ -119,17 +121,11 @@ const TextLayer = memo(({...props}: Props) => {
           {line && <Bbcode text={line} key={i}/>}
           <br/>
         </>)}
-        {lastLine &&
+        {lastLine ?
           <BBTypeWriter charDelay={immediate ? 0 : settings.textSpeed} text={lastLine} hideTag="hide"
-            onFinish={()=> {
-              scriptInterface.onFinish?.()
-            }}/>
+            onFinish={()=> { scriptInterface.onFinish?.() }} rootSuffix={glyphNode}/>
+        : glyphNode
         }
-        {glyph && <span><>
-          &#8203;
-          <img src={icons[glyph]} alt={glyph} id={glyph} className="cursor" />
-          &#8203;
-        </></span>}
         
       </div>
     </div>
