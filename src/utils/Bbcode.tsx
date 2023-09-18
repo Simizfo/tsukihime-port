@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { TSForceType, innerText } from "./utils"
-import { Fragment, PropsWithRef, PropsWithoutRef, ReactNode, cloneElement, memo, useEffect, useReducer, useRef } from "react"
+import { Fragment, PropsWithoutRef, ReactNode, cloneElement, memo, useEffect, useReducer, useRef } from "react"
 import Timer from "./timer"
 
 
