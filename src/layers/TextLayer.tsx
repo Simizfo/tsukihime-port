@@ -1,4 +1,4 @@
-import { useEffect, useState, memo } from "react"
+import { useEffect, useState, memo, Fragment } from "react"
 import moonIcon from '../assets/icons/icon_moon.svg'
 import pageIcon from '../assets/icons/icon_bars.svg'
 import { preprocessText, resettable } from "../utils/utils"
@@ -117,10 +117,10 @@ const TextLayer = memo(({...props}: Props) => {
   return (
     <div className={classList.join(' ')} {...remaining_props}>
       <div className="text-container">
-        {previousLines.map((line, i)=> <>
+        {previousLines.map((line, i)=> <Fragment key={i}>
           {line && <Bbcode text={line} key={i}/>}
           <br/>
-        </>)}
+        </Fragment>)}
         {lastLine ?
           <BBTypeWriter charDelay={immediate ? 0 : settings.textSpeed} text={lastLine} hideTag="hide"
             onFinish={()=> { scriptInterface.onFinish?.() }} rootSuffix={glyphNode}/>

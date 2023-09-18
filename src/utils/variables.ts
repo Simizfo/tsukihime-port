@@ -4,7 +4,6 @@ import { TEXT_SPEED } from "./constants"
 import { SCREEN, displayMode } from "./display"
 import { endings } from "./endings"
 import { LangCode, LangFile } from "./lang"
-import Timer from "./timer"
 import { deepFreeze, deepAssign, jsonDiff, objectsEqual, resettable } from "./utils"
 
 //##############################################################################
@@ -53,10 +52,13 @@ let savedSettings = (()=>{
 export const settings = deepAssign(defaultSettings, savedSettings, {clone: true})
 // deep-copy savedSettings
 
-const savePostPoneTimer = new Timer(0, saveSettings)
+let savePostPoneTimeoutId: NodeJS.Timeout|0 = 0
 
 function saveSettings() {
-  savePostPoneTimer.cancel()
+  if (savePostPoneTimeoutId) {
+    savePostPoneTimeoutId = 0
+    clearTimeout(savePostPoneTimeoutId)
+  }
   settings.completedScenes.sort()
   const diff = jsonDiff(settings, defaultSettings)
   if (!objectsEqual(diff, savedSettings, false)) {
@@ -69,8 +71,8 @@ function saveSettings() {
 }
 
 function postPoneSaveSettings() {
-  if (!savePostPoneTimer.started) {
-    savePostPoneTimer.start()
+  if (savePostPoneTimeoutId == 0) {
+    savePostPoneTimeoutId = setTimeout(saveSettings, 0)
   }
 }
 

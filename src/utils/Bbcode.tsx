@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { TSForceType, innerText } from "./utils"
-import { Fragment, ReactNode, cloneElement, memo, useEffect, useReducer, useRef } from "react"
+import { Fragment, PropsWithRef, PropsWithoutRef, ReactNode, cloneElement, memo, useEffect, useReducer, useRef } from "react"
 import Timer from "./timer"
 
 
@@ -16,12 +16,13 @@ const simple: TagTranslator = (tag, content, _, props?)=> {
 
 const leaf: TagTranslator = (tag, content, _, props?)=> {
   const Tag = tag as 'br'|'wbr'
+  const {key, ...attrs} = props as PropsWithoutRef<any>
   if (content.length == 0)
     return <Tag {...props}/>
-  else if (props && Object.getOwnPropertyNames(props).length > 0)
+  else if (attrs && Object.getOwnPropertyNames(attrs).length > 0)
     return <span {...props}><Tag/>{content}</span>
   else
-    return <><Tag/>{content}</>
+    return <Fragment key={key}><Tag/>{content}</Fragment>
 }
 
 const styled: TagTranslator<Record<string, any>> = (tag, content, style, props?)=> {
@@ -54,14 +55,14 @@ const url: TagTranslator = (_, content, arg, props?)=> {
 
 const line: TagTranslator = (_, content, arg, props?)=> {
   const n = parseInt(arg || "1")
-  const {className: insertClass, ...attrs} = props ?? {}
+  const {key, className: insertClass, ...attrs} = props ?? {}
   let className = 'dash'
   if (insertClass) className += insertClass
-  return <>
+  return <Fragment key={key}>
     {simple('span', ["\u{2002}".repeat(n)/*en-dash-sized space*/], "",
             {className, ...attrs})}
     {content}
-  </>
+  </Fragment>
 }
 
 export const defaultBBcodeDict: Record<string, TagTranslator> = {

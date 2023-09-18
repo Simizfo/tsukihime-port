@@ -211,6 +211,7 @@ export const isTextLine = textLineRegexp.test.bind(textLineRegexp)
 
 export function extractInstructions(line: string) {
   const instructions = new Array<{cmd:string,arg:string}>()
+  line = line.trimEnd()
   const endPageBreak = line.endsWith('\\') && line.length > 1
 
   if (endPageBreak) // '\\' will be added as an individual command at the end

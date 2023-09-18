@@ -149,7 +149,7 @@ export function jsonDiff<T extends JSONObject>(obj: T, ref: Readonly<RecursivePa
 //##############################################################################
 
 export function preprocessText(text: string) {
-  text = text.trimEnd().replaceAll('|', '…')
+  text = text.replaceAll('|', '…')
   let m
   let result = ""
   while ((m = /[-―─]{2,}/g.exec(text)) !== null) {
