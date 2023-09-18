@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { TSForceType, innerText, replaceDashes } from "./utils"
+import { TSForceType, innerText } from "./utils"
 import { Fragment, ReactNode, cloneElement, memo, useEffect, useReducer, useRef } from "react"
 import Timer from "./timer"
 
@@ -97,7 +97,7 @@ function tagToJSX({tag, arg, content}: BbNode, dict: typeof defaultBBcodeDict,
     throw Error(`Unknown bbcode tag ${tag}`)
   const children = content.map((n, i)=>
       n.constructor == String ?
-        <Fragment key={i}>{replaceDashes(n as string)}</Fragment>
+        <Fragment key={i}>{n}</Fragment>
       : tagToJSX(n as BbNode, dict, {key: i})
   )
   return transform(tag, children, arg, props)
@@ -177,7 +177,7 @@ export const Bbcode = memo(({text, dict = defaultBBcodeDict, rootPrefix: prefix,
 })
 
 function hideTree(root: Readonly<BbNode>, indices: number[], hideTag: string|undefined, hideArg: string) : BbNode|undefined {
-  const i = indices[0]
+  let i = indices[0]
   if (i == root.content.length)
     return root
   if (i == 0 && indices.length == 1)
@@ -187,9 +187,11 @@ function hideTree(root: Readonly<BbNode>, indices: number[], hideTag: string|und
   if (indices.length > 1) {
     const current = root.content[i]
     if (current.constructor == String) {
-      content.push(current.substring(0,indices[1]))
-      if (hideTag) {
-        const hiddenTxt = current.substring(indices[1])
+      i = indices[1]
+      if (i > 0)
+        content.push(current.substring(0,i))
+      if (hideTag && i < current.length) {
+        const hiddenTxt = current.substring(i)
         content.push({tag: hideTag, arg: hideArg, content: [hiddenTxt]})
       }
     } else {
@@ -199,7 +201,7 @@ function hideTree(root: Readonly<BbNode>, indices: number[], hideTag: string|und
     }
     cutIdx++
   }
-  if (hideTag) {
+  if (hideTag && cutIdx < root.content.length) {
     content.push({tag: hideTag, arg: hideArg, content: root.content.slice(cutIdx)})
   }
   return {...root, content}

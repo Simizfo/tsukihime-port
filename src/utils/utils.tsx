@@ -149,7 +149,7 @@ export function jsonDiff<T extends JSONObject>(obj: T, ref: Readonly<RecursivePa
 //##############################################################################
 
 export function preprocessText(text: string) {
-  text = text.replaceAll('|', '…')
+  text = text.trimEnd().replaceAll('|', '…')
   let m
   let result = ""
   while ((m = /[-―─]{2,}/g.exec(text)) !== null) {
@@ -162,24 +162,6 @@ export function preprocessText(text: string) {
   if (text.length > 0)
     result += text
   return result
-}
-
-export function replaceDashes(text: string): JSX.Element {
-    const nodes: Array<JSX.Element|string> = []
-    //replace consecutive dashes with a continuous line
-    let m
-    while ((m = /[-―─]{2,}/g.exec(text)) !== null) {
-      if (m.index > 0)
-        nodes.push(text.substring(0, m.index))
-      const len = m[0].length
-      nodes.push(<span className="dash" dash-size={len}>
-          {"\u{2002}".repeat(len) /*en-dash-sized space*/}
-        </span>)
-      text = text.substring(m.index + len)
-    }
-    if (text.length > 0)
-      nodes.push(text)
-    return <>{...nodes}</>
 }
 
 export function innerText(jsx: ReactNode): string {
