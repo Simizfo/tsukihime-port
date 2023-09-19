@@ -343,9 +343,12 @@ export const BBTypeWriter = memo(({text, dict = defaultBBcodeDict, charDelay, ro
   }, [charDelay])
 
   let resultNode = (tree) ? tagToJSX(tree, dict, props) : undefined
-  if (rootPrefix || rootSuffix)
+  if (rootPrefix || rootSuffix) {
+    rootPrefix = <Fragment key="prefix">{rootPrefix}</Fragment>
+    rootSuffix = <Fragment key="suffix">{rootSuffix}</Fragment>
     resultNode = resultNode ? cloneElement(resultNode, undefined, [rootPrefix, ...resultNode.props.children, rootSuffix])
                : <>{rootPrefix}{rootSuffix}</>
+  }
   return resultNode
   
 })
