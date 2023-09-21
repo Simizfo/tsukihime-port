@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import strings, { imageUrl, useLanguageRefresh } from '../utils/lang'
 import { SCREEN, useScreenAutoNavigate } from '../utils/display'
 import chalkboard from '../assets/images/chalkboard.webp'
-import { wbb } from '../utils/Bbcode'
+import { noBb } from '../utils/Bbcode'
 import { RouteEnding, endings, osiete } from '../utils/endings'
 import { Tooltip } from 'react-tooltip'
 import ReactDOMServer from 'react-dom/server';
@@ -43,7 +43,7 @@ const EndingsScreen = () => {
                                   data-tooltip-id="osiete"
                                   data-tooltip-html={ReactDOMServer.renderToStaticMarkup(
                                   <div>
-                                    {wbb(ending.name)}<br />
+                                    {noBb(ending.name)}<br />
                                     Day: {ending.day}
                                   </div>)} />
                 : <img src={chalkboard} alt="Bad Ending" draggable={false} />
@@ -66,7 +66,7 @@ const EndingComponent = ({ending:{char, image, name, day, type}}: {ending: Route
     <div className={`ending ${char}`}>
       <img className="ending-img" src={imageUrl(`event/${image}`, 'thumb')}
         alt={name} draggable={false} />
-      <div className="ending-name">{wbb(strings.scenario.routes[char][day])}</div>
+      <div className="ending-name">{noBb(strings.scenario.routes[char][day])}</div>
       <div className="ending-bottom">
         <div>{strings.characters[char]}</div>
         <div className="ending-type">{type}</div>

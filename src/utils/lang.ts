@@ -66,6 +66,11 @@ let loadedLanguage = ""
 //#                              PUBLIC FUNCTIONS                              #
 //##############################################################################
 
+/**
+ * Wait for the translation file to load.
+ * If the file is already loaded, return immediately.
+ * @returns a promise resolved when the translation file is loaded
+ */
 export async function waitLanguageLoad() {
   if (loadedLanguage == settings.language)
     return
@@ -74,6 +79,10 @@ export async function waitLanguageLoad() {
   })
 }
 
+/**
+ * To use in components.
+ * Forces a refresh of the component when the language is loaded.
+ */
 export function useLanguageRefresh() {
   const [_updateNum, forceUpdate] = useReducer(x => (x + 1) % 100, 0);
   useObserver(forceUpdate, strings, 'translation-name')
@@ -84,6 +93,12 @@ export default strings
 //_________________________translation-related getters__________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+/**
+ * Get the image source from the translation file.
+ * @param img id of the image to get its source
+ * @param res desired resolution. any of 'hd', 'sd' or 'thumb'
+ * @returns the requested image's url
+ */
 export function imageUrl(img: string, res=settings.resolution) {
   let imgRedirect = images["redirected-images"][img] ?? ""
   let src
@@ -121,6 +136,11 @@ function textImageToStr(textImg: TextImage): string {
   return `${bg}${text??""}`
 }
 
+/**
+ * Get the formatted string that replaces the image.
+ * @param img image id to convert
+ * @returns the formatted string that replaces the image
+ */
 export function wordImage(img: string) : string {
   if (img.startsWith("word/"))
     img = img.substring("word/".length)
@@ -131,14 +151,31 @@ export function wordImage(img: string) : string {
   return textImageToStr(textImage)
 }
 
+/**
+ * Get the list of formatted strings and delays for the credits.
+ * @returns the list of formatted strings and delays
+ */
 export function credits() : [string, number][] {
   return strings.credits.map(({delay=5600, ...textImage})=> [textImageToStr(textImage), delay])
 }
 
+/**
+ * Get the phase title from the route and the day, and converts it to a
+ * JSX component to be used in the graphics.
+ * @param route 
+ * @param routeDay 
+ * @returns the JSX component made for the phase title
+ */
 export function phaseTitle(route: RouteName, routeDay: RouteDayName) {
   return bb(strings.scenario.routes[route][routeDay])
 }
 
+/**
+ * Get the day string, and converts it to a JSX component to be used
+ * in the graphics.
+ * @param day 
+ * @returns the JSX component for the day
+ */
 export function dayTitle(day: number) {
   return day > 0 ? bb(strings.scenario.days[day-1]) : ""
 }
@@ -146,6 +183,14 @@ export function dayTitle(day: number) {
 //________________________________languages list________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+/**
+ * Register a new translation. If the descriptor does not specify a JSON file
+ * location, a JSON object must be provided, and will be saved to local storage.
+ * @param id id of the new translation
+ * @param description the {@link LangDesc} object that describes the translation
+ * @param tranlationFileJSON the JSON file used if the description does not
+ *        provide a location.
+ */
 export function addLang(id: LangCode, description: LangDesc, tranlationFileJSON?: Partial<LangFile>) {
   if (!("lang-file" in description)) {
     if (!tranlationFileJSON)
@@ -156,6 +201,10 @@ export function addLang(id: LangCode, description: LangDesc, tranlationFileJSON?
   saveLanguagesList()
 }
 
+/**
+ * Delete the translation with the specified id from local storage.
+ * @param id id of the translation to delete
+ */
 export function deleteLang(id: LangCode) {
   delete languages[id]
   localStorage.removeItem(`lang_${id}`)

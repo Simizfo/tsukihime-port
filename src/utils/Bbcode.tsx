@@ -9,6 +9,10 @@ type TagTranslator<T=string|undefined> = (tag: string, content: Array<string|JSX
 //[/?<tag>=<arg>/?] not preceded by a '\'
 const bbcodeTagRegex = /(?<!\\)\[(?<tag>\/?\w*)(=(?<arg>([^\/\]]|\/(?!\]))+))?(?<leaf>\/)?\]/g
 
+//##############################################################################
+//#                             BBCODE TAG TO JSX                              #
+//##############################################################################
+
 const simple: TagTranslator = (tag, content, _, props?)=> {
   const Tag = tag as 'b'|'i'|'s'|'sup'|'sub'
   return <Tag {...(props ?? {})}>{content}</Tag>
@@ -65,6 +69,10 @@ const line: TagTranslator = (_, content, arg, props?)=> {
   </Fragment>
 }
 
+/**
+ * The default bbcode dictionary used to convert bbcode to JSX.
+ * New dictionaries should extend it.
+ */
 export const defaultBBcodeDict: Record<string, TagTranslator> = {
   '': (_, content, _a, props)=> simple('span', content, _, props),
   'br' : leaf,
@@ -88,6 +96,10 @@ export const defaultBBcodeDict: Record<string, TagTranslator> = {
   'copy': (_, content, _a, props)=> <span {...props}>&copy;{content}</span>,
   'class': (_, content, arg, props)=> <span className={arg} {...props}>{content}</span>,
 }
+
+//##############################################################################
+//#                            TEXT TO BBCODE TREE                             #
+//##############################################################################
 
 type BbNode = {tag: string, arg: string, content: (BbNode|string)[]}
 
@@ -133,27 +145,13 @@ function createTree(text: string): BbNode {
   return (nodes.length > 1 && nodes[0].content.length == 1) ? nodes[1] : nodes[0]
 }
 
-function innerBbText(node: BbNode): string {
-  if (node.tag == "hide")
-    return " "
-  if (node.tag == "line")
-    return "-".repeat(parseInt(node.arg))
-  return node.content.reduce<string>((str, child)=> {
-    if (child.constructor == String)
-      return child
-    return innerBbText(child as BbNode)
-  }, "")
-}
-
-export function bb(text: string, props?: Record<string, any>, dict=defaultBBcodeDict) {
-  const root = createTree(text)
-  return tagToJSX(root, dict, props)
-}
-
-export function wbb(text: string): string {
-  return innerBbText(createTree(text))
-}
-
+/**
+ * Check if the texts has unclosed bbcode tags.
+ * If it has, add as many '[/]' as required at the end of the text
+ * to close them.
+ * @param text string with bbcode tags
+ * @returns the input text with all bbcode tags closed
+ */
 export function closeBB(text: string): string {
   const openCount = Array.from(text.matchAll(/\[[^\]]*(?<!\/)\]/g)).length
   const closeCount = Array.from(text.matchAll(/\[\/[^\]]*\]/g)).length
@@ -161,6 +159,48 @@ export function closeBB(text: string): string {
     return text
   else return text + '[/]'.repeat(openCount-closeCount)
 }
+
+/**
+ * Convert the text to JSX components by extracting and converting bbcode tags.
+ * @param text string with bbcode tags
+ * @param props props to add to the root component
+ * @param dict dictionary of translation functions from bbcode tags to JSX components.
+ * @see {@link defaultBBcodeDict}.
+ * @returns the JSX component made from converting the bbcode text
+ */
+export function bb(text: string, props?: Record<string, any>, dict=defaultBBcodeDict) {
+  const root = createTree(text)
+  return tagToJSX(root, dict, props)
+}
+
+function innerBbText(node: BbNode): string {
+  if (node.tag == "hide")
+    return " "
+  if (node.tag == "line")
+    return "-".repeat(parseInt(node.arg))
+  return node.content.reduce<string>((str, child)=> {
+    if (child.constructor == String)
+      return str + child
+    return str + innerBbText(child as BbNode)
+  }, "")
+}
+
+/**
+ * Extract the visible text from the string with bbcode tags.
+ * Remove hidden content (with [hide]), and converts [line=n] to n times '-'.
+ * @param text string with bbcode tags to extract visible text from
+ * @returns the extracted text
+ */
+export function noBb(text: string): string {
+  return innerBbText(createTree(text))
+}
+
+//##############################################################################
+//#                                 COMPONENTS                                 #
+//##############################################################################
+
+//___________________________________<Bbcode>___________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 type Props = {
   text: string,
@@ -176,6 +216,9 @@ export const Bbcode = memo(({text, dict = defaultBBcodeDict, rootPrefix: prefix,
   }
   return root
 })
+
+//________________________________<BBTypeWriter>________________________________
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 function hideTree(root: Readonly<BbNode>, indices: number[], hideTag: string|undefined, hideArg: string) : BbNode|undefined {
   let i = indices[0]
@@ -207,6 +250,8 @@ function hideTree(root: Readonly<BbNode>, indices: number[], hideTag: string|und
   }
   return {...root, content}
 }
+
+//....... tree-walking functions .......
 
 function moveCursors(path: (BbNode|string)[], indices: number[], level: number) {
   const node = path[level]
@@ -277,6 +322,8 @@ function pathFromCursors(root: BbNode, cursors: number[]): (string|BbNode)[] {
   return path
 }
 
+//............. component ..............
+
 type TWProps = Props & {
   charDelay: number,
   startIndex?: number,
@@ -302,7 +349,6 @@ export const BBTypeWriter = memo(({text, dict = defaultBBcodeDict, charDelay, ro
   const timer = useRef<Timer>(new Timer(charDelay, ()=> {
     if (atEnd(path.current, cursors.current)) {
       finishCallback.current?.()
-      updateTree() // not necessary. For debug purpose.
       timer.current.stop()
     } else {
       moveCursors(path.current, cursors.current, 0)

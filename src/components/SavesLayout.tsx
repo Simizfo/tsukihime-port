@@ -1,6 +1,6 @@
 import { ChangeEvent, MouseEvent, useEffect, useState } from "react"
 import { SCREEN, displayMode } from "../utils/display"
-import { bb, wbb } from "../utils/Bbcode"
+import { bb, noBb } from "../utils/Bbcode"
 import { SceneName } from "../types"
 import { SAVE_EXT } from "../utils/constants"
 import { SaveState, QUICK_SAVE_ID, deleteSaveState, getSaveState, listSaveStates, loadSaveState, storeCurrentState, addSavesChangeListener, removeSavesChangeListener, exportSave, loadSaveFiles } from "../utils/savestates"
@@ -27,12 +27,12 @@ export function phaseTitle(saveState: SaveState) {
   if (!phase || !phase.route || !phase.routeDay) {
     return bb(getSceneTitle(context.label as SceneName) ?? "")
   }
-  return wbb(strings.scenario.routes[phase.route][phase.routeDay])
+  return noBb(strings.scenario.routes[phase.route][phase.routeDay])
 }
 
 export function phaseDay(saveState: SaveState) {
   const day = saveState.context.phase?.day
-  return day ? wbb(strings.scenario.days[day-1]) : ""
+  return day ? noBb(strings.scenario.days[day-1]) : ""
 }
 
 
