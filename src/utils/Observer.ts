@@ -287,6 +287,8 @@ export function isObserverNotifyPending<T extends Observable>(object: T, propert
 
 /**
  * Listen for changes of all properties in the specified object.
+ * If the attribute is not yet observed, its descriptor is changed to enable the observation
+ * of value changes.
  * @param parent parent of the object to observe
  * @param attr name of the object to observe in the parent.
  * @param callback the function to call when the property has changed
@@ -303,6 +305,14 @@ export function observeChildren<T extends Object>(parent: T, attr: keyof T,
   callbacks.push({callback, ...options})
 }
 
+/**
+ * Remove the callback from the observers of the specified attribute.
+ * If the attribute is not observed anymore, it is restored to its original descriptor.
+ * @param parent object whose attribute must be un-observed
+ * @param attr name of the attribute to un-observe
+ * @param callback callback to remove the from registered observers
+ * @returns true if the operation was successful, false if the callback was not registered
+ */
 export function unobserveChildren<T extends Object>(parent: T, attr: keyof T,
     callback: (prop: keyof T, value: T[keyof T])=>void): boolean {
   const callbacks = parent[attr][callbacksSymbol as keyof ObservableContainer<T>] as ChildrenListener<T>[]
@@ -319,6 +329,14 @@ export function unobserveChildren<T extends Object>(parent: T, attr: keyof T,
 //#                            REACT-HOOK FUNCTIONS                            #
 //##############################################################################
 
+/**
+ * Exploit the functions {@link useEffect} from react and {@link observe} to
+ * call the callback function for every change in the value of the specified attribute.
+ * @param callback the function to call when the attribute's value has changed
+ * @param object parent of the attribute to observe
+ * @param property name of the attribute
+ * @param options see {@link observe} for details on the available options
+ */
 export function useObserver<T extends Observable, P extends keyof T>(
     callback:ObserverCallback<T[P]>, object: T|ObservableContainer<T>, property: P,
     options: ObserverOptions<T[P]> = {}) {
@@ -332,6 +350,18 @@ export function useObserver<T extends Observable, P extends keyof T>(
   }, [])
 }
 
+/**
+ * Exploit the functions {@link useState} from react and {@link useObserver} to
+ * create a hook state that is updated when the observed attribute changes.
+ * If a {@link map} function is provided, it will be called to convert the observed attribute.
+ * If a {@link map} is provided, an {@link invMap} function must also be provided to use the setter.
+ * It will convert the state's value back to update the attribute.
+ * @param object parent of the attribute to observe
+ * @param property name of the attribute to observe
+ * @param map function that maps the attribute value to the state variable
+ * @param invMap function that maps the state variable to the attribute, used for the setter
+ * @returns the state variable and its setter if available
+ */
 export function useObserved<V extends never,T extends Observable, P extends keyof T>(
     object: T|ObservableContainer<T>, property: P, map?: never, invMap?: never): [T[P], (v:T[P])=>void];
 export function useObserved<V,T extends Observable, P extends keyof T>(
@@ -356,6 +386,15 @@ export function useObserved<V,T extends Observable, P extends keyof T>(
     return [value, (v: T[P])=> { (object as T)[property] = v }]
   }
 }
+
+/**
+ * Exploit the functions {@link useEffect} from react and {@link observeChildren} to
+ * call the callback function for every change in any attribute of the specified object
+ * @param callback the function to call when the attribute's value has changed
+ * @param parent parent of the object whose attributes will be observed
+ * @param property name of object to observe in the parent object
+ * @param options see {@link observeChildren} for details on the available options
+ */
 
 export function useChildrenObserver<T extends Object>(
     callback: (prop: keyof T, value: T[keyof T])=>void, parent: T, attr: keyof T,
