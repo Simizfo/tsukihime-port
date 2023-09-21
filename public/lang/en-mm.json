@@ -131,6 +131,7 @@
     "about": {
       "port": "This is a web version of [i]Tsukihime[/i], a visual novel published on 2000 by Type-Moon.",
       "project": "Project available on $0Github$1.",
+      "feedback": "Send your feedback or report a bug $0here$1.",
       "data": "No data collected, everything is stored in your browser. Manage your data $0here$1.",
       "remake": "Support by buying the remake $0Tsukihime - A piece of blue glass moon$1.",
       "close": "close"

@@ -85,15 +85,18 @@ const TitleMenuScreen = () => {
             <div>
               {bb(strings.title.about.port)}
             </div>
-            {strings["translation-desc"] && <div>
-              {bb(strings["translation-desc"])} <a href={strings["translation-url"]} target="_blank"><RxExternalLink /></a>
-            </div>}
 
             <div>
               {bb(strings.title.about.project
                 .replace('$0', "[url='https://github.com/requinDr/tsukihime-port']")
                 .replace('$1', "[/url]"))} <br/>
               v{APP_VERSION}
+            </div>
+
+            <div>
+              {bb(strings.title.about.feedback
+                .replace('$0', "[url='https://forms.gle/MJorV8oNbnKo22469']")
+                .replace('$1', "[/url]"))}
             </div>
 
             <div>
