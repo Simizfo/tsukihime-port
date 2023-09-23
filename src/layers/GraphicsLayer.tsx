@@ -269,7 +269,7 @@ const SpriteGraphics = memo(({pos}: {pos: Exclude<SpritePos, 'bg'>})=> {
 
   //useTraceUpdate(pos, {pos, currImg, prevImg, fadeTime, effect, imgLoaded})
 
-  if (!imgLoaded)
+  if (!imgLoaded || prevImg == currImg)
     return <Graphics key={prevImg} pos={pos} image={prevImg}/>
 
   return <>

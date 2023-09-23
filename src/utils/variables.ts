@@ -292,7 +292,7 @@ function processVarCmd(arg: string, cmd: string) {
 
   switch (cmd) {
     case 'mov' : setGameVariable(name, v); break
-    case 'add' : setGameVariable(name, currVal + v); break
+    case 'add' : setGameVariable(name, currVal as number + parseInt(v)); break
     case 'sub' : setGameVariable(name, currVal as number - parseInt(v)); break
     case 'inc' : setGameVariable(name, currVal as number + 1); break
     case 'dec' : setGameVariable(name, currVal as number - 1); break

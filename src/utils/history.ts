@@ -222,6 +222,7 @@ class History {
 const history = new History(HISTORY_MAX_PAGES)
 history.restoreSession()
 
+//save session when closing the tab or going to another tab
 document.addEventListener("visibilitychange", ()=> {
   if (document.visibilityState == "hidden")
     history.saveSession()

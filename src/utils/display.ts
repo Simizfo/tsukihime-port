@@ -179,7 +179,7 @@ function hideMenuOnActive(d: boolean) {
 observe(displayMode, "saveScreen", hideMenuOnActive)
 observe(displayMode, "history", hideMenuOnActive)
 observe(displayMode, "graphics", hideMenuOnActive)
-observe(displayMode, "text", hideMenuOnActive)
+observe(displayMode, "text", hideMenuOnActive) // TODO check for any problem if this line is removed
 observe(displayMode, "screen", (screen)=> {
   if (screen != SCREEN.WINDOW) {
     displayMode.history = false

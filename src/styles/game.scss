@@ -24,6 +24,10 @@
     display: flex;
     font-size: 1.1em;
     font-family: var(--font), sans-serif;
+    
+    .dash {
+        text-decoration: line-through;
+    }
 
     .box {
         width: 100%;
@@ -66,8 +70,8 @@
             position: relative;
         }
         .dash {
-            text-decoration: line-through;
-            text-shadow: #000 .8px .8px .6px, #000 -.8px .8px .6px, #000 -.8px -.8px .6px, #000 .8px -.8px .6px;
+            text-shadow: #000 .8px .8px .6px, #000 -.8px .8px .6px,
+                         #000 -.8px -.8px .6px, #000 .8px -.8px .6px;
         }
         hr {
             border: 0;

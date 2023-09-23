@@ -5,7 +5,8 @@ import { observe, useObserver } from "../utils/Observer"
 import script from "../utils/script"
 import { SCREEN, displayMode } from "../utils/display"
 import history from "../utils/history"
-import { resettable } from "../utils/utils"
+import { preprocessText, resettable } from "../utils/utils"
+import { Bbcode } from "../utils/Bbcode"
 
 const [choicesContainer, resetChoices] = resettable({
   choices: [] as Choice[]
@@ -25,7 +26,7 @@ export const commands = {
     for (let i = 0; i < tokens.length; i+= 2) {
       choices.push({
         index: i,
-        str: tokens[i].trim().substring(1), // remove '`' or '"'
+        str: preprocessText(tokens[i].trim().substring(1)), // remove '`' or '"'
         label: tokens[i+1].trim().substring(1) as LabelName // remove '*'
       })
     }
@@ -83,7 +84,7 @@ const ChoicesLayer = () => {
       <div className="choices-container">
         {choices.map((choice: Choice, i:any) =>
           <button key={i} className="choice" onClick={()=> handleSelect(choice)}>
-            {choice.str}
+            <Bbcode text={choice.str}/>
           </button>
         )}
       </div>
