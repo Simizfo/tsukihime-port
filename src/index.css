@@ -45,7 +45,6 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #0586b9;
   text-decoration: underline;
 }
 
@@ -62,6 +61,7 @@ h1 {
 
 button {
   all: unset;
+  user-select: none;
 }
 button:hover {
   cursor: pointer;
