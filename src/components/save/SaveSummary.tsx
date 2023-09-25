@@ -2,7 +2,7 @@ import { Fragment, memo } from "react"
 import { PageContent } from "../../types"
 import { SaveState } from "../../utils/savestates"
 import { getSceneTitle } from "../../utils/scriptUtils"
-import { phaseDay, phaseTitle } from "../SavesLayout"
+import { savePhaseTexts } from "../SavesLayout"
 
 const SaveSummary = memo(({saveState}: {saveState: SaveState})=> {
   const page = saveState.page
@@ -32,10 +32,10 @@ const SaveSummary = memo(({saveState}: {saveState: SaveState})=> {
       )
 
     case "phase" :
-      const day = phaseDay(saveState)
+      const [title, day] = savePhaseTexts(saveState)
       return (
         <>
-          {phaseTitle(saveState)}
+          {title}
           {day && <>, {day}</>}
         </>
       )

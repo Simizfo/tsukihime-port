@@ -97,7 +97,7 @@ const [gameContext, resetContext, defaultGameContext] = resettable(deepFreeze({
   phase: {
     route: "" as RouteName|"",
     routeDay: "" as RouteDayName|"",
-    day: 0,
+    day: 0 as number|RouteDayName<'others'>,
     bg: ""
   },
 //_______________________________audio, graphics________________________________
@@ -201,11 +201,12 @@ const phaseProxy = new Proxy({}, {
     switch(varName) {
       case "phasebg" : return `"${bg}"`
       case "phasetitle_a" :
-        return day > 0 ? `"a;image\\word\\p${route}_${routeDay}.jpg"`
-                       : `"a;image\\bg\\ima_10.jpg"`
+        return route != "" ? `"a;image\\word\\p${route}_${routeDay}.jpg"`
+                           : `"a;image\\bg\\ima_10.jpg"`
       case "phasetitle_b" :
-        return day > 0 ? `"a;image\\word\\day_${day.toString().padStart(2, "0")}.png`
-                       : `"a;image\\word\\${routeDay}.jpg`
+        return day.constructor == Number ?
+              `"a;image\\word\\day_${day.toString().padStart(2, "0")}.png`
+            : `"a;image\\word\\${day}.jpg`
     }
   },
   set (_, varName: `phase${`title_${'a'|'b'}`|'bg'}`, value: string) {
@@ -224,9 +225,7 @@ const phaseProxy = new Proxy({}, {
         const {day = "", scene = ""} = parseTitleB(value.toLowerCase())
         if (!day && !scene)
           throw Error(`Cannot parse ${varName} ${value}`)
-        gameContext.phase.day = parseInt(day) || 0
-        if (scene)
-          gameContext.phase.routeDay = scene as RouteDayName
+        gameContext.phase.day = parseInt(day) || scene as RouteDayName<'others'>
         return true
       default :
         return false

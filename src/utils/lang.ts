@@ -160,24 +160,29 @@ export function credits() : [string, number][] {
 }
 
 /**
- * Get the phase title from the route and the day, and converts it to a
- * JSX component to be used in the graphics.
- * @param route 
- * @param routeDay 
- * @returns the JSX component made for the phase title
+ * Get the phase title and subtitle texts.
+ * @param route current route
+ * @param routeDay section of the route
+ * @param day day number, or special section
+ * @returns an array of two elements where the first element is the text
+ *          for the title, and the second element is the text for the subtitle
  */
-export function phaseTitle(route: RouteName, routeDay: RouteDayName) {
-  return bb(strings.scenario.routes[route][routeDay])
-}
-
-/**
- * Get the day string, and converts it to a JSX component to be used
- * in the graphics.
- * @param day 
- * @returns the JSX component for the day
- */
-export function dayTitle(day: number) {
-  return day > 0 ? bb(strings.scenario.days[day-1]) : ""
+export function phaseTexts(route: RouteName|"", routeDay: RouteDayName|"", day: RouteDayName<'others'>|number): [string, string] {
+  if (route == "") { // this case should never happen
+    if (routeDay == "" && day == 0)
+      return ["", ""]
+    else
+      route = 'others'
+  }
+  if (route == 'others' && routeDay == "") {
+    routeDay = day as RouteDayName
+    day = 0
+  }
+  const titleString = strings.scenario.routes[route][routeDay as RouteDayName]
+  const dayString = day.constructor == String ? strings.scenario.routes['others'][day]
+                  : (day as number) > 0 ? strings.scenario.days[(day as number)-1]
+                  : ""
+  return [titleString, dayString]
 }
 
 //________________________________languages list________________________________
@@ -216,7 +221,7 @@ export function deleteLang(id: LangCode) {
 //##############################################################################
 
 addEventListener("load", async ()=> { // update in "load" event to avoid circular dependencies
-  console.log("registering language settings observer")
+  console.debug("registering language settings observer")
   const ok = await getLanguagesList()
   if (!ok)
     return
@@ -230,7 +235,7 @@ addEventListener("load", async ()=> { // update in "load" event to avoid circula
 async function loadStrings(language: LangCode): Promise<LangFile|undefined> {
   const {"lang-file": url, fallback} = languages[language] ?? languages[defaultSettings.language]
   
-  console.log(language, url, fallback)
+  console.debug(language, url, fallback)
 
   let strings = fallback ? await loadStrings(fallback)
               : deepAssign({}, defaultStrings) as LangFile
@@ -238,11 +243,11 @@ async function loadStrings(language: LangCode): Promise<LangFile|undefined> {
     return undefined
 
   const localFile = localStorage.getItem(`lang_${language}`)
-  console.log(localFile)
+  console.debug(localFile)
   const json = localFile ? JSON.parse(localFile) as Partial<LangFile>
       : url ? await fetch(url.indexOf(':') >= 0 ? url : `${LANG_DIR}${url}`).then(
         (response)=> {
-          console.log(response)
+          console.debug(response)
           if (response.ok) {
             return response.json()
           } else {
@@ -251,7 +256,7 @@ async function loadStrings(language: LangCode): Promise<LangFile|undefined> {
           }
         })
       : undefined
-  console.log(json)
+  console.debug(json)
   if (json) {
     deepAssign(strings, json)
   }
@@ -264,7 +269,7 @@ async function updateStrings() {
     console.error(`unknwon language ${lang}. Reverting to default.`)
     settings.language = lang = defaultSettings.language
   }
-  console.log(`loading strings for ${settings.language}`)
+  console.debug(`loading strings for ${settings.language}`)
   const strs  = await loadStrings(settings.language)
   if (strs && lang == settings.language) {
     const {images: imgs, ..._strings} = strs as LangFile;

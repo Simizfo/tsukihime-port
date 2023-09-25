@@ -5,8 +5,8 @@ import { SaveState, loadSaveState } from "../utils/savestates";
 import { useObserved, } from '../utils/Observer';
 import history from '../utils/history';
 import script from '../utils/script';
-import { strings, dayTitle, phaseTitle } from '../utils/lang';
-import { PageContent, RouteDayName } from '../types';
+import { strings, phaseTexts } from '../utils/lang';
+import { PageContent } from '../types';
 import { getSceneTitle } from '../utils/scriptUtils';
 import { Bbcode, bb } from '../utils/Bbcode';
 
@@ -44,13 +44,14 @@ const PageElement = memo(({saveState, onLoad}: {saveState: SaveState, onLoad: (s
       break
     case "phase" :
       const {route, routeDay, day} = saveState.context.phase ?? {}
+      const [phaseTitle, phaseDay] = phaseTexts(route ?? "", routeDay ?? "", day ?? 0)
       displayContent = <span className='phase'>
-        {route && phaseTitle(route, routeDay as RouteDayName)}
-        {!!(day) && <><br/>{dayTitle(day)}</>}
+        {phaseTitle && bb(phaseTitle)}
+        {phaseDay && <><br/>{bb(phaseDay)}</>}
       </span>
       break
     default :
-      throw Error(`Unknown pgae type ${contentType}`)
+      throw Error(`Unknown page type ${contentType}`)
   }
   return (
   <>

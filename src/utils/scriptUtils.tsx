@@ -56,13 +56,14 @@ async function fetchBlock(label: string): Promise<string[]> {
   if (start == -1)
     return [];
   start = script.indexOf('\n', start + 1) + 1;
-
-  let end = script.substring(start).search(/^\*(?!skip)/m);
+  
+  let endRegexp = new RegExp(`^\\*(?!skip)(?!${label}_\\d)`, 'm')
+  let end = script.substring(start).search(endRegexp);
   end = (end == -1) ? script.length : start + end;
 
   return script.substring(start, end)
     .split(/\r?\n/)
-    .filter(line => line.length > 0);
+    .filter(line => line.length > 0 && !line.startsWith('*'));
 }
 const ignoredFBlockLines = [
   "gosub *regard_update",

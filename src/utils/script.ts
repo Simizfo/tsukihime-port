@@ -1,7 +1,7 @@
 import { commands as choiceCommands } from "../layers/ChoicesLayer"
 import { commands as graphicCommands } from "../layers/GraphicsLayer"
 import { commands as textCommands } from "../layers/TextLayer"
-import { LabelName, SceneName } from "../types"
+import { LabelName, RouteDayName, SceneName } from "../types"
 import { commands as audioCommands } from "./AudioManager"
 import { isObserverNotifyPending, observe } from "./Observer"
 import history from "./history"
@@ -11,7 +11,7 @@ import { checkIfCondition, extractInstructions, fetchFBlock, fetchScene, getScen
 import { commands as variableCommands, gameContext, settings } from "./variables"
 import { toast } from "react-toastify"
 import { SCREEN, displayMode } from "./display"
-import strings from "./lang"
+import strings, { phaseTexts } from "./lang"
 import { closeBB } from "./Bbcode"
 
 type Instruction = {cmd: string, arg: string}
@@ -110,17 +110,14 @@ function processPhase(dir: "l"|"r") {
   const [hAlign, vAlign, invDir] =
       (dir == "l") ? ["[left]", "t", "r"]
                    : ["[right]", "b", "l"]
-  const title = (route && routeDay) ?
-      closeBB(strings.scenario.routes[route][routeDay])
-      : ""
+  let [title, dayStr] = phaseTexts(route, routeDay, day).map(closeBB)
   
   let texts
   const common = `bg ${bg}$${vAlign}\`${hAlign}${title}`
-  if (day) {
-    const dayStr = `[size=80%]${closeBB(strings.scenario.days[day-1])}`
+  if (dayStr) {
     texts = [
-      `${common}\n[hide]${dayStr}\`,%type_${invDir}cartain_fst`,
-      `${common}\n${dayStr}\`,%type_crossfade_fst`,
+      `${common}\n[hide][size=80%]${dayStr}\`,%type_${invDir}cartain_fst`,
+      `${common}\n[size=80%]${dayStr}\`,%type_crossfade_fst`,
     ]
   } else {
     texts = [

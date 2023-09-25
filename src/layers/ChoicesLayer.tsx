@@ -34,7 +34,7 @@ export const commands = {
       console.error("no choice after scene", gameContext.label)
     choicesContainer.choices = choices
     displayMode.choice = true;
-    console.log(choices)
+    console.debug(choices)
     history.onPageBreak("choice", choices)
     return {
       next: ()=>{}, // prevent continuing to next instruction
@@ -71,7 +71,7 @@ const ChoicesLayer = () => {
   */
 
   const handleSelect = (choice: Choice) => {
-    console.log(choice)
+    console.debug(choice)
     const lastPage = history.last?.page
     if (lastPage?.contentType == "choice")
       (lastPage as PageContent<"choice">).selected = choice.index

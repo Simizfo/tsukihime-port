@@ -6,7 +6,7 @@ import { SAVE_EXT } from "../utils/constants"
 import { SaveState, QUICK_SAVE_ID, deleteSaveState, getSaveState, listSaveStates, loadSaveState, storeCurrentState, addSavesChangeListener, removeSavesChangeListener, exportSave, loadSaveFiles } from "../utils/savestates"
 import { getSceneTitle } from "../utils/scriptUtils"
 import { BsFileEarmarkArrowUp, BsPlusCircle } from "react-icons/bs"
-import strings from "../utils/lang"
+import strings, { phaseTexts } from "../utils/lang"
 import SaveListItem from "./save/SaveListItem"
 import SaveDetails from "./save/SaveDetails"
 
@@ -21,18 +21,10 @@ function compareSaveStates([id1, ss1]: [number, SaveState], [id2, ss2]: [number,
       : (ss2.date ?? 0) - (ss1.date ?? 0)
 }
 
-export function phaseTitle(saveState: SaveState) {
+export function savePhaseTexts(saveState: SaveState) {
   const context = saveState.context
-  const phase = context.phase
-  if (!phase || !phase.route || !phase.routeDay) {
-    return bb(getSceneTitle(context.label as SceneName) ?? "")
-  }
-  return noBb(strings.scenario.routes[phase.route][phase.routeDay])
-}
-
-export function phaseDay(saveState: SaveState) {
-  const day = saveState.context.phase?.day
-  return day ? noBb(strings.scenario.days[day-1]) : ""
+  const {route, routeDay, day} = context.phase || {}
+  return phaseTexts(route ?? "", routeDay ?? "", day ?? 0).map(noBb)
 }
 
 
@@ -62,7 +54,7 @@ const SavesLayer = ({variant, back}: Props) => {
   }
 
   function importSaves(event: ChangeEvent|MouseEvent) {
-    console.log("import saves from file")
+    console.debug("import saves from file")
     loadSaveFiles((event.target as HTMLInputElement)?.files, event.type == "contextmenu")
   }
 

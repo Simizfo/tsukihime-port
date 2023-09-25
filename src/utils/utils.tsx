@@ -352,9 +352,9 @@ export function useTraceUpdate(before: string, props: Record<string, any>) {
       return ps;
     }, {} as Record<string, any>);
     if (Object.keys(changedProps).length > 0) {
-      console.log(before, 'Changed props:', changedProps);
-    } else {
-      console.log(before, 'No changed props');
+        console.debug(before, 'Changed props:', changedProps);
+      } else {
+      console.debug(before, 'No changed props');
     }
     prev.current = props;
   });

@@ -1,7 +1,7 @@
 import { Tooltip } from "react-tooltip"
 import { SaveState, exportSave } from "../../utils/savestates"
 import { graphicElements } from "../GraphicsComponent"
-import { phaseDay, phaseTitle } from "../SavesLayout"
+import { savePhaseTexts } from "../SavesLayout"
 import { settings } from "../../utils/variables"
 import { BsDownload, BsTrash } from "react-icons/bs"
 
@@ -10,6 +10,7 @@ type SaveDetailsProps = {
   [key:string]: any
 }
 const SaveDetails = ({id, saveState, deleteSave, ...props}: SaveDetailsProps)=> {
+  const [phaseTitle, phaseDay] = saveState ? savePhaseTexts(saveState) : ["", ""]
   return (
     <div className="info" {...props}>
       <div className="graphics">
@@ -18,8 +19,8 @@ const SaveDetails = ({id, saveState, deleteSave, ...props}: SaveDetailsProps)=> 
       
       {id != undefined && saveState != undefined &&
         <div className="deta">
-          <div>{phaseTitle(saveState)}</div>
-          <div>{phaseDay(saveState)}</div>
+          {phaseTitle && <div>{phaseTitle}</div>}
+          {phaseDay && <div>{phaseDay}</div>}
 
           <div className="actions">
             <Tooltip id="tooltip" className="tooltip" delayShow={800} />
