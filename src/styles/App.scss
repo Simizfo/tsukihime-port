@@ -101,13 +101,13 @@ main {
 .modal {
     background-color: rgb(21 0 91);
     flex: 1;
-    max-width: 800px;
+    max-width: 840px;
     width: 100%;
     align-self: center;
     border-radius: 12px;
-    min-height: min(100%, 50vh);
+    min-height: min(100%, 56vh);
     margin: .5rem;
-    box-shadow: 0 5px 26px #030a32;
+    box-shadow: 0 0px 8px #033232;
     padding: 1em;
     border: 1px solid #00628b;
 
@@ -121,11 +121,9 @@ main {
     opacity: 0;
     transition: opacity 200ms ease-in-out;
 }
-
 .ReactModal__Overlay--after-open{
     opacity: 1;
 }
-
 .ReactModal__Overlay--before-close{
     opacity: 0;
 }
