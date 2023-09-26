@@ -91,7 +91,7 @@ const TitleMenuScreen = () => {
               {bb(strings.title.about.project
                 .replace('$0', "[url='https://github.com/requinDr/tsukihime-port']")
                 .replace('$1', "[/url]"))} <br/>
-              v{APP_VERSION}
+              <code>v{APP_VERSION}</code>
             </div>
 
             <div>
