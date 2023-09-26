@@ -14,12 +14,26 @@
         justify-content: center;
         flex: 8;
         min-height: 0;
+        position: relative;
+
+        .moon {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background-size: contain;
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0 0 0 / 1%), rgb(0 0 0 / 20%));
+            -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0 0 0 / 1%), rgb(0 0 0 / 20%));
+            filter: drop-shadow(0 0 12px rgb(228, 255, 255));
+        }
 
         img {
             height: 100%;
             width: min(94%, 400px);
             object-fit: contain;
-            filter: drop-shadow(0 0 8em rgb(10, 164, 171));
         }
     }
 
@@ -66,13 +80,13 @@
         flex: 1;
         margin-bottom: 2em;
         width: min(800px, 100%);
-        font-size: 1.3em;
+        font-size: 1.4em;
 
         .first-row, .second-row {
             display: flex;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             flex-direction: row;
             row-gap: .4em;
             column-gap: 2em;

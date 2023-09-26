@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import tsukiLogo from "../assets/images/tsukihime-logo.webp"
+import moon from "../assets/images/moon.webp"
 import tsukiR from "../assets/images/tsukihime_blue_glass_cover.webp"
 import { HiOutlineInformationCircle } from 'react-icons/hi'
 import '../styles/title-menu.scss'
@@ -120,6 +121,7 @@ const TitleMenuScreen = () => {
       </Modal>
 
       <div className="logo">
+        <img src={moon} alt="moon" draggable={false} className='moon' />
         <motion.img src={tsukiLogo} alt="tsukihime logo" draggable={false}
           initial={{ opacity: 0, scale: 0.6 }}
           animate={{ opacity: 1, scale: 1 }}
