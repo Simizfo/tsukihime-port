@@ -6,8 +6,8 @@ import Timer from "./timer"
 
 type TagTranslator<T=string|undefined> = (tag: string, content: Array<string|JSX.Element>, arg: T, props?: Record<string, any>)=> JSX.Element
 
-//[/?<tag>=<arg>/?] not preceded by a '\'
-const bbcodeTagRegex = /(^|[^\\])\[(?<tag>\/?\w*)(=(?<arg>([^\/\]]|\/(?!\]))+))?(?<leaf>\/)?\]/g
+//[/?<tag>(=<arg>)?/?]
+const bbcodeTagRegex = /\[(?<tag>\/?\w*)(=(?<arg>([^\/\]]|\/(?!\]))+))?(?<leaf>\/)?\]/g
 
 //##############################################################################
 //#                             BBCODE TAG TO JSX                              #
