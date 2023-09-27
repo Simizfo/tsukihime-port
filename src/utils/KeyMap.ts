@@ -30,8 +30,13 @@ export default class KeyMap {
   private callback: KeyMapCallback|null
   private keyListener: EventListener
 
-  static get condition(): string { return "condition function to trigger action" }
-  static get args(): string { return "additional parameters on callback" }
+  static get condition() {
+    return Symbol.for("condition function to trigger action")
+  }
+
+  static get args() {
+    return Symbol.for("additional parameters on callback")
+  }
 
 
   constructor(mapping: KeyMapMapping|null = null, callback: KeyMapCallback|null = null) {
