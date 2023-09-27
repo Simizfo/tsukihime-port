@@ -9,7 +9,8 @@ const ConfigAudioTab = () => {
   useLanguageRefresh()
   const [conf, setConf] = useState(deepAssign({
     volume: undefined,
-    trackFormat: undefined
+    trackFormat: undefined,
+    autoMute: undefined
   }, settings, {extend: false}))
 
   useEffect(()=> {
@@ -71,6 +72,18 @@ const ConfigAudioTab = () => {
           { text: strings.config["track-source-tsukibako"], value: "CD_tsukibako/track$.ogg" }
         ]}
         property="trackFormat"
+        conf={conf}
+        updateValue={updateValue}
+      />
+
+      
+      <ConfigButtons
+        title={strings.config['auto-mute']}
+        btns={[
+          { text: strings.config.on, value: true },
+          { text: strings.config.off, value: false },
+        ]}
+        property="autoMute"
         conf={conf}
         updateValue={updateValue}
       />

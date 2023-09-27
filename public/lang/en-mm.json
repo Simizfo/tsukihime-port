@@ -156,6 +156,7 @@
     "track-source-original": "Original (2000)",
     "track-source-everafter": "Ever After (2002)",
     "track-source-tsukibako": "Tsuki-Bako (2003)",
+    "auto-mute": "Mute when switching tab (experimental)",
     "ratio": "Display ratio",
     "ratio-auto": "Auto",
     "ratio-4-3": "4:3",

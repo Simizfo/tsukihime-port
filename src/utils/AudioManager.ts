@@ -345,11 +345,26 @@ observe(displayMode, 'screen', (screen)=> {
     const {track, looped_se} = gameContext.audio
     playTrack(track)
     loopSE(looped_se)
+    // audio.masterVolume = settingToGain(settings.volume.master)
   } else {
     playTrack('')
     loopSE('')
+    // audio.masterVolume = 0
   }
+  // uncomment masterVolume changes if game sound keeps playing on title menu
 })
+
+function muteOnTabSwitch() {
+  if (document.visibilityState == "hidden") {
+    if (settings.autoMute)
+      audio.masterVolume = 0
+  }
+  else if (displayMode.screen == SCREEN.WINDOW) {
+    audio.masterVolume = settingToGain(settings.volume.master)
+  }
+}
+
+document.addEventListener("visibilitychange", muteOnTabSwitch)
 
 function settingToGain(value: number) {
   if (value <= 0)
