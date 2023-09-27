@@ -24,6 +24,9 @@ class AudioManager {
   private trackNode: AudioBufferSourceNode|null;
   private seNode: AudioBufferSourceNode|null;
 
+  private currentTrack: string|undefined;
+  private currentSE: string|undefined;
+
   /**
    * Maps track names and effect names to their audio buffers and paths.
    * Audio buffers are loaded the first time they are used.
@@ -39,6 +42,8 @@ class AudioManager {
 
     this.trackNode = null;
     this.seNode = null;
+    this.currentTrack = undefined;
+    this.currentSE = undefined;
   }
 
   private buildNodes() {
@@ -157,15 +162,22 @@ class AudioManager {
     if (this.trackNode) {
       this.trackNode.stop();
       this.trackNode.disconnect();
+      this.trackNode = null;
     }
-    this.trackNode = await this.createABSource(name, loop);
-    this.trackNode.connect(this.trackGainNode);
-    this.context.resume();
-    this.trackNode.start();
-    this.trackNode.onended = ()=> {
-      if (this.trackNode) {
-        this.trackNode.disconnect();
-        this.trackNode = null;
+    this.currentTrack = name
+    const source = await this.createABSource(name, loop);
+    if (this.currentTrack == name) { // if track has no been changed while the source was loading
+      this.trackNode = source;
+      this.trackNode.connect(this.trackGainNode);
+      this.context.resume();
+      this.trackNode.start();
+      this.trackNode.onended = ()=> {
+        if (this.trackNode == source) { // if node has not been replaced
+          this.trackNode.disconnect();
+          this.trackNode = null;
+          if (this.currentTrack == name)
+            this.currentTrack = undefined;
+        }
       }
     }
   }
@@ -201,16 +213,23 @@ class AudioManager {
     if (this.seNode) {
       this.seNode.stop();
       this.seNode.disconnect();
+      this.seNode = null;
     }
-    this.seNode = await this.createABSource(name, loop);
-    this.seNode.connect(this.seGainNode);
+    this.currentSE = name
+    const source = await this.createABSource(name, loop);
+    if (name == this.currentSE) {
+      this.seNode = source;
+      this.seNode.connect(this.seGainNode);
 
-    this.context.resume();
-    this.seNode.start();
-    this.seNode.onended = ()=> {
-      if (this.seNode) {
-        this.seNode.disconnect();
-        this.seNode = null;
+      this.context.resume();
+      this.seNode.start();
+      this.seNode.onended = ()=> {
+        if (this.seNode == source) {
+          this.seNode.disconnect();
+          this.seNode = null;
+          if (this.currentSE == name)
+            this.currentSE = undefined;
+        }
       }
     }
   }
@@ -359,3 +378,9 @@ export const commands = {
   'waveloop': (arg: string)=>{ gameContext.audio.looped_se = arg },
   'wavestop': ()=>           { gameContext.audio.looped_se = "" },
 }
+
+//##############################################################################
+//#                                   DEBUG                                    #
+//##############################################################################
+
+window.audio = audio
