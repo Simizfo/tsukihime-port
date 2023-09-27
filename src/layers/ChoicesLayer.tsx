@@ -22,7 +22,7 @@ observe(displayMode, 'screen', resetChoices, {filter: s => s != SCREEN.WINDOW})
 export const commands = {
   'select': (arg: string)=> {
     const choices: Choice[] = []
-    const tokens = arg.split(/[`"],|(?<=\*\w+),/)
+    const tokens = arg.split(/([`",]|^)(\*\w+),/)
     for (let i = 0; i < tokens.length; i+= 2) {
       choices.push({
         index: i,
