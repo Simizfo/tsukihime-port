@@ -1,6 +1,7 @@
 import { SceneName } from "../types";
 import { SCENE_ATTRS } from "./constants";
 import strings, { credits, waitLanguageLoad } from "./lang";
+import { subTextCount } from "./utils";
 import { getGameVariable } from "./variables";
 
 //##############################################################################
@@ -229,6 +230,14 @@ export function extractInstructions(line: string) {
   } else if (line.startsWith('!')) {
     instructions.push(...splitText(line)) // '!w' are handled as inline commands
   } else {
+    //remove comments (text after ';' outside "")
+    let commentIdx = -1
+    do {
+      commentIdx = line.indexOf(';', commentIdx+1)
+    } while (commentIdx >= 0 && subTextCount(line.substring(0, commentIdx), '"') % 2 == 1)
+    if (commentIdx >= 0)
+      line = line.substring(0, commentIdx)
+
     let index = line.search(/\s|$/)
     instructions.push({
       cmd: line.substring(0,index),

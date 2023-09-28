@@ -197,6 +197,21 @@ export function splitLast(text: string, sep: string, position=text.length) : [st
     return [text, null]
 }
 
+export function subTextCount(full: string, sub: string) : number {
+    if (sub.length <= 0) return (full.length + 1)
+    const step = sub.length
+    let n = 0, pos = 0
+
+    do {
+        pos = full.indexOf(sub, pos)
+        if (pos < 0)
+          break
+        n++
+        pos += step
+    } while (true);
+    return n;
+}
+
 //##############################################################################
 //#                                   OTHERS                                   #
 //##############################################################################

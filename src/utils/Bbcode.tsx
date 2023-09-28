@@ -6,8 +6,8 @@ import Timer from "./timer"
 
 type TagTranslator<T=string|undefined> = (tag: string, content: Array<string|JSX.Element>, arg: T, props?: Record<string, any>)=> JSX.Element
 
-//[/?<tag>=<arg>/?] not preceded by a '\'
-const bbcodeTagRegex = /(?<!\\)\[(?<tag>\/?\w*)(=(?<arg>([^\/\]]|\/(?!\]))+))?(?<leaf>\/)?\]/g
+//[/?<tag>(=<arg>)?/?]
+const bbcodeTagRegex = /\[(?<tag>\/?\w*)(=(?<arg>([^\/\]]|\/(?!\]))+))?(?<leaf>\/)?\]/g
 
 //##############################################################################
 //#                             BBCODE TAG TO JSX                              #
@@ -153,7 +153,7 @@ function createTree(text: string): BbNode {
  * @returns the input text with all bbcode tags closed
  */
 export function closeBB(text: string): string {
-  const openCount = Array.from(text.matchAll(/\[[^\]]*(?<!\/)\]/g)).length
+  const openCount = Array.from(text.matchAll(/\[([^\]]*(?:\[\/[^\]]*\])?[^\/\]]*)\]/g)).length
   const closeCount = Array.from(text.matchAll(/\[\/[^\]]*\]/g)).length
   if (openCount == closeCount)
     return text

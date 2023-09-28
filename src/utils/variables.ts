@@ -37,6 +37,7 @@ export const defaultSettings = deepFreeze({
     se: 10,
   },
   trackFormat: "CD_everafter/track$.mp3",
+  autoMute: true,
   // saved progress
   eventImages: new Array<string>(),
   completedScenes: new Array<string>(),
