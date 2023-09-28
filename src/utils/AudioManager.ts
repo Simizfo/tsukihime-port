@@ -166,7 +166,9 @@ class AudioManager {
     }
     this.currentTrack = name
     const source = await this.createABSource(name, loop);
-    if (this.currentTrack == name) { // if track has no been changed while the source was loading
+    if (this.currentTrack == name) { // if track has not been changed while the source was loading
+      if (this.trackNode)
+        return // the track was loaded twice
       this.trackNode = source;
       this.trackNode.connect(this.trackGainNode);
       this.context.resume();
@@ -218,6 +220,8 @@ class AudioManager {
     this.currentSE = name
     const source = await this.createABSource(name, loop);
     if (name == this.currentSE) {
+      if (this.seNode)
+        return // the se was loaded twice
       this.seNode = source;
       this.seNode.connect(this.seGainNode);
 
