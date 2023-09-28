@@ -154,15 +154,15 @@ const endingsProxy = new Proxy({}, {
     if (Object.hasOwn(endings, name))
       return (endings[name as keyof typeof endings]).seen ? 1 : 0
     switch(name) {
-      case "ark" : return (endings.ark_good ? 0 : 1)
-                        + (endings.ark_true ? 0 : 1)
-      case "ciel" : return (endings.ciel_good ? 0 : 1)
-                         + (endings.ciel_true ? 0 : 1)
-      case "akiha" : return (endings.akiha_good ? 0 : 1)
-                          + (endings.akiha_true ? 0 : 1)
-      case "hisui" : return (endings.hisui_good ? 0 : 1)
-                          + (endings.hisui_true ? 0 : 1)
-      case "kohaku" : return (endings.kohaku_true ? 0 : 1)
+      case "ark"    : return (endings.ark_good.seen ? 1 : 0)
+                           + (endings.ark_true.seen ? 1 : 0)
+      case "ciel"   : return (endings.ciel_good.seen ? 1 : 0)
+                           + (endings.ciel_true.seen ? 1 : 0)
+      case "akiha"  : return (endings.akiha_good.seen ? 1 : 0)
+                           + (endings.akiha_true.seen ? 1 : 0)
+      case "hisui"  : return (endings.hisui_good.seen ? 1 : 0)
+                           + (endings.hisui_true.seen ? 1 : 0)
+      case "kohaku" : return (endings.kohaku_true.seen ? 1 : 0)
       case "cleared" : return endingsProxy.ark + endingsProxy.ciel +
           endingsProxy.akiha + endingsProxy.hisui + endingsProxy.kohaku
     }
