@@ -20,7 +20,7 @@ export type KeymapKeyFilter = ({
 } | {
     key: string
 }) & {
-  [KeyMap.condition]?: (action: any, event: KeyboardEvent) => boolean,
+  [KeyMap.condition]?: KeyMapCondition
   [KeyMap.args]?: any|Array<any>
   [key: string]: any // other parameters to filter keyboard events (repeat, ctrlKey, etc)
 }
@@ -30,14 +30,8 @@ export default class KeyMap {
   private callback: KeyMapCallback|null
   private keyListener: EventListener
 
-  static get condition() {
-    return Symbol.for("condition function to trigger action")
-  }
-
-  static get args() {
-    return Symbol.for("additional parameters on callback")
-  }
-
+  static readonly condition: unique symbol = Symbol("condition function to trigger action");
+  static readonly args: unique symbol = Symbol("additional parameters on callback");
 
   constructor(mapping: KeyMapMapping|null = null, callback: KeyMapCallback|null = null) {
     this.mapping = new Map()
