@@ -14,7 +14,6 @@ import Modal from 'react-modal';
 import { APP_VERSION } from '../utils/constants'
 import strings, { useLanguageRefresh } from '../utils/lang'
 import { bb } from '../utils/Bbcode'
-import { RxExternalLink } from 'react-icons/rx'
 import { useObserved } from '../utils/Observer'
 
 const pwaIcon = "icons/icon_128.webp"
@@ -121,13 +120,22 @@ const TitleMenuScreen = () => {
       </Modal>
 
       <div className="logo">
-        <img src={moon} alt="moon" draggable={false} className='moon' />
-        <motion.img src={tsukiLogo} alt="tsukihime logo" draggable={false}
-          initial={{ opacity: 0, scale: 0.6 }}
+        <motion.img src={moon} alt="moon" draggable={false} className='moon'
+          initial={{ left: "46%", opacity: 0.8}}
+          animate={{ left: "50%", opacity: 0.2, WebkitMaskPosition: [100, 0] }}
+          transition={{
+            delay: 0,
+            duration: 0,
+          }} />
+        <motion.img
+          src={tsukiLogo} alt="tsukihime logo"
+          draggable={false}
+          className='tsuki-logo'
+          initial={{ opacity: 0, scale: 0.7 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
+            delay: 0.4,
             duration: 0.8,
-            ease: [0, 0.71, 0.2, 1.01]
           }} />
       </div>
 

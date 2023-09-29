@@ -17,22 +17,31 @@
         position: relative;
 
         .moon {
-            content: "";
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 600px;
-            height: 600px;
-            mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0 0 0 / 1%), rgb(0 0 0 / 20%));
-            -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0 0 0 / 1%), rgb(0 0 0 / 20%));
-            filter: drop-shadow(0 0 12px rgb(228, 255, 255));
+            width: min(600px, 70vmax);
+            height: min(600px, 70vmax);
+            filter: drop-shadow(0 0 12px rgb(228,255,255));
+            -webkit-mask-image: radial-gradient(ellipse 100% 100% at 70% 60%, rgba(0, 0, 0, 0.6) 30%, transparent 45%);
+            mask-image: radial-gradient(ellipse 100% 100% at 70% 60%, rgba(0, 0, 0, 0.6) 30%, transparent 45%);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: 400px 140px;
+            mask-position: 400px 140px;
+            opacity: 0.4;
+            transition: all 1.6s;
+            transition-timing-function: cubic-bezier(0.25, 0.1, 0.16, 1.0);
         }
 
         img {
             height: 100%;
             width: min(94%, 400px);
             object-fit: contain;
+        }
+        .tsuki-logo {
+            z-index: 1;
         }
     }
 
