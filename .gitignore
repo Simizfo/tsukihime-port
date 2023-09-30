@@ -25,5 +25,4 @@ release
 *.sw?
 public/CD/desktop.ini
 script-convert/*
-public/CD/*
 public/.htaccess
