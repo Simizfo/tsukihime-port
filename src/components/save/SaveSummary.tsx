@@ -3,13 +3,14 @@ import { PageContent } from "../../types"
 import { SaveState } from "../../utils/savestates"
 import { getSceneTitle } from "../../utils/scriptUtils"
 import { savePhaseTexts } from "../SavesLayout"
+import { noBb } from "../../utils/Bbcode"
 
 const SaveSummary = memo(({saveState}: {saveState: SaveState})=> {
   const page = saveState.page
 
   switch (page?.contentType) {
     case "text" :
-      return <>{(page as PageContent<"text">).text.trim()}</>
+      return <>{noBb((page as PageContent<"text">).text).trim()}</>
 
     case "choice" :
       const {choices, selected: sel} = page as PageContent<"choice">
