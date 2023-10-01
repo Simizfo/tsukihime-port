@@ -65,7 +65,7 @@ br
 bg "image\bg\bg_40c.jpg",%type_lshutter_mid
 ld c,":a;image\tachi\his_t01.jpg",%type_crossfade_fst
 
-`"Do you have any other questions?@
+`"Do you have any other questions?"@
 ` Hisui finishes spreading the sheets, and turns around to face me.@
 `"Eh… Let's see---"@
 ` I have all sorts of questions, but I know nothing about Hisui and Kohaku-san.\
