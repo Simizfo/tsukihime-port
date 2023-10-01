@@ -135,11 +135,13 @@
       "data": "No data collected, everything is stored in your browser. Manage your data $0here$1.",
       "remake": "Support by buying the remake $0Tsukihime - A piece of blue glass moon$1.",
       "close": "close"
-    }
+    },
+    "install": "Install"
   },
   "extra": {
     "gallery": "Gallery",
-    "endings": "Endings"
+    "endings": "Endings",
+    "scenes": "Scenes"
   },
   "config": {
     "on": "On",
