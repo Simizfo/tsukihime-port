@@ -1,9 +1,15 @@
 # Web port of Tsukihime
 
 ## Installation
-1) Install project dependencies with `npm i` (Vite requires node `14.18+`)
-2) Start the localhost with `npm start`
-3) Open your browser at the localhost address
+You can play the latest realease online here: [https://holofield.fr/tsukiweb](https://holofield.fr/tsukiweb).
+
+The Progressive Web App (PWA) can be installed from the title screen using chromium-based browsers (_e.g._, chrome, edge, opera).
+
+To download the source code and run the game locally, follow the steps below:
+1) install [`node.js`](https://nodejs.org/en/download) (version `14.18` or later is required)
+2) Install project dependencies with `npm i`
+3) Start the localhost with `npm start`
+4) Open your browser at the localhost address specified in the output of the previous command
 
 ## Roadmap
 A roadmap is available here https://github.com/requinDr/tsukihime-port/wiki  
