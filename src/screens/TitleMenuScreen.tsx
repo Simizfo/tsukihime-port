@@ -173,7 +173,7 @@ const TitleMenuScreen = () => {
             {strings.extra.endings}
           </Link>
           <Link to="#" className="menu-item disabled" aria-disabled>
-            Scenes
+            {strings.extra.scenes}
           </Link>
         </div>
         }
@@ -190,7 +190,7 @@ const TitleMenuScreen = () => {
             delay: 0.8,
             duration: 1,
           }} >
-          <span>Install</span>
+          <span>{strings.title.install}</span>
           <img src={pwaIcon} alt="PWA icon" draggable={false}/>
         </motion.button>
       }
