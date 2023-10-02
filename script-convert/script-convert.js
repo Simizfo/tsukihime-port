@@ -77,6 +77,32 @@ function replacePipeByEllipsis(scriptLines) {
     return scriptLines
 }
 
+function fixSpecialCharacters(scriptLines) {
+    for (let [i, line] of scriptLines.entries()) {
+        if (line.startsWith('`')) {
+            line = line.replaceAll(']', 'à')
+            line = line.replaceAll('{', 'é')
+            line = line.replaceAll('<', 'È')
+            line = line.replaceAll('[', 'è')
+            line = line.replaceAll('+', 'ì')
+            line = line.replaceAll('}', 'ù')
+            line = line.replaceAll('#', 'ò')
+            scriptLines[i] = line
+        }
+    }
+    return scriptLines
+}
+
+function centerLines(scriptLines) {
+    for (let [i, line] of scriptLines.entries()) {
+        if (line.startsWith('`  ')) {
+            line = '`[center]' + line.substring(1).trim()
+            scriptLines[i] = line
+        }
+    }
+    return scriptLines
+}
+
 // split texts with '\' in the middle, split instructions with ':'
 const colonRegexp = /^\s?\w([^"`:]*"[^"`]*")*[^"`:]*:/
 function splitInstructions(scriptLines) {
@@ -178,8 +204,7 @@ function writeScenes(scriptLines, dir) {
 
 function main() {
     const scripts = {
-        'full-script.txt': "",
-        'full-script-kt.txt': "-kt"
+        'full-script-it.txt': ""
     }
     for (const [file, suffix] of Object.entries(scripts)) {
         const dir = `scenes${suffix}`
@@ -192,6 +217,8 @@ function main() {
         lines = extractStrAliasJson(lines, `stralias${suffix}.json`)
         lines = splitInstructions(lines)
         lines = replacePipeByEllipsis(lines)
+        lines = fixSpecialCharacters(lines)
+        lines = centerLines(lines)
         writeScenes(lines, dir)
     }
 }
