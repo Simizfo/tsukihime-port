@@ -192,7 +192,10 @@ function innerBbText(node: BbNode): string {
  * @returns the extracted text
  */
 export function noBb(text: string): string {
-  return innerBbText(createTree(text))
+  if (text)
+    return innerBbText(createTree(text))
+  else
+    return ""
 }
 
 //##############################################################################
