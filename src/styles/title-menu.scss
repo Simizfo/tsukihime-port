@@ -138,15 +138,9 @@
         }
     }
 
-    @media (((max-width: 810px) or (max-height: 400px)) and (orientation: landscape))
-        or (((max-width: 400px) or (max-height: 810px)) and (orientation: portrait)) {
-
-        @media (orientation: landscape) {
-            flex-direction: row;
-        }
-        
+    // One column, mobile portrait
+    @media (max-width: 810px) or ((max-height: 400px) and (orientation: landscape)) {
         .menu {
-            margin-bottom: 0;
             .first-row, .second-row {
                 flex-direction: column;
                 align-items: center;
@@ -161,6 +155,10 @@
                 display: none;
             }
         }
+    }
+    // Two columns, mobile landscape
+    @media ((max-width: 810px) or (max-height: 400px)) and (orientation: landscape) {
+        flex-direction: row;
         .logo {
             flex: 1;
             max-height: 85%;
@@ -168,6 +166,9 @@
             img {
                 height: auto;
             }
+        }
+        .menu {
+            margin-bottom: 0;
         }
     }
 }
