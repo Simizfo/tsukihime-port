@@ -348,7 +348,7 @@ async function fetchSceneLines() {
   let fetchedLines: string[]|undefined = undefined
   if (isScene(label))
     fetchedLines = await fetchScene(label)
-  else if (/^(f|skip)\d+a?$/.test(label))
+  else if (/^(f|skip)\d+[ab]?$/.test(label))
     fetchedLines = await fetchFBlock(label)
 
   if (fetchedLines == undefined)
