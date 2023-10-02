@@ -52,7 +52,8 @@
 .page-title {
     font-size: clamp(2.2rem, 8vmin, 3rem);
     margin-block: 0;
-    font-family: serif;
+    --font: "Ubuntu";
+    font-family: var(--font), sans-serif;
     font-weight: 700;
     background: linear-gradient(180deg, #99bccf 0%, #71c1dc 100%);
     background-clip: text;
