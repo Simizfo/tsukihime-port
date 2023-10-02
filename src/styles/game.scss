@@ -174,7 +174,9 @@
     .box-menu {
         --panel-trans-time: 0.4s;
         z-index: -1;
-        background-color: rgb(0 12 42 / 30%);
+        background-color: rgb(0 42 87 / 40%);
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
         opacity: 0;
         display: flex;
         justify-content: flex-end;
@@ -183,9 +185,7 @@
         // when hiding, wait before starting the transition
         transition-delay: calc(var(--panel-trans-time) - var(--transition-time));
         overflow: hidden;
-        backdrop-filter: blur(1px);
-        -webkit-backdrop-filter: blur(1px);
-        box-shadow: 0px 0px 0px 0px rgb(0, 200, 255) inset, 0px 0px 90px 0px rgba(0, 209, 255, 0.54) inset;
+        border-block: 12px solid #002373;
 
         &.show {
             z-index: 4;
@@ -193,14 +193,12 @@
             transition-delay: 0s;
 
             .menu-container {
-                right: 6vw;
+                right: 5vw;
             }
         }
 
-        $width: clamp(170px, 50vmin, 200px);
+        $width: clamp(150px, 50vmin, 210px);
         .menu-container {
-            background-color: hsla(217, 79%, 28%, 0.8);
-            box-shadow: 0 0 2px 1px #0e3874;
             position: absolute;
             right: calc($width * -1);
             height: 100%;
@@ -209,22 +207,20 @@
             display: flex;
             align-items: center;
             padding-block: 1.4em;
+            background-image: linear-gradient(226deg, #051c4b, #00357c);
 
             menu {
-                all: unset;
-                height: min(100%, 600px);
+                height: min(100%, 660px);
                 flex: 1;
                 display: flex;
                 row-gap: .8em;
                 flex-direction: column;
                 font-size: clamp(1em, 4.6vmin, 1.2em);
-                padding: 1.2em;
+                padding: 1em;
                 overflow-y: auto;
-                align-items: flex-start;
             }
 
             button, a {
-                all: unset;
                 color: var(--text-color);
                 text-decoration: none;
                 transition: var(--transition);
@@ -233,7 +229,6 @@
                 align-items: center;
 
                 &:hover, &:focus-visible {
-                    cursor: pointer;
                     color: rgb(10 164 171);
                     text-shadow: 1px 0 5px rgb(14 79 187), 1px 0 6px rgba(28, 147, 147, 0.5215686275);
                     text-decoration: underline;
@@ -242,16 +237,16 @@
             .action-icons {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: clamp(2px, 2vmin, 6px);
+                gap: 6px;
                 margin-top: auto;
                 padding-top: 1em;
                 width: 100%;
 
                 button {
                     border-radius: 2px;
-                    padding: .2em;
-                    color: rgb(142 187 214);
-                    background-color: rgb(1 17 27 / 30%);
+                    padding: 4px;
+                    color: rgb(176 209 229);
+                    background-color: rgb(1 17 27 / 60%);
                     justify-content: center;
 
                     &:hover, &:focus-visible {
