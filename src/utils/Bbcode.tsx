@@ -121,7 +121,7 @@ function createTree(text: string): BbNode {
   let lastIndex = 0
   text = text.replaceAll("\n", "[br/]")
   let m
-  while(((m = bbcodeTagRegex.exec(text))) !== null) {
+  while ((m = bbcodeTagRegex.exec(text)) !== null) {
     let {tag, arg, leaf} = m.groups ?? {}
     const currNode = nodes[nodes.length-1]
     if (m.index != lastIndex) {

@@ -21,6 +21,7 @@
         flex-direction: column;
         overflow-x: hidden;
         letter-spacing: 1px;
+        padding-bottom: 80px;
 
         .save-container {
             position: relative;
@@ -31,7 +32,10 @@
             overflow: hidden;
             font-size: 1.1em;
             padding-block: 4px;
-            border-bottom: 1px solid var(--separator);
+
+            &:not(:last-of-type) {
+                border-bottom: 1px solid var(--separator);
+            }
 
             &.create, &.import {
                 min-height: clamp(36px, 25%, 50px);
@@ -70,19 +74,15 @@
             }
 
             &::after {
-                position: absolute;
                 content: "";
+                position: absolute;
                 inset: 0;
                 transition: .2s;
                 margin-block: 4px;
             }
 
-            &.active {
-                cursor: pointer;
-
-                &::after {
-                    box-shadow: var(--selected-shadow);
-                }
+            &.active::after {
+                box-shadow: var(--selected-shadow);
             }
 
             &[quick-save]::before {
@@ -132,7 +132,6 @@
                     align-items: center;
 
                     &:hover {
-                        cursor: pointer;
                         color: #0fbbd5;
                         opacity: 1;
                     }

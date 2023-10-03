@@ -160,10 +160,8 @@
         .choice {
             @extend %box;
             padding: .6em 1em;
-            font-size: clamp(0.92em, 3.6vmin, 1.25em);;
-            cursor: pointer;
+            font-size: clamp(0.92em, 3.6vmin, 1.25em);
             transition: all 0.2s ease-in-out;
-            user-select: none;
 
             &:hover, &:focus-visible {
                 box-shadow: var(--selected-shadow);
@@ -309,16 +307,11 @@
             z-index: 2;
 
             button {
-                all: unset;
                 color: var(--text-color);
-                text-decoration: none;
                 transition: var(--transition);
-                user-select: none;
-                display: flex;
                 margin-left: auto;
 
                 &:hover, &:focus-visible {
-                    cursor: pointer;
                     color: rgb(10 164 171);
                     text-shadow: 1px 0 5px rgb(14 79 187), 1px 0 6px rgba(28, 147, 147, 0.5215686275);
                     text-decoration: underline;
@@ -401,7 +394,6 @@
 
             &:hover {
                 opacity: 1;
-                cursor: pointer;
             }
         }
     }
