@@ -188,12 +188,13 @@ function processIfCmd(arg: string, _: string) {
 }
 
 function processGoto(arg: string) {
-  if (/^\*f\d+a?$/.test(arg)) {
+  if (/^\*f\d+[a-z]*$/.test(arg)) {
     script.moveTo(arg.substring(1) as LabelName, 0)
     return LOCK_CMD // prevent processing next line
   } else if (arg == "*endofplay") {
     script.moveTo("endofplay")
     //TODO end session, return to title screen
+    return LOCK_CMD // prevent processing next line
   }
 }
 
@@ -348,7 +349,7 @@ async function fetchSceneLines() {
   let fetchedLines: string[]|undefined = undefined
   if (isScene(label))
     fetchedLines = await fetchScene(label)
-  else if (/^(f|skip)\d+[ab]?$/.test(label))
+  else if (/^(f|skip)\d+[a-z]*$/.test(label))
     fetchedLines = await fetchFBlock(label)
 
   if (fetchedLines == undefined)
