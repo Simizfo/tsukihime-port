@@ -291,7 +291,7 @@ async function updateStrings() {
 //________________________________languages list________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-async function getLanguagesList(forceUpdate=true) {
+async function getLanguagesList(forceUpdate=false) {
   const jsonStr = forceUpdate ? null : localStorage.getItem("languages")
   if (jsonStr) {
     deepAssign(languages, JSON.parse(jsonStr))
