@@ -185,6 +185,14 @@ export function phaseTexts(route: RouteName|"", routeDay: RouteDayName|"", day: 
   return [titleString, dayString]
 }
 
+export function getLocalization(path: string): string {
+  try {
+    return eval(`strings.${path}`)
+  } catch (error) {
+    return path;
+  }
+}
+
 //________________________________languages list________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -283,7 +291,7 @@ async function updateStrings() {
 //________________________________languages list________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-async function getLanguagesList(forceUpdate=false) {
+async function getLanguagesList(forceUpdate=true) {
   const jsonStr = forceUpdate ? null : localStorage.getItem("languages")
   if (jsonStr) {
     deepAssign(languages, JSON.parse(jsonStr))
