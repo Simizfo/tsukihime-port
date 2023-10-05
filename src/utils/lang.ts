@@ -185,14 +185,6 @@ export function phaseTexts(route: RouteName|"", routeDay: RouteDayName|"", day: 
   return [titleString, dayString]
 }
 
-export function getLocalization(path: string): string {
-  try {
-    return eval(`strings.${path}`)
-  } catch (error) {
-    return path;
-  }
-}
-
 //________________________________languages list________________________________
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
