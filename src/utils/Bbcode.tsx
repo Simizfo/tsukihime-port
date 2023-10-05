@@ -121,7 +121,7 @@ function createTree(text: string): BbNode {
   let lastIndex = 0
   text = text.replaceAll("\n", "[br/]")
   let m
-  while(((m = bbcodeTagRegex.exec(text))) !== null) {
+  while ((m = bbcodeTagRegex.exec(text)) !== null) {
     let {tag, arg, leaf} = m.groups ?? {}
     const currNode = nodes[nodes.length-1]
     if (m.index != lastIndex) {
@@ -153,8 +153,8 @@ function createTree(text: string): BbNode {
  * @returns the input text with all bbcode tags closed
  */
 export function closeBB(text: string): string {
-  const openCount = Array.from(text.matchAll(/\[([^\]]*(?:\[\/[^\]]*\])?[^\/\]]*)\]/g)).length
-  const closeCount = Array.from(text.matchAll(/\[\/[^\]]*\]/g)).length
+  const openCount = Array.from(text.matchAll(/\[\w+(=(\/?[^\]\/]+)+)?\]/g)).length
+  const closeCount = Array.from(text.matchAll(/\[\/\w*\]/g)).length
   if (openCount == closeCount)
     return text
   else return text + '[/]'.repeat(openCount-closeCount)
@@ -192,7 +192,10 @@ function innerBbText(node: BbNode): string {
  * @returns the extracted text
  */
 export function noBb(text: string): string {
-  return innerBbText(createTree(text))
+  if (text)
+    return innerBbText(createTree(text))
+  else
+    return ""
 }
 
 //##############################################################################

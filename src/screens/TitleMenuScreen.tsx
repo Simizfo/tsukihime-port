@@ -121,8 +121,8 @@ const TitleMenuScreen = () => {
 
       <div className="logo">
         <motion.img src={moon} alt="moon" draggable={false} className='moon'
-          initial={{ left: "46%", opacity: 0.8}}
-          animate={{ left: "50%", opacity: 0.2, WebkitMaskPosition: [100, 0] }}
+          initial={{ left: "46%", opacity: 0.9}}
+          animate={{ left: "50%", opacity: 0.5, WebkitMaskPosition: [100, 0] }}
           transition={{
             delay: 0,
             duration: 0,

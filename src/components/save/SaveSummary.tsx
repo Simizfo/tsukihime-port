@@ -19,7 +19,7 @@ const SaveSummary = memo(({saveState}: {saveState: SaveState})=> {
           <Fragment key={i}>
             {i > 0 && <>, </>}
             <span className={`choice ${sel == i ? "selected" : ""}`} key={i}>
-              {str}
+              {noBb(str)}
             </span>
           </Fragment>
         )}</>

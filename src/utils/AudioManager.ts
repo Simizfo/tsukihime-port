@@ -7,6 +7,7 @@ import { settings, gameContext } from "./variables";
 //##############################################################################
 //#                             AudioManager class                             #
 //##############################################################################
+const autoPlayEnablingEvents = ['mousedown', 'keydown']
 
 class AudioManager {
 
@@ -44,6 +45,14 @@ class AudioManager {
     this.seNode = null;
     this.currentTrack = undefined;
     this.currentSE = undefined;
+    
+    const resume = ()=> {
+      this.context?.resume()
+      for (const evt of autoPlayEnablingEvents)
+        removeEventListener(evt, resume)
+    }
+    for (const evt of autoPlayEnablingEvents)
+      addEventListener(evt, resume)
   }
 
   private buildNodes() {

@@ -20,7 +20,7 @@ observe(displayMode, 'screen', resetChoices, {filter: s => s != SCREEN.WINDOW})
 //##############################################################################
 
 // <"text", *label> or <`text`, *label>, w/ optional whitespace chars around ','
-const choiceRegexp = /[`"](?<text>[^`"]*)[`"]\s*,\s*\*(?<label>\w+)/gm
+const choiceRegexp = /(?<text>"[^"]*"|`[^`]*`)\s*,\s*\*(?<label>\w+)/gm
 
 export const commands = {
   'select': (arg: string)=> {
@@ -30,9 +30,11 @@ export const commands = {
       const {text, label} = match.groups ?? {}
       if (!text || !label)
         console.error(`Could not parse choices in "select ${arg}"`)
+      // remove ` or " at beginning and end of text regexp label, trim text
+      const trimmedText = text.substring(1, text.length-1).trim()
       choices.push({
         index: choices.length,
-        str: preprocessText(text.trim()),
+        str: preprocessText(trimmedText), 
         label: label.trim() as LabelName
       })
     }
