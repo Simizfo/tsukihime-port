@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react"
 import { addEventListener, isFullscreen, toggleFullscreen } from "../utils/utils"
-import { FaCompressArrowsAlt, FaExpandArrowsAlt, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
-import { BiSkipNext } from "react-icons/bi"
+import { FaCompressArrowsAlt, FaExpandArrowsAlt, FaFastForward, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 import { gameContext, settings } from "../utils/variables"
 import { quickLoad, quickSave } from "../utils/savestates"
 import { useObserved } from "../utils/Observer"
 import script from "../utils/script"
 import { displayMode, SCREEN } from "../utils/display"
 import strings from "../utils/lang"
+import ParticlesComponent from "../components/ParticlesComponent"
 
 /**
  * TODO
@@ -87,8 +87,10 @@ const MenuLayer = () => {
   }
 
   return (
-    <nav className={`box box-menu ${display ? "show" : ""}`}>
-      <div className="menu-container" ref={menuRef}>
+    <div className={`box box-menu ${display ? "show" : ""}`}>
+      <ParticlesComponent />
+
+      <nav className="menu-container" ref={menuRef}>
         <menu>
           <button onClick={graphicMode}>
             {strings.menu["graphics"]}
@@ -108,9 +110,6 @@ const MenuLayer = () => {
           <button onClick={autoPlay}>
             {strings.menu["auto-play"]}
           </button>
-          <button onClick={fastForwardScene}>
-            {strings.menu["ffw"]}
-          </button>
           <button onClick={title}>
             {strings.menu["title"]}
           </button>
@@ -128,10 +127,13 @@ const MenuLayer = () => {
             <button onClick={toggleFullscreen} aria-label="toggle fullscreen">
               {fullscreen ? <FaCompressArrowsAlt /> : <FaExpandArrowsAlt />}
             </button>
+            <button onClick={fastForwardScene} aria-label="skip scene" title={strings.menu["ffw"]}>
+              <FaFastForward />
+            </button>
           </div>
         </menu>
-      </div>
-    </nav>
+      </nav>
+    </div>
   )
 }
 

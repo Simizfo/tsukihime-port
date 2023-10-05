@@ -2,10 +2,10 @@ import { TSForceType, deepAssign } from "./utils"
 import { defaultSettings, settings } from "./variables"
 import defaultStrings from '../assets/lang/default.json'
 import { observe, useObserver } from "./Observer"
-import { SCENE_ATTRS } from "./constants"
+import { APP_VERSION, SCENE_ATTRS } from "./constants"
 import { RouteName, RouteDayName } from "../types"
 import { useReducer } from "react"
-import { bb, closeBB } from "./Bbcode"
+import { closeBB } from "./Bbcode"
 const LANG_DIR = `${import.meta.env.BASE_URL}lang/`
 const LANGUAGES_LIST_URL = `${LANG_DIR}languages.json`
 
@@ -253,7 +253,7 @@ async function loadStrings(language: LangCode): Promise<LangFile|undefined> {
   const localFile = localStorage.getItem(`lang_${language}`)
   console.debug(localFile)
   const json = localFile ? JSON.parse(localFile) as Partial<LangFile>
-      : url ? await fetch(url.indexOf(':') >= 0 ? url : `${LANG_DIR}${url}`).then(
+      : url ? await fetch(url.indexOf(':') >= 0 ? url : `${LANG_DIR}${url}?ver=${APP_VERSION}`).then(
         (response)=> {
           console.debug(response)
           if (response.ok) {

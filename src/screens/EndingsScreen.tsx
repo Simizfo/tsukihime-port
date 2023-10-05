@@ -43,7 +43,7 @@ const EndingsScreen = () => {
                                   data-tooltip-id="osiete"
                                   data-tooltip-html={ReactDOMServer.renderToStaticMarkup(
                                   <div>
-                                    {noBb(ending.name)}<br />
+                                    {ending.name && <>{noBb(ending.name)}<br /></>}
                                     Day: {ending.day}
                                   </div>)} />
                 : <img src={chalkboard} alt="Bad Ending" draggable={false} />

@@ -5,7 +5,7 @@
   "translation-url": "",
 
   "scenario": {
-    "scenes-dir": "./scenes/japanese",
+    "scenes-dir": "./scenes",
     "days": [
       "[i]1[sup]st[/sup] day|October 21 (Thur.)",
       "[i]2[sup]nd[/sup] day|October 22 (Fri.)",
@@ -112,7 +112,11 @@
   },
   "images": {
     "redirect-ids": {
-      "": {"thumb":"image_thumb/$.webp", "sd":"image/$.webp", "hd": "image_x2/$.webp"}
+      "": {
+        "thumb":"image_thumb/$.webp",
+        "sd":"image/$.webp",
+        "hd": "image_x2/$.webp"
+      }
     },
     "redirected-images": { },
     "words": {

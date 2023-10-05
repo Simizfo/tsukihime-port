@@ -5,7 +5,7 @@
   "translation-url": "http://mirrormoon.org/projects/complete/tsukihime/",
 
   "scenario": {
-    "scenes-dir": "./scenes/english",
+    "scenes-dir": "./english/scenes",
     "days": [
       "[i]1[sup]st[/sup] day | October 21 (Thur.)",
       "[i]2[sup]nd[/sup] day | October 22 (Fri.)",
@@ -112,7 +112,11 @@
   },
   "images": {
     "redirect-ids": {
-      "en-mm": {"thumb":"image_thumb/$.webp", "sd":"image_en/$.webp", "hd": "image_x2_en/$.webp"}
+      "en-mm": {
+        "thumb": "image_thumb/$.webp",
+        "sd":"english/image/$.webp",
+        "hd": "english/image_x2/$.webp"
+      }
     },
     "redirected-images": {
       "tachi/osiete": "en-mm"
