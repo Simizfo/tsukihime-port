@@ -1,3 +1,5 @@
+import strings from "../utils/lang"
+
 type TabsProps = {
   tabs: any[],
   selected: string,
@@ -28,6 +30,6 @@ type TabBtnProps = {
 const TabBtn = ({text, active, onClick}: TabBtnProps) => (
   <button className={`tab ${active ? 'active' : ''}`}
     onClick={onClick}>
-    {text}
+      {strings.config.tab[text.toLowerCase() as keyof typeof strings.config.tab]}
   </button>
 )

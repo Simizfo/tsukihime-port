@@ -132,7 +132,7 @@ const ConfigAdvancedTab = () => {
       />
 
       <div className="sub">
-        <div className="title">Adult</div>
+        <div className="title">{strings.config["adult-header"]}</div>
         <ConfigButtons
           title={strings.config["adult-blur"]}
           btns={[

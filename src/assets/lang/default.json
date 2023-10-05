@@ -150,6 +150,12 @@
     "scenes": "Scenes"
   },
   "config": {
+    "tab": {
+      "game": "Game",
+      "audio": "Audio",
+      "controls": "Controls",
+      "advanced": "Advanced"
+    },
     "on": "On",
     "off": "Off",
     "reset": "Reset",
@@ -176,6 +182,7 @@
     "text-speed-instant": "Instant",
     "auto-play-delay-text": "Auto-play text delay: $0s",
     "auto-play-delay-page": "Auto-play page delay: $0s",
+    "adult-header": "Adult",
     "adult-blur": "Blur thumbnails",
     "adult-warn": "Warn me when I enter an H scene",
     "quality": "Quality",
